@@ -58,6 +58,13 @@ foreach my $genome_info (@{$WSClient->list_objects({workspaces=>[$Workspace],typ
     $patric_genome->{source}="PlantSEED";
     $patric_genome->{scientific_name} = $Full_name;
     $patric_genome->{taxonomy} = $Taxonomy;
+
+    my $minimal_genome = {};
+    $minimal_genome->{id}=$PATRIC_ID;
+    $minimal_genome->{source}="PlantSEED";
+    $minimal_genome->{scientific_name} = $Full_name;
+    $minimal_genome->{taxonomy} = $Taxonomy;
+
     print SUM $PATRIC_ID."\t".$patric_genome->{scientific_name}."\t".scalar(@{$patric_genome->{features}}),"\n";
 
     open(OUT, "> Feature_Aliases/".$PATRIC_ID.".txt");
@@ -106,11 +113,21 @@ foreach my $genome_info (@{$WSClient->list_objects({workspaces=>[$Workspace],typ
 	    $ftr->{coexpressed_fids} = [],
 	    $ftr->{co_occurring_fids} = [],
 	}
+
+	my $minimal_ftr = {};
+	$minimal_ftr->{id} = $ftr->{id};
+	$minimal_ftr->{function} = $ftr->{function};
+	$minimal_ftr->{subsystems} = [];
+	push(@{$minimal_genome->{features}},$minimal_ftr);
     }
     close(OUT);
 
     open(JSON, "> ../Genome_Objects/".$PATRIC_ID.".json");
     print JSON to_json($patric_genome, {pretty => 1});
+    close(JSON);
+
+    open(JSON, "> ../Genome_Objects/".$PATRIC_ID."_min.json");
+    print JSON to_json($minimal_genome, {pretty =>1});
     close(JSON);
 
     #Print limited Athaliana JSON for testing
