@@ -26,5 +26,5 @@ while(<FH>){
 }
 close(FH);
 
-$output = Bio::P3::Workspace::ScriptHelpers::wscall("create",{ objects => [['/plantseed/Genomes/.'.$folder.'/'.$name,"Genome",{},$data]] });
+$output = Bio::P3::Workspace::ScriptHelpers::wscall("create",{ objects => [['/plantseed/Genomes/.'.$folder.'/'.$name,"unspecified",{},$data]], overwrite => 1 });
 Bio::P3::Workspace::ScriptHelpers::print_wsmeta_table($output);
