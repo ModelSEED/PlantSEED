@@ -27,7 +27,6 @@ foreach my $file (@Files){
 my $Plants_Root="/homes/seaver/Projects/PATRIC_Scripts/Workshops/2015/";
 my $Genomes = $Plants_Root."PlantSEED_Genomes/";
 my $Genome = $ARGV[0];
-$Genome = "Athaliana-TAIR10";
 
 my $File = $Genomes.$Genome."/Files/".$Genome.".sims";
 exit(0) if !$Genome || !-f $File;
