@@ -1,0 +1,223 @@
+{
+   "name" : "Arabidopsis thaliana (TAIR 10)",
+   "organism" : "Arabidopsis thaliana",
+   "links" : [
+      {
+         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=3702.11",
+         "name" : "PubSEED"
+      },
+      {
+         "url" : "http://plants.ensembl.org/Arabidopsis_thaliana/Info/Index/",
+         "name" : "Ensembl"
+      },
+      {
+         "url" : "http://www.arabidopsis.org/",
+         "name" : "TAIR"
+      }
+   ],
+   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Athaliana-TAIR10.jpg"
+},
+{
+   "name" : "Brachypodium distachyon (1.0)",
+   "organism" : "Brachypodium distachyon (L.) Beauv",
+   "links" : [
+      {
+         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=15368.4",
+         "name" : "PubSEED"
+      },
+      {
+         "url" : "http://www.gramene.org/species/brachypodium/brachypodium_intro.html",
+         "name" : "Gramene"
+      },
+      {
+         "url" : "http://plants.ensembl.org/Brachypodium_distachyon/Info/Index/",
+         "name" : "Ensembl"
+      },      
+      {
+         "url" : "http://www.brachypodium.org",
+         "name" : "BIR"
+      }      
+   ],
+   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/"
+},
+{
+   "name" : "Oryza glaberrima (AGI 1.1)",
+   "organism" : "Oryza glaberrima",
+   "links" : [
+      {
+         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=4538.3",
+         "name" : "PubSEED"
+      },
+      {
+         "url" : "http://www.gramene.org/species/oryza/rice_intro.html",
+         "name" : "Gramene"
+      },
+      {
+         "url" : "http://plants.ensembl.org/Oryza_glaberrima/Info/Index/",
+         "name" : "Ensembl"
+      },
+      {
+         "url" : "http://www2.genome.arizona.edu/genomes/rice_glab_genome_announce",
+         "name" : "AGI"
+      }
+   ],
+   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/"
+},
+{
+   "name" : "Oryza sativa (MSU 6)",
+   "organism" : "Oryza sativa Nipponbare (Japonica rice)",
+   "links" : [
+      {
+         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=39947.4",
+         "name" : "PubSEED"
+      },
+      {
+         "url" : "http://www.gramene.org/species/oryza/rice_intro.html",
+         "name" : "Gramene"
+      },
+      {
+         "url" : "http://plants.ensembl.org/Oryza_sativa/Info/Index/",
+         "name" : "Ensembl"
+      },
+      {
+         "url" : "http://rice.plantbiology.msu.edu",
+	 "name" : "MSU"
+      }	 	
+   ],
+   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/"
+},
+{
+   "name" : "",
+   "organism" : "",
+   "links" : [
+      {
+         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=",
+         "name" : "PubSEED"
+      },
+      {
+         "url" : ""
+         "name" : ""
+      },
+   ],
+   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/"
+},
+{
+   "name" : "",
+   "organism" : "",
+   "links" : [
+      {
+         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=",
+         "name" : "PubSEED"
+      },
+      {
+         "url" : ""
+         "name" : ""
+      },
+   ],
+   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/"
+},
+{
+   "name" : "",
+   "organism" : "",
+   "links" : [
+      {
+         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=",
+         "name" : "PubSEED"
+      },
+      {
+         "url" : ""
+         "name" : ""
+      },
+   ],
+   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/"
+},
+{
+   "name" : "",
+   "organism" : "",
+   "links" : [
+      {
+         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=",
+         "name" : "PubSEED"
+      },
+      {
+         "url" : ""
+         "name" : ""
+      },
+   ],
+   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/"
+},
+{
+   "name" : "",
+   "organism" : "",
+   "links" : [
+      {
+         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=",
+         "name" : "PubSEED"
+      },
+      {
+         "url" : ""
+         "name" : ""
+      },
+   ],
+   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/"
+},
+{
+   "name" : "",
+   "organism" : "",
+   "links" : [
+      {
+         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=",
+         "name" : "PubSEED"
+      },
+      {
+         "url" : ""
+         "name" : ""
+      },
+   ],
+   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/"
+},
+{
+   "name" : "",
+   "organism" : "",
+   "links" : [
+      {
+         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=",
+         "name" : "PubSEED"
+      },
+      {
+         "url" : ""
+         "name" : ""
+      },
+   ],
+   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/"
+},
+{
+   "name" : "",
+   "organism" : "",
+   "links" : [
+      {
+         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=",
+         "name" : "PubSEED"
+      },
+      {
+         "url" : ""
+         "name" : ""
+      },
+   ],
+   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/"
+},
+{
+   "name" : "",
+   "organism" : "",
+   "links" : [
+      {
+         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=",
+         "name" : "PubSEED"
+      },
+      {
+         "url" : ""
+         "name" : ""
+      },
+   ],
+   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/"
+}
