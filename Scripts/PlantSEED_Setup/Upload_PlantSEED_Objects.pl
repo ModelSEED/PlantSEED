@@ -10,7 +10,7 @@ use Bio::P3::Workspace::ScriptHelpers;
 use Bio::P3::Workspace::WorkspaceClient;
 
 my $file = $ARGV[0];
-exit if !$ARGV[0] && !-f $ARGV[0];
+exit if !$ARGV[0] || !-f $ARGV[0];
 
 my @path = split(/\//,$file);
 my $name = $path[$#path];

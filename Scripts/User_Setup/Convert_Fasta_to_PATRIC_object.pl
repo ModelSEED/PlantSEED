@@ -15,7 +15,10 @@ my $RAST_User=$ARGV[0];
 exit(0) if !$RAST_User;
 
 my $GenomeDir = $Genomes.$RAST_User."/Files/";
-exit(0) if !-d $GenomeDir;
+my $JSONDir = $Genomes.$RAST_User."/JSONs/";
+mkdir $JSONDir if !-d $JSONDir;
+exit(1) if !-d $GenomeDir;
+exit(1) if !-d $JSONDir;
 
 #Find user's fasta file
 opendir(my $DIR, $GenomeDir);
@@ -61,10 +64,10 @@ foreach my $seq (@seqs){
     push(@{$minimal_genome->{features}},$minimal_ftr);
 }
 
-open(JSON, "> ".$GenomeDir.$Name.".json");
+open(JSON, "> ".$JSONDir.$Name.".json");
 print JSON to_json($full_genome, {pretty => 1});
 close(JSON);
 
-open(JSON, "> ".$GenomeDir.$Name."_min.json");
+open(JSON, "> ".$JSONDir.$Name."_min.json");
 print JSON to_json($minimal_genome, {pretty =>1});
 close(JSON);
