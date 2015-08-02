@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+use JSON;
 my $output;
 
 use lib '/homes/seaver/Projects/PATRIC_Deploy/dev_container/modules/Workspace/lib/';
@@ -16,8 +17,25 @@ my @path = split(/\//,$file);
 my $name = $path[$#path];
 $name =~ s/\.json$//;
 
+#Retrieve meta data
+my $MetaFile = "../../DBs/PlantSEED_Meta.json";
+open(FH, "< $MetaFile");
+my $data="";
+while(<FH>){
+    chomp;
+    $data.=$_;
+}
+close(FH);
+
+my $Meta = from_json($data);
+my $Genome_Meta = undef;
+foreach my $meta (@$Meta){
+    $Genome_Meta = $meta->{$name} if exists($meta->{$name});
+}
+
 #Uploading Genome
-$output = Bio::P3::Workspace::ScriptHelpers::wscall("create",{ objects => [['/plantseed/Genomes/'.$name,"Genome",{},undef]], createUploadNodes => 1, overwrite => 1 });
+$output = Bio::P3::Workspace::ScriptHelpers::wscall("create",{ objects => [['/plantseed/Genomes/'.$name,"Genome",$Genome_Meta,undef]], 
+							       createUploadNodes => 1, overwrite => 1 });
 my $SHOCK_URL = $output->[0][11];
 
 use HTTP::Request::Common;
@@ -30,7 +48,7 @@ my $req = HTTP::Request::Common::POST($SHOCK_URL,
 $req->method('PUT');
 my $sres = $ua->request($req);
 print "Genome uploaded\n";
-
+__END__
 #Creating Folder
 #If it already exists, nothing changes
 #Permissions set in top-level folder

@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 use warnings;
 use strict;
+use JSON;
 my $output;
 
 use lib '/homes/seaver/Projects/PATRIC_Deploy/dev_container/modules/Workspace/lib/';
@@ -22,7 +23,24 @@ print "Uploading $file as $name\n";
 #my $SHOCK_URL = $output->[0][1];
 #print $SHOCK_URL,"\n";
 
-$output = Bio::P3::Workspace::ScriptHelpers::wscall("create",{ objects => [['/plantseed/Genomes/'.$name,"Genome",{},undef]], createUploadNodes => 1, overwrite => 1 });
+#Retrieve meta data
+my $MetaFile = "../../DBs/PlantSEED_Meta.json";
+open(FH, "< $MetaFile");
+my $data="";
+while(<FH>){
+    chomp;
+    $data.=$_;
+}
+close(FH);
+
+my $Meta = from_json($data);
+my $Genome_Meta = undef;
+foreach my $meta (@$Meta){
+    $Genome_Meta = $meta->{$name} if exists($meta->{$name});
+}
+
+$output = Bio::P3::Workspace::ScriptHelpers::wscall("create",{ objects => [['/plantseed/Genomes/'.$name,"Genome",$Genome_Meta,undef]], 
+							       createUploadNodes => 1, overwrite => 1 });
 my $SHOCK_URL = $output->[0][11];
 
 use HTTP::Request::Common;
