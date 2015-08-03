@@ -2,13 +2,27 @@
 use warnings;
 use strict;
 use JSON;
-my $output;
+my @temp=();
+my $output=undef;
+my $ua = LWP::UserAgent->new();
+my $res = undef;
 
 use lib '/homes/seaver/Projects/PATRIC_Deploy/dev_container/modules/Workspace/lib/';
 use lib '/homes/seaver/Projects/PATRIC_Deploy/dev_container/modules/auth/lib/';
 use lib '/homes/seaver/Projects/ModelDeploy/kbapi_common/lib/';
 use Bio::P3::Workspace::ScriptHelpers;
 use Bio::P3::Workspace::WorkspaceClient;
+my $Token_File = "/homes/seaver/Projects/PATRIC_Scripts/Workspace_Scripts/Login_Tokens.txt";
+open(FH, "< $Token_File");
+my %Tokens=();
+while(<FH>){
+    chomp;
+    @temp=split(/\t/,$_,3);
+    $Tokens{$temp[0]}=[$temp[1],$temp[2]];
+}
+
+#Set user for this
+Bio::P3::Workspace::ScriptHelpers::login({ user_id => 'plantseed', password => $Tokens{'plantseed'}[0] });
 
 my $file = $ARGV[0];
 exit if !$ARGV[0] || !-f $ARGV[0];
@@ -34,21 +48,17 @@ foreach my $meta (@$Meta){
 }
 
 #Uploading Genome
-$output = Bio::P3::Workspace::ScriptHelpers::wscall("create",{ objects => [['/plantseed/Genomes/'.$name,"Genome",$Genome_Meta,undef]], 
-							       createUploadNodes => 1, overwrite => 1 });
-my $SHOCK_URL = $output->[0][11];
+open(FH, "<", $file);
+$data="";
+while(<FH>){
+    chomp;
+    $data.=$_;
+}
+close(FH);
 
-use HTTP::Request::Common;
-local $HTTP::Request::Common::DYNAMIC_FILE_UPLOAD = 1;
-my $ua = LWP::UserAgent->new();
-my $req = HTTP::Request::Common::POST($SHOCK_URL, 
-				      Authorization => "OAuth " . Bio::P3::Workspace::ScriptHelpers::token(),
-				      Content_Type => 'multipart/form-data',
-				      Content => [upload => [$file]]);
-$req->method('PUT');
-my $sres = $ua->request($req);
+Bio::P3::Workspace::ScriptHelpers::wscall("create",{ objects => [['/plantseed/Genomes/'.$name,"genome",$Genome_Meta,$data]], overwrite => 1 });
 print "Genome uploaded\n";
-__END__
+
 #Creating Folder
 #If it already exists, nothing changes
 #Permissions set in top-level folder
@@ -59,7 +69,7 @@ print "/plantseed/Genomes/.".$name." folder created\n";
 $file = join("/",@path[0..$#path-1])."/".$name."_min.json";
 
 open(FH, "<", $file);
-my $data="";
+$data="";
 while(<FH>){
     chomp;
     $data.=$_;
