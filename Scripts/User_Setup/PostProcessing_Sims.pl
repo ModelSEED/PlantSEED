@@ -28,7 +28,7 @@ foreach my $file (@Files){
 }
 
 #Get Families
-open(FH, "< ../DBs/Gramene_Family_Rows.txt");
+open(FH, "< ../../DBs/Gramene_Family_Rows.txt");
 my %Families_Genes=();
 my %Genes_Families=();
 my $Family=1;
@@ -46,7 +46,7 @@ while(<FH>){
 close(FH);
 
 #Get Bacterial hits
-open(FH, "< ../DBs/Plant_Families_Microbes_BH.txt");
+open(FH, "< ../../DBs/Plant_Families_Microbes_BH.txt");
 my %BactHits=();
 while(<FH>){
     chomp;
