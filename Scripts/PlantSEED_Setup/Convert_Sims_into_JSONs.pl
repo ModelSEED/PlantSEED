@@ -24,11 +24,25 @@ foreach my $file (@Files){
     close(FH);
 }
 
+my %Exemplars=();
+open(FH, "< ".$ENV{SEAVER_PROJECT}."PlantSEED_GitHub/DBs/PlantSEED_Roles.json");
+my $data = undef;
+while(<FH>){
+    $data.=$_;
+}
+close(FH);
+
+my @Roles = @{from_json($data)};
+foreach my $row (@Roles){
+    foreach my $ftr (keys %{$row->{features}}){
+	$Exemplars{$ftr}=1;
+    }
+}
+
 my $Plants_Root="/homes/seaver/Projects/PATRIC_Scripts/Workshops/2015/";
-my $Genomes = $Plants_Root."User_Genomes/";
+my $Genomes = $Plants_Root."PlantSEED_Genomes/";
 my $Genome = $ARGV[0];
-my $File = $ARGV[1];
-#my $File = $Genomes.$Genome."/Files/".$Genome.".sims";
+my $File = $Genomes.$Genome."/Files/".$Genome.".sims";
 exit(0) if !$Genome || !-f $File;
 
 my $JSONs_Dir = $Genomes.$Genome."/JSONs/";
@@ -38,13 +52,17 @@ open(FH, "< $File");
 my $Sims = {};
 my $Sims_Index = 0;
 my $Ftr_Index = {};
-
+my $Exems = {};
 while(<FH>){
     chomp;
     @temp=split(/\t/,$_,-1);
     my ($query,$hit,$percent,$evalue,$bitscore) = @temp[0,1,2,10,11];
 
-#    next if exists($Genome_Genes{$hit}) && $Genome_Genes{$hit} eq $Genome;
+    next if exists($Genome_Genes{$hit}) && $Genome_Genes{$hit} eq $Genome;
+
+    if($Genome ne "Athaliana-TAIR10" && exists($Exemplars{$hit})){
+	$Exems->{$hit}{$query}=1;
+    }
 
     if(scalar(keys %$Sims)>=1000 && !exists($Sims->{$query})){
 	open(JSON, "> ".$JSONs_Dir."Sims_".$Sims_Index.".json");
@@ -69,12 +87,7 @@ while(<FH>){
 my $GitHub_Root="/homes/seaver/Projects/PlantSEED_GitHub/";
 my $GenomeObjects = $GitHub_Root."Genome_Objects/";
 
-my @Path = split(/\//,$File);
-my $FileName = $Path[$#Path];
-$FileName =~ s/\.fa_pfs_expanded/_min\.json/;
-
-#open(FH, "< ".$GenomeObjects.$Genome."_min.json");
-open(FH, "< ".$JSONs_Dir.$FileName);
+open(FH, "< ".$GenomeObjects.$Genome."_min.json");
 my $json_text = "";
 while(<FH>){
     $json_text.=$_;
@@ -83,8 +96,8 @@ close(FH);
 
 my $minimal_genome = from_json($json_text);
 $minimal_genome->{similarities_index}=$Ftr_Index;
+$minimal_genome->{exemplars}=$Exems;
 
-#open(JSON, "> ".$GenomeObjects.$Genome."_min.json");
-open(JSON, "> ".$JSONs_Dir.$FileName);
+open(JSON, "> ".$GenomeObjects.$Genome."_min.json");
 print JSON to_json($minimal_genome, {pretty => 1});
 close(JSON);
