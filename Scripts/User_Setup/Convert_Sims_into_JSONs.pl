@@ -81,12 +81,18 @@ while(<FH>){
     $Ftr_Index->{$query}=$Sims_Index;
 }
 
+open(JSON, "> ".$JSONs_Dir."Sims_".$Sims_Index.".json");
+print JSON to_json($Sims, {pretty => 1});
+close(JSON);
+
 my $GitHub_Root="/homes/seaver/Projects/PlantSEED_GitHub/";
 my $GenomeObjects = $GitHub_Root."Genome_Objects/";
 
 my @Path = split(/\//,$File);
 my $FileName = $Path[$#Path];
 $FileName =~ s/\.fa_pfs_expanded/_min\.json/;
+
+print $JSONs_Dir.$FileName,"\n";
 
 open(FH, "< ".$JSONs_Dir.$FileName);
 my $json_text = "";

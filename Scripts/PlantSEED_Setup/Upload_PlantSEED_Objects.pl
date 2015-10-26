@@ -4,14 +4,25 @@ use strict;
 use JSON;
 my @temp=();
 my $output=undef;
-my $ua = LWP::UserAgent->new();
-my $res = undef;
+
+my %Roles_Subsystems=();
+open(FH, "< ".$ENV{SEAVER_PROJECT}."PlantSEED_GitHub/DBs/PlantSEED_Roles.json");
+my $data = undef;
+while(<FH>){
+    $data.=$_;
+}
+close(FH);
+
+my @Roles = @{from_json($data)};
+foreach my $row (@Roles){
+    foreach my $ss (keys %{$row->{subsystems}}){
+	$Roles_Subsystems{$row->{role}}{$ss}=1;
+    }
+}
 
 use lib '/homes/seaver/Projects/PATRIC_Deploy/dev_container/modules/Workspace/lib/';
-use lib '/homes/seaver/Projects/PATRIC_Deploy/dev_container/modules/auth/lib/';
-use lib '/homes/seaver/Projects/ModelDeploy/kbapi_common/lib/';
 use Bio::P3::Workspace::ScriptHelpers;
-use Bio::P3::Workspace::WorkspaceClient;
+
 my $Token_File = "/homes/seaver/Projects/PATRIC_Scripts/Workspace_Scripts/Login_Tokens.txt";
 open(FH, "< $Token_File");
 my %Tokens=();
@@ -22,7 +33,8 @@ while(<FH>){
 }
 
 #Set user for this
-Bio::P3::Workspace::ScriptHelpers::login({ user_id => 'plantseed', password => $Tokens{'plantseed'}[0] });
+my $User = 'plantseed';
+Bio::P3::Workspace::ScriptHelpers::login({ user_id => $User, password => $Tokens{$User}[0] });
 
 my $file = $ARGV[0];
 exit if !$ARGV[0] || !-f $ARGV[0];
@@ -55,6 +67,30 @@ while(<FH>){
     $data.=$_;
 }
 close(FH);
+my $Genome_obj = from_json($data);
+
+my @Ftrs = @{$Genome_obj->{features}};
+for(my $i=0;$i<scalar(@Ftrs);$i++){
+    if(!defined($Ftrs[$i]->{function})){
+	$Ftrs[$i]->{function}="";
+    }
+
+    $Ftrs[$i]->{'subsystems'}={};
+    if(defined($Ftrs[$i]->{function}) && $Ftrs[$i]->{function} ne ""){
+	my $Function = $Ftrs[$i]->{function};
+	$Function = (split(/\s#/,$Function))[0];
+
+	foreach my $role (split(/\s*;\s+|\s+[\@\/]\s+/,$Function)){
+	    foreach my $ss (keys %{$Roles_Subsystems{$role}}){
+		$Ftrs[$i]->{'subsystems'}{$ss}=1;
+	    }
+	}
+	$Ftrs[$i]->{function}=$Function;
+    }
+    $Ftrs[$i]->{'subsystems'}=[keys %{$Ftrs[$i]->{'subsystems'}}];
+}
+$Genome_obj->{features}=\@Ftrs;
+$data = to_json($Genome_obj);
 
 Bio::P3::Workspace::ScriptHelpers::wscall("create",{ objects => [['/plantseed/Genomes/'.$name,"genome",$Genome_Meta,$data]], overwrite => 1 });
 print "Genome uploaded\n";
@@ -75,6 +111,30 @@ while(<FH>){
     $data.=$_;
 }
 close(FH);
+my $Min_Genome_obj = from_json($data);
+
+my @Ftrs = @{$Min_Genome_obj->{features}};
+for(my $i=0;$i<scalar(@Ftrs);$i++){
+    if(!defined($Ftrs[$i]->{function})){
+	$Ftrs[$i]->{function}="";
+    }
+
+    $Ftrs[$i]->{'subsystems'}={};
+    if(defined($Ftrs[$i]->{function}) && $Ftrs[$i]->{function} ne ""){
+	my $Function = $Ftrs[$i]->{function};
+	$Function = (split(/\s#/,$Function))[0];
+
+	foreach my $role (split(/\s*;\s+|\s+[\@\/]\s+/,$Function)){
+	    foreach my $ss (keys %{$Roles_Subsystems{$role}}){
+		$Ftrs[$i]->{'subsystems'}{$ss}=1;
+	    }
+	}
+	$Ftrs[$i]->{function}=$Function;
+    }
+    $Ftrs[$i]->{'subsystems'}=[keys %{$Ftrs[$i]->{'subsystems'}}];
+}
+$Min_Genome_obj->{features}=\@Ftrs;
+$data = to_json($Min_Genome_obj);
 
 Bio::P3::Workspace::ScriptHelpers::wscall("create",{ objects => [['/plantseed/Genomes/.'.$name.'/minimal_genome',"unspecified",{},$data]], overwrite => 1 });
 print "Uploaded minimal genome from $file into .$name\n";

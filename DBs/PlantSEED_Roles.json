@@ -1,6 +1,47 @@
 [
    {
       "pathways" : {
+         "PWY-5971" : 1,
+         "FASYN-ELONG-PWY" : 1,
+         "PWY-5147" : 1,
+         "PWY-5989" : 1,
+         "PWY-5143" : 1,
+         "PWY-4381" : 1,
+         "PWY-5142" : 1,
+         "PWY-5148" : 1
+      },
+      "classes" : {
+         "Fatty acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Fatty_acid_biosynthesis_in_plants_(plastidial)" : 1
+      },
+      "role" : "(3R)-hydroxypalmitoyl-[acyl carrier protein] dehydratase (EC 4.2.1.-)",
+      "reactions" : {
+         "rxn18937" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-5168" : 1,
+         "PWY1F-467" : 1,
+         "PWY-6457" : 1
+      },
+      "classes" : {
+         "Cell wall" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Phenylpropanoids_general_biosynthesis_in_plants" : 1
+      },
+      "role" : "(E)-Cinnamoyl-CoA ligase (EC 6.2.1.-)",
+      "reactions" : {
+         "rxn01613" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-702" : 1,
          "PWY-4361-ARA" : 1,
          "PWY-5441" : 1,
@@ -42,7 +83,9 @@
          "Starch_biosynthesis_in_plants" : 1
       },
       "role" : "1,4-alpha-glucan (starch) branching enzyme, GH-13-type (EC 2.4.1.18)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn24407" : 1
+      }
    },
    {
       "pathways" : {
@@ -60,7 +103,9 @@
          "Starch_degradation_in_plants" : 1
       },
       "role" : "1,4-alpha-glucan phosphorylase (EC 2.4.1.1)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn06049" : 1
+      }
    },
    {
       "pathways" : {
@@ -134,6 +179,10 @@
       "role" : "1-acyl-sn-glycerol-3-phosphate acyltransferase (EC 2.3.1.51)",
       "reactions" : {
          "rxn37218" : 1,
+         "rxn37648" : 1,
+         "rxn16846" : 1,
+         "rxn37647" : 1,
+         "rxn37649" : 1,
          "rxn37217" : 1
       }
    },
@@ -385,6 +434,23 @@
    },
    {
       "pathways" : {
+         "PANTO-PWY" : 1,
+         "COA-PWY" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Pantothenate_and_CoA_biosynthesis_in_plants" : 1
+      },
+      "role" : "2-dehydropantoate 2-reductase (EC 1.1.1.169)",
+      "reactions" : {
+         "rxn01790" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-5120" : 1,
          "PWY-5027" : 1,
          "PWY-5063" : 1,
@@ -507,6 +573,38 @@
    },
    {
       "pathways" : {
+         "PWY-5871" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Ubiquinone_biosynthesis_in_plants" : 1
+      },
+      "role" : "2-nonaprenyl-6-methoxyphenol 4-monooxygenase (EC 1.14.3.-)",
+      "reactions" : {
+         "rxn25468" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-5871" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Ubiquinone_biosynthesis_in_plants" : 1
+      },
+      "role" : "2-octaprenyl-3-methyl-6-methoxy-1,4-benzoquinol hydroxylase (EC 1.14.13.-)",
+      "reactions" : {
+         "rxn25469" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-1187" : 1,
          "PWYQT-4471" : 1,
          "PWYQT-4450" : 1,
@@ -529,8 +627,13 @@
       },
       "role" : "2-oxo-5-methylthiopentanoate transaminase (EC 2.6.1.-)",
       "reactions" : {
+         "rxn27071" : 1,
+         "rxn27073" : 1,
+         "rxn27072" : 1,
          "rxn37767" : 1,
-         "rxn37768" : 1
+         "rxn37768" : 1,
+         "rxn28951" : 1,
+         "rxn27070" : 1
       }
    },
    {
@@ -552,7 +655,8 @@
       },
       "role" : "2-oxoglutarate dehydrogenase E1 component (EC 1.2.4.2)",
       "reactions" : {
-         "rxn08094" : 1
+         "rxn08094" : 1,
+         "rxn17746" : 1
       }
    },
    {
@@ -618,12 +722,18 @@
       }
    },
    {
-      "pathways" : {},
-      "classes" : {},
+      "pathways" : {
+         "PWY-5871" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
       "features" : {
          "AT2G30920" : 1
       },
-      "subsystems" : {},
+      "subsystems" : {
+         "Ubiquinone_biosynthesis_in_plants" : 1
+      },
       "role" : "3,4-dihydroxy-5-polyprenylbenzoate methyltransferase (EC 2.1.1.114)",
       "reactions" : {
          "rxn17428" : 1,
@@ -650,7 +760,9 @@
          "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)" : 1
       },
       "role" : "3-butenylglucosinolate 2-hydroxylase (no EC)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn27067" : 1
+      }
    },
    {
       "pathways" : {
@@ -743,6 +855,24 @@
       "classes" : {
          "Lipids" : 1
       },
+      "features" : {},
+      "subsystems" : {
+         "Lipid_A_biosynthesis_in_plants" : 1
+      },
+      "role" : "3-deoxy-D-manno-octulosonate 8-phosphate phosphatase (EC 3.1.3.45)",
+      "reactions" : {
+         "rxn02404" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "NAGLIPASYN-PWY" : 1,
+         "PWY-1269" : 1,
+         "KDOSYN-PWY" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
       "features" : {
          "AT1G53000" : 1
       },
@@ -780,15 +910,15 @@
       },
       "role" : "3-hydroxyacyl-[acyl-carrier-protein] dehydratase, FabZ form (EC 4.2.1.59)",
       "reactions" : {
-         "rxn25662" : 1,
          "rxn19686" : 1,
+         "rxn25662" : 1,
          "rxn05331" : 1,
          "rxn18937" : 1,
          "rxn18936" : 1,
          "rxn05330" : 1,
          "rxn18935" : 1,
-         "rxn05335" : 1,
-         "rxn25719" : 1
+         "rxn25719" : 1,
+         "rxn05335" : 1
       }
    },
    {
@@ -880,6 +1010,22 @@
    },
    {
       "pathways" : {
+         "PWY-5871" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Ubiquinone_biosynthesis_in_plants" : 1
+      },
+      "role" : "3-nonaprenyl-4-hydroxy-5-methoxybenzoate carboxy-lyase (EC 4.1.1.-)",
+      "reactions" : {
+         "rxn25480" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-5971" : 1,
          "PWY-5366" : 1,
          "FASYN-ELONG-PWY" : 1,
@@ -904,9 +1050,9 @@
       "role" : "3-oxoacyl-[acyl-carrier protein] reductase (EC 1.1.1.100)",
       "reactions" : {
          "rxn05338" : 1,
+         "rxn05340" : 1,
          "rxn25637" : 1,
          "rxn25661" : 1,
-         "rxn05340" : 1,
          "rxn25718" : 1,
          "rxn05337" : 1,
          "rxn25641" : 1,
@@ -967,15 +1113,17 @@
       },
       "role" : "3-oxoacyl-[acyl-carrier-protein] synthase, KASII (EC 2.3.1.179)",
       "reactions" : {
-         "rxn22820" : 1,
+         "rxn17771" : 1,
          "rxn05343" : 1,
+         "rxn22820" : 1,
          "rxn25644" : 1,
          "rxn17469" : 1,
          "rxn05345" : 1,
          "rxn25648" : 1,
-         "rxn25716" : 1,
          "rxn25647" : 1,
+         "rxn25716" : 1,
          "rxn25640" : 1,
+         "rxn17770" : 1,
          "rxn05350" : 1,
          "rxn25645" : 1,
          "rxn25642" : 1,
@@ -1024,13 +1172,17 @@
          "Starch_degradation_in_plants" : 1
       },
       "role" : "4-alpha-glucanotransferase (amylomaltase) (EC 2.4.1.25)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn23747" : 1,
+         "rxn22859" : 1
+      }
    },
    {
       "pathways" : {
          "PWY-2181" : 1,
          "PWY-83" : 1,
          "PWY-361" : 1,
+         "PWY-1121" : 1,
          "PWY-116" : 1
       },
       "classes" : {
@@ -1047,9 +1199,29 @@
       },
       "role" : "4-coumarate--CoA ligase (EC 6.2.1.12)",
       "reactions" : {
-         "rxn01427" : 1,
          "rxn01571" : 1,
+         "rxn01427" : 1,
          "rxn01182" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-2181" : 1,
+         "PWY-83" : 1,
+         "PWY-361" : 1,
+         "PWY-1121" : 1,
+         "PWY-116" : 1
+      },
+      "classes" : {
+         "Cell wall" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Lignin_biosynthesis_in_plants" : 1
+      },
+      "role" : "4-coumarate--CoA ligase 1 (EC 6.2.1.12)",
+      "reactions" : {
+         "rxn01571" : 1
       }
    },
    {
@@ -1136,12 +1308,18 @@
       }
    },
    {
-      "pathways" : {},
-      "classes" : {},
+      "pathways" : {
+         "PWY-5871" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
       "features" : {
          "AT4G23660" : 1
       },
-      "subsystems" : {},
+      "subsystems" : {
+         "Ubiquinone_biosynthesis_in_plants" : 1
+      },
       "role" : "4-hydroxybenzoate polyprenyltransferase (EC 2.5.1.39)",
       "reactions" : {
          "rxn05034" : 1
@@ -1215,6 +1393,22 @@
    },
    {
       "pathways" : {
+         "RIBOSYN2-PWY" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Riboflavin,_FMN_and_FAD_biosynthesis_in_plants" : 1
+      },
+      "role" : "5-Amino-6-(5'-phosphoribitylamino)uracil phosphatase",
+      "reactions" : {
+         "rxn05039" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-6163" : 1,
          "ARO-PWY" : 1
       },
@@ -1238,6 +1432,7 @@
          "PWY-2181" : 1,
          "PWY-83" : 1,
          "PWY-361" : 1,
+         "PWY-1121" : 1,
          "PWY-116" : 1
       },
       "classes" : {
@@ -1546,6 +1741,29 @@
          "Nucleic acids" : 1,
          "Energy" : 1
       },
+      "features" : {},
+      "subsystems" : {
+         "F0F1-type_ATP_synthase_in_plants_(mitochondrial)" : 1,
+         "V-Type_ATP_synthase_in_plants_(vacuolar)" : 1,
+         "Purine_de_novo_biosynthesis_in_plants" : 1,
+         "F0F1-type_ATP_synthase_in_plants_(plastidial)" : 1
+      },
+      "role" : "ATP synthase delta chain (EC 3.6.3.14)",
+      "reactions" : {
+         "rxn10042" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "DENOVOPURINE3-PWY" : 1,
+         "PWY-6121" : 1,
+         "PWY-6124" : 1,
+         "PWY-6126" : 1
+      },
+      "classes" : {
+         "Nucleic acids" : 1,
+         "Energy" : 1
+      },
       "features" : {
          "AT5G47030" : 1
       },
@@ -1685,7 +1903,8 @@
       "role" : "Acetolactate synthase large subunit (EC 2.2.1.6)",
       "reactions" : {
          "rxn15021" : 1,
-         "rxn19030" : 1
+         "rxn19030" : 1,
+         "rxn00011" : 1
       }
    },
    {
@@ -1719,7 +1938,8 @@
       "role" : "Acetolactate synthase small subunit (EC 2.2.1.6)",
       "reactions" : {
          "rxn15021" : 1,
-         "rxn19030" : 1
+         "rxn19030" : 1,
+         "rxn00011" : 1
       }
    },
    {
@@ -1768,6 +1988,7 @@
       },
       "role" : "Acetyl-coenzyme A carboxyl transferase alpha chain (EC 6.4.1.2)",
       "reactions" : {
+         "rxn28665" : 1,
          "rxn27668" : 1
       }
    },
@@ -1795,6 +2016,7 @@
       },
       "role" : "Acetyl-coenzyme A carboxyl transferase beta chain (EC 6.4.1.2)",
       "reactions" : {
+         "rxn28665" : 1,
          "rxn27668" : 1
       }
    },
@@ -1822,6 +2044,30 @@
          "Fatty_acid_biosynthesis_in_plants_(plastidial)" : 1
       },
       "role" : "Acetyl-coenzyme A carboxyl transferase domain of homomeric ACCase (EC 6.4.1.2)",
+      "reactions" : {
+         "rxn28665" : 1,
+         "rxn27668" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-5971" : 1,
+         "FASYN-ELONG-PWY" : 1,
+         "PWY-5147" : 1,
+         "PWY-5989" : 1,
+         "PWY-5143" : 1,
+         "PWY-4381" : 1,
+         "PWY-5142" : 1,
+         "PWY-5148" : 1
+      },
+      "classes" : {
+         "Fatty acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Fatty_acid_biosynthesis_in_plants_(plastidial)" : 1
+      },
+      "role" : "Acetyl-coenzyme A carboxyl transferase of ACAC1 (EC 6.4.1.2)",
       "reactions" : {
          "rxn27668" : 1
       }
@@ -1942,7 +2188,10 @@
          "Fatty_acid_biosynthesis_in_plants_(plastidial)" : 1
       },
       "role" : "Acyl-CoA thioesterase II (EC 3.1.2.-)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn27305" : 1,
+         "rxn27290" : 1
+      }
    },
    {
       "pathways" : {
@@ -1962,6 +2211,22 @@
       "role" : "Acyl-[acyl-carrier-protein]--UDP-N-acetylglucosamine O-acyltransferase (EC 2.3.1.129)",
       "reactions" : {
          "rxn06729" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "TRIGLSYN-PWY" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Triacylglycerol_metabolism_in_plants" : 1
+      },
+      "role" : "Acylglycerol transacylase",
+      "reactions" : {
+         "rxn22841" : 1
       }
    },
    {
@@ -2059,6 +2324,7 @@
       },
       "role" : "Adenylosuccinate lyase (EC 4.3.2.2)",
       "reactions" : {
+         "rxn35698" : 1,
          "rxn00800" : 1
       }
    },
@@ -2233,7 +2499,10 @@
          "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)" : 1
       },
       "role" : "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (hydroxylation) (no EC)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn27065" : 1,
+         "rxn23786" : 1
+      }
    },
    {
       "pathways" : {
@@ -2306,7 +2575,10 @@
          "Starch_degradation_in_plants" : 1
       },
       "role" : "Alpha-amylase (EC 3.2.1.1)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn23744" : 1,
+         "rxn23742" : 1
+      }
    },
    {
       "pathways" : {
@@ -2520,10 +2792,10 @@
       },
       "role" : "Apyrase, ATP-diphosphatase (EC 3.6.1.5)",
       "reactions" : {
-         "rxn00366" : 1,
          "rxn13414" : 1,
-         "rxn22519" : 1,
+         "rxn00366" : 1,
          "rxn00408" : 1,
+         "rxn22519" : 1,
          "rxn00120" : 1,
          "rxn00116" : 1
       }
@@ -2800,6 +3072,30 @@
    },
    {
       "pathways" : {
+         "PWY-1187" : 1,
+         "PWYQT-4471" : 1,
+         "PWYQT-4450" : 1,
+         "PWYQT-4475" : 1,
+         "PWYQT-4472" : 1,
+         "PWYQT-4473" : 1,
+         "PWYQT-4474" : 1
+      },
+      "classes" : {
+         "Secondary" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)" : 1
+      },
+      "role" : "Benzoylated glucosinolates modification, unresolved step",
+      "reactions" : {
+         "rxn21838" : 1,
+         "rxn21837" : 1,
+         "rxn23787" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-842" : 1,
          "PWY-6724" : 1
       },
@@ -2821,7 +3117,12 @@
          "Starch_degradation_in_plants" : 1
       },
       "role" : "Beta-amylase (EC 3.2.1.2)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn23746" : 1,
+         "rxn22742" : 1,
+         "rxn22843" : 1,
+         "rxn22740" : 1
+      }
    },
    {
       "pathways" : {
@@ -2844,6 +3145,24 @@
    },
    {
       "pathways" : {
+         "PWY-3821" : 1,
+         "PWY-6317" : 1,
+         "GALACTMETAB-PWY" : 1
+      },
+      "classes" : {
+         "Carbohydrates" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Galactose_degradation_in_plants" : 1
+      },
+      "role" : "Beta-phosphoglucomutase (EC 5.4.2.6)",
+      "reactions" : {
+         "rxn01967" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-6717" : 1
       },
       "classes" : {
@@ -2857,7 +3176,9 @@
          "Xylan_degradation_in_plants" : 1
       },
       "role" : "Beta-xylosidase (EC 3.2.1.37)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn17960" : 1
+      }
    },
    {
       "pathways" : {
@@ -2884,6 +3205,7 @@
       },
       "role" : "Biotin carboxyl carrier domain of homomeric Acetyl-CoA carboxylase",
       "reactions" : {
+         "rxn19235" : 1,
          "rxn27668" : 1
       }
    },
@@ -2902,7 +3224,9 @@
          "Acetyl-CoA_carboxylase_complexes_in_plants" : 1
       },
       "role" : "Biotin carboxyl carrier protein of acetyl-CoA carboxylase",
-      "reactions" : {}
+      "reactions" : {
+         "rxn19235" : 1
+      }
    },
    {
       "pathways" : {
@@ -2929,6 +3253,7 @@
       },
       "role" : "Biotin carboxylase domain of homomeric ACCase (EC 6.3.4.14)",
       "reactions" : {
+         "rxn19235" : 1,
          "rxn27668" : 1
       }
    },
@@ -2946,7 +3271,9 @@
          "Acetyl-CoA_carboxylase_complexes_in_plants" : 1
       },
       "role" : "Biotin carboxylase of acetyl-CoA carboxylase (EC 6.3.4.14)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn19235" : 1
+      }
    },
    {
       "pathways" : {
@@ -2980,7 +3307,9 @@
          "Acetyl-CoA_carboxylase_complexes_in_plants" : 1
       },
       "role" : "Biotin--protein ligase (EC 6.3.4.9)(EC 6.3.4.10)(EC 6.3.4.11)(EC 6.3.4.15)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn19236" : 1
+      }
    },
    {
       "pathways" : {
@@ -3059,6 +3388,26 @@
    },
    {
       "pathways" : {
+         "PWY4FS-4" : 1,
+         "PWY4FS-3" : 1,
+         "PWY4FS-2" : 1,
+         "PWY3O-450" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Phosphatidylcholine_biosynthesis_in_plants" : 1
+      },
+      "role" : "CDP-N-methylethanolamine--1,2-diacylglycerol phosphatidyltransferase (EC 2.7.8.-)",
+      "reactions" : {
+         "rxn26773" : 1,
+         "rxn26756" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY4FS-8" : 1,
          "PWY0-1319" : 1,
          "PWY-5667" : 1,
@@ -3101,7 +3450,26 @@
          "Phosphoinositides_biosynthesis_in_plants" : 1
       },
       "role" : "CDP-diacylglycerol--inositol 3-phosphatidyltransferase (EC 2.7.8.11)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn17715" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-5669" : 1,
+         "PWY4FS-6" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Phosphatidylethanolamine_biosynthesis_in_plants" : 1
+      },
+      "role" : "CDP-diacylglycerol--serine O-phosphatidyltransferase (EC 2.7.8.8)",
+      "reactions" : {
+         "rxn20569" : 1
+      }
    },
    {
       "pathways" : {
@@ -3128,9 +3496,53 @@
    },
    {
       "pathways" : {
+         "PWY-601" : 1,
+         "PWY-2821" : 1
+      },
+      "classes" : {
+         "Secondary" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)" : 1
+      },
+      "role" : "CYP81F4 monooxygenase",
+      "reactions" : {
+         "rxn23774" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-83" : 1,
+         "PWY1F-467" : 1,
+         "PWY-361" : 1,
+         "PWY-116" : 1,
+         "PWY-6457" : 1,
+         "PWY-5168" : 1,
+         "PWY-2181" : 1,
+         "PWY-1121" : 1
+      },
+      "classes" : {
+         "Cell wall" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Phenylpropanoids_general_biosynthesis_in_plants" : 1,
+         "Lignin_biosynthesis_in_plants" : 1
+      },
+      "role" : "Caffeic-o-methyltransferase (EC 2.1.1.68)",
+      "reactions" : {
+         "rxn04430" : 1,
+         "rxn02414" : 1,
+         "rxn01712" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-2181" : 1,
          "PWY-83" : 1,
          "PWY-361" : 1,
+         "PWY-1121" : 1,
          "PWY-116" : 1
       },
       "classes" : {
@@ -3173,7 +3585,9 @@
          "Callose_biosynthesis_in_plants" : 1
       },
       "role" : "Callose synthase (EC 2.4.1.34)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn17379" : 1
+      }
    },
    {
       "pathways" : {
@@ -3237,7 +3651,41 @@
          "Cardiolipin_biosynthesis_in_plants" : 1
       },
       "role" : "Cardiolipin synthetase (EC 2.7.8.-)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn24650" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-5129" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Sphingolipid_biosynthesis_in_plants" : 1
+      },
+      "role" : "Ceramide glucosyltransferase (EC 2.4.1.80)",
+      "reactions" : {
+         "rxn24443" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-5129" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Sphingolipid_biosynthesis_in_plants" : 1
+      },
+      "role" : "Ceramide hydroxylase",
+      "reactions" : {
+         "rxn24448" : 1
+      }
    },
    {
       "pathways" : {
@@ -3253,13 +3701,16 @@
          "Sphingolipid_biosynthesis_in_plants" : 1
       },
       "role" : "Ceramide kinase (EC 2.7.1.138)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn24451" : 1
+      }
    },
    {
       "pathways" : {
          "PWY-2181" : 1,
          "PWY-83" : 1,
          "PWY-361" : 1,
+         "PWY-1121" : 1,
          "PWY-116" : 1
       },
       "classes" : {
@@ -3293,7 +3744,26 @@
       },
       "role" : "Chlorophyll a synthase ChlG (EC 2.5.1.62)",
       "reactions" : {
-         "rxn04161" : 1
+         "rxn04161" : 1,
+         "rxn24357" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-101" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Photosystem_II" : 1,
+         "Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria" : 1,
+         "Photosystem_I" : 1
+      },
+      "role" : "Chlorophyll a(b) binding protein, photosystem II CP43 protein (PsbC) homolog",
+      "reactions" : {
+         "rxn20633" : 1
       }
    },
    {
@@ -3391,6 +3861,7 @@
          "PWY-2181" : 1,
          "PWY-83" : 1,
          "PWY-361" : 1,
+         "PWY-1121" : 1,
          "PWY-116" : 1
       },
       "classes" : {
@@ -3414,6 +3885,7 @@
          "PWY-2181" : 1,
          "PWY-83" : 1,
          "PWY-361" : 1,
+         "PWY-1121" : 1,
          "PWY-116" : 1
       },
       "classes" : {
@@ -3481,6 +3953,27 @@
          "PWY-2181" : 1,
          "PWY-83" : 1,
          "PWY-361" : 1,
+         "PWY-1121" : 1,
+         "PWY-116" : 1
+      },
+      "classes" : {
+         "Cell wall" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Lignin_biosynthesis_in_plants" : 1
+      },
+      "role" : "Coniferin beta-glucosidase (EC 3.2.1.126)",
+      "reactions" : {
+         "rxn15348" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-2181" : 1,
+         "PWY-83" : 1,
+         "PWY-361" : 1,
+         "PWY-1121" : 1,
          "PWY-116" : 1
       },
       "classes" : {
@@ -3527,6 +4020,7 @@
    {
       "pathways" : {
          "PWY-5086" : 1,
+         "PWY-5194" : 1,
          "PWY-5064" : 1,
          "HEME-BIOSYNTHESIS-II" : 1,
          "PWYQT-62" : 1,
@@ -3581,6 +4075,23 @@
       "classes" : {
          "Fatty acids" : 1
       },
+      "features" : {},
+      "subsystems" : {
+         "Cyclopropane_and_cyclopropene_fatty_acids_biosynthesis_in_plants" : 1
+      },
+      "role" : "Cyclopropane desaturase (no EC)",
+      "reactions" : {
+         "rxn24290" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY0-541" : 1,
+         "PWY-4942" : 1
+      },
+      "classes" : {
+         "Fatty acids" : 1
+      },
       "features" : {
          "AT3G23460" : 1,
          "AT3G23530" : 1,
@@ -3593,6 +4104,7 @@
       },
       "role" : "Cyclopropane-fatty-acyl-phospholipid synthase (EC 2.1.1.79), plant type",
       "reactions" : {
+         "rxn17437" : 1,
          "rxn24288" : 1
       }
    },
@@ -3619,6 +4131,28 @@
       "reactions" : {
          "rxn15166" : 1,
          "rxn19347" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-702" : 1,
+         "PWY-4361-ARA" : 1,
+         "PWY-5441" : 1,
+         "PWY-5041" : 1,
+         "PWY-801" : 1,
+         "PWY-6755" : 1,
+         "CYSTSYN-PWY" : 1
+      },
+      "classes" : {
+         "Amino acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Methionine_and_cysteine_metabolism_in_plants" : 1
+      },
+      "role" : "Cystathionine gamma-synthase (EC 2.5.1.48)",
+      "reactions" : {
+         "rxn02302" : 1
       }
    },
    {
@@ -3775,6 +4309,42 @@
       "classes" : {
          "Energy" : 1
       },
+      "features" : {},
+      "subsystems" : {
+         "Photosystem_II" : 1,
+         "Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria" : 1,
+         "Photosystem_I" : 1
+      },
+      "role" : "Cytochrome b6-f complex alternative Rieske iron sulfur protein PetC2",
+      "reactions" : {
+         "rxn20595" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-101" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Photosystem_II" : 1,
+         "Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria" : 1,
+         "Photosystem_I" : 1
+      },
+      "role" : "Cytochrome b6-f complex alternative Rieske iron sulfur protein PetC3",
+      "reactions" : {
+         "rxn20595" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-101" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
       "features" : {
          "AT4G03280" : 1
       },
@@ -3784,6 +4354,24 @@
          "Photosystem_I" : 1
       },
       "role" : "Cytochrome b6-f complex iron-sulfur subunit PetC1 (Rieske iron sulfur protein EC 1.10.9.1)",
+      "reactions" : {
+         "rxn20595" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-101" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Photosystem_II" : 1,
+         "Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria" : 1,
+         "Photosystem_I" : 1
+      },
+      "role" : "Cytochrome b6-f complex iron-sulfur subunit PetC1 (Rieske iron sulfur protein EC 1.10.99.1)",
       "reactions" : {
          "rxn20595" : 1
       }
@@ -3835,6 +4423,24 @@
       "classes" : {
          "Energy" : 1
       },
+      "features" : {},
+      "subsystems" : {
+         "Photosystem_II" : 1,
+         "Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria" : 1,
+         "Photosystem_I" : 1
+      },
+      "role" : "Cytochrome b6-f complex subunit VII (PetM)",
+      "reactions" : {
+         "rxn20595" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-101" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
       "features" : {
          "ATCG00540" : 1
       },
@@ -3864,6 +4470,24 @@
          "Photosystem_I" : 1
       },
       "role" : "Cytochrome b6-f complex subunit, cytochrome b6",
+      "reactions" : {
+         "rxn20595" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-101" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Photosystem_II" : 1,
+         "Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria" : 1,
+         "Photosystem_I" : 1
+      },
+      "role" : "Cytochrome b6-f complex subunit, cytochrome b6, putative",
       "reactions" : {
          "rxn20595" : 1
       }
@@ -3945,6 +4569,26 @@
       "classes" : {
          "Energy" : 1
       },
+      "features" : {},
+      "subsystems" : {
+         "Respiratory_complex_I_in_plants_(mitochondrial)" : 1,
+         "Respiratory_complex_III_(cytochrome_b-c1)_in_plants" : 1,
+         "Respiratory_complex_II_(succinate_dehydrogenase)_in_plants" : 1,
+         "Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants" : 1
+      },
+      "role" : "Cytochrome c oxidase subunit 5a",
+      "reactions" : {
+         "rxn19358" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-4302" : 1,
+         "PWY-3781" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
       "features" : {
          "AT3G15640" : 1,
          "AT1G80230" : 1
@@ -4001,6 +4645,26 @@
          "Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants" : 1
       },
       "role" : "Cytochrome c oxidase subunit 6b",
+      "reactions" : {
+         "rxn19358" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-4302" : 1,
+         "PWY-3781" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Respiratory_complex_I_in_plants_(mitochondrial)" : 1,
+         "Respiratory_complex_III_(cytochrome_b-c1)_in_plants" : 1,
+         "Respiratory_complex_II_(succinate_dehydrogenase)_in_plants" : 1,
+         "Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants" : 1
+      },
+      "role" : "Cytochrome c oxidase, subunit IV (EC 1.9.3.1)",
       "reactions" : {
          "rxn19358" : 1
       }
@@ -4109,7 +4773,9 @@
          "Sphingolipid_biosynthesis_in_plants" : 1
       },
       "role" : "Delta-8-sphingolipid desaturase (EC 1.14.19.4)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn24450" : 1
+      }
    },
    {
       "pathways" : {
@@ -4157,12 +4823,12 @@
       "role" : "Desulfoglucosinolate sulfotransferase (EC 2.8.2.-)",
       "reactions" : {
          "rxn27056" : 1,
-         "rxn02300" : 1,
          "rxn14133" : 1,
-         "rxn27057" : 1,
+         "rxn02300" : 1,
          "rxn14362" : 1,
-         "rxn27059" : 1,
+         "rxn27057" : 1,
          "rxn11704" : 1,
+         "rxn27059" : 1,
          "rxn27058" : 1
       }
    },
@@ -4232,7 +4898,9 @@
          "Phosphatidylcholine_biosynthesis_in_plants" : 1
       },
       "role" : "Diacylglycerol cholinephosphotransferase (EC 2.7.8.2)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn24114" : 1
+      }
    },
    {
       "pathways" : {
@@ -4311,7 +4979,11 @@
          "Glycosylglycerides_biosynthesis_in_plants" : 1
       },
       "role" : "Digalactosyldiacylglycerol synthase (EC 2.4.1.241)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn37716" : 1,
+         "rxn37715" : 1,
+         "rxn37717" : 1
+      }
    },
    {
       "pathways" : {
@@ -4433,6 +5105,7 @@
       },
       "role" : "Dihydrolipoamide dehydrogenase of 2-oxoglutarate dehydrogenase (EC 1.8.1.4)",
       "reactions" : {
+         "rxn24411" : 1,
          "rxn08094" : 1
       }
    },
@@ -4526,7 +5199,8 @@
       },
       "role" : "Dihydrolipoamide succinyltransferase component (E2) of 2-oxoglutarate dehydrogenase complex (EC 2.3.1.61)",
       "reactions" : {
-         "rxn08094" : 1
+         "rxn08094" : 1,
+         "rxn25982" : 1
       }
    },
    {
@@ -4552,6 +5226,48 @@
       "role" : "Dihydroneopterin aldolase (EC 4.1.2.25)",
       "reactions" : {
          "rxn02504" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-2161B" : 1,
+         "PWY-2161B-PMN" : 1,
+         "PWY-6543" : 1,
+         "PWY-2161" : 1,
+         "PWY-6147" : 1,
+         "PWY-3742" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Folate_biosynthesis_in_plants" : 1
+      },
+      "role" : "Dihydroneopterin monophosphate phosphatase (non-specific?)",
+      "reactions" : {
+         "rxn03168" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-2161B" : 1,
+         "PWY-2161B-PMN" : 1,
+         "PWY-6543" : 1,
+         "PWY-2161" : 1,
+         "PWY-6147" : 1,
+         "PWY-3742" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Folate_biosynthesis_in_plants" : 1
+      },
+      "role" : "Dihydroneopterin phosphate phosphatase (EC 3.6.1.-)",
+      "reactions" : {
+         "rxn03168" : 1
       }
    },
    {
@@ -4653,7 +5369,9 @@
          "Sphingolipid_biosynthesis_in_plants" : 1
       },
       "role" : "Dihydrosphingosine delta-4 desaturase (EC 1.14.99.-)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn21652" : 1
+      }
    },
    {
       "pathways" : {
@@ -4712,7 +5430,9 @@
          "Chlorophyll_Biosynthesis_in_plants_and_prokaryotes" : 1
       },
       "role" : "Divinyl (proto)chlorophyllide a 8-vinyl-reductase (EC 1.3.1.75)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn26528" : 1
+      }
    },
    {
       "pathways" : {
@@ -4731,7 +5451,9 @@
          "Xylan_degradation_in_plants" : 1
       },
       "role" : "Endo-1,4-beta-xylanase A precursor (EC 3.2.1.8)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn17994" : 1
+      }
    },
    {
       "pathways" : {
@@ -4790,13 +5512,52 @@
       "role" : "Enoyl-[acyl-carrier-protein] reductase [NADH] (EC 1.3.1.9)",
       "reactions" : {
          "rxn05325" : 1,
+         "rxn19651" : 1,
          "rxn07579" : 1,
          "rxn05326" : 1,
+         "rxn19653" : 1,
          "rxn25743" : 1,
          "rxn25750" : 1,
          "rxn08392" : 1,
          "rxn05324" : 1,
          "rxn25747" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-321" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Cutin_biosynthesis_in_plants" : 1
+      },
+      "role" : "Epoxide hydrolase (EC 3.3.2.-)",
+      "reactions" : {
+         "rxn16304" : 1,
+         "rxn16306" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-3542" : 1,
+         "PWY-3561" : 1,
+         "PWY-3385" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Choline_biosynthesis_in_plants" : 1
+      },
+      "role" : "Ethanolamine N-methyltransferase, free-base-specific (EC 2.1.1.-)",
+      "reactions" : {
+         "rxn24113" : 1,
+         "rxn24111" : 1,
+         "rxn24112" : 1
       }
    },
    {
@@ -4857,13 +5618,16 @@
          "Phosphatidylethanolamine_biosynthesis_in_plants" : 1
       },
       "role" : "Ethanolaminephosphotransferase (EC 2.7.8.1)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn19681" : 1
+      }
    },
    {
       "pathways" : {
          "PWY-2181" : 1,
          "PWY-83" : 1,
          "PWY-361" : 1,
+         "PWY-1121" : 1,
          "PWY-116" : 1
       },
       "classes" : {
@@ -4971,7 +5735,9 @@
          "Riboflavin,_FMN_and_FAD_biosynthesis_in_plants" : 1
       },
       "role" : "FMN hydrolase, high substrate specificity (EC 3.1.3.-)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn00391" : 1
+      }
    },
    {
       "pathways" : {
@@ -4993,9 +5759,15 @@
    },
    {
       "pathways" : {
-         "PWY-321" : 1
+         "PWY-2181" : 1,
+         "PWY-83" : 1,
+         "PWY-321" : 1,
+         "PWY-361" : 1,
+         "PWY-1121" : 1,
+         "PWY-116" : 1
       },
       "classes" : {
+         "Cell wall" : 1,
          "Lipids" : 1
       },
       "features" : {
@@ -5005,6 +5777,7 @@
          "AT1G01600" : 1
       },
       "subsystems" : {
+         "Lignin_biosynthesis_in_plants" : 1,
          "Cutin_biosynthesis_in_plants" : 1
       },
       "role" : "Fatty acid omega-hydroxylase (EC 1.14.13.-)",
@@ -5014,6 +5787,42 @@
          "rxn16300" : 1,
          "rxn20988" : 1,
          "rxn16289" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-321" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Cutin_biosynthesis_in_plants" : 1
+      },
+      "role" : "Fatty acid peroxygenase [fatty acid hydroperoxide-dependent] (EC 1.11.-.-)",
+      "reactions" : {
+         "rxn25849" : 1,
+         "rxn20994" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-6710" : 1
+      },
+      "classes" : {
+         "Fatty acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Poly-hydroxy_fatty_acids_metabolism_in_plants" : 1
+      },
+      "role" : "Fatty acids epoxide hydrolase (no EC)",
+      "reactions" : {
+         "rxn22461" : 1,
+         "rxn04924" : 1,
+         "rxn22460" : 1,
+         "rxn22462" : 1
       }
    },
    {
@@ -5030,7 +5839,9 @@
          "Cuticular_wax_in_plants" : 1
       },
       "role" : "Fatty aldehyde decarbonylase (EC 4.1.99.-)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn20889" : 1
+      }
    },
    {
       "pathways" : {
@@ -5085,6 +5896,7 @@
    },
    {
       "pathways" : {
+         "PWY-5194" : 1,
          "HEME-BIOSYNTHESIS-II" : 1,
          "PWYQT-62" : 1
       },
@@ -5105,13 +5917,14 @@
    },
    {
       "pathways" : {
-         "PWY-5168" : 1,
-         "PWY-2181" : 1,
          "PWY-83" : 1,
          "PWY1F-467" : 1,
          "PWY-361" : 1,
          "PWY-116" : 1,
-         "PWY-6457" : 1
+         "PWY-6457" : 1,
+         "PWY-5168" : 1,
+         "PWY-2181" : 1,
+         "PWY-1121" : 1
       },
       "classes" : {
          "Cell wall" : 1
@@ -5134,6 +5947,7 @@
          "PWY-2181" : 1,
          "PWY-83" : 1,
          "PWY-361" : 1,
+         "PWY-1121" : 1,
          "PWY-116" : 1
       },
       "classes" : {
@@ -5175,13 +5989,42 @@
          "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)" : 1
       },
       "role" : "Flavin-containing glucosinolate S-oxygenase (no EC)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn27060" : 1,
+         "rxn27064" : 1,
+         "rxn27063" : 1,
+         "rxn27061" : 1,
+         "rxn23784" : 1,
+         "rxn27062" : 1
+      }
    },
    {
       "pathways" : {
          "PWY-2181" : 1,
          "PWY-83" : 1,
          "PWY-361" : 1,
+         "PWY-1121" : 1,
+         "PWY-116" : 1
+      },
+      "classes" : {
+         "Cell wall" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Lignin_biosynthesis_in_plants" : 1
+      },
+      "role" : "Flavonoid 3'-hydroxylase (EC 1.14.13.21)",
+      "reactions" : {
+         "rxn24348" : 1,
+         "rxn28346" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-2181" : 1,
+         "PWY-83" : 1,
+         "PWY-361" : 1,
+         "PWY-1121" : 1,
          "PWY-116" : 1
       },
       "classes" : {
@@ -5221,9 +6064,12 @@
       },
       "role" : "Folylpolyglutamate synthase (EC 6.3.2.17)",
       "reactions" : {
+         "rxn19713" : 1,
          "rxn27860" : 1,
          "rxn00689" : 1,
-         "rxn27861" : 1
+         "rxn06627" : 1,
+         "rxn27861" : 1,
+         "rxn19712" : 1
       }
    },
    {
@@ -5248,7 +6094,8 @@
       },
       "role" : "Formate--tetrahydrofolate ligase (EC 6.3.4.3)",
       "reactions" : {
-         "rxn00690" : 1
+         "rxn00690" : 1,
+         "rxn24148" : 1
       }
    },
    {
@@ -5266,14 +6113,16 @@
       },
       "role" : "Free fatty acids epoxidase [oleate, linoleate, linolenate] (no EC)",
       "reactions" : {
-         "rxn22458" : 1,
+         "rxn37801" : 1,
          "rxn22453" : 1,
+         "rxn22458" : 1,
          "rxn22456" : 1,
-         "rxn22454" : 1,
          "rxn22463" : 1,
+         "rxn22454" : 1,
+         "rxn37802" : 1,
          "rxn22464" : 1,
-         "rxn22459" : 1,
          "rxn22452" : 1,
+         "rxn22459" : 1,
          "rxn22455" : 1,
          "rxn22457" : 1
       }
@@ -5580,6 +6429,43 @@
    },
    {
       "pathways" : {
+         "PWYQT-4427" : 1,
+         "PWY-401" : 1,
+         "PWY-782" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Glycosylglycerides_biosynthesis_in_plants" : 1
+      },
+      "role" : "Galactolipid galactosyltransferase (EC 2.4.1.184)",
+      "reactions" : {
+         "rxn22718" : 1,
+         "rxn25788" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-3821" : 1,
+         "PWY-6317" : 1,
+         "GALACTMETAB-PWY" : 1
+      },
+      "classes" : {
+         "Carbohydrates" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Galactose_degradation_in_plants" : 1
+      },
+      "role" : "Galactose-1-phosphate uridylyltransferase (EC 2.7.7.10)",
+      "reactions" : {
+         "rxn00355" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-5936" : 1
       },
       "classes" : {
@@ -5592,7 +6478,9 @@
          "Xyloglucan_biosynthesis_in_plants" : 1
       },
       "role" : "Galactoside 2-alpha-L-fucosyltransferase (EC 2.4.1.69)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn25589" : 1
+      }
    },
    {
       "pathways" : {
@@ -5633,7 +6521,9 @@
          "Folate_biosynthesis_in_plants" : 1
       },
       "role" : "Gamma-glutamyl hydrolase (EC 3.4.19.9)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn28274" : 1
+      }
    },
    {
       "pathways" : {
@@ -5662,8 +6552,8 @@
          "rxn21822" : 1,
          "rxn21819" : 1,
          "rxn21818" : 1,
-         "rxn21817" : 1,
          "rxn21821" : 1,
+         "rxn21817" : 1,
          "rxn21824" : 1,
          "rxn21820" : 1,
          "rxn21823" : 1
@@ -5713,9 +6603,10 @@
       "role" : "Geranylgeranyl diphosphate reductase (EC 1.3.1.83)",
       "reactions" : {
          "rxn14261" : 1,
-         "rxn24358" : 1,
-         "rxn14142" : 1,
          "rxn14094" : 1,
+         "rxn14142" : 1,
+         "rxn24358" : 1,
+         "rxn24362" : 1,
          "rxn24360" : 1
       }
    },
@@ -5754,6 +6645,29 @@
    },
    {
       "pathways" : {
+         "PWY-5659" : 1,
+         "PWY-66" : 1,
+         "PWY-6" : 1,
+         "TRESYN-PWY" : 1,
+         "PWY-5661" : 1,
+         "PWY-5115" : 1,
+         "PWY0-1182" : 1
+      },
+      "classes" : {
+         "Carbohydrates" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Trehalose__metabolism_in_plants" : 1,
+         "GDP-sugars biosynthesis and interconversions in plants" : 1
+      },
+      "role" : "Glucokinase (EC 2.7.1.2)",
+      "reactions" : {
+         "rxn01169" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-622" : 1
       },
       "classes" : {
@@ -5773,6 +6687,26 @@
       "role" : "Glucose-1-phosphate adenylyltransferase (EC 2.7.7.27)",
       "reactions" : {
          "rxn19776" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-5659" : 1,
+         "PWY-66" : 1,
+         "PWY-6" : 1,
+         "PWY-5661" : 1,
+         "PWY-5115" : 1
+      },
+      "classes" : {
+         "Carbohydrates" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "GDP-sugars biosynthesis and interconversions in plants" : 1
+      },
+      "role" : "Glucose-1-phosphate guanylyltransferase (EC 2.7.7.34)",
+      "reactions" : {
+         "rxn00700" : 1
       }
    },
    {
@@ -5835,8 +6769,24 @@
       },
       "role" : "Glucose-6-phosphate isomerase (EC 5.3.1.9)",
       "reactions" : {
-         "rxn15364" : 1,
-         "rxn02380" : 1
+         "rxn02380" : 1,
+         "rxn15364" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-5129" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Sphingolipid_biosynthesis_in_plants" : 1
+      },
+      "role" : "Glucosylceramide synthase",
+      "reactions" : {
+         "rxn24452" : 1
       }
    },
    {
@@ -5995,6 +6945,46 @@
    },
    {
       "pathways" : {
+         "GLYSYN-ALA-PWY" : 1,
+         "PWY0-1021" : 1,
+         "SERSYN-PWY" : 1,
+         "GLYSYN2-PWY" : 1,
+         "ALANINE-SYN2-PWY" : 1,
+         "PWY-6196" : 1
+      },
+      "classes" : {
+         "Amino acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Alanine,_serine,_glycine_metabolism_in_plants" : 1
+      },
+      "role" : "Glutamate-pyruvate aminotransferase (EC 2.6.1.2)",
+      "reactions" : {
+         "rxn27698" : 1,
+         "rxn00191" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PYRIDNUCSYN-PWY" : 1,
+         "PWY-5083" : 1,
+         "PWY-5381" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Niacin,_NAD_and_NADP_biosynthesis_in_plants" : 1
+      },
+      "role" : "Glutaminase (EC 3.5.1.2)",
+      "reactions" : {
+         "rxn00189" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PYRIDNUCSYN-PWY" : 1,
          "PWY-5083" : 1,
          "PWY-5381" : 1
@@ -6061,7 +7051,9 @@
          "Core_tetrapyrrole_biosynthesis_in_plants" : 1
       },
       "role" : "Glutamyl-tRNA reductase (EC 1.2.1.70)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn19846" : 1
+      }
    },
    {
       "pathways" : {
@@ -6077,7 +7069,33 @@
          "Core_tetrapyrrole_biosynthesis_in_plants" : 1
       },
       "role" : "Glutamyl-tRNA synthetase (EC 6.1.1.17)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn19824" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "DENOVOPURINE3-PWY" : 1,
+         "PWY-6121" : 1,
+         "PWY-6124" : 1,
+         "PWY-6126" : 1
+      },
+      "classes" : {
+         "Nucleic acids" : 1,
+         "Energy" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "F0F1-type_ATP_synthase_in_plants_(mitochondrial)" : 1,
+         "V-Type_ATP_synthase_in_plants_(vacuolar)" : 1,
+         "Purine_de_novo_biosynthesis_in_plants" : 1,
+         "F0F1-type_ATP_synthase_in_plants_(plastidial)" : 1
+      },
+      "role" : "Glutaredoxin-like protein NrdH, required for reduction of Ribonucleotide reductase class Ib",
+      "reactions" : {
+         "rxn26475" : 1,
+         "rxn26476" : 1
+      }
    },
    {
       "pathways" : {
@@ -6101,6 +7119,33 @@
    },
    {
       "pathways" : {
+         "PWY-1187" : 1,
+         "PWYQT-4471" : 1,
+         "PWYQT-4450" : 1,
+         "PWYQT-4475" : 1,
+         "PWYQT-4472" : 1,
+         "PWYQT-4473" : 1,
+         "PWYQT-4474" : 1
+      },
+      "classes" : {
+         "Secondary" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)" : 1
+      },
+      "role" : "Glutathione S-transferase in glucosinolates biosynthesis, predicted",
+      "reactions" : {
+         "rxn21816" : 1,
+         "rxn21813" : 1,
+         "rxn21814" : 1,
+         "rxn21815" : 1,
+         "rxn21811" : 1,
+         "rxn21812" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-321" : 1
       },
       "classes" : {
@@ -6119,7 +7164,9 @@
          "Cutin_biosynthesis_in_plants" : 1
       },
       "role" : "Glycerol-3-phosphate 2-O-acyltransferase (EC 2.3.1.198)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn23394" : 1
+      }
    },
    {
       "pathways" : {
@@ -6150,8 +7197,12 @@
          "rxn28242" : 1,
          "rxn37764" : 1,
          "rxn37761" : 1,
+         "rxn27901" : 1,
          "rxn37762" : 1,
+         "rxn20934" : 1,
+         "rxn27902" : 1,
          "rxn28237" : 1,
+         "rxn27903" : 1,
          "rxn37765" : 1,
          "rxn28243" : 1
       }
@@ -6280,6 +7331,7 @@
    },
    {
       "pathways" : {
+         "PWY-5194" : 1,
          "HEME-BIOSYNTHESIS-II" : 1,
          "PWYQT-62" : 1
       },
@@ -6349,8 +7401,8 @@
          "rxn01169" : 1,
          "rxn20176" : 1,
          "rxn15121" : 1,
-         "rxn15435" : 1,
-         "rxn15249" : 1
+         "rxn15249" : 1,
+         "rxn15435" : 1
       }
    },
    {
@@ -6446,6 +7498,31 @@
    },
    {
       "pathways" : {
+         "PWY-1187" : 1,
+         "PWYQT-4471" : 1,
+         "PWYQT-4450" : 1,
+         "PWYQT-4475" : 1,
+         "PWYQT-4472" : 1,
+         "PWYQT-4473" : 1,
+         "PWYQT-4474" : 1
+      },
+      "classes" : {
+         "Secondary" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)" : 1
+      },
+      "role" : "Homo, di, tri, tetra, penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n5)",
+      "reactions" : {
+         "rxn23781" : 1,
+         "rxn27032" : 1,
+         "rxn27033" : 1,
+         "rxn27031" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-702" : 1,
          "PWY-4361-ARA" : 1,
          "PWY-5441" : 1,
@@ -6469,6 +7546,24 @@
       "reactions" : {
          "rxn00452" : 1,
          "rxn08703" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-1061" : 1,
+         "PWY-1081" : 1,
+         "PWY-5980" : 1
+      },
+      "classes" : {
+         "Cell wall" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Pectin_metabolism_in_plants" : 1
+      },
+      "role" : "Homogalacturonan methyltransferase (EC 2.1.1.-)",
+      "reactions" : {
+         "rxn23767" : 1
       }
    },
    {
@@ -6793,7 +7888,25 @@
          "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)" : 1
       },
       "role" : "Indole glucosinolate methyltransferase",
-      "reactions" : {}
+      "reactions" : {
+         "rxn23776" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "TRPSYN-PWY" : 1
+      },
+      "classes" : {
+         "Amino acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Tryptophan_metabolism_in_plants" : 1
+      },
+      "role" : "Indole synthase (EC 4.1.2.8)",
+      "reactions" : {
+         "rxn28615" : 1
+      }
    },
    {
       "pathways" : {
@@ -6940,7 +8053,9 @@
          "Sphingolipid_biosynthesis_in_plants" : 1
       },
       "role" : "Inositol-phosphorylceramide synthase (EC 2.7.8.-)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn24445" : 1
+      }
    },
    {
       "pathways" : {
@@ -7288,7 +8403,32 @@
          "Cutin_biosynthesis_in_plants" : 1
       },
       "role" : "Lauric acid in-chain hydroxylase (no EC)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn22512" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-5971" : 1,
+         "FASYN-ELONG-PWY" : 1,
+         "PWY-5147" : 1,
+         "PWY-5989" : 1,
+         "PWY-5143" : 1,
+         "PWY-4381" : 1,
+         "PWY-5142" : 1,
+         "PWY-5148" : 1
+      },
+      "classes" : {
+         "Fatty acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Fatty_acid_biosynthesis_in_plants_(plastidial)" : 1
+      },
+      "role" : "Lauryl-[acyl-carrier protein] hydrolase (EC 3.1.2.21)",
+      "reactions" : {
+         "rxn06556" : 1
+      }
    },
    {
       "pathways" : {
@@ -7308,7 +8448,25 @@
          "Chlorophyll_Biosynthesis_in_plants_and_prokaryotes" : 1
       },
       "role" : "Light-dependent protochlorophyllide reductase (EC 1.3.1.33)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn26498" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-5995" : 1
+      },
+      "classes" : {
+         "Fatty acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Polyunsaturated_fatty_acids_biosynthesis_in_plants" : 1
+      },
+      "role" : "Linoleoyl-CoA desaturase (EC 1.14.19.3)",
+      "reactions" : {
+         "rxn17121" : 1
+      }
    },
    {
       "pathways" : {
@@ -7372,25 +8530,98 @@
          "Cuticular_wax_in_plants" : 1
       },
       "role" : "Long chain fatty acyl-CoA reductase [alcohol-forming] (EC 1.2.1.n2)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn27023" : 1
+      }
    },
    {
       "pathways" : {
-         "PWY-321" : 1
+         "PWY-282" : 1
       },
       "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Cuticular_wax_in_plants" : 1
+      },
+      "role" : "Long chain fatty acyl-CoA reductase [aldehyde-forming] (EC 1.2.1.50)",
+      "reactions" : {
+         "rxn20882" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-2181" : 1,
+         "PWY-83" : 1,
+         "PWY-321" : 1,
+         "PWY-361" : 1,
+         "PWY-1121" : 1,
+         "PWY-116" : 1
+      },
+      "classes" : {
+         "Cell wall" : 1,
          "Lipids" : 1
       },
       "features" : {
          "AT1G72970" : 1
       },
       "subsystems" : {
+         "Lignin_biosynthesis_in_plants" : 1,
          "Cutin_biosynthesis_in_plants" : 1
       },
       "role" : "Long-chain fatty acid omega-alcohol dehydrogenase (EC 1.1.1.-)",
       "reactions" : {
          "rxn23772" : 1,
          "rxn25847" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-2181" : 1,
+         "PWY-83" : 1,
+         "PWY-321" : 1,
+         "PWY-361" : 1,
+         "PWY-1121" : 1,
+         "PWY-116" : 1
+      },
+      "classes" : {
+         "Cell wall" : 1,
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Lignin_biosynthesis_in_plants" : 1,
+         "Cutin_biosynthesis_in_plants" : 1
+      },
+      "role" : "Long-chain fatty acid omega-aldehyde dehydrogenase (EC 1.2.1.-)",
+      "reactions" : {
+         "rxn25848" : 1,
+         "rxn23773" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-2181" : 1,
+         "PWY-83" : 1,
+         "PWY-321" : 1,
+         "PWY-361" : 1,
+         "PWY-1121" : 1,
+         "PWY-116" : 1
+      },
+      "classes" : {
+         "Cell wall" : 1,
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Lignin_biosynthesis_in_plants" : 1,
+         "Cutin_biosynthesis_in_plants" : 1
+      },
+      "role" : "Long-chain fatty acid omega-hydroxylase (EC 1.14.13.-)",
+      "reactions" : {
+         "rxn22475" : 1,
+         "rxn23937" : 1
       }
    },
    {
@@ -7407,7 +8638,9 @@
          "Cutin_biosynthesis_in_plants" : 1
       },
       "role" : "Long-chain fatty acid omega-hydroxylase of sporopollenin biosynthesis (EC 1.14.13.-)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn23937" : 1
+      }
    },
    {
       "pathways" : {
@@ -7424,7 +8657,9 @@
          "Cuticular_wax_in_plants" : 1
       },
       "role" : "Long-chain-alcohol O-fatty-acyltransferase (EC 2.3.1.75)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn27028" : 1
+      }
    },
    {
       "pathways" : {
@@ -7491,6 +8726,27 @@
    },
    {
       "pathways" : {
+         "GLYSYN-ALA-PWY" : 1,
+         "PWY0-1021" : 1,
+         "SERSYN-PWY" : 1,
+         "GLYSYN2-PWY" : 1,
+         "ALANINE-SYN2-PWY" : 1,
+         "PWY-6196" : 1
+      },
+      "classes" : {
+         "Amino acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Alanine,_serine,_glycine_metabolism_in_plants" : 1
+      },
+      "role" : "Low-specificity L-threonine aldolase (EC 4.1.2.5)",
+      "reactions" : {
+         "rxn00541" : 1
+      }
+   },
+   {
+      "pathways" : {
          "GLUCONEO-PWY" : 1,
          "PWY-5084" : 1,
          "PWYQT-4481" : 1,
@@ -7548,6 +8804,22 @@
    },
    {
       "pathways" : {
+         "PWY-6799" : 1
+      },
+      "classes" : {
+         "Fatty acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Fatty_acid_biosynthesis_in_plants_(mitochondrial)" : 1
+      },
+      "role" : "Malonate--CoA ligase (EC 6.2.1.n3)",
+      "reactions" : {
+         "rxn22818" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-6799" : 1,
          "PWY-5971" : 1,
          "FASYN-ELONG-PWY" : 1,
@@ -7571,6 +8843,40 @@
       "role" : "Malonyl CoA-acyl carrier protein transacylase (EC 2.3.1.39)",
       "reactions" : {
          "rxn05465" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-6799" : 1
+      },
+      "classes" : {
+         "Fatty acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Fatty_acid_biosynthesis_in_plants_(mitochondrial)" : 1
+      },
+      "role" : "Malonyl-[acyl-carrier-protein] ligase (EC 6.2.1.-)",
+      "reactions" : {
+         "rxn22819" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "MANNCAT-PWY-ARA" : 1,
+         "PWY-3861" : 1,
+         "MANNCAT-PWY" : 1
+      },
+      "classes" : {
+         "Carbohydrates" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "D-mannitol_and_D-mannose_degradation_in_plants" : 1
+      },
+      "role" : "Mannitol dehydrogenase (EC 1.1.1.255)",
+      "reactions" : {
+         "rxn16872" : 1
       }
    },
    {
@@ -7647,7 +8953,8 @@
       },
       "role" : "Methenyltetrahydrofolate cyclohydrolase (EC 3.5.4.9)",
       "reactions" : {
-         "rxn01211" : 1
+         "rxn01211" : 1,
+         "rxn24147" : 1
       }
    },
    {
@@ -7676,6 +8983,28 @@
    },
    {
       "pathways" : {
+         "PWY-702" : 1,
+         "PWY-4361-ARA" : 1,
+         "PWY-5441" : 1,
+         "PWY-5041" : 1,
+         "PWY-801" : 1,
+         "PWY-6755" : 1,
+         "CYSTSYN-PWY" : 1
+      },
+      "classes" : {
+         "Amino acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Methionine_and_cysteine_metabolism_in_plants" : 1
+      },
+      "role" : "Methionine--glyoxylate aminotransferase (EC 2.6.1.73)",
+      "reactions" : {
+         "rxn00454" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-4361-ARA" : 1,
          "PWY-5041" : 1,
          "PWY-801" : 1,
@@ -7697,6 +9026,7 @@
       },
       "role" : "Methionine--oxo-acid aminotransferase (EC 2.6.1.88)",
       "reactions" : {
+         "rxn14003" : 1,
          "rxn37695" : 1,
          "rxn00454" : 1
       }
@@ -7746,7 +9076,14 @@
          "Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants" : 1
       },
       "role" : "Methylthioalkylmalate dehydrogenase (EC 1.1.1.-)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn14122" : 1,
+         "rxn14244" : 1,
+         "rxn14182" : 1,
+         "rxn13983" : 1,
+         "rxn14172" : 1,
+         "rxn13977" : 1
+      }
    },
    {
       "pathways" : {
@@ -7968,7 +9305,10 @@
          "Cuticular_wax_in_plants" : 1
       },
       "role" : "Mid-chain alkane hydroxylase, alcohol- and ketone- forming (no EC)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn20884" : 1,
+         "rxn20885" : 1
+      }
    },
    {
       "pathways" : {
@@ -8010,7 +9350,9 @@
          "Glycosylglycerides_biosynthesis_in_plants" : 1
       },
       "role" : "Monogalactosyldiacylglycerol synthase (EC 2.4.1.46)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn17600" : 1
+      }
    },
    {
       "pathways" : {
@@ -8026,7 +9368,9 @@
          "Sphingolipid_biosynthesis_in_plants" : 1
       },
       "role" : "Monooxygenase",
-      "reactions" : {}
+      "reactions" : {
+         "rxn28369" : 1
+      }
    },
    {
       "pathways" : {
@@ -8044,7 +9388,10 @@
          "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)" : 1
       },
       "role" : "Monooxygenase, catalyses 4-hydroxylation of indolyl-3-methyl glucosinolate (I3M) to 4OH-I3M",
-      "reactions" : {}
+      "reactions" : {
+         "rxn28263" : 1,
+         "rxn23775" : 1
+      }
    },
    {
       "pathways" : {
@@ -8090,6 +9437,25 @@
    },
    {
       "pathways" : {
+         "PWY4FS-4" : 1,
+         "PWY4FS-3" : 1,
+         "PWY4FS-2" : 1,
+         "PWY3O-450" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Phosphatidylcholine_biosynthesis_in_plants" : 1
+      },
+      "role" : "N-dimethylethanolamine-phosphate cytidylyltransferase (EC 2.7.7.-)",
+      "reactions" : {
+         "rxn26772" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-601" : 1,
          "PWY-2821" : 1
       },
@@ -8130,11 +9496,30 @@
       "role" : "N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in aliphatic glucosinolates biosynthesis",
       "reactions" : {
          "rxn14074" : 1,
-         "rxn37542" : 1,
          "rxn37540" : 1,
+         "rxn37542" : 1,
          "rxn37539" : 1,
          "rxn37541" : 1,
          "rxn37543" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY4FS-4" : 1,
+         "PWY4FS-3" : 1,
+         "PWY4FS-2" : 1,
+         "PWY3O-450" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Phosphatidylcholine_biosynthesis_in_plants" : 1
+      },
+      "role" : "N-methylphosphoethanolamine cytidylyltransferase (EC 2.7.7.57)",
+      "reactions" : {
+         "rxn02421" : 1
       }
    },
    {
@@ -9189,6 +10574,25 @@
    },
    {
       "pathways" : {
+         "PYRIDNUCSYN-PWY" : 1,
+         "PWY-5083" : 1,
+         "PWY-5381" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Niacin,_NAD_and_NADP_biosynthesis_in_plants" : 1
+      },
+      "role" : "NADP phosphatase (EC 3.1.3.-)",
+      "reactions" : {
+         "rxn24404" : 1,
+         "rxn00088" : 1
+      }
+   },
+   {
+      "pathways" : {
          "GLUCONEO-PWY" : 1,
          "PWY-1042" : 1,
          "PWY-6118" : 1,
@@ -9261,8 +10665,43 @@
       },
       "role" : "NADPH-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.13)",
       "reactions" : {
-         "rxn17199" : 1,
-         "rxn01111" : 1
+         "rxn17199" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PYRIDNUCSYN-PWY" : 1,
+         "PWY-5083" : 1,
+         "PWY-5381" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Niacin,_NAD_and_NADP_biosynthesis_in_plants" : 1
+      },
+      "role" : "NMN nucleosidase (EC 3.2.2.14)",
+      "reactions" : {
+         "rxn00940" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PYRIDNUCSYN-PWY" : 1,
+         "PWY-5083" : 1,
+         "PWY-5381" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Niacin,_NAD_and_NADP_biosynthesis_in_plants" : 1
+      },
+      "role" : "NMN phosphatase (EC 3.1.3.5)",
+      "reactions" : {
+         "rxn01670" : 1
       }
    },
    {
@@ -9380,6 +10819,24 @@
       "classes" : {
          "Cofactors" : 1
       },
+      "features" : {},
+      "subsystems" : {
+         "Niacin,_NAD_and_NADP_biosynthesis_in_plants" : 1
+      },
+      "role" : "Nicotinate N-methyltransferase (EC 2.1.1.7)",
+      "reactions" : {
+         "rxn01262" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PYRIDNUCSYN-PWY" : 1,
+         "PWY-5083" : 1,
+         "PWY-5381" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
       "features" : {
          "AT4G36940" : 1,
          "AT2G23420" : 1
@@ -9411,6 +10868,24 @@
       "role" : "Nicotinate-nucleotide adenylyltransferase (EC 2.7.7.18), eukaryotic PNAT family",
       "reactions" : {
          "rxn02155" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-4983" : 1,
+         "ARGSYNBSUB-PWY" : 1,
+         "GLUTORN-PWY" : 1
+      },
+      "classes" : {
+         "Amino acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Arginine_metabolism_and_urea_cycle_in_plants" : 1
+      },
+      "role" : "Nitric-oxide synthase (EC 1.14.13.39)",
+      "reactions" : {
+         "rxn05859" : 1
       }
    },
    {
@@ -9540,8 +11015,35 @@
       },
       "role" : "Oleoyl-[acyl carrier protein] thioesterase (EC 3.1.2.14)",
       "reactions" : {
+         "rxn27551" : 1,
          "rxn25654" : 1,
+         "rxn17803" : 1,
          "rxn28487" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-5971" : 1,
+         "FASYN-ELONG-PWY" : 1,
+         "PWY-5147" : 1,
+         "PWY-5989" : 1,
+         "PWY-5143" : 1,
+         "PWY-4381" : 1,
+         "PWY-5142" : 1,
+         "PWY-5148" : 1
+      },
+      "classes" : {
+         "Fatty acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Fatty_acid_biosynthesis_in_plants_(plastidial)" : 1
+      },
+      "role" : "Oleoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.14)",
+      "reactions" : {
+         "rxn24507" : 1,
+         "rxn34722" : 1,
+         "rxn08436" : 1
       }
    },
    {
@@ -9569,8 +11071,8 @@
          "rxn23727" : 1,
          "rxn24796" : 1,
          "rxn24786" : 1,
-         "rxn24804" : 1,
          "rxn24792" : 1,
+         "rxn24804" : 1,
          "rxn24868" : 1,
          "rxn24768" : 1,
          "rxn24798" : 1,
@@ -9601,8 +11103,8 @@
       },
       "role" : "Omega-3 linoleate desaturase (EC 1.14.19.-)",
       "reactions" : {
-         "rxn24820" : 1,
          "rxn24810" : 1,
+         "rxn24820" : 1,
          "rxn24812" : 1,
          "rxn24818" : 1,
          "rxn24857" : 1,
@@ -9634,12 +11136,13 @@
       "role" : "Omega-6 fatty acid desaturase (EC 1.14.19.-)",
       "reactions" : {
          "rxn24790" : 1,
-         "rxn24802" : 1,
+         "rxn25758" : 1,
          "rxn24774" : 1,
+         "rxn24802" : 1,
          "rxn24784" : 1,
          "rxn24770" : 1,
-         "rxn24762" : 1,
          "rxn23725" : 1,
+         "rxn24762" : 1,
          "rxn24860" : 1,
          "rxn24778" : 1,
          "rxn24766" : 1
@@ -9664,8 +11167,8 @@
          "rxn24819" : 1,
          "rxn24816" : 1,
          "rxn24811" : 1,
-         "rxn24809" : 1,
          "rxn24817" : 1,
+         "rxn24809" : 1,
          "rxn24813" : 1
       }
    },
@@ -9834,6 +11337,30 @@
    },
    {
       "pathways" : {
+         "PWY-5971" : 1,
+         "FASYN-ELONG-PWY" : 1,
+         "PWY-5147" : 1,
+         "PWY-5989" : 1,
+         "PWY-5143" : 1,
+         "PWY-4381" : 1,
+         "PWY-5142" : 1,
+         "PWY-5148" : 1
+      },
+      "classes" : {
+         "Fatty acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Fatty_acid_biosynthesis_in_plants_(plastidial)" : 1
+      },
+      "role" : "Palmitoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.-)",
+      "reactions" : {
+         "rxn34722" : 1,
+         "rxn08436" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWYQT-4427" : 1,
          "PWY-401" : 1,
          "PWY-782" : 1
@@ -9849,8 +11376,8 @@
       },
       "role" : "Palmitoyl-monogalactosyldiacylglycerol delta-7 desaturase (EC 1.14.19.-)",
       "reactions" : {
-         "rxn23729" : 1,
          "rxn24788" : 1,
+         "rxn23729" : 1,
          "rxn24782" : 1
       }
    },
@@ -9970,7 +11497,9 @@
          "Pectin_metabolism_in_plants" : 1
       },
       "role" : "Pectinesterase (EC 3.1.1.11)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn23769" : 1
+      }
    },
    {
       "pathways" : {
@@ -10002,6 +11531,7 @@
          "PWY-2181" : 1,
          "PWY-83" : 1,
          "PWY-361" : 1,
+         "PWY-1121" : 1,
          "PWY-116" : 1
       },
       "classes" : {
@@ -10071,7 +11601,9 @@
          "Lignin_biosynthesis_in_plants" : 1
       },
       "role" : "Peroxidase (EC 1.11.1.7)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn20520" : 1
+      }
    },
    {
       "pathways" : {
@@ -10096,9 +11628,14 @@
    },
    {
       "pathways" : {
-         "PWY-5168" : 1,
+         "PWY-83" : 1,
          "PWY1F-467" : 1,
-         "PWY-6457" : 1
+         "PWY-361" : 1,
+         "PWY-116" : 1,
+         "PWY-6457" : 1,
+         "PWY-5168" : 1,
+         "PWY-2181" : 1,
+         "PWY-1121" : 1
       },
       "classes" : {
          "Cell wall" : 1
@@ -10110,7 +11647,8 @@
          "AT2G37040" : 1
       },
       "subsystems" : {
-         "Phenylpropanoids_general_biosynthesis_in_plants" : 1
+         "Phenylpropanoids_general_biosynthesis_in_plants" : 1,
+         "Lignin_biosynthesis_in_plants" : 1
       },
       "role" : "Phenylalanine ammonia-lyase (EC 4.3.1.24)",
       "reactions" : {
@@ -10142,7 +11680,9 @@
          "Phosphoinositides_biosynthesis_in_plants" : 1
       },
       "role" : "Phophatidylinositol-4-phosphate 5-kinase (EC 2.7.1.68)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn17676" : 1
+      }
    },
    {
       "pathways" : {
@@ -10210,7 +11750,12 @@
          "Phosphatidylcholine_biosynthesis_in_plants" : 1
       },
       "role" : "Phosphatidyl-N-methylethanolamine N-methyltransferase (EC 2.1.1.71)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn28847" : 1,
+         "rxn26762" : 1,
+         "rxn17432" : 1,
+         "rxn27503" : 1
+      }
    },
    {
       "pathways" : {
@@ -10226,7 +11771,70 @@
          "PUFA_enrichment_in_oilseed_in_plants" : 1
       },
       "role" : "Phosphatidylcholine:diacylglycerol cholinephosphotransferase (EC 2.7.8.-)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn14003" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY4FS-8" : 1,
+         "PWY0-1319" : 1,
+         "PWY-5667" : 1,
+         "PWY-5269" : 1,
+         "PWY4FS-7" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Phosphatidylglycerol_biosynthesis_in_plants" : 1,
+         "Cardiolipin_biosynthesis_in_plants" : 1,
+         "CDP-diacylglycerol_biosynthesis_in_plants" : 1
+      },
+      "role" : "Phosphatidylglycerophosphatase A (EC 3.1.3.27)",
+      "reactions" : {
+         "rxn20527" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY4FS-8" : 1,
+         "PWY0-1319" : 1,
+         "PWY-5667" : 1,
+         "PWY-5269" : 1,
+         "PWY4FS-7" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Phosphatidylglycerol_biosynthesis_in_plants" : 1,
+         "Cardiolipin_biosynthesis_in_plants" : 1,
+         "CDP-diacylglycerol_biosynthesis_in_plants" : 1
+      },
+      "role" : "Phosphatidylglycerophosphatase B (EC 3.1.3.27)",
+      "reactions" : {
+         "rxn20527" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-6352" : 1,
+         "PWY-2301" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Phosphoinositides_biosynthesis_in_plants" : 1
+      },
+      "role" : "Phosphatidylinositol 3,5-bisphosphate phosphatase (EC 3.1.3-)",
+      "reactions" : {
+         "rxn21236" : 1
+      }
    },
    {
       "pathways" : {
@@ -10243,7 +11851,9 @@
          "Phosphoinositides_biosynthesis_in_plants" : 1
       },
       "role" : "Phosphatidylinositol 3-kinase (EC 2.7.1.137)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn16849" : 1
+      }
    },
    {
       "pathways" : {
@@ -10261,7 +11871,9 @@
          "Phosphoinositides_biosynthesis_in_plants" : 1
       },
       "role" : "Phosphatidylinositol 4-kinase alpha (EC 2.7.1.67)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn16850" : 1
+      }
    },
    {
       "pathways" : {
@@ -10279,7 +11891,77 @@
          "Phosphoinositides_biosynthesis_in_plants" : 1
       },
       "role" : "Phosphatidylinositol 4-kinase beta (EC 2.7.1.67)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn16850" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-6352" : 1,
+         "PWY-2301" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Phosphoinositides_biosynthesis_in_plants" : 1
+      },
+      "role" : "Phosphatidylinositol-3-phosphate 5-kinase (EC 2.7.1.150)",
+      "reactions" : {
+         "rxn17668" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-6352" : 1,
+         "PWY-2301" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Phosphoinositides_biosynthesis_in_plants" : 1
+      },
+      "role" : "Phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit, alpha isoform (EC 2.7.1.153)",
+      "reactions" : {
+         "rxn17670" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-6352" : 1,
+         "PWY-2301" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Phosphoinositides_biosynthesis_in_plants" : 1
+      },
+      "role" : "Phosphatidylinositol-4-phosphate 3-kinase C2 domain-containing alpha polypeptide (EC 2.7.1.154)",
+      "reactions" : {
+         "rxn17671" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-6352" : 1,
+         "PWY-2301" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Phosphoinositides_biosynthesis_in_plants" : 1
+      },
+      "role" : "Phosphatidylinositol-4-phosphate 3-kinase C2 domain-containing beta polypeptide (EC 2.7.1.154)",
+      "reactions" : {
+         "rxn17671" : 1
+      }
    },
    {
       "pathways" : {
@@ -10298,7 +11980,9 @@
          "Phosphatidylethanolamine_biosynthesis_in_plants" : 1
       },
       "role" : "Phosphatidylserine decarboxylase (EC 4.1.1.65)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn20567" : 1
+      }
    },
    {
       "pathways" : {
@@ -10360,6 +12044,33 @@
    },
    {
       "pathways" : {
+         "GLUCONEO-PWY" : 1,
+         "PWY-621" : 1,
+         "PWY-3801" : 1,
+         "SUCSYN-PWY" : 1,
+         "PWY-5481" : 1,
+         "PWY-6118" : 1,
+         "PWY-1042" : 1,
+         "PWY-5486" : 1,
+         "PWY-5484" : 1,
+         "GLYCOLYSIS" : 1
+      },
+      "classes" : {
+         "Central Carbon" : 1,
+         "Carbohydrates" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Glycolysis_and_Gluconeogenesis_in_plants" : 1,
+         "Sucrose_metabolism_in_plants" : 1
+      },
+      "role" : "Phosphoenolpyruvate synthase (EC 2.7.9.2)",
+      "reactions" : {
+         "rxn00147" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-3542" : 1,
          "PWY-3561" : 1,
          "PWY-3385" : 1,
@@ -10389,6 +12100,24 @@
    },
    {
       "pathways" : {
+         "PWY-3542" : 1,
+         "PWY-3561" : 1,
+         "PWY-3385" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Choline_biosynthesis_in_plants" : 1
+      },
+      "role" : "Phosphoethanolamine/phosphocholine phosphatase (EC 3.1.3.75)",
+      "reactions" : {
+         "rxn04684" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-842" : 1,
          "PWY-6724" : 1
       },
@@ -10402,7 +12131,9 @@
          "Starch_degradation_in_plants" : 1
       },
       "role" : "Phosphoglucan phosphatase DSP4/SEX4 (EC 3.1.3.-)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn22737" : 1
+      }
    },
    {
       "pathways" : {
@@ -10420,7 +12151,9 @@
          "Starch_degradation_in_plants" : 1
       },
       "role" : "Phosphoglucan, water dikinase (EC 2.7.9.5)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn22526" : 1
+      }
    },
    {
       "pathways" : {
@@ -10542,7 +12275,9 @@
          "Choline_biosynthesis_in_plants" : 1
       },
       "role" : "Phospholipase D (EC 3.1.4.4)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn20543" : 1
+      }
    },
    {
       "pathways" : {
@@ -10560,7 +12295,9 @@
          "Triacylglycerol_metabolism_in_plants" : 1
       },
       "role" : "Phospholipid:diacylglycerol acyltransferase (EC 2.3.1.158)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn23718" : 1
+      }
    },
    {
       "pathways" : {
@@ -10778,7 +12515,9 @@
          "Purine_de_novo_biosynthesis_in_plants" : 1
       },
       "role" : "Phosphoribosylaminoimidazole-succinocarboxamide synthase (EC 6.3.2.6)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn37546" : 1
+      }
    },
    {
       "pathways" : {
@@ -10940,7 +12679,6 @@
       },
       "role" : "Phosphoribulokinase (EC 2.7.1.19)",
       "reactions" : {
-         "rxn17199" : 1,
          "rxn01111" : 1
       }
    },
@@ -11027,6 +12765,24 @@
          "Photosystem_I" : 1
       },
       "role" : "Photosystem II 10 kDa protein PsbR",
+      "reactions" : {
+         "rxn20633" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-101" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Photosystem_II" : 1,
+         "Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria" : 1,
+         "Photosystem_I" : 1
+      },
+      "role" : "Photosystem II 12 kDa extrinsic protein (PsbU)",
       "reactions" : {
          "rxn20633" : 1
       }
@@ -11342,6 +13098,24 @@
       "classes" : {
          "Energy" : 1
       },
+      "features" : {},
+      "subsystems" : {
+         "Photosystem_II" : 1,
+         "Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria" : 1,
+         "Photosystem_I" : 1
+      },
+      "role" : "Photosystem II protein PsbV, cytochrome c550",
+      "reactions" : {
+         "rxn20633" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-101" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
       "features" : {
          "AT2G30570" : 1
       },
@@ -11581,7 +13355,9 @@
          "Pectin_metabolism_in_plants" : 1
       },
       "role" : "Polygalacturonase (EC 3.2.1.15)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn23770" : 1
+      }
    },
    {
       "pathways" : {
@@ -11612,7 +13388,9 @@
          "Pectin_metabolism_in_plants" : 1
       },
       "role" : "Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn06659" : 1
+      }
    },
    {
       "pathways" : {
@@ -11653,6 +13431,24 @@
    },
    {
       "pathways" : {
+         "PWY-5194" : 1,
+         "HEME-BIOSYNTHESIS-II" : 1,
+         "PWYQT-62" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Heme_and_Siroheme_biosynthesis_in_plants" : 1
+      },
+      "role" : "Precorrin-2 oxidase (EC 1.3.1.76)",
+      "reactions" : {
+         "rxn02774" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-3462" : 1,
          "TYRSYN" : 1,
          "PWY-3461" : 1
@@ -11688,7 +13484,9 @@
          "Unsaturated_Fatty_Acid_biosynthesis_in_plants" : 1
       },
       "role" : "Probable acyl-ACP desaturase, Palmitoyl-ACP 9-desaturase (EC 1.14.19.-)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn24883" : 1
+      }
    },
    {
       "pathways" : {
@@ -11716,7 +13514,9 @@
          "Fatty_acid_biosynthesis_in_plants_(plastidial)" : 1
       },
       "role" : "Probable acyl-ACP desaturase, Stearoyl-ACP desaturase (EC 1.14.19.2)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn24508" : 1
+      }
    },
    {
       "pathways" : {
@@ -11835,6 +13635,7 @@
    {
       "pathways" : {
          "PWY-5086" : 1,
+         "PWY-5194" : 1,
          "PWY-5064" : 1,
          "HEME-BIOSYNTHESIS-II" : 1,
          "PWYQT-62" : 1,
@@ -11983,6 +13784,23 @@
    },
    {
       "pathways" : {
+         "PWY-6466" : 1,
+         "PLPSAL-PWY" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Pyridoxine_(vitamin_B6)_biosynthesis_in_plants" : 1
+      },
+      "role" : "Pyridoxal-5'-phosphate phosphatase (EC 3.1.3.74), eukaryotic type",
+      "reactions" : {
+         "rxn00123" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PYRIDNUCSYN-PWY" : 1,
          "PWY-6466" : 1,
          "PLPSAL-PWY" : 1,
@@ -12003,6 +13821,23 @@
       "reactions" : {
          "rxn00209" : 1,
          "rxn00208" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-6466" : 1,
+         "PLPSAL-PWY" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Pyridoxine_(vitamin_B6)_biosynthesis_in_plants" : 1
+      },
+      "role" : "Pyridoxamine-pyruvate aminotransferase (EC 2.6.1.30)",
+      "reactions" : {
+         "rxn01253" : 1
       }
    },
    {
@@ -12144,8 +13979,8 @@
       },
       "role" : "Pyruvate decarboxylase (EC 4.1.1.1)",
       "reactions" : {
-         "rxn00011" : 1,
-         "rxn00168" : 1
+         "rxn00168" : 1,
+         "rxn00011" : 1
       }
    },
    {
@@ -12173,7 +14008,8 @@
       },
       "role" : "Pyruvate dehydrogenase E1 component alpha subunit (EC 1.2.4.1)",
       "reactions" : {
-         "rxn25979" : 1
+         "rxn00011" : 1,
+         "rxn22957" : 1
       }
    },
    {
@@ -12201,7 +14037,8 @@
       },
       "role" : "Pyruvate dehydrogenase E1 component beta subunit (EC 1.2.4.1)",
       "reactions" : {
-         "rxn25979" : 1
+         "rxn00011" : 1,
+         "rxn22957" : 1
       }
    },
    {
@@ -12436,6 +14273,42 @@
    },
    {
       "pathways" : {
+         "PYRIDNUCSYN-PWY" : 1,
+         "PWY-5083" : 1,
+         "PWY-5381" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Niacin,_NAD_and_NADP_biosynthesis_in_plants" : 1
+      },
+      "role" : "Ribosylnicotinamide kinase, eukaryotic (EC 2.7.1.22)",
+      "reactions" : {
+         "rxn01671" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PYRIDNUCSYN-PWY" : 1,
+         "PWY-5083" : 1,
+         "PWY-5381" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Niacin,_NAD_and_NADP_biosynthesis_in_plants" : 1
+      },
+      "role" : "Ribosylnicotinic acid kinase, eukaryotic (EC 2.7.1.173)",
+      "reactions" : {
+         "rxn02401" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-181" : 1,
          "CALVIN-PWY" : 1,
          "PWY-5723" : 1
@@ -12453,6 +14326,7 @@
       },
       "role" : "Ribulose bisphosphate carboxylase large chain (EC 4.1.1.39)",
       "reactions" : {
+         "rxn25701" : 1,
          "rxn20788" : 1
       }
    },
@@ -12478,6 +14352,7 @@
       },
       "role" : "Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39)",
       "reactions" : {
+         "rxn25701" : 1,
          "rxn20788" : 1
       }
    },
@@ -12749,6 +14624,7 @@
          "PWY-2181" : 1,
          "PWY-83" : 1,
          "PWY-361" : 1,
+         "PWY-1121" : 1,
          "PWY-116" : 1
       },
       "classes" : {
@@ -12786,6 +14662,46 @@
       "role" : "Shikimate kinase I (EC 2.7.1.71)",
       "reactions" : {
          "rxn01739" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-3301" : 1
+      },
+      "classes" : {
+         "Secondary" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Sinapate_ester_biosynthesis_in_plants" : 1
+      },
+      "role" : "Sinapine esterase (EC 3.1.1.49)",
+      "reactions" : {
+         "rxn01714" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-1187" : 1,
+         "PWYQT-4471" : 1,
+         "PWYQT-4450" : 1,
+         "PWYQT-4475" : 1,
+         "PWYQT-4472" : 1,
+         "PWYQT-4473" : 1,
+         "PWYQT-4474" : 1
+      },
+      "classes" : {
+         "Secondary" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)" : 1
+      },
+      "role" : "Sinapoylated glucosinolates modification, unresolved step",
+      "reactions" : {
+         "rxn21839" : 1,
+         "rxn21840" : 1,
+         "rxn21835" : 1
       }
    },
    {
@@ -12845,12 +14761,20 @@
       }
    },
    {
-      "pathways" : {},
-      "classes" : {},
+      "pathways" : {
+         "PWY-5194" : 1,
+         "HEME-BIOSYNTHESIS-II" : 1,
+         "PWYQT-62" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
       "features" : {
          "AT1G50170" : 1
       },
-      "subsystems" : {},
+      "subsystems" : {
+         "Heme_and_Siroheme_biosynthesis_in_plants" : 1
+      },
       "role" : "Sirohydrochlorin ferrochelatase (EC 4.99.1.4)",
       "reactions" : {
          "rxn28987" : 1
@@ -12877,6 +14801,24 @@
       "reactions" : {
          "rxn29020" : 1,
          "rxn29021" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PYRIDNUCSYN-PWY" : 1,
+         "PWY-5083" : 1,
+         "PWY-5381" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Niacin,_NAD_and_NADP_biosynthesis_in_plants" : 1
+      },
+      "role" : "Soluble pyridine nucleotide transhydrogenase (EC 1.6.1.1)",
+      "reactions" : {
+         "rxn00083" : 1
       }
    },
    {
@@ -12920,6 +14862,51 @@
    },
    {
       "pathways" : {
+         "PWY-5129" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Sphingolipid_biosynthesis_in_plants" : 1
+      },
+      "role" : "Sphingosine N-acyltransferase (EC 2.3.1.24)",
+      "reactions" : {
+         "rxn24441" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PROSYN-PWY.txt" : 1,
+         "PWY-3341.txt\n" : 1,
+         "PWY0-1264.txt\n" : 1,
+         "PWY-622.txt" : 1,
+         "PWY-5661.txt" : 1,
+         "PWY-621.txt" : 1,
+         "PWY-6317.txt\n" : 1,
+         "PWY-2821.txt\n" : 1,
+         "PWY-842.txt" : 1,
+         "ARGASEDEG-PWY.txt" : 1,
+         "SUCSYN-PWY.txt\n" : 1,
+         "ARG-PRO-PWY.txt" : 1,
+         "LEUSYN-PWY.txt\n" : 1
+      },
+      "classes" : {},
+      "features" : {},
+      "subsystems" : {},
+      "role" : "Spontaneous Reaction",
+      "reactions" : {
+         "rxn24246" : 1,
+         "rxn20993" : 1,
+         "rxn22371" : 1,
+         "rxn01977" : 1,
+         "rxn02374" : 1,
+         "rxn01208" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-842" : 1,
          "PWY-6724" : 1
       },
@@ -12934,7 +14921,9 @@
          "Starch_degradation_in_plants" : 1
       },
       "role" : "Starch debranching enzyme, isoamylase (EC 3.2.1.68)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn22743" : 1
+      }
    },
    {
       "pathways" : {
@@ -12951,7 +14940,9 @@
          "Starch_degradation_in_plants" : 1
       },
       "role" : "Starch debranching enzyme, pullulanase (EC 3.2.1.142)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn28260" : 1
+      }
    },
    {
       "pathways" : {
@@ -12971,7 +14962,10 @@
          "Starch_biosynthesis_in_plants" : 1
       },
       "role" : "Starch synthase, ADP-glucose transglucosylase (EC 2.4.1.21)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn19862" : 1,
+         "rxn06165" : 1
+      }
    },
    {
       "pathways" : {
@@ -12988,7 +14982,9 @@
          "Starch_degradation_in_plants" : 1
       },
       "role" : "Starch, water dikinase (EC 2.7.9.4)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn22524" : 1
+      }
    },
    {
       "pathways" : {
@@ -13011,6 +15007,30 @@
          "Fatty_acid_biosynthesis_in_plants_(plastidial)" : 1
       },
       "role" : "Stearoyl-[acyl carrier protein] thioesterase (EC 3.1.2.-)",
+      "reactions" : {
+         "rxn34724" : 1,
+         "rxn09456" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-5971" : 1,
+         "FASYN-ELONG-PWY" : 1,
+         "PWY-5147" : 1,
+         "PWY-5989" : 1,
+         "PWY-5143" : 1,
+         "PWY-4381" : 1,
+         "PWY-5142" : 1,
+         "PWY-5148" : 1
+      },
+      "classes" : {
+         "Fatty acids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Fatty_acid_biosynthesis_in_plants_(plastidial)" : 1
+      },
+      "role" : "Stearoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.-)",
       "reactions" : {
          "rxn34724" : 1,
          "rxn09456" : 1
@@ -13294,10 +15314,11 @@
       },
       "role" : "Sucrose alpha-glucosidase, alkaline/neutral invertase (EC 3.2.1.26)",
       "reactions" : {
+         "rxn28253" : 1,
          "rxn28255" : 1,
          "rxn28256" : 1,
-         "rxn15069" : 1,
          "rxn28252" : 1,
+         "rxn15069" : 1,
          "rxn28254" : 1
       }
    },
@@ -13464,6 +15485,82 @@
       "classes" : {
          "Cofactors" : 1
       },
+      "features" : {},
+      "subsystems" : {
+         "Thiamin_biosynthesis_in_plants" : 1
+      },
+      "role" : "Thiamine-monophosphate kinase (EC 2.7.4.16)",
+      "reactions" : {
+         "rxn00438" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-6890" : 1,
+         "PWY-6909" : 1,
+         "PWY-6908" : 1,
+         "PWY-6910" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Thiamin_biosynthesis_in_plants" : 1
+      },
+      "role" : "Thiamine-monophosphate phosphatase (EC 3.1.3.-)",
+      "reactions" : {
+         "rxn01539" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-6890" : 1,
+         "PWY-6909" : 1,
+         "PWY-6908" : 1,
+         "PWY-6910" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Thiamin_biosynthesis_in_plants" : 1
+      },
+      "role" : "Thiamine-triphosphatase (EC 3.6.1.28)",
+      "reactions" : {
+         "rxn00439" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-6890" : 1,
+         "PWY-6909" : 1,
+         "PWY-6908" : 1,
+         "PWY-6910" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Thiamin_biosynthesis_in_plants" : 1
+      },
+      "role" : "Thiamine-triphosphatase (ThTP) synthase (EC 2.7.4.15)",
+      "reactions" : {
+         "rxn00437" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-6890" : 1,
+         "PWY-6909" : 1,
+         "PWY-6908" : 1,
+         "PWY-6910" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
       "features" : {
          "AT5G54770" : 1
       },
@@ -13540,9 +15637,14 @@
    },
    {
       "pathways" : {
-         "PWY-5168" : 1,
+         "PWY-83" : 1,
          "PWY1F-467" : 1,
-         "PWY-6457" : 1
+         "PWY-361" : 1,
+         "PWY-116" : 1,
+         "PWY-6457" : 1,
+         "PWY-5168" : 1,
+         "PWY-2181" : 1,
+         "PWY-1121" : 1
       },
       "classes" : {
          "Cell wall" : 1
@@ -13551,7 +15653,8 @@
          "AT2G30490" : 1
       },
       "subsystems" : {
-         "Phenylpropanoids_general_biosynthesis_in_plants" : 1
+         "Phenylpropanoids_general_biosynthesis_in_plants" : 1,
+         "Lignin_biosynthesis_in_plants" : 1
       },
       "role" : "Trans-cinnamate 4-monooxygenase (EC 1.14.13.11)",
       "reactions" : {
@@ -13620,7 +15723,9 @@
          "Trehalose__metabolism_in_plants" : 1
       },
       "role" : "Trehalase (EC 3.2.1.28)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn29921" : 1
+      }
    },
    {
       "pathways" : {
@@ -13750,12 +15855,22 @@
       }
    },
    {
-      "pathways" : {},
-      "classes" : {},
+      "pathways" : {
+         "PWY-2181" : 1,
+         "PWY-83" : 1,
+         "PWY-361" : 1,
+         "PWY-1121" : 1,
+         "PWY-116" : 1
+      },
+      "classes" : {
+         "Cell wall" : 1
+      },
       "features" : {
          "AT2G39020" : 1
       },
-      "subsystems" : {},
+      "subsystems" : {
+         "Lignin_biosynthesis_in_plants" : 1
+      },
       "role" : "Tyramine N-feruloyltransferase (EC 2.3.1.110)",
       "reactions" : {
          "rxn01718" : 1
@@ -13786,6 +15901,24 @@
       "role" : "Tyrosine aminotransferase (EC 2.6.1.5)",
       "reactions" : {
          "rxn00527" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "NAGLIPASYN-PWY" : 1,
+         "PWY-1269" : 1,
+         "KDOSYN-PWY" : 1
+      },
+      "classes" : {
+         "Lipids" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Lipid_A_biosynthesis_in_plants" : 1
+      },
+      "role" : "UDP-2,3-diacylglucosamine diphosphatase (EC 3.6.1.54)",
+      "reactions" : {
+         "rxn03130" : 1
       }
    },
    {
@@ -13962,7 +16095,9 @@
          "UDP-glucose_and_UDP-galactose_biosynthesis_in_plants" : 1
       },
       "role" : "UDP-glucose 4-epimerase (EC 5.1.3.2)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn37863" : 1
+      }
    },
    {
       "pathways" : {
@@ -13993,6 +16128,42 @@
    },
    {
       "pathways" : {
+         "PWY-3821" : 1,
+         "PWY-6317" : 1,
+         "GALACTMETAB-PWY" : 1
+      },
+      "classes" : {
+         "Carbohydrates" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Galactose_degradation_in_plants" : 1
+      },
+      "role" : "UDP-glucose--hexose-1-phosphate uridylyltransferase (EC 2.7.7.12)",
+      "reactions" : {
+         "rxn37681" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PYRIDNUCSYN-PWY" : 1,
+         "PWY-5083" : 1,
+         "PWY-5381" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Niacin,_NAD_and_NADP_biosynthesis_in_plants" : 1
+      },
+      "role" : "UDP-glucose:nicotinate-N-glucosyltransferase  (EC 2.4.1.196)",
+      "reactions" : {
+         "rxn01263" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-2161B" : 1,
          "PWY-2161B-PMN" : 1,
          "PWY-6543" : 1,
@@ -14014,6 +16185,23 @@
       "role" : "UDP-glucose:p-aminobenzoate glucosyltransferase",
       "reactions" : {
          "rxn24131" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-6466" : 1,
+         "PLPSAL-PWY" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Pyridoxine_(vitamin_B6)_biosynthesis_in_plants" : 1
+      },
+      "role" : "UDP-glucose:pyridoxine 5'-O-beta-D-glucosyltransferase (EC 2.4.1.160)",
+      "reactions" : {
+         "rxn01399" : 1
       }
    },
    {
@@ -14150,7 +16338,9 @@
          "Glycosylglycerides_biosynthesis_in_plants" : 1
       },
       "role" : "UDP-sulfoquinovose:DAG sulfoquinovosyltransferase (EC 2.4.1.-)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn22650" : 1
+      }
    },
    {
       "pathways" : {
@@ -14226,6 +16416,26 @@
          "Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants" : 1
       },
       "role" : "Ubiquinol-cytochrome C reductase iron-sulfur subunit (EC 1.10.2.2)",
+      "reactions" : {
+         "rxn37650" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-4302" : 1,
+         "PWY-3781" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Respiratory_complex_I_in_plants_(mitochondrial)" : 1,
+         "Respiratory_complex_III_(cytochrome_b-c1)_in_plants" : 1,
+         "Respiratory_complex_II_(succinate_dehydrogenase)_in_plants" : 1,
+         "Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants" : 1
+      },
+      "role" : "Ubiquinol-cytochrome c reductase complex subunit 10",
       "reactions" : {
          "rxn37650" : 1
       }
@@ -14322,24 +16532,36 @@
       }
    },
    {
-      "pathways" : {},
-      "classes" : {},
+      "pathways" : {
+         "PWY-5871" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
       "features" : {
          "AT3G24200" : 1
       },
-      "subsystems" : {},
+      "subsystems" : {
+         "Ubiquinone_biosynthesis_in_plants" : 1
+      },
       "role" : "Ubiquinone biosynthesis monooxygenase COQ6 (EC 1.14.13.-), required for C5-hydroxylation step",
       "reactions" : {
          "rxn25475" : 1
       }
    },
    {
-      "pathways" : {},
-      "classes" : {},
+      "pathways" : {
+         "PWY-5871" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
       "features" : {
          "AT5G57300" : 1
       },
-      "subsystems" : {},
+      "subsystems" : {
+         "Ubiquinone_biosynthesis_in_plants" : 1
+      },
       "role" : "Ubiquinone/menaquinone biosynthesis methyltransferase UbiE (EC 2.1.1.-)",
       "reactions" : {
          "rxn22111" : 1
@@ -14368,6 +16590,7 @@
    {
       "pathways" : {
          "PWY-5086" : 1,
+         "PWY-5194" : 1,
          "PWY-5064" : 1,
          "HEME-BIOSYNTHESIS-II" : 1,
          "PWYQT-62" : 1,
@@ -14390,12 +16613,20 @@
       }
    },
    {
-      "pathways" : {},
-      "classes" : {},
+      "pathways" : {
+         "PWY-5194" : 1,
+         "HEME-BIOSYNTHESIS-II" : 1,
+         "PWYQT-62" : 1
+      },
+      "classes" : {
+         "Cofactors" : 1
+      },
       "features" : {
          "AT5G40850" : 1
       },
-      "subsystems" : {},
+      "subsystems" : {
+         "Heme_and_Siroheme_biosynthesis_in_plants" : 1
+      },
       "role" : "Uroporphyrinogen-III methyltransferase (EC 2.1.1.107)",
       "reactions" : {
          "rxn05006" : 1,
@@ -14628,6 +16859,52 @@
    },
    {
       "pathways" : {
+         "DENOVOPURINE3-PWY" : 1,
+         "PWY-6121" : 1,
+         "PWY-6124" : 1,
+         "PWY-6126" : 1
+      },
+      "classes" : {
+         "Nucleic acids" : 1,
+         "Energy" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "F0F1-type_ATP_synthase_in_plants_(mitochondrial)" : 1,
+         "V-Type_ATP_synthase_in_plants_(vacuolar)" : 1,
+         "Purine_de_novo_biosynthesis_in_plants" : 1,
+         "F0F1-type_ATP_synthase_in_plants_(plastidial)" : 1
+      },
+      "role" : "V-type ATP synthase subunit I (EC 3.6.3.14)",
+      "reactions" : {
+         "rxn10042" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "DENOVOPURINE3-PWY" : 1,
+         "PWY-6121" : 1,
+         "PWY-6124" : 1,
+         "PWY-6126" : 1
+      },
+      "classes" : {
+         "Nucleic acids" : 1,
+         "Energy" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "F0F1-type_ATP_synthase_in_plants_(mitochondrial)" : 1,
+         "V-Type_ATP_synthase_in_plants_(vacuolar)" : 1,
+         "Purine_de_novo_biosynthesis_in_plants" : 1,
+         "F0F1-type_ATP_synthase_in_plants_(plastidial)" : 1
+      },
+      "role" : "V-type ATP synthase subunit K (EC 3.6.3.14)",
+      "reactions" : {
+         "rxn10042" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-5080" : 1
       },
       "classes" : {
@@ -14700,7 +16977,9 @@
          "Very_long__fatty_acid_biosynthesis_in_plants" : 1
       },
       "role" : "Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn24385" : 1
+      }
    },
    {
       "pathways" : {
@@ -14716,7 +16995,25 @@
          "Very_long__fatty_acid_biosynthesis_in_plants" : 1
       },
       "role" : "Very-long-chain enoyl-CoA reductase (EC 1.3.1.93)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn24409" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-5936" : 1
+      },
+      "classes" : {
+         "Cell wall" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Xyloglucan_biosynthesis_in_plants" : 1
+      },
+      "role" : "XXLG xyloglucan galactosyltransferase",
+      "reactions" : {
+         "rxn22885" : 1
+      }
    },
    {
       "pathways" : {
@@ -14734,7 +17031,9 @@
          "Pectin_metabolism_in_plants" : 1
       },
       "role" : "Xylogalacturonan beta-1,3-xylosyltransferase (EC 2.4.2.41)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn25681" : 1
+      }
    },
    {
       "pathways" : {
@@ -14750,7 +17049,9 @@
          "Xyloglucan_biosynthesis_in_plants" : 1
       },
       "role" : "Xyloglucan galactosyltransferase (no EC)",
-      "reactions" : {}
+      "reactions" : {
+         "rxn25588" : 1
+      }
    },
    {
       "pathways" : {
@@ -14792,6 +17093,24 @@
    },
    {
       "pathways" : {
+         "PWY-101" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Photosystem_II" : 1,
+         "Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria" : 1,
+         "Photosystem_I" : 1
+      },
+      "role" : "alternative photosystem I reaction center subunit X (PsaK2)",
+      "reactions" : {
+         "rxn26755" : 1
+      }
+   },
+   {
+      "pathways" : {
          "PWY-1422" : 1
       },
       "classes" : {
@@ -14824,6 +17143,73 @@
       "role" : "gamma-tocopherol methyltransferase (EC 2.1.1.95)",
       "reactions" : {
          "rxn27334" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-842" : 1,
+         "PWY-6724" : 1
+      },
+      "classes" : {
+         "Carbohydrates" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Starch_degradation_in_plants" : 1
+      },
+      "role" : "glucan phosphatase (EC 3.1.3.-)",
+      "reactions" : {
+         "rxn22738" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-862" : 1
+      },
+      "classes" : {
+         "Carbohydrates" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Fructan_degradation_in_plants" : 1
+      },
+      "role" : "kestotetraose hydrolase (EC 3.2.1.-)",
+      "reactions" : {
+         "rxn23751" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-862" : 1
+      },
+      "classes" : {
+         "Carbohydrates" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Fructan_degradation_in_plants" : 1
+      },
+      "role" : "levan hydrolase (EC 3.2.1.-)",
+      "reactions" : {
+         "rxn22629" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-101" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Photosystem_II" : 1,
+         "Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria" : 1,
+         "Photosystem_I" : 1
+      },
+      "role" : "photosystem I 4.8K protein (PsaX)",
+      "reactions" : {
+         "rxn26755" : 1
       }
    },
    {
@@ -14893,6 +17279,24 @@
       "classes" : {
          "Energy" : 1
       },
+      "features" : {},
+      "subsystems" : {
+         "Photosystem_II" : 1,
+         "Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria" : 1,
+         "Photosystem_I" : 1
+      },
+      "role" : "photosystem I assembly related protein Ycf37",
+      "reactions" : {
+         "rxn26755" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-101" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
       "features" : {
          "ATCG00520" : 1
       },
@@ -14902,6 +17306,24 @@
          "Photosystem_I" : 1
       },
       "role" : "photosystem I assembly related protein Ycf4",
+      "reactions" : {
+         "rxn26755" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-101" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Photosystem_II" : 1,
+         "Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria" : 1,
+         "Photosystem_I" : 1
+      },
+      "role" : "photosystem I biogenesis protein BtpA",
       "reactions" : {
          "rxn26755" : 1
       }
@@ -15176,6 +17598,24 @@
       "classes" : {
          "Energy" : 1
       },
+      "features" : {},
+      "subsystems" : {
+         "Photosystem_II" : 1,
+         "Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria" : 1,
+         "Photosystem_I" : 1
+      },
+      "role" : "photosystem I subunit XII (PsaM)",
+      "reactions" : {
+         "rxn26755" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-101" : 1
+      },
+      "classes" : {
+         "Energy" : 1
+      },
       "features" : {
          "ATCG00020" : 1
       },
@@ -15207,6 +17647,26 @@
       "role" : "photosystem II protein D2 (PsbD)",
       "reactions" : {
          "rxn20633" : 1
+      }
+   },
+   {
+      "pathways" : {
+         "PWY-2181" : 1,
+         "PWY-83" : 1,
+         "PWY-361" : 1,
+         "PWY-1121" : 1,
+         "PWY-116" : 1
+      },
+      "classes" : {
+         "Cell wall" : 1
+      },
+      "features" : {},
+      "subsystems" : {
+         "Lignin_biosynthesis_in_plants" : 1
+      },
+      "role" : "trans-cinnamate 2-monooxygenase (EC 1.14.13.14)",
+      "reactions" : {
+         "rxn01612" : 1
       }
    },
    {

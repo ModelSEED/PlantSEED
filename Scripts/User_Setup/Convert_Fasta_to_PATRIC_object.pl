@@ -33,10 +33,16 @@ $Name =~ s/\.fa$//;
 my $full_genome = {};
 $full_genome->{id}=$Name;
 $full_genome->{source}="PlantSEED";
-$full_genome->{scientific_name} = undef;
-$full_genome->{taxonomy} = undef;
+$full_genome->{scientific_name} = $Name;
+$full_genome->{taxonomy} = $Name;
+$full_genome->{domain}="Plant";
 
-my $minimal_genome = $full_genome;
+my $minimal_genome = {};
+$minimal_genome->{id}=$Name;
+$minimal_genome->{source}="PlantSEED";
+$minimal_genome->{scientific_name} = $Name;
+$minimal_genome->{taxonomy} = $Name;
+$minimal_genome->{domain}="Plant";
 
 my @seqs = gjoseqlib::read_fasta($GenomeDir.$Fasta);
 
