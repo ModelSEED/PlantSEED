@@ -1,0 +1,2 @@
+Compound	Name
+cpd00035	L-Alanine
