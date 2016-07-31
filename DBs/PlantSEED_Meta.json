@@ -1,242 +1,209 @@
-[
 {
-   "Athaliana-TAIR10" :
-{
-   "name" : "Arabidopsis thaliana (TAIR 10)",
-   "organism" : "Arabidopsis thaliana",
-   "links" : [
-      {
-         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=3702.11",
-         "name" : "PubSEED"
-      },
-      {
-         "url" : "http://plants.ensembl.org/Arabidopsis_thaliana/Info/Index/",
-         "name" : "Ensembl"
-      },
-      {
-         "url" : "http://www.arabidopsis.org/",
-         "name" : "TAIR"
-      }
-   ],
-   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Athaliana-TAIR10.jpg"
+   "Sbicolor-v2.1" : {
+      "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Sbicolor-Sorbi1.jpg",
+      "organism" : "Sorghum bicolor",
+      "name" : "Sorghum bicolor (v2.1)",
+      "links" : [
+         {
+            "name" : "PubSEED",
+            "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=4558.4"
+         },
+         {
+            "name" : "Gramene",
+            "url" : "http://ensembl.gramene.org/Sorghum_bicolor/Info/Index/"
+         },
+         {
+            "url" : "http://plants.ensembl.org/Sorghum_bicolor/Info/Index/",
+            "name" : "Ensembl"
+         },
+         {
+            "name" : "JGI",
+            "url" : "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Sbicolor"
+         }
+      ]
+   },
+   "Bdistachyon-v3.1" : {
+      "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Bdistachyon-v1.0.jpg",
+      "organism" : "Brachypodium distachyon (L.) Beauv",
+      "name" : "Brachypodium distachyon (v3.1)",
+      "links" : [
+         {
+            "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=15368.4",
+            "name" : "PubSEED"
+         },
+         {
+            "url" : "http://ensembl.gramene.org/Arabidopsis_lyrata/Info/Index/",
+            "name" : "Gramene"
+         },
+         {
+            "url" : "http://plants.ensembl.org/Brachypodium_distachyon/Info/Index/",
+            "name" : "Ensembl"
+         },
+         {
+            "url" : "http://www.brachypodium.org",
+            "name" : "BIR"
+         },
+         {
+            "name" : "JGI",
+            "url" : "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Bdistachyon"
+         }
+      ]
+   },
+   "Gmax-v1.1" : {
+      "organism" : "Glycine max",
+      "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Gmax-V1.0.jpg",
+      "links" : [
+         {
+            "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=3847.5",
+            "name" : "PubSEED"
+         },
+         {
+            "name" : "Ensembl",
+            "url" : "http://plants.ensembl.org/Glycine_max/Info/Index/"
+         },
+         {
+            "url" : "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Gmax",
+            "name" : "JGI"
+         }
+      ],
+      "name" : "Glycine max (v1.1)"
+   },
+   "Alyrata-v1.0" : {
+      "organism" : "Arabidopsis lyrata",
+      "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Alyrata-v.1.0.jpg",
+      "links" : [
+         {
+            "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=81972.3",
+            "name" : "PubSEED"
+         },
+         {
+            "name" : "Ensembl",
+            "url" : "http://plants.ensembl.org/Arabidopsis_lyrata/Info/Index/"
+         },
+         {
+            "name" : "JGI",
+            "url" : "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Alyrata"
+         }
+      ],
+      "name" : "Arabidopsis lyrata (v1.0)"
+   },
+   "Zmays-5b+" : {
+      "links" : [
+         {
+            "name" : "PubSEED",
+            "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=381124.6"
+         },
+         {
+            "url" : "http://ensembl.gramene.org/Zea_mays/Info/Index",
+            "name" : "Gramene"
+         },
+         {
+            "url" : "http://plants.ensembl.org/Zea_mays/Info/Index/",
+            "name" : "Ensembl"
+         },
+         {
+            "url" : "http://www.MaizeSequence.org",
+            "name" : "MaizeSequence"
+         },
+         {
+            "name" : "JGI",
+            "url" : "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Zmays"
+         }
+      ],
+      "name" : "Zea mays (5b+)",
+      "organism" : "Zea mays",
+      "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Zmays-AGPv2.jpg"
+   },
+   "Athaliana-TAIR10" : {
+      "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Athaliana-TAIR10.jpg",
+      "organism" : "Arabidopsis thaliana",
+      "name" : "Arabidopsis thaliana (TAIR10)",
+      "links" : [
+         {
+            "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=3702.11",
+            "name" : "PubSEED"
+         },
+         {
+            "name" : "Ensembl",
+            "url" : "http://plants.ensembl.org/Arabidopsis_thaliana/Info/Index/"
+         },
+         {
+            "name" : "TAIR",
+            "url" : "http://www.arabidopsis.org/"
+         },
+         {
+            "name" : "JGI",
+            "url" : "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Athaliana"
+         }
+      ]
+   },
+   "Vvinifera-Genoscope.12X" : {
+      "organism" : "Vitis vinifera",
+      "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Vvinifera-IGGP_12x.jpg",
+      "links" : [
+         {
+            "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=29760.3",
+            "name" : "PubSEED"
+         },
+         {
+            "url" : "http://plants.ensembl.org/Vitis_vinifera/Info/Index/",
+            "name" : "Ensembl"
+         },
+         {
+            "url" : "http://www.genoscope.cns.fr/externe/GenomeBrowser/Vitis",
+            "name" : "Genoscope"
+         },
+         {
+            "name" : "JGI",
+            "url" : "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Vvinifera"
+         }
+      ],
+      "name" : "Vitis vinifera (Genoscope.12X)"
+   },
+   "Ptrichocarpa-v3.0" : {
+      "name" : "Populus trichocarpa (v3.0)",
+      "links" : [
+         {
+            "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=3694.3",
+            "name" : "PubSEED"
+         },
+         {
+            "url" : "http://plants.ensembl.org/Populus_trichocarpa/Info/Index/",
+            "name" : "Ensembl"
+         },
+         {
+            "url" : "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Ptrichocarpa",
+            "name" : "JGI"
+         }
+      ],
+      "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Ptrichocarpa-JGI2.0.jpg",
+      "organism" : "Populus trichocarpa"
+   },
+   "Osativa-v7.0" : {
+      "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Osativa-MSU6.jpg",
+      "organism" : "Oryza sativa Nipponbare (Japonica rice)",
+      "name" : "Oryza sativa (v7.0)",
+      "links" : [
+         {
+            "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=39947.4",
+            "name" : "PubSEED"
+         },
+         {
+            "name" : "Gramene",
+            "url" : "http://plants.ensembl.org/Oryza_sativa/Info/Index/"
+         },
+         {
+            "url" : "http://plants.ensembl.org/Oryza_sativa/Info/Index/",
+            "name" : "Ensembl"
+         },
+         {
+            "name" : "MSU",
+            "url" : "http://rice.plantbiology.msu.edu"
+         },
+         {
+            "name" : "JGI",
+            "url" : "https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Osativa"
+         }
+      ]
+   }
 }
-},
-{
-   "Bdistachyon-v1.0" :
-{
-   "name" : "Brachypodium distachyon (1.0)",
-   "organism" : "Brachypodium distachyon (L.) Beauv",
-   "links" : [
-      {
-         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=15368.4",
-         "name" : "PubSEED"
-      },
-      {
-         "url" : "http://www.gramene.org/species/brachypodium/brachypodium_intro.html",
-         "name" : "Gramene"
-      },
-      {
-         "url" : "http://plants.ensembl.org/Brachypodium_distachyon/Info/Index/",
-         "name" : "Ensembl"
-      },      
-      {
-         "url" : "http://www.brachypodium.org",
-         "name" : "BIR"
-      }      
-   ],
-   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Bdistachyon-v1.0.jpg"
-}
-},
-{
-   "Oglaberrima-AGI1.1" :
-{
-   "name" : "Oryza glaberrima (AGI 1.1)",
-   "organism" : "Oryza glaberrima",
-   "links" : [
-      {
-         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=4538.3",
-         "name" : "PubSEED"
-      },
-      {
-         "url" : "http://www.gramene.org/species/oryza/rice_intro.html",
-         "name" : "Gramene"
-      },
-      {
-         "url" : "http://plants.ensembl.org/Oryza_glaberrima/Info/Index/",
-         "name" : "Ensembl"
-      },
-      {
-         "url" : "http://www2.genome.arizona.edu/genomes/rice_glab_genome_announce",
-         "name" : "AGI"
-      }
-   ],
-   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Oglaberrima-AGI1.1.jpg"
-}
-},
-{
-   "Osativa-MSU6" :
-{
-   "name" : "Oryza sativa (MSU 6)",
-   "organism" : "Oryza sativa Nipponbare (Japonica rice)",
-   "links" : [
-      {
-         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=39947.4",
-         "name" : "PubSEED"
-      },
-      {
-         "url" : "http://www.gramene.org/species/oryza/rice_intro.html",
-         "name" : "Gramene"
-      },
-      {
-         "url" : "http://plants.ensembl.org/Oryza_sativa/Info/Index/",
-         "name" : "Ensembl"
-      },
-      {
-         "url" : "http://rice.plantbiology.msu.edu",
-	 "name" : "MSU"
-      }	 	
-   ],
-   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Osativa-MSU6.jpg"
-}
-},
-{
-   "Sbicolor-Sorbi1" :
-{
-   "name" : "Sorghum bicolor (Sorbi1)",
-   "organism" : "Sorghum bicolor BTX623",
-   "links" : [
-      {
-         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=4558.4",
-         "name" : "PubSEED"
-      },
-      {
-         "url" : "http://www.gramene.org/species/sorghum/sorghum_intro.html",
-         "name" : "Gramene"
-      },
-      {
-         "url" : "http://plants.ensembl.org/Sorghum_bicolor/Info/Index/",
-         "name" : "Ensembl"
-      },
-      {
-         "url" : "http://genome.jgi-psf.org/Sorbi1/Sorbi1.home.html",
-         "name" : "JGI"
-      }
-   ],
-   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Sbicolor-Sorbi1.jpg"
-}
-},
-{
-   "Zmays-AGPv2" :
-{
-   "name" : "Zea mays (AGP 2)",
-   "organism" : "Zea mays",
-   "links" : [
-      {
-         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=381124.6",
-         "name" : "PubSEED"
-      },
-      {
-         "url" : "http://www.gramene.org/Zea_mays/Info/Index",
-         "name" : "Gramene"
-      },
-      {
-         "url" : "http://plants.ensembl.org/Zea_mays/Info/Index/",
-         "name" : "Ensembl"
-      },
-      {
-         "url" : "http://www.MaizeSequence.org",
-         "name" : "MaizeSequence"
-      }
-   ],
-   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Zmays-AGPv2.jpg"
-}
-},
-{
-   "Alyrata-v.1.0" :
-{
-   "name" : "Arabidopsis lyrata (1.0)",
-   "organism" : "Arabidopsis lyrata",
-   "links" : [
-      {
-         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=81972.3",
-         "name" : "PubSEED"
-      },
-      {
-         "url" : "http://plants.ensembl.org/Arabidopsis_lyrata/Info/Index/",
-         "name" : "Ensembl"
-      },
-      {
-         "url" : "http://genome.jgi-psf.org/Araly1/Araly1.info.html",
-         "name" : "JGI"
-      }
-   ],
-   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Alyrata-v.1.0.jpg"
-}
-},
-{
-   "Gmax-V1.0" :
-{
-   "name" : "Glycine max (1.0)",
-   "organism" : "Glycine max",
-   "links" : [
-      {
-         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=3847.5",
-         "name" : "PubSEED"
-      },
-      {
-         "url" : "http://plants.ensembl.org/Glycine_max/Info/Index/",
-         "name" : "Ensembl"
-      },
-      {
-         "url" : "http://www.phytozome.net/soybean",
-         "name" : "JGI"
-      }
-   ],
-   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Gmax-V1.0.jpg"
-}
-},
-{
-   "Ptrichocarpa-JGI2.0" :
-{
-   "name" : "Populus trichocarpa (JGI 2.0)",
-   "organism" : "Populus trichocarpa",
-   "links" : [
-      {
-         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=3694.3",
-         "name" : "PubSEED"
-      },
-      {
-         "url" : "http://plants.ensembl.org/Populus_trichocarpa/Info/Index/",
-         "name" : "Ensembl"
-      },
-      {
-         "url" : "http://www.phytozome.net/poplar",
-         "name" : "JGI"
-      }
-   ],
-   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Ptrichocarpa-JGI2.0.jpg"
-}
-},
-{
-   "Vvinifera-IGGP_12x" :
-{
-   "name" : "Vitis vinifera (IGGP 12x)",
-   "organism" : "Vitis vinifera",
-   "links" : [
-      {
-         "url" : "http://pubseed.theseed.org/seedviewer.cgi?page=Organism&organism=29760.3",
-         "name" : "PubSEED"
-      },
-      {
-         "url" : "http://plants.ensembl.org/Vitis_vinifera/Info/Index/",
-         "name" : "Ensembl"
-      },
-      {
-         "url" : "http://www.genoscope.cns.fr/externe/GenomeBrowser/Vitis",
-         "name" : "Genoscope"
-      }
-   ],
-   "image" : "https://raw.githubusercontent.com/ModelSEED/PlantSEED/master/Genome_Objects/Images/Vvinifera-IGGP_12x.jpg"
-}
-}
-]
