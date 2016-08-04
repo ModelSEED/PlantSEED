@@ -1,6 +1,2 @@
 Subsystem	AraCyc Pathways	Reactions
-Amino acids: Alanine,_serine,_glycine_metabolism_in_plants	ALANINE-SYN2-PWY, GLYSYN-ALA-PWY, GLYSYN2-PWY, PWY-6196, PWY0-1021, SERSYN-PWY	rxn00275, rxn00420, rxn00424, rxn00541, rxn00191, rxn26037, rxn01101, rxn17731, rxn00692, rxn00166, rxn02914, rxn00272, rxn00425
-Central Carbon: Calvin-Benson-Bassham_cycle_in_plants	CALVIN-PWY	rxn00018, rxn01345, rxn00777, rxn15271, rxn02251, rxn00747, rxn00782, rxn15116, rxn01200, rxn01116, rxn01334, rxn15494, rxn01100, rxn01111
-Central Carbon: Pentose_phosphate_pathway_in_plants	NONOXIPENT-PWY, OXIDATIVEPENT-PWY	rxn01115, rxn00777, rxn01476, rxn00770, rxn15271, rxn11040, rxn37018, rxn01200, rxn29919, rxn01116, rxn01275, rxn01975
-Energy: Photosystem_I	PWY-101	rxn20595, rxn26754, rxn20632, rxn17196
-Energy: Photosystem_II	PWY-101	rxn20595, rxn26754, rxn20632, rxn17196
+Central Carbon: Calvin-Benson-Bassham_cycle_in_plants	CALVIN-PWY	rxn15116, rxn15494, rxn01345, rxn00747, rxn01100, rxn01200, rxn01116, rxn15271, rxn00777, rxn02251, rxn01111, rxn01334, rxn00018, rxn00782
