@@ -1,498 +1,41 @@
 {
-   "template_ref" : "NewKBaseModelTemplates/PlantModelTemplate",
-   "genome_ref" : "PlantCSGenomes/Arabidopsis_thaliana",
-   "source" : "PlantSEED",
-   "biomasses" : [],
+   "gapgens" : [],
+   "type" : "GenomeScale",
    "source_id" : "PlantSEED",
-   "modelcompounds" : [
+   "genome_ref" : "PlantCSGenomes/Arabidopsis_thaliana",
+   "biomasses" : [
       {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00011",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "CO2",
-         "charge" : 0,
-         "name" : "CO2_d0",
-         "aliases" : [],
-         "id" : "cpd00011_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00020",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C3H3O3",
-         "charge" : -1,
-         "name" : "Pyruvate_d0",
-         "aliases" : [],
-         "id" : "cpd00020_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00067",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "H",
-         "charge" : 1,
-         "name" : "H+_d0",
-         "aliases" : [],
-         "id" : "cpd00067_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00001",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "H2O",
-         "charge" : 0,
-         "name" : "H2O_d0",
-         "aliases" : [],
-         "id" : "cpd00001_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00169",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C3H4O7P",
-         "charge" : -3,
-         "name" : "3-Phosphoglycerate_d0",
-         "aliases" : [],
-         "id" : "cpd00169_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00871",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C5H8O11P2",
-         "charge" : -4,
-         "name" : "D-Ribulose 1,5-bisphosphate_d0",
-         "aliases" : [],
-         "id" : "cpd00871_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00003",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C21H26N7O14P2",
-         "charge" : -1,
-         "name" : "NAD_d0",
-         "aliases" : [],
-         "id" : "cpd00003_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00004",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C21H27N7O14P2",
-         "charge" : -2,
-         "name" : "NADH_d0",
-         "aliases" : [],
-         "id" : "cpd00004_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00023",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C5H8NO4",
-         "charge" : -1,
-         "name" : "L-Glutamate_d0",
-         "aliases" : [],
-         "id" : "cpd00023_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00024",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C5H4O5",
-         "charge" : -2,
-         "name" : "2-Oxoglutarate_d0",
-         "aliases" : [],
-         "id" : "cpd00024_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00018",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C10H12N5O7P",
-         "charge" : -2,
-         "name" : "AMP_d0",
-         "aliases" : [],
-         "id" : "cpd00018_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00002",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C10H13N5O13P3",
-         "charge" : -3,
-         "name" : "ATP_d0",
-         "aliases" : [],
-         "id" : "cpd00002_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00006",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C21H25N7O17P3",
-         "charge" : -3,
-         "name" : "NADP_d0",
-         "aliases" : [],
-         "id" : "cpd00006_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00008",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C10H13N5O10P2",
-         "charge" : -2,
-         "name" : "ADP_d0",
-         "aliases" : [],
-         "id" : "cpd00008_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00005",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C21H26N7O17P3",
-         "charge" : -4,
-         "name" : "NADPH_d0",
-         "aliases" : [],
-         "id" : "cpd00005_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00009",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "HO4P",
-         "charge" : -2,
-         "name" : "Phosphate_d0",
-         "aliases" : [],
-         "id" : "cpd00009_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00035",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C3H7NO2",
-         "charge" : 0,
-         "name" : "L-Alanine_d0",
-         "aliases" : [],
-         "id" : "cpd00035_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00007",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "O2",
-         "charge" : 0,
-         "name" : "O2_d0",
-         "aliases" : [],
-         "id" : "cpd00007_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00033",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C2H5NO2",
-         "charge" : 0,
-         "name" : "Glycine_d0",
-         "aliases" : [],
-         "id" : "cpd00033_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00040",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C2HO3",
-         "charge" : -1,
-         "name" : "Glyoxalate_d0",
-         "aliases" : [],
-         "id" : "cpd00040_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00054",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C3H7NO3",
-         "charge" : 0,
-         "name" : "L-Serine_d0",
-         "aliases" : [],
-         "id" : "cpd00054_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00738",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C3H6NO6P",
-         "charge" : -2,
-         "name" : "phosphoserine_d0",
-         "aliases" : [],
-         "id" : "cpd00738_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00095",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C3H5O6P",
-         "charge" : -2,
-         "name" : "Glycerone-phosphate_d0",
-         "aliases" : [],
-         "id" : "cpd00095_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00084",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C3H7NO2S",
-         "charge" : 0,
-         "name" : "L-Cysteine_d0",
-         "aliases" : [],
-         "id" : "cpd00084_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00087",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C19H21N7O6",
-         "charge" : -2,
-         "name" : "Tetrahydrofolate_d0",
-         "aliases" : [],
-         "id" : "cpd00087_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00125",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C20H21N7O6",
-         "charge" : -2,
-         "name" : "5-10-Methylenetetrahydrofolate_d0",
-         "aliases" : [],
-         "id" : "cpd00125_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00103",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C5H9O14P3",
-         "charge" : -4,
-         "name" : "PRPP_d0",
-         "aliases" : [],
-         "id" : "cpd00103_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00102",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C3H5O6P",
-         "charge" : -2,
-         "name" : "Glyceraldehyde3-phosphate_d0",
-         "aliases" : [],
-         "id" : "cpd00102_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00101",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C5H9O8P",
-         "charge" : -2,
-         "name" : "ribose-5-phosphate_d0",
-         "aliases" : [],
-         "id" : "cpd00101_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00171",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C5H9O8P",
-         "charge" : -2,
-         "name" : "D-Ribulose5-phosphate_d0",
-         "aliases" : [],
-         "id" : "cpd00171_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00203",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C3H4O10P2",
-         "charge" : -4,
-         "name" : "1,3-Bisphospho-D-glycerate_d0",
-         "aliases" : [],
-         "id" : "cpd00203_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00727",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C2H2O6P",
-         "charge" : -3,
-         "name" : "2-Phosphoglycolate_d0",
-         "aliases" : [],
-         "id" : "cpd00727_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd02069",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C3H2O7P",
-         "charge" : -3,
-         "name" : "3-Phosphonooxypyruvate_d0",
-         "aliases" : [],
-         "id" : "cpd02069_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00284",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C6H10O10P",
-         "charge" : -3,
-         "name" : "6-Phospho-D-gluconate_d0",
-         "aliases" : [],
-         "id" : "cpd00284_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00198",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C5H9O8P",
-         "charge" : -2,
-         "name" : "D-Xylulose5-phosphate_d0",
-         "aliases" : [],
-         "id" : "cpd00198_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00238",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C7H13O10P",
-         "charge" : -2,
-         "name" : "Sedoheptulose7-phosphate_d0",
-         "aliases" : [],
-         "id" : "cpd00238_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00236",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C4H7O7P",
-         "charge" : -2,
-         "name" : "D-Erythrose4-phosphate_d0",
-         "aliases" : [],
-         "id" : "cpd00236_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00349",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C7H12O13P2",
-         "charge" : -4,
-         "name" : "Sedoheptulose 1,7-bisphosphate_d0",
-         "aliases" : [],
-         "id" : "cpd00349_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00911",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C6H9O9P",
-         "charge" : -2,
-         "name" : "6-phospho-D-glucono-1-5-lactone_d0",
-         "aliases" : [],
-         "id" : "cpd00911_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd00863",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C6H11O9P",
-         "charge" : -2,
-         "name" : "beta-D-Glucose 6-phosphate_d0",
-         "aliases" : [],
-         "id" : "cpd00863_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd19036",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C6H10O12P2",
-         "charge" : -4,
-         "name" : "beta-D-Fructose 1,6-bisphosphate_d0",
-         "aliases" : [],
-         "id" : "cpd19036_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd19035",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C6H11O9P",
-         "charge" : -2,
-         "name" : "beta-D-Fructose 6-phosphate_d0",
-         "aliases" : [],
-         "id" : "cpd19035_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd27757",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "R",
-         "charge" : 0,
-         "name" : "Oxidized-ferredoxins_d0",
-         "aliases" : [],
-         "id" : "cpd27757_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd28082",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "R",
-         "charge" : -1,
-         "name" : "Reduced-ferredoxins_d0",
-         "aliases" : [],
-         "id" : "cpd28082_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd27746",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "R",
-         "charge" : 0,
-         "name" : "Oxidized-Plastocyanins_d0",
-         "aliases" : [],
-         "id" : "cpd27746_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd27796",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C53H82O2",
-         "charge" : 0,
-         "name" : "PLASTOQUINOL-1_d0",
-         "aliases" : [],
-         "id" : "cpd27796_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd27797",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C53H80O2",
-         "charge" : 0,
-         "name" : "PLASTOQUINONE_d0",
-         "aliases" : [],
-         "id" : "cpd27797_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd27884",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "R",
-         "charge" : -1,
-         "name" : "Plastocyanin-Reduced_d0",
-         "aliases" : [],
-         "id" : "cpd27884_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd11632",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "",
-         "charge" : 0,
-         "name" : "hn_d0",
-         "aliases" : [],
-         "id" : "cpd11632_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd27355",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "R",
-         "charge" : 0,
-         "name" : "L-Cysteine-Desulfurases_d0",
-         "aliases" : [],
-         "id" : "cpd27355_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd27847",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "SR",
-         "charge" : 0,
-         "name" : "Persulfurated-L-cysteine-desulfurases_d0",
-         "aliases" : [],
-         "id" : "cpd27847_d0"
-      },
-      {
-         "compound_ref" : "12998/3/10/compounds/id/cpd16443",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "formula" : "C5H10O5",
-         "charge" : 0,
-         "name" : "beta-D-Ribofuranose_d0",
-         "aliases" : [],
-         "id" : "cpd16443_d0"
+         "lipid" : 0,
+         "biomasscompounds" : [
+            {
+               "gapfill_data" : {},
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00102_d0"
+            }
+         ],
+         "protein" : 0,
+         "dna" : 0,
+         "name" : "Plastidial biomass",
+         "cellwall" : 0,
+         "id" : "bio1",
+         "other" : 0,
+         "cofactor" : 0,
+         "removedcompounds" : [],
+         "rna" : 0,
+         "energy" : 0
       }
    ],
-   "name" : "Plastidial_SandBox_Model",
+   "source" : "PlantSEED",
    "modelreactions" : [
       {
-         "probability" : 0,
-         "name" : "3-phospho-D-glycerate carboxy-lyase (dimerizing; D-ribulose-1,5-bisphosphate-forming)_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn00018_d",
-         "protons" : 0,
-         "direction" : ">",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
          "modelReactionReagents" : [
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00001_d0",
-               "coefficient" : -1
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00001_d0"
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00011_d0",
-               "coefficient" : -1
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00011_d0"
             },
             {
                "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0",
@@ -507,463 +50,137 @@
                "coefficient" : -1
             }
          ],
+         "name" : "3-phospho-D-glycerate carboxy-lyase (dimerizing; D-ribulose-1,5-bisphosphate-forming)_d0",
+         "aliases" : [],
          "id" : "rxn00018_d0",
+         "reaction_ref" : "~/template/reactions/id/rxn00018_d",
+         "protons" : 0,
+         "direction" : ">",
          "modelReactionProteins" : [
             {
+               "note" : "",
                "source" : "",
+               "complex_ref" : "~/template/complexes/id/Cpx.615",
                "modelReactionProteinSubunits" : [
                   {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
+                     "role" : "Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39)",
+                     "note" : "",
                      "feature_refs" : [
                         "14486/42/2/features/id/AT5G38430.1",
                         "14486/42/2/features/id/AT5G38420.1",
                         "14486/42/2/features/id/AT5G38410.3",
                         "14486/42/2/features/id/AT1G67090.1"
                      ],
-                     "role" : "Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39)",
-                     "note" : ""
+                     "optionalSubunit" : 0,
+                     "triggering" : 1
                   }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.615",
-               "note" : ""
+               ]
             },
             {
                "source" : "",
+               "note" : "",
+               "complex_ref" : "~/template/complexes/id/Cpx.614",
                "modelReactionProteinSubunits" : [
                   {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
                      "feature_refs" : [
                         "14486/42/2/features/id/ATCG00490.1"
                      ],
+                     "note" : "",
                      "role" : "Ribulose bisphosphate carboxylase large chain (EC 4.1.1.39)",
-                     "note" : ""
+                     "triggering" : 1,
+                     "optionalSubunit" : 0
                   }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.614",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "L-Alanine:2-oxoglutarate aminotransferase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn00191_d",
-         "protons" : 0,
-         "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00020_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00023_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00024_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00035_d0",
-               "coefficient" : -1
+               ]
             }
          ],
-         "id" : "rxn00191_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G70580.1",
-                        "14486/42/2/features/id/AT1G23310.1",
-                        "14486/42/2/features/id/AT1G72330.3",
-                        "14486/42/2/features/id/AT1G17290.1"
-                     ],
-                     "role" : "Alanine transaminase (EC 2.6.1.2)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.105",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "L-Alanine:glyoxylate aminotransferase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn00272_d",
-         "protons" : 0,
-         "direction" : "=",
          "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00020_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00033_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00035_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00040_d0",
-               "coefficient" : -1
-            }
-         ],
-         "id" : "rxn00272_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G70580.1",
-                        "14486/42/2/features/id/AT3G08860.1",
-                        "14486/42/2/features/id/AT1G23310.1",
-                        "14486/42/2/features/id/AT2G38400.2",
-                        "14486/42/2/features/id/AT2G13360.1",
-                        "14486/42/2/features/id/AT4G39660.1"
-                     ],
-                     "role" : "L-alanine:glyoxylate aminotransferase (EC 2.6.1.44)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.360",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "Glycine:2-oxoglutarate aminotransferase_d0",
          "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn00275_d",
-         "protons" : 0,
-         "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00023_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00024_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00033_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00040_d0",
-               "coefficient" : 1
-            }
-         ],
-         "id" : "rxn00275_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G70580.1",
-                        "14486/42/2/features/id/AT1G23310.1"
-                     ],
-                     "role" : "Glutamate-glyoxylate aminotransferase (EC 2.6.1.4)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.301",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G70580.1",
-                        "14486/42/2/features/id/AT3G08860.1",
-                        "14486/42/2/features/id/AT1G23310.1",
-                        "14486/42/2/features/id/AT2G38400.2",
-                        "14486/42/2/features/id/AT2G13360.1",
-                        "14486/42/2/features/id/AT4G39660.1"
-                     ],
-                     "role" : "L-alanine:glyoxylate aminotransferase (EC 2.6.1.44)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.360",
-               "note" : ""
-            }
-         ]
+         "probability" : 0
       },
       {
-         "probability" : 0,
-         "name" : "O-phospho-L-serine phosphohydrolase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn00420_d",
-         "protons" : 0,
-         "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00001_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00009_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00054_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00738_d0",
-               "coefficient" : -1
-            }
-         ],
-         "id" : "rxn00420_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G18640.2"
-                     ],
-                     "role" : "Phosphoserine phosphatase (EC 3.1.3.3)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.542",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "5,10-Methylenetetrahydrofolate:glycine hydroxymethyltransferase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn00692_d",
-         "protons" : 0,
-         "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00001_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00033_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00054_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00087_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00125_d0",
-               "coefficient" : -1
-            }
-         ],
-         "id" : "rxn00692_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT4G13890.1",
-                        "14486/42/2/features/id/AT1G22020.1",
-                        "14486/42/2/features/id/AT4G37930.1",
-                        "14486/42/2/features/id/AT1G36370.1",
-                        "14486/42/2/features/id/AT4G32520.1",
-                        "14486/42/2/features/id/AT5G26780.3",
-                        "14486/42/2/features/id/AT4G13930.1"
-                     ],
-                     "role" : "Serine hydroxymethyltransferase (EC 2.1.2.1)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.621",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
+         "id" : "rxn00747_d0",
          "name" : "D-glyceraldehyde-3-phosphate aldose-ketose-isomerase_d0",
-         "gapfill_data" : {},
+         "modelReactionReagents" : [
+            {
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00095_d0"
+            },
+            {
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00102_d0"
+            }
+         ],
+         "aliases" : [],
          "reaction_ref" : "~/template/reactions/id/rxn00747_d",
          "protons" : 0,
          "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00095_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00102_d0",
-               "coefficient" : -1
-            }
-         ],
-         "id" : "rxn00747_d0",
          "modelReactionProteins" : [
             {
-               "source" : "",
+               "complex_ref" : "~/template/complexes/id/Cpx.674",
                "modelReactionProteinSubunits" : [
                   {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
+                     "role" : "Triosephosphate isomerase (EC 5.3.1.1)",
+                     "note" : "",
                      "feature_refs" : [
                         "14486/42/2/features/id/AT3G55440.1",
                         "14486/42/2/features/id/AT2G21170.1"
                      ],
-                     "role" : "Triosephosphate isomerase (EC 5.3.1.1)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.674",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "ATP:D-ribose-5-phosphate diphosphotransferase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn00770_d",
-         "protons" : 0,
-         "direction" : ">",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00002_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00018_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00101_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00103_d0",
-               "coefficient" : 1
-            }
-         ],
-         "id" : "rxn00770_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
                      "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G10700.1",
-                        "14486/42/2/features/id/AT2G42910.1",
-                        "14486/42/2/features/id/AT2G35390.2",
-                        "14486/42/2/features/id/AT1G32380.1"
-                     ],
-                     "role" : "Ribose-phosphate pyrophosphokinase (EC 2.7.6.1)",
-                     "note" : ""
+                     "triggering" : 1
                   }
                ],
-               "complex_ref" : "~/template/complexes/id/Cpx.786",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "D-ribose-5-phosphate aldose-ketose-isomerase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn00777_d",
-         "protons" : 0,
-         "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00101_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00171_d0",
-               "coefficient" : 1
+               "note" : "",
+               "source" : ""
             }
          ],
+         "gapfill_data" : {},
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "probability" : 0
+      },
+      {
          "id" : "rxn00777_d0",
+         "aliases" : [],
+         "name" : "D-ribose-5-phosphate aldose-ketose-isomerase_d0",
+         "modelReactionReagents" : [
+            {
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00101_d0"
+            },
+            {
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00171_d0"
+            }
+         ],
+         "reaction_ref" : "~/template/reactions/id/rxn00777_d",
+         "direction" : "=",
+         "protons" : 0,
          "modelReactionProteins" : [
             {
-               "source" : "",
+               "complex_ref" : "~/template/complexes/id/Cpx.611",
                "modelReactionProteinSubunits" : [
                   {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
+                     "note" : "",
+                     "role" : "Ribose 5-phosphate isomerase A (EC 5.3.1.6)",
                      "feature_refs" : [
                         "14486/42/2/features/id/AT1G71100.1",
                         "14486/42/2/features/id/AT2G01290.1",
                         "14486/42/2/features/id/AT3G04790.1"
                      ],
-                     "role" : "Ribose 5-phosphate isomerase A (EC 5.3.1.6)",
-                     "note" : ""
+                     "optionalSubunit" : 0,
+                     "triggering" : 1
                   }
                ],
-               "complex_ref" : "~/template/complexes/id/Cpx.611",
-               "note" : ""
+               "note" : "",
+               "source" : ""
             }
-         ]
+         ],
+         "gapfill_data" : {},
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "probability" : 0
       },
       {
-         "probability" : 0,
-         "name" : "D-glyceraldehyde-3-phosphate:NADP+ oxidoreductase (phosphorylating)_d0",
-         "gapfill_data" : {},
          "reaction_ref" : "~/template/reactions/id/rxn00782_d",
-         "protons" : 0,
-         "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "name" : "D-glyceraldehyde-3-phosphate:NADP+ oxidoreductase (phosphorylating)_d0",
          "aliases" : [],
          "modelReactionReagents" : [
             {
@@ -975,12 +192,12 @@
                "coefficient" : -1
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00009_d0",
-               "coefficient" : -1
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00009_d0"
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0",
-               "coefficient" : 1
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0"
             },
             {
                "modelcompound_ref" : "~/modelcompounds/id/cpd00102_d0",
@@ -992,26 +209,30 @@
             }
          ],
          "id" : "rxn00782_d0",
+         "probability" : 0,
+         "gapfill_data" : {},
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
          "modelReactionProteins" : [
             {
+               "note" : "",
                "source" : "",
+               "complex_ref" : "~/template/complexes/id/Cpx.581",
                "modelReactionProteinSubunits" : [
                   {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
+                     "note" : "",
+                     "role" : "Protein CP12, regulation of Calvin cycle via association/dissociation of PRK/CP12/GAPDH complex",
                      "feature_refs" : [
                         "14486/42/2/features/id/AT2G47400.1",
                         "14486/42/2/features/id/AT3G62410.1",
                         "14486/42/2/features/id/AT1G76560.1"
                      ],
-                     "role" : "Protein CP12, regulation of Calvin cycle via association/dissociation of PRK/CP12/GAPDH complex",
-                     "note" : ""
+                     "optionalSubunit" : 0,
+                     "triggering" : 1
                   }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.581",
-               "note" : ""
+               ]
             },
             {
+               "note" : "",
                "source" : "",
                "modelReactionProteinSubunits" : [
                   {
@@ -1026,146 +247,68 @@
                      "note" : ""
                   }
                ],
-               "complex_ref" : "~/template/complexes/id/Cpx.454",
-               "note" : ""
+               "complex_ref" : "~/template/complexes/id/Cpx.454"
             }
-         ]
+         ],
+         "protons" : 0,
+         "direction" : "="
       },
       {
          "probability" : 0,
-         "name" : "ATP:3-phospho-D-glycerate 1-phosphotransferase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn01100_d",
-         "protons" : 0,
-         "direction" : "=",
          "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
+         "gapfill_data" : {},
+         "direction" : "=",
+         "protons" : 0,
+         "modelReactionProteins" : [
+            {
+               "modelReactionProteinSubunits" : [
+                  {
+                     "feature_refs" : [
+                        "14486/42/2/features/id/AT1G56190.1",
+                        "14486/42/2/features/id/AT3G12780.1",
+                        "14486/42/2/features/id/AT1G79550.1"
+                     ],
+                     "note" : "",
+                     "role" : "Phosphoglycerate kinase (EC 2.7.2.3)",
+                     "triggering" : 1,
+                     "optionalSubunit" : 0
+                  }
+               ],
+               "complex_ref" : "~/template/complexes/id/Cpx.518",
+               "source" : "",
+               "note" : ""
+            }
+         ],
+         "reaction_ref" : "~/template/reactions/id/rxn01100_d",
          "modelReactionReagents" : [
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00002_d0",
-               "coefficient" : -1
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00002_d0"
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00008_d0",
-               "coefficient" : 1
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00008_d0"
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00169_d0",
-               "coefficient" : -1
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00169_d0"
             },
             {
                "modelcompound_ref" : "~/modelcompounds/id/cpd00203_d0",
                "coefficient" : 1
             }
          ],
-         "id" : "rxn01100_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G56190.1",
-                        "14486/42/2/features/id/AT3G12780.1",
-                        "14486/42/2/features/id/AT1G79550.1"
-                     ],
-                     "role" : "Phosphoglycerate kinase (EC 2.7.2.3)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.518",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "3-Phospho-D-glycerate:NAD+ 2-oxidoreductase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn01101_d",
-         "protons" : 0,
-         "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "name" : "ATP:3-phospho-D-glycerate 1-phosphotransferase_d0",
          "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00003_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00004_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00169_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd02069_d0",
-               "coefficient" : 1
-            }
-         ],
-         "id" : "rxn01101_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G17745.2"
-                     ],
-                     "role" : "D-3-phosphoglycerate dehydrogenase (EC 1.1.1.95)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.205",
-               "note" : ""
-            }
-         ]
+         "id" : "rxn01100_d0"
       },
       {
-         "probability" : 0,
-         "name" : "ATP:D-ribulose-5-phosphate 1-phosphotransferase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn01111_d",
-         "protons" : 0,
          "direction" : ">",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00002_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00008_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00171_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00871_d0",
-               "coefficient" : 1
-            }
-         ],
-         "id" : "rxn01111_d0",
+         "protons" : 0,
          "modelReactionProteins" : [
             {
                "source" : "",
+               "note" : "",
                "modelReactionProteinSubunits" : [
                   {
                      "triggering" : 1,
@@ -1179,11 +322,9 @@
                      "note" : ""
                   }
                ],
-               "complex_ref" : "~/template/complexes/id/Cpx.581",
-               "note" : ""
+               "complex_ref" : "~/template/complexes/id/Cpx.581"
             },
             {
-               "source" : "",
                "modelReactionProteinSubunits" : [
                   {
                      "triggering" : 1,
@@ -1196,86 +337,47 @@
                   }
                ],
                "complex_ref" : "~/template/complexes/id/Cpx.540",
-               "note" : ""
+               "note" : "",
+               "source" : ""
             }
-         ]
-      },
-      {
+         ],
          "probability" : 0,
-         "name" : "6-phospho-D-gluconate:NADP+ 2-oxidoreductase (decarboxylating)_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn01115_d",
-         "protons" : 0,
-         "direction" : ">",
          "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "gapfill_data" : {},
          "aliases" : [],
+         "name" : "ATP:D-ribulose-5-phosphate 1-phosphotransferase_d0",
          "modelReactionReagents" : [
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00005_d0",
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00002_d0"
+            },
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00008_d0",
                "coefficient" : 1
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00006_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00011_d0",
-               "coefficient" : 1
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0"
             },
             {
                "modelcompound_ref" : "~/modelcompounds/id/cpd00171_d0",
-               "coefficient" : 1
+               "coefficient" : -1
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00284_d0",
-               "coefficient" : -1
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00871_d0",
+               "coefficient" : 1
             }
          ],
-         "id" : "rxn01115_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT5G41670.1",
-                        "14486/42/2/features/id/AT3G02360.2",
-                        "14486/42/2/features/id/AT1G64190.1"
-                     ],
-                     "role" : "6-phosphogluconate dehydrogenase, decarboxylating (EC 1.1.1.44)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.72",
-               "note" : ""
-            }
-         ]
+         "id" : "rxn01111_d0",
+         "reaction_ref" : "~/template/reactions/id/rxn01111_d"
       },
       {
-         "probability" : 0,
-         "name" : "D-Ribulose-5-phosphate 3-epimerase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn01116_d",
          "protons" : 0,
          "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00171_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00198_d0",
-               "coefficient" : 1
-            }
-         ],
-         "id" : "rxn01116_d0",
          "modelReactionProteins" : [
             {
                "source" : "",
+               "note" : "",
                "modelReactionProteinSubunits" : [
                   {
                      "triggering" : 1,
@@ -1289,19 +391,53 @@
                      "note" : ""
                   }
                ],
-               "complex_ref" : "~/template/complexes/id/Cpx.616",
-               "note" : ""
+               "complex_ref" : "~/template/complexes/id/Cpx.616"
             }
-         ]
+         ],
+         "probability" : 0,
+         "gapfill_data" : {},
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "modelReactionReagents" : [
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00171_d0",
+               "coefficient" : -1
+            },
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00198_d0",
+               "coefficient" : 1
+            }
+         ],
+         "aliases" : [],
+         "name" : "D-Ribulose-5-phosphate 3-epimerase_d0",
+         "id" : "rxn01116_d0",
+         "reaction_ref" : "~/template/reactions/id/rxn01116_d"
       },
       {
          "probability" : 0,
-         "name" : "Sedoheptulose-7-phosphate:D-glyceraldehyde-3-phosphate glycolaldehyde transferase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn01200_d",
-         "protons" : 0,
-         "direction" : "=",
          "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "gapfill_data" : {},
+         "direction" : "=",
+         "modelReactionProteins" : [
+            {
+               "note" : "",
+               "source" : "",
+               "modelReactionProteinSubunits" : [
+                  {
+                     "feature_refs" : [
+                        "14486/42/2/features/id/AT2G45290.1",
+                        "14486/42/2/features/id/AT3G60750.1"
+                     ],
+                     "note" : "",
+                     "role" : "Transketolase (EC 2.2.1.1)",
+                     "triggering" : 1,
+                     "optionalSubunit" : 0
+                  }
+               ],
+               "complex_ref" : "~/template/complexes/id/Cpx.671"
+            }
+         ],
+         "protons" : 0,
+         "reaction_ref" : "~/template/reactions/id/rxn01200_d",
          "aliases" : [],
          "modelReactionReagents" : [
             {
@@ -1309,66 +445,31 @@
                "coefficient" : 1
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00102_d0",
-               "coefficient" : -1
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00102_d0"
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00198_d0",
-               "coefficient" : 1
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00198_d0"
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00238_d0",
-               "coefficient" : -1
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00238_d0"
             }
          ],
-         "id" : "rxn01200_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT2G45290.1",
-                        "14486/42/2/features/id/AT3G60750.1"
-                     ],
-                     "role" : "Transketolase (EC 2.2.1.1)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.671",
-               "note" : ""
-            }
-         ]
+         "name" : "Sedoheptulose-7-phosphate:D-glyceraldehyde-3-phosphate glycolaldehyde transferase_d0",
+         "id" : "rxn01200_d0"
       },
       {
-         "probability" : 0,
-         "name" : "Sedoheptulose 1,7-bisphosphate D-glyceraldehyde-3-phosphate-lyase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn01334_d",
-         "protons" : 0,
-         "direction" : "=",
          "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00095_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00236_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00349_d0",
-               "coefficient" : -1
-            }
-         ],
-         "id" : "rxn01334_d0",
+         "gapfill_data" : {},
+         "probability" : 0,
+         "protons" : 0,
          "modelReactionProteins" : [
             {
                "source" : "",
+               "note" : "",
+               "complex_ref" : "~/template/complexes/id/Cpx.270",
                "modelReactionProteinSubunits" : [
                   {
                      "triggering" : 1,
@@ -1383,24 +484,59 @@
                         "14486/42/2/features/id/AT4G38970.1",
                         "14486/42/2/features/id/AT2G21330.1"
                      ],
-                     "role" : "Fructose-bisphosphate aldolase class I (EC 4.1.2.13)",
-                     "note" : ""
+                     "note" : "",
+                     "role" : "Fructose-bisphosphate aldolase class I (EC 4.1.2.13)"
                   }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.270",
-               "note" : ""
+               ]
+            }
+         ],
+         "direction" : "=",
+         "reaction_ref" : "~/template/reactions/id/rxn01334_d",
+         "id" : "rxn01334_d0",
+         "aliases" : [],
+         "name" : "Sedoheptulose 1,7-bisphosphate D-glyceraldehyde-3-phosphate-lyase_d0",
+         "modelReactionReagents" : [
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00095_d0",
+               "coefficient" : 1
+            },
+            {
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00236_d0"
+            },
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00349_d0",
+               "coefficient" : -1
             }
          ]
       },
       {
-         "probability" : 0,
-         "name" : "Sedoheptulose 1,7-bisphosphate 1-phosphohydrolase_d0",
          "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn01345_d",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "probability" : 0,
+         "modelReactionProteins" : [
+            {
+               "complex_ref" : "~/template/complexes/id/Cpx.619",
+               "modelReactionProteinSubunits" : [
+                  {
+                     "optionalSubunit" : 0,
+                     "triggering" : 1,
+                     "note" : "",
+                     "role" : "Sedoheptulose-1,7-bisphosphatase (EC 3.1.3.37)",
+                     "feature_refs" : [
+                        "14486/42/2/features/id/AT3G55800.1"
+                     ]
+                  }
+               ],
+               "note" : "",
+               "source" : ""
+            }
+         ],
          "protons" : 0,
          "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "reaction_ref" : "~/template/reactions/id/rxn01345_d",
          "aliases" : [],
+         "name" : "Sedoheptulose 1,7-bisphosphate 1-phosphohydrolase_d0",
          "modelReactionReagents" : [
             {
                "modelcompound_ref" : "~/modelcompounds/id/cpd00001_d0",
@@ -1415,191 +551,66 @@
                "coefficient" : 1
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00349_d0",
-               "coefficient" : -1
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00349_d0"
             }
          ],
-         "id" : "rxn01345_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT3G55800.1"
-                     ],
-                     "role" : "Sedoheptulose-1,7-bisphosphatase (EC 3.1.3.37)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.619",
-               "note" : ""
-            }
-         ]
+         "id" : "rxn01345_d0"
       },
       {
-         "probability" : 0,
-         "name" : "6-Phospho-D-glucono-1,5-lactone lactonohydrolase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn01476_d",
-         "protons" : 0,
-         "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00001_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00284_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00911_d0",
-               "coefficient" : -1
-            }
-         ],
-         "id" : "rxn01476_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT5G24410.1",
-                        "14486/42/2/features/id/AT3G49360.1",
-                        "14486/42/2/features/id/AT5G24400.1",
-                        "14486/42/2/features/id/AT1G13700.1",
-                        "14486/42/2/features/id/AT5G24420.1"
-                     ],
-                     "role" : "6-phosphogluconolactonase (EC 3.1.1.31), eukaryotic type",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.73",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "beta-D-Glucose-6-phosphate:NADP+ 1-oxoreductase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn01975_d",
-         "protons" : 0,
-         "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00005_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00006_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00863_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00911_d0",
-               "coefficient" : 1
-            }
-         ],
-         "id" : "rxn01975_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT5G35790.1",
-                        "14486/42/2/features/id/AT5G13110.1",
-                        "14486/42/2/features/id/AT3G27300.1",
-                        "14486/42/2/features/id/AT5G40760.1",
-                        "14486/42/2/features/id/AT1G09420.2",
-                        "14486/42/2/features/id/AT1G24280.1"
-                     ],
-                     "role" : "Glucose-6-phosphate 1-dehydrogenase (EC 1.1.1.49)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.292",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "D-Ribulose 1,5-bisphosphate oxygenase_d0",
-         "gapfill_data" : {},
          "reaction_ref" : "~/template/reactions/id/rxn02251_d",
-         "protons" : 0,
-         "direction" : ">",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "name" : "D-Ribulose 1,5-bisphosphate oxygenase_d0",
          "aliases" : [],
          "modelReactionReagents" : [
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00007_d0",
-               "coefficient" : -1
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00007_d0"
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0",
-               "coefficient" : 2
+               "coefficient" : 2,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0"
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00169_d0",
-               "coefficient" : 1
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00169_d0"
             },
             {
                "modelcompound_ref" : "~/modelcompounds/id/cpd00727_d0",
                "coefficient" : 1
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00871_d0",
-               "coefficient" : -1
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00871_d0"
             }
          ],
          "id" : "rxn02251_d0",
+         "probability" : 0,
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "gapfill_data" : {},
+         "protons" : 0,
+         "direction" : ">",
          "modelReactionProteins" : [
             {
+               "note" : "",
                "source" : "",
+               "complex_ref" : "~/template/complexes/id/Cpx.615",
                "modelReactionProteinSubunits" : [
                   {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
                      "feature_refs" : [
                         "14486/42/2/features/id/AT5G38430.1",
                         "14486/42/2/features/id/AT5G38420.1",
                         "14486/42/2/features/id/AT5G38410.3",
                         "14486/42/2/features/id/AT1G67090.1"
                      ],
+                     "note" : "",
                      "role" : "Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39)",
-                     "note" : ""
+                     "triggering" : 1,
+                     "optionalSubunit" : 0
                   }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.615",
-               "note" : ""
+               ]
             },
             {
-               "source" : "",
+               "complex_ref" : "~/template/complexes/id/Cpx.614",
                "modelReactionProteinSubunits" : [
                   {
                      "triggering" : 1,
@@ -1611,143 +622,38 @@
                      "note" : ""
                   }
                ],
-               "complex_ref" : "~/template/complexes/id/Cpx.614",
-               "note" : ""
+               "note" : "",
+               "source" : ""
             }
          ]
       },
       {
-         "probability" : 0,
-         "name" : "3-Phosphoserine:2-oxoglutarate aminotransferase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn02914_d",
-         "protons" : 0,
-         "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00023_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00024_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00738_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd02069_d0",
-               "coefficient" : 1
-            }
-         ],
-         "id" : "rxn02914_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT2G17630.1",
-                        "14486/42/2/features/id/AT4G35630.1"
-                     ],
-                     "role" : "Phosphoserine aminotransferase (EC 2.6.1.52)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.541",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "RXN-3341.c_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn11040_d",
-         "protons" : 0,
-         "direction" : ">",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00003_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00004_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00011_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00171_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00284_d0",
-               "coefficient" : -1
-            }
-         ],
-         "id" : "rxn11040_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT5G41670.1",
-                        "14486/42/2/features/id/AT3G02360.2",
-                        "14486/42/2/features/id/AT1G64190.1"
-                     ],
-                     "role" : "6-phosphogluconate dehydrogenase, decarboxylating (EC 1.1.1.44)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.72",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "beta-D-fructose-1,6-bisphosphate D-glyceraldehyde-3-phosphate-lyase (glycerone-phosphate-forming)_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn15116_d",
-         "protons" : 0,
-         "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00095_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00102_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd19036_d0",
-               "coefficient" : -1
-            }
-         ],
          "id" : "rxn15116_d0",
+         "modelReactionReagents" : [
+            {
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00095_d0"
+            },
+            {
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00102_d0"
+            },
+            {
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd19036_d0"
+            }
+         ],
+         "aliases" : [],
+         "name" : "beta-D-fructose-1,6-bisphosphate D-glyceraldehyde-3-phosphate-lyase (glycerone-phosphate-forming)_d0",
+         "reaction_ref" : "~/template/reactions/id/rxn15116_d",
          "modelReactionProteins" : [
             {
-               "source" : "",
                "modelReactionProteinSubunits" : [
                   {
-                     "triggering" : 1,
                      "optionalSubunit" : 0,
+                     "triggering" : 1,
+                     "role" : "Fructose-bisphosphate aldolase class I (EC 4.1.2.13)",
+                     "note" : "",
                      "feature_refs" : [
                         "14486/42/2/features/id/AT3G52930.1",
                         "14486/42/2/features/id/AT4G26530.1",
@@ -1757,47 +663,26 @@
                         "14486/42/2/features/id/AT2G36460.1",
                         "14486/42/2/features/id/AT4G38970.1",
                         "14486/42/2/features/id/AT2G21330.1"
-                     ],
-                     "role" : "Fructose-bisphosphate aldolase class I (EC 4.1.2.13)",
-                     "note" : ""
+                     ]
                   }
                ],
                "complex_ref" : "~/template/complexes/id/Cpx.270",
+               "source" : "",
                "note" : ""
             }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "beta-D-Fructose 6-phosphate:D-glyceraldehyde-3-phosphate glycolaldehyde transferase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn15271_d",
+         ],
          "protons" : 0,
          "direction" : "=",
+         "probability" : 0,
          "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00102_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00198_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00236_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd19035_d0",
-               "coefficient" : -1
-            }
-         ],
-         "id" : "rxn15271_d0",
+         "gapfill_data" : {}
+      },
+      {
+         "direction" : "=",
+         "protons" : 0,
          "modelReactionProteins" : [
             {
-               "source" : "",
+               "complex_ref" : "~/template/complexes/id/Cpx.671",
                "modelReactionProteinSubunits" : [
                   {
                      "triggering" : 1,
@@ -1806,24 +691,69 @@
                         "14486/42/2/features/id/AT2G45290.1",
                         "14486/42/2/features/id/AT3G60750.1"
                      ],
-                     "role" : "Transketolase (EC 2.2.1.1)",
-                     "note" : ""
+                     "note" : "",
+                     "role" : "Transketolase (EC 2.2.1.1)"
                   }
                ],
-               "complex_ref" : "~/template/complexes/id/Cpx.671",
-               "note" : ""
+               "note" : "",
+               "source" : ""
             }
-         ]
+         ],
+         "probability" : 0,
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "gapfill_data" : {},
+         "name" : "beta-D-Fructose 6-phosphate:D-glyceraldehyde-3-phosphate glycolaldehyde transferase_d0",
+         "modelReactionReagents" : [
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00102_d0",
+               "coefficient" : -1
+            },
+            {
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00198_d0"
+            },
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00236_d0",
+               "coefficient" : 1
+            },
+            {
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd19035_d0"
+            }
+         ],
+         "aliases" : [],
+         "id" : "rxn15271_d0",
+         "reaction_ref" : "~/template/reactions/id/rxn15271_d"
       },
       {
-         "probability" : 0,
-         "name" : "beta-D-Fructose 1,6-bisphosphate 1-phosphohydrolase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn15494_d",
-         "protons" : 0,
+         "modelReactionProteins" : [
+            {
+               "modelReactionProteinSubunits" : [
+                  {
+                     "feature_refs" : [
+                        "14486/42/2/features/id/AT5G64380.1",
+                        "14486/42/2/features/id/AT3G54050.1",
+                        "14486/42/2/features/id/AT1G43670.1"
+                     ],
+                     "note" : "",
+                     "role" : "Fructose-1,6-bisphosphatase, type I (EC 3.1.3.11)",
+                     "triggering" : 1,
+                     "optionalSubunit" : 0
+                  }
+               ],
+               "complex_ref" : "~/template/complexes/id/Cpx.269",
+               "source" : "",
+               "note" : ""
+            }
+         ],
          "direction" : "=",
+         "protons" : 0,
+         "gapfill_data" : {},
          "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "probability" : 0,
+         "id" : "rxn15494_d0",
          "aliases" : [],
+         "name" : "beta-D-Fructose 1,6-bisphosphate 1-phosphohydrolase_d0",
          "modelReactionReagents" : [
             {
                "modelcompound_ref" : "~/modelcompounds/id/cpd00001_d0",
@@ -1834,1224 +764,556 @@
                "coefficient" : 1
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd19035_d0",
-               "coefficient" : 1
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd19035_d0"
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd19036_d0",
-               "coefficient" : -1
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd19036_d0"
             }
          ],
-         "id" : "rxn15494_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT5G64380.1",
-                        "14486/42/2/features/id/AT3G54050.1",
-                        "14486/42/2/features/id/AT1G43670.1"
-                     ],
-                     "role" : "Fructose-1,6-bisphosphatase, type I (EC 3.1.3.11)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.269",
-               "note" : ""
-            }
-         ]
+         "reaction_ref" : "~/template/reactions/id/rxn15494_d"
       },
       {
-         "probability" : 0,
-         "name" : "TPNH-ferredoxin reductase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn17196_d",
-         "protons" : 0,
-         "direction" : ">",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00005_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00006_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd27757_d0",
-               "coefficient" : 2
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd28082_d0",
-               "coefficient" : -2
-            }
-         ],
-         "id" : "rxn17196_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G30510.2",
-                        "14486/42/2/features/id/AT5G66190.1",
-                        "14486/42/2/features/id/AT4G05390.1",
-                        "14486/42/2/features/id/AT1G20020.1"
-                     ],
-                     "role" : "Ferredoxin-NADP(+) reductase (EC 1.18.1.2)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.257",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "plastoquinol-plastocyanin reductase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn20595_d",
-         "protons" : 0,
-         "direction" : ">",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0",
-               "coefficient" : 2
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd27746_d0",
-               "coefficient" : -2
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd27796_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd27797_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd27884_d0",
-               "coefficient" : 2
-            }
-         ],
-         "id" : "rxn20595_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00730.1"
-                     ],
-                     "role" : "Cytochrome b6-f complex subunit IV (PetD)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.191",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00720.1"
-                     ],
-                     "role" : "Cytochrome b6-f complex subunit, cytochrome b6",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.195",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00540.1"
-                     ],
-                     "role" : "Cytochrome b6-f complex subunit, apocytochrome f",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.194",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00600.1"
-                     ],
-                     "role" : "Cytochrome b6-f complex subunit V (PetG)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.192",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT4G03280.1"
-                     ],
-                     "role" : "Cytochrome b6-f complex iron-sulfur subunit PetC1 (Rieske iron sulfur protein EC 1.10.9.1)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.189",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT4G03280.1"
-                     ],
-                     "role" : "Cytochrome b6-f complex iron-sulfur subunit PetC1 (Rieske iron sulfur protein EC 1.10.99.1)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.190",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G30510.2",
-                        "14486/42/2/features/id/AT5G66190.1",
-                        "14486/42/2/features/id/AT4G05390.1",
-                        "14486/42/2/features/id/AT1G20020.1"
-                     ],
-                     "role" : "Ferredoxin-NADP(+) reductase (EC 1.18.1.2)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.257",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "H2O:plastoquinone reductase (light-dependent)_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn20632_d",
-         "protons" : 0,
-         "direction" : ">",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
          "aliases" : [],
          "modelReactionReagents" : [
             {
                "modelcompound_ref" : "~/modelcompounds/id/cpd00001_d0",
-               "coefficient" : -2
+               "coefficient" : -1
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00007_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd11632_d0",
-               "coefficient" : -4
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd27796_d0",
-               "coefficient" : 2
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd27797_d0",
-               "coefficient" : -2
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00001_e0"
             }
          ],
-         "id" : "rxn20632_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00700.1"
-                     ],
-                     "role" : "Photosystem II protein PsbN",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.559",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G67740.1"
-                     ],
-                     "role" : "Photosystem II protein PsbY",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.564",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT2G06520.1"
-                     ],
-                     "role" : "Photosystem II protein PsbX",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.563",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G79040.1"
-                     ],
-                     "role" : "Photosystem II 10 kDa protein PsbR",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.544",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00580.1"
-                     ],
-                     "role" : "Cytochrome b559 alpha chain (PsbE)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.185",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00560.1"
-                     ],
-                     "role" : "Photosystem II protein PsbL",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.557",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT5G23120.1"
-                     ],
-                     "role" : "Photosystem II stability/assembly factor HCF136/Ycf48",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.566",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT4G28660.2"
-                     ],
-                     "role" : "Photosystem II 13 kDa protein Psb28 (similar to PsbW)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.546",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00020.1"
-                     ],
-                     "role" : "photosystem II protein D1 (PsbA)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.760",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00270.1"
-                     ],
-                     "role" : "photosystem II protein D2 (PsbD)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.761",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00080.1"
-                     ],
-                     "role" : "Photosystem II protein PsbI",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.554",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT5G66570.1",
-                        "14486/42/2/features/id/AT3G50820.1"
-                     ],
-                     "role" : "Photosystem II manganese-stabilizing protein (PsbO)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.550",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT2G30570.1"
-                     ],
-                     "role" : "Photosystem II protein PsbW (similar to Psb28)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.562",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G03600.1"
-                     ],
-                     "role" : "Photosystem II protein Psb27",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.553",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00710.1"
-                     ],
-                     "role" : "Photosystem II 10 kDa phosphoprotein (PsbH)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.543",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00550.1"
-                     ],
-                     "role" : "Photosystem II protein PsbJ",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.555",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00280.1"
-                     ],
-                     "role" : "Photosystem II CP43 protein (PsbC)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.548",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT4G05180.1",
-                        "14486/42/2/features/id/AT4G21280.2"
-                     ],
-                     "role" : "Photosystem II oxygen evolving complex protein PsbQ",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.552",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT3G21055.1",
-                        "14486/42/2/features/id/AT1G51400.1"
-                     ],
-                     "role" : "Photosystem II protein PsbTn",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.560",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00220.1"
-                     ],
-                     "role" : "Photosystem II protein PsbM",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.558",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G44575.1"
-                     ],
-                     "role" : "Photosystem II CP22 protein PsbS",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.547",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G06680.1",
-                        "14486/42/2/features/id/AT2G30790.1"
-                     ],
-                     "role" : "Photosystem II oxygen evolving complex protein PsbP",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.551",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00070.1"
-                     ],
-                     "role" : "Photosystem II protein PsbK",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.556",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00300.1"
-                     ],
-                     "role" : "Photosystem II protein PsbZ",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.565",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00570.1"
-                     ],
-                     "role" : "Cytochrome b559 beta chain (PsbF)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.186",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT4G35250.1"
-                     ],
-                     "role" : "Putative chaperon-like protein Ycf39 for quinone binding in Photosystem II",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.587",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00680.1"
-                     ],
-                     "role" : "Photosystem II CP47 protein (PsbB)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.549",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "IscS_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn26037_d",
-         "protons" : 0,
+         "name" : "H2O transport",
+         "id" : "rxn08686_d0",
+         "reaction_ref" : "~/template/reactions/id/rxn08686_d",
          "direction" : "=",
+         "protons" : 0,
+         "modelReactionProteins" : [],
+         "probability" : 0,
          "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00035_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00084_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd27355_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd27847_d0",
-               "coefficient" : 1
-            }
-         ],
-         "id" : "rxn26037_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT5G65720.1"
-                     ],
-                     "role" : "Cysteine desulfurase (EC 2.8.1.7), IscS subfamily",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.182",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G08490.1"
-                     ],
-                     "role" : "Cysteine desulfurase (EC 2.8.1.7), SufS subfamily",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.183",
-               "note" : ""
-            }
-         ]
+         "gapfill_data" : {}
       },
       {
-         "probability" : 0,
-         "name" : "plastocyanin:ferredoxin oxidoreductase (light-dependent)_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn26754_d",
-         "protons" : 0,
-         "direction" : ">",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd11632_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd27746_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd27757_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd27884_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd28082_d0",
-               "coefficient" : 1
-            }
-         ],
-         "id" : "rxn26754_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT5G64040.2"
-                     ],
-                     "role" : "photosystem I subunit PsaN",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.752",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G55670.1"
-                     ],
-                     "role" : "photosystem I subunit PsaG",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.751",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G31330.1"
-                     ],
-                     "role" : "photosystem I subunit III precursor, plastocyanin (cyt c553) docking protein (PsaF)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.748",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT4G28750.1",
-                        "14486/42/2/features/id/AT2G20260.1"
-                     ],
-                     "role" : "photosystem I subunit IV (PsaE)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.749",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG01060.1"
-                     ],
-                     "role" : "photosystem I iron-sulfur center subunit VII (PsaC)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.746",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT2G46820.1"
-                     ],
-                     "role" : "photosystem I subunit PsaP",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.754",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G30380.1"
-                     ],
-                     "role" : "photosystem I subunit X (PsaK, PsaK1)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.757",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT3G16140.1",
-                        "14486/42/2/features/id/AT1G52230.1"
-                     ],
-                     "role" : "photosystem I subunit VI (PsaH)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.755",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00510.1"
-                     ],
-                     "role" : "photosystem I subunit VIII (PsaI)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.756",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G30510.2",
-                        "14486/42/2/features/id/AT5G66190.1",
-                        "14486/42/2/features/id/AT4G05390.1",
-                        "14486/42/2/features/id/AT1G20020.1"
-                     ],
-                     "role" : "Ferredoxin-NADP(+) reductase (EC 1.18.1.2)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.257",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G08380.1"
-                     ],
-                     "role" : "photosystem I subunit PsaO",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.753",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00350.1"
-                     ],
-                     "role" : "photosystem I P700 chlorophyll a apoprotein subunit Ia (PsaA)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.740",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00360.1"
-                     ],
-                     "role" : "photosystem I assembly related protein Ycf3",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.742",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00520.1"
-                     ],
-                     "role" : "photosystem I assembly related protein Ycf4",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.744",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00340.1"
-                     ],
-                     "role" : "photosystem I P700 chlorophyll a apoprotein subunit Ib (PsaB)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.741",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT4G12800.1"
-                     ],
-                     "role" : "photosystem I subunit XI (PsaL)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.758",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G03130.1",
-                        "14486/42/2/features/id/AT4G02770.1"
-                     ],
-                     "role" : "photosystem I subunit II (PsaD)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.747",
-               "note" : ""
-            },
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/ATCG00630.1"
-                     ],
-                     "role" : "photosystem I subunit IX (PsaJ)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.750",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "TRANSALDOL-RXN.d_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn29919_d",
-         "protons" : 0,
          "direction" : "=",
-         "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
-         "modelReactionReagents" : [
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00102_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00236_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00238_d0",
-               "coefficient" : -1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd19035_d0",
-               "coefficient" : 1
-            }
-         ],
-         "id" : "rxn29919_d0",
-         "modelReactionProteins" : [
-            {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT5G13420.1",
-                        "14486/42/2/features/id/AT1G12230.2"
-                     ],
-                     "role" : "Transaldolase (EC 2.2.1.2)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.670",
-               "note" : ""
-            }
-         ]
-      },
-      {
-         "probability" : 0,
-         "name" : "deoxyribokinase_d0",
-         "gapfill_data" : {},
-         "reaction_ref" : "~/template/reactions/id/rxn37018_d",
+         "modelReactionProteins" : [],
          "protons" : 0,
-         "direction" : ">",
+         "probability" : 0,
          "modelcompartment_ref" : "~/modelcompartments/id/d0",
-         "aliases" : [],
+         "gapfill_data" : {},
          "modelReactionReagents" : [
             {
                "modelcompound_ref" : "~/modelcompounds/id/cpd00002_d0",
                "coefficient" : -1
             },
             {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00008_d0",
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00002_e0",
                "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd00101_d0",
-               "coefficient" : 1
-            },
-            {
-               "modelcompound_ref" : "~/modelcompounds/id/cpd16443_d0",
-               "coefficient" : -1
             }
          ],
-         "id" : "rxn37018_d0",
-         "modelReactionProteins" : [
+         "name" : "ATP transport",
+         "aliases" : [],
+         "id" : "rxn50002_d0",
+         "reaction_ref" : "~/template/reactions/id/rxn50002_d"
+      },
+      {
+         "id" : "rxn50003_d0",
+         "modelReactionReagents" : [
             {
-               "source" : "",
-               "modelReactionProteinSubunits" : [
-                  {
-                     "triggering" : 1,
-                     "optionalSubunit" : 0,
-                     "feature_refs" : [
-                        "14486/42/2/features/id/AT1G17160.1",
-                        "14486/42/2/features/id/AT5G43910.2"
-                     ],
-                     "role" : "Ribokinase (EC 2.7.1.12)",
-                     "note" : ""
-                  }
-               ],
-               "complex_ref" : "~/template/complexes/id/Cpx.880",
-               "note" : ""
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00005_d0",
+               "coefficient" : -1
+            },
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00005_e0",
+               "coefficient" : 1
             }
-         ]
+         ],
+         "aliases" : [],
+         "name" : "NADPH transport",
+         "reaction_ref" : "~/template/reactions/id/rxn50003_d",
+         "direction" : "=",
+         "modelReactionProteins" : [],
+         "protons" : 0,
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "gapfill_data" : {},
+         "probability" : 0
+      },
+      {
+         "id" : "rxn50004_d0",
+         "modelReactionReagents" : [
+            {
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00006_d0"
+            },
+            {
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00006_e0"
+            }
+         ],
+         "name" : "NADP transport",
+         "aliases" : [],
+         "reaction_ref" : "~/template/reactions/id/rxn50004_d",
+         "modelReactionProteins" : [],
+         "direction" : "=",
+         "protons" : 0,
+         "probability" : 0,
+         "gapfill_data" : {},
+         "modelcompartment_ref" : "~/modelcompartments/id/d0"
+      },
+      {
+         "gapfill_data" : {},
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "probability" : 0,
+         "modelReactionProteins" : [],
+         "direction" : "=",
+         "protons" : 0,
+         "reaction_ref" : "~/template/reactions/id/rxn05468_d",
+         "id" : "rxn05468_d0",
+         "modelReactionReagents" : [
+            {
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00007_d0"
+            },
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00007_e0",
+               "coefficient" : 1
+            }
+         ],
+         "name" : "O2 transport",
+         "aliases" : []
+      },
+      {
+         "reaction_ref" : "~/template/reactions/id/rxn50005_d",
+         "id" : "rxn50005_d0",
+         "aliases" : [],
+         "modelReactionReagents" : [
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00008_d0",
+               "coefficient" : -1
+            },
+            {
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00008_e0"
+            }
+         ],
+         "name" : "ADP transport",
+         "gapfill_data" : {},
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "probability" : 0,
+         "protons" : 0,
+         "direction" : "=",
+         "modelReactionProteins" : []
+      },
+      {
+         "reaction_ref" : "~/template/reactions/id/rxn50000_d",
+         "modelReactionReagents" : [
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00009_d0",
+               "coefficient" : -1
+            },
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00009_e0",
+               "coefficient" : 1
+            }
+         ],
+         "aliases" : [],
+         "name" : "Phosphate transport",
+         "id" : "rxn50000_d0",
+         "probability" : 0,
+         "gapfill_data" : {},
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "direction" : "=",
+         "protons" : 0,
+         "modelReactionProteins" : []
+      },
+      {
+         "reaction_ref" : "~/template/reactions/id/rxn05467_d",
+         "id" : "rxn05467_d0",
+         "modelReactionReagents" : [
+            {
+               "coefficient" : -1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00011_d0"
+            },
+            {
+               "coefficient" : 1,
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00011_e0"
+            }
+         ],
+         "aliases" : [],
+         "name" : "CO2 transport",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "gapfill_data" : {},
+         "probability" : 0,
+         "protons" : 0,
+         "direction" : "=",
+         "modelReactionProteins" : []
+      },
+      {
+         "aliases" : [],
+         "modelReactionReagents" : [
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_d0",
+               "coefficient" : -1
+            },
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00067_e0",
+               "coefficient" : 1
+            }
+         ],
+         "name" : "H+ transport",
+         "id" : "rxn50001_d0",
+         "reaction_ref" : "~/template/reactions/id/rxn50001_d",
+         "modelReactionProteins" : [],
+         "direction" : "=",
+         "protons" : 0,
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "gapfill_data" : {},
+         "probability" : 0
+      },
+      {
+         "probability" : 0,
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "gapfill_data" : {},
+         "modelReactionProteins" : [],
+         "direction" : "=",
+         "protons" : 0,
+         "reaction_ref" : "~/template/reactions/id/rxn50006_d",
+         "name" : "2-Phosphoglycolate transport",
+         "modelReactionReagents" : [
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00727_d0",
+               "coefficient" : -1
+            },
+            {
+               "modelcompound_ref" : "~/modelcompounds/id/cpd00727_e0",
+               "coefficient" : 1
+            }
+         ],
+         "aliases" : [],
+         "id" : "rxn50006_d0"
       }
    ],
    "modelcompartments" : [
       {
-         "pH" : 7,
-         "compartmentIndex" : 0,
-         "potential" : 0,
-         "compartment_ref" : "NewKBaseModelTemplates/PlantModelTemplate/compartments/id/e",
          "label" : "extracellular_0",
-         "id" : "e0"
+         "id" : "e0",
+         "compartmentIndex" : 0,
+         "compartment_ref" : "NewKBaseModelTemplates/PlantModelTemplate/compartments/id/e",
+         "pH" : 7,
+         "potential" : 0
       },
       {
-         "pH" : 7,
-         "compartmentIndex" : 0,
-         "potential" : 0,
-         "compartment_ref" : "NewKBaseModelTemplates/PlantModelTemplate/compartments/id/d",
          "label" : "plastid_0",
-         "id" : "d0"
+         "id" : "d0",
+         "compartmentIndex" : 0,
+         "compartment_ref" : "NewKBaseModelTemplates/PlantModelTemplate/compartments/id/d",
+         "potential" : 0,
+         "pH" : 7
       }
    ],
-   "gapgens" : [],
-   "id" : "Plastidial_SandBox_Model",
-   "type" : "GenomeScale",
-   "gapfillings" : []
+   "modelcompounds" : [
+      {
+         "name" : "CO2_d0",
+         "aliases" : [],
+         "id" : "cpd00011_d0",
+         "charge" : 0,
+         "formula" : "CO2",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00011"
+      },
+      {
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00067",
+         "id" : "cpd00067_d0",
+         "charge" : 1,
+         "formula" : "H",
+         "aliases" : [],
+         "name" : "H+_d0"
+      },
+      {
+         "aliases" : [],
+         "name" : "H2O_d0",
+         "id" : "cpd00001_d0",
+         "charge" : 0,
+         "formula" : "H2O",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00001",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0"
+      },
+      {
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00169",
+         "formula" : "C3H4O7P",
+         "charge" : -3,
+         "id" : "cpd00169_d0",
+         "name" : "3-Phosphoglycerate_d0",
+         "aliases" : []
+      },
+      {
+         "charge" : -4,
+         "id" : "cpd00871_d0",
+         "formula" : "C5H8O11P2",
+         "name" : "D-Ribulose 1,5-bisphosphate_d0",
+         "aliases" : [],
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00871"
+      },
+      {
+         "compound_ref" : "12998/3/10/compounds/id/cpd00002",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "aliases" : [],
+         "name" : "ATP_d0",
+         "charge" : -3,
+         "id" : "cpd00002_d0",
+         "formula" : "C10H13N5O13P3"
+      },
+      {
+         "compound_ref" : "12998/3/10/compounds/id/cpd00006",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "aliases" : [],
+         "name" : "NADP_d0",
+         "formula" : "C21H25N7O17P3",
+         "charge" : -3,
+         "id" : "cpd00006_d0"
+      },
+      {
+         "id" : "cpd00008_d0",
+         "charge" : -2,
+         "formula" : "C10H13N5O10P2",
+         "aliases" : [],
+         "name" : "ADP_d0",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00008"
+      },
+      {
+         "aliases" : [],
+         "name" : "NADPH_d0",
+         "charge" : -4,
+         "id" : "cpd00005_d0",
+         "formula" : "C21H26N7O17P3",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00005",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0"
+      },
+      {
+         "compound_ref" : "12998/3/10/compounds/id/cpd00009",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "charge" : -2,
+         "id" : "cpd00009_d0",
+         "formula" : "HO4P",
+         "name" : "Phosphate_d0",
+         "aliases" : []
+      },
+      {
+         "formula" : "O2",
+         "charge" : 0,
+         "id" : "cpd00007_d0",
+         "aliases" : [],
+         "name" : "O2_d0",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00007"
+      },
+      {
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00095",
+         "name" : "Glycerone-phosphate_d0",
+         "aliases" : [],
+         "formula" : "C3H5O6P",
+         "id" : "cpd00095_d0",
+         "charge" : -2
+      },
+      {
+         "aliases" : [],
+         "name" : "Glyceraldehyde3-phosphate_d0",
+         "id" : "cpd00102_d0",
+         "charge" : -2,
+         "formula" : "C3H5O6P",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00102",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0"
+      },
+      {
+         "aliases" : [],
+         "name" : "ribose-5-phosphate_d0",
+         "id" : "cpd00101_d0",
+         "charge" : -2,
+         "formula" : "C5H9O8P",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00101"
+      },
+      {
+         "aliases" : [],
+         "name" : "D-Ribulose5-phosphate_d0",
+         "charge" : -2,
+         "id" : "cpd00171_d0",
+         "formula" : "C5H9O8P",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00171"
+      },
+      {
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00203",
+         "name" : "1,3-Bisphospho-D-glycerate_d0",
+         "aliases" : [],
+         "id" : "cpd00203_d0",
+         "charge" : -4,
+         "formula" : "C3H4O10P2"
+      },
+      {
+         "name" : "2-Phosphoglycolate_d0",
+         "aliases" : [],
+         "id" : "cpd00727_d0",
+         "charge" : -3,
+         "formula" : "C2H2O6P",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00727",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0"
+      },
+      {
+         "name" : "D-Xylulose5-phosphate_d0",
+         "aliases" : [],
+         "id" : "cpd00198_d0",
+         "charge" : -2,
+         "formula" : "C5H9O8P",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00198"
+      },
+      {
+         "formula" : "C7H13O10P",
+         "id" : "cpd00238_d0",
+         "charge" : -2,
+         "name" : "Sedoheptulose7-phosphate_d0",
+         "aliases" : [],
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00238"
+      },
+      {
+         "compound_ref" : "12998/3/10/compounds/id/cpd00236",
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "name" : "D-Erythrose4-phosphate_d0",
+         "aliases" : [],
+         "charge" : -2,
+         "id" : "cpd00236_d0",
+         "formula" : "C4H7O7P"
+      },
+      {
+         "formula" : "C7H12O13P2",
+         "id" : "cpd00349_d0",
+         "charge" : -4,
+         "name" : "Sedoheptulose 1,7-bisphosphate_d0",
+         "aliases" : [],
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00349"
+      },
+      {
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd19036",
+         "aliases" : [],
+         "name" : "beta-D-Fructose 1,6-bisphosphate_d0",
+         "id" : "cpd19036_d0",
+         "charge" : -4,
+         "formula" : "C6H10O12P2"
+      },
+      {
+         "charge" : -2,
+         "id" : "cpd19035_d0",
+         "formula" : "C6H11O9P",
+         "name" : "beta-D-Fructose 6-phosphate_d0",
+         "aliases" : [],
+         "modelcompartment_ref" : "~/modelcompartments/id/d0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd19035"
+      },
+      {
+         "formula" : "H2O",
+         "id" : "cpd00001_e0",
+         "charge" : 0,
+         "aliases" : [],
+         "name" : "H2O",
+         "modelcompartment_ref" : "~/modelcompartments/id/e0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00001"
+      },
+      {
+         "compound_ref" : "12998/3/10/compounds/id/cpd00002",
+         "modelcompartment_ref" : "~/modelcompartments/id/e0",
+         "name" : "ATP",
+         "aliases" : [],
+         "formula" : "C10H13N5O13P3",
+         "id" : "cpd00002_e0",
+         "charge" : -3
+      },
+      {
+         "compound_ref" : "12998/3/10/compounds/id/cpd00005",
+         "modelcompartment_ref" : "~/modelcompartments/id/e0",
+         "formula" : "C21H26N7O17P3",
+         "id" : "cpd00005_e0",
+         "charge" : -4,
+         "name" : "NADPH",
+         "aliases" : []
+      },
+      {
+         "modelcompartment_ref" : "~/modelcompartments/id/e0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00006",
+         "charge" : -3,
+         "id" : "cpd00006_e0",
+         "formula" : "C21H25N7O17P3",
+         "aliases" : [],
+         "name" : "NADP"
+      },
+      {
+         "name" : "O2",
+         "aliases" : [],
+         "id" : "cpd00007_e0",
+         "charge" : 0,
+         "formula" : "O2",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00007",
+         "modelcompartment_ref" : "~/modelcompartments/id/e0"
+      },
+      {
+         "modelcompartment_ref" : "~/modelcompartments/id/e0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00008",
+         "formula" : "C10H13N5O10P2",
+         "charge" : -2,
+         "id" : "cpd00008_e0",
+         "aliases" : [],
+         "name" : "ADP"
+      },
+      {
+         "name" : "Phosphate",
+         "aliases" : [],
+         "id" : "cpd00009_e0",
+         "charge" : -2,
+         "formula" : "HO4P",
+         "modelcompartment_ref" : "~/modelcompartments/id/e0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00009"
+      },
+      {
+         "id" : "cpd00011_e0",
+         "charge" : 0,
+         "formula" : "CO2",
+         "aliases" : [],
+         "name" : "CO2",
+         "modelcompartment_ref" : "~/modelcompartments/id/e0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00011"
+      },
+      {
+         "modelcompartment_ref" : "~/modelcompartments/id/e0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00067",
+         "name" : "H+",
+         "aliases" : [],
+         "formula" : "H",
+         "charge" : 1,
+         "id" : "cpd00067_e0"
+      },
+      {
+         "modelcompartment_ref" : "~/modelcompartments/id/e0",
+         "compound_ref" : "12998/3/10/compounds/id/cpd00727",
+         "formula" : "C2H2O6P",
+         "id" : "cpd00727_e0",
+         "charge" : -3,
+         "aliases" : [],
+         "name" : "2-Phosphoglycolate"
+      }
+   ],
+   "gapfillings" : [],
+   "template_ref" : "NewKBaseModelTemplates/PlantModelTemplate",
+   "name" : "Plastidial_SandBox_Model",
+   "id" : "Plastidial_SandBox_Model"
 }

@@ -5,8 +5,79 @@ use JSON;
 my @temp=();
 my @Headers=();
 
+my $Biochemistry_Root = $ENV{SEAVER_PROJECT}."ModelSEEDDatabase/Biochemistry/";
+open(FH, "< ".$Biochemistry_Root."reactions.master.tsv");
+undef(@Headers);
+my %Biochem_Rxns=();
+while(<FH>){
+    chomp;
+    if(scalar(@Headers)==0){
+	@Headers = split(/\t/,$_);
+	next;
+    }
+    my %RowObject=();
+    my @array = split(/\t/,$_,-1);
+    for(my $i=0;$i<scalar(@array);$i++){
+	$RowObject{$Headers[$i]}=$array[$i];
+    }
+    $Biochem_Rxns{$RowObject{id}}=\%RowObject;
+}
+close(FH);
+
+open(FH, "< ".$Biochemistry_Root."compounds.master.tsv");
+undef(@Headers);
+my %Biochem_Cpds=();
+while(<FH>){
+    chomp;
+    if(scalar(@Headers)==0){
+	@Headers = split(/\t/,$_);
+	next;
+    }
+    my %RowObject=();
+    my @array = split(/\t/,$_,-1);
+    for(my $i=0;$i<scalar(@array);$i++){
+	$RowObject{$Headers[$i]}=$array[$i];
+    }
+    $Biochem_Cpds{$RowObject{id}}=\%RowObject;
+}
+close(FH);
+
+open(FH, "< Plastidial_SandBox_Media.txt");
+my %Media_Transporters=();
+my $New_Rxn_ID="rxn5000";
+my $Rxn_Count=0;
+while(<FH>){
+    chomp;
+    @temp=split(/\t/,$_,-1);
+    next if $temp[0] eq "id";
+    my $mediacpd = $temp[0];
+
+    my $Found_Transporter = "";
+    foreach my $rxn ( sort grep { defined($Biochem_Rxns{$_}{is_transport}) && $Biochem_Rxns{$_}{is_transport}==1 } keys %Biochem_Rxns ){
+	if($Biochem_Rxns{$rxn}{stoichiometry} =~ /${temp[0]}/){
+	    @temp=split(/;/,$Biochem_Rxns{$rxn}{stoichiometry});
+	    my %Cpds = ();
+	    foreach my $item (@temp){
+		my ($coeff,$cpd,$cpt,$idx,$name)=split(/:/,$item);
+		$Cpds{$cpd}=1;
+	    }
+	    if(scalar(keys %Cpds != 0) && scalar( grep { $_ ne $mediacpd } keys %Cpds )==0){
+		$Found_Transporter=$rxn;
+		last;
+	    }
+	}
+    }
+    if($Found_Transporter){
+	$Media_Transporters{$mediacpd}=$Found_Transporter;
+    }else{
+	$Media_Transporters{$mediacpd}=$New_Rxn_ID.$Rxn_Count;
+	$Rxn_Count++;
+    }
+}
+close(FH);
+
 #Load /homes/seaver/Projects/
-open(FH, "< ".$ENV{SEAVER_PROJECT}."PlantSEED_v2/Core_Plant_Metabolism/ProbModelSEED/PlantSEED_Subsystems.json");
+open(FH, "< ".$ENV{SEAVER_PROJECT}."PlantSEED_v2_WorkRepo/Core_Plant_Metabolism/ProbModelSEED/PlantSEED_Subsystems.json");
 my $JSON="";
 while(<FH>){
     chomp;
@@ -28,13 +99,13 @@ close(FH);
 #Amino acids     Alanine,_serine,_glycine_metabolism_in_plants   PWY-6196
 #6 subsystems and 11 pathways
 
-my %SandBox_Subsystems=("Amino acids: Alanine,_serine,_glycine_metabolism_in_plants"=>["GLYSYN-ALA-PWY","GLYSYN2-PWY","PWY0-1021","ALANINE-SYN2-PWY","SERSYN-PWY","PWY-6196"],
+my %SandBox_Subsystems=(#"Amino acids: Alanine,_serine,_glycine_metabolism_in_plants"=>["GLYSYN-ALA-PWY","GLYSYN2-PWY","PWY0-1021","ALANINE-SYN2-PWY","SERSYN-PWY","PWY-6196"],
 			"Central Carbon: Calvin-Benson-Bassham_cycle_in_plants"=>["CALVIN-PWY"],
-			"Central Carbon: Pentose_phosphate_pathway_in_plants"=>["OXIDATIVEPENT-PWY","NONOXIPENT-PWY"],
+#			"Central Carbon: Pentose_phosphate_pathway_in_plants"=>["OXIDATIVEPENT-PWY","NONOXIPENT-PWY"],
 #			"Energy: F0F1-type_ATP_synthase_in_plants_(plastidial)"=>["PWY-6126"],
-			"Energy: Photosystem_I"=>["PWY-101"],
-			"Energy: Photosystem_II"=>["PWY-101"]);
-
+#			"Energy: Photosystem_I"=>["PWY-101"],
+#			"Energy: Photosystem_II"=>["PWY-101"]);
+    );
 my %PlantSEED_Subsystems = %{from_json($JSON)};
 my %Plastidial_Reactions = ();
 foreach my $ss (sort keys %{$PlantSEED_Subsystems{subsystems}}){
@@ -44,15 +115,22 @@ foreach my $ss (sort keys %{$PlantSEED_Subsystems{subsystems}}){
     }
 }
 
-use fba_tools::fba_toolsImpl;
-my $FBAImpl = fba_tools::fba_toolsImpl->new();
+#use fba_tools::fba_toolsImpl;
+#my $FBAImpl = fba_tools::fba_toolsImpl->new();
+#Bio::KBase::ObjectAPI::config::username('seaver');
+#Bio::KBase::ObjectAPI::config::token($ENV{'KB_AUTH_TOKEN'});
+#my $WS_Client=Bio::KBase::workspace::Client->new($FBAImpl->{'workspace-url'},token => Bio::KBase::ObjectAPI::config::token());
+#my $PlantSEED_Model = $WS_Client->get_objects([{ref=>"PlantSEED_v2/Phytozome_11_Athaliana_FBAModel"}])->[0]{'data'};
 
-Bio::KBase::ObjectAPI::config::username('seaver');
-Bio::KBase::ObjectAPI::config::token($ENV{'KB_AUTH_TOKEN'});
+open(FH, "< Athaliana_FBAModel.json");
+undef($JSON);
+while(<FH>){
+    chomp;
+    $JSON.=$_;
+}
+close(FH);
 
-my $WS_Client=Bio::KBase::workspace::Client->new($FBAImpl->{'workspace-url'},token => Bio::KBase::ObjectAPI::config::token());
-
-my $PlantSEED_Model = $WS_Client->get_objects([{ref=>"PlantSEED_v2/Phytozome_11_Athaliana_FBAModel"}])->[0]{'data'};
+my $PlantSEED_Model = from_json($JSON);
 
 my %SdBx_Rxns = ();
 my %CytRxns = ();
@@ -131,6 +209,13 @@ foreach my $mdlcpd ( grep { exists($SdBx_Cpds{$_->{id}}) } @{$PlantSEED_Model->{
 }
 
 #Need to add biomass
+my $SdBx_Biomass = { "id" => "bio1", "name" => "Plastidial biomass", "removedcompounds" => [],
+		     "lipid" => 0, "protein" => 0, "cellwall" => 0, "other" => 0, "energy" => 0, "rna" => 0, "cofactor" => 0, "dna" => 0,
+		     "biomasscompounds" => [{"modelcompound_ref" => "~/modelcompounds/id/cpd00102_d0",
+					     "gapfill_data" => {},
+					     "coefficient" => -1.0}]};
+push(@{$ModelObject{biomasses}},$SdBx_Biomass);
+
 open(SS, "> Plastidial_SandBox_Subsystems.txt");
 print SS "Subsystem\tAraCyc Pathways\tReactions\n";
 foreach my $ss (sort keys %SandBox_Subsystems){
@@ -138,25 +223,6 @@ foreach my $ss (sort keys %SandBox_Subsystems){
     print SS join(", ", grep { exists($Plastidial_Reactions{$_}{$ss}) } keys %Plastidial_Reactions),"\n";
 }
 close(SS);
-
-my $Biochemistry_Root = $ENV{SEAVER_PROJECT}."ModelSEEDDatabase/Biochemistry/";
-open(FH, "< ".$Biochemistry_Root."reactions.master.tsv");
-undef(@Headers);
-my %Biochem_Rxns=();
-while(<FH>){
-    chomp;
-    if(scalar(@Headers)==0){
-	@Headers = split(/\t/,$_);
-	next;
-    }
-    my %RowObject=();
-    my @array = split(/\t/,$_,-1);
-    for(my $i=0;$i<scalar(@array);$i++){
-	$RowObject{$Headers[$i]}=$array[$i];
-    }
-    $Biochem_Rxns{$RowObject{id}}=\%RowObject;
-}
-close(FH);
 
 open(RXN, "> Plastidial_SandBox_Reactions.txt");
 print RXN "Reaction\tEquation\tProteins\n";
@@ -178,6 +244,36 @@ foreach my $sdbx_rxn ( grep { exists($SdBx_Rxns{$_->{id}}) } @{$PlantSEED_Model-
     print RXN $Base_ID,"\t",$Biochem_Rxns{$Base_ID}{definition},"\t",join(", ",sort keys %Ftrs),"\n";
 }
 close(RXN);
+
+open(TRN, "> Plastidial_SandBox_Transporters.txt");
+print TRN "Reaction\tEquation\n";
+foreach my $mediacpd (sort keys %Media_Transporters){
+
+    if(!exists($SdBx_Cpds{$mediacpd."_d0"})){
+	print $mediacpd."_d0\n";
+	next;
+    }
+
+    #Add e0 cpds and check for d0 cpds
+    my $mediacpdObject = { "id" => $mediacpd."_e0",
+			   "name" => $Biochem_Cpds{$mediacpd}{name},
+			   "charge" => $Biochem_Cpds{$mediacpd}{charge}+0,
+			   "compound_ref" => "12998/3/10/compounds/id/".$mediacpd,
+			   "formula" => $Biochem_Cpds{$mediacpd}{formula},
+			   "modelcompartment_ref" => "~/modelcompartments/id/e0",
+			   "aliases" => []};
+    push(@{$ModelObject{modelcompounds}},$mediacpdObject);
+
+    my $modeltransporter = {"reaction_ref" => "~/template/reactions/id/".$Media_Transporters{$mediacpd}."_d",
+			    "id" => $Media_Transporters{$mediacpd}."_d0", "name"=> $Biochem_Cpds{$mediacpd}{name}." transport",
+			    "modelReactionProteins" => [],"probability" => 0,"aliases" => [],"gapfill_data" => {},"protons" => 0,
+			    "direction" => "=","modelcompartment_ref" => "~/modelcompartments/id/d0",
+			    "modelReactionReagents" => [{"coefficient" => -1,
+							 "modelcompound_ref" => "~/modelcompounds/id/".$mediacpd."_d0"},
+							{"coefficient" => 1,
+							 "modelcompound_ref" => "~/modelcompounds/id/".$mediacpd."_e0"}]};
+    push(@{$ModelObject{modelreactions}},$modeltransporter);
+}
 
 open(OUT, "> Plastidial_SandBox_Model.json");
 print OUT to_json(\%ModelObject, {pretty=>1,ascii=>1});
@@ -218,3 +314,5 @@ __END__
 close(FH);
 
 #$ModelObject{modelcompounds} = [ map { $ModelCompounds{$_} } sort keys %ModelCompounds ];
+
+__END__
