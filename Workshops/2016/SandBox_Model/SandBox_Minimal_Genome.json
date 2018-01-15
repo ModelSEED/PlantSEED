@@ -1,0 +1,339 @@
+{
+   "source" : "PlantSEED",
+   "id" : "Plastidial_Sandbox_Genome",
+   "features" : [
+      {
+         "id" : "AT1G12900.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ],
+         "function" : "NAD-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.12) / NADPH-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.13)"
+      },
+      {
+         "function" : "Phosphoribulokinase (EC 2.7.1.19)",
+         "id" : "AT1G32060.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Rubisco_shunt_in_plants"
+         ]
+      },
+      {
+         "id" : "AT1G42970.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ],
+         "function" : "NAD-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.12) / NADPH-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.13)"
+      },
+      {
+         "function" : "Fructose-1,6-bisphosphatase, type I (EC 3.1.3.11)",
+         "id" : "AT1G43670.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ]
+      },
+      {
+         "id" : "AT1G56190.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ],
+         "function" : "Phosphoglycerate kinase (EC 2.7.2.3)"
+      },
+      {
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Pentose_phosphate_pathway_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "id" : "AT1G63290.1",
+         "function" : "Ribulose-phosphate 3-epimerase (EC 5.1.3.1)"
+      },
+      {
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Photorespiration_(oxidative_C2_cycle)_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "id" : "AT1G67090.1",
+         "function" : "Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39)"
+      },
+      {
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Pentose_phosphate_pathway_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "id" : "AT1G71100.1",
+         "function" : "Ribose 5-phosphate isomerase A (EC 5.3.1.6)"
+      },
+      {
+         "function" : "Protein CP12, regulation of Calvin cycle via association/dissociation of PRK/CP12/GAPDH complex",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "id" : "AT1G76560.1"
+      },
+      {
+         "id" : "AT1G79550.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ],
+         "function" : "Phosphoglycerate kinase (EC 2.7.2.3)"
+      },
+      {
+         "id" : "AT2G01140.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ],
+         "function" : "Fructose-bisphosphate aldolase class I (EC 4.1.2.13)"
+      },
+      {
+         "function" : "Ribose 5-phosphate isomerase A (EC 5.3.1.6)",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Pentose_phosphate_pathway_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "id" : "AT2G01290.1"
+      },
+      {
+         "function" : "Triosephosphate isomerase (EC 5.3.1.1)",
+         "id" : "AT2G21170.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ]
+      },
+      {
+         "function" : "Fructose-bisphosphate aldolase class I (EC 4.1.2.13)",
+         "id" : "AT2G21330.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ]
+      },
+      {
+         "function" : "Fructose-bisphosphate aldolase class I (EC 4.1.2.13)",
+         "id" : "AT2G36460.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ]
+      },
+      {
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Pentose_phosphate_pathway_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "id" : "AT2G45290.1",
+         "function" : "Transketolase (EC 2.2.1.1)"
+      },
+      {
+         "id" : "AT2G47400.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "function" : "Protein CP12, regulation of Calvin cycle via association/dissociation of PRK/CP12/GAPDH complex"
+      },
+      {
+         "function" : "Ribulose-phosphate 3-epimerase (EC 5.1.3.1)",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Pentose_phosphate_pathway_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "id" : "AT3G01850.1"
+      },
+      {
+         "function" : "Ribose 5-phosphate isomerase A (EC 5.3.1.6)",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Pentose_phosphate_pathway_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "id" : "AT3G04790.1"
+      },
+      {
+         "function" : "Phosphoglycerate kinase (EC 2.7.2.3)",
+         "id" : "AT3G12780.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ]
+      },
+      {
+         "function" : "NAD-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.12) / NADPH-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.13)",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ],
+         "id" : "AT3G26650.1"
+      },
+      {
+         "function" : "Fructose-bisphosphate aldolase class I (EC 4.1.2.13)",
+         "id" : "AT3G52930.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ]
+      },
+      {
+         "function" : "Fructose-1,6-bisphosphatase, type I (EC 3.1.3.11)",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ],
+         "id" : "AT3G54050.1"
+      },
+      {
+         "id" : "AT3G55440.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ],
+         "function" : "Triosephosphate isomerase (EC 5.3.1.1)"
+      },
+      {
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants"
+         ],
+         "id" : "AT3G55800.1",
+         "function" : "Sedoheptulose-1,7-bisphosphatase (EC 3.1.3.37)"
+      },
+      {
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Pentose_phosphate_pathway_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "id" : "AT3G60750.1",
+         "function" : "Transketolase (EC 2.2.1.1)"
+      },
+      {
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "id" : "AT3G62410.1",
+         "function" : "Protein CP12, regulation of Calvin cycle via association/dissociation of PRK/CP12/GAPDH complex"
+      },
+      {
+         "id" : "AT4G26520.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ],
+         "function" : "Fructose-bisphosphate aldolase class I (EC 4.1.2.13)"
+      },
+      {
+         "function" : "Fructose-bisphosphate aldolase class I (EC 4.1.2.13)",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ],
+         "id" : "AT4G26530.1"
+      },
+      {
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ],
+         "id" : "AT4G38970.1",
+         "function" : "Fructose-bisphosphate aldolase class I (EC 4.1.2.13)"
+      },
+      {
+         "id" : "AT5G03690.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ],
+         "function" : "Fructose-bisphosphate aldolase class I (EC 4.1.2.13)"
+      },
+      {
+         "function" : "Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39)",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Photorespiration_(oxidative_C2_cycle)_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "id" : "AT5G38410.3"
+      },
+      {
+         "function" : "Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39)",
+         "id" : "AT5G38420.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Photorespiration_(oxidative_C2_cycle)_in_plants",
+            "Rubisco_shunt_in_plants"
+         ]
+      },
+      {
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Photorespiration_(oxidative_C2_cycle)_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "id" : "AT5G38430.1",
+         "function" : "Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39)"
+      },
+      {
+         "function" : "Ribulose-phosphate 3-epimerase (EC 5.1.3.1)",
+         "id" : "AT5G61410.1",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Pentose_phosphate_pathway_in_plants",
+            "Rubisco_shunt_in_plants"
+         ]
+      },
+      {
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Glycolysis_and_Gluconeogenesis_in_plants",
+            "Sucrose_metabolism_in_plants"
+         ],
+         "id" : "AT5G64380.1",
+         "function" : "Fructose-1,6-bisphosphatase, type I (EC 3.1.3.11)"
+      },
+      {
+         "function" : "Ribulose bisphosphate carboxylase large chain (EC 4.1.1.39)",
+         "subsystems" : [
+            "Calvin-Benson-Bassham_cycle_in_plants",
+            "Photorespiration_(oxidative_C2_cycle)_in_plants",
+            "Rubisco_shunt_in_plants"
+         ],
+         "id" : "ATCG00490.1"
+      }
+   ],
+   "domain" : "Plant",
+   "taxonomy" : "",
+   "scientific_name" : "Plastidial Sandbox Genome"
+}

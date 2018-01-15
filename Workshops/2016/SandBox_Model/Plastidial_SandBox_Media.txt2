@@ -1,0 +1,11 @@
+id	name	concentration	minflux	maxflux
+cpd00001	H2O	0.01	-1000	1000
+cpd00009	Phosphate	0.01	-1000	1000
+cpd00011	CO2	0.01	-1000	1000
+cpd00067	H+	0.01	-1000	1000
+cpd00002	ATP	0.01	-1000	1000
+cpd00005	NADPH	0.01	-1000	1000
+cpd00006	NADP	0.01	-1000	1000
+cpd00008	ADP	0.01	-1000	1000
+cpd00007	Oxygen	0.01	-1000	1000
+cpd00727	2-Phosphoglycolate	0.01	-1000	1000
