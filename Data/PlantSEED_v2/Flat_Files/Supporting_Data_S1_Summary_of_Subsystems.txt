@@ -1,1 +1,37 @@
-Set of Subsystems Curated for Protein Localization and Compartmental Activity					Compartment Code						b	Plasma membraneClass	Subsystem	Compartments			c	CytosolAmino acids	"Alanine, serine, glycine metabolism "	"c, d, m, x"			d	PlastidAmino acids	Arginine metabolism and urea cycle 	"c, d, m"			e	ExtracellularAmino acids	Beta alanine biosynthesis 	"c, d, r"			g	Golgi apparatusAmino acids	Branched-chain amino acid metabolism 	"c, d, m"			m	MitochondrionAmino acids	Chorismate biosynthesis 	"c, d"			n	NucleusAmino acids	"Glutamine, glutamate, aspartate, asparagine metabolism "	"c, d, m, x"			r	Endoplasmic reticulumAmino acids	Histidine Biosynthesis 	d			v	VacuoleAmino acids	Lysine and threonine metabolism 	"c, d"			x	PeroxisomeAmino acids	Methionine and cysteine metabolism 	"c, d, m, n, x"				Amino acids	Proline metabolism 	"c, d, m"				Amino acids	Tryptophan metabolism 	"c, d, m"				Amino acids	Tyrosine and phenylalanine metabolism 	"c, d, m, x"				Central Carbon	Acetyl-CoA biosynthesis	"b, c, d, m, n, v"				Central Carbon	Calvin-Benson-Bassham cycle 	"c, d, n"				Central Carbon	Glycolysis and Gluconeogenesis 	"b, c, d, m, n, x"				Central Carbon	Pentose phosphate pathway 	"c, d, m , n, v, x"				Central Carbon	Photorespiration (oxidative C2 cycle) 	"c, d, m, n, x"				Central Carbon	Rubisco shunt 	"c, d, n"				Central Carbon	TCA cycle 	"b, c, d, m, n, v, x"				Cofactors	Biotin biosynthesis 	"c, d, e, m, r, x"				Cofactors	Folate biosynthesis 	"c, d, m, n, v"				Cofactors	Folate-mediated one-carbon metabolism 	"c, d, m, x"				Cofactors	"Isoprenoid biosynthesis, mevalonate branch"	"b, c, d, m, r, x"				Cofactors	"Isoprenoid biosynthesis, nonmevalonate branch"	"c, d, g, m, x"				Cofactors	"Niacin, NAD and NADP biosynthesis "	"c, d, e, m, x"				Cofactors	Pantothenate and CoA biosynthesis 	"c, d, m, x"				Cofactors	Phyllooquinone biosynthesis	"c, d, m, r, x"				Cofactors	Plastoquinone biosynthesis	"c, d, m, r, x"				Cofactors	Pyridoxine (vitamin B6) biosynthesis 	"c, d, n"				Cofactors	"Riboflavin, FMN and FAD biosynthesis "	"c, d, m"				Cofactors	Thiamin biosynthesis 	"c, d, m"				Fatty acids	Fatty acid biosynthesis  (plastidial)	"b, c, d, m, n, r, x"				Nucleic acids	Purine de novo biosynthesis 	"b, c, d, m, n, v, x"				Nucleic acids	Pyrimidine de novo biosynthesis 	"b, c, d, m, n, v, x"				
+Set of Subsystems Curated for Protein Localization and Compartmental Activity					Compartment Code	
+					b	Plasma membrane
+Class	Subsystem	Compartments			c	Cytosol
+Amino acids	Alanine, serine, glycine metabolism 	c, d, m, x			d	Plastid
+Amino acids	Arginine metabolism and urea cycle 	c, d, m			e	Extracellular
+Amino acids	Beta alanine biosynthesis 	c, d, r			g	Golgi apparatus
+Amino acids	Branched-chain amino acid metabolism 	c, d, m			m	Mitochondrion
+Amino acids	Chorismate biosynthesis 	c, d			n	Nucleus
+Amino acids	Glutamine, glutamate, aspartate, asparagine metabolism 	c, d, m, x			r	Endoplasmic reticulum
+Amino acids	Histidine Biosynthesis 	d			v	Vacuole
+Amino acids	Lysine and threonine metabolism 	c, d			x	Peroxisome
+Amino acids	Methionine and cysteine metabolism 	c, d, m, n, x				
+Amino acids	Proline metabolism 	c, d, m				
+Amino acids	Tryptophan metabolism 	c, d, m				
+Amino acids	Tyrosine and phenylalanine metabolism 	c, d, m, x				
+Central Carbon	Acetyl-CoA biosynthesis	b, c, d, m, n, v				
+Central Carbon	Calvin-Benson-Bassham cycle 	c, d, n				
+Central Carbon	Glycolysis and Gluconeogenesis 	b, c, d, m, n, x				
+Central Carbon	Pentose phosphate pathway 	c, d, m , n, v, x				
+Central Carbon	Photorespiration (oxidative C2 cycle) 	c, d, m, n, x				
+Central Carbon	Rubisco shunt 	c, d, n				
+Central Carbon	TCA cycle 	b, c, d, m, n, v, x				
+Cofactors	Biotin biosynthesis 	c, d, e, m, r, x				
+Cofactors	Folate biosynthesis 	c, d, m, n, v				
+Cofactors	Folate-mediated one-carbon metabolism 	c, d, m, x				
+Cofactors	Isoprenoid biosynthesis, mevalonate branch	b, c, d, m, r, x				
+Cofactors	Isoprenoid biosynthesis, nonmevalonate branch	c, d, g, m, x				
+Cofactors	Niacin, NAD and NADP biosynthesis 	c, d, e, m, x				
+Cofactors	Pantothenate and CoA biosynthesis 	c, d, m, x				
+Cofactors	Phyllooquinone biosynthesis	c, d, m, r, x				
+Cofactors	Plastoquinone biosynthesis	c, d, m, r, x				
+Cofactors	Pyridoxine (vitamin B6) biosynthesis 	c, d, n				
+Cofactors	Riboflavin, FMN and FAD biosynthesis 	c, d, m				
+Cofactors	Thiamin biosynthesis 	c, d, m				
+Fatty acids	Fatty acid biosynthesis  (plastidial)	b, c, d, m, n, r, x				
+Nucleic acids	Purine de novo biosynthesis 	b, c, d, m, n, v, x				
+Nucleic acids	Pyrimidine de novo biosynthesis 	b, c, d, m, n, v, x				
