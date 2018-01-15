@@ -1,2 +1,0 @@
-Subsystem	AraCyc Pathways	Reactions
-Central Carbon: Calvin-Benson-Bassham_cycle_in_plants	CALVIN-PWY	rxn15116, rxn15494, rxn01345, rxn00747, rxn01100, rxn01200, rxn01116, rxn15271, rxn00777, rxn02251, rxn01111, rxn01334, rxn00018, rxn00782
