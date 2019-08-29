@@ -1,0 +1,153 @@
+Central Carbon	Glycolysis_and_Gluconeogenesis_in_plants	PWY-1042
+Central Carbon	Glycolysis_and_Gluconeogenesis_in_plants	PWY-5484
+Central Carbon	Glycolysis_and_Gluconeogenesis_in_plants	GLYCOLYSIS
+Central Carbon	Glycolysis_and_Gluconeogenesis_in_plants	GLUCONEO-PWY
+Central Carbon	Glycolysis_and_Gluconeogenesis_in_plants	PWY-6118
+Central Carbon	Pentose_phosphate_pathway_in_plants	OXIDATIVEPENT-PWY
+Central Carbon	Pentose_phosphate_pathway_in_plants	NONOXIPENT-PWY
+Central Carbon	Calvin-Benson-Bassham_cycle_in_plants	CALVIN-PWY
+Central Carbon	Rubisco_shunt_in_plants	PWY-5723
+Central Carbon	Acetyl-CoA_biosynthesis_in_plants	PWY-5486
+Central Carbon	Acetyl-CoA_biosynthesis_in_plants	PWY-5481
+Central Carbon	Acetyl-CoA_biosynthesis_in_plants	PWY-5172
+Central Carbon	Acetyl-CoA_biosynthesis_in_plants	PYRUVDEHYD-PWY
+Central Carbon	TCA_cycle_in_plants	PWYQT-4481
+Central Carbon	TCA_cycle_in_plants	GLYOXYLATE-BYPASS
+Central Carbon	TCA_cycle_in_plants	PWY-5690
+Central Carbon	TCA_cycle_in_plants	PWY-5084
+Central Carbon	Photorespiration_(oxidative_C2_cycle)_in_plants	PWY-181
+Energy	Respiratory_complex_I_in_plants_(mitochondrial)	PWY-3781
+Energy	Respiratory_complex_I_in_plants_(mitochondrial)	PWY-4302
+Energy	Respiratory_complex_II_(succinate_dehydrogenase)_in_plants	PWY-3781
+Energy	Respiratory_complex_II_(succinate_dehydrogenase)_in_plants	PWY-4302
+Energy	Respiratory_complex_III_(cytochrome_b-c1)_in_plants	PWY-3781
+Energy	Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants	PWY-3781
+Energy	Quinol_oxidases_in_plants_(mitochondrial)	PWY-4302
+Energy	Photosystem_I	PWY-101
+Energy	Photosystem_II	PWY-101
+Energy	Cytochrome_b6-f_complex_in_plants_(plastidial)_and_cyanobacteria	PWY-101
+Energy	F0F1-type_ATP_synthase_in_plants_(mitochondrial)	PWY-6126
+Energy	F0F1-type_ATP_synthase_in_plants_(plastidial)	PWY-6126
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	GLYSYN-ALA-PWY
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	GLYSYN2-PWY
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	PWY0-1021
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	ALANINE-SYN2-PWY
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	SERSYN-PWY
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	PWY-6196
+Amino acids	Lysine_and_threonine_metabolism_in_plants	PWY-5097
+Amino acids	Lysine_and_threonine_metabolism_in_plants	HOMOSER-THRESYN-PWY
+Amino acids	Lysine_and_threonine_metabolism_in_plants	HOMOSERSYN-PWY
+Amino acids	Branched-chain_amino_acid_metabolism_in_plants	VALSYN-PWY
+Amino acids	Branched-chain_amino_acid_metabolism_in_plants	ILEUSYN-PWY
+Amino acids	Branched-chain_amino_acid_metabolism_in_plants	LEUSYN-PWY
+Amino acids	Branched-chain_amino_acid_metabolism_in_plants	PWY-5046
+Amino acids	Tyrosine_and_phenylalanine_metabolism_in_plants	PWY-3462
+Amino acids	Tyrosine_and_phenylalanine_metabolism_in_plants	TYRSYN
+Amino acids	Tyrosine_and_phenylalanine_metabolism_in_plants	PWY-3461
+Amino acids	Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants	ASPSYNII-PWY
+Amino acids	Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants	ASPARAGINE-BIOSYNTHESIS
+Amino acids	Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants	ASPARTATESYN-PWY
+Amino acids	Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants	PWY-6549
+Amino acids	Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants	GLUGLNSYN-PWY
+Amino acids	Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants	PWY-4341
+Amino acids	Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants	ARGASEDEG-PWY
+Amino acids	Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants	GLUTSYNIII-PWY
+Amino acids	Tryptophan_metabolism_in_plants	TRPSYN-PWY
+Amino acids	Proline_metabolism_in_plants	PROSYN-PWY
+Amino acids	Proline_metabolism_in_plants	ARG-PRO-PWY
+Amino acids	Proline_metabolism_in_plants	PWY-3341
+Amino acids	Histidine_Biosynthesis_in_plants	HISTSYN-PWY
+Amino acids	Arginine_metabolism_and_urea_cycle_in_plants	PWY-4983
+Amino acids	Arginine_metabolism_and_urea_cycle_in_plants	ARGSYNBSUB-PWY
+Amino acids	Arginine_metabolism_and_urea_cycle_in_plants	GLUTORN-PWY
+Amino acids	Arginine_metabolism_and_urea_cycle_in_plants	PWY-5704
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	PWY-702
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	PWY-4361-ARA
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	PWY-5441
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	PWY-5041
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	PWY-6755
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	PWY-801
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	CYSTSYN-PWY
+Amino acids	Chorismate_biosynthesis_in_plants	ARO-PWY
+Amino acids	Chorismate_biosynthesis_in_plants	PWY-6163
+Amino acids	Beta_alanine_biosynthesis_in_plants	PWY-3982
+Fatty acids	Acetyl-CoA_carboxylase_complexes_in_plants	PWY0-1264
+Fatty acids	Fatty_acid_biosynthesis_in_plants_(plastidial)	PWY-4381
+Fatty acids	Fatty_acid_biosynthesis_in_plants_(plastidial)	PWY-5971
+Cell wall	Phenylpropanoids_general_biosynthesis_in_plants	PWY-5168
+Cell wall	Phenylpropanoids_general_biosynthesis_in_plants	PWY-6457
+Cell wall	Phenylpropanoids_general_biosynthesis_in_plants	PWY1F-467
+Cell wall	Lignin_biosynthesis_in_plants	PWY-116
+Cell wall	Lignin_biosynthesis_in_plants	PWY-361
+Cell wall	Lignin_biosynthesis_in_plants	PWY-83
+Cell wall	Lignin_biosynthesis_in_plants	PWY-2181
+Cofactors	Niacin,_NAD_and_NADP_biosynthesis_in_plants	PYRIDNUCSYN-PWY
+Cofactors	Niacin,_NAD_and_NADP_biosynthesis_in_plants	PWY-5083
+Cofactors	Niacin,_NAD_and_NADP_biosynthesis_in_plants	PWY-5381
+Cofactors	Folate_biosynthesis_in_plants	PWY-2161
+Cofactors	Folate_biosynthesis_in_plants	PWY-2161B
+Cofactors	Folate_biosynthesis_in_plants	PWY-2161B-PMN
+Cofactors	Folate_biosynthesis_in_plants	PWY-3742
+Cofactors	Folate_biosynthesis_in_plants	PWY-6147
+Cofactors	Folate_biosynthesis_in_plants	PWY-6543
+Cofactors	Folate-mediated_one-carbon_metabolism_in_plants	PWY-3841
+Cofactors	Pantothenate_and_CoA_biosynthesis_in_plants	PANTO-PWY
+Cofactors	Pantothenate_and_CoA_biosynthesis_in_plants	COA-PWY
+Cofactors	Pyridoxine_(vitamin_B6)_biosynthesis_in_plants	PWY-6466
+Cofactors	Pyridoxine_(vitamin_B6)_biosynthesis_in_plants	PLPSAL-PWY
+Cofactors	Biotin_biosynthesis_in_plants	PWY0-1507
+Cofactors	Thiamin_biosynthesis_in_plants	PWY-6890
+Cofactors	Thiamin_biosynthesis_in_plants	PWY-6909
+Cofactors	Thiamin_biosynthesis_in_plants	PWY-6908
+Cofactors	Thiamin_biosynthesis_in_plants	PWY-6910
+Cofactors	Riboflavin,_FMN_and_FAD_biosynthesis_in_plants	RIBOSYN2-PWYNucleic acids	Purine_de_novo_biosynthesis_in_plants	DENOVOPURINE3-PWY
+Cofactors	Isoprenoid_biosynthesis_in_plants,_mevalonate_branch	PWY-922
+Cofactors	Isoprenoid_biosynthesis_in_plants,_nonmevalonate_branch	NONMEVIPP-PWY
+Cofactors	Geranylgeranyldiphosphate_biosynthesis_in_plants	PWY-5120
+Cofactors	Geranylgeranyldiphosphate_biosynthesis_in_plants	PWY-5123
+Cofactors	Phylloquinone_biosynthesis_in_plants	PWY-5027
+Cofactors	Phylloquinone_biosynthesis_in_plants	PWY-5063
+Cofactors	Phylloquinone_biosynthesis_in_plants	PWY-5791
+Cofactors	Plastoquinone_biosynthesis_in_plants	PWY-1581
+Cofactors	Plastoquinone_biosynthesis_in_plants	PWY-5805
+Cofactors	Plastoquinone_biosynthesis_in_plants	PWY-5886
+Cofactors	Ubiquinone_biosynthesis_in_plants	PWY-5871
+Cofactors	Ubiquinone_biosynthesis_in_plants	PWY-5805
+Nucleic acids	Purine_de_novo_biosynthesis_in_plants	PWY-6121
+Nucleic acids	Purine_de_novo_biosynthesis_in_plants	PWY-6124
+Nucleic acids	Purine_de_novo_biosynthesis_in_plants	PWY-6126
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	PWY-5687
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	PWY-5686
+Nucleic acids	Purine_salvage_in_plants	PWY-6619
+Nucleic acids	Purine_salvage_in_plants	PWY-6605
+Nucleic acids	Purine_salvage_in_plants	PWY-6599
+Transport	Media_transport_in_plants	-
+Transport	Cofactor_transport_in_plants	-
+Transport	Carboxylate_transport_in_plants	-
+Transport	Amino_acid_transport_in_plants	-
+Transport	Carbohydrate_transport_in_plants	-
+Transport	Nucleotide_transport_in_plants	-
+Transport	Fatty_acid_transport_in_plants	-
+Carbohydrates	Sucrose_metabolism_in_plants	PWY-5481
+Carbohydrates	Sucrose_metabolism_in_plants	PWY-5486
+Carbohydrates	Sucrose_metabolism_in_plants	PWY-5484
+Carbohydrates	Sucrose_metabolism_in_plants	PWY-621
+Carbohydrates	Sucrose_metabolism_in_plants	SUCSYN-PWY
+Carbohydrates	Sucrose_metabolism_in_plants	PWY-3801
+Carbohydrates	UDP-D-glucuronate,_UDP-D-xylose_and_UDP-D-apiose_biosynthesis_in_plants	PWY-5113
+Carbohydrates	UDP-D-glucuronate,_UDP-D-xylose_and_UDP-D-apiose_biosynthesis_in_plants	PWY-4841
+Carbohydrates	UDP-D-glucuronate,_UDP-D-xylose_and_UDP-D-apiose_biosynthesis_in_plants	PWY-4821
+Carbohydrates	UDP-glucose_and_UDP-galactose_biosynthesis_in_plants	PWYQT-4436
+Carbohydrates	UDP-glucose_and_UDP-galactose_biosynthesis_in_plants	PWYQT-4437
+Carbohydrates	UDP-glucose_and_UDP-galactose_biosynthesis_in_plants	PWYQT-4438
+Other	Detoxification_in_plants	DETOX1-PWY
+Other	One-carbon_metabolism_in_plants	PWY-1881
+Other	Reductants_in_plants	THIOREDOX-PWY
+Other	Reductants_in_plants	PWY-4081
+Other	Reductants_in_plants	GLUT-REDOX-PWY
+Other	Nitrate_reduction_in_plants	PWY-381
+Other	Sulfur_metabolism_in_plants	SULFMETII-PWY
+Other	Sulfur_metabolism_in_plants	PWY-5326
+Other	Sulfur_metabolism_in_plants	PWY-5340
+Other	Ethanol_Degradation_in_plants	PWY66-21
+Other	Spontaneous_reactions_in_plants	-
