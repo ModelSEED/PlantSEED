@@ -100,7 +100,7 @@ Cofactors	Thiamin_biosynthesis_in_plants	PWY-6890
 Cofactors	Thiamin_biosynthesis_in_plants	PWY-6909
 Cofactors	Thiamin_biosynthesis_in_plants	PWY-6908
 Cofactors	Thiamin_biosynthesis_in_plants	PWY-6910
-Cofactors	Riboflavin,_FMN_and_FAD_biosynthesis_in_plants	RIBOSYN2-PWYNucleic acids	Purine_de_novo_biosynthesis_in_plants	DENOVOPURINE3-PWY
+Cofactors	Riboflavin,_FMN_and_FAD_biosynthesis_in_plants	RIBOSYN2-PWY
 Cofactors	Isoprenoid_biosynthesis_in_plants,_mevalonate_branch	PWY-922
 Cofactors	Isoprenoid_biosynthesis_in_plants,_nonmevalonate_branch	NONMEVIPP-PWY
 Cofactors	Geranylgeranyldiphosphate_biosynthesis_in_plants	PWY-5120
@@ -113,6 +113,7 @@ Cofactors	Plastoquinone_biosynthesis_in_plants	PWY-5805
 Cofactors	Plastoquinone_biosynthesis_in_plants	PWY-5886
 Cofactors	Ubiquinone_biosynthesis_in_plants	PWY-5871
 Cofactors	Ubiquinone_biosynthesis_in_plants	PWY-5805
+Nucleic acids	Purine_de_novo_biosynthesis_in_plants	DENOVOPURINE3-PWY
 Nucleic acids	Purine_de_novo_biosynthesis_in_plants	PWY-6121
 Nucleic acids	Purine_de_novo_biosynthesis_in_plants	PWY-6124
 Nucleic acids	Purine_de_novo_biosynthesis_in_plants	PWY-6126
