@@ -1,0 +1,1 @@
+Functional_Blast_DBs generated via ../Scripts/Archived/PlantSEED_Setup/Generate_PlantSEED_FBDBs.pl

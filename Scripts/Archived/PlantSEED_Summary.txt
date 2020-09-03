@@ -1,0 +1,12 @@
+PATRIC ID	Scientific name	# Features
+Ptrichocarpa-JGI2.0	Populus trichocarpa	41377
+Osativa-MSU6	Oryza sativa	57939
+Vvinifera-IGGP_12x	Vitis vinifera	29927
+Athaliana-TAIR10	Arabidopsis thaliana	27416
+Creinhardtii-v3.0	Chlamydomonas reinhardtii	14416
+Sbicolor-Sorbi1	Sorghum bicolor	34496
+Bdistachyon-v1.0	Brachypodium distachyon	26552
+Zmays-AGPv2	Zea mays	39656
+Gmax-V1.0	Glycine max	54173
+Oglaberrima-AGI1.1	Oryza glaberrima	33164
+Alyrata-v.1.0	Arabidopsis lyrata subsp. lyrata	32667

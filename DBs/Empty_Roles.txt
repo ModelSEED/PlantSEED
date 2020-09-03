@@ -1,0 +1,111 @@
+(3R)-hydroxypalmitoyl-[acyl carrier protein] dehydratase (EC 4.2.1.-)	Subsystem
+(E)-Cinnamoyl-CoA ligase (EC 6.2.1.-)	Subsystem
+2-dehydropantoate 2-reductase (EC 1.1.1.169)	Subsystem
+2-nonaprenyl-6-methoxyphenol 4-monooxygenase (EC 1.14.3.-)	Subsystem
+2-octaprenyl-3-methyl-6-methoxy-1,4-benzoquinol hydroxylase (EC 1.14.13.-)	Subsystem
+3-deoxy-D-manno-octulosonate 8-phosphate phosphatase (EC 3.1.3.45)	Subsystem
+3-nonaprenyl-4-hydroxy-5-methoxybenzoate carboxy-lyase (EC 4.1.1.-)	Subsystem
+4-coumarate--CoA ligase 1 (EC 6.2.1.12)	Subsystem
+5-Amino-6-(5'-phosphoribitylamino)uracil phosphatase	Subsystem
+ATP synthase delta chain (EC 3.6.3.14)	Subsystem
+Acetyl-coenzyme A carboxyl transferase of ACAC1 (EC 6.4.1.2)	Subsystem
+Acylglycerol transacylase	Subsystem
+Benzoylated glucosinolates modification, unresolved step	Subsystem
+Beta-phosphoglucomutase (EC 5.4.2.6)	Subsystem
+CDP-N-methylethanolamine--1,2-diacylglycerol phosphatidyltransferase (EC 2.7.8.-)	Subsystem
+CDP-diacylglycerol--serine O-phosphatidyltransferase (EC 2.7.8.8)	Subsystem
+CYP81F4 monooxygenase	Subsystem
+Caffeic-o-methyltransferase (EC 2.1.1.68)	Subsystem
+Ceramide glucosyltransferase (EC 2.4.1.80)	Subsystem
+Ceramide hydroxylase	Subsystem
+Chlorophyll a(b) binding protein, photosystem II CP43 protein (PsbC) homolog	Subsystem
+Coniferin beta-glucosidase (EC 3.2.1.126)	Subsystem
+Cyclopropane desaturase (no EC)	Subsystem
+Cystathionine gamma-synthase (EC 2.5.1.48)	Subsystem
+Cytochrome b6-f complex alternative Rieske iron sulfur protein PetC2	Subsystem
+Cytochrome b6-f complex alternative Rieske iron sulfur protein PetC3	Subsystem
+Cytochrome b6-f complex iron-sulfur subunit PetC1 (Rieske iron sulfur protein EC 1.10.99.1)	Subsystem
+Cytochrome b6-f complex subunit VII (PetM)	Subsystem
+Cytochrome b6-f complex subunit, cytochrome b6, putative	Subsystem
+Cytochrome c oxidase subunit 5a	Subsystem
+Cytochrome c oxidase, subunit IV (EC 1.9.3.1)	Subsystem
+Dihydroneopterin monophosphate phosphatase (non-specific?)	Subsystem
+Dihydroneopterin phosphate phosphatase (EC 3.6.1.-)	Subsystem
+Epoxide hydrolase (EC 3.3.2.-)	Subsystem
+Ethanolamine N-methyltransferase, free-base-specific (EC 2.1.1.-)	Subsystem
+Fatty acid peroxygenase [fatty acid hydroperoxide-dependent] (EC 1.11.-.-)	Subsystem
+Fatty acids epoxide hydrolase (no EC)	Subsystem
+Flavonoid 3'-hydroxylase (EC 1.14.13.21)	Subsystem
+Galactolipid galactosyltransferase (EC 2.4.1.184)	Subsystem
+Galactose-1-phosphate uridylyltransferase (EC 2.7.7.10)	Subsystem
+Glucokinase (EC 2.7.1.2)	Subsystem
+Glucose-1-phosphate guanylyltransferase (EC 2.7.7.34)	Subsystem
+Glucosylceramide synthase	Subsystem
+Glutamate-pyruvate aminotransferase (EC 2.6.1.2)	Subsystem
+Glutaminase (EC 3.5.1.2)	Subsystem
+Glutaredoxin-like protein NrdH, required for reduction of Ribonucleotide reductase class Ib	Subsystem
+Glutathione S-transferase in glucosinolates biosynthesis, predicted	Subsystem
+Homo, di, tri, tetra, penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n5)	Subsystem
+Homogalacturonan methyltransferase (EC 2.1.1.-)	Subsystem
+Indole synthase (EC 4.1.2.8)	Subsystem
+Lauryl-[acyl-carrier protein] hydrolase (EC 3.1.2.21)	Subsystem
+Linoleoyl-CoA desaturase (EC 1.14.19.3)	Subsystem
+Long chain fatty acyl-CoA reductase [aldehyde-forming] (EC 1.2.1.50)	Subsystem
+Long-chain fatty acid omega-aldehyde dehydrogenase (EC 1.2.1.-)	Subsystem
+Long-chain fatty acid omega-hydroxylase (EC 1.14.13.-)	Subsystem
+Low-specificity L-threonine aldolase (EC 4.1.2.5)	Subsystem
+Malonate--CoA ligase (EC 6.2.1.n3)	Subsystem
+Malonyl-[acyl-carrier-protein] ligase (EC 6.2.1.-)	Subsystem
+Mannitol dehydrogenase (EC 1.1.1.255)	Subsystem
+Methionine--glyoxylate aminotransferase (EC 2.6.1.73)	Subsystem
+N-dimethylethanolamine-phosphate cytidylyltransferase (EC 2.7.7.-)	Subsystem
+N-methylphosphoethanolamine cytidylyltransferase (EC 2.7.7.57)	Subsystem
+NADP phosphatase (EC 3.1.3.-)	Subsystem
+NMN nucleosidase (EC 3.2.2.14)	Subsystem
+NMN phosphatase (EC 3.1.3.5)	Subsystem
+Nicotinate N-methyltransferase (EC 2.1.1.7)	Subsystem
+Nitric-oxide synthase (EC 1.14.13.39)	Subsystem
+Oleoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.14)	Subsystem
+Palmitoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.-)	Subsystem
+Phosphatidylglycerophosphatase A (EC 3.1.3.27)	Subsystem
+Phosphatidylglycerophosphatase B (EC 3.1.3.27)	Subsystem
+Phosphatidylinositol 3,5-bisphosphate phosphatase (EC 3.1.3-)	Subsystem
+Phosphatidylinositol-3-phosphate 5-kinase (EC 2.7.1.150)	Subsystem
+Phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit, alpha isoform (EC 2.7.1.153)	Subsystem
+Phosphatidylinositol-4-phosphate 3-kinase C2 domain-containing alpha polypeptide (EC 2.7.1.154)	Subsystem
+Phosphatidylinositol-4-phosphate 3-kinase C2 domain-containing beta polypeptide (EC 2.7.1.154)	Subsystem
+Phosphoenolpyruvate synthase (EC 2.7.9.2)	Subsystem
+Phosphoethanolamine/phosphocholine phosphatase (EC 3.1.3.75)	Subsystem
+Photosystem II 12 kDa extrinsic protein (PsbU)	Subsystem
+Photosystem II protein PsbV, cytochrome c550	Subsystem
+Precorrin-2 oxidase (EC 1.3.1.76)	Subsystem
+Pyridoxal-5'-phosphate phosphatase (EC 3.1.3.74), eukaryotic type	Subsystem
+Pyridoxamine-pyruvate aminotransferase (EC 2.6.1.30)	Subsystem
+Ribosylnicotinamide kinase, eukaryotic (EC 2.7.1.22)	Subsystem
+Ribosylnicotinic acid kinase, eukaryotic (EC 2.7.1.173)	Subsystem
+Sinapine esterase (EC 3.1.1.49)	Subsystem
+Sinapoylated glucosinolates modification, unresolved step	Subsystem
+Soluble pyridine nucleotide transhydrogenase (EC 1.6.1.1)	Subsystem
+Sphingosine N-acyltransferase (EC 2.3.1.24)	Subsystem
+Stearoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.-)	Subsystem
+Thiamine-monophosphate kinase (EC 2.7.4.16)	Subsystem
+Thiamine-monophosphate phosphatase (EC 3.1.3.-)	Subsystem
+Thiamine-triphosphatase (EC 3.6.1.28)	Subsystem
+Thiamine-triphosphatase (ThTP) synthase (EC 2.7.4.15)	Subsystem
+UDP-2,3-diacylglucosamine diphosphatase (EC 3.6.1.54)	Subsystem
+UDP-glucose--hexose-1-phosphate uridylyltransferase (EC 2.7.7.12)	Subsystem
+UDP-glucose:nicotinate-N-glucosyltransferase  (EC 2.4.1.196)	Subsystem
+UDP-glucose:pyridoxine 5'-O-beta-D-glucosyltransferase (EC 2.4.1.160)	Subsystem
+Ubiquinol-cytochrome c reductase complex subunit 10	Subsystem
+V-type ATP synthase subunit I (EC 3.6.3.14)	Subsystem
+V-type ATP synthase subunit K (EC 3.6.3.14)	Subsystem
+XXLG xyloglucan galactosyltransferase	Subsystem
+alternative photosystem I reaction center subunit X (PsaK2)	Subsystem
+glucan phosphatase (EC 3.1.3.-)	Subsystem
+kestotetraose hydrolase (EC 3.2.1.-)	Subsystem
+levan hydrolase (EC 3.2.1.-)	Subsystem
+photosystem I 4.8K protein (PsaX)	Subsystem
+photosystem I assembly related protein Ycf37	Subsystem
+photosystem I biogenesis protein BtpA	Subsystem
+photosystem I subunit XII (PsaM)	Subsystem
+trans-cinnamate 2-monooxygenase (EC 1.14.13.14)	Subsystem
