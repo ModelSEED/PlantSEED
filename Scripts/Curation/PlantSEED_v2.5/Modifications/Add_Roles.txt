@@ -1,0 +1,3 @@
+NAD(P)H-hydrate epimerase (EC 5.1.99.6)	rxn23415|rxn23155	AT5G49970:PPDB:d
+Isocitrate dehydrogenase [NAD] regulatory subunit (EC 1.1.1.41)	rxn15056	AT4G35260:PPDB:m|AT2G17130:AraCyc:m|AT4G35650:AraCyc:m
+Isocitrate dehydrogenase [NAD] catalytic subunit (EC 1.1.1.41)	rxn15056	AT5G03290:PPDB;GFP:m|AT3G09810:AraCyc:m

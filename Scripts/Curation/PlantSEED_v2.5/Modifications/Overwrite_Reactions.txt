@@ -1,0 +1,28 @@
+Dihydrolipoamide acetyltransferase component of pyruvate dehydrogenase complex (EC 2.3.1.12)	rxn00154
+Dihydrolipoamide dehydrogenase of pyruvate dehydrogenase complex (EC 1.8.1.4)	rxn00154
+Pyruvate dehydrogenase E1 component beta subunit (EC 1.2.4.1)	rxn00154
+Pyruvate dehydrogenase E1 component alpha subunit (EC 1.2.4.1)	rxn00154
+Branched-chain alpha-keto acid dehydrogenase, E1 component, beta subunit (EC 1.2.4.4)	rxn00899|rxn01207|rxn17744
+Dihydrolipoamide acyltransferase component of branched-chain alpha-keto acid dehydrogenase complex (EC 2.3.1.168)	rxn00899|rxn01207|rxn17744
+Dihydrolipoamide dehydrogenase of branched-chain alpha-keto acid dehydrogenase (EC 1.8.1.4)	rxn00899|rxn01207|rxn17744
+Branched-chain alpha-keto acid dehydrogenase, E1 component, alpha subunit (EC 1.2.4.4)	rxn00899|rxn01207|rxn17744
+Dihydrolipoamide dehydrogenase of 2-oxoglutarate dehydrogenase (EC 1.8.1.4)	rxn08094
+Dihydrolipoamide succinyltransferase component (E2) of 2-oxoglutarate dehydrogenase complex (EC 2.3.1.61)	rxn08094
+2-oxoglutarate dehydrogenase E1 component (EC 1.2.4.2)	rxn08094
+Acetolactate synthase large subunit (EC 2.2.1.6)	rxn08043|rxn15021
+Acetolactate synthase small subunit (EC 2.2.1.6)	rxn08043|rxn15021
+Biotin carboxyl carrier protein of acetyl-CoA carboxylase	rxn00533	
+Biotin carboxylase of acetyl-CoA carboxylase (EC 6.3.4.14)	rxn00533	
+Acetyl-coenzyme A carboxyl transferase domain of homomeric ACCase (EC 6.4.1.2)	rxn00533	
+Acetyl-coenzyme A carboxyl transferase beta chain (EC 6.4.1.2)	rxn00533	
+Biotin carboxyl carrier domain of homomeric Acetyl-CoA carboxylase	rxn00533	
+Acetyl-coenzyme A carboxyl transferase alpha chain (EC 6.4.1.2)	rxn00533	
+Biotin carboxylase domain of homomeric ACCase (EC 6.3.4.14)	rxn00533	
+Biotin synthase (EC 2.8.1.6)	rxn17731
+Adrenodoxin reductase	rxn17731
+Adrenodoxin, mitochondrial ferredoxin	rxn17731
+Cysteine desulfurase (EC 2.8.1.7), IscS subfamily	rxn17731
+Prephenate dehydratase (EC 4.2.1.51)	rxn01000
+Alternative oxidase, ubiquinol oxidase (EC 1.10.3.11)	rxn12494
+Serine acetyltransferase (EC 2.3.1.30)	rxn19345
+Cysteine synthase (EC 2.5.1.47)	rxn19345

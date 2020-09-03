@@ -1,0 +1,2 @@
+2,3-bisphosphoglycerate-independent phosphoglycerate mutase (EC 5.4.2.1)	2,3-bisphosphoglycerate-independent phosphoglycerate mutase (EC 5.4.2.12)
+Photosystem II protein PsbW (similar to Psb28)	Photosystem II 13 kDa protein Psb28 (similar to PsbW)

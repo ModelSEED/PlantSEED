@@ -1,0 +1,251 @@
+{
+   "Prephenate dehydratase (EC 4.2.1.51)" : {
+      "remove" : {
+         "rxn19253" : {}
+      },
+      "add" : {
+         "rxn01000" : {}
+      }
+   },
+   "Serine acetyltransferase (EC 2.3.1.30)" : {
+      "remove" : {
+         "rxn00423" : {}
+      },
+      "add" : {
+         "rxn19345" : {}
+      }
+   },
+   "Cysteine synthase (EC 2.5.1.47)" : {
+      "remove" : {
+         "rxn00649" : {}
+      },
+      "add" : {
+         "rxn19345" : {}
+      }
+   },
+   "Biotin synthase (EC 2.8.1.6)" : {
+      "remove" : {
+         "rxn17731" : {}
+      },
+      "add" : {
+         "rxn17731" : {}
+      }
+   },
+   "Acetyl-coenzyme A carboxyl transferase beta chain (EC 6.4.1.2)" : {
+      "remove" : {
+         "rxn26091" : {},
+         "rxn00533" : {}
+      },
+      "add" : {
+         "rxn00533" : {}
+      }
+   },
+   "Branched-chain alpha-keto acid dehydrogenase, E1 component, beta subunit (EC 1.2.4.4)" : {
+      "remove" : {
+         "rxn17206" : {}
+      },
+      "add" : {
+         "rxn01207" : {},
+         "rxn17744" : {},
+         "rxn00899" : {}
+      }
+   },
+   "Biotin carboxyl carrier domain of homomeric Acetyl-CoA carboxylase" : {
+      "remove" : {
+         "rxn19235" : {},
+         "rxn00533" : {}
+      },
+      "add" : {
+         "rxn00533" : {}
+      }
+   },
+   "Pyruvate dehydrogenase E1 component beta subunit (EC 1.2.4.1)" : {
+      "remove" : {
+         "rxn00011" : {},
+         "rxn22957" : {}
+      },
+      "add" : {
+         "rxn00154" : {}
+      }
+   },
+   "Adrenodoxin reductase" : {
+      "remove" : {
+         "rxn17731" : {}
+      },
+      "add" : {
+         "rxn17731" : {}
+      }
+   },
+   "Branched-chain alpha-keto acid dehydrogenase, E1 component, alpha subunit (EC 1.2.4.4)" : {
+      "remove" : {
+         "rxn17206" : {}
+      },
+      "add" : {
+         "rxn01207" : {},
+         "rxn17744" : {},
+         "rxn00899" : {}
+      }
+   },
+   "Acetyl-coenzyme A carboxyl transferase domain of homomeric ACCase (EC 6.4.1.2)" : {
+      "remove" : {
+         "rxn26091" : {},
+         "rxn00533" : {}
+      },
+      "add" : {
+         "rxn00533" : {}
+      }
+   },
+   "Acetyl-coenzyme A carboxyl transferase alpha chain (EC 6.4.1.2)" : {
+      "remove" : {
+         "rxn26091" : {},
+         "rxn00533" : {}
+      },
+      "add" : {
+         "rxn00533" : {}
+      }
+   },
+   "Dihydrolipoamide dehydrogenase of 2-oxoglutarate dehydrogenase (EC 1.8.1.4)" : {
+      "remove" : {
+         "rxn24411" : {},
+         "rxn17745" : {}
+      },
+      "add" : {
+         "rxn08094" : {}
+      }
+   },
+   "Dihydrolipoamide dehydrogenase of pyruvate dehydrogenase complex (EC 1.8.1.4)" : {
+      "remove" : {
+         "rxn25977" : {}
+      },
+      "add" : {
+         "rxn00154" : {}
+      }
+   },
+   "Pyruvate dehydrogenase E1 component alpha subunit (EC 1.2.4.1)" : {
+      "remove" : {
+         "rxn00011" : {},
+         "rxn22957" : {}
+      },
+      "add" : {
+         "rxn00154" : {}
+      }
+   },
+   "Alternative oxidase, ubiquinol oxidase (EC 1.10.3.11)" : {
+      "remove" : {
+         "rxn37784" : {},
+         "rxn24210" : {}
+      },
+      "add" : {
+         "rxn12494" : {}
+      }
+   },
+   "Biotin carboxyl carrier protein of acetyl-CoA carboxylase" : {
+      "remove" : {
+         "rxn19235" : {}
+      },
+      "add" : {
+         "rxn00533" : {}
+      }
+   },
+   "Dihydrolipoamide succinyltransferase component (E2) of 2-oxoglutarate dehydrogenase complex (EC 2.3.1.61)" : {
+      "remove" : {
+         "rxn25982" : {},
+         "rxn17745" : {}
+      },
+      "add" : {
+         "rxn08094" : {}
+      }
+   },
+   "Biotin carboxylase of acetyl-CoA carboxylase (EC 6.3.4.14)" : {
+      "remove" : {
+         "rxn19235" : {}
+      },
+      "add" : {
+         "rxn00533" : {}
+      }
+   },
+   "Adrenodoxin, mitochondrial ferredoxin" : {
+      "remove" : {
+         "rxn17731" : {}
+      },
+      "add" : {
+         "rxn17731" : {}
+      }
+   },
+   "Biotin carboxylase domain of homomeric ACCase (EC 6.3.4.14)" : {
+      "remove" : {
+         "rxn19235" : {},
+         "rxn00533" : {}
+      },
+      "add" : {
+         "rxn00533" : {}
+      }
+   },
+   "Dihydrolipoamide acyltransferase component of branched-chain alpha-keto acid dehydrogenase complex (EC 2.3.1.168)" : {
+      "remove" : {
+         "rxn17464" : {}
+      },
+      "add" : {
+         "rxn01207" : {},
+         "rxn17744" : {},
+         "rxn00899" : {}
+      }
+   },
+   "Cysteine desulfurase (EC 2.8.1.7), IscS subfamily" : {
+      "remove" : {
+         "rxn26037" : {},
+         "rxn17731" : {}
+      },
+      "add" : {
+         "rxn17731" : {}
+      }
+   },
+   "Acetolactate synthase large subunit (EC 2.2.1.6)" : {
+      "remove" : {
+         "rxn08043" : {},
+         "rxn15021" : {}
+      },
+      "add" : {
+         "rxn15021" : {},
+         "rxn08043" : {}
+      }
+   },
+   "Dihydrolipoamide dehydrogenase of branched-chain alpha-keto acid dehydrogenase (EC 1.8.1.4)" : {
+      "remove" : {
+         "rxn24412" : {}
+      },
+      "add" : {
+         "rxn01207" : {},
+         "rxn17744" : {},
+         "rxn00899" : {}
+      }
+   },
+   "Dihydrolipoamide acetyltransferase component of pyruvate dehydrogenase complex (EC 2.3.1.12)" : {
+      "remove" : {
+         "rxn25978" : {}
+      },
+      "add" : {
+         "rxn00154" : {}
+      }
+   },
+   "Acetolactate synthase small subunit (EC 2.2.1.6)" : {
+      "remove" : {
+         "rxn08043" : {},
+         "rxn15021" : {}
+      },
+      "add" : {
+         "rxn15021" : {},
+         "rxn08043" : {}
+      }
+   },
+   "2-oxoglutarate dehydrogenase E1 component (EC 1.2.4.2)" : {
+      "remove" : {
+         "rxn17746" : {},
+         "rxn17745" : {}
+      },
+      "add" : {
+         "rxn08094" : {}
+      }
+   }
+}
+

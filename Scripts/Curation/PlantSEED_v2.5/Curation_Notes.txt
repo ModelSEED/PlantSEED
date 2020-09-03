@@ -1,0 +1,17 @@
+September 6 2018:
+	  V-type ATP synthase subunit G (EC 3.6.3.14)
+	  V-type ATP synthase subunit B (EC 3.6.3.14)
+	  V-type ATP synthase subunit E (EC 3.6.3.14)
+	  	 Assuming that all associated features are vacuolar
+
+	  Anthranilate synthase, amidotransferase component (EC 4.1.3.27)
+	  	  Assuming that all associated features are plastidial
+
+September 7 2018:
+	  Acetolactate synthase small subunit (EC 2.2.1.6)
+	  Acetolactate synthase large subunit (EC 2.2.1.6)
+	  	   Added missing reaction
+
+October 19 2018:
+	1-acyl-sn-glycerol-3-phosphate acyltransferase (EC 2.3.1.51)
+	           Removed reaction no longer in biochemistry: rxn37218

@@ -1,0 +1,7 @@
+#Two partial reactions should be replaced with new overall reaction
+Thiazole biosynthetic enzyme Thi4	rxn27029|rxn27030	(1) cpd00003[0] + (1) cpd00033[0] + (1) cpd00084[0] => (2) cpd00001[0] + (1) cpd00011[0] + (1) cpd00018[0] + (1) cpd00035[0] + (1) cpd00067[0] + (1) cpd00133[0] + (1) cpd02654[0]
+#Biotin synthase generally requires addition of NADPH
+Adrenodoxin reductase (EC 1.18.1.6)	rxn17731	(1) cpd00005 + (2) cpd00017[0] + (1) cpd00067 + (1) cpd00084[0] + (1) cpd01311[0] => (1) cpd00006 + (1) cpd00035[0] + (2) cpd00060[0] + (1) cpd00104[0] + (2) cpd03091[0]
+Biotin synthase (EC 2.8.1.6)	rxn17731	(1) cpd00005 + (2) cpd00017[0] + (1) cpd00067 + (1) cpd00084[0] + (1) cpd01311[0] => (1) cpd00006 + (1) cpd00035[0] + (2) cpd00060[0] + (1) cpd00104[0] + (2) cpd03091[0]
+Cysteine desulfurase (EC 2.8.1.7), IscS subfamily	rxn17731|rxn26037	(1) cpd00005 + (2) cpd00017[0] + (1) cpd00067 + (1) cpd00084[0] + (1) cpd01311[0] => (1) cpd00006 + (1) cpd00035[0] + (2) cpd00060[0] + (1) cpd00104[0] + (2) cpd03091[0]
+Adrenodoxin, mitochondrial ferredoxin	rxn17731        (1) cpd00005 + (2) cpd00017[0] + (1) cpd00067 + (1) cpd00084[0] + (1) cpd01311[0] => (1) cpd00006 + (1) cpd00035[0] + (2) cpd00060[0] + (1) cpd00104[0] + (2) cpd03091[0]

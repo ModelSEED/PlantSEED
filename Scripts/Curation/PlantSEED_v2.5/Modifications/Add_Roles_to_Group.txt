@@ -1,0 +1,7 @@
+Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29)	subsystems	Geranylgeranyldiphosphate_biosynthesis_in_plants
+NAD(P)H-hydrate epimerase (EC 5.1.99.6)	subsystems	Niacin,_NAD_and_NADP_biosynthesis_in_plants
+NAD(P)H-hydrate epimerase (EC 5.1.99.6)	classes	Cofactors
+Isocitrate dehydrogenase [NAD] regulatory subunit (EC 1.1.1.41)	subsystems	TCA_cycle_in_plants|Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants
+Isocitrate dehydrogenase [NAD] regulatory subunit (EC 1.1.1.41)	classes	Amino acids|Central Carbon
+Isocitrate dehydrogenase [NAD] catalytic subunit (EC 1.1.1.41)	subsystems	TCA_cycle_in_plants|Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants
+Isocitrate dehydrogenase [NAD] catalytic subunit (EC 1.1.1.41)	classes	Amino acids|Central Carbon
