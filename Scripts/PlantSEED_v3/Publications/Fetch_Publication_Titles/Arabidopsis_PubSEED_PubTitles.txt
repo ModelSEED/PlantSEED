@@ -1,0 +1,687 @@
+AT4G34050	fig|3702.11.peg.10009	22258746	SvetaG	The role of CCoAOMT1 and COMT1 in Arabidopsis anthers.
+AT4G34240	fig|3702.11.peg.10031	15830124	OlgaZ	Detailed expression analysis of selected genes of the aldehyde dehydrogenase (ALDH) gene superfamily in Arabidopsis thaliana.
+AT4G34350	fig|3702.11.peg.10044	15863698	SvetaG	The Arabidopsis IspH homolog is involved in the plastid nonmevalonate pathway of isoprenoid biosynthesis.
+AT4G34520	fig|3702.11.peg.10063	23145136	SvetaG	Natural variation in seed very long chain fatty acid content is controlled by a new isoform of KCS18 in Arabidopsis thaliana.
+AT4G34520	fig|3702.11.peg.10063	11341960	OlgaV	Active-site residues of a plant membrane-bound fatty acid elongase beta-ketoacyl-CoA synthase, FAE1 KCS.
+AT4G34520	fig|3702.11.peg.10063	7734965	OlgaV	Directed tagging of the Arabidopsis FATTY ACID ELONGATION1 (FAE1) gene with the maize transposon activator.
+AT4G34570	fig|3702.11.peg.10069	8374616	RossO	The origin of the bifunctional dihydrofolate reductase-thymidylate synthase isogenes of Arabidopsis thaliana.
+AT4G34740	fig|3702.11.peg.10087	15266056	SvetaG	Characterization of Arabidopsis glutamine phosphoribosyl pyrophosphate amidotransferase-deficient mutants.
+AT4G34840	fig|3702.11.peg.10096	18342331	gjo	Molecular determinants of substrate specificity in plant 5'-methylthioadenosine nucleosidases.
+AT4G35090	fig|3702.11.peg.10123	16669103	OlgaV	Nucleotide Sequence of a cDNA for Catalase from Arabidopsis thaliana.
+AT4G35250	fig|3702.11.peg.10140	23027666	SvetaG	The atypical short-chain dehydrogenases HCF173 and HCF244 are jointly involved in translational initiation of the psbA mRNA of Arabidopsis.
+AT4G35830	fig|3702.11.peg.10205	7713917	RossO	Structure, genomic organization, and expression of the Arabidopsis thaliana aconitase gene. Plant aconitase show significant homology with mammalian iron-responsive element-binding protein.
+AT4G36220	fig|3702.11.peg.10247	8692910	SvetaG	Ferulate-5-hydroxylase from Arabidopsis thaliana defines a new family of cytochrome P450-dependent monooxygenases.
+AT4G36220	fig|3702.11.peg.10247	11141187	SvetaG	Nucleotide sequence variation at two genes of the phenylpropanoid pathway, the FAH1 and F3H genes, in Arabidopsis thaliana.
+AT4G36250	fig|3702.11.peg.10250	15830124	OlgaZ	Detailed expression analysis of selected genes of the aldehyde dehydrogenase (ALDH) gene superfamily in Arabidopsis thaliana.
+AT4G36810	fig|3702.11.peg.10304	10759500	SvetaG	Five geranylgeranyl diphosphate synthases expressed in different organs are localized into three subcellular compartments in Arabidopsis.
+AT4G37400	fig|3702.11.peg.10369	21317374	SvetaG	Metabolic engineering in Nicotiana benthamiana reveals key enzyme functions in Arabidopsis indole glucosinolate modification.
+AT4G37930	fig|3702.11.peg.10426	16339799	SvetaG	The photorespiratory Arabidopsis shm1 mutant is deficient in SHM1.
+AT4G37930	fig|3702.11.peg.10426	15659103	SvetaG	Arabidopsis SHMT1, a serine hydroxymethyltransferase that functions in the photorespiratory pathway influences resistance to biotic and abiotic stress.
+AT4G38460	fig|3702.11.peg.10481	19482937	SvetaG	Heterodimeric geranyl(geranyl)diphosphate synthase from hop (Humulus lupulus) and the evolution of monoterpene biosynthesis.
+AT4G38510	fig|3702.11.peg.10487	11950611	SvetaG	A simple nomenclature for a complex proton pump: VHA genes encode the vacuolar H(+)-ATPase.
+AT4G38800	fig|3702.11.peg.10514	18342331	gjo	Molecular determinants of substrate specificity in plant 5'-methylthioadenosine nucleosidases.
+AT4G38800	fig|3702.11.peg.10514	20554051	gjo	Mechanism of substrate specificity in 5'-methylthioadenosine/S-adenosylhomocysteine nucleosidases.
+AT4G38880	fig|3702.11.peg.10523	15266056	SvetaG	Characterization of Arabidopsis glutamine phosphoribosyl pyrophosphate amidotransferase-deficient mutants.
+AT4G39120	fig|3702.11.peg.10546	20960216	SvetaG	Expression and functions of myo-inositol monophosphatase family genes in seed development of Arabidopsis.
+AT4G39120	fig|3702.11.peg.10546	20023146	SvetaG	The missing link in plant histidine biosynthesis: Arabidopsis myoinositol monophosphatase-like2 encodes a functional histidinol-phosphate phosphatase.
+AT4G39540	fig|3702.11.peg.10587	21520319	SvetaG	Structural and biochemical investigation of two Arabidopsis shikimate kinases: the heat-inducible isoform is thermostable.
+AT4G39660	fig|3702.11.peg.10599	12529529	SvetaG	Alanine aminotransferase homologs catalyze the glutamate:glyoxylate aminotransferase reaction in peroxisomes of Arabidopsis.
+AT4G39800	fig|3702.11.peg.10618	21505066	SvetaG	D-myo-inositol-3-phosphate affects phosphatidylinositol-mediated endomembrane function in Arabidopsis and is essential for auxin-regulated embryogenesis.
+AT4G39950	fig|3702.11.peg.10635	12464638	SvetaG	Trp-dependent auxin biosynthesis in Arabidopsis: involvement of cytochrome P450s CYP79B2 and CYP79B3.
+AT4G39950	fig|3702.11.peg.10635	10922360	SvetaG	Cytochrome P450 CYP79B2 from Arabidopsis catalyzes the conversion of tryptophan to indole-3-acetaldoxime, a precursor of indole glucosinolates and indole-3-acetic acid.
+AT3G01120	fig|3702.11.peg.10669	9002610	VeronikaV	Cloning and analysis of the gene for cystathionine gamma-synthase from Arabidopsis thaliana.
+AT3G01390	fig|3702.11.peg.10710	11950611	SvetaG	A simple nomenclature for a complex proton pump: VHA genes encode the vacuolar H(+)-ATPase.
+AT3G01500	fig|3702.11.peg.10723	1463847	gjo	Arabidopsis thaliana carbonic anhydrase: cDNA sequence and effect of CO2 on mRNA levels.
+AT3G01640	fig|3702.11.peg.10740	19951951	gjo	Cloning of Glucuronokinase from Arabidopsis thaliana, the last missing enzyme of the myo-inositol oxygenase pathway to nucleotide sugars.
+AT3G02020	fig|3702.11.peg.10779	11569502	OlgaZ	Identification of a monofunctional aspartate kinase gene of Arabidopsis thaliana with spatially and temporally regulated expression.
+AT5G09600	fig|3702.11.peg.1082	15604729	SvetaG	Mitochondrial cytochrome c oxidase and succinate dehydrogenase complexes contain plant specific subunits.
+AT3G02600	fig|3702.11.peg.10843	11278556	SvetaG	Lipid phosphate phosphatases in Arabidopsis. Regulation of the AtLPP1 gene in response to stress.
+AT3G02600	fig|3702.11.peg.10843	15960620	SvetaG	An important role of phosphatidic acid in ABA signaling during germination in Arabidopsis thaliana.
+AT5G09640	fig|3702.11.peg.1086	12657648	SvetaG	Biochemical characterization of sinapoylglucose:choline sinapoyltransferase, a serine carboxypeptidase-like protein that functions as an acyltransferase in plant secondary metabolism.
+AT5G09640	fig|3702.11.peg.1086	11696189	SvetaG	The sng2 mutant of Arabidopsis is defective in the gene encoding the serine carboxypeptidase-like protein sinapoylglucose:choline sinapoyltransferase.
+AT3G02780	fig|3702.11.peg.10862	9484444	SvetaG	Analysis of the isopentenyl diphosphate isomerase gene family from Arabidopsis thaliana.
+AT3G02870	fig|3702.11.peg.10871	19339506	SvetaG	VTC4 is a bifunctional enzyme that affects myoinositol and ascorbate biosynthesis in plants.
+AT3G03250	fig|3702.11.peg.10911	20435647	SvetaG	UDP-glucose pyrophosphorylase is rate limiting in vegetative and reproductive phases in Arabidopsis thaliana.
+AT3G03250	fig|3702.11.peg.10911	19366709	SvetaG	UDP-glucose pyrophosphorylase is not rate limiting, but is essential in Arabidopsis.
+AT3G04080	fig|3702.11.peg.11005	21636723	SvetaG	Extracellular nucleotides and apyrases regulate stomatal aperture in Arabidopsis.
+AT3G04080	fig|3702.11.peg.11005	17534719	SvetaG	Developmental defects and seedling lethality in apyrase AtAPY1 and AtAPY2 double knockout mutants.
+AT3G05820	fig|3702.11.peg.11206	18034262	SvetaG	New insights on sucrose metabolism: evidence for an active A/N-Inv in chloroplasts uncovers a novel component of the intracellular carbon trafficking.
+AT3G06060	fig|3702.11.peg.11236	21421810	SvetaG	Sphingolipids in the root play an important role in regulating the leaf ionome in Arabidopsis thaliana.
+AT3G06350	fig|3702.11.peg.11267	16784230	VeronikaV	Structure of Arabidopsis dehydroquinate dehydratase-shikimate dehydrogenase and implications for metabolic channeling in the shikimate pathway.
+AT3G06580	fig|3702.11.peg.11294	10344205	gjo	The arabinose kinase, ARA1, gene of Arabidopsis is a novel member of the galactose kinase gene family.
+AT3G07160	fig|3702.11.peg.11359	18315544	SvetaG	Dual function of Arabidopsis glucan synthase-like genes GSL8 and GSL10 in male gametophyte development and plant growth.
+AT3G07630	fig|3702.11.peg.11411	21388819	SvetaG	Complementation of the pha2 yeast mutant suggests functional differences for arogenate dehydratases from Arabidopsis thaliana.
+AT5G10170	fig|3702.11.peg.1146	21505066	SvetaG	D-myo-inositol-3-phosphate affects phosphatidylinositol-mediated endomembrane function in Arabidopsis and is essential for auxin-regulated embryogenesis.
+AT3G08560	fig|3702.11.peg.11460	11950611	SvetaG	A simple nomenclature for a complex proton pump: VHA genes encode the vacuolar H(+)-ATPase.
+AT3G08860	fig|3702.11.peg.11491	12529529	SvetaG	Alanine aminotransferase homologs catalyze the glutamate:glyoxylate aminotransferase reaction in peroxisomes of Arabidopsis.
+AT3G09820	fig|3702.11.peg.11591	11115893	SvetaG	Adenosine kinase of Arabidopsis. Kinetic properties and gene expression.
+AT3G10570	fig|3702.11.peg.11676	19959665	SvetaG	Nanoridges that characterize the surface morphology of flowers require the synthesis of cutin polyester.
+AT3G10700	fig|3702.11.peg.11692	19509290	gjo	Identification of galacturonic acid-1-phosphate kinase, a new member of the GHMP kinase superfamily in plants, and comparison with galactose-1-phosphate kinase.
+AT3G11430	fig|3702.11.peg.11774	17259262	SvetaG	The acyltransferase GPAT5 is required for the synthesis of suberin in seed coat and root of Arabidopsis.
+AT3G11670	fig|3702.11.peg.11798	10381884	SvetaG	Arabidopsis galactolipid biosynthesis and lipid trafficking mediated by DGD1.
+AT3G11945	fig|3702.11.peg.11828	17569077	SvetaG	The pds2 mutation is a lesion in the Arabidopsis homogentisate solanesyltransferase gene involved in plastoquinone biosynthesis.
+AT3G11945	fig|3702.11.peg.11828	20400515	SvetaG	Catalytic reactions of the homogentisate prenyl transferase involved in plastoquinone-9 biosynthesis.
+AT3G11945	fig|3702.11.peg.11828	12011362	SvetaG	Isolation and characterization of homogentisate phytyltransferase genes from Synechocystis sp. PCC 6803 and Arabidopsis.
+AT3G11945	fig|3702.11.peg.11828	11706191	SvetaG	Isolation and functional analysis of homogentisate phytyltransferase from Synechocystis sp. PCC 6803 and Arabidopsis.
+AT3G11980	fig|3702.11.peg.11832	21813653	SvetaG	Male Sterile2 encodes a plastid-localized fatty acyl carrier protein reductase required for pollen exine development in Arabidopsis.
+AT3G12120	fig|3702.11.peg.11847	7907506	SvetaG	Arabidopsis FAD2 gene encodes the enzyme that is essential for polyunsaturated lipid synthesis.
+AT3G12120	fig|3702.11.peg.11847	8685264	SvetaG	Functional expression of the extraplastidial Arabidopsis thaliana oleate desaturase gene (FAD2) in Saccharomyces cerevisiae.
+AT3G14390	fig|3702.11.peg.12117	15652176	gjo	Biosynthesis of lysine in plants: evidence for a variant of the known bacterial pathways.
+AT3G14550	fig|3702.11.peg.12136	10759500	SvetaG	Five geranylgeranyl diphosphate synthases expressed in different organs are localized into three subcellular compartments in Arabidopsis.
+AT3G14940	fig|3702.11.peg.12175	12805623	OlgaV	Identification and expression analysis of a gene encoding a bacterial-type phosphoenolpyruvate carboxylase from Arabidopsis and rice.
+AT3G15820	fig|3702.11.peg.12277	22371508	SvetaG	The phosphatidylcholine diacylglycerol cholinephosphotransferase is required for efficient hydroxy fatty acid accumulation in transgenic Arabidopsis.
+AT3G15850	fig|3702.11.peg.12280	15240892	SvetaG	Switching desaturase enzyme specificity by alternate subcellular targeting.
+AT3G15850	fig|3702.11.peg.12280	15579662	SvetaG	Identification of the Arabidopsis palmitoyl-monogalactosyldiacylglycerol delta7-desaturase gene FAD5, and effects of plastidial retargeting of Arabidopsis desaturases on the fad5 mutant phenotype.
+ATCG00020	fig|3702.11.peg.123	8590463	SvetaG	Identification and characterization of the Arabidopsis thaliana chloroplast DNA region containing the genes psbA, trnH and rps19'.
+AT3G17240	fig|3702.11.peg.12430	11598235	SvetaG	Characterization of two cDNAs encoding mitochondrial lipoamide dehydrogenase from Arabidopsis.
+AT3G17240	fig|3702.11.peg.12430	14764908	SvetaG	Lipoic acid-dependent oxidative catabolism of alpha-keto acids in mitochondria provides evidence for branched-chain amino acid catabolism in Arabidopsis.
+AT3G17820	fig|3702.11.peg.12495	14757761	SvetaG	Kinetic properties and ammonium-dependent regulation of cytosolic isoenzymes of glutamine synthetase in Arabidopsis.
+AT3G17820	fig|3702.11.peg.12495	16338958	SvetaG	Gln49 and Ser174 residues play critical roles in determining the catalytic efficiencies of plant glutamine synthetase.
+AT3G17820	fig|3702.11.peg.12495	10482686	SvetaG	Carbon and amino acids reciprocally modulate the expression of glutamine synthetase in Arabidopsis.
+AT3G18000	fig|3702.11.peg.12512	15295103	SvetaG	The xipotl mutant of Arabidopsis reveals a critical role for phospholipid metabolism in root system development and epidermal cell integrity.
+AT3G18850	fig|3702.11.peg.12610	15772283	SvetaG	Ubiquitous and endoplasmic reticulum-located lysophosphatidyl acyltransferase, LPAT2, is essential for female but not male gametophyte development in Arabidopsis.
+ATCG00080	fig|3702.11.peg.127	1694111	gjo	Sequence and transcriptional analysis of the barley ctDNA region upstream of psbD-psbC encoding trnK(UUU), rps16, trnQ(UUG), psbK, psbI, and trnS(GCU).
+AT3G19710	fig|3702.11.peg.12705	17056707	SvetaG	Branched-chain aminotransferase4 is part of the chain elongation pathway in the biosynthesis of methionine-derived glucosinolates in Arabidopsis.
+AT3G20330	fig|3702.11.peg.12768	8041358	RossO	Heterospecific cloning of Arabidopsis thaliana cDNAs by direct complementation of pyrimidine auxotrophic mutants of Saccharomyces cerevisiae. I. Cloning and sequence analysis of two cDNAs catalysing the second, fifth and sixth steps of the de novo pyrimidine biosynthesis pathway.
+AT3G20440	fig|3702.11.peg.12781	17028209	SvetaG	Mutants of Arabidopsis lacking starch branching enzyme II substitute plastidial starch synthesis by cytoplasmic maltose accumulation.
+AT3G20440	fig|3702.11.peg.12781	20377688	SvetaG	The Arabidopsis BE1 gene, encoding a putative glycoside hydrolase localized in plastids, plays crucial roles during embryogenesis and carbohydrate metabolism.
+AT3G21110	fig|3702.11.peg.12852	8938402	RossO	De novo purine synthesis in Arabidopsis thaliana. II. The PUR7 gene encoding 5'-phosphoribosyl-4-(N-succinocarboxamide)-5-aminoimidazole synthetase is expressed in rapidly dividing tissues.
+AT3G21240	fig|3702.11.peg.12867	10417722	gjo	Three 4-coumarate:coenzyme A ligases in Arabidopsis thaliana represent two evolutionarily divergent classes in angiosperms.
+AT3G21560	fig|3702.11.peg.12904	17217457	SvetaG	The hyper-fluorescent trichome phenotype of the brt1 mutant of Arabidopsis is the result of a defect in a sinapic acid: UDPG glucosyltransferase.
+AT3G22370	fig|3702.11.peg.12993	16859634	SvetaG	Alternative oxidases in Arabidopsis: a comparative analysis of differential expression in the gene family provides new insights into function of non-phosphorylating bypasses.
+AT3G22425	fig|3702.11.peg.13000	8066131	RossO	Isolation and characterization of cDNAs encoding imidazoleglycerolphosphate dehydratase from Arabidopsis thaliana.
+AT5G11670	fig|3702.11.peg.1303	16113210	SvetaG	A comprehensive analysis of the NADP-malic enzyme gene family of Arabidopsis.
+AT3G22960	fig|3702.11.peg.13057	17557808	SvetaG	A heteromeric plastidic pyruvate kinase complex involved in seed oil biosynthesis in Arabidopsis.
+AT3G23580	fig|3702.11.peg.13128	16399800	SvetaG	Arabidopsis ribonucleotide reductases are critical for cell cycle progression, DNA damage repair, and plant development.
+AT3G23810	fig|3702.11.peg.13158	15659630	VeronikaV	The Arabidopsis HOMOLOGY-DEPENDENT GENE SILENCING1 gene codes for an S-adenosyl-L-homocysteine hydrolase required for DNA methylation-dependent gene silencing.
+AT3G24503	fig|3702.11.peg.13232	11999848	OlgaZ	Characterization of the aldehyde dehydrogenase gene families of Zea mays and Arabidopsis.
+AT3G25110	fig|3702.11.peg.13296	22002626	SvetaG	Reduced expression of FatA thioesterases in Arabidopsis affects the oil content and fatty acid composition of the seeds.
+AT3G25110	fig|3702.11.peg.13296	12061798	SvetaG	Characterization of substrate specificity of plant FatA and FatB acyl-ACP thioesterases.
+AT3G25140	fig|3702.11.peg.13299	16059719	SvetaG	QUASIMODO1 is expressed in vascular tissue of Arabidopsis thaliana inflorescence stems, and affects homogalacturonan and xylan biosynthesis.
+AT3G25140	fig|3702.11.peg.13299	12368506	SvetaG	QUASIMODO1 encodes a putative membrane-bound glycosyltransferase required for normal pectin synthesis and cell adhesion in Arabidopsis.
+AT3G25180	fig|3702.11.peg.13304	21088219	SvetaG	Herbivore-induced and floral homoterpene volatiles are biosynthesized by a single P450 enzyme (CYP82G1) in Arabidopsis.
+AT3G26650	fig|3702.11.peg.13466	8932388	SvetaG	Sequence analysis of an 81 kb contig from Arabidopsis thaliana chromosome III.
+AT3G26650	fig|3702.11.peg.13466	1916285	SvetaG	Cloning and chromosomal mapping of nuclear genes encoding chloroplast and cytosolic glyceraldehyde-3-phosphate-dehydrogenase from Arabidopsis thaliana.
+AT3G27060	fig|3702.11.peg.13516	16399800	SvetaG	Arabidopsis ribonucleotide reductases are critical for cell cycle progression, DNA damage repair, and plant development.
+AT3G27380	fig|3702.11.peg.13551	15563621	OlgaV	Nuclear SDH2-1 and SDH2-2 genes, encoding the iron-sulfur subunit of mitochondrial complex II in Arabidopsis, have distinct cell-specific expression patterns and promoter activities.
+AT3G27380	fig|3702.11.peg.13551	11442063	OlgaV	Three different genes encode the iron-sulfur subunit of succinate dehydrogenase in Arabidopsis thaliana.
+AT3G27620	fig|3702.11.peg.13579	16859634	SvetaG	Alternative oxidases in Arabidopsis: a comparative analysis of differential expression in the gene family provides new insights into function of non-phosphorylating bypasses.
+ATCG00280	fig|3702.11.peg.139	11113141	SvetaG	Mass spectrometric resolution of reversible protein phosphorylation in photosynthetic membranes of Arabidopsis thaliana.
+AT3G42050	fig|3702.11.peg.13908	11950611	SvetaG	A simple nomenclature for a complex proton pump: VHA genes encode the vacuolar H(+)-ATPase.
+AT5G13050	fig|3702.11.peg.1408	12207015	SvetaG	Cloning and characterization of mitochondrial 5-formyltetrahydrofolate cycloligase from higher plants.
+AT3G44540	fig|3702.11.peg.14080	20571114	SvetaG	Three Arabidopsis fatty acyl-coenzyme A reductases, FAR1, FAR4, and FAR5, generate primary fatty alcohols associated with suberin deposition.
+AT3G44550	fig|3702.11.peg.14081	20571114	SvetaG	Three Arabidopsis fatty acyl-coenzyme A reductases, FAR1, FAR4, and FAR5, generate primary fatty alcohols associated with suberin deposition.
+AT3G44560	fig|3702.11.peg.14082	19062129	SvetaG	Functional expression of five Arabidopsis fatty acyl-CoA reductase genes in Escherichia coli.
+AT3G44720	fig|3702.11.peg.14100	21388819	SvetaG	Complementation of the pha2 yeast mutant suggests functional differences for arogenate dehydratases from Arabidopsis thaliana.
+AT3G46940	fig|3702.11.peg.14339	21541310	SvetaG	Homologous recombination is stimulated by a decrease in dUTPase in Arabidopsis.
+AT3G47340	fig|3702.11.peg.14372	7846154	gjo	Metabolic regulation of the gene encoding glutamine-dependent asparagine synthetase in Arabidopsis thaliana.
+AT3G47390	fig|3702.11.peg.14378	23150645	SvetaG	Identification and characterization of the missing pyrimidine reductase in the plant riboflavin biosynthesis pathway.
+AT3G47390	fig|3702.11.peg.14378	20580123	SvetaG	The photosensitive phs1 mutant is impaired in the riboflavin biogenesis pathway.
+AT3G47520	fig|3702.11.peg.14391	21669645	SvetaG	A soybean plastid-targeted NADH-malate dehydrogenase: cloning and expression analyses.
+AT3G47833	fig|3702.11.peg.14425	15604729	SvetaG	Mitochondrial cytochrome c oxidase and succinate dehydrogenase complexes contain plant specific subunits.
+AT3G48000	fig|3702.11.peg.14441	19320993	SvetaG	The roles of aldehyde dehydrogenases (ALDHs) in the PDH bypass of Arabidopsis.
+AT3G48000	fig|3702.11.peg.14441	11999848	OlgaZ	Characterization of the aldehyde dehydrogenase gene families of Zea mays and Arabidopsis.
+AT3G48000	fig|3702.11.peg.14441	10831839	OlgaZ	Molecular and cellular characterizations of a cDNA clone encoding a novel isozyme of aldehyde dehydrogenase from rice.
+AT3G48560	fig|3702.11.peg.14507	2336405	RossO	Nucleotide sequence of a mutant acetolactate synthase gene from an imidazolinone-resistant Arabidopsis thaliana var. Columbia.
+AT3G48780	fig|3702.11.peg.14529	18218968	SvetaG	Serine palmitoyltransferase, a key enzyme for de novo synthesis of sphingolipids, is essential for male gametophyte development in Arabidopsis.
+AT3G49110	fig|3702.11.peg.14562	2016063	OlgaV	Nucleotide sequences of two genomic DNAs encoding peroxidase of Arabidopsis thaliana.
+AT3G49680	fig|3702.11.peg.14625	18162591	SvetaG	Arabidopsis branched-chain aminotransferase 3 functions in both amino acid and glucosinolate biosynthesis.
+AT5G13630	fig|3702.11.peg.1466	17051210	SvetaG	The Mg-chelatase H subunit is an abscisic acid receptor.
+AT5G13630	fig|3702.11.peg.1466	23011401	SvetaG	Roles of the different components of magnesium chelatase in abscisic acid signal transduction.
+AT5G13640	fig|3702.11.peg.1467	10829075	SvetaG	Phospholipid:diacylglycerol acyltransferase: an enzyme that catalyzes the acyl-CoA-independent formation of triacylglycerol in yeast and plants.
+AT5G13640	fig|3702.11.peg.1467	15247387	SvetaG	Cloning and functional characterization of a phospholipid:diacylglycerol acyltransferase from Arabidopsis.
+AT3G50740	fig|3702.11.peg.14741	15907484	SvetaG	Identification and characterisation of Arabidopsis glycosyltransferases capable of glucosylating coniferyl aldehyde and sinapyl aldehyde.
+AT3G51520	fig|3702.11.peg.14826	20101470	SvetaG	DGAT1, DGAT2 and PDAT expression in seeds and other tissues of epoxy and hydroxy fatty acid accumulating plants.
+AT3G51820	fig|3702.11.peg.14860	8552034	VeronikaV	A chlorophyll synthetase gene from Arabidopsis thaliana.
+AT3G52180	fig|3702.11.peg.14900	20018599	SvetaG	The Laforin-like dual-specificity phosphatase SEX4 from Arabidopsis hydrolyzes both C6- and C3-phosphate esters introduced by starch-related dikinases and thereby affects phase transition of alpha-glucans.
+AT3G52180	fig|3702.11.peg.14900	19141707	SvetaG	STARCH-EXCESS4 is a laforin-like Phosphoglucan phosphatase required for starch degradation in Arabidopsis thaliana.
+AT3G53260	fig|3702.11.peg.15015	15276452	SvetaG	The Arabidopsis phenylalanine ammonia lyase gene family: kinetic characterization of the four PAL isoforms.
+AT3G54020	fig|3702.11.peg.15096	20309609	SvetaG	Functional analyses of differentially expressed isoforms of the Arabidopsis inositol phosphorylceramide synthase.
+AT3G54050	fig|3702.11.peg.15099	1651131	SvetaG	Nucleotide sequence of a cDNA clone encoding chloroplast fructose-1,6-bisphosphatase from Arabidopsis thaliana.
+AT5G14060	fig|3702.11.peg.1512	9207844	OlgaZ	Cloning and expression of an Arabidopsis thaliana cDNA encoding a monofunctional aspartate kinase homologous to the lysine-sensitive enzyme of Escherichia coli.
+AT3G54470	fig|3702.11.peg.15141	8041358	RossO	Heterospecific cloning of Arabidopsis thaliana cDNAs by direct complementation of pyrimidine auxotrophic mutants of Saccharomyces cerevisiae. I. Cloning and sequence analysis of two cDNAs catalysing the second, fifth and sixth steps of the de novo pyrimidine biosynthesis pathway.
+AT3G54640	fig|3702.11.peg.15158	9003322	SvetaG	Characterization of tryptophan synthase alpha subunit mutants of Arabidopsis thaliana.
+AT3G54640	fig|3702.11.peg.15158	7476868	SvetaG	Arabidopsis thaliana tryptophan synthase alpha: gene cloning, expression, and subunit interaction.
+ATCG00500	fig|3702.11.peg.152	10759501	SvetaG	Coordinate regulation of the nuclear and plastidic genes coding for the subunits of the heteromeric acetyl-coenzyme A carboxylase.
+ATCG00500	fig|3702.11.peg.152	12766230	SvetaG	Proteomics of the chloroplast envelope membranes from Arabidopsis thaliana.
+AT3G55010	fig|3702.11.peg.15200	8108507	OlgaV	Isolating the Arabidopsis thaliana genes for de novo purine synthesis by suppression of Escherichia coli mutants. I. 5'-Phosphoribosyl-5-aminoimidazole synthetase.
+AT3G55030	fig|3702.11.peg.15202	12068104	SvetaG	The pgp1 mutant locus of Arabidopsis encodes a phosphatidylglycerolphosphate synthase with impaired activity.
+AT3G55030	fig|3702.11.peg.15202	11741606	SvetaG	Phosphatidylglycerophosphate synthases from Arabidopsis thaliana.
+AT3G55360	fig|3702.11.peg.15236	14673020	SvetaG	Functional characterization of the Arabidopsis thaliana orthologue of Tsc13p, the enoyl reductase of the yeast microsomal fatty acid elongating system.
+AT3G55360	fig|3702.11.peg.15236	15829606	SvetaG	Disruptions of the Arabidopsis Enoyl-CoA reductase gene reveal an essential role for very-long-chain fatty acid synthesis in cell expansion during plant morphogenesis.
+AT5G14200	fig|3702.11.peg.1526	19493961	SvetaG	Omics-based approaches to methionine side chain elongation in Arabidopsis: characterization of the genes encoding methylthioalkylmalate isomerase and methylthioalkylmalate dehydrogenase.
+AT5G14200	fig|3702.11.peg.1526	19674406	SvetaG	A redox-active isopropylmalate dehydrogenase functions in the biosynthesis of glucosinolates and leucine in Arabidopsis.
+AT5G14200	fig|3702.11.peg.1526	15849421	SvetaG	Cloning of cDNAs encoding isopropylmalate dehydrogenase from Arabidopsis thaliana and accumulation patterns of their transcripts.
+AT3G55610	fig|3702.11.peg.15265	9351242	SvetaG	Differential expression of two P5CS genes controlling proline accumulation during salt-stress requires ABA and is regulated by ABA1, ABI1 and AXR2 in Arabidopsis.
+AT3G55800	fig|3702.11.peg.15288	22402261	SvetaG	Carbonylation and loss-of-function analyses of SBPase reveal its metabolic interface role in oxidative stress, carbon assimilation, and multiple aspects of growth and development in Arabidopsis.
+AT3G55800	fig|3702.11.peg.15288	7811976	SvetaG	Molecular cloning of the Arabidopsis thaliana sedoheptulose-1,7-biphosphatase gene and expression studies in wheat and Arabidopsis thaliana.
+AT3G56700	fig|3702.11.peg.15377	19062129	SvetaG	Functional expression of five Arabidopsis fatty acyl-CoA reductase genes in Escherichia coli.
+AT3G56700	fig|3702.11.peg.15377	22189440	SvetaG	Upstream sequence of fatty acyl-CoA reductase (FAR6) of Arabidopsis thaliana drives wound-inducible and stem-specific expression.
+AT3G56940	fig|3702.11.peg.15402	10811605	VeronikaV	The Crd1 gene encodes a putative di-iron enzyme required for photosystem I accumulation in copper deficiency and hypoxia in Chlamydomonas reinhardtii.
+AT3G56940	fig|3702.11.peg.15402	18682427	SvetaG	Role of Arabidopsis CHL27 protein for photosynthesis, chloroplast development and gene expression profiling.
+AT3G56940	fig|3702.11.peg.15402	14673103	SvetaG	Arabidopsis CHL27, located in both envelope and thylakoid membranes, is required for the synthesis of protochlorophyllide.
+AT3G57050	fig|3702.11.peg.15413	11402193	VeronikaV	The three-dimensional structure of cystathionine beta-lyase from Arabidopsis and its substrate specificity.
+AT3G57550	fig|3702.11.peg.15465	10632732	SvetaG	Cloning of the guanylate kinase homologues AGK-1 and AGK-2 from Arabidopsis thaliana and characterization of AGK-1.
+AT3G57610	fig|3702.11.peg.15471	8790347	RossO	The mode of action and the structure of a herbicide in complex with its target: binding of activated hydantocidin to the feedback regulation site of adenylosuccinate synthetase.
+AT3G57650	fig|3702.11.peg.15475	15772283	SvetaG	Ubiquitous and endoplasmic reticulum-located lysophosphatidyl acyltransferase, LPAT2, is essential for female but not male gametophyte development in Arabidopsis.
+AT3G58610	fig|3702.11.peg.15572	8448371	RossO	Nucleotide sequence and characterization of a cDNA encoding the acetohydroxy acid isomeroreductase from Arabidopsis thaliana.
+AT3G58610	fig|3702.11.peg.15572	8379936	RossO	Branched-chain-amino-acid biosynthesis in plants: molecular cloning and characterization of the gene encoding acetohydroxy acid isomeroreductase (ketol-acid reductoisomerase) from Arabidopsis thaliana (thale cress).
+AT3G58730	fig|3702.11.peg.15585	11950611	SvetaG	A simple nomenclature for a complex proton pump: VHA genes encode the vacuolar H(+)-ATPase.
+AT3G58740	fig|3702.11.peg.15586	15923350	SvetaG	Arabidopsis peroxisomal citrate synthase is required for fatty acid respiration and seed germination.
+AT3G58750	fig|3702.11.peg.15587	15923350	SvetaG	Arabidopsis peroxisomal citrate synthase is required for fatty acid respiration and seed germination.
+AT3G58990	fig|3702.11.peg.15611	19597944	SvetaG	Arabidopsis thaliana encodes a bacterial-type heterodimeric isopropylmalate isomerase involved in both Leu biosynthesis and the Met chain elongation pathway of glucosinolate formation.
+AT5G14590	fig|3702.11.peg.1566	22653649	SvetaG	Molecular cloning, sequence characterization of a  novel pepper gene NADP-ICDH and its effect on cytoplasmic male sterility.
+AT3G59970	fig|3702.11.peg.15709	10593891	SvetaG	Isolation, characterization, and functional expression of cDNAs encoding NADH-dependent methylenetetrahydrofolate reductase from higher plants.
+AT3G61130	fig|3702.11.peg.15831	19825675	SvetaG	Arabidopsis thaliana T-DNA mutants implicate GAUT genes in the biosynthesis of pectin and xylan in cell walls and seed testa.
+AT3G61130	fig|3702.11.peg.15831	16540543	SvetaG	Functional identification of an Arabidopsis pectin biosynthetic homogalacturonan galacturonosyltransferase.
+AT3G61440	fig|3702.11.peg.15867	20935247	SvetaG	Mitochondrial beta-cyanoalanine synthase is essential for root hair formation in Arabidopsis thaliana.
+AT3G61440	fig|3702.11.peg.15867	10889265	SvetaG	beta-Cyanoalanine synthase is a mitochondrial cysteine synthase-like protein in spinach and Arabidopsis.
+AT5G14800	fig|3702.11.peg.1587	8022935	RossO	Osmoregulation of a pyrroline-5-carboxylate reductase gene in Arabidopsis thaliana.
+AT3G61580	fig|3702.11.peg.15882	22023480	SvetaG	Sphingolipid Δ8 unsaturation is important for glucosylceramide biosynthesis and low-temperature performance in Arabidopsis.
+AT3G62410	fig|3702.11.peg.15976	15533878	SvetaG	Co-ordinated gene expression of photosynthetic glyceraldehyde-3-phosphate dehydrogenase, phosphoribulokinase, and CP12 in Arabidopsis thaliana.
+AT3G63250	fig|3702.11.peg.16065	10747987	VeronikaV	Characterization and functional expression of cDNAs encoding methionine-sensitive and -insensitive homocysteine S-methyltransferases from Arabidopsis.
+AT3G63410	fig|3702.11.peg.16080	14508009	SvetaG	Highly divergent methyltransferases catalyze a conserved reaction in tocopherol and plastoquinone synthesis in cyanobacteria and photosynthetic eukaryotes.
+AT2G01180	fig|3702.11.peg.16110	11278556	SvetaG	Lipid phosphate phosphatases in Arabidopsis. Regulation of the AtLPP1 gene in response to stress.
+AT2G02500	fig|3702.11.peg.16244	10841550	SvetaG	Biosynthesis of terpenoids: 4-diphosphocytidyl-2C-methyl-D-erythritol synthase of Arabidopsis thaliana.
+AT2G03220	fig|3702.11.peg.16311	11743104	SvetaG	Characterization of a family of Arabidopsis genes related to xyloglucan fucosyltransferase1.
+AT2G03220	fig|3702.11.peg.16311	11854459	SvetaG	The mur2 mutant of Arabidopsis thaliana lacks fucosylated xyloglucan because of a lesion in fucosyltransferase AtFUT1.
+AT2G04400	fig|3702.11.peg.16427	7610197	SvetaG	Isolation of cDNAs encoding the tryptophan pathway enzyme indole-3-glycerol phosphate synthase from Arabidopsis thaliana.
+AT2G04450	fig|3702.11.peg.16433	15878881	SvetaG	Comprehensive analysis of cytosolic Nudix hydrolases in Arabidopsis thaliana.
+AT2G04560	fig|3702.11.peg.16442	21709257	SvetaG	Pathway for lipid A biosynthesis in Arabidopsis thaliana resembling that of Escherichia coli.
+AT2G05990	fig|3702.11.peg.16540	18467464	SvetaG	A pathogenic fungi diphenyl ether phytotoxin targets plant enoyl (acyl carrier protein) reductase.
+AT5G15530	fig|3702.11.peg.1660	11299381	SvetaG	Brassicaceae express multiple isoforms of biotin carboxyl carrier protein in a tissue-specific manner.
+AT2G11810	fig|3702.11.peg.16710	11553816	SvetaG	Two types of MGDG synthase genes, found widely in both 16:3 and 18:3 plants, differentially mediate galactolipid syntheses in photosynthetic and nonphotosynthetic tissues in Arabidopsis thaliana.
+AT2G13360	fig|3702.11.peg.16747	11309139	OlgaV	Peroxisomal alanine : glyoxylate aminotransferase (AGT1) is a photorespiratory enzyme with multiple substrates in Arabidopsis thaliana.
+AT2G13360	fig|3702.11.peg.16747	23098902	SvetaG	Characterization of Arabidopsis serine:glyoxylate aminotransferase, AGT1, as an asparagine aminotransferase.
+AT2G14750	fig|3702.11.peg.16833	8066145	VeronikaV	A cDNA clone for 5'-adenylylphosphosulfate kinase from Arabidopsis thaliana.
+AT2G16370	fig|3702.11.peg.16955	8374616	RossO	The origin of the bifunctional dihydrofolate reductase-thymidylate synthase isogenes of Arabidopsis thaliana.
+AT2G16570	fig|3702.11.peg.16973	15266056	SvetaG	Characterization of Arabidopsis glutamine phosphoribosyl pyrophosphate amidotransferase-deficient mutants.
+AT2G17130	fig|3702.11.peg.17034	16527867	SvetaG	Expression analysis of Arabidopsis thaliana NAD-dependent isocitrate dehydrogenase genes shows the presence of a functional subunit that is mainly expressed in the pollen and absent from vegetative organs.
+AT2G17130	fig|3702.11.peg.17034	9526501	OlgaV	NAD(+)-dependent isocitrate dehydrogenase from Arabidopsis thaliana. Characterization of two closely related subunits.
+AT2G17370	fig|3702.11.peg.17059	8302869	SvetaG	Arabidopsis thaliana contains two differentially expressed 3-hydroxy-3-methylglutaryl-CoA reductase genes, which encode microsomal forms of the enzyme.
+AT2G18230	fig|3702.11.peg.17153	1654155	OlgaV	Cloning and characterization of an inorganic pyrophosphatase gene from Arabidopsis thaliana.
+AT2G18700	fig|3702.11.peg.17199	11520870	OlgaZ	Trehalose metabolism in Arabidopsis: occurrence of trehalose and molecular cloning and characterization of trehalose-6-phosphate synthase homologues.
+ATCG00710	fig|3702.11.peg.172	11113141	SvetaG	Mass spectrometric resolution of reversible protein phosphorylation in photosynthetic membranes of Arabidopsis thaliana.
+ATCG00710	fig|3702.11.peg.172	10574454	SvetaG	Complete structure of the chloroplast genome of Arabidopsis thaliana.
+AT2G18950	fig|3702.11.peg.17227	11706191	VronikaV	Isolation and functional analysis of homogentisate phytyltransferase from Synechocystis sp. PCC 6803 and Arabidopsis.
+AT2G18950	fig|3702.11.peg.17227	12011362	SvetaG	Isolation and characterization of homogentisate phytyltransferase genes from Synechocystis sp. PCC 6803 and Arabidopsis.
+AT2G19450	fig|3702.11.peg.17276	12825687	SvetaG	Expression pattern of diacylglycerol acyltransferase-1, an enzyme involved in triacylglycerol biosynthesis, in Arabidopsis thaliana.
+AT2G19450	fig|3702.11.peg.17276	10386579	SvetaG	Cloning of a cDNA encoding diacylglycerol acyltransferase from Arabidopsis thaliana and its functional expression.
+AT2G19860	fig|3702.11.peg.17317	16920781	SvetaG	Mitochondria-associated hexokinases play a role in the control of programmed cell death in Nicotiana benthamiana.
+AT2G19900	fig|3702.11.peg.17322	16113210	SvetaG	A comprehensive analysis of the NADP-malic enzyme gene family of Arabidopsis.
+AT2G20370	fig|3702.11.peg.17368	15863516	SvetaG	KATAMARI1/MURUS3 Is a novel golgi membrane protein that is required for endomembrane organization in Arabidopsis.
+AT2G20370	fig|3702.11.peg.17368	12837954	SvetaG	The MUR3 gene of Arabidopsis encodes a xyloglucan galactosyltransferase that is evolutionarily related to animal exostosins.
+AT2G20610	fig|3702.11.peg.17400	14871316	SvetaG	Arabidopsis mutants in the C-S lyase of glucosinolate biosynthesis establish a critical role for indole-3-acetaldoxime in auxin homeostasis.
+AT2G20690	fig|3702.11.peg.17413	15927885	SvetaG	Evolution of vitamin B2 biosynthesis: riboflavin synthase of Arabidopsis thaliana and its inhibition by riboflavin.
+AT5G16390	fig|3702.11.peg.1752	9046589	SvetaG	Structure of the CAC1 gene and in situ characterization of its expression. The Arabidopsis thaliana gene coding for the biotin-containing subunit of the plastidic acetyl-coenzyme A carboxylase.
+AT5G16390	fig|3702.11.peg.1752	11299381	SvetaG	Brassicaceae express multiple isoforms of biotin carboxyl carrier protein in a tissue-specific manner.
+AT5G16390	fig|3702.11.peg.1752	7480350	SvetaG	Molecular cloning and characterization of the cDNA coding for the biotin-containing subunit of the chloroplastic acetyl-coenzyme A carboxylase.
+AT2G21790	fig|3702.11.peg.17530	10542051	VeronikaV	An active ribonucleotide reductase from Arabidopsis thaliana cloning, expression and characterization of the large subunit.
+AT2G21940	fig|3702.11.peg.17545	21520319	SvetaG	Structural and biochemical investigation of two Arabidopsis shikimate kinases: the heat-inducible isoform is thermostable.
+AT5G16440	fig|3702.11.peg.1757	9484444	SvetaG	Analysis of the isopentenyl diphosphate isomerase gene family from Arabidopsis thaliana.
+AT2G22230	fig|3702.11.peg.17576	19101548	SvetaG	Proof of function of a putative 3-hydroxyacyl-acyl carrier protein dehydratase from higher plants by mass spectrometry of product formation.
+AT2G22240	fig|3702.11.peg.17577	21505066	SvetaG	D-myo-inositol-3-phosphate affects phosphatidylinositol-mediated endomembrane function in Arabidopsis and is essential for auxin-regulated embryogenesis.
+AT2G22330	fig|3702.11.peg.17586	12464638	SvetaG	Trp-dependent auxin biosynthesis in Arabidopsis: involvement of cytochrome P450s CYP79B2 and CYP79B3.
+AT2G22450	fig|3702.11.peg.17598	23203051	SvetaG	Arabidopsis RIBA proteins: two out of three isoforms have lost their bifunctional activity in riboflavin biosynthesis.
+AT2G22480	fig|3702.11.peg.17602	17485088	gjo	Characterisation of the ATP-dependent phosphofructokinase gene family from Arabidopsis thaliana.
+AT2G22980	fig|3702.11.peg.17655	17600138	SvetaG	Related Arabidopsis serine carboxypeptidase-like sinapoylglucose acyltransferases display distinct but overlapping substrate specificities.
+AT2G22990	fig|3702.11.peg.17656	10948250	SvetaG	Cloning of the SNG1 gene of Arabidopsis reveals a role for a serine carboxypeptidase-like protein as an acyltransferase in secondary metabolism.
+AT2G22990	fig|3702.11.peg.17656	17600138	SvetaG	Related Arabidopsis serine carboxypeptidase-like sinapoylglucose acyltransferases display distinct but overlapping substrate specificities.
+AT2G23010	fig|3702.11.peg.17658	17600138	SvetaG	Related Arabidopsis serine carboxypeptidase-like sinapoylglucose acyltransferases display distinct but overlapping substrate specificities.
+AT5G16570	fig|3702.11.peg.1773	14757761	SvetaG	Kinetic properties and ammonium-dependent regulation of cytosolic isoenzymes of glutamine synthetase in Arabidopsis.
+AT5G16570	fig|3702.11.peg.1773	16338958	SvetaG	Gln49 and Ser174 residues play critical roles in determining the catalytic efficiencies of plant glutamine synthetase.
+AT2G23800	fig|3702.11.peg.17737	9150607	OlgaV	Cloning and functional expression of a novel geranylgeranyl pyrophosphate synthase gene from Arabidopsis thaliana in Escherichia coli.
+AT2G24270	fig|3702.11.peg.17783	16927206	SvetaG	Characterization of an Arabidopsis thaliana mutant lacking a cytosolic non-phosphorylating glyceraldehyde-3-phosphate dehydrogenase.
+AT2G25450	fig|3702.11.peg.17910	20303821	SvetaG	Biosynthesis of glucosinolates--gene discovery and beyond.
+AT2G27690	fig|3702.11.peg.18148	17868380	SvetaG	Characterization of a methyl jasmonate and wounding-responsive cytochrome P450 of Arabidopsis thaliana catalyzing dicarboxylic fatty acid formation in vitro.
+AT2G27690	fig|3702.11.peg.18148	22215670	SvetaG	Cytochromes P450 CYP94C1 and CYP94B3 catalyze two successive oxidation steps of plant hormone Jasmonoyl-isoleucine for catabolic turnover.
+AT2G27820	fig|3702.11.peg.18162	21388819	SvetaG	Complementation of the pha2 yeast mutant suggests functional differences for arogenate dehydratases from Arabidopsis thaliana.
+AT2G27860	fig|3702.11.peg.18165	12969423	SvetaG	The biosynthesis of the branched-chain sugar d-apiose in plants: functional cloning and characterization of a UDP-d-apiose/UDP-d-xylose synthase from Arabidopsis.
+AT2G29525	fig|3702.11.peg.18332	20309609	SvetaG	Functional analyses of differentially expressed isoforms of the Arabidopsis inositol phosphorylceramide synthase.
+AT2G29980	fig|3702.11.peg.18381	8029334	SvetaG	Cloning of higher plant omega-3 fatty acid desaturases.
+AT2G29980	fig|3702.11.peg.18381	8102138	SvetaG	Mutants of Arabidopsis deficient in the synthesis of alpha-linolenate. Biochemical and genetic characterization of the endoplasmic reticulum linoleoyl desaturase.
+AT2G30490	fig|3702.11.peg.18434	9085571	OlgaV	Isolation of a cDNA and a genomic clone encoding cinnamate 4-hydroxylase from Arabidopsis and its expression manner in planta.
+AT2G30570	fig|3702.11.peg.18442	21265891	SvetaG	The PsbW protein stabilizes the supramolecular organization of photosystem II in higher plants.
+AT2G30570	fig|3702.11.peg.18442	10950961	SvetaG	The low molecular mass PsbW protein is involved in the stabilization of the dimeric photosystem II complex in Arabidopsis thaliana.
+AT2G30870	fig|3702.11.peg.18473	8253194	OlgaV	Characterization of two cDNAs (ERD11 and ERD13) for dehydration-inducible genes that encode putative glutathione S-transferases in Arabidopsis thaliana L.
+AT2G30870	fig|3702.11.peg.18473	20303821	SvetaG	Biosynthesis of glucosinolates--gene discovery and beyond.
+AT2G30920	fig|3702.11.peg.18478	9628017	OlgaZ	Cloning and functional expression of AtCOQ3, the Arabidopsis homologue of the yeast COQ3 gene, encoding a methyltransferase from plant mitochondria involved in ubiquinone biosynthesis.
+AT5G17310	fig|3702.11.peg.1851	19366709	SvetaG	UDP-glucose pyrophosphorylase is not rate limiting, but is essential in Arabidopsis.
+AT5G17310	fig|3702.11.peg.1851	20435647	SvetaG	UDP-glucose pyrophosphorylase is rate limiting in vegetative and reproductive phases in Arabidopsis thaliana.
+AT2G31790	fig|3702.11.peg.18579	16027976	SvetaG	Transcriptional co-regulation of secondary metabolism enzymes in Arabidopsis: functional and evolutionary implications.
+AT2G32040	fig|3702.11.peg.18610	16162503	margovan	Higher plant plastids and cyanobacteria have folate carriers related to those of trypanosomatids.
+AT2G32040	fig|3702.11.peg.18610	19923217	margovan	Identification of transport-critical residues in a folate transporter from the folate-biopterin transporter (FBT) family.
+AT2G32260	fig|3702.11.peg.18632	12461134	SvetaG	Phosphatidylcholine biosynthesis at low temperature: differential expression of CTP:phosphorylcholine cytidylyltransferase isogenes in Arabidopsis thaliana.
+AT2G33150	fig|3702.11.peg.18728	10212254	OlgaZ	A novel acyl-CoA oxidase that can oxidize short-chain acyl-CoA in plant peroxisomes.
+AT2G33150	fig|3702.11.peg.18728	11356168	OlgaZ	Co-ordinate regulation of genes involved in storage lipid mobilization in Arabidopsis thaliana.
+AT2G34630	fig|3702.11.peg.18891	21950843	SvetaG	Gene network reconstruction identifies the authentic trans-prenyl diphosphate synthase that makes the solanesyl moiety of ubiquinone-9 in Arabidopsis.
+AT2G35020	fig|3702.11.peg.18931	20557289	SvetaG	Identification and characterization of a strict and a promiscuous N-acetylglucosamine-1-P uridylyltransferase in Arabidopsis.
+AT2G35390	fig|3702.11.peg.18972	10082968	RossO	Cloning and sequencing of cDNAs specifying a novel class of phosphoribosyl diphosphate synthase in Arabidopsis thaliana.
+AT2G36230	fig|3702.11.peg.19060	9747713	VeronikaV	Molecular cloning and characterization of the gene encoding N'-[(5'-phosphoribosyl)-formimino]-5-aminoimidazole-4-carboxamide ribonucleotide (BBM II) isomerase from Arabidopsis thaliana.
+AT2G36310	fig|3702.11.peg.19071	21235647	SvetaG	Arabidopsis nucleoside hydrolases involved in intracellular and extracellular degradation of purines.
+AT2G36310	fig|3702.11.peg.19071	19293370	SvetaG	Uridine-ribohydrolase is a key regulator in the uridine degradation pathway of Arabidopsis.
+AT2G36390	fig|3702.11.peg.19081	17028209	SvetaG	Mutants of Arabidopsis lacking starch branching enzyme II substitute plastidial starch synthesis by cytoplasmic maltose accumulation.
+AT2G36530	fig|3702.11.peg.19094	1841726	VeronikaV	Plant enolase: gene structure, expression, and evolution.
+AT2G36850	fig|3702.11.peg.19130	20430748	SvetaG	Dysregulation of cell-to-cell connectivity and stomatal patterning by loss-of-function mutation in Arabidopsis chorus (glucan synthase-like 8).
+AT2G36850	fig|3702.11.peg.19130	18315544	SvetaG	Dual function of Arabidopsis glucan synthase-like genes GSL8 and GSL10 in male gametophyte development and plant growth.
+AT2G37040	fig|3702.11.peg.19156	15276452	SvetaG	The Arabidopsis phenylalanine ammonia lyase gene family: kinetic characterization of the four PAL isoforms.
+AT2G37940	fig|3702.11.peg.19248	20309609	SvetaG	Functional analyses of differentially expressed isoforms of the Arabidopsis inositol phosphorylceramide synthase.
+AT2G37940	fig|3702.11.peg.19248	19001565	SvetaG	An inositolphosphorylceramide synthase is involved in regulation of plant programmed cell death associated with defense in Arabidopsis.
+AT2G38040	fig|3702.11.peg.19259	10759501	SvetaG	Coordinate regulation of the nuclear and plastidic genes coding for the subunits of the heteromeric acetyl-coenzyme A carboxylase.
+AT2G38110	fig|3702.11.peg.19266	22864585	SvetaG	A land-plant-specific glycerol-3-phosphate acyltransferase family in Arabidopsis: substrate specificity, sn-2 preference, and evolution.
+AT2G38110	fig|3702.11.peg.19266	21746699	SvetaG	Glycerol-3-phosphate acyltransferase 6 (GPAT6) is important for tapetum development in Arabidopsis and plays multiple roles in plant fertility.
+AT2G38400	fig|3702.11.peg.19298	12529529	SvetaG	Alanine aminotransferase homologs catalyze the glutamate:glyoxylate aminotransferase reaction in peroxisomes of Arabidopsis.
+AT2G38670	fig|3702.11.peg.19327	17189343	SvetaG	Defects in CTP:PHOSPHORYLETHANOLAMINE CYTIDYLYLTRANSFERASE affect embryonic and postembryonic development in Arabidopsis.
+AT2G38700	fig|3702.11.peg.19331	10344201	SvetaG	Heterologous expression in Saccharomyces cerevisiae of an Arabidopsis thaliana cDNA encoding mevalonate diphosphate decarboxylase.
+AT2G39020	fig|3702.11.peg.19362	21917546	SvetaG	Biosynthesis and defensive function of Nδ-acetylornithine, a jasmonate-induced Arabidopsis metabolite.
+AT2G39290	fig|3702.11.peg.19387	11741606	SvetaG	Phosphatidylglycerophosphate synthases from Arabidopsis thaliana.
+AT2G39770	fig|3702.11.peg.19438	11226227	SvetaG	Arabidopsis cyt1 mutants are deficient in a mannose-1-phosphate guanylyltransferase and point to a requirement of N-linked glycosylation for cellulose biosynthesis.
+AT2G39770	fig|3702.11.peg.19438	20007685	SvetaG	A mutation in GDP-mannose pyrophosphorylase causes conditional hypersensitivity to ammonium, resulting in Arabidopsis root growth inhibition, altered ammonium metabolism, and hormone homeostasis.
+AT2G39770	fig|3702.11.peg.19438	9390448	SvetaG	L-ascorbic acid metabolism in the ascorbate-deficient arabidopsis mutant vtc1.
+AT2G39800	fig|3702.11.peg.19443	9351242	SvetaG	Differential expression of two P5CS genes controlling proline accumulation during salt-stress requires ABA and is regulated by ABA1, ABI1 and AXR2 in Arabidopsis.
+AT5G18280	fig|3702.11.peg.1952	21636723	SvetaG	Extracellular nucleotides and apyrases regulate stomatal aperture in Arabidopsis.
+AT5G18280	fig|3702.11.peg.1952	17534719	SvetaG	Developmental defects and seedling lethality in apyrase AtAPY1 and AtAPY2 double knockout mutants.
+AT2G40690	fig|3702.11.peg.19545	14729910	SvetaG	The Arabidopsis thaliana dihydroxyacetone phosphate reductase gene SUPPRESSSOR OF FATTY ACID DESATURASE DEFICIENCY1 is required for glycerolipid metabolism and for the activation of systemic acquired resistance.
+AT2G40690	fig|3702.11.peg.19545	22645576	SvetaG	Biochemical and Molecular-Genetic Characterization of SFD1's Involvement in Lipid Metabolism and Defense Signaling.
+AT2G40890	fig|3702.11.peg.19569	11429408	SvetaG	CYP98A3 from Arabidopsis thaliana is a 3'-hydroxylase of phenolic esters, a missing link in the phenylpropanoid pathway.
+AT2G40890	fig|3702.11.peg.19569	16377748	SvetaG	A coumaroyl-ester-3-hydroxylase insertion mutant reveals the existence of nonredundant meta-hydroxylation pathways and essential roles for phenolic precursors in cell expansion and plant growth.
+ATCG01060	fig|3702.11.peg.196	11181728	SvetaG	Primary transcripts of ndhD of Liliaceae and Aloaceae require editing of the start and 20th codons.
+AT2G41880	fig|3702.11.peg.19680	10632732	SvetaG	Cloning of the guanylate kinase homologues AGK-1 and AGK-2 from Arabidopsis thaliana and characterization of AGK-1.
+AT2G42070	fig|3702.11.peg.19700	18815383	SvetaG	Molecular characterization of organelle-type Nudix hydrolases in Arabidopsis.
+AT2G42790	fig|3702.11.peg.19771	15923350	SvetaG	Arabidopsis peroxisomal citrate synthase is required for fatty acid respiration and seed germination.
+AT2G42910	fig|3702.11.peg.19784	10082968	RossO	Cloning and sequencing of cDNAs specifying a novel class of phosphoribosyl diphosphate synthase in Arabidopsis thaliana.
+AT2G43090	fig|3702.11.peg.19804	19597944	SvetaG	Arabidopsis thaliana encodes a bacterial-type heterodimeric isopropylmalate isomerase involved in both Leu biosynthesis and the Met chain elongation pathway of glucosinolate formation.
+AT2G43100	fig|3702.11.peg.19805	19597944	SvetaG	Arabidopsis thaliana encodes a bacterial-type heterodimeric isopropylmalate isomerase involved in both Leu biosynthesis and the Met chain elongation pathway of glucosinolate formation.
+AT2G44050	fig|3702.11.peg.19909	10419541	VeronikaV	Plant riboflavin biosynthesis. Cloning, chloroplast localization, expression, purification, and partial characterization of spinach lumazine synthase.
+AT2G44160	fig|3702.11.peg.19921	10593891	OlgaV	Isolation, characterization, and functional expression of cDNAs encoding NADH-dependent methylenetetrahydrofolate reductase from higher plants.
+AT2G44350	fig|3702.11.peg.19942	2491664	SvetaG	Isolation of a cDNA encoding mitochondrial citrate synthase from Arabidopsis thaliana.
+AT2G44490	fig|3702.11.peg.19956	19095898	SvetaG	Glucosinolate metabolites required for an Arabidopsis innate immune response.
+AT2G44490	fig|3702.11.peg.19956	19095900	SvetaG	A glucosinolate metabolism pathway in living plant cells mediates broad-spectrum antifungal defense.
+AT5G18660	fig|3702.11.peg.1996	23154534	SvetaG	One divinyl reductase reduces the 8-vinyl groups in various intermediates of chlorophyll biosynthesis in a given higher plant species, but the isozyme differs between species.
+AT5G18660	fig|3702.11.peg.1996	17991629	SvetaG	The major route for chlorophyll synthesis includes [3,8-divinyl]-chlorophyllide a reduction in Arabidopsis thaliana.
+AT2G45300	fig|3702.11.peg.20040	3481024	VeronikaV	Cloning of an Arabidopsis thaliana gene encoding 5-enolpyruvylshikimate-3-phosphate synthase: sequence analysis and manipulation to obtain glyphosate-tolerant plants.
+AT2G45970	fig|3702.11.peg.20109	11493698	SvetaG	Functional analysis of the LACERATA gene of Arabidopsis provides evidence for different roles of fatty acid omega -hydroxylation in development.
+AT2G46210	fig|3702.11.peg.20131	22023480	SvetaG	Sphingolipid Δ8 unsaturation is important for glucosylceramide biosynthesis and low-temperature performance in Arabidopsis.
+AT2G46390	fig|3702.11.peg.20151	15604729	SvetaG	Mitochondrial cytochrome c oxidase and succinate dehydrogenase complexes contain plant specific subunits.
+AT2G46505	fig|3702.11.peg.20167	15604729	SvetaG	Mitochondrial cytochrome c oxidase and succinate dehydrogenase complexes contain plant specific subunits.
+AT5G18860	fig|3702.11.peg.2018	21235647	SvetaG	Arabidopsis nucleoside hydrolases involved in intracellular and extracellular degradation of purines.
+AT2G47400	fig|3702.11.peg.20261	15533878	SvetaG	Co-ordinated gene expression of photosynthetic glyceraldehyde-3-phosphate dehydrogenase, phosphoribulokinase, and CP12 in Arabidopsis thaliana.
+AT2G47490	fig|3702.11.peg.20271	19745225	SvetaG	Molecular identification and functional characterization of Arabidopsis thaliana mitochondrial and chloroplastic NAD+ carrier proteins.
+AT1G01120	fig|3702.11.peg.20352	10074711	SvetaG	KCS1 encodes a fatty acid elongase 3-ketoacyl-CoA synthase affecting wax biosynthesis in Arabidopsis thaliana.
+AT1G01220	fig|3702.11.peg.20362	18199744	gjo	A bifunctional enzyme with L-fucokinase and GDP-L-fucose pyrophosphorylase activities salvages free L-fucose in Arabidopsis.
+AT1G01280	fig|3702.11.peg.20368	17496121	SvetaG	CYP703 is an ancient cytochrome P450 in land plants catalyzing in-chain hydroxylation of lauric acid to provide building blocks for sporopollenin synthesis in pollen.
+AT1G01280	fig|3702.11.peg.20368	19700560	SvetaG	CYP704B1 is a long-chain fatty acid omega-hydroxylase essential for sporopollenin synthesis in pollen of Arabidopsis.
+AT1G01610	fig|3702.11.peg.20404	22864585	SvetaG	A land-plant-specific glycerol-3-phosphate acyltransferase family in Arabidopsis: substrate specificity, sn-2 preference, and evolution.
+AT1G01610	fig|3702.11.peg.20404	20551224	SvetaG	A distinct type of glycerol-3-phosphate acyltransferase with sn-2 preference and phosphatase activity producing 2-monoacylglycerol.
+AT1G01710	fig|3702.11.peg.20415	14660652	SvetaG	Biochemical and molecular characterization of ACH2, an acyl-CoA thioesterase from Arabidopsis thaliana.
+AT1G02205	fig|3702.11.peg.20465	21386033	SvetaG	Overexpression of Arabidopsis ECERIFERUM1 promotes wax very-long-chain alkane biosynthesis and influences plant response to biotic and abiotic stresses.
+AT1G02390	fig|3702.11.peg.20485	22864585	SvetaG	A land-plant-specific glycerol-3-phosphate acyltransferase family in Arabidopsis: substrate specificity, sn-2 preference, and evolution.
+AT5G19200	fig|3702.11.peg.2056	21421810	SvetaG	Sphingolipids in the root play an important role in regulating the leaf ionome in Arabidopsis thaliana.
+AT1G03475	fig|3702.11.peg.20602	11489187	SvetaG	A deficiency of coproporphyrinogen III oxidase causes lesion formation in Arabidopsis.
+AT1G03630	fig|3702.11.peg.20615	11785941	SvetaG	POR C of Arabidopsis thaliana: a third light- and NADPH-dependent protochlorophyllide oxidoreductase that is differentially regulated by light.
+AT1G04220	fig|3702.11.peg.20675	18786002	SvetaG	The DAISY gene from Arabidopsis encodes a fatty acid elongase condensing enzyme involved in the biosynthesis of aliphatic suberin in roots and the chalaza-micropyle region of seeds.
+AT1G04220	fig|3702.11.peg.20675	19619160	SvetaG	Two Arabidopsis 3-ketoacyl CoA synthase genes, KCS20 and KCS2/DAISY, are functionally redundant in cuticular wax and root suberin biosynthesis, but differentially controlled by osmotic stress.
+AT1G05570	fig|3702.11.peg.20818	11283334	SvetaG	A cell plate-specific callose synthase and its interaction with phragmoplastin.
+AT1G06410	fig|3702.11.peg.20913	11520870	OlgaZ	Trehalose metabolism in Arabidopsis: occurrence of trehalose and molecular cloning and characterization of trehalose-6-phosphate synthase homologues.
+AT1G06520	fig|3702.11.peg.20925	22864585	SvetaG	A land-plant-specific glycerol-3-phosphate acyltransferase family in Arabidopsis: substrate specificity, sn-2 preference, and evolution.
+AT1G06520	fig|3702.11.peg.20925	12897259	SvetaG	Arabidopsis AtGPAT1, a member of the membrane-bound glycerol-3-phosphate acyltransferase gene family, is essential for tapetum differentiation and male fertility.
+AT1G06570	fig|3702.11.peg.20930	10198110	OlgaZ	Characterization and subcellular compartmentation of recombinant 4-hydroxyphenylpyruvate dioxygenase from Arabidopsis in transgenic tobacco.
+AT1G06570	fig|3702.11.peg.20930	15084729	OlgaZ	The crystal structures of Zea mays and Arabidopsis 4-hydroxyphenylpyruvate dioxygenase.
+AT1G08250	fig|3702.11.peg.21112	21388819	SvetaG	Complementation of the pha2 yeast mutant suggests functional differences for arogenate dehydratases from Arabidopsis thaliana.
+AT1G08480	fig|3702.11.peg.21136	15604729	SvetaG	Mitochondrial cytochrome c oxidase and succinate dehydrogenase complexes contain plant specific subunits.
+AT1G08510	fig|3702.11.peg.21139	12671095	SvetaG	Disruption of the FATB gene in Arabidopsis demonstrates an essential role of saturated fatty acids in plant growth.
+AT1G08510	fig|3702.11.peg.21139	15266055	SvetaG	Metabolic responses to the reduction in palmitate caused by disruption of the FATB gene in Arabidopsis.
+AT1G08510	fig|3702.11.peg.21139	12061798	SvetaG	Characterization of substrate specificity of plant FatA and FatB acyl-ACP thioesterases.
+AT1G09795	fig|3702.11.peg.21276	10712555	SvetaG	Molecular cloning and characterization of ATP-phosphoribosyl transferase from Arabidopsis, a key enzyme in the histidine biosynthetic pathway.
+AT1G09830	fig|3702.11.peg.21282	7920700	RossO	Molecular characterization of Arabidopsis thaliana cDNAs encoding three purine biosynthetic enzymes.
+AT1G09940	fig|3702.11.peg.21295	8605295	SvetaG	A second and differentially expressed glutamyl-tRNA reductase gene from Arabidopsis thaliana.
+AT1G10060	fig|3702.11.peg.21307	12068099	RossO	The branched-chain amino acid transaminase gene family in Arabidopsis encodes plastid and mitochondrial proteins.
+AT1G10700	fig|3702.11.peg.21377	10082968	RossO	Cloning and sequencing of cDNAs specifying a novel class of phosphoribosyl diphosphate synthase in Arabidopsis thaliana.
+AT1G11790	fig|3702.11.peg.21497	21388819	SvetaG	Complementation of the pha2 yeast mutant suggests functional differences for arogenate dehydratases from Arabidopsis thaliana.
+AT5G20070	fig|3702.11.peg.2151	18815383	SvetaG	Molecular characterization of organelle-type Nudix hydrolases in Arabidopsis.
+AT1G12140	fig|3702.11.peg.21535	18799661	SvetaG	Subclade of flavin-monooxygenases involved in aliphatic glucosinolate biosynthesis.
+AT1G12140	fig|3702.11.peg.21535	17461789	SvetaG	Identification of a flavin-monooxygenase as the S-oxygenating enzyme in aliphatic glucosinolate biosynthesis in Arabidopsis.
+AT1G12640	fig|3702.11.peg.21588	22932756	SvetaG	Acyl editing and headgroup exchange are the major mechanisms that direct polyunsaturated fatty acid flux into triacylglycerols.
+AT1G12780	fig|3702.11.peg.21603	8615692	OlgaV	Functional expression of uridine 5'-diphospho-glucose 4-epimerase (EC 5.1.3.2) from Arabidopsis thaliana in Saccharomyces cerevisiae and Escherichia coli.
+AT1G12840	fig|3702.11.peg.21610	11950611	SvetaG	A simple nomenclature for a complex proton pump: VHA genes encode the vacuolar H(+)-ATPase.
+AT1G14290	fig|3702.11.peg.21762	18612100	SvetaG	Sphingolipid long-chain base hydroxylation is important for growth and regulation of sphingolipid content and composition in Arabidopsis.
+AT1G14290	fig|3702.11.peg.21762	11297741	SvetaG	Functional characterization of sphingolipid C4-hydroxylase genes from Arabidopsis thaliana.
+AT1G15080	fig|3702.11.peg.21852	11278556	SvetaG	Lipid phosphate phosphatases in Arabidopsis. Regulation of the AtLPP1 gene in response to stress.
+AT5G20410	fig|3702.11.peg.2186	14730084	SvetaG	Arabidopsis type B monogalactosyldiacylglycerol synthase genes are expressed during pollen tube growth and induced by phosphate starvation.
+AT5G20410	fig|3702.11.peg.2186	11553816	SvetaG	Two types of MGDG synthase genes, found widely in both 16:3 and 18:3 plants, differentially mediate galactolipid syntheses in photosynthetic and nonphotosynthetic tissues in Arabidopsis thaliana.
+AT1G15690	fig|3702.11.peg.21913	8016125	OlgaV	Heterologous expression of plant vacuolar pyrophosphatase in yeast demonstrates sufficiency of the substrate-binding subunit for proton transport.
+AT1G15690	fig|3702.11.peg.21913	1311852	OlgaV	Molecular cloning and sequence of cDNA encoding the pyrophosphate-energized vacuolar membrane proton pump of Arabidopsis thaliana.
+AT1G15710	fig|3702.11.peg.21915	11905963	VeronikaV	Molecular and biochemical characterization of an Arabidopsis thaliana arogenate dehydrogenase with two highly similar and active protein domains.
+AT1G15950	fig|3702.11.peg.21943	11430991	SvetaG	Two cinnamoyl-CoA reductase (CCR) genes from Arabidopsis thaliana are differentially expressed during development and in response to infection with pathogenic bacteria.
+AT1G16400	fig|3702.11.peg.21987	15194821	SvetaG	Functional analysis of the tandem-duplicated P450 genes SPS/BUS/CYP79F1 and CYP79F2 in glucosinolate biosynthesis and plant development by Ds transposition-generated double mutants.
+AT1G16410	fig|3702.11.peg.21988	15194821	SvetaG	Functional analysis of the tandem-duplicated P450 genes SPS/BUS/CYP79F1 and CYP79F2 in glucosinolate biosynthesis and plant development by Ds transposition-generated double mutants.
+AT1G16980	fig|3702.11.peg.22046	11701378	OlgaZ	An unexpected plethora of trehalose biosynthesis genes in Arabidopsis thaliana.
+AT1G17050	fig|3702.11.peg.22052	23913686	SvetaG	Functional modeling identifies paralogous solanesyl-diphosphate synthases that assemble the side chain of plastoquinone-9 in plastids.
+AT1G17290	fig|3702.11.peg.22080	17319845	SvetaG	Alanine aminotransferase catalyses the breakdown of alanine after hypoxia in Arabidopsis thaliana.
+AT1G18300	fig|3702.11.peg.22178	15878881	SvetaG	Comprehensive analysis of cytosolic Nudix hydrolases in Arabidopsis thaliana.
+AT1G18500	fig|3702.11.peg.22199	17189332	OlgaZ	Two Arabidopsis genes (IPMS1 and IPMS2) encode isopropylmalate synthase, the branchpoint step in the biosynthesis of leucine.
+AT1G18590	fig|3702.11.peg.22208	15358770	SvetaG	Desulfoglucosinolate sulfotransferases from Arabidopsis thaliana catalyze the final step in the biosynthesis of the glucosinolate core structure.
+AT1G18590	fig|3702.11.peg.22208	16367753	SvetaG	The three desulfoglucosinolate sulfotransferase proteins in Arabidopsis have different substrate specificities and are differentially expressed.
+AT1G18590	fig|3702.11.peg.22208	23220083	SvetaG	Desulfo-glucosinolate sulfotransferases isolated from several Arabidopsis thaliana ecotypes differ in their sequence and enzyme kinetics.
+AT1G18870	fig|3702.11.peg.22237	18451262	SvetaG	Characterization and biological function of the ISOCHORISMATE SYNTHASE2 gene of Arabidopsis.
+AT1G20260	fig|3702.11.peg.22376	11950611	SvetaG	A simple nomenclature for a complex proton pump: VHA genes encode the vacuolar H(+)-ATPase.
+AT5G20980	fig|3702.11.peg.2240	15024005	SvetaG	Methionine metabolism in plants: chloroplasts are autonomous for de novo methionine synthesis and can import S-adenosylmethionine from the cytosol.
+AT1G21120	fig|3702.11.peg.22467	21317374	SvetaG	Metabolic engineering in Nicotiana benthamiana reveals key enzyme functions in Arabidopsis indole glucosinolate modification.
+AT1G21130	fig|3702.11.peg.22468	21317374	SvetaG	Metabolic engineering in Nicotiana benthamiana reveals key enzyme functions in Arabidopsis indole glucosinolate modification.
+AT1G21640	fig|3702.11.peg.22518	15247403	SvetaG	Cloning and characterization of two NAD kinases from Arabidopsis. identification of a calmodulin binding isoform.
+AT1G23190	fig|3702.11.peg.22689	20959421	SvetaG	Loss of cytosolic phosphoglucomutase compromises gametophyte development in Arabidopsis.
+AT1G23310	fig|3702.11.peg.22703	12631323	SvetaG	Identification of photorespiratory glutamate:glyoxylate aminotransferase (GGAT) gene in Arabidopsis.
+AT1G23310	fig|3702.11.peg.22703	12529529	SvetaG	Alanine aminotransferase homologs catalyze the glutamate:glyoxylate aminotransferase reaction in peroxisomes of Arabidopsis.
+AT1G23360	fig|3702.11.peg.22708	17082184	SvetaG	Deficiency in phylloquinone (vitamin K1) methylation affects prenyl quinone distribution, photosystem I abundance, and anthocyanin accumulation in the Arabidopsis AtmenG mutant.
+AT1G23800	fig|3702.11.peg.22749	11999848	OlgaZ	Characterization of the aldehyde dehydrogenase gene families of Zea mays and Arabidopsis.
+AT1G24100	fig|3702.11.peg.22779	16027976	SvetaG	Transcriptional co-regulation of secondary metabolism enzymes in Arabidopsis: functional and evolutionary implications.
+AT1G24100	fig|3702.11.peg.22779	15584955	SvetaG	Arabidopsis glucosyltransferase UGT74B1 functions in glucosinolate biosynthesis and auxin homeostasis.
+AT1G24360	fig|3702.11.peg.22812	1575676	OlgaV	Molecular cloning of higher-plant 3-oxoacyl-(acyl carrier protein) reductase. Sequence identities with the nodG-gene product of the nitrogen-fixing soil bacterium Rhizobium meliloti.
+AT1G25380	fig|3702.11.peg.22885	19745225	SvetaG	Molecular identification and functional characterization of Arabidopsis thaliana mitochondrial and chloroplastic NAD+ carrier proteins.
+AT1G27450	fig|3702.11.peg.23060	8206375	SvetaG	The adenine phosphoribosyltransferase-encoding gene of Arabidopsis thaliana.
+AT5G22300	fig|3702.11.peg.2307	11060302	SvetaG	The Arabidopsis thaliana isogene NIT4 and its orthologs in tobacco encode beta-cyano-L-alanine hydratase/nitrilase.
+AT5G22420	fig|3702.11.peg.2320	19062129	SvetaG	Functional expression of five Arabidopsis fatty acyl-CoA reductase genes in Escherichia coli.
+AT5G22500	fig|3702.11.peg.2328	19062129	SvetaG	Functional expression of five Arabidopsis fatty acyl-CoA reductase genes in Escherichia coli.
+AT5G22500	fig|3702.11.peg.2328	20571114	SvetaG	Three Arabidopsis fatty acyl-coenzyme A reductases, FAR1, FAR4, and FAR5, generate primary fatty alcohols associated with suberin deposition.
+AT1G30520	fig|3702.11.peg.23357	18208520	gjo	The AAE14 gene encodes the Arabidopsis o-succinylbenzoyl-CoA ligase that is essential for phylloquinone synthesis and photosystem-I function.
+AT1G30620	fig|3702.11.peg.23367	12566589	OlgaV	The biosynthesis of L-arabinose in plants: molecular cloning and characterization of a Golgi-localized UDP-D-xylose 4-epimerase encoded by the MUR4 gene of Arabidopsis.
+AT5G01220	fig|3702.11.peg.234	11960029	SvetaG	Arabidopsis disrupted in SQD2 encoding sulfolipid synthase is impaired in phosphate-limited growth.
+AT1G31180	fig|3702.11.peg.23426	15849421	SvetaG	Cloning of cDNAs encoding isopropylmalate dehydrogenase from Arabidopsis thaliana and accumulation patterns of their transcripts.
+AT1G31220	fig|3702.11.peg.23429	7920700	OlgaV	Molecular characterization of Arabidopsis thaliana cDNAs encoding three purine biosynthetic enzymes.
+AT1G31230	fig|3702.11.peg.23430	11812230	OlgaZ	Overproduction, purification, and characterization of recombinant bifunctional threonine-sensitive aspartate kinase-homoserine dehydrogenase from Arabidopsis thaliana.
+AT1G31230	fig|3702.11.peg.23430	16216875	OlgaZ	Identification of six novel allosteric effectors of Arabidopsis thaliana aspartate kinase-homoserine dehydrogenase isoforms. Physiological context sets the specificity.
+AT1G31230	fig|3702.11.peg.23430	8204822	OlgaZ	Molecular analysis of the aspartate kinase-homoserine dehydrogenase gene from Arabidopsis thaliana.
+AT5G22630	fig|3702.11.peg.2344	21388819	SvetaG	Complementation of the pha2 yeast mutant suggests functional differences for arogenate dehydratases from Arabidopsis thaliana.
+AT1G31860	fig|3702.11.peg.23494	9733547	RossO	Isolation and characterization of a histidine biosynthetic gene in Arabidopsis encoding a polypeptide with two separate domains for phosphoribosyl-ATP pyrophosphohydrolase and phosphoribosyl-AMP cyclohydrolase.
+AT1G32060	fig|3702.11.peg.23512	1651130	OlgaV	Nucleotide sequence of a cDNA clone encoding chloroplast phosphoribulokinase from Arabidopsis thaliana.
+AT1G32200	fig|3702.11.peg.23525	7678766	SvetaG	The gene and the RNA for the precursor to the plastid-located glycerol-3-phosphate acyltransferase of Arabidopsis thaliana.
+AT1G32350	fig|3702.11.peg.23542	16859634	SvetaG	Alternative oxidases in Arabidopsis: a comparative analysis of differential expression in the gene family provides new insights into function of non-phosphorylating bypasses.
+AT1G32380	fig|3702.11.peg.23547	10082968	RossO	Cloning and sequencing of cDNAs specifying a novel class of phosphoribosyl diphosphate synthase in Arabidopsis thaliana.
+AT1G32440	fig|3702.11.peg.23553	17557808	SvetaG	A heteromeric plastidic pyruvate kinase complex involved in seed oil biosynthesis in Arabidopsis.
+AT1G35580	fig|3702.11.peg.23824	21918379	SvetaG	Neutral invertase, hexokinase and mitochondrial ROS homeostasis: emerging links between sugar metabolism, sugar signaling and ascorbate synthesis.
+AT1G35580	fig|3702.11.peg.23824	17508130	SvetaG	AtCYT-INV1, a neutral invertase, is involved in osmotic stress-induced inhibition on lateral root growth in Arabidopsis.
+AT5G23010	fig|3702.11.peg.2384	12432038	OlgaZ	Isolation and expression analysis of the isopropylmalate synthase gene family of Arabidopsis thaliana.
+AT5G23010	fig|3702.11.peg.2384	17369439	OlgaZ	MAM3 catalyzes the formation of all aliphatic glucosinolate chain lengths in Arabidopsis.
+AT5G23020	fig|3702.11.peg.2385	12432038	OlgaZ	Isolation and expression analysis of the isopropylmalate synthase gene family of Arabidopsis thaliana.
+AT5G23020	fig|3702.11.peg.2385	17369439	OlgaZ	MAM3 catalyzes the formation of all aliphatic glucosinolate chain lengths in Arabidopsis.
+AT1G36160	fig|3702.11.peg.23857	15088065	SvetaG	gurke and pasticcino3 mutants affected in embryo development are impaired in acetyl-CoA carboxylase.
+AT1G36160	fig|3702.11.peg.23857	12376641	SvetaG	Molecular characterization of a heteromeric ATP-citrate lyase that generates cytosolic acetyl-coenzyme A in Arabidopsis.
+AT1G36180	fig|3702.11.peg.23858	12943542	SvetaG	Multifunctional acetyl-CoA carboxylase 1 is essential for very long chain fatty acid elongation and embryo development in Arabidopsis.
+AT1G43710	fig|3702.11.peg.23967	22489147	SvetaG	Arabidopsis serine decarboxylase mutants implicate the roles of ethanolamine in plant growth and development.
+AT1G43710	fig|3702.11.peg.23967	11461929	SvetaG	Plants synthesize ethanolamine by direct decarboxylation of serine using a pyridoxal phosphate enzyme.
+AT5G23120	fig|3702.11.peg.2397	12459468	SvetaG	The HCF136 protein is essential for assembly of the photosystem II reaction center in Arabidopsis thaliana.
+AT5G23120	fig|3702.11.peg.2397	9736608	SvetaG	A nuclear-encoded protein of prokaryotic origin is essential for the stability of photosystem II in Arabidopsis thaliana.
+AT5G23120	fig|3702.11.peg.2397	10664464	SvetaG	Different lumen-targeting pathways for nuclear-encoded versus cyanobacterial/plastid-encoded Hcf136 proteins.
+AT1G43800	fig|3702.11.peg.23975	9154992	SvetaG	Characterization of a structurally and functionally diverged acyl-acyl carrier protein desaturase from milkweed seed.
+AT1G44318	fig|3702.11.peg.24003	8016269	SvetaG	Plant delta-aminolevulinic acid dehydratase. Expression in soybean root nodules and evidence for a bacterial lineage of the Alad gene.
+AT1G47420	fig|3702.11.peg.24106	15604729	SvetaG	Mitochondrial cytochrome c oxidase and succinate dehydrogenase complexes contain plant specific subunits.
+AT5G23300	fig|3702.11.peg.2416	12372626	RossO	Plant dihydroorotate dehydrogenase differs significantly in substrate specificity and inhibition from the animal enzymes.
+AT1G48030	fig|3702.11.peg.24166	14764908	SvetaG	Lipoic acid-dependent oxidative catabolism of alpha-keto acids in mitochondria provides evidence for branched-chain amino acid catabolism in Arabidopsis.
+AT1G48030	fig|3702.11.peg.24166	11598235	SvetaG	Characterization of two cDNAs encoding mitochondrial lipoamide dehydrogenase from Arabidopsis.
+AT1G48300	fig|3702.11.peg.24194	16798944	SvetaG	Cytosolic triacylglycerol biosynthetic pathway in oilseeds. Molecular cloning and expression of peanut cytosolic diacylglycerol acyltransferase.
+AT1G48320	fig|3702.11.peg.24196	22372525	SvetaG	Phylloquinone (vitamin K(1) ) biosynthesis in plants: two peroxisomal thioesterases of Lactobacillales origin hydrolyze 1,4-dihydroxy-2-naphthoyl-CoA.
+AT1G48470	fig|3702.11.peg.24212	14757761	SvetaG	Kinetic properties and ammonium-dependent regulation of cytosolic isoenzymes of glutamine synthetase in Arabidopsis.
+AT1G49530	fig|3702.11.peg.24318	9349257	OlgaV	Geranylgeranyl pyrophosphate synthase encoded by the newly isolated gene GGPS6 from Arabidopsis thaliana is localized in mitochondria.
+AT1G49530	fig|3702.11.peg.24318	10759500	SvetaG	Five geranylgeranyl diphosphate synthases expressed in different organs are localized into three subcellular compartments in Arabidopsis.
+AT1G49820	fig|3702.11.peg.24346	17144895	gjo	The role of methionine recycling for ethylene synthesis in Arabidopsis.
+AT1G50090	fig|3702.11.peg.24374	22226341	SvetaG	Molecular identification of a further branched-chain aminotransferase 7 (BCAT7) in tomato plants.
+AT1G50170	fig|3702.11.peg.24379	22414210	SvetaG	Characterization of the evolutionarily conserved iron-sulfur cluster of sirohydrochlorin ferrochelatase from Arabidopsis thaliana.
+AT1G50170	fig|3702.11.peg.24379	15545265	SvetaG	Identification and characterization of the terminal enzyme of siroheme biosynthesis from Arabidopsis thaliana: a plastid-located sirohydrochlorin ferrochelatase containing a 2FE-2S center.
+AT1G51260	fig|3702.11.peg.24487	15772283	SvetaG	Ubiquitous and endoplasmic reticulum-located lysophosphatidyl acyltransferase, LPAT2, is essential for female but not male gametophyte development in Arabidopsis.
+AT1G51680	fig|3702.11.peg.24532	10417722	gjo	Three 4-coumarate:coenzyme A ligases in Arabidopsis thaliana represent two evolutionarily divergent classes in angiosperms.
+AT5G23670	fig|3702.11.peg.2454	18218968	SvetaG	Serine palmitoyltransferase, a key enzyme for de novo synthesis of sphingolipids, is essential for male gametophyte development in Arabidopsis.
+AT1G53000	fig|3702.11.peg.24671	21893514	SvetaG	Characterization of Arabidopsis CTP:3-deoxy-D-manno-2-octulosonate cytidylyltransferase (CMP-KDO synthetase), the enzyme that activates KDO during rhamnogalacturonan II biosynthesis.
+AT1G53310	fig|3702.11.peg.24708	12805623	OlgaV	Identification and expression analysis of a gene encoding a bacterial-type phosphoenolpyruvate carboxylase from Arabidopsis and rice.
+AT1G53500	fig|3702.11.peg.24729	17190829	SvetaG	Functional analysis of Arabidopsis thaliana RHM2/MUM4, a multidomain protein involved in UDP-D-glucose to UDP-L-rhamnose conversion.
+AT1G53500	fig|3702.11.peg.24729	14671019	SvetaG	RHM2 is involved in mucilage pectin synthesis and is required for the development of the seed coat in Arabidopsis.
+AT1G54340	fig|3702.11.peg.24827	22649311	SvetaG	NADP-dependent isocitrate dehydrogenase from Arabidopsis roots contributes in the mechanism of defence against the nitro-oxidative stress induced by salinity.
+AT1G55180	fig|3702.11.peg.24907	19143999	SvetaG	Phospholipase D epsilon and phosphatidic acid enhance Arabidopsis nitrogen signaling and growth.
+AT1G55670	fig|3702.11.peg.24962	12766230	SvetaG	Proteomics of the chloroplast envelope membranes from Arabidopsis thaliana.
+AT1G55920	fig|3702.11.peg.24989	8867790	Claudia	Serine acetyltransferase from Arabidopsis thaliana can functionally complement the cysteine requirement of a cysE mutant strain of Escherichia coli.
+AT1G55920	fig|3702.11.peg.24989	7851429	Claudia	Subcellular distribution of serine acetyltransferase from Pisum sativum and characterization of an Arabidopsis thaliana putative cytosolic isoform.
+AT1G55920	fig|3702.11.peg.24989	15579666	Claudia	Characterization and expression analysis of a serine acetyltransferase gene family involved in a key step of the sulfur assimilation pathway in Arabidopsis.
+AT1G58080	fig|3702.11.peg.25122	10712555	SvetaG	Molecular cloning and characterization of ATP-phosphoribosyl transferase from Arabidopsis, a key enzyme in the histidine biosynthetic pathway.
+AT1G58290	fig|3702.11.peg.25147	7908550	SvetaG	Light regulation of chlorophyll biosynthesis at the level of 5-aminolevulinate formation in Arabidopsis.
+AT1G58370	fig|3702.11.peg.25155	12154138	SvetaG	A xylanase, AtXyn1, is predominantly expressed in vascular bundles, and four putative xylanase genes were identified in the Arabidopsis thaliana genome.
+AT1G60600	fig|3702.11.peg.25287	15686525	SvetaG	Inactivation and deficiency of core proteins of photosystems I and II caused by genetical phylloquinone and plastoquinone deficiency but retained lamellar structure in a T-DNA mutant of Arabidopsis.
+AT5G24400	fig|3702.11.peg.2539	10048488	SvetaG	Structural analysis of Arabidopsis thaliana chromosome 5. VIII. Sequence features of the regions of 1,081,958 bp covered by seventeen physically assigned P1 and TAC clones.
+AT5G24410	fig|3702.11.peg.2540	10048488	SvetaG	Structural analysis of Arabidopsis thaliana chromosome 5. VIII. Sequence features of the regions of 1,081,958 bp covered by seventeen physically assigned P1 and TAC clones.
+AT1G62430	fig|3702.11.peg.25492	9085581	OlgaV	Complementary DNAs encoding eukaryotic-type cytidine-5'-diphosphate-diacylglycerol synthases of two plant species.
+AT1G62540	fig|3702.11.peg.25501	18799661	SvetaG	Subclade of flavin-monooxygenases involved in aliphatic glucosinolate biosynthesis.
+AT1G62540	fig|3702.11.peg.25501	17461789	SvetaG	Identification of a flavin-monooxygenase as the S-oxygenating enzyme in aliphatic glucosinolate biosynthesis in Arabidopsis.
+AT1G62560	fig|3702.11.peg.25502	17461789	SvetaG	Identification of a flavin-monooxygenase as the S-oxygenating enzyme in aliphatic glucosinolate biosynthesis in Arabidopsis.
+AT1G62560	fig|3702.11.peg.25502	18799661	SvetaG	Subclade of flavin-monooxygenases involved in aliphatic glucosinolate biosynthesis.
+AT1G62570	fig|3702.11.peg.25503	18799661	SvetaG	Subclade of flavin-monooxygenases involved in aliphatic glucosinolate biosynthesis.
+AT1G62570	fig|3702.11.peg.25503	17461789	SvetaG	Identification of a flavin-monooxygenase as the S-oxygenating enzyme in aliphatic glucosinolate biosynthesis in Arabidopsis.
+AT1G63000	fig|3702.11.peg.25550	17190829	SvetaG	Functional analysis of Arabidopsis thaliana RHM2/MUM4, a multidomain protein involved in UDP-D-glucose to UDP-L-rhamnose conversion.
+AT1G63050	fig|3702.11.peg.25554	22233193	SvetaG	Triacylglycerol synthesis by PDAT1 in the absence of DGAT1 activity is dependent on re-acylation of LPC by LPCAT2.
+AT1G63050	fig|3702.11.peg.25554	22932756	SvetaG	Acyl editing and headgroup exchange are the major mechanisms that direct polyunsaturated fatty acid flux into triacylglycerols.
+AT1G63970	fig|3702.11.peg.25650	16231155	SvetaG	Functional evidence for the involvement of Arabidopsis IspF homolog in the nonmevalonate pathway of plastid isoprenoid biosynthesis.
+AT1G64200	fig|3702.11.peg.25678	11950611	SvetaG	A simple nomenclature for a complex proton pump: VHA genes encode the vacuolar H(+)-ATPase.
+AT1G64970	fig|3702.11.peg.25759	12586887	SvetaG	Homogentisate phytyltransferase activity is limiting for tocopherol biosynthesis in Arabidopsis.
+AT1G64970	fig|3702.11.peg.25759	14682617	SvetaG	Characterization of an Arabidopsis mutant deficient in gamma-tocopherol methyltransferase.
+AT1G65060	fig|3702.11.peg.25769	10417722	gjo	Three 4-coumarate:coenzyme A ligases in Arabidopsis thaliana represent two evolutionarily divergent classes in angiosperms.
+AT1G65860	fig|3702.11.peg.25854	17461789	SvetaG	Identification of a flavin-monooxygenase as the S-oxygenating enzyme in aliphatic glucosinolate biosynthesis in Arabidopsis.
+AT1G65860	fig|3702.11.peg.25854	18799661	SvetaG	Subclade of flavin-monooxygenases involved in aliphatic glucosinolate biosynthesis.
+AT1G65930	fig|3702.11.peg.25862	20199623	SvetaG	Cytosolic NADP-dependent isocitrate dehydrogenase contributes to redox homeostasis and the regulation of pathogen responses in Arabidopsis leaves.
+AT1G67730	fig|3702.11.peg.26051	19439572	SvetaG	Functional characterization of the Arabidopsis beta-ketoacyl-coenzyme A reductase candidates of the fatty acid elongase.
+AT1G68000	fig|3702.11.peg.26084	10411624	SvetaG	Identification of AtPIS, a phosphatidylinositol synthase from Arabidopsis.
+AT1G68010	fig|3702.11.peg.26085	19812894	SvetaG	Fatty acid beta-oxidation in germinating Arabidopsis seeds is supported by peroxisomal hydroxypyruvate reductase when malate dehydrogenase is absent.
+AT1G68010	fig|3702.11.peg.26085	18952776	SvetaG	A cytosolic pathway for the conversion of hydroxypyruvate to glycerate during photorespiration in Arabidopsis.
+AT1G68750	fig|3702.11.peg.26165	12805623	OlgaV	Identification and expression analysis of a gene encoding a bacterial-type phosphoenolpyruvate carboxylase from Arabidopsis and rice.
+AT1G68760	fig|3702.11.peg.26166	17804481	SvetaG	AtNUDX1, an 8-oxo-7,8-dihydro-2'-deoxyguanosine 5'-triphosphate pyrophosphohydrolase, is responsible for eliminating oxidized nucleotides in Arabidopsis.
+AT1G68760	fig|3702.11.peg.26166	15611104	SvetaG	A nudix enzyme removes pyrophosphate from dihydroneopterin triphosphate in the folate synthesis pathway of bacteria and plants.
+AT1G68890	fig|3702.11.peg.26183	16617180	gjo	A plant locus essential for phylloquinone (vitamin K1) biosynthesis originated from a fusion of four eubacterial genes.
+AT1G69500	fig|3702.11.peg.26243	19700560	SvetaG	CYP704B1 is a long-chain fatty acid omega-hydroxylase essential for sporopollenin synthesis in pollen of Arabidopsis.
+AT1G69640	fig|3702.11.peg.26259	11297741	SvetaG	Functional characterization of sphingolipid C4-hydroxylase genes from Arabidopsis thaliana.
+AT1G69640	fig|3702.11.peg.26259	18612100	SvetaG	Sphingolipid long-chain base hydroxylation is important for growth and regulation of sphingolipid content and composition in Arabidopsis.
+AT1G69740	fig|3702.11.peg.26269	8016269	SvetaG	Plant delta-aminolevulinic acid dehydratase. Expression in soybean root nodules and evidence for a bacterial lineage of the Alad gene.
+AT1G70290	fig|3702.11.peg.26325	11520870	OlgaZ	Trehalose metabolism in Arabidopsis: occurrence of trehalose and molecular cloning and characterization of trehalose-6-phosphate synthase homologues.
+AT1G70580	fig|3702.11.peg.26355	12631323	SvetaG	Identification of photorespiratory glutamate:glyoxylate aminotransferase (GGAT) gene in Arabidopsis.
+AT1G70580	fig|3702.11.peg.26355	12529529	SvetaG	Alanine aminotransferase homologs catalyze the glutamate:glyoxylate aminotransferase reaction in peroxisomes of Arabidopsis.
+AT5G25370	fig|3702.11.peg.2638	18364466	SvetaG	Phospholipase Dalpha3 is involved in the hyperosmotic response in Arabidopsis.
+AT1G72330	fig|3702.11.peg.26530	17319845	SvetaG	Alanine aminotransferase catalyses the breakdown of alanine after hypoxia in Arabidopsis thaliana.
+AT1G72970	fig|3702.11.peg.26593	16404574	SvetaG	Genetic and biochemical evidence for involvement of HOTHEAD in the biosynthesis of long-chain alpha-,omega-dicarboxylic fatty acids and formation of extracellular matrix.
+AT1G74040	fig|3702.11.peg.26707	17189332	OlgaZ	Two Arabidopsis genes (IPMS1 and IPMS2) encode isopropylmalate synthase, the branchpoint step in the biosynthesis of leucine.
+AT1G74040	fig|3702.11.peg.26707	12432038	OlgaZ	Isolation and expression analysis of the isopropylmalate synthase gene family of Arabidopsis thaliana.
+AT1G74090	fig|3702.11.peg.26715	23220083	SvetaG	Desulfo-glucosinolate sulfotransferases isolated from several Arabidopsis thaliana ecotypes differ in their sequence and enzyme kinetics.
+AT1G74090	fig|3702.11.peg.26715	16367753	SvetaG	The three desulfoglucosinolate sulfotransferase proteins in Arabidopsis have different substrate specificities and are differentially expressed.
+AT1G74090	fig|3702.11.peg.26715	15358770	SvetaG	Desulfoglucosinolate sulfotransferases from Arabidopsis thaliana catalyze the final step in the biosynthesis of the glucosinolate core structure.
+AT1G74100	fig|3702.11.peg.26716	23220083	SvetaG	Desulfo-glucosinolate sulfotransferases isolated from several Arabidopsis thaliana ecotypes differ in their sequence and enzyme kinetics.
+AT1G74100	fig|3702.11.peg.26716	15358770	SvetaG	Desulfoglucosinolate sulfotransferases from Arabidopsis thaliana catalyze the final step in the biosynthesis of the glucosinolate core structure.
+AT1G74100	fig|3702.11.peg.26716	16367753	SvetaG	The three desulfoglucosinolate sulfotransferase proteins in Arabidopsis have different substrate specificities and are differentially expressed.
+AT1G74470	fig|3702.11.peg.26755	9492312	SvetaG	Metabolic compartmentation of plastid prenyllipid biosynthesis--evidence for the involvement of a multifunctional geranylgeranyl reductase.
+AT1G74710	fig|3702.11.peg.26777	18451262	SvetaG	Characterization and biological function of the ISOCHORISMATE SYNTHASE2 gene of Arabidopsis.
+AT1G74960	fig|3702.11.peg.26803	12232312	SvetaG	A Mutant of Arabidopsis Deficient in the Elongation of Palmitic Acid.
+AT1G75020	fig|3702.11.peg.26808	15772283	SvetaG	Ubiquitous and endoplasmic reticulum-located lysophosphatidyl acyltransferase, LPAT2, is essential for female but not male gametophyte development in Arabidopsis.
+AT1G75330	fig|3702.11.peg.26837	10561504	OlgaV	OTC and AUL1, two convergent and overlapping genes in the nuclear genome of Arabidopsis thaliana.
+AT5G25880	fig|3702.11.peg.2686	16113210	SvetaG	A comprehensive analysis of the NADP-malic enzyme gene family of Arabidopsis.
+AT1G76030	fig|3702.11.peg.26903	11950611	SvetaG	A simple nomenclature for a complex proton pump: VHA genes encode the vacuolar H(+)-ATPase.
+AT1G76490	fig|3702.11.peg.26951	2649893	SvetaG	3-Hydroxy-3-methylglutaryl-coenzyme A reductase from Arabidopsis thaliana is structurally distinct from the yeast and animal enzymes.
+AT1G76490	fig|3702.11.peg.26951	2491679	SvetaG	Isolation and structural characterization of a cDNA encoding Arabidopsis thaliana 3-hydroxy-3-methylglutaryl coenzyme A reductase.
+AT5G26030	fig|3702.11.peg.2700	9753778	SvetaG	Two different genes encode ferrochelatase in Arabidopsis: mapping, expression and subcellular targeting of the precursor proteins.
+AT5G26030	fig|3702.11.peg.2700	11602264	SvetaG	Arabidopsis thaliana ferrochelatase-I and -II are not imported into Arabidopsis mitochondria.
+AT1G78510	fig|3702.11.peg.27163	15653808	SvetaG	Identification and subcellular localization of two solanesyl diphosphate synthases from Arabidopsis thaliana.
+AT1G78510	fig|3702.11.peg.27163	15784989	SvetaG	Functional analysis of two solanesyl diphosphate synthases from Arabidopsis thaliana.
+AT1G78570	fig|3702.11.peg.27169	14671019	SvetaG	RHM2 is involved in mucilage pectin synthesis and is required for the development of the seed coat in Arabidopsis.
+AT1G78580	fig|3702.11.peg.27170	11851922	OlgaZ	Trehalose-6-phosphate synthase 1, which catalyses the first step in trehalose synthesis, is essential for Arabidopsis embryo maturation.
+AT1G78580	fig|3702.11.peg.27170	11520870	OlgaZ	Trehalose metabolism in Arabidopsis: occurrence of trehalose and molecular cloning and characterization of trehalose-6-phosphate synthase homologues.
+AT1G78590	fig|3702.11.peg.27171	15347288	SvetaG	Identification, molecular cloning and functional characterization of a novel NADH kinase from Arabidopsis thaliana (thale cress).
+AT1G78690	fig|3702.11.peg.27181	21803774	SvetaG	Putative N-acylphosphatidylethanolamine synthase from Arabidopsis thaliana is a lysoglycerophospholipid acyltransferase.
+AT1G78900	fig|3702.11.peg.27205	11950611	SvetaG	A simple nomenclature for a complex proton pump: VHA genes encode the vacuolar H(+)-ATPase.
+AT1G79010	fig|3702.11.peg.27220	9037104	OlgaV	The 28.5-kDa iron-sulfur protein of mitochondrial complex I is encoded in the nucleus in plants.
+AT1G79470	fig|3702.11.peg.27262	8890737	OlgaV	Cloning and characterization of the gene encoding IMP dehydrogenase from Arabidopsis thaliana.
+AT1G79750	fig|3702.11.peg.27290	16113210	SvetaG	A comprehensive analysis of the NADP-malic enzyme gene family of Arabidopsis.
+AT1G79790	fig|3702.11.peg.27294	24123841	SvetaG	Enzymes from the haloacid dehalogenase (HAD) superfamily catalyse the elusive dephosphorylation step of riboflavin biosynthesis.
+AT1G79790	fig|3702.11.peg.27294	22002057	SvetaG	An FMN hydrolase of the haloacid dehalogenase superfamily is active in plant chloroplasts.
+AT1G80050	fig|3702.11.peg.27319	8696367	SvetaG	A second form of adenine phosphoribosyltransferase in Arabidopsis thaliana with relative specificity towards cytokinins.
+AT1G80380	fig|3702.11.peg.27353	15980259	SvetaG	D-GLYCERATE 3-KINASE, the last unknown enzyme in the photorespiratory cycle in Arabidopsis, belongs to a novel kinase family.
+AT5G26667	fig|3702.11.peg.2737	9576794	SvetaG	Cloning, expression in Escherichia coli, and characterization of Arabidopsis thaliana UMP/CMP kinase.
+AT1G80820	fig|3702.11.peg.27397	11430991	SvetaG	Two cinnamoyl-CoA reductase (CCR) genes from Arabidopsis thaliana are differentially expressed during development and in response to infection with pathogenic bacteria.
+AT1G80860	fig|3702.11.peg.27402	19366698	SvetaG	Functional characterization of phospholipid N-methyltransferases from Arabidopsis and soybean.
+AT1G80950	fig|3702.11.peg.27412	19445718	SvetaG	Characterization of two Arabidopsis thaliana acyltransferases with preference for lysophosphatidylethanolamine.
+AT5G26710	fig|3702.11.peg.2746	16251277	gjo	Dual targeting is the rule for organellar aminoacyl-tRNA synthetases in Arabidopsis thaliana.
+AT5G26710	fig|3702.11.peg.2746	9765600	gjo	Cloning of the cDNA for glutamyl-tRNA synthetase from Arabidopsis thaliana.
+AT5G27450	fig|3702.11.peg.2832	7958957	gjo	Isolation and characterization of a cDNA encoding Arabidopsis thaliana mevalonate kinase by genetic complementation in yeast.
+AT5G28237	fig|3702.11.peg.2907	20701934	SvetaG	Plants contain two distinct classes of functional tryptophan synthase beta proteins.
+AT5G33290	fig|3702.11.peg.3000	18460606	SvetaG	Identification of a xylogalacturonan xylosyltransferase involved in pectin biosynthesis in Arabidopsis.
+AT5G34930	fig|3702.11.peg.3028	11905963	VeronikaV	Molecular and biochemical characterization of an Arabidopsis thaliana arogenate dehydrogenase with two highly similar and active protein domains.
+AT5G35630	fig|3702.11.peg.3083	15273293	SvetaG	Arabidopsis thaliana GLN2-encoded glutamine synthetase is dual targeted to leaf mitochondria and chloroplasts.
+AT5G35630	fig|3702.11.peg.3083	10482686	SvetaG	Carbon and amino acids reciprocally modulate the expression of glutamine synthetase in Arabidopsis.
+AT5G35630	fig|3702.11.peg.3083	1684022	SvetaG	The glutamine synthetase gene family of Arabidopsis thaliana: light-regulation and differential expression in leaves, roots and seeds.
+AT5G36160	fig|3702.11.peg.3132	21188077	SvetaG	Identification and Partial Characterization of an L-Tyrosine Aminotransferase (TAT) from Arabidopsis thaliana.
+AT5G36700	fig|3702.11.peg.3178	17478634	SvetaG	Identification of the photorespiratory 2-phosphoglycolate phosphatase, PGLP1, in Arabidopsis.
+AT5G36790	fig|3702.11.peg.3188	17478634	SvetaG	Identification of the photorespiratory 2-phosphoglycolate phosphatase, PGLP1, in Arabidopsis.
+AT5G36880	fig|3702.11.peg.3194	10859180	gjo	The role of pyruvate dehydrogenase and acetyl-coenzyme A synthetase in fatty acid synthesis in developing Arabidopsis seeds.
+AT5G37300	fig|3702.11.peg.3232	18621978	SvetaG	Identification of the wax ester synthase/acyl-coenzyme A: diacylglycerol acyltransferase WSD1 required for stem wax ester biosynthesis in Arabidopsis.
+AT5G37600	fig|3702.11.peg.3265	14757761	SvetaG	Kinetic properties and ammonium-dependent regulation of cytosolic isoenzymes of glutamine synthetase in Arabidopsis.
+AT5G37600	fig|3702.11.peg.3265	10482686	SvetaG	Carbon and amino acids reciprocally modulate the expression of glutamine synthetase in Arabidopsis.
+AT5G37600	fig|3702.11.peg.3265	16472779	SvetaG	Arabidopsis cytosolic glutamine synthetase AtGLN1;1 is a potential substrate of AtCRK3 involved in leaf senescence.
+AT5G37850	fig|3702.11.peg.3290	23321022	SvetaG	The SOS4 pyridoxal kinase is required for maintenance of vitamin B6-mediated processes in chloroplasts.
+AT5G40650	fig|3702.11.peg.3586	15604729	SvetaG	Mitochondrial cytochrome c oxidase and succinate dehydrogenase complexes contain plant specific subunits.
+AT5G40850	fig|3702.11.peg.3607	9006913	SvetaG	Siroheme biosynthesis in higher plants. Analysis of an S-adenosyl-L-methionine-dependent uroporphyrinogen III methyltransferase from Arabidopsis thaliana.
+AT5G41480	fig|3702.11.peg.3674	12535338	SvetaG	The GLOBULAR ARREST1 gene, which is involved in the biosynthesis of folates, is essential for embryogenesis in Arabidopsis thaliana.
+AT5G41480	fig|3702.11.peg.3674	11752472	SvetaG	Tetrahydrofolate biosynthesis in plants: molecular and functional characterization of dihydrofolate synthetase and three isoforms of folylpolyglutamate synthetase in Arabidopsis thaliana.
+AT5G42180	fig|3702.11.peg.3750	8425063	OlgaV	Isolation of putative defense-related genes from Arabidopsis thaliana and expression in fungal elicitor-treated cells.
+AT5G42740	fig|3702.11.peg.3816	10806248	SvetaG	Mutation of Arabidopsis plastid phosphoglucose isomerase affects leaf starch synthesis and floral initiation.
+AT5G42740	fig|3702.11.peg.3816	8293986	SvetaG	Molecular characterization of duplicate cytosolic phosphoglucose isomerase genes in Clarkia and comparison to the single gene in Arabidopsis.
+AT5G43330	fig|3702.11.peg.3889	20876337	SvetaG	Mitochondrial malate dehydrogenase lowers leaf respiration and alters photorespiration and plant growth in Arabidopsis.
+AT5G46180	fig|3702.11.peg.4209	9576796	SvetaG	Isolation of the ornithine-delta-aminotransferase cDNA and effect of salt stress on its expression in Arabidopsis thaliana.
+AT5G46180	fig|3702.11.peg.4209	18419821	SvetaG	Ornithine-delta-aminotransferase is essential for arginine catabolism but not for proline biosynthesis.
+AT5G47720	fig|3702.11.peg.4376	22332816	SvetaG	Reverse genetic characterization of two paralogous acetoacetyl CoA thiolase genes in Arabidopsis reveals their importance in plant growth and development.
+AT5G47760	fig|3702.11.peg.4380	17478634	SvetaG	Identification of the photorespiratory 2-phosphoglycolate phosphatase, PGLP1, in Arabidopsis.
+AT5G47770	fig|3702.11.peg.4381	20497375	SvetaG	The Arabidopsis thaliana FPP synthase isozymes have overlapping and specific functions in isoprenoid biosynthesis, and complete loss of FPP synthase activity causes early developmental arrest.
+AT5G47810	fig|3702.11.peg.4385	17485088	gjo	Characterisation of the ATP-dependent phosphofructokinase gene family from Arabidopsis thaliana.
+AT5G48230	fig|3702.11.peg.4429	22332816	SvetaG	Reverse genetic characterization of two paralogous acetoacetyl CoA thiolase genes in Arabidopsis reveals their importance in plant growth and development.
+AT5G03300	fig|3702.11.peg.451	11115893	SvetaG	Adenosine kinase of Arabidopsis. Kinetic properties and gene expression.
+AT5G48930	fig|3702.11.peg.4511	15161961	SvetaG	Silencing of hydroxycinnamoyl-coenzyme A shikimate/quinate hydroxycinnamoyltransferase affects phenylpropanoid biosynthesis.
+AT5G48930	fig|3702.11.peg.4511	5161961	SvetaG	[Simple method for radiological measurement of the uterine cavity].
+AT5G48950	fig|3702.11.peg.4514	22372525	SvetaG	Phylloquinone (vitamin K(1) ) biosynthesis in plants: two peroxisomal thioesterases of Lactobacillales origin hydrolyze 1,4-dihydroxy-2-naphthoyl-CoA.
+AT5G49360	fig|3702.11.peg.4557	15181203	SvetaG	Purification and characterization of enzymes exhibiting beta-D-xylosidase activities in stem tissues of Arabidopsis.
+AT5G49810	fig|3702.11.peg.4604	10449582	gjo	S-methylmethionine plays a major role in phloem sulfur transport and is synthesized by a novel type of methyltransferase.
+AT5G49970	fig|3702.11.peg.4621	21051239	SvetaG	Expression, in vivo localization and phylogenetic analysis of a pyridoxine 5'-phosphate oxidase in Arabidopsis thaliana.
+AT5G50210	fig|3702.11.peg.4649	16698895	AndreiO	Early steps in the biosynthesis of NAD in Arabidopsis start with aspartate and occur in the plastid.
+AT5G51290	fig|3702.11.peg.4767	14563678	SvetaG	Ceramides modulate programmed cell death in plants.
+AT5G51820	fig|3702.11.peg.4823	10954083	SvetaG	Molecular characterisation of a new mutant allele of the plastid phosphoglucomutase in Arabidopsis, and complementation of the mutant with the wild-type cDNA.
+AT5G52560	fig|3702.11.peg.4901	16757173	SvetaG	Characterization and expression of Arabidopsis UDP-sugar pyrophosphorylase.
+AT5G52560	fig|3702.11.peg.4901	18768324	SvetaG	Arabidopsis UDP-sugar pyrophosphorylase: evidence for two isoforms.
+AT5G03650	fig|3702.11.peg.493	17028209	SvetaG	Mutants of Arabidopsis lacking starch branching enzyme II substitute plastidial starch synthesis by cytoplasmic maltose accumulation.
+AT5G52920	fig|3702.11.peg.4939	17557808	SvetaG	A heteromeric plastidic pyruvate kinase complex involved in seed oil biosynthesis in Arabidopsis.
+AT5G53390	fig|3702.11.peg.4991	23314942	SvetaG	Physical interaction of floral organs controls petal morphogenesis in Arabidopsis.
+AT5G53970	fig|3702.11.peg.5056	22540282	SvetaG	A tyrosine aminotransferase involved in tocopherol synthesis in Arabidopsis.
+AT5G54190	fig|3702.11.peg.5083	7659751	SvetaG	Identification of NADPH:protochlorophyllide oxidoreductases A and B: a branched pathway for light-dependent chlorophyll biosynthesis in Arabidopsis thaliana.
+AT5G54190	fig|3702.11.peg.5083	20012672	SvetaG	Arabidopsis protochlorophyllide oxidoreductase A (PORA) restores bulk chlorophyll synthesis and normal development to a porB porC double mutant.
+AT5G54770	fig|3702.11.peg.5146	8790291	VeronikaV	Thi1, a thiamine biosynthetic gene in Arabidopsis thaliana, complements bacterial defects in DNA repair.
+AT5G54810	fig|3702.11.peg.5150	2734310	SvetaG	A gene encoding the tryptophan synthase beta subunit of Arabidopsis thaliana.
+AT5G56630	fig|3702.11.peg.5347	17485088	SvetaG	Characterisation of the ATP-dependent phosphofructokinase gene family from Arabidopsis thaliana.
+AT5G57190	fig|3702.11.peg.5408	17449644	SvetaG	Deficiency in phosphatidylserine decarboxylase activity in the psd1 psd2 psd3 triple mutant of Arabidopsis affects phosphatidylethanolamine accumulation in mitochondria.
+AT5G57220	fig|3702.11.peg.5411	19293369	SvetaG	The gene controlling the indole glucosinolate modifier1 quantitative trait locus alters indole glucosinolate structures and aphid resistance in Arabidopsis.
+AT5G57220	fig|3702.11.peg.5411	21317374	SvetaG	Metabolic engineering in Nicotiana benthamiana reveals key enzyme functions in Arabidopsis indole glucosinolate modification.
+AT5G04140	fig|3702.11.peg.547	9057836	SvetaG	Structure and regulation of ferredoxin-dependent glutamase synthase from Arabidopsis thaliana. Cloning of cDNA expression in different tissues of wild-type and gltS mutant strains, and light induction.
+AT5G04140	fig|3702.11.peg.547	9596633	SvetaG	Arabidopsis gls mutants and distinct Fd-GOGAT genes. Implications for photorespiration and primary nitrogen assimilation.
+AT5G04230	fig|3702.11.peg.556	15276452	SvetaG	The Arabidopsis phenylalanine ammonia lyase gene family: kinetic characterization of the four PAL isoforms.
+AT5G59440	fig|3702.11.peg.5650	18036198	SvetaG	The first zygotic division in Arabidopsis requires de novo transcription of thymidylate kinase.
+AT5G59750	fig|3702.11.peg.5680	23203051	SvetaG	Arabidopsis RIBA proteins: two out of three isoforms have lost their bifunctional activity in riboflavin biosynthesis.
+AT5G60620	fig|3702.11.peg.5772	19539490	SvetaG	Arabidopsis thaliana GPAT8 and GPAT9 are localized to the ER and possess distinct ER retrieval signals: functional divergence of the dilysine ER retrieval motif in plant cells.
+AT5G61580	fig|3702.11.peg.5873	17485088	gjo	Characterisation of the ATP-dependent phosphofructokinase gene family from Arabidopsis thaliana.
+AT5G62530	fig|3702.11.peg.5969	11532180	SvetaG	A nuclear gene encoding mitochondrial Delta-pyrroline-5-carboxylate dehydrogenase and its potential role in protection from proline toxicity.
+AT5G62530	fig|3702.11.peg.5969	15358267	SvetaG	The ALDH gene superfamily of Arabidopsis.
+AT5G04660	fig|3702.11.peg.598	19120447	SvetaG	Arabidopsis thaliana CYP77A4 is the first cytochrome P450 able to catalyze the epoxidation of free fatty acids in plants.
+AT5G62790	fig|3702.11.peg.5998	12177470	SvetaG	Expression and molecular analysis of the Arabidopsis DXR gene encoding 1-deoxy-D-xylulose 5-phosphate reductoisomerase, the first committed enzyme of the 2-C-methyl-D-erythritol 4-phosphate pathway.
+AT5G63310	fig|3702.11.peg.6057	12506203	RossO	NDP kinase 2 interacts with two oxidative stress-activated MAPKs to regulate cellular redox state and enhances multiple stress tolerance in transgenic plants.
+AT5G63310	fig|3702.11.peg.6057	15465053	RossO	Structural analysis of Arabidopsis thaliana nucleoside diphosphate kinase-2 for phytochrome-mediated light signaling.
+AT5G63570	fig|3702.11.peg.6080	7908550	SvetaG	Light regulation of chlorophyll biosynthesis at the level of 5-aminolevulinate formation in Arabidopsis.
+AT5G63570	fig|3702.11.peg.6080	9330910	SvetaG	Structural analysis of Arabidopsis thaliana chromosome 5. I. Sequence features of the 1.6 Mb regions covered by twenty physically assigned P1 clones.
+AT5G64210	fig|3702.11.peg.6147	16859634	SvetaG	Alternative oxidases in Arabidopsis: a comparative analysis of differential expression in the gene family provides new insights into function of non-phosphorylating bypasses.
+AT5G64300	fig|3702.11.peg.6156	10783978	gjo	Biosynthesis of riboflavin in plants. The ribA gene of Arabidopsis thaliana specifies a bifunctional GTP cyclohydrolase II/3,4-dihydroxy-2-butanone 4-phosphate synthase.
+AT5G64380	fig|3702.11.peg.6167	19220782	SvetaG	cpFBPaseII, a novel redox-independent chloroplastic isoform of fructose-1,6-bisphosphatase.
+AT5G64570	fig|3702.11.peg.6190	15181203	SvetaG	Purification and characterization of enzymes exhibiting beta-D-xylosidase activities in stem tissues of Arabidopsis.
+AT5G65165	fig|3702.11.peg.6255	16249327	OlgaV	A nuclear gene for the iron-sulfur subunit of mitochondrial complex II is specifically expressed during Arabidopsis seed development and germination.
+AT5G66380	fig|3702.11.peg.6391	16055441	margovan	Folate metabolism in plants: an Arabidopsis homolog of the mammalian mitochondrial folate transporter mediates folate import into chloroplasts.
+AT5G66570	fig|3702.11.peg.6410	2583096	SvetaG	Targeting of proteins to the thylakoid lumen by the bipartite transit peptide of the 33 kd oxygen-evolving protein.
+AT5G66570	fig|3702.11.peg.6410	2101691	SvetaG	Isolation and characterization of cDNAs from Lycopersicon esculentum and Arabidopsis thaliana encoding the 33 kDa protein of the photosystem II-associated oxygen-evolving complex.
+AT5G66570	fig|3702.11.peg.6410	9802567	SvetaG	The psbO gene for 33-kDa precursor polypeptide of the oxygen-evolving complex in Arabidopsis thaliana--nucleotide sequence and control of its expression.
+AT5G66690	fig|3702.11.peg.6426	16995900	SvetaG	The glucosyltransferase UGT72E2 is responsible for monolignol 4-O-glucoside production in Arabidopsis thaliana.
+AT5G66760	fig|3702.11.peg.6433	15604729	SvetaG	Mitochondrial cytochrome c oxidase and succinate dehydrogenase complexes contain plant specific subunits.
+AT4G00400	fig|3702.11.peg.6580	22864585	SvetaG	A land-plant-specific glycerol-3-phosphate acyltransferase family in Arabidopsis: substrate specificity, sn-2 preference, and evolution.
+AT4G00400	fig|3702.11.peg.6580	19539490	SvetaG	Arabidopsis thaliana GPAT8 and GPAT9 are localized to the ER and possess distinct ER retrieval signals: functional divergence of the dilysine ER retrieval motif in plant cells.
+AT4G00550	fig|3702.11.peg.6595	11696551	SvetaG	DGD2, an arabidopsis gene encoding a UDP-galactose-dependent digalactosyldiacylglycerol synthase is expressed during growth under phosphate-limiting conditions.
+AT4G00550	fig|3702.11.peg.6595	10381884	SvetaG	Arabidopsis galactolipid biosynthesis and lipid trafficking mediated by DGD1.
+AT4G01690	fig|3702.11.peg.6724	9238074	SvetaG	Cloning and characterization of a plastidal and a mitochondrial isoform of tobacco protoporphyrinogen IX oxidase.
+AT4G01690	fig|3702.11.peg.6724	8982084	SvetaG	Molecular cloning and characterization of a cDNA that encodes protoporphyrinogen oxidase of Arabidopsis thaliana.
+AT4G01950	fig|3702.11.peg.6758	22864585	SvetaG	A land-plant-specific glycerol-3-phosphate acyltransferase family in Arabidopsis: substrate specificity, sn-2 preference, and evolution.
+AT4G02620	fig|3702.11.peg.6834	11950611	SvetaG	A simple nomenclature for a complex proton pump: VHA genes encode the vacuolar H(+)-ATPase.
+AT4G02770	fig|3702.11.peg.6853	18243102	SvetaG	A complex containing PGRL1 and PGR5 is involved in the switch between linear and cyclic electron flow in Arabidopsis.
+AT4G02770	fig|3702.11.peg.6853	12883043	SvetaG	Identification of three previously unknown in vivo protein phosphorylation sites in thylakoid membranes of Arabidopsis thaliana.
+AT4G03050	fig|3702.11.peg.6881	11251105	SvetaG	Gene duplication in the diversification of secondary metabolism: tandem 2-oxoglutarate-dependent dioxygenases control glucosinolate biosynthesis in Arabidopsis.
+AT4G03070	fig|3702.11.peg.6882	11251105	SvetaG	Gene duplication in the diversification of secondary metabolism: tandem 2-oxoglutarate-dependent dioxygenases control glucosinolate biosynthesis in Arabidopsis.
+AT4G03550	fig|3702.11.peg.6939	16021399	SvetaG	Two callose synthases, GSL1 and GSL5, play an essential and redundant role in plant and pollen development and in fertility.
+AT4G03550	fig|3702.11.peg.6939	14555698	SvetaG	An Arabidopsis Callose Synthase, GSL5, Is Required for Wound and Papillary Callose Formation.
+AT4G04870	fig|3702.11.peg.7025	15811335	SvetaG	Cardiolipin synthase of Arabidopsis thaliana.
+AT4G04930	fig|3702.11.peg.7033	18978071	SvetaG	Functional characterization of a higher plant sphingolipid Delta4-desaturase: defining the role of sphingosine and sphingosine-1-phosphate in Arabidopsis.
+AT4G04970	fig|3702.11.peg.7040	16021399	SvetaG	Two callose synthases, GSL1 and GSL5, play an essential and redundant role in plant and pollen development and in fertility.
+AT4G05210	fig|3702.11.peg.7071	21709257	SvetaG	Pathway for lipid A biosynthesis in Arabidopsis thaliana resembling that of Escherichia coli.
+AT4G09320	fig|3702.11.peg.7273	14581623	SvetaG	Arabidopsis NDK1 is a component of ROS signaling by interacting with three catalases.
+AT4G11150	fig|3702.11.peg.7466	11950611	SvetaG	A simple nomenclature for a complex proton pump: VHA genes encode the vacuolar H(+)-ATPase.
+AT5G06090	fig|3702.11.peg.751	22864585	SvetaG	A land-plant-specific glycerol-3-phosphate acyltransferase family in Arabidopsis: substrate specificity, sn-2 preference, and evolution.
+AT4G11640	fig|3702.11.peg.7517	16483618	SvetaG	Molecular and biochemical characterization of a serine racemase from Arabidopsis thaliana.
+AT4G11820	fig|3702.11.peg.7537	8566777	SvetaG	Isolation and characterization of a cDNA encoding Arabidopsis thaliana 3-hydroxy-3-methylglutaryl-coenzyme A synthase.
+AT4G13050	fig|3702.11.peg.7666	22002626	SvetaG	Reduced expression of FatA thioesterases in Arabidopsis affects the oil content and fatty acid composition of the seeds.
+AT4G13050	fig|3702.11.peg.7666	12061798	SvetaG	Characterization of substrate specificity of plant FatA and FatB acyl-ACP thioesterases.
+AT4G13430	fig|3702.11.peg.7711	19597944	SvetaG	Arabidopsis thaliana encodes a bacterial-type heterodimeric isopropylmalate isomerase involved in both Leu biosynthesis and the Met chain elongation pathway of glucosinolate formation.
+AT4G13770	fig|3702.11.peg.7746	12509530	SvetaG	The Arabidopsis ref2 mutant is defective in the gene encoding CYP83A1 and shows both phenylpropanoid and glucosinolate phenotypes.
+AT4G13770	fig|3702.11.peg.7746	12970475	SvetaG	CYP83A1 and CYP83B1, two nonredundant cytochrome P450 enzymes metabolizing oximes in the biosynthesis of glucosinolates in Arabidopsis.
+AT4G13770	fig|3702.11.peg.7746	11553739	SvetaG	The involvement of two p450 enzymes, CYP83B1 and CYP83A1, in auxin homeostasis and glucosinolate biosynthesis.
+AT4G15093	fig|3702.11.peg.7921	22923580	SvetaG	Assembly of an evolutionarily new pathway for α-pyrone biosynthesis in Arabidopsis.
+AT4G15130	fig|3702.11.peg.7926	12461134	SvetaG	Phosphatidylcholine biosynthesis at low temperature: differential expression of CTP:phosphorylcholine cytidylyltransferase isogenes in Arabidopsis thaliana.
+AT4G15530	fig|3702.11.peg.7973	16915520	SvetaG	The Arabidopsis PPDK gene is transcribed from two promoters to produce differentially expressed transcripts responsible for cytosolic and plastidic proteins.
+AT4G15560	fig|3702.11.peg.7977	10982425	SvetaG	Analysis of the expression of CLA1, a gene that encodes the 1-deoxyxylulose 5-phosphate synthase of the 2-C-methyl-D-erythritol-4-phosphate pathway in Arabidopsis.
+AT4G15560	fig|3702.11.peg.7977	11264287	SvetaG	1-Deoxy-D-xylulose-5-phosphate synthase, a limiting enzyme for plastidic isoprenoid biosynthesis in plants.
+AT4G16130	fig|3702.11.peg.8044	10344205	gjo	The arabinose kinase, ARA1, gene of Arabidopsis is a novel member of the galactose kinase gene family.
+AT4G16700	fig|3702.11.peg.8116	17449644	SvetaG	Deficiency in phosphatidylserine decarboxylase activity in the psd1 psd2 psd3 triple mutant of Arabidopsis affects phosphatidylethanolamine accumulation in mitochondria.
+AT4G17770	fig|3702.11.peg.8234	11701378	OlgaZ	An unexpected plethora of trehalose biosynthesis genes in Arabidopsis thaliana.
+AT4G20050	fig|3702.11.peg.8488	14551328	SvetaG	Microspore separation in the quartet 3 mutants of Arabidopsis is impaired by a defect in a developmentally regulated polygalacturonase required for pollen mother cell wall degradation.
+AT4G20960	fig|3702.11.peg.8572	15208317	SvetaG	Evolution of vitamin B2 biosynthesis: structural and functional similarity between pyrimidine deaminases of eubacterial and plant origin.
+AT4G21220	fig|3702.11.peg.8604	21709257	SvetaG	Pathway for lipid A biosynthesis in Arabidopsis thaliana resembling that of Escherichia coli.
+AT4G21534	fig|3702.11.peg.8636	15695468	SvetaG	Phosphorylation of sphingoid long-chain bases in Arabidopsis: functional characterization and expression of the first sphingoid long-chain base Kinase gene in plants.
+AT4G23660	fig|3702.11.peg.8875	15604701	SvetaG	The AtPPT1 gene encoding 4-hydroxybenzoate polyprenyl diphosphate transferase in ubiquinone biosynthesis is required for embryo development in Arabidopsis thaliana.
+AT4G24450	fig|3702.11.peg.8962	15686522	SvetaG	A novel isoform of glucan, water dikinase phosphorylates pre-phosphorylated alpha-glucans and is involved in starch degradation in Arabidopsis.
+AT4G24620	fig|3702.11.peg.8979	10806248	SvetaG	Mutation of Arabidopsis plastid phosphoglucose isomerase affects leaf starch synthesis and floral initiation.
+AT4G25080	fig|3702.11.peg.9027	11784318	SvetaG	The plant S-adenosyl-L-methionine:Mg-protoporphyrin IX methyltransferase is located in both envelope and thylakoid chloroplast membranes.
+AT4G25434	fig|3702.11.peg.9067	15878881	SvetaG	Comprehensive analysis of cytosolic Nudix hydrolases in Arabidopsis thaliana.
+AT4G25950	fig|3702.11.peg.9124	11950611	SvetaG	A simple nomenclature for a complex proton pump: VHA genes encode the vacuolar H(+)-ATPase.
+AT4G25970	fig|3702.11.peg.9126	17449644	SvetaG	Deficiency in phosphatidylserine decarboxylase activity in the psd1 psd2 psd3 triple mutant of Arabidopsis affects phosphatidylethanolamine accumulation in mitochondria.
+AT4G26220	fig|3702.11.peg.9153	23416302	SvetaG	A single amino acid determines position specificity of an Arabidopsis thaliana CCoAOMT-like O-methyltransferase.
+AT4G26270	fig|3702.11.peg.9158	17485088	SvetaG	Characterisation of the ATP-dependent phosphofructokinase gene family from Arabidopsis thaliana.
+AT4G26900	fig|3702.11.peg.9227	9654139	RossO	An Arabidopsis cDNA encoding a bifunctional glutamine amidotransferase/cyclase suppresses the histidine auxotrophy of a Saccharomyces cerevisiae his7 mutant.
+AT4G27030	fig|3702.11.peg.9241	19682287	SvetaG	FATTY ACID DESATURASE4 of Arabidopsis encodes a protein distinct from characterized fatty acid desaturases.
+AT4G27070	fig|3702.11.peg.9245	1840915	SvetaG	Tryptophan mutants in Arabidopsis: the consequences of duplicated tryptophan synthase beta genes.
+AT4G27440	fig|3702.11.peg.9282	7659751	VeronikaV	Identification of NADPH:protochlorophyllide oxidoreductases A and B: a branched pathway for light-dependent chlorophyll biosynthesis in Arabidopsis thaliana.
+AT4G27440	fig|3702.11.peg.9282	1714319	VeronikaV	Effect of light on the NADPH-protochlorophyllide oxidoreductase of Arabidopsis thaliana.
+AT4G27550	fig|3702.11.peg.9293	11701378	OlgaZ	An unexpected plethora of trehalose biosynthesis genes in Arabidopsis thaliana.
+AT5G07990	fig|3702.11.peg.947	11030432	OlgaV	Identification of the Arabidopsis thaliana flavonoid 3'-hydroxylase gene and functional expression of the encoded P450 enzyme.
+AT4G29130	fig|3702.11.peg.9472	16920781	SvetaG	Mitochondria-associated hexokinases play a role in the control of programmed cell death in Nicotiana benthamiana.
+AT4G29220	fig|3702.11.peg.9481	17485088	gjo	Characterisation of the ATP-dependent phosphofructokinase gene family from Arabidopsis thaliana.
+AT4G29540	fig|3702.11.peg.9515	22545860	SvetaG	Activity and crystal structure of Arabidopsis thaliana UDP-N-acetylglucosamine acyltransferase.
+AT4G29540	fig|3702.11.peg.9515	2545860	SvetaG	Potent stimulation of myofilament force and adenosine triphosphatase activity of canine cardiac muscle through a direct enhancement of troponin C Ca++ binding by MCI-154, a novel cardiotonic agent.
+AT4G29840	fig|3702.11.peg.9549	10429206	SvetaG	Characterization of recombinant Arabidopsis thaliana threonine synthase.
+AT4G30440	fig|3702.11.peg.9614	15247385	gjo	The biosynthesis of D-Galacturonate in plants. functional cloning and characterization of a membrane-anchored UDP-D-Glucuronate 4-epimerase from Arabidopsis.
+AT4G30530	fig|3702.11.peg.9623	19483696	SvetaG	Glucosinolate engineering identifies a gamma-glutamyl peptidase.
+AT4G30580	fig|3702.11.peg.9628	14976237	SvetaG	Plastid lysophosphatidyl acyltransferase is essential for embryo development in Arabidopsis.
+AT4G30580	fig|3702.11.peg.9628	15169931	OlgaV	Loss of plastidic lysophosphatidic acid acyltransferase causes embryo-lethality in Arabidopsis.
+AT4G30950	fig|3702.11.peg.9669	7846158	SvetaG	Identification of a gene that complements an Arabidopsis mutant deficient in chloroplast omega 6 desaturase activity.
+AT4G31500	fig|3702.11.peg.9730	11158532	SvetaG	CYP83B1, a cytochrome P450 at the metabolic branch point in auxin and indole glucosinolate biosynthesis in Arabidopsis.
+AT4G31500	fig|3702.11.peg.9730	11553739	SvetaG	The involvement of two p450 enzymes, CYP83B1 and CYP83A1, in auxin homeostasis and glucosinolate biosynthesis.
+AT4G31500	fig|3702.11.peg.9730	12970475	SvetaG	CYP83A1 and CYP83B1, two nonredundant cytochrome P450 enzymes metabolizing oximes in the biosynthesis of glucosinolates in Arabidopsis.
+AT4G31780	fig|3702.11.peg.9759	11171188	SvetaG	The multigenic family of monogalactosyl diacylglycerol synthases.
+AT4G31780	fig|3702.11.peg.9759	11553816	SvetaG	Two types of MGDG synthase genes, found widely in both 16:3 and 18:3 plants, differentially mediate galactolipid syntheses in photosynthetic and nonphotosynthetic tissues in Arabidopsis thaliana.
+AT5G08280	fig|3702.11.peg.978	8000000	SvetaG	Porphobilinogen deaminase is encoded by a single gene in Arabidopsis thaliana and is targeted to the chloroplasts.
+AT5G08280	fig|3702.11.peg.978	8192681	SvetaG	Purification and properties of porphobilinogen deaminase from Arabidopsis thaliana.
+AT4G32210	fig|3702.11.peg.9807	15604729	SvetaG	Mitochondrial cytochrome c oxidase and succinate dehydrogenase complexes contain plant specific subunits.
+AT4G32770	fig|3702.11.peg.9870	16414959	OlgaZ	Tocopherol cyclase (VTE1) localization and vitamin E accumulation in chloroplast plastoglobule lipoprotein particles.
+AT4G32770	fig|3702.11.peg.9870	12213958	gjo	Isolation of an Arabidopsis mutant lacking vitamin E and identification of a cyclase essential for all tocopherol biosynthesis.
+AT4G32840	fig|3702.11.peg.9878	17485088	gjo	Characterisation of the ATP-dependent phosphofructokinase gene family from Arabidopsis thaliana.
+AT4G33030	fig|3702.11.peg.9899	11073956	gjo	Recombinant Arabidopsis SQD1 converts udp-glucose and sulfite to the sulfolipid head group precursor UDP-sulfoquinovose in vitro.
+AT4G33680	fig|3702.11.peg.9970	16361515	AndreiO	An LL-diaminopimelate aminotransferase defines a novel variant of the lysine biosynthesis pathway in plants.
+AT4G33790	fig|3702.11.peg.9980	19062129	SvetaG	Functional expression of five Arabidopsis fatty acyl-CoA reductase genes in Escherichia coli.
+AT4G33790	fig|3702.11.peg.9980	16980563	SvetaG	CER4 encodes an alcohol-forming fatty acyl-coenzyme A reductase involved in cuticular wax production in Arabidopsis.
