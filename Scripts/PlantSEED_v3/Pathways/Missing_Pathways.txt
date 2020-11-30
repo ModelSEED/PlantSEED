@@ -1,0 +1,281 @@
+Class	Subsystem	Role	Pathway ID	Pathway Name
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	1,2-dihydroxy-3-keto-5-methylthiopentene dioxygenase (EC 1.13.11.54)
+Carbohydrates	Starch_biosynthesis_in_plants	1,4-alpha-glucan (starch) branching enzyme, GH-13-type (EC 2.4.1.18)
+Carbohydrates	Starch_degradation_in_plants	1,4-alpha-glucan phosphorylase (EC 2.4.1.1)
+Cofactors	Phylloquinone_biosynthesis_in_plants	1,4-dihydroxy-2-naphthoyl-CoA hydrolase (EC 3.1.2.28), plant type
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	1-aminocyclopropane-1-carboxylate synthase (EC 4.4.1.14)
+Cofactors	Isoprenoid_biosynthesis_in_plants,_nonmevalonate_branch	1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate synthase (EC 1.17.7.1)
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	2,3-diketo-5-methylthiopentyl-1-phosphate enolase-phosphatase (EC 3.1.3.77)
+Cofactors	Phylloquinone_biosynthesis_in_plants	2-succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylic-acid synthase (EC 2.2.1.9)
+Cofactors	Phylloquinone_biosynthesis_in_plants	2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate synthase (EC 4.2.99.20)
+Fatty acids	Fatty_acid_biosynthesis_in_plants_(mitochondrial)	3-oxoacyl-[acyl-carrier-protein] synthase, KASII (EC 2.3.1.179)
+Fatty acids	Unsaturated_Fatty_Acid_biosynthesis_in_plants	3-oxoacyl-[acyl-carrier-protein] synthase, KASII (EC 2.3.1.179)
+Cell wall	Lignin_biosynthesis_in_plants	4-coumarate--CoA ligase 1 (EC 6.2.1.12)
+Amino acids	Lysine_and_threonine_metabolism_in_plants	4-hydroxy-tetrahydrodipicolinate reductase (EC 1.17.1.8)
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	5'-methylthioadenosine nucleosidase (EC 3.2.2.16)
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	5-methylthioribose kinase (EC 2.7.1.100)
+Cofactors	Biotin_biosynthesis_in_plants	8-amino-7-oxononanoate synthase (EC 2.3.1.47)
+Energy	F0F1-type_ATP_synthase_in_plants_(mitochondrial)	ATP synthase alpha chain (EC 3.6.3.14)
+Energy	F0F1-type_ATP_synthase_in_plants_(mitochondrial)	ATP synthase beta chain (EC 3.6.3.14)
+Energy	F0F1-type_ATP_synthase_in_plants_(mitochondrial)	ATP synthase delta chain (EC 3.6.3.14)
+Energy	F0F1-type_ATP_synthase_in_plants_(mitochondrial)	ATP synthase delta' chain (EC 3.6.3.14)
+Energy	F0F1-type_ATP_synthase_in_plants_(mitochondrial)	ATP synthase epsilon chain (EC 3.6.3.14)
+Energy	F0F1-type_ATP_synthase_in_plants_(mitochondrial)	ATP synthase gamma chain (EC 3.6.3.14)
+Central Carbon	Acetyl-CoA_biosynthesis_in_plants	Acetolactate synthase large subunit (EC 2.2.1.6)
+Central Carbon	TCA_cycle_in_plants	Acetolactate synthase large subunit (EC 2.2.1.6)
+Central Carbon	Acetyl-CoA_biosynthesis_in_plants	Acetolactate synthase small subunit (EC 2.2.1.6)
+Central Carbon	TCA_cycle_in_plants	Acetolactate synthase small subunit (EC 2.2.1.6)
+Fatty acids	Fatty_acid_biosynthesis_in_plants_(plastidial)	Acetyl-coenzyme A carboxyl transferase alpha chain (EC 6.4.1.2)
+Fatty acids	Acetyl-CoA_carboxylase_complexes_in_plants	Acetyl-coenzyme A carboxyl transferase alpha chain (EC 6.4.1.2)
+Fatty acids	Fatty_acid_biosynthesis_in_plants_(plastidial)	Acetyl-coenzyme A carboxyl transferase beta chain (EC 6.4.1.2)
+Fatty acids	Acetyl-CoA_carboxylase_complexes_in_plants	Acetyl-coenzyme A carboxyl transferase beta chain (EC 6.4.1.2)
+Fatty acids	Fatty_acid_biosynthesis_in_plants_(plastidial)	Acetyl-coenzyme A carboxyl transferase domain of homomeric ACCase (EC 6.4.1.2)
+Fatty acids	Acetyl-CoA_carboxylase_complexes_in_plants	Acetyl-coenzyme A carboxyl transferase domain of homomeric ACCase (EC 6.4.1.2)
+Fatty acids	Fatty_acid_biosynthesis_in_plants_(plastidial)	Acyl-CoA thioesterase II (EC 3.1.2.-)
+Amino acids	Histidine_Biosynthesis_in_plants	Adenylosuccinate synthetase (EC 6.3.4.4)
+Carbohydrates	Starch_degradation_in_plants	Alpha-amylase (EC 3.2.1.1)
+Carbohydrates	Starch_degradation_in_plants	Alpha-glucosidase (EC 3.2.1.20)
+Energy	Quinol_oxidases_in_plants_(mitochondrial)	Alternative oxidase, ubiquinol oxidase (EC 1.10.3.11)
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	Apyrase, ATP-diphosphatase (EC 3.6.1.5)
+Amino acids	Arginine_metabolism_and_urea_cycle_in_plants	Arginase (EC 3.5.3.1)
+Carbohydrates	Galactose_degradation_in_plants	Beta-phosphoglucomutase (EC 5.4.2.6)
+Fatty acids	Fatty_acid_biosynthesis_in_plants_(plastidial)	Biotin carboxyl carrier domain of homomeric Acetyl-CoA carboxylase
+Fatty acids	Acetyl-CoA_carboxylase_complexes_in_plants	Biotin carboxyl carrier domain of homomeric Acetyl-CoA carboxylase
+Fatty acids	Acetyl-CoA_carboxylase_complexes_in_plants	Biotin carboxyl carrier protein of acetyl-CoA carboxylase
+Fatty acids	Fatty_acid_biosynthesis_in_plants_(plastidial)	Biotin carboxylase domain of homomeric ACCase (EC 6.3.4.14)
+Fatty acids	Acetyl-CoA_carboxylase_complexes_in_plants	Biotin carboxylase domain of homomeric ACCase (EC 6.3.4.14)
+Fatty acids	Acetyl-CoA_carboxylase_complexes_in_plants	Biotin carboxylase of acetyl-CoA carboxylase (EC 6.3.4.14)
+Amino acids	Branched-chain_amino_acid_metabolism_in_plants	Branched-chain alpha-keto acid dehydrogenase, E1 component, alpha subunit (EC 1.2.4.4)
+Amino acids	Branched-chain_amino_acid_metabolism_in_plants	Branched-chain alpha-keto acid dehydrogenase, E1 component, beta subunit (EC 1.2.4.4)
+Lipids	CDP-diacylglycerol_biosynthesis_in_plants	CDP-diacylglycerol--glycerol-3-phosphate 3-phosphatidyltransferase (EC 2.7.8.5)
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	CTP synthase (EC 6.3.4.2)
+Lipids	Sphingolipid_biosynthesis_in_plants	Ceramide hydroxylase
+Cell wall	Lignin_biosynthesis_in_plants	Chalcone synthase (EC 2.3.1.74)
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	Cystathionine gamma-synthase (EC 2.5.1.48)
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	Cysteine desulfurase (EC 2.8.1.7), IscS subfamily
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	Cysteine synthase (EC 2.5.1.47)
+Energy	Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants	Cytochrome c oxidase polypeptide I (EC 1.9.3.1)
+Energy	Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants	Cytochrome c oxidase polypeptide II (EC 1.9.3.1)
+Energy	Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants	Cytochrome c oxidase polypeptide III (EC 1.9.3.1)
+Energy	Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants	Cytochrome c oxidase subunit 5a
+Energy	Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants	Cytochrome c oxidase subunit 5b
+Energy	Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants	Cytochrome c oxidase subunit 6a
+Energy	Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants	Cytochrome c oxidase subunit 6b
+Energy	Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants	Cytochrome c oxidase, subunit IV (EC 1.9.3.1)
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	D-serine dehydratase (EC 4.3.1.18)
+Amino acids	Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants	Delta-1-pyrroline-5-carboxylate dehydrogenase (EC 1.5.1.12)
+Lipids	Cuticular_wax_in_plants	Diacylglycerol O-acyltransferase (EC 2.3.1.20)
+Cofactors	Folate_biosynthesis_in_plants	Dihydrofolate reductase (EC 1.5.1.3)
+Cofactors	Folate_biosynthesis_in_plants	Dihydrofolate synthase (EC 6.3.2.12)
+Central Carbon	Acetyl-CoA_biosynthesis_in_plants	Dihydrolipoamide acetyltransferase component of pyruvate dehydrogenase complex (EC 2.3.1.12)
+Central Carbon	TCA_cycle_in_plants	Dihydrolipoamide acetyltransferase component of pyruvate dehydrogenase complex (EC 2.3.1.12)
+Amino acids	Branched-chain_amino_acid_metabolism_in_plants	Dihydrolipoamide acyltransferase component of branched-chain alpha-keto acid dehydrogenase complex (EC 2.3.1.168)
+Amino acids	Branched-chain_amino_acid_metabolism_in_plants	Dihydrolipoamide dehydrogenase of branched-chain alpha-keto acid dehydrogenase (EC 1.8.1.4)
+Central Carbon	Acetyl-CoA_biosynthesis_in_plants	Dihydrolipoamide dehydrogenase of pyruvate dehydrogenase complex (EC 1.8.1.4)
+Central Carbon	TCA_cycle_in_plants	Dihydrolipoamide dehydrogenase of pyruvate dehydrogenase complex (EC 1.8.1.4)
+Cofactors	Folate_biosynthesis_in_plants	Dihydropteroate synthase (EC 2.5.1.15)
+Cofactors	Chlorophyll_Biosynthesis_in_plants_and_prokaryotes	Divinyl (proto)chlorophyllide a 8-vinyl-reductase (EC 1.3.1.75)
+Cell wall	Lignin_biosynthesis_in_plants	Extradiol ring-cleavage dioxygenase [caffealdehyde, other] (EC 1.13.-.-)
+Cofactors	Riboflavin,_FMN_and_FAD_biosynthesis_in_plants	FAD pyrophosphatase (EC 3.6.1.18)
+Cofactors	Riboflavin,_FMN_and_FAD_biosynthesis_in_plants	FMN hydrolase, high substrate specificity (EC 3.1.3.-)
+Cell wall	Lignin_biosynthesis_in_plants	Fatty acid omega-hydroxylase (EC 1.14.13.-)
+Cell wall	Lignin_biosynthesis_in_plants	Flavanone-3-hydroxylase (EC 1.14.13.21)
+Cell wall	Lignin_biosynthesis_in_plants	Flavonoid 3'-hydroxylase (EC 1.14.13.21)
+Cell wall	Lignin_biosynthesis_in_plants	Flavonoid 3'-monooxygenase (EC 1.14.13.21)
+Carbohydrates	GDP-sugars_biosynthesis_and_interconversions_in_plants	GDP-L-fucose synthetase (EC 1.1.1.271)
+Nucleic acids	Purine_de_novo_biosynthesis_in_plants	GMP synthase [glutamine-hydrolyzing] (EC 6.3.5.2)
+Cofactors	Phylloquinone_biosynthesis_in_plants	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29)
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	Glutamate-glyoxylate aminotransferase (EC 2.6.1.4)
+Cofactors	Niacin,_NAD_and_NADP_biosynthesis_in_plants	Glutaminase (EC 3.5.1.2)
+Cofactors	Niacin,_NAD_and_NADP_biosynthesis_in_plants	Glutamine amidotransferase chain of NAD synthetase
+Lipids	Cutin_biosynthesis_in_plants	Glycerol-3-phosphate 2-O-acyltransferase (EC 2.3.1.198)
+Central Carbon	Glycolysis_and_Gluconeogenesis_in_plants	Glycerol-3-phosphate dehydrogenase (EC 1.1.5.3)
+Nucleic acids	Purine_de_novo_biosynthesis_in_plants	Guanylate kinase (EC 2.7.4.8)
+Cofactors	Heme_and_Siroheme_biosynthesis_in_plants	Heme O synthase, protoheme IX farnesyltransferase (EC 2.5.1.-) COX10-CtaB
+Central Carbon	Glycolysis_and_Gluconeogenesis_in_plants	Hexokinase (EC 2.7.1.1)
+Carbohydrates	Starch_degradation_in_plants	Hexokinase (EC 2.7.1.1)
+Cofactors	Thiamin_biosynthesis_in_plants	Hydroxyethylthiazole kinase (EC 2.7.1.50)
+Secondary	Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)	Indole glucosinolate glucohydrolase (myrosinase)
+Carbohydrates	UDP-glucose_and_UDP-galactose_biosynthesis_in_plants	Inorganic pyrophosphatase (EC 3.6.1.1)
+Nucleic acids	Purine_de_novo_biosynthesis_in_plants	Inosine-5'-monophosphate dehydrogenase (EC 1.1.1.205)
+Cofactors	Phylloquinone_biosynthesis_in_plants	Isochorismate synthase (EC 5.4.4.2)
+Cofactors	Geranylgeranyldiphosphate_biosynthesis_in_plants	Isopentenyl-diphosphate delta-isomerase (EC 5.3.3.2)
+Lipids	Cutin_biosynthesis_in_plants	Lauric acid in-chain hydroxylase (no EC)
+Cofactors	Chlorophyll_Biosynthesis_in_plants_and_prokaryotes	Light-dependent protochlorophyllide reductase (EC 1.3.1.33)
+Fatty acids	Polyunsaturated_fatty_acids_biosynthesis_in_plants	Linoleoyl-CoA desaturase (EC 1.14.19.3)
+Cell wall	Lignin_biosynthesis_in_plants	Long-chain fatty acid omega-alcohol dehydrogenase (EC 1.1.1.-)
+Cell wall	Lignin_biosynthesis_in_plants	Long-chain fatty acid omega-aldehyde dehydrogenase (EC 1.2.1.-)
+Cell wall	Lignin_biosynthesis_in_plants	Long-chain fatty acid omega-hydroxylase (EC 1.14.13.-)
+Lipids	Cutin_biosynthesis_in_plants	Long-chain fatty acid omega-hydroxylase (EC 1.14.13.-)
+Lipids	Cutin_biosynthesis_in_plants	Long-chain fatty acid omega-hydroxylase of sporopollenin biosynthesis (EC 1.14.13.-)
+Fatty acids	Polyunsaturated_fatty_acids_biosynthesis_in_plants	Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3)
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	Low-specificity L-threonine aldolase (EC 4.1.2.48)
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	Low-specificity L-threonine aldolase (EC 4.1.2.5)
+Cofactors	Folate_biosynthesis_in_plants	Methenyltetrahydrofolate cyclohydrolase (EC 3.5.4.9)
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	Methionine--glyoxylate aminotransferase (EC 2.6.1.73)
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	Methionine--oxo-acid aminotransferase (EC 2.6.1.88)
+Secondary	Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)	Methylthioalkylmalate dehydrogenase (EC 1.1.1.-)
+Amino acids	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Methylthioalkylmalate isomerase large subunit (EC 5.4.4.-)
+Secondary	Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)	Methylthioalkylmalate isomerase large subunit (EC 5.4.4.-)
+Amino acids	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Methylthioalkylmalate isomerase small subunit (EC 5.4.4.-)
+Secondary	Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)	Methylthioalkylmalate isomerase small subunit (EC 5.4.4.-)
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	Methylthioribose-1-phosphate isomerase (EC 5.3.1.23)
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	Methylthioribulose-1-phosphate dehydratase (EC 4.2.1.109)
+Central Carbon	TCA_cycle_in_plants	NAD-dependent malic enzyme (EC 1.1.1.38)
+Central Carbon	Glycolysis_and_Gluconeogenesis_in_plants	NADPH-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.13)
+Cofactors	Phylloquinone_biosynthesis_in_plants	Naphthoate synthase (EC 4.1.3.36)
+Cofactors	Niacin,_NAD_and_NADP_biosynthesis_in_plants	Nicotinate N-methyltransferase (EC 2.1.1.7)
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	Nucleoside diphosphate kinase (EC 2.7.4.6)
+Cofactors	Phylloquinone_biosynthesis_in_plants	O-succinylbenzoate synthase (EC 4.2.1.113)
+Cofactors	Phylloquinone_biosynthesis_in_plants	O-succinylbenzoic acid--CoA ligase (EC 6.2.1.26)
+Cell wall	Pectin_metabolism_in_plants	Pectinesterase (EC 3.1.1.11)
+Cell wall	Lignin_biosynthesis_in_plants	Peroxidase (EC 1.11.1.7)
+Cell wall	Lignin_biosynthesis_in_plants	Phenylalanine ammonia-lyase (EC 4.3.1.24)
+Lipids	CDP-diacylglycerol_biosynthesis_in_plants	Phosphatidylglycerophosphatase A (EC 3.1.3.27)
+Lipids	CDP-diacylglycerol_biosynthesis_in_plants	Phosphatidylglycerophosphatase B (EC 3.1.3.27)
+Central Carbon	Glycolysis_and_Gluconeogenesis_in_plants	Phosphoenolpyruvate carboxylase (EC 4.1.1.31)
+Carbohydrates	Starch_degradation_in_plants	Phosphoglucomutase (EC 5.4.2.2)
+Carbohydrates	UDP-glucose_and_UDP-galactose_biosynthesis_in_plants	Phosphoglucomutase (EC 5.4.2.2)
+Energy	F0F1-type_ATP_synthase_in_plants_(plastidial)	Plastidial ATP synthase alpha chain (EC 3.6.3.14)
+Energy	F0F1-type_ATP_synthase_in_plants_(plastidial)	Plastidial ATP synthase beta chain (EC 3.6.3.14)
+Energy	F0F1-type_ATP_synthase_in_plants_(plastidial)	Plastidial ATP synthase delta chain
+Energy	F0F1-type_ATP_synthase_in_plants_(plastidial)	Plastidial ATP synthase epsilon chain
+Energy	F0F1-type_ATP_synthase_in_plants_(plastidial)	Plastidial ATP synthase gamma chain
+Cell wall	Pectin_metabolism_in_plants	Polygalacturonase (EC 3.2.1.15)
+Cofactors	Heme_and_Siroheme_biosynthesis_in_plants	Precorrin-2 oxidase (EC 1.3.1.76)
+Amino acids	Tyrosine_and_phenylalanine_metabolism_in_plants	Prephenate dehydratase (EC 4.2.1.51)
+Energy	Respiratory_complex_IV_(terminal_cytochrome_c_oxidase)_in_plants	Probable cytochrome c oxidase subunit 5c
+Central Carbon	Glycolysis_and_Gluconeogenesis_in_plants	Protein CP12, regulation of Calvin cycle via association/dissociation of PRK/CP12/GAPDH complex
+Energy	Respiratory_complex_III_(cytochrome_b-c1)_in_plants	Putative ubiquinol-cytochrome c reductase complex core protein I (subunit COR1)
+Energy	Respiratory_complex_III_(cytochrome_b-c1)_in_plants	Putative ubiquinol-cytochrome c reductase complex core protein II (subunit COR2)
+Cofactors	Pyridoxine_(vitamin_B6)_biosynthesis_in_plants	Pyridoxal reductase (EC 1.1.1.65)
+Cofactors	Pyridoxine_(vitamin_B6)_biosynthesis_in_plants	Pyridoxal-5'-phosphate phosphatase (EC 3.1.3.74), eukaryotic type
+Cofactors	Niacin,_NAD_and_NADP_biosynthesis_in_plants	Pyridoxamine 5'-phosphate oxidase (EC 1.4.3.5)
+Cofactors	Pyridoxine_(vitamin_B6)_biosynthesis_in_plants	Pyridoxamine-pyruvate aminotransferase (EC 2.6.1.30)
+Carbohydrates	UDP-glucose_and_UDP-galactose_biosynthesis_in_plants	Pyrophosphate-energized proton pump (EC 3.6.1.1)
+Central Carbon	TCA_cycle_in_plants	Pyruvate decarboxylase (EC 4.1.1.1)
+Central Carbon	Acetyl-CoA_biosynthesis_in_plants	Pyruvate dehydrogenase E1 component alpha subunit (EC 1.2.4.1)
+Central Carbon	TCA_cycle_in_plants	Pyruvate dehydrogenase E1 component alpha subunit (EC 1.2.4.1)
+Central Carbon	Acetyl-CoA_biosynthesis_in_plants	Pyruvate dehydrogenase E1 component beta subunit (EC 1.2.4.1)
+Central Carbon	TCA_cycle_in_plants	Pyruvate dehydrogenase E1 component beta subunit (EC 1.2.4.1)
+Central Carbon	Glycolysis_and_Gluconeogenesis_in_plants	Pyruvate,phosphate dikinase (EC 2.7.9.1)
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	Ribonucleotide reductase of class Ia (aerobic), alpha subunit (EC 1.17.4.1)
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	Ribonucleotide reductase of class Ia (aerobic), beta subunit (EC 1.17.4.1)
+Amino acids	Methionine_and_cysteine_metabolism_in_plants	Serine acetyltransferase (EC 2.3.1.30)
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	Serine hydroxymethyltransferase (EC 2.1.2.1)
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	Serine--glyoxylate aminotransferase (EC 2.6.1.45)
+Cofactors	Heme_and_Siroheme_biosynthesis_in_plants	Sirohydrochlorin ferrochelatase (EC 4.99.1.4)
+Cofactors	Plastoquinone_biosynthesis_in_plants	Solanesyl diphosphate synthase (EC 2.5.1.85)
+Cofactors	Ubiquinone_biosynthesis_in_plants	Solanesyl diphosphate synthase (EC 2.5.1.85)
+Carbohydrates	Starch_degradation_in_plants	Starch debranching enzyme, pullulanase (EC 3.2.1.142)
+Central Carbon	TCA_cycle_in_plants	Succinate dehydrogenase (ubiquinone) cytochrome b560 subunit SDH3/SDHC
+Central Carbon	TCA_cycle_in_plants	Succinate dehydrogenase (ubiquinone) flavoprotein subunit SDH1/SDHA (EC 1.3.5.1)
+Central Carbon	TCA_cycle_in_plants	Succinate dehydrogenase (ubiquinone) iron-sulfur subunit SDH2/SDHB (EC 1.3.5.1)
+Central Carbon	TCA_cycle_in_plants	Succinate dehydrogenase (ubiquinone) membrane anchor subunit SDH4/SDHD
+Central Carbon	TCA_cycle_in_plants	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH5
+Central Carbon	TCA_cycle_in_plants	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH6
+Central Carbon	TCA_cycle_in_plants	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH7
+Carbohydrates	Galactose_degradation_in_plants	Sucrose synthase (EC 2.4.1.13)
+Carbohydrates	UDP-glucose_and_UDP-galactose_biosynthesis_in_plants	Sucrose synthase (EC 2.4.1.13)
+Cofactors	Thiamin_biosynthesis_in_plants	Thiamine-triphosphatase (EC 3.6.1.28)
+Cofactors	Thiamin_biosynthesis_in_plants	Thiamine-triphosphatase (ThTP) synthase (EC 2.7.4.15)
+Amino acids	Branched-chain_amino_acid_metabolism_in_plants	Threonine dehydratase biosynthetic (EC 4.3.1.19)
+Cell wall	Lignin_biosynthesis_in_plants	Trans-cinnamate 4-monooxygenase (EC 1.14.13.11)
+Cell wall	Lignin_biosynthesis_in_plants	Tyramine N-feruloyltransferase (EC 2.3.1.110)
+Carbohydrates	UDP-L-rhamnose_Biosynthesis_in_plants	UDP-4-dehydro-6-deoxy-glucose 3,5-epimerase (no EC)
+Carbohydrates	UDP-L-rhamnose_Biosynthesis_in_plants	UDP-4-dehydro-rhamnose reductase (EC 1.1.1.-)
+Carbohydrates	UDP-glucose_and_UDP-galactose_biosynthesis_in_plants	UDP-glucose 4-epimerase (EC 5.1.3.2)
+Carbohydrates	Galactose_degradation_in_plants	UDP-glucose dehydrogenase (EC 1.1.1.22)
+Cofactors	Niacin,_NAD_and_NADP_biosynthesis_in_plants	UDP-glucose:nicotinate-N-glucosyltransferase  (EC 2.4.1.196)
+Cofactors	Folate_biosynthesis_in_plants	UDP-glucose:p-aminobenzoate glucosyltransferase
+Cofactors	Pyridoxine_(vitamin_B6)_biosynthesis_in_plants	UDP-glucose:pyridoxine 5'-O-beta-D-glucosyltransferase (EC 2.4.1.160)
+Carbohydrates	Galactose_degradation_in_plants	UTP--glucose-1-phosphate uridylyltransferase (EC 2.7.7.9)
+Carbohydrates	UDP-glucose_and_UDP-galactose_biosynthesis_in_plants	UTP--glucose-1-phosphate uridylyltransferase (EC 2.7.7.9)
+Energy	Respiratory_complex_III_(cytochrome_b-c1)_in_plants	Ubiquinol--cytochrome c reductase, cytochrome B subunit (EC 1.10.2.2)
+Energy	Respiratory_complex_III_(cytochrome_b-c1)_in_plants	Ubiquinol-cytochrome C reductase iron-sulfur subunit (EC 1.10.2.2)
+Energy	Respiratory_complex_III_(cytochrome_b-c1)_in_plants	Ubiquinol-cytochrome c reductase complex subunit 6 (hinge protein)
+Energy	Respiratory_complex_III_(cytochrome_b-c1)_in_plants	Ubiquinol-cytochrome c reductase complex subunit 7
+Energy	Respiratory_complex_III_(cytochrome_b-c1)_in_plants	Ubiquinol-cytochrome c reductase complex subunit 8 (ubiquinone-binding protein QP-C)
+Energy	Respiratory_complex_III_(cytochrome_b-c1)_in_plants	Ubiquinol-cytochrome c reductase complex subunit 9
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	Uridine monophosphate/cytidine monophosphate kinase (EC 2.7.4.14)
+Cofactors	Heme_and_Siroheme_biosynthesis_in_plants	Uroporphyrinogen-III methyltransferase (EC 2.1.1.107)
+Energy	V-Type_ATP_synthase_in_plants_(vacuolar)	V-type ATP synthase subunit A (EC 3.6.3.14)
+Energy	V-Type_ATP_synthase_in_plants_(vacuolar)	V-type ATP synthase subunit B (EC 3.6.3.14)
+Energy	V-Type_ATP_synthase_in_plants_(vacuolar)	V-type ATP synthase subunit C (EC 3.6.3.14)
+Energy	V-Type_ATP_synthase_in_plants_(vacuolar)	V-type ATP synthase subunit D (EC 3.6.3.14)
+Energy	V-Type_ATP_synthase_in_plants_(vacuolar)	V-type ATP synthase subunit E (EC 3.6.3.14)
+Energy	V-Type_ATP_synthase_in_plants_(vacuolar)	V-type ATP synthase subunit F (EC 3.6.3.14)
+Energy	V-Type_ATP_synthase_in_plants_(vacuolar)	V-type ATP synthase subunit G (EC 3.6.3.14)
+Energy	V-Type_ATP_synthase_in_plants_(vacuolar)	V-type ATP synthase subunit H (EC 3.6.3.14)
+Energy	Photosystem_I	alternative photosystem I reaction center subunit X (PsaK2)
+Energy	Photosystem_I	photosystem I 4.8K protein (PsaX)
+Energy	Photosystem_I	photosystem I P700 chlorophyll a apoprotein subunit Ia (PsaA)
+Energy	Photosystem_I	photosystem I P700 chlorophyll a apoprotein subunit Ib (PsaB)
+Energy	Photosystem_I	photosystem I assembly related protein Ycf3
+Energy	Photosystem_I	photosystem I assembly related protein Ycf37
+Energy	Photosystem_I	photosystem I assembly related protein Ycf4
+Energy	Photosystem_I	photosystem I biogenesis protein BtpA
+Energy	Photosystem_I	photosystem I iron-sulfur center subunit VII (PsaC)
+Energy	Photosystem_I	photosystem I subunit II (PsaD)
+Energy	Photosystem_I	photosystem I subunit III precursor, plastocyanin (cyt c553) docking protein (PsaF)
+Energy	Photosystem_I	photosystem I subunit IV (PsaE)
+Energy	Photosystem_I	photosystem I subunit IX (PsaJ)
+Energy	Photosystem_I	photosystem I subunit PsaG
+Energy	Photosystem_I	photosystem I subunit PsaN
+Energy	Photosystem_I	photosystem I subunit PsaO
+Energy	Photosystem_I	photosystem I subunit PsaP
+Energy	Photosystem_I	photosystem I subunit VI (PsaH)
+Energy	Photosystem_I	photosystem I subunit VIII (PsaI)
+Energy	Photosystem_I	photosystem I subunit X (PsaK, PsaK1)
+Energy	Photosystem_I	photosystem I subunit XI (PsaL)
+Energy	Photosystem_I	photosystem I subunit XII (PsaM)
+Cell wall	Lignin_biosynthesis_in_plants	trans-cinnamate 2-monooxygenase (EC 1.14.13.14)
+Energy	Respiratory_complex_III_(cytochrome_b-c1)_in_plants	ubiquinol cytochrome C oxidoreductase, cytochrome C1 subunit
+Carbohydrates	Galactose_degradation_in_plants	Spontaneous Reaction
+Amino acids	Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants	Spontaneous Reaction
+Carbohydrates	Starch_degradation_in_plants	Spontaneous Reaction
+Carbohydrates	GDP-sugars_biosynthesis_and_interconversions_in_plants	Spontaneous Reaction
+Secondary	Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)	Spontaneous Reaction
+Carbohydrates	Starch_biosynthesis_in_plants	Spontaneous Reaction
+Carbohydrates	Sucrose_metabolism_in_plants	Spontaneous Reaction
+Cofactors	Niacin,_NAD_and_NADP_biosynthesis_in_plants	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)
+Nucleic acids	Purine_de_novo_biosynthesis_in_plants	Ribose-phosphate pyrophosphokinase (EC 2.7.6.1)
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	Deoxyuridine 5'-triphosphate nucleotidohydrolase (EC 3.6.1.23)
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	Carbonic anhydrase (EC 4.2.1.1)
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	Thymidylate kinase (EC 2.7.4.9)
+Central Carbon	Photorespiration_(oxidative_C2_cycle)_in_plants	Glycolaldehyde dehydrogenase (EC 1.2.1.21)
+Cofactors	Pyridoxine_(vitamin_B6)_biosynthesis_in_plants	PLP transport
+Amino acids	Branched-chain_amino_acid_metabolism_in_plants	Methionine gamma-lyase (EC 4.4.1.11)
+Cofactors	Biotin_biosynthesis_in_plants	Hypothetical reaction
+Cofactors	Biotin_biosynthesis_in_plants	KAPA transport
+Cofactors	Biotin_biosynthesis_in_plants	Biotin transport
+Cofactors	Biotin_biosynthesis_in_plants	S-Adenosyl-4-methylthio-2-oxobutanoate transport
+Central Carbon	TCA_cycle_in_plants	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH8
+Amino acids	Beta_alanine_biosynthesis_in_plants	Hydrouracil transport
+Amino acids	Beta_alanine_biosynthesis_in_plants	Uracil transport
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	Uracil phosphoribosyltransferase (EC 2.4.2.9)
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	Uridine nucleosidase (EC 3.2.2.3)
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	Deoxycytidine monophosphate deaminase (EC 3.5.4.12)
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	Dihydroorotate transport
+Nucleic acids	Pyrimidine_de_novo_biosynthesis_in_plants	Orotate transport
+Nucleic acids	Purine_de_novo_biosynthesis_in_plants	IMP transport
+Central Carbon	Glycolysis_and_Gluconeogenesis_in_plants	Sugar-terminal-phosphatase (EC 3.1.3.9/ EC 3.1.3.58)
+Carbohydrates	Sucrose_metabolism_in_plants	Sugar-terminal-phosphatase (EC 3.1.3.9/ EC 3.1.3.58)
+Central Carbon	Pentose_phosphate_pathway_in_plants	Gluconokinase (EC 2.7.1.12)
+Central Carbon	Pentose_phosphate_pathway_in_plants	Ribokinase (EC 2.7.1.12)
+Amino acids	Alanine,_serine,_glycine_metabolism_in_plants	5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase
+Central Carbon	Photorespiration_(oxidative_C2_cycle)_in_plants	5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase
+Cofactors	Folate_biosynthesis_in_plants	5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase
+Cofactors	Biotin_biosynthesis_in_plants	5-deoxyadenosine phosphorylase (EC 2.4.2.-)
+Cofactors	Thiamin_biosynthesis_in_plants	5-deoxyadenosine phosphorylase (EC 2.4.2.-)
+Cofactors	Biotin_biosynthesis_in_plants	5-deoxyribose-1-phosphate isomerase (EC 5.3.1.-)
+Cofactors	Thiamin_biosynthesis_in_plants	5-deoxyribose-1-phosphate isomerase (EC 5.3.1.-)
+Cofactors	Biotin_biosynthesis_in_plants	5-deoxy-ribulose-1-phosphate aldolase (EC 4.1.2.-)
+Cofactors	Thiamin_biosynthesis_in_plants	5-deoxy-ribulose-1-phosphate aldolase (EC 4.1.2.-)
+Cofactors	Ubiquinone_biosynthesis_in_plants	4-coumarate-CoA acyltransferase (EC 2.3.1.-)
+Cofactors	Ubiquinone_biosynthesis_in_plants	4-hydroxybenzoyl-CoA thioesterase (EC 3.1.2.23)
+Cofactors	Niacin,_NAD_and_NADP_biosynthesis_in_plants	NAD(P)H-hydrate epimerase (EC 5.1.99.6)
+Amino acids	Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants	Isocitrate dehydrogenase [NAD] regulatory subunit (EC 1.1.1.41)
+Central Carbon	TCA_cycle_in_plants	Isocitrate dehydrogenase [NAD] regulatory subunit (EC 1.1.1.41)
+Amino acids	Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants	Isocitrate dehydrogenase [NAD] catalytic subunit (EC 1.1.1.41)
+Central Carbon	TCA_cycle_in_plants	Isocitrate dehydrogenase [NAD] catalytic subunit (EC 1.1.1.41)
