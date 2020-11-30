@@ -1,0 +1,103 @@
+##protein
+#Amino Acids
+All|AA	cpd00023	c	0.130	Glutamate	protein
+All|AA	cpd00033	c	0.150	Glycine	protein
+All|AA	cpd00035	c	0.161	Alanine	protein
+All|AA	cpd00039	c	0.096	Lysine	protein
+All|AA	cpd00041	c	0.098	Aspartate	protein
+All|AA	cpd00051	c	0.110	Arginine	protein
+All|AA	cpd00053	c	0.071	Glutamine	protein
+All|AA	cpd00054	c	0.100	Serine	protein
+All|AA	cpd00060	c	0.049	Methionine	protein
+All|AA	cpd00065	c	0.024	Tryptophan	protein
+All|AA	cpd00066	c	0.074	Phenylalanine	protein
+All|AA	cpd00069	c	0.049	Tyrosine	protein
+All|AA	cpd00084	c	0.029	Cysteine	protein
+All|AA	cpd00107	c	0.172	Leucine	protein
+All|AA	cpd00119	c	0.038	Histidine	protein
+All|AA	cpd00129	c	0.096	Proline	protein
+All|AA	cpd00132	c	0.056	Asparagine	protein
+All|AA	cpd00156	c	0.127	Valine	protein
+All|AA	cpd00161	c	0.096	Threonine	protein
+All|AA	cpd00322	c	0.083	Isoleucine	protein
+
+##rna
+All|NA	cpd00002	c	0.027	ATP	rna
+All|NA	cpd00052	c	0.026	CTP	rna
+All|NA	cpd00038	c	0.026	GTP	rna
+All|NA	cpd00062	c	0.027	UTP	rna
+
+##dna
+All|NA	cpd00115	c	0.030	dATP	dna
+All|NA	cpd00356	c	0.026	dCTP	dna
+All|NA	cpd00241	c	0.026	dGTP	dna
+All|NA	cpd00357	c	0.030	dTTP	dna
+
+#PPi
+All|NA	cpd00012	c	-0.218	PPi	rna
+
+##cellwall
+#Carbohydrates
+All|CW	cpd19001	c	1.590	alpha-D-Glucose	cellwall
+All|CW	cpd30321	c	0.2271	beta-D-Fructose	cellwall
+All|CW	cpd00163	c	0.766	UDP-Xylose	cellwall
+All|CW	cpd16443	c	0.0377	beta-D-Ribose	cellwall
+All|CW	cpd00080	c	0.1300	Glycerol-3-Phosphate	cellwall
+
+#UDP
+All|CW	cpd00014	c	-0.766	UDP	cellwall
+
+#Lignin
+All|CW	cpd01059	c	0.076	Ferulic acid	cellwall
+All|CW	cpd00604	c	0.550	p-coumaric acid	cellwall
+
+##lipid
+#Fats and Sterols (sum of C18)
+All|FA	cpd00214	c	0.329	Palmitate	lipid
+All|FA	cpd00536	c	0.015	Oleate	lipid
+All|FA	cpd01080	c	0.011	Stearate	lipid
+
+##cofactor
+#Cofactors
+All|CO	cpd00104	c	0.0000008	Biotin	cofactor
+All|CO	cpd00056	c	0.000043	Thiamin diphosphate	cofactor
+All|CO	cpd00016	c	0.000040	Pyridoxal 5'-phosphate	cofactor
+All|CO	cpd00003	c	0.000300	NAD	cofactor
+All|CO	cpd00004	c	0.000150	NADH	cofactor
+All|CO	cpd00006	c	0.000130	NADPH	cofactor
+All|CO	cpd00005	c	0.000060	NADP	cofactor
+All|CO	cpd00015	c	0.000030	FAD	cofactor
+All|CO	cpd00050	c	0.000020	FMN	cofactor
+All|CO	cpd00010	c	0.000136	CoA	cofactor
+All|CO	cpd00087	c	0.0000011	Tetrahydrofolate	cofactor
+All|CO	cpd02197	c	0.0000011	5-Formyltetrahydrofolate	cofactor
+All|CO	cpd00201	c	0.0000066	10-Formyltetrahydrofolate	cofactor
+All|CO	cpd00347	c	0.0000066	5,10-Methenyltetrahydrofolate	cofactor
+All|CO	cpd00125	c	0.0000011	5,10-Methylenetetrahydrofolate	cofactor
+All|CO	cpd00345	c	0.0000055	5-Methyltetrahydrofolate	cofactor
+All|CO	cpd25914	c	0.000011	Ubiquinone-9	cofactor
+All|CO	cpd16503	c	0.000155	Plastoquinone	cofactor
+All|CO	cpd00017	c	0.000543	S-Adenosylmethionine	cofactor
+All|CO	cpd00834	c	0.001	Phosphopantetheine	cofactor
+All|CO	cpd12844	d	0.000975	Phylloquinol	cofactor
+
+#Carboxylic acids
+All|CA	cpd00032	c	0.0757	Oxaloacetate	other
+All|CA	cpd00130	c	0.037	Malate	other
+All|CA	cpd00137	c	0.013	Citrate	other
+All|CA	cpd00331	c	0.086	cis-Aconitate	other
+All|CA	cpd00159	c	0.039	Lactate	other
+
+#Pigments   		
+All|CO	cpd01420	c	0.0026	Carotene	other
+
+#Minerals
+All|CH	cpd00205	c	0.307	Potassium	other
+All|CH	cpd00099	c	0.210	Chloride	other
+
+#Energy
+All|EN	cpd00002	c	30	ATP	energy
+All|EN	cpd00001	c	30	H2O	energy
+All|EN	cpd00008	c	-30	ADP	energy
+All|EN	cpd00009	c	-30	Pi	energy
+All|EN	cpd00067	c	-30	Proton	energy
