@@ -36,6 +36,17 @@ with open("../../../Data/PlantSEED_v3/Restricted_PlantSEED_Gapfilling_MSDv1.1.1.
 # The asymmetric transport is now encoded in the PlantSEED roles file.
 # I'm leaving this note as it's an important distinction that may be lost.
 
+# D) Load unbalanced reactions to include
+# The update to the biochemistry meant that a few reactions *became* unbalanced when
+# they shouldn't have been.
+# As of 12/01/20, there are two problematic compounds: THF and Stearoyl-ACP that need investigating
+excepted_reactions_list=list()
+with open("Unbalanced_Reactions_to_Fix.txt") as exc_rxn_fh:
+    for line in exc_rxn_fh.readlines():
+        line=line.rstrip('\r\n')
+        excepted_reactions_list.append(line)
+print(excepted_reactions_list)
+
 ############################
 ## Load Biochemistry
 ############################
@@ -83,6 +94,8 @@ for line in remote_file.readlines():
         header=0
         continue
 
+    if(columns_list[1][-1] == '0'):
+        columns_list[1]=columns_list[1][0:-1]
     cpt_hash = {'id' : columns_list[1], 'name' : columns_list[2],
                 'hierarchy' : int(columns_list[3]), 'pH' : int(columns_list[4]),
                 'aliases' : columns_list[5].split(',')}
@@ -201,7 +214,7 @@ for template_reaction in sorted(complexes.keys()):
                                   'triggering' : 1 }
 
             complex_hash['complexroles'].append(complex_role_hash)
-            rca_fh.write("\t".join([template_reaction,complex_hash['id'],roles_ids[role],role,"|".join(sorted(roles[role]))]))
+            rca_fh.write("\t".join([template_reaction,complex_hash['id'],roles_ids[role],role,"|".join(sorted(roles[role]))])+"\n")
 	
         template_complexes.append(complex_hash)
 
@@ -230,7 +243,8 @@ for template_reaction in reactions_roles:
     [base_reaction,reaction_cpts]=template_reaction.split('_')
 
     # Skip unbalanced reactions
-    if(base_reaction not in reactions_dict or 'OK' not in reactions_dict[base_reaction]['status']):
+    if(base_reaction not in excepted_reactions_list and \
+       (base_reaction not in reactions_dict or 'OK' not in reactions_dict[base_reaction]['status'])):
         excluded_rxns_fh.write("Skipping unbalanced reaction: "+base_reaction+"\n")
         continue
     
@@ -309,7 +323,7 @@ for template_reaction in reactions_roles:
         # Check and extend list of template compartments
         if(rgt_cpt not in check_tpl_cpt_dict):
             check_tpl_cpt_dict[rgt_cpt]=1
-            template_compartments.append(compartments[rgt_cpt+'0'])
+            template_compartments.append(compartments[rgt_cpt])
 
         # Check and extend list of template compounds
         if(compound not in check_tpl_cpd_dict):
@@ -362,7 +376,7 @@ model_template={ 'id' : "Plant",
                 
                 'compartments' : template_compartments,
                 'compounds' : template_compounds, 
-                'compcompounds' : [], 
+                'compcompounds' : template_compcompounds, 
                 
                 'reactions' : template_reactions, 
                 'roles' : template_roles, 
