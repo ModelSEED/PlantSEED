@@ -695,6 +695,36 @@
         "publications": []
     },
     {
+        "role": "2-Carboxy-1,4-naphthoquinone phytyltransferase (EC 2.5.1.130)",
+        "include": true,
+        "subsystems": [
+            "Phylloquinone_biosynthesis_in_plants"
+        ],
+        "classes": {
+            "Cofactors": {
+                "Phylloquinone_biosynthesis_in_plants": [
+                    "PWY-5027"
+                ]
+            }
+        },
+        "features": [
+            "AT1G60600"
+        ],
+        "reactions": [
+            "rxn44318"
+        ],
+        "localization": {
+            "d": {
+                "AT1G60600": [
+                    "PPDB"
+                ]
+            }
+        },
+        "publications": [
+            "15686525"
+        ]
+    },
+    {
         "role": "2-Keto-3-deoxy-D-manno-octulosonate-8-phosphate synthase (EC 2.5.1.55)",
         "include": false,
         "subsystems": [
@@ -8565,6 +8595,37 @@
             }
         },
         "publications": []
+    },
+    {
+        "role": "Demethylphylloquinone methyltransferase (EC 2.1.1.329)",
+        "include": true,
+        "subsystems": [
+            "Phylloquinone_biosynthesis_in_plants"
+        ],
+        "classes": {
+            "Cofactors": {
+                "Phylloquinone_biosynthesis_in_plants": [
+                    "PWY-5027"
+                ]
+            }
+        },
+        "features": [
+            "AT1G23360"
+        ],
+        "reactions": [
+            "rxn04674"
+        ],
+        "localization": {
+            "d": {
+                "AT1G23360": [
+                    "PPDB",
+                    "AraCyc"
+                ]
+            }
+        },
+        "publications": [
+            "17082184"
+        ]
     },
     {
         "role": "Deoxycytidine monophosphate deaminase (EC 3.5.4.12)",
@@ -30302,5 +30363,36 @@
             }
         },
         "publications": []
+    },
+    {
+        "role": "Spontaneous Reaction",
+        "include": true,
+        "subsystems": [
+            "Phylloquinone_biosynthesis_in_plants"
+        ],
+        "classes": {
+            "Cofactors": {
+                "Phylloquinone_biosynthesis_in_plants": [
+                    "PWY-5027"
+                ]
+            }
+        },
+        "features": [
+            ""
+        ],
+        "reactions": [
+            "rxn42688"
+        ],
+        "localization": {
+            "d": {
+                "": [
+                    "PPDB",
+                    "AraCyc"
+                ]
+            }
+        },
+        "publications": [
+            "27837168"
+        ]
     }
 ]
