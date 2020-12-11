@@ -15848,6 +15848,36 @@
         ]
     },
     {
+        "role": "Malate dehydrogenase (NADP+) (EC 1.1.1.82)",
+        "include": true,
+        "subsystems": [
+            "Calvin-Benson-Bassham_cycle_in_plants"
+        ],
+        "classes": {
+            "Central Carbon": {
+                "Calvin-Benson-Bassham_cycle_in_plants": [
+                    "CALVIN-PWY"
+                ]
+            }
+        },
+        "features": [
+            "AT5G58330"
+        ],
+        "reactions": [
+            "rxn00249"
+        ],
+        "localization": {
+            "d": {
+                "AT5G58330": [
+                    "PPDB"
+                ]
+            }
+        },
+        "publications": [
+            "8665917"
+        ]
+    },
+    {
         "role": "Malate synthase (EC 2.3.3.9)",
         "include": true,
         "subsystems": [
@@ -25813,6 +25843,32 @@
         "publications": []
     },
     {
+        "role": "Spontaneous Reaction",
+        "include": true,
+        "subsystems": [
+            "Phylloquinone_biosynthesis_in_plants"
+        ],
+        "classes": {
+            "Cofactors": {
+                "Phylloquinone_biosynthesis_in_plants": [
+                    "PWY-5027"
+                ]
+            }
+        },
+        "features": [],
+        "reactions": [
+            "rxn42688"
+        ],
+        "localization": {
+            "d": {
+                "rxn42688": []
+            }
+        },
+        "publications": [
+            "27837168"
+        ]
+    },
+    {
         "role": "Starch debranching enzyme, isoamylase (EC 3.2.1.68)",
         "include": false,
         "subsystems": [
@@ -30363,36 +30419,5 @@
             }
         },
         "publications": []
-    },
-    {
-        "role": "Spontaneous Reaction",
-        "include": true,
-        "subsystems": [
-            "Phylloquinone_biosynthesis_in_plants"
-        ],
-        "classes": {
-            "Cofactors": {
-                "Phylloquinone_biosynthesis_in_plants": [
-                    "PWY-5027"
-                ]
-            }
-        },
-        "features": [
-            ""
-        ],
-        "reactions": [
-            "rxn42688"
-        ],
-        "localization": {
-            "d": {
-                "": [
-                    "PPDB",
-                    "AraCyc"
-                ]
-            }
-        },
-        "publications": [
-            "27837168"
-        ]
     }
 ]
