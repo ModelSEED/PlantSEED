@@ -5,15 +5,27 @@ with open("../../../../Data/PlantSEED_v3/PlantSEED_Roles.json") as subsystem_fil
     roles_list = json.load(subsystem_file)
 
 roles_dict=dict()
+spontaneous_reactions=list()
 for entry in roles_list:
     roles_dict[entry['role']]=entry
+    if(entry['role'] == 'Spontaneous Reaction'):
+        for reaction in entry['reactions']:
+            if(reaction not in spontaneous_reactions):
+                spontaneous_reactions.append(reaction)
 
 with open('Add_Roles.txt') as roles_file:
     for line in roles_file.readlines():
         line=line.strip('\r\n')
         (cls,ss,pwy,role,rxn,ftr,pub,loc)=line.split('\t')
 
-        if(role == 'Spontaneous Reaction' or role not in roles_dict):
+        new_role = False
+        if(role not in roles_dict):
+            new_role = True
+        elif(role == 'Spontaneous Reaction'):
+            if(rxn not in spontaneous_reactions):
+                new_role = True
+
+        if(new_role is True):
             new_role = {'role':'',
                         'include':True,
                         'subsystems':[],
