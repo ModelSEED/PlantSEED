@@ -1948,7 +1948,8 @@
         "reactions": [
             "rxn01571",
             "rxn01427",
-            "rxn01182"
+            "rxn01182",
+            "rxn01613"
         ],
         "localization": {
             "c": {
@@ -1957,7 +1958,9 @@
                 "rxn01182": []
             }
         },
-        "publications": []
+        "publications": [
+            "25016610"
+        ]
     },
     {
         "role": "4-coumarate--CoA ligase 1 (EC 6.2.1.12)",
@@ -20263,14 +20266,17 @@
             "AT2G37040"
         ],
         "reactions": [
-            "rxn00495"
+            "rxn00495",
+            "rxn00530"
         ],
         "localization": {
             "c": {
                 "rxn00495": []
             }
         },
-        "publications": []
+        "publications": [
+            "28392421"
+        ]
     },
     {
         "role": "Phenylalanine transport",
