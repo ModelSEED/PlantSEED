@@ -25531,6 +25531,206 @@
     },
     {
         "role": "Spontaneous Reaction",
+        "include": false,
+        "subsystems": [
+            "Galactose_degradation_in_plants"
+        ],
+        "classes": {
+            "Carbohydrates": {
+                "Galactose_degradation_in_plants": []
+            }
+        },
+        "features": [],
+        "reactions": [
+            "rxn20993"
+        ],
+        "localization": {
+            "c": {
+                "rxn20993": []
+            }
+        },
+        "publications": []
+    },
+    {
+        "role": "Spontaneous Reaction",
+        "include": true,
+        "subsystems": [
+            "Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants",
+            "Proline_metabolism_in_plants",
+            "Spontaneous_reactions_in_plants"
+        ],
+        "classes": {
+            "Amino acids": {
+                "Glutamine,_glutamate,_aspartate,_asparagine_metabolism_in_plants": [],
+                "Proline_metabolism_in_plants": [
+                    "PROSYN-PWY",
+                    "ARG-PRO-PWY",
+                    "PWY-3341"
+                ]
+            }
+        },
+        "features": [],
+        "reactions": [
+            "rxn02374"
+        ],
+        "localization": {
+            "c": {
+                "rxn02374": []
+            },
+            "d": {
+                "rxn02374": []
+            },
+            "m": {
+                "rxn02374": []
+            },
+            "x": {
+                "rxn02374": []
+            },
+            "v": {
+                "rxn02374": []
+            }
+        },
+        "publications": []
+    },
+    {
+        "role": "Spontaneous Reaction",
+        "include": false,
+        "subsystems": [
+            "Starch_degradation_in_plants"
+        ],
+        "classes": {
+            "Carbohydrates": {
+                "Starch_degradation_in_plants": []
+            }
+        },
+        "features": [],
+        "reactions": [
+            "rxn31240"
+        ],
+        "localization": {
+            "c": {
+                "rxn31240": []
+            }
+        },
+        "publications": []
+    },
+    {
+        "role": "Spontaneous Reaction",
+        "include": false,
+        "subsystems": [
+            "GDP-sugars_biosynthesis_and_interconversions_in_plants"
+        ],
+        "classes": {
+            "Carbohydrates": {
+                "GDP-sugars_biosynthesis_and_interconversions_in_plants": []
+            }
+        },
+        "features": [],
+        "reactions": [
+            "rxn31240"
+        ],
+        "localization": {
+            "c": {
+                "rxn31240": []
+            }
+        },
+        "publications": []
+    },
+    {
+        "role": "Spontaneous Reaction",
+        "include": true,
+        "subsystems": [
+            "Acetyl-CoA_carboxylase_complexes_in_plants"
+        ],
+        "classes": {
+            "Fatty acids": {
+                "Acetyl-CoA_carboxylase_complexes_in_plants": [
+                    "PWY0-1264"
+                ]
+            }
+        },
+        "features": [],
+        "reactions": [
+            "rxn24246"
+        ],
+        "localization": {
+            "c": {
+                "rxn24246": []
+            }
+        },
+        "publications": []
+    },
+    {
+        "role": "Spontaneous Reaction",
+        "include": false,
+        "subsystems": [
+            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+        ],
+        "classes": {
+            "Secondary": {
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": []
+            }
+        },
+        "features": [],
+        "reactions": [
+            "rxn22371"
+        ],
+        "localization": {
+            "c": {
+                "rxn22371": []
+            }
+        },
+        "publications": []
+    },
+    {
+        "role": "Spontaneous Reaction",
+        "include": true,
+        "subsystems": [
+            "Spontaneous_reactions_in_plants",
+            "Branched-chain_amino_acid_metabolism_in_plants"
+        ],
+        "classes": {
+            "Amino acids": {
+                "Branched-chain_amino_acid_metabolism_in_plants": [
+                    "LEUSYN-PWY"
+                ]
+            }
+        },
+        "features": [],
+        "reactions": [
+            "rxn01208"
+        ],
+        "localization": {
+            "d": {
+                "rxn01208": []
+            }
+        },
+        "publications": []
+    },
+    {
+        "role": "Spontaneous Reaction",
+        "include": false,
+        "subsystems": [
+            "Starch_biosynthesis_in_plants"
+        ],
+        "classes": {
+            "Carbohydrates": {
+                "Starch_biosynthesis_in_plants": []
+            }
+        },
+        "features": [],
+        "reactions": [
+            "rxn31240"
+        ],
+        "localization": {
+            "c": {
+                "rxn31240": []
+            }
+        },
+        "publications": []
+    },
+    {
+        "role": "Spontaneous Reaction",
         "include": true,
         "subsystems": [
             "Sucrose_metabolism_in_plants"
