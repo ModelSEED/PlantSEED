@@ -42,8 +42,11 @@ with open('Add_Roles.txt') as roles_file:
             new_role['classes'][cls]=class_dict
 
             new_role['reactions'].append(rxn)
-            new_role['features'].append(ftr)
-            new_role['publications'].append(pub)
+            if(ftr != ""):
+                new_role['features'].append(ftr)
+
+            if(pub != ""):
+                new_role['publications'].append(pub)
             
             for entry in loc.split('||'):
                 loc_dict=dict()
