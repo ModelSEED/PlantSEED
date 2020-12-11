@@ -19,3 +19,16 @@ for ss in Subsystems:
                         if(array[0] not in gene_publications):
                             gene_publications[array[0]]=list()
                         gene_publications[array[0]].append(array[1])
+
+with open('../../../Data/PlantSEED_v3/PlantSEED_Roles.json') as ps_roles_file:
+    plantseed_roles = json.load(ps_roles_file)
+
+for entry in plantseed_roles:
+    for ftr in entry['features']:
+        if(ftr in gene_publications):
+            for pub in gene_publications[ftr]:
+                entry['publications'].append(pub)
+
+with open('../../../Data/PlantSEED_v3/PlantSEED_Roles.json','w') as ps_roles_file:
+    json.dump(plantseed_roles,ps_roles_file,indent=4)
+
