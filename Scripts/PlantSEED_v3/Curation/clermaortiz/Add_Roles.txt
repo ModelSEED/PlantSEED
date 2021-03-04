@@ -1,0 +1,4 @@
+Cofactors	Phylloquinone_biosynthesis_in_plants	PWY-5027	2-Carboxy-1,4-naphthoquinone phytyltransferase (EC 2.5.1.130)	rxn44318	AT1G60600	15686525	d:PPDB
+Cofactors	Phylloquinone_biosynthesis_in_plants	PWY-5027	Demethylphylloquinone methyltransferase (EC 2.1.1.329)	rxn04674	AT1G23360	17082184	d:PPDB|AraCyc
+Cofactors	Phylloquinone_biosynthesis_in_plants	PWY-5027	Spontaneous Reaction	rxn42688		27837168	d
+Central Carbon	Calvin-Benson-Bassham_cycle_in_plants	CALVIN-PWY	Malate dehydrogenase (NADP+) (EC 1.1.1.82)	rxn00249	AT5G58330	8665917	d:PPDB
