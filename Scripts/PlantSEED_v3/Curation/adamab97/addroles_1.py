@@ -1,57 +1,27 @@
 import json
 
-control_file = open("choline_biosynth_loc", "r")
+control_file = open("choline_biosynth_loc_2", "r")
 control_dict = {}
 for line in control_file:
 	stripped_line = line. strip()
-	#print(stripped_line)
-	#(key, val) = stripped_line. split('\t')
-	mylist = stripped_line. split('\t')
-	#print(stripped_line)
-	#(key, val) = mylist[0], mylist[1:]
-	key = mylist[0]
-	#control_dict[key] = {mylist[1] : mylist[2]}	
-	#control_dict[key] = {'source': mylist[1], 'location': mylist[2]}
-	control_dict[key]= {mylist[1] : {mylist[2] :1}}
+	my_list = stripped_line. split('\t')
+	control_dict[my_list[1]]={'role':my_list[0],'localization':my_list[2],'source':my_list[3]}
 
 control_file. close()
 
-#print(control_dict)
-
-with open ('PlantSEED_Roles.json') as f:
-	data = json.load(f)
-	for entry in data:
-		#print(entry)
-		for feature in entry['features']:
-			if(feature in control_dict):
-				#print(entry['features'][feature])
-				#print(control_dict[feature])
-				entry['features'][feature] = control_dict[feature]
-				#print(entry['features'][feature])
-				print(entry)
-
-				#print ('features')
-				#print(feature)
-				#print(entry)
-				#print(entry['features'])
-				#print(entry['features'][control_dict[feature]])
-				#print(entry['features'][control_dict[feature]['source']])
-				#print(entry['features'][feature])
-				#print(control_dict[feature])
-				##data_dict = control_dict[feature]
-				#print(data_dict)
-				##for source in data_dict:
-				
-				##	#print(source)
-				##	print(data_dict[source])
-					##print(entry['features'][feature]['source'])
-					#entry['features'][feature]['source']={data_dict[source]:1}
-				##	print(entry)
-				#entry['features'][feature][control_dict[feature]['source']]={control_dict[feature]['location']:1}
-#save json file
-
-with open ('Plantseed_Roles.json','w') as out_file:
+f = open('../../../../Data/PlantSEED_v3/PlantSEED_Roles.json')
+data = json.load(f)
+for my_entry in data:
+	for my_feature in my_entry['features']:
+		if(my_feature in control_dict and control_dict[my_feature]['role'] == my_entry['role']):
+			my_location = control_dict[my_feature]['localization']
+			if(my_location in my_entry['localization']):
+				print("Location already there: "+my_location)
+			else:
+				print("Location not there: "+my_location)
+				my_entry['localization'][my_location] = {my_feature: [ control_dict[my_feature]['source'] ]}
+			for entry_location in my_entry['localization']:
+				print(my_entry['localization'][entry_location], entry_location, my_entry['role'])
+	
+with open('../../../../Data/PlantSEED_v3/PlantSEED_Roles.json', 'w') as out_file:
 	json.dump (data, out_file, indent=4)
-
-#{'source':mylist[1], 'location': mylist[2]}
-#data_dict=control_dict[feature]
