@@ -20,6 +20,7 @@ All|AA	cpd00132	c	0.056	Asparagine	protein
 All|AA	cpd00156	c	0.127	Valine	protein
 All|AA	cpd00161	c	0.096	Threonine	protein
 All|AA	cpd00322	c	0.083	Isoleucine	protein
+All|AA	cpd00098	c	0.0001	Choline	Other
 
 ##rna
 All|NA	cpd00002	c	0.027	ATP	rna
