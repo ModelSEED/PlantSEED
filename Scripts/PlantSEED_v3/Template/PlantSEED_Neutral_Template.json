@@ -41507,7 +41507,7 @@
             "templatecompartment_ref": "~/compartments/id/c",
             "reaction_ref": "48/8/1/reactions/id/rxn04682",
             "type": "universal",
-            "direction": "<",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
