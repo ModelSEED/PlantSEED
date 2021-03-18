@@ -1,0 +1,4 @@
+Fatty acid omega-hydroxylase (EC 1.14.13.-)	Cell wall:Lignin_biosynthesis_in_plants	Lipids:Lipid_A_biosynthesis_in_plants
+Long-chain fatty acid omega-alcohol dehydrogenase (EC 1.1.1.-)	Cell wall:Lignin_biosynthesis_in_plants	Lipids:Lipid_A_biosynthesis_in_plants
+Long-chain fatty acid omega-aldehyde dehydrogenase (EC 1.2.1.-)	Cell wall:Lignin_biosynthesis_in_plants	Lipids:Lipid_A_biosynthesis_in_plants
+Long-chain fatty acid omega-hydroxylase (EC 1.14.13.-)	Cell wall:Lignin_biosynthesis_in_plants	Lipids:Lipid_A_biosynthesis_in_plants

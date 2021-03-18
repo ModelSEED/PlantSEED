@@ -10369,17 +10369,15 @@
         "role": "Fatty acid omega-hydroxylase (EC 1.14.13.-)",
         "include": true,
         "subsystems": [
-            "Lignin_biosynthesis_in_plants",
-            "Cutin_biosynthesis_in_plants"
+            "Cutin_biosynthesis_in_plants",
+            "Lipid_A_biosynthesis_in_plants"
         ],
         "classes": {
-            "Cell wall": {
-                "Lignin_biosynthesis_in_plants": []
-            },
             "Lipids": {
                 "Cutin_biosynthesis_in_plants": [
                     "PWY-321"
-                ]
+                ],
+                "Lipid_A_biosynthesis_in_plants": []
             }
         },
         "features": [
@@ -15411,17 +15409,15 @@
         "role": "Long-chain fatty acid omega-alcohol dehydrogenase (EC 1.1.1.-)",
         "include": true,
         "subsystems": [
-            "Lignin_biosynthesis_in_plants",
-            "Cutin_biosynthesis_in_plants"
+            "Cutin_biosynthesis_in_plants",
+            "Lipid_A_biosynthesis_in_plants"
         ],
         "classes": {
-            "Cell wall": {
-                "Lignin_biosynthesis_in_plants": []
-            },
             "Lipids": {
                 "Cutin_biosynthesis_in_plants": [
                     "PWY-321"
-                ]
+                ],
+                "Lipid_A_biosynthesis_in_plants": []
             }
         },
         "features": [
@@ -15443,17 +15439,15 @@
         "role": "Long-chain fatty acid omega-aldehyde dehydrogenase (EC 1.2.1.-)",
         "include": true,
         "subsystems": [
-            "Lignin_biosynthesis_in_plants",
-            "Cutin_biosynthesis_in_plants"
+            "Cutin_biosynthesis_in_plants",
+            "Lipid_A_biosynthesis_in_plants"
         ],
         "classes": {
-            "Cell wall": {
-                "Lignin_biosynthesis_in_plants": []
-            },
             "Lipids": {
                 "Cutin_biosynthesis_in_plants": [
                     "PWY-321"
-                ]
+                ],
+                "Lipid_A_biosynthesis_in_plants": []
             }
         },
         "features": [],
@@ -15473,15 +15467,13 @@
         "role": "Long-chain fatty acid omega-hydroxylase (EC 1.14.13.-)",
         "include": true,
         "subsystems": [
-            "Lignin_biosynthesis_in_plants",
-            "Cutin_biosynthesis_in_plants"
+            "Cutin_biosynthesis_in_plants",
+            "Lipid_A_biosynthesis_in_plants"
         ],
         "classes": {
-            "Cell wall": {
-                "Lignin_biosynthesis_in_plants": []
-            },
             "Lipids": {
-                "Cutin_biosynthesis_in_plants": []
+                "Cutin_biosynthesis_in_plants": [],
+                "Lipid_A_biosynthesis_in_plants": []
             }
         },
         "features": [],
