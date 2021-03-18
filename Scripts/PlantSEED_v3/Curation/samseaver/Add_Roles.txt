@@ -1,0 +1,2 @@
+Cofactors	Pyridoxine_(vitamin_B6)_biosynthesis_in_plants||Cofactor_transport_in_plants		2-Dehydropantoate transport	rxn09806			cm
+	Media_transport_in_plants		Hydrogen peroxide transport	rxn08685			cm||cd||cx

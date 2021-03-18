@@ -5,7 +5,7 @@ import json
 import string
 
 #bioObj_ref = "/chenry/public/modelsupport/biochemistry/plantdefault.biochem" #PMS reference
-biochem_ref = "48/8/1" #AppDev reference
+biochem_ref = "48/1/5" #AppDev reference NB: doesn't work in production!
 
 ############################
 ## Load Additional Curation
@@ -52,7 +52,8 @@ print(excepted_reactions_list)
 ############################
 
 MSD_git_url = "https://raw.githubusercontent.com/ModelSEED/ModelSEEDDatabase/"
-MSD_commit = "v1.1.1"
+#MSD_commit = "v1.1.1"
+MSD_commit = "7063bbffde4b40c01550dcb48b89107f28caa2b1" #adding_nad_transporters
 
 biochemistry_reactions = json.load(urlopen(MSD_git_url+MSD_commit+"/Biochemistry/reactions.json"))
 reactions_dict=dict()
@@ -80,8 +81,11 @@ for compound in biochemistry_compounds:
 
     compounds_dict[compound['id']]=template_compound_hash
 
-#Collect compartments
-remote_file = urlopen(MSD_git_url+MSD_commit+"/Templates/Plant/Compartments.tsv")
+#Collect compartments: NB The location will change
+MST_git_url = "https://raw.githubusercontent.com/ModelSEED/ModelSEEDTemplates/"
+MST_commit = "main"
+MST_compartment_file = "/Legacy%20Templates/Plant/Compartments.tsv"
+remote_file = urlopen(MST_git_url+MST_commit+MST_compartment_file)
 compartments = dict()
 header=1
 for line in remote_file.readlines():
@@ -300,9 +304,13 @@ for template_reaction in reactions_roles:
     if(base_reaction in limited_gf_reactions_list):
         gapfilling_direction = direction
 
+    # NB: I'm using the empty reaction as a default reaction ref as it doesn't really affect anything
+    # But I need to double-check how reconstruct_plant_metabolism in plant_fbaImpl.py fetches
+    # biochemistry data
+
     template_reaction_hash = { 'id':base_reaction+"_"+reaction_cpt_id, 'name':reactions_dict[base_reaction]['name'],
                                'templatecompartment_ref':"~/compartments/id/"+reaction_cpt_id,
-                               'reaction_ref':biochem_ref+"/reactions/id/"+base_reaction,
+                               'reaction_ref':biochem_ref+"/reactions/id/"+"rxn14003", #base_reaction,
                                'type':"universal",
                                'direction':direction,
                                'GapfillDirection':gapfilling_direction,

@@ -16989,7 +16989,10 @@
             "rxn13360",
             "rxn13361",
             "rxn33186",
-            "rxn29785"
+            "rxn29785",
+            "rxn48590",
+            "rxn48591",
+            "rxn48592"
         ],
         "localization": {
             "cd": {
@@ -17003,7 +17006,9 @@
                 ]
             }
         },
-        "publications": []
+        "publications": [
+            "19745225"
+        ]
     },
     {
         "role": "NAD kinase (EC 2.7.1.23)",
@@ -30385,6 +30390,58 @@
                 "AT5G40810": [
                     "Literature"
                 ]
+            }
+        },
+        "publications": []
+    },
+    {
+        "role": "2-Dehydropantoate transport",
+        "include": true,
+        "subsystems": [
+            "Pyridoxine_(vitamin_B6)_biosynthesis_in_plants",
+            "Cofactor_transport_in_plants"
+        ],
+        "classes": {
+            "Cofactors": {
+                "Pyridoxine_(vitamin_B6)_biosynthesis_in_plants": [],
+                "Cofactor_transport_in_plants": []
+            }
+        },
+        "features": [],
+        "reactions": [
+            "rxn09806"
+        ],
+        "localization": {
+            "cm": {
+                "rxn09806": []
+            }
+        },
+        "publications": []
+    },
+    {
+        "role": "Hydrogen peroxide transport",
+        "include": true,
+        "subsystems": [
+            "Media_transport_in_plants"
+        ],
+        "classes": {
+            "": {
+                "Media_transport_in_plants": []
+            }
+        },
+        "features": [],
+        "reactions": [
+            "rxn08685"
+        ],
+        "localization": {
+            "cm": {
+                "rxn08685": []
+            },
+            "cd": {
+                "rxn08685": []
+            },
+            "cx": {
+                "rxn08685": []
             }
         },
         "publications": []
