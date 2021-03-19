@@ -5710,6 +5710,19 @@
             "compound_ref": "48/1/5/compounds/id/cpd00133"
         },
         {
+            "id": "cpd00873",
+            "name": "Nicotinate ribonucleotide",
+            "abbreviation": "nicrnt",
+            "aliases": [],
+            "formula": "C11H12NO9P",
+            "isCofactor": 0,
+            "defaultCharge": -2.0,
+            "mass": 334.0,
+            "deltaG": -257.01,
+            "deltaGErr": 0.94,
+            "compound_ref": "48/1/5/compounds/id/cpd00873"
+        },
+        {
             "id": "cpd00638",
             "name": "Deamido-NAD",
             "abbreviation": "dnad",
@@ -5838,19 +5851,6 @@
             "deltaG": -7.47,
             "deltaGErr": 0.94,
             "compound_ref": "48/1/5/compounds/id/cpd00218"
-        },
-        {
-            "id": "cpd00873",
-            "name": "Nicotinate ribonucleotide",
-            "abbreviation": "nicrnt",
-            "aliases": [],
-            "formula": "C11H12NO9P",
-            "isCofactor": 0,
-            "defaultCharge": -2.0,
-            "mass": 334.0,
-            "deltaG": -257.01,
-            "deltaGErr": 0.94,
-            "compound_ref": "48/1/5/compounds/id/cpd00873"
         },
         {
             "id": "cpd00737",
@@ -12912,11 +12912,60 @@
             "templatecompartment_ref": "~/compartments/id/m"
         },
         {
+            "id": "cpd00873_d",
+            "charge": -2.0,
+            "maxuptake": 0.0,
+            "templatecompound_ref": "~/compounds/id/cpd00873",
+            "templatecompartment_ref": "~/compartments/id/d"
+        },
+        {
+            "id": "cpd00873_c",
+            "charge": -2.0,
+            "maxuptake": 0.0,
+            "templatecompound_ref": "~/compounds/id/cpd00873",
+            "templatecompartment_ref": "~/compartments/id/c"
+        },
+        {
+            "id": "cpd00873_m",
+            "charge": -2.0,
+            "maxuptake": 0.0,
+            "templatecompound_ref": "~/compounds/id/cpd00873",
+            "templatecompartment_ref": "~/compartments/id/m"
+        },
+        {
+            "id": "cpd00355_d",
+            "charge": -1.0,
+            "maxuptake": 0.0,
+            "templatecompound_ref": "~/compounds/id/cpd00355",
+            "templatecompartment_ref": "~/compartments/id/d"
+        },
+        {
+            "id": "cpd00355_m",
+            "charge": -1.0,
+            "maxuptake": 0.0,
+            "templatecompound_ref": "~/compounds/id/cpd00355",
+            "templatecompartment_ref": "~/compartments/id/m"
+        },
+        {
+            "id": "cpd00638_d",
+            "charge": -2.0,
+            "maxuptake": 0.0,
+            "templatecompound_ref": "~/compounds/id/cpd00638",
+            "templatecompartment_ref": "~/compartments/id/d"
+        },
+        {
             "id": "cpd00638_c",
             "charge": -2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00638",
             "templatecompartment_ref": "~/compartments/id/c"
+        },
+        {
+            "id": "cpd00638_m",
+            "charge": -2.0,
+            "maxuptake": 0.0,
+            "templatecompound_ref": "~/compounds/id/cpd00638",
+            "templatecompartment_ref": "~/compartments/id/m"
         },
         {
             "id": "cpd24196_d",
@@ -12989,13 +13038,6 @@
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
-            "id": "cpd00355_d",
-            "charge": -1.0,
-            "maxuptake": 0.0,
-            "templatecompound_ref": "~/compounds/id/cpd00355",
-            "templatecompartment_ref": "~/compartments/id/d"
-        },
-        {
             "id": "cpd00145_x",
             "charge": -1.0,
             "maxuptake": 0.0,
@@ -13035,13 +13077,6 @@
             "charge": -1.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00218",
-            "templatecompartment_ref": "~/compartments/id/c"
-        },
-        {
-            "id": "cpd00873_c",
-            "charge": -2.0,
-            "maxuptake": 0.0,
-            "templatecompound_ref": "~/compounds/id/cpd00873",
             "templatecompartment_ref": "~/compartments/id/c"
         },
         {
@@ -14128,13 +14163,6 @@
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd02431",
             "templatecompartment_ref": "~/compartments/id/c"
-        },
-        {
-            "id": "cpd00873_d",
-            "charge": -2.0,
-            "maxuptake": 0.0,
-            "templatecompound_ref": "~/compounds/id/cpd00873",
-            "templatecompartment_ref": "~/compartments/id/d"
         },
         {
             "id": "cpd02333_d",
@@ -37627,6 +37655,198 @@
             ],
             "templatecomplex_refs": [
                 "~/complexes/id/Cpx.1088"
+            ]
+        },
+        {
+            "id": "rxn48590_d",
+            "name": "NAD-NaMN anitporter",
+            "templatecompartment_ref": "~/compartments/id/d",
+            "reaction_ref": "48/1/5/reactions/id/rxn14003",
+            "type": "universal",
+            "direction": "=",
+            "GapfillDirection": "=",
+            "maxforflux": 0.0,
+            "maxrevflux": 0.0,
+            "templateReactionReagents": [
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_c",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00873_d",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00873_c",
+                    "coefficient": 1.0
+                }
+            ],
+            "templatecomplex_refs": [
+                "~/complexes/id/Cpx.1180"
+            ]
+        },
+        {
+            "id": "rxn48590_m",
+            "name": "NAD-NaMN anitporter",
+            "templatecompartment_ref": "~/compartments/id/m",
+            "reaction_ref": "48/1/5/reactions/id/rxn14003",
+            "type": "universal",
+            "direction": "=",
+            "GapfillDirection": "=",
+            "maxforflux": 0.0,
+            "maxrevflux": 0.0,
+            "templateReactionReagents": [
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_c",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00873_m",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_m",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00873_c",
+                    "coefficient": 1.0
+                }
+            ],
+            "templatecomplex_refs": [
+                "~/complexes/id/Cpx.1181"
+            ]
+        },
+        {
+            "id": "rxn48591_d",
+            "name": "NAD-NMN anitporter",
+            "templatecompartment_ref": "~/compartments/id/d",
+            "reaction_ref": "48/1/5/reactions/id/rxn14003",
+            "type": "universal",
+            "direction": "=",
+            "GapfillDirection": "=",
+            "maxforflux": 0.0,
+            "maxrevflux": 0.0,
+            "templateReactionReagents": [
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_c",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00355_d",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00355_c",
+                    "coefficient": 1.0
+                }
+            ],
+            "templatecomplex_refs": [
+                "~/complexes/id/Cpx.1182"
+            ]
+        },
+        {
+            "id": "rxn48591_m",
+            "name": "NAD-NMN anitporter",
+            "templatecompartment_ref": "~/compartments/id/m",
+            "reaction_ref": "48/1/5/reactions/id/rxn14003",
+            "type": "universal",
+            "direction": "=",
+            "GapfillDirection": "=",
+            "maxforflux": 0.0,
+            "maxrevflux": 0.0,
+            "templateReactionReagents": [
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_c",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00355_m",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_m",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00355_c",
+                    "coefficient": 1.0
+                }
+            ],
+            "templatecomplex_refs": [
+                "~/complexes/id/Cpx.1183"
+            ]
+        },
+        {
+            "id": "rxn48592_d",
+            "name": "NAD-NaAD anitporter",
+            "templatecompartment_ref": "~/compartments/id/d",
+            "reaction_ref": "48/1/5/reactions/id/rxn14003",
+            "type": "universal",
+            "direction": "=",
+            "GapfillDirection": "=",
+            "maxforflux": 0.0,
+            "maxrevflux": 0.0,
+            "templateReactionReagents": [
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_c",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00638_d",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00638_c",
+                    "coefficient": 1.0
+                }
+            ],
+            "templatecomplex_refs": [
+                "~/complexes/id/Cpx.1184"
+            ]
+        },
+        {
+            "id": "rxn48592_m",
+            "name": "NAD-NaAD anitporter",
+            "templatecompartment_ref": "~/compartments/id/m",
+            "reaction_ref": "48/1/5/reactions/id/rxn14003",
+            "type": "universal",
+            "direction": "=",
+            "GapfillDirection": "=",
+            "maxforflux": 0.0,
+            "maxrevflux": 0.0,
+            "templateReactionReagents": [
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_c",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00638_m",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_m",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00638_c",
+                    "coefficient": 1.0
+                }
+            ],
+            "templatecomplex_refs": [
+                "~/complexes/id/Cpx.1185"
             ]
         },
         {
@@ -73822,6 +74042,90 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/Role.16",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "Cpx.1180",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/Role.379",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "Cpx.1181",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/Role.379",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "Cpx.1182",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/Role.379",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "Cpx.1183",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/Role.379",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "Cpx.1184",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/Role.379",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "Cpx.1185",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/Role.379",
                     "optional_role": 0,
                     "triggering": 1
                 }

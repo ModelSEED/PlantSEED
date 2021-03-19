@@ -1339,3 +1339,9 @@ rxn39254_cm	Cpx.1176	Role.639	Ubiquinone-9 transport
 rxn39255_cd	Cpx.1177	Role.517	Plastoquinone transport	
 rxn42688_d	Cpx.1178	Role.575	Spontaneous Reaction	
 rxn44318_d	Cpx.1179	Role.16	2-Carboxy-1,4-naphthoquinone phytyltransferase (EC 2.5.1.130)	AT1G60600
+rxn48590_cd	Cpx.1180	Role.379	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)	AT1G25380|AT2G47490
+rxn48590_cm	Cpx.1181	Role.379	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)	AT1G25380|AT2G47490
+rxn48591_cd	Cpx.1182	Role.379	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)	AT1G25380|AT2G47490
+rxn48591_cm	Cpx.1183	Role.379	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)	AT1G25380|AT2G47490
+rxn48592_cd	Cpx.1184	Role.379	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)	AT1G25380|AT2G47490
+rxn48592_cm	Cpx.1185	Role.379	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)	AT1G25380|AT2G47490
