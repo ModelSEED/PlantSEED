@@ -13,6 +13,7 @@ compound_type_list = ["other","dna","rna","protein","lipid","cellwall","cofactor
 for compound_type in compound_type_list:
     biomass_hash[compound_type]=0
 
+template_biomass_components = list()
 with open("../../../Data/PlantSEED_v3/Biomass/PlantSEED_Biomass.txt") as biomass_fh:
     for line in biomass_fh.readlines():
         line=line.strip('\r\n')
@@ -36,7 +37,8 @@ with open("../../../Data/PlantSEED_v3/Biomass/PlantSEED_Biomass.txt") as biomass
                            'coefficient' : coefficient,
                            'linked_compound_refs' : [],
                            'link_coefficients' : [] }
-        biomass_hash['templateBiomassComponents'].append(tmpbiocpd_hash)
+        template_biomass_components.append(tmpbiocpd_hash)
+
 
 tmpbiomasscpd_hash = { 'class' : 'other',
                        'templatecompcompound_ref' : "~/compcompounds/id/cpd11416_c",
@@ -44,7 +46,7 @@ tmpbiomasscpd_hash = { 'class' : 'other',
                        'coefficient' : 1,
                        'linked_compound_refs' : [],
                        'link_coefficients' : [] }
-biomass_hash['templateBiomassComponents'].append(tmpbiomasscpd_hash)
+template_biomass_components.append(tmpbiomasscpd_hash)
 
 with open("PlantSEED_Neutral_Template.json") as template_file:
     plantseed_template_obj = json.load(template_file)
@@ -65,6 +67,10 @@ cmpcompound_hash = { 'id' : "cpd11416_c",
 
 plantseed_template_obj['compounds'].append(compound_hash)
 plantseed_template_obj['compcompounds'].append(cmpcompound_hash)
+
+
+biomass_hash['templateBiomassComponents']=sorted(template_biomass_components,
+                                                 key = lambda bcpd:bcpd['templatecompcompound_ref'])
 plantseed_template_obj['biomasses'].append(biomass_hash)
 
 #Save Template

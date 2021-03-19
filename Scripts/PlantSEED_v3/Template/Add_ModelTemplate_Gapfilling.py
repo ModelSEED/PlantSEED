@@ -5,7 +5,7 @@ import json
 import string
 
 #bioObj_ref = "/chenry/public/modelsupport/biochemistry/plantdefault.biochem" #PMS reference
-biochem_ref = "48/8/1" #AppDev reference
+biochem_ref = "48/1/5" #AppDev reference NB: doesn't work in production!
 
 ############################
 ## Load Template
@@ -133,8 +133,11 @@ for entry in roles_list:
 ############################
 ## Begin Gapfilling Reaction Generation
 ############################
-
-for template_reaction in reactions_roles:
+template_compartments = plantseed_template_obj['compartments']
+template_compounds = plantseed_template_obj['compounds']
+template_compcompounds = plantseed_template_obj['compcompounds']
+template_reactions = plantseed_template_obj['reactions']
+for template_reaction in sorted(reactions_roles):
 
     [base_reaction,reaction_cpts]=template_reaction.split('_')
 
@@ -224,12 +227,12 @@ for template_reaction in reactions_roles:
         # Check and extend list of template compartments
         if(rgt_cpt not in check_tpl_cpt_dict):
             check_tpl_cpt_dict[rgt_cpt]=1
-            plantseed_template_obj['compartments'].append(compartments[rgt_cpt])
+            template_compartments.append(compartments[rgt_cpt])
 
         # Check and extend list of template compounds
         if(compound not in check_tpl_cpd_dict):
             check_tpl_cpd_dict[compound]=1
-            plantseed_template_obj['compounds'].append(compounds_dict[compound])
+            template_compounds.append(compounds_dict[compound])
 
         # Check and extend list of template compcompounds
         comp_compound = compound+"_"+rgt_cpt
@@ -241,13 +244,19 @@ for template_reaction in reactions_roles:
                                    'templatecompound_ref':"~/compounds/id/"+compound,
                                    'templatecompartment_ref':"~/compartments/id/"+rgt_cpt };
 
-            plantseed_template_obj['compcompounds'].append(comp_compound_hash)
+            template_compcompounds.append(comp_compound_hash)
 
         rxn_rgt_hash = { 'templatecompcompound_ref' : "~/compcompounds/id/"+comp_compound,
                          'coefficient' : float(coefficient) }
         template_reaction_hash['templateReactionReagents'].append(rxn_rgt_hash)
 
-    plantseed_template_obj['reactions'].append(template_reaction_hash)
+    template_reactions.append(template_reaction_hash)
+
+plantseed_template_obj['compartments'] = sorted(template_compartments, key = lambda cpt:cpt['id'])
+plantseed_template_obj['compounds'] = sorted(template_compounds, key = lambda cpd:cpd['id'])
+plantseed_template_obj['compcompartments'] = sorted(template_compcompounds,
+                                                    key = lambda ccpd:ccpd['id'])
+plantseed_template_obj['reactions'] = sorted(template_reactions, key = lambda rxn:rxn['id'])
 
 #Save Template
 with open("PlantSEED_Gapfilling_Template.json",'w') as ps_tmpl_fh:
