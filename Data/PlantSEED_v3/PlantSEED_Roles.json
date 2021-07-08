@@ -30437,5 +30437,31 @@
             }
         },
         "publications": []
+    },
+    {
+        "role": "S-linalool synthase (EC 4.2.3.25)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": []
+            }
+        },
+        "features": [
+            "AT1G61680"
+        ],
+        "reactions": [
+            "rxn07447"
+        ],
+        "localization": {
+            "c": {
+                "rxn07447": []
+            }
+        },
+        "publications": [
+            "33367256"
+        ]
     }
 ]
