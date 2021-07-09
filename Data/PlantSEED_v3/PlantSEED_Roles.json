@@ -30446,7 +30446,9 @@
         ],
         "classes": {
             "Secondary metabolism": {
-                "Terpenoid metabolism": []
+                "Terpenoid metabolism": [
+                    "PWY-7141"
+                ]
             }
         },
         "features": [
