@@ -89,7 +89,7 @@ All|CA	cpd00137	c	0.013	Citrate	other
 All|CA	cpd00331	c	0.086	cis-Aconitate	other
 All|CA	cpd00159	c	0.039	Lactate	other
 
-#Pigments   		
+#Pigments
 All|CO	cpd01420	c	0.0026	Carotene	other
 
 #Minerals
@@ -102,3 +102,5 @@ All|EN	cpd00001	c	30	H2O	energy
 All|EN	cpd00008	c	-30	ADP	energy
 All|EN	cpd00009	c	-30	Pi	energy
 All|EN	cpd00067	c	-30	Proton	energy
+
+All|SM	cpd08243	c	0.0001	S-linalool	terpenoid
