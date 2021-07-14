@@ -74790,6 +74790,14 @@
                     "link_coefficients": []
                 },
                 {
+                    "class": "terpenoid",
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd08243_c",
+                    "coefficient_type": "EXACT",
+                    "coefficient": -0.0001,
+                    "linked_compound_refs": [],
+                    "link_coefficients": []
+                },
+                {
                     "class": "other",
                     "templatecompcompound_ref": "~/compcompounds/id/cpd11416_c",
                     "coefficient_type": "EXACT",
