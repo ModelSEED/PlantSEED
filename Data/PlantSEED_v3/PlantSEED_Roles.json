@@ -11756,6 +11756,11 @@
             },
             "c": {
                 "rxn01213": []
+            },
+            "d": {
+                "Athaliana_TAIR10||AT2G34630": [
+                    "Literature"
+                ]
             }
         },
         "publications": []
