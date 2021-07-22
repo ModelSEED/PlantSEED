@@ -30457,13 +30457,13 @@
             }
         },
         "features": [
-            "Athaliana_TAIR10||AT1G61680"
+            "AT1G61680"
         ],
         "reactions": [
             "rxn07447"
         ],
         "localization": {
-            "d": {
+            "c": {
                 "rxn07447": []
             }
         },
