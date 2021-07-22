@@ -11756,6 +11756,11 @@
             },
             "c": {
                 "rxn01213": []
+            },
+            "d": {
+                "Athaliana_TAIR10||AT2G34630": [
+                    "Literature"
+                ]
             }
         },
         "publications": []
@@ -30452,14 +30457,16 @@
             }
         },
         "features": [
-            "AT1G61680"
+            "Athaliana_TAIR10||AT1G61680"
         ],
         "reactions": [
             "rxn07447"
         ],
         "localization": {
-            "c": {
-                "rxn07447": []
+            "d": {
+                "Athaliana_TAIR10||AT1G61680": [
+                    "Literature"
+                ]
             }
         },
         "publications": [
