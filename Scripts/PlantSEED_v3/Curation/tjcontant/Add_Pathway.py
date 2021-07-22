@@ -84,6 +84,9 @@ with open(pwy_file) as pwy_file_handle:
                 #assumed reaction compartment
                 else:
                     cpt=entry
+                    loc_dict[rxn]=[]
+
+                new_role['localization'][cpt]=loc_dict
 
             roles_list.append(new_role)
 
