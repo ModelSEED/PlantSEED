@@ -103,4 +103,4 @@ All|EN	cpd00008	c	-30	ADP	energy
 All|EN	cpd00009	c	-30	Pi	energy
 All|EN	cpd00067	c	-30	Proton	energy
 
-All|SM	cpd08243	c	0.0001	S-linalool	terpenoid
+All|SM	cpd08243	d	0.0001	S-linalool	terpenoid
