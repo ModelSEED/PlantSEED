@@ -23,7 +23,7 @@ with open(pwy_file) as pwy_file_handle:
     for line in pwy_file_handle.readlines():
         line=line.strip('\r\n')
         print(line.split('\t'))
-        (rxn,role,ftr,pub,ss,cls,pwy)=line.split('\t')
+        (rxn,role,ftr,pub,ss,cls,pwy,loc)=line.split('\t')
 
         new_role = False
         if(role not in roles_dict):
@@ -74,22 +74,19 @@ with open(pwy_file) as pwy_file_handle:
                 new_role['publications'].append(pub)
 
             ####################################
-            # Add localization (commented out for future use)
-            #for entry in loc.split('||'):
-            #    loc_dict=dict()
-
+            # Add localization
+            for entry in loc.split('||'):
+                loc_dict=dict()
                 #if protein localization data used
-            #    if(':' in entry):
-            #        (cpt,sources)=entry.split(':')
-            #        loc_dict[ftr]=sources.split('|')
+                if(':' in entry):
+                    (cpt,sources)=entry.split(':')
+                    loc_dict[ftr]=sources.split('|')
                 #assumed reaction compartment
-            #    else:
-            #        cpt=entry
+                else:
+                    cpt=entry
+                    loc_dict[rxn]=[]
 
-            # localization assumed to be cytosol for now
-            loc_dict=dict()
-            loc_dict[rxn]=[]
-            new_role['localization']['c']=loc_dict
+                new_role['localization'][cpt]=loc_dict
 
             roles_list.append(new_role)
 
