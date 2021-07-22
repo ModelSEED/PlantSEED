@@ -23,7 +23,7 @@ with open(pwy_file) as pwy_file_handle:
     for line in pwy_file_handle.readlines():
         line=line.strip('\r\n')
         print(line.split('\t'))
-        (rxn,role,ftr,pub,ss,cls,pwy)=line.split('\t')
+        (rxn,role,ftr,pub,ss,cls,pwy,loc)=line.split('\t')
 
         new_role = False
         if(role not in roles_dict):
