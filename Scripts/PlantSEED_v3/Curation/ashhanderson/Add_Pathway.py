@@ -5,7 +5,7 @@ if(len(sys.argv)<2 or os.path.isfile(sys.argv[1]) is False):
     print("Takes one argument, the path to and including pathway file")
     sys.exit()
 
-pwy_file = sys.argv[1]
+    pwy_file = sys.argv[1]
 
 with open("../../../../Data/PlantSEED_v3/PlantSEED_Roles.json") as subsystem_file:
     roles_list = json.load(subsystem_file)
@@ -23,7 +23,7 @@ with open(pwy_file) as pwy_file_handle:
     for line in pwy_file_handle.readlines():
         line=line.strip('\r\n')
         print(line.split('\t'))
-        (rxn,role,ftr,pub,ss,cls,pwy)=line.split('\t')
+        (rxn,role,ftrs,pub,ss,cls,pwy)=line.split('\t')
 
         new_role = False
         if(role not in roles_dict):
@@ -63,8 +63,9 @@ with open(pwy_file) as pwy_file_handle:
 
             ####################################
             # Add genes
-            if(ftr != ""):
-                new_role['features'].append(ftr)
+            if(ftrs != ""):
+                for ftr in ftrs.split(';'):
+                    new_role['features'].append(ftr)
 
             ####################################
             # Add publications
