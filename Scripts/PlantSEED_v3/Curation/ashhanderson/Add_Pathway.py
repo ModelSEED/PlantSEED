@@ -5,7 +5,7 @@ if(len(sys.argv)<2 or os.path.isfile(sys.argv[1]) is False):
     print("Takes one argument, the path to and including pathway file")
     sys.exit()
 
-    pwy_file = sys.argv[1]
+pwy_file = sys.argv[1]
 
 with open("../../../../Data/PlantSEED_v3/PlantSEED_Roles.json") as subsystem_file:
     roles_list = json.load(subsystem_file)

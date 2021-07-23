@@ -30472,5 +30472,34 @@
         "publications": [
             "33367256"
         ]
+    },
+    {
+        "role": "1,8-cineole synthase (EC 4.2.3.108)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-3041"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT3G25830",
+            "Athaliana_TAIR10||AT3G25820"
+        ],
+        "reactions": [
+            "rxn16811"
+        ],
+        "localization": {
+            "c": {
+                "rxn16811": []
+            }
+        },
+        "publications": [
+            "https://doi:10.1104/pp.104.044388"
+        ]
     }
 ]
