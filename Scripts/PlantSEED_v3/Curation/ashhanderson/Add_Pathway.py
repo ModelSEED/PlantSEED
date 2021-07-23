@@ -52,7 +52,7 @@ with open(pwy_file) as pwy_file_handle:
             for entry in ss.split('||'):
                 new_role['subsystems'].append(entry)
                 class_dict[entry]=[]
-if MetaCyc Pathway defined
+# If MetaCyc Pathway defined
                 if(pwy != ""):
                     class_dict[entry].append(pwy)
             new_role['classes'][cls]=class_dict
@@ -83,7 +83,7 @@ if MetaCyc Pathway defined
                 #assumed reaction compartment
             #    else:
             #        cpt=entry
-                
+
             # localization assumed to be cytosol for now
             loc_dict=dict()
             loc_dict[rxn]=[]
@@ -94,4 +94,3 @@ if MetaCyc Pathway defined
 with open('../../../../Data/PlantSEED_v3/PlantSEED_Roles.json','w') as new_subsystem_file:
     json.dump(roles_list,new_subsystem_file,indent=4)
 print(json.dumps(roles_list,indent=4))
-# done
