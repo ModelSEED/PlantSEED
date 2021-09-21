@@ -67,7 +67,9 @@ with open(pwy_file) as pwy_file_handle:
             ####################################
             # Add genes
             if(ftr != ""):
-                new_role['features'].append(ftr)
+                for entry in ftr.split(';'):
+                    print(entry)
+                    new_role['features'].append(entry)
 
             ####################################
             # Add publications
@@ -78,12 +80,14 @@ with open(pwy_file) as pwy_file_handle:
 
             ####################################
             # Add localization
-            for entry in loc.split('||'):
+            for entry in loc.split(';'):
+                print(entry)
                 loc_dict=dict()
                 #if protein localization data used
                 if(':' in entry):
-                    (cpt,sources)=entry.split(':')
-                    loc_dict[ftr]=sources.split('|')
+                    (cpt,gene,sources)=entry.split(':')
+                    loc_dict[gene]=sources.split('|')
+                    print(loc_dict)
                 #assumed reaction compartment
                 else:
                     cpt=entry
