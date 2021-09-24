@@ -30574,5 +30574,35 @@
         "publications": [
             "20463089"
         ]
+    },
+    {
+        "role": "Geranyllinalool synthase (EC 4.2.3.144)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-6668"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT1G61120"
+        ],
+        "reactions": [
+            "rxn20915"
+        ],
+        "localization": {
+            "c": {
+                "Athaliana_TAIR10||AT1G61120": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            "18398052"
+        ]
     }
 ]
