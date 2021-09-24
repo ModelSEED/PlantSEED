@@ -30538,5 +30538,41 @@
             "12624761",
             "20463089"
         ]
+    },
+    {
+        "role": "Alpha-farnesene synthase (EC 4.2.3.46)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5725"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT4G16730",
+            "Athaliana_TAIR10||AT4G16740"
+        ],
+        "reactions": [
+            "rxn28404"
+        ],
+        "localization": {
+            "d": {
+                "Athaliana_TAIR10||AT4G16730": [
+                    "Literature"
+                ]
+            },
+            "c": {
+                "Athaliana_TAIR10||AT4G16740": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            "20463089"
+        ]
     }
 ]
