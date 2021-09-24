@@ -30501,5 +30501,42 @@
         "publications": [
             "https://doi:10.1104/pp.104.044388"
         ]
+    },
+    {
+        "role": "(E)-beta-Ocimene Synthase (EC 4.2.3.106)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-3041"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT4G16730",
+            "Athaliana_TAIR10||AT4G16740"
+        ],
+        "reactions": [
+            "rxn16809"
+        ],
+        "localization": {
+            "d": {
+                "Athaliana_TAIR10||AT4G16730": [
+                    "Literature"
+                ]
+            },
+            "c": {
+                "Athaliana_TAIR10||AT4G16740": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            "12624761",
+            "20463089"
+        ]
     }
 ]
