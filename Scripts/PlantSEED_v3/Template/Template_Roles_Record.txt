@@ -1,0 +1,683 @@
+Role.1	(3R)-hydroxypalmitoyl-[acyl carrier protein] dehydratase (EC 4.2.1.-)
+Role.2	(E)-Cinnamoyl-CoA ligase (EC 6.2.1.-)
+Role.3	(E)-beta-Ocimene Synthase (EC 4.2.3.106)
+Role.4	1,2-dihydroxy-3-keto-5-methylthiopentene dioxygenase (EC 1.13.11.54)
+Role.5	1,4-dihydroxy-2-naphthoate polyprenyltransferase (EC 2.5.1.74)
+Role.6	1,4-dihydroxy-2-naphthoyl-CoA hydrolase (EC 3.1.2.28), plant type
+Role.7	1,8-cineole synthase (EC 4.2.3.108)
+Role.8	1-aminocyclopropane-1-carboxylate synthase (EC 4.4.1.14)
+Role.9	1-deoxy-D-xylulose 5-phosphate reductoisomerase (EC 1.1.1.267)
+Role.10	1-deoxy-D-xylulose 5-phosphate synthase (EC 2.2.1.7)
+Role.11	1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate synthase (EC 1.17.7.1)
+Role.12	10-Formyltetrahydrofolate transport
+Role.13	2,3-bisphosphoglycerate-dependent phosphoglycerate mutase (EC 5.4.2.11)
+Role.14	2,3-bisphosphoglycerate-independent phosphoglycerate mutase (EC 5.4.2.12)
+Role.15	2,3-diketo-5-methylthiopentyl-1-phosphate enolase-phosphatase (EC 3.1.3.77)
+Role.16	2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase (EC 4.6.1.12)
+Role.17	2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase (EC 2.7.7.60)
+Role.18	2-Carboxy-1,4-naphthoquinone phytyltransferase (EC 2.5.1.130)
+Role.19	2-Dehydropantoate transport
+Role.20	2-Oxoglutarate transport
+Role.21	2-amino-4-hydroxy-6-hydroxymethyldihydropteridine pyrophosphokinase (EC 2.7.6.3)
+Role.22	2-dehydropantoate 2-reductase (EC 1.1.1.169)
+Role.23	2-heptaprenyl-1,4-naphthoquinone methyltransferase MenG of phylloquinone biosynthesis (EC 2.1.1.-)
+Role.24	2-isopropylmalate synthase (EC 2.3.3.13)
+Role.25	2-keto-3-deoxy-D-arabino-heptulosonate-7-phosphate synthase II (EC 2.5.1.54)
+Role.26	2-methyl-6-solanyl-1,4-benzoquinone methyltransferase, eukaryotic type
+Role.27	2-nonaprenyl-6-methoxyphenol 4-monooxygenase (EC 1.14.3.-)
+Role.28	2-octaprenyl-3-methyl-6-methoxy-1,4-benzoquinol hydroxylase (EC 1.14.13.-)
+Role.29	2-oxoglutarate dehydrogenase E1 component (EC 1.2.4.2)
+Role.30	2-succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylic-acid synthase (EC 2.2.1.9)
+Role.31	2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate synthase (EC 4.2.99.20)
+Role.32	3,4-dihydroxy-2-butanone 4-phosphate synthase (EC 4.1.99.12)
+Role.33	3,4-dihydroxy-5-polyprenylbenzoate methyltransferase (EC 2.1.1.114)
+Role.34	3-Phosphoglycerate transport
+Role.35	3-cyanoalanine hydratase (4.2.1.65)
+Role.36	3-dehydroquinate dehydratase I (EC 4.2.1.10)
+Role.37	3-dehydroquinate synthase (EC 4.2.3.4)
+Role.38	3-demethylubiquinol 3-O-methyltransferase (EC 2.1.1.64)
+Role.39	3-hydroxyacyl-[acyl-carrier-protein] dehydratase, FabZ form (EC 4.2.1.59)
+Role.40	3-isopropylmalate dehydratase large subunit (EC 4.2.1.33)
+Role.41	3-isopropylmalate dehydratase small subunit (EC 4.2.1.33)
+Role.42	3-isopropylmalate dehydrogenase (EC 1.1.1.85)
+Role.43	3-methyl-2-oxobutanoate hydroxymethyltransferase (EC 2.1.2.11)
+Role.44	3-nonaprenyl-4-hydroxy-5-methoxybenzoate carboxy-lyase (EC 4.1.1.-)
+Role.45	3-oxoacyl-[acyl-carrier protein] reductase (EC 1.1.1.100)
+Role.46	3-oxoacyl-[acyl-carrier-protein] synthase, KASI (EC 2.3.1.41)
+Role.47	3-oxoacyl-[acyl-carrier-protein] synthase, KASII (EC 2.3.1.179)
+Role.48	3-oxoacyl-[acyl-carrier-protein] synthase, KASIII (EC 2.3.1.180)
+Role.49	4-coumarate--CoA ligase (EC 6.2.1.12)
+Role.50	4-coumarate--CoA ligase 1 (EC 6.2.1.12)
+Role.51	4-coumarate-CoA acyltransferase (EC 2.3.1.-)
+Role.52	4-diphosphocytidyl-2-C-methyl-D-erythritol kinase (EC 2.7.1.148)
+Role.53	4-hydroxy-3-methylbut-2-enyl diphosphate reductase (EC 1.17.1.2)
+Role.54	4-hydroxy-tetrahydrodipicolinate reductase (EC 1.17.1.8)
+Role.55	4-hydroxy-tetrahydrodipicolinate synthase (EC 4.3.3.7)
+Role.56	4-hydroxybenzoate polyprenyltransferase (EC 2.5.1.39)
+Role.57	4-hydroxybenzoate transport
+Role.58	4-hydroxybenzoyl-CoA thioesterase (EC 3.1.2.23)
+Role.59	4-hydroxyphenylpyruvate dioxygenase (EC 1.13.11.27)
+Role.60	5' Deoxyadenosine transport
+Role.61	5'-methylthioadenosine nucleosidase (EC 3.2.2.16)
+Role.62	5'-nucleotidase (EC 3.1.3.5)
+Role.63	5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase
+Role.64	5,10-methylenetetrahydrofolate reductase (EC 1.5.1.20)
+Role.65	5-Amino-6-(5'-phosphoribitylamino)uracil phosphatase
+Role.66	5-Enolpyruvylshikimate-3-phosphate synthase (EC 2.5.1.19)
+Role.67	5-Formyltetrahydrofolate transport
+Role.68	5-Methylenetetrahydrofolate transport
+Role.69	5-Methylenyltetrahydrofolate transport
+Role.70	5-Methyltetrahydrofolate transport
+Role.71	5-O-(4-coumaroyl)-D-quinate/shikimate 3'-hydroxylase (EC 1.14.13.36)
+Role.72	5-amino-6-(5-phosphoribosylamino)uracil reductase (EC 1.1.1.193)
+Role.73	5-deoxy-ribulose-1-phosphate aldolase (EC 4.1.2.-)
+Role.74	5-deoxyadenosine phosphorylase (EC 2.4.2.-)
+Role.75	5-deoxyribose-1-phosphate isomerase (EC 5.3.1.-)
+Role.76	5-formyltetrahydrofolate cyclo-ligase (EC 6.3.3.2)
+Role.77	5-methyltetrahydropteroyltriglutamate--homocysteine methyltransferase (EC 2.1.1.14)
+Role.78	5-methylthioribose kinase (EC 2.7.1.100)
+Role.79	6,7-dimethyl-8-ribityllumazine synthase (EC 2.5.1.78)
+Role.80	6-phosphofructokinase (EC 2.7.1.11)
+Role.81	6-phosphogluconate dehydrogenase, decarboxylating (EC 1.1.1.44)
+Role.82	6-phosphogluconolactonase (EC 3.1.1.31), eukaryotic type
+Role.83	8-amino-7-oxononanoate synthase (EC 2.3.1.47)
+Role.84	AMP transport
+Role.85	ATP phosphoribosyltransferase (EC 2.4.2.17)
+Role.86	ATP synthase alpha chain (EC 3.6.3.14)
+Role.87	ATP synthase beta chain (EC 3.6.3.14)
+Role.88	ATP synthase delta chain (EC 3.6.3.14)
+Role.89	ATP synthase delta' chain (EC 3.6.3.14)
+Role.90	ATP synthase epsilon chain (EC 3.6.3.14)
+Role.91	ATP synthase gamma chain (EC 3.6.3.14)
+Role.92	ATP-ADP Antiporter (TC 2.A.12)
+Role.93	ATP-citrate (pro-S-)-lyase, subunit 1 (EC 2.3.3.8)
+Role.94	ATP-citrate (pro-S-)-lyase, subunit 2 (EC 2.3.3.8)
+Role.95	Acetolactate synthase large subunit (EC 2.2.1.6)
+Role.96	Acetolactate synthase small subunit (EC 2.2.1.6)
+Role.97	Acetyl-CoA acetyltransferase (EC 2.3.1.9)
+Role.98	Acetyl-CoA transport
+Role.99	Acetyl-coenzyme A carboxyl transferase alpha chain (EC 6.4.1.2)
+Role.100	Acetyl-coenzyme A carboxyl transferase beta chain (EC 6.4.1.2)
+Role.101	Acetyl-coenzyme A carboxyl transferase domain of homomeric ACCase (EC 6.4.1.2)
+Role.102	Acetyl-coenzyme A synthetase (EC 6.2.1.1)
+Role.103	Acetylglutamate kinase (EC 2.7.2.8)
+Role.104	Acetylornithine aminotransferase (EC 2.6.1.11)
+Role.105	Acetylornithine deacetylase (EC 3.5.1.16)
+Role.106	Aconitate hydratase (EC 4.2.1.3)
+Role.107	Acyl-CoA thioesterase II (EC 3.1.2.-)
+Role.108	Adenine phosphoribosyltransferase (EC 2.4.2.7)
+Role.109	Adenosine kinase (EC 2.7.1.20)
+Role.110	Adenosine nucleosidase (EC 3.2.2.7)
+Role.111	Adenosylhomocysteinase (EC 3.3.1.1)
+Role.112	Adenosylmethionine-8-amino-7-oxononanoate aminotransferase (EC 2.6.1.62)
+Role.113	Adenylate kinase (EC 2.7.4.3)
+Role.114	Adenylosuccinate lyase (EC 4.3.2.2)
+Role.115	Adenylosuccinate synthetase (EC 6.3.4.4)
+Role.116	Adenylyl-sulfate reductase [glutathione] (EC 1.8.4.9)
+Role.117	Adenylylsulfate kinase (EC 2.7.1.25)
+Role.118	Adrenodoxin reductase (EC 1.18.1.6)
+Role.119	Adrenodoxin, mitochondrial ferredoxin
+Role.120	Alanine transaminase (EC 2.6.1.2)
+Role.121	Alanine transport
+Role.122	Alcohol dehydrogenase (EC 1.1.1.1)
+Role.123	Aldehyde dehydrogenase (EC 1.2.1.3)
+Role.124	Alpha-farnesene synthase (EC 4.2.3.46)
+Role.125	Alternative oxidase, ubiquinol oxidase (EC 1.10.3.11)
+Role.126	Amidophosphoribosyltransferase (EC 2.4.2.14)
+Role.127	Aminodeoxychorismate lyase (EC 4.1.3.38)
+Role.128	Aminomethyltransferase (glycine cleavage system T protein) (EC 2.1.2.10)
+Role.129	Ammonia transport
+Role.130	Anthranilate phosphoribosyltransferase (EC 2.4.2.18)
+Role.131	Anthranilate synthase, amidotransferase component (EC 4.1.3.27)
+Role.132	Anthranilate synthase, aminase component (EC 4.1.3.27)
+Role.133	Apyrase, ATP-diphosphatase (EC 3.6.1.5)
+Role.134	Arginase (EC 3.5.3.1)
+Role.135	Arginine transport
+Role.136	Argininosuccinate lyase (EC 4.3.2.1)
+Role.137	Argininosuccinate synthase (EC 6.3.4.5)
+Role.138	Arogenate dehydratase (EC 4.2.1.91)
+Role.139	Arogenate dehydrogenase (EC 1.3.1.78)
+Role.140	Asparagine synthetase [glutamine-hydrolyzing] (EC 6.3.5.4)
+Role.141	Asparagine transport
+Role.142	Aspartate aminotransferase (EC 2.6.1.1)
+Role.143	Aspartate carbamoyltransferase (EC 2.1.3.2)
+Role.144	Aspartate transport
+Role.145	Aspartate-semialdehyde dehydrogenase (EC 1.2.1.11)
+Role.146	Aspartokinase (EC 2.7.2.4)
+Role.147	Beta-ureidopropionase (EC 3.5.1.6)
+Role.148	Bicarbonate transport
+Role.149	Biotin carboxyl carrier domain of homomeric Acetyl-CoA carboxylase
+Role.150	Biotin carboxyl carrier protein of acetyl-CoA carboxylase
+Role.151	Biotin carboxylase domain of homomeric ACCase (EC 6.3.4.14)
+Role.152	Biotin carboxylase of acetyl-CoA carboxylase (EC 6.3.4.14)
+Role.153	Biotin synthase (EC 2.8.1.6)
+Role.154	Biotin transport
+Role.155	Biotin--protein ligase (EC 6.3.4.9)(EC 6.3.4.10)(EC 6.3.4.11)(EC 6.3.4.15)
+Role.156	Branched-chain alpha-keto acid dehydrogenase, E1 component, alpha subunit (EC 1.2.4.4)
+Role.157	Branched-chain alpha-keto acid dehydrogenase, E1 component, beta subunit (EC 1.2.4.4)
+Role.158	Branched-chain amino acid aminotransferase (EC 2.6.1.42)
+Role.159	CTP synthase (EC 6.3.4.2)
+Role.160	Caffeic-o-methyltransferase (EC 2.1.1.68)
+Role.161	Caffeoyl-CoA O-methyltransferase (EC 2.1.1.104)
+Role.162	Carbamoyl-phosphate synthase large chain (EC 6.3.5.5)
+Role.163	Carbamoyl-phosphate synthase small chain (EC 6.3.5.5)
+Role.164	Carbon dioxide transport
+Role.165	Carbon monoxide transport
+Role.166	Carbonic anhydrase (EC 4.2.1.1)
+Role.167	Catalase (EC 1.11.1.6)
+Role.168	Chalcone synthase (EC 2.3.1.74)
+Role.169	Chloride transport
+Role.170	Cholinephosphate cytidylyltransferase (EC 2.7.7.15)
+Role.171	Chorismate mutase III (EC 5.4.99.5)
+Role.172	Chorismate synthase (EC 4.2.3.5)
+Role.173	Chorismate transport
+Role.174	Cinnamoyl-CoA reductase (EC 1.2.1.44)
+Role.175	Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)
+Role.176	Citrate synthase (si) (EC 2.3.3.1)
+Role.177	Citrate/Isocitrate antiporter
+Role.178	CoA transport
+Role.179	Coniferin beta-glucosidase (EC 3.2.1.126)
+Role.180	Coniferyl-alcohol and sinapyl-alcohol glucosyltransferase (EC 2.4.1.111)
+Role.181	Coniferyl-aldehyde dehydrogenase (EC 1.2.1.68)
+Role.182	Cyanoalanine nitrilase (EC 3.5.5.4)
+Role.183	Cystathionine beta-lyase (EC 4.4.1.8)
+Role.184	Cystathionine gamma-synthase (EC 2.5.1.48)
+Role.185	Cystathionine gamma-synthase, O-phospho-L-homoserine dependent (EC 2.5.1.-)
+Role.186	Cysteine desulfurase (EC 2.8.1.7), IscS subfamily
+Role.187	Cysteine desulfurase (EC 2.8.1.7), SufS subfamily
+Role.188	Cysteine synthase (EC 2.5.1.47)
+Role.189	Cysteine transport
+Role.190	Cytochrome b559 alpha chain (PsbE)
+Role.191	Cytochrome b559 beta chain (PsbF)
+Role.192	Cytochrome b6-f complex alternative Rieske iron sulfur protein PetC2
+Role.193	Cytochrome b6-f complex alternative Rieske iron sulfur protein PetC3
+Role.194	Cytochrome b6-f complex iron-sulfur subunit PetC1 (Rieske iron sulfur protein EC 1.10.9.1)
+Role.195	Cytochrome b6-f complex subunit IV (PetD)
+Role.196	Cytochrome b6-f complex subunit V (PetG)
+Role.197	Cytochrome b6-f complex subunit VII (PetM)
+Role.198	Cytochrome b6-f complex subunit, apocytochrome f
+Role.199	Cytochrome b6-f complex subunit, cytochrome b6
+Role.200	Cytochrome b6-f complex subunit, cytochrome b6, putative
+Role.201	Cytochrome c oxidase polypeptide I (EC 1.9.3.1)
+Role.202	Cytochrome c oxidase polypeptide II (EC 1.9.3.1)
+Role.203	Cytochrome c oxidase polypeptide III (EC 1.9.3.1)
+Role.204	Cytochrome c oxidase subunit 5a
+Role.205	Cytochrome c oxidase subunit 5b
+Role.206	Cytochrome c oxidase subunit 6a
+Role.207	Cytochrome c oxidase subunit 6b
+Role.208	Cytochrome c oxidase, subunit IV (EC 1.9.3.1)
+Role.209	D-3-phosphoglycerate dehydrogenase (EC 1.1.1.95)
+Role.210	D-glycerate 3-kinase (EC 2.7.1.31), plant type
+Role.211	D-serine dehydratase (EC 4.3.1.18)
+Role.212	Delta-1-pyrroline-5-carboxylate dehydrogenase (EC 1.5.1.12)
+Role.213	Demethylphylloquinone methyltransferase (EC 2.1.1.329)
+Role.214	Deoxycytidine monophosphate deaminase (EC 3.5.4.12)
+Role.215	Deoxyuridine 5'-triphosphate nucleotidohydrolase (EC 3.6.1.23)
+Role.216	Dephospho-CoA kinase (EC 2.7.1.24)
+Role.217	Dethiobiotin synthetase (EC 6.3.3.3)
+Role.218	Diacylglycerol cholinephosphotransferase (EC 2.7.8.2)
+Role.219	Diaminohydroxyphosphoribosylaminopyrimidine deaminase (EC 3.5.4.26)
+Role.220	Diaminopimelate decarboxylase (EC 4.1.1.20)
+Role.221	Diaminopimelate epimerase (EC 5.1.1.7)
+Role.222	Dihydrofolate reductase (EC 1.5.1.3)
+Role.223	Dihydrofolate synthase (EC 6.3.2.12)
+Role.224	Dihydrolipoamide acetyltransferase component of pyruvate dehydrogenase complex (EC 2.3.1.12)
+Role.225	Dihydrolipoamide acyltransferase component of branched-chain alpha-keto acid dehydrogenase complex (EC 2.3.1.168)
+Role.226	Dihydrolipoamide dehydrogenase of 2-oxoglutarate dehydrogenase (EC 1.8.1.4)
+Role.227	Dihydrolipoamide dehydrogenase of branched-chain alpha-keto acid dehydrogenase (EC 1.8.1.4)
+Role.228	Dihydrolipoamide dehydrogenase of glycine cleavage system, L protein (EC 1.8.1.4)
+Role.229	Dihydrolipoamide dehydrogenase of pyruvate dehydrogenase complex (EC 1.8.1.4)
+Role.230	Dihydrolipoamide succinyltransferase component (E2) of 2-oxoglutarate dehydrogenase complex (EC 2.3.1.61)
+Role.231	Dihydroneopterin aldolase (EC 4.1.2.25)
+Role.232	Dihydroneopterin monophosphate phosphatase (non-specific?)
+Role.233	Dihydroneopterin triphosphate diphosphatase (EC 3.6.1.n4)
+Role.234	Dihydroorotase (EC 3.5.2.3)
+Role.235	Dihydroorotate dehydrogenase [quinone] (EC 1.3.5.2)
+Role.236	Dihydroorotate transport
+Role.237	Dihydropteroate synthase (EC 2.5.1.15)
+Role.238	Dihydropyrimidinase (EC 3.5.2.2)
+Role.239	Dihydropyrimidine dehydrogenase (EC 1.3.1.2)
+Role.240	Dihydroxy-acid dehydratase (EC 4.2.1.9)
+Role.241	Dihydroxyacetone transport
+Role.242	Dimethylallyl diphosphate transport
+Role.243	Diphosphomevalonate decarboxylase (EC 4.1.1.33)
+Role.244	Enolase (EC 4.2.1.11)
+Role.245	Enoyl-[acyl-carrier-protein] reductase [NADH] (EC 1.3.1.9)
+Role.246	Ethanolamine N-methyltransferase, free-base-specific (EC 2.1.1.-)
+Role.247	Ethanolamine kinase (EC 2.7.1.82)
+Role.248	Extradiol ring-cleavage dioxygenase [caffealdehyde, other] (EC 1.13.-.-)
+Role.249	FAD pyrophosphatase (EC 3.6.1.18)
+Role.250	FMN adenylyltransferase (EC 2.7.7.2)
+Role.251	FMN adenylyltransferase, type 2 eukaryotic (EC 2.7.7.2)
+Role.252	FMN hydrolase, high substrate specificity (EC 3.1.3.-)
+Role.253	Farnesyl diphosphate transport
+Role.254	Farnesyl-diphosphate synthase (EC 2.5.1.10)
+Role.255	Fatty acid omega-hydroxylase (EC 1.14.13.-)
+Role.256	Fatty acid transport
+Role.257	Ferredoxin--nitrite reductase (EC 1.7.7.1)
+Role.258	Ferredoxin--sulfite reductase (EC 1.8.7.1)
+Role.259	Ferredoxin-NADP(+) reductase (EC 1.18.1.2)
+Role.260	Ferredoxin-dependent glutamate synthase (EC 1.4.7.1)
+Role.261	Ferulate-5-hydroxylase (EC 1.14.13.-)
+Role.262	Flavanone-3-hydroxylase (EC 1.14.13.21)
+Role.263	Flavonoid 3'-hydroxylase (EC 1.14.13.21)
+Role.264	Flavonoid 3'-monooxygenase (EC 1.14.13.21)
+Role.265	Folylpolyglutamate synthase (EC 6.3.2.17)
+Role.266	Formate dehydrogenase (EC 1.2.1.2)
+Role.267	Formate transport
+Role.268	Formate--tetrahydrofolate ligase (EC 6.3.4.3)
+Role.269	Fructokinase (EC 2.7.1.4)
+Role.270	Fructose-1,6-bisphosphatase, type I (EC 3.1.3.11)
+Role.271	Fructose-bisphosphate aldolase class I (EC 4.1.2.13)
+Role.272	Fumarate hydratase class II (EC 4.2.1.2)
+Role.273	Fumarate transport
+Role.274	GMP synthase [glutamine-hydrolyzing] (EC 6.3.5.2)
+Role.275	GTP cyclohydrolase I (EC 3.5.4.16) type 1
+Role.276	GTP cyclohydrolase II (EC 3.5.4.25)
+Role.277	Gamma-glutamyl phosphate reductase (EC 1.2.1.41)
+Role.278	Geranyl-diphosphate synthase (EC 2.5.1.1)
+Role.279	Geranylgeranyl diphosphate reductase (EC 1.3.1.83)
+Role.280	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29)
+Role.281	Geranyllinalool synthase (EC 4.2.3.144)
+Role.282	Gluconokinase (EC 2.7.1.12)
+Role.283	Glucose-6-phosphate 1-dehydrogenase (EC 1.1.1.49)
+Role.284	Glucose-6-phosphate isomerase (EC 5.3.1.9)
+Role.285	Glucuronokinase (EC 2.7.1.43)
+Role.286	Glutamate 5-kinase (EC 2.7.2.11)
+Role.287	Glutamate N-acetyltransferase (EC 2.3.1.35)
+Role.288	Glutamate synthase [NADH] (EC 1.4.1.14)
+Role.289	Glutamate transport
+Role.290	Glutamate--prephenate aminotransferase (EC 2.6.1.79)
+Role.291	Glutamate-glyoxylate aminotransferase (EC 2.6.1.4)
+Role.292	Glutaminase (EC 3.5.1.2)
+Role.293	Glutamine amidotransferase chain of NAD synthetase
+Role.294	Glutamine synthetase type II, eukaryotic (EC 6.3.1.2)
+Role.295	Glutamine transport
+Role.296	Glutathione reductase (EC 1.8.1.7)
+Role.297	Glyceraldehyde 3-phosphate transport
+Role.298	Glycerate transport
+Role.299	Glycerol-3-phosphate dehydrogenase (EC 1.1.5.3)
+Role.300	Glycerol-3-phosphate dehydrogenase [NAD+] (EC 1.1.1.8)
+Role.301	Glycine cleavage system H protein
+Role.302	Glycine dehydrogenase [decarboxylating] (glycine cleavage system P protein) (EC 1.4.4.2)
+Role.303	Glycine transport
+Role.304	Glycolaldehyde dehydrogenase (EC 1.2.1.21)
+Role.305	Glycolate oxidase (EC 1.1.3.15)
+Role.306	Glycolate transport
+Role.307	Glyoxylate transport
+Role.308	Guanine phosphoribosyltransferase (EC 2.4.2.8)
+Role.309	Guanylate kinase (EC 2.7.4.8)
+Role.310	HMDHP transport
+Role.311	HS transport
+Role.312	Hexokinase (EC 2.7.1.1)
+Role.313	Histidine transport
+Role.314	Histidinol dehydrogenase (EC 1.1.1.23)
+Role.315	Histidinol-phosphatase [alternative form] (EC 3.1.3.15)
+Role.316	Histidinol-phosphate aminotransferase (EC 2.6.1.9)
+Role.317	Homocysteine S-methyltransferase (EC 2.1.1.10)
+Role.318	Homogentisate solanesyltransferase (EC 2.5.-)
+Role.319	Homoserine dehydrogenase (EC 1.1.1.3)
+Role.320	Homoserine kinase (EC 2.7.1.39)
+Role.321	Hydrogen peroxide transport
+Role.322	Hydrouracil transport
+Role.323	Hydroxyethylthiazole kinase (EC 2.7.1.50)
+Role.324	Hydroxymethylglutaryl-CoA reductase (EC 1.1.1.34)
+Role.325	Hydroxymethylglutaryl-CoA synthase (EC 2.3.3.10)
+Role.326	Hydroxymethylpyrimidine kinase (EC 2.7.1.49)
+Role.327	Hydroxymethylpyrimidine phosphate kinase ThiD (EC 2.7.4.7)
+Role.328	Hydroxymethylpyrimidine phosphate synthase ThiC (EC 4.1.99.17)
+Role.329	Hypothetical reaction
+Role.330	IMP cyclohydrolase (EC 3.5.4.10)
+Role.331	IMP transport
+Role.332	Imidazole glycerol phosphate synthase amidotransferase subunit (EC 2.4.2.-)
+Role.333	Imidazole glycerol phosphate synthase cyclase subunit (EC 4.1.3.-)
+Role.334	Imidazoleglycerol-phosphate dehydratase (EC 4.2.1.19)
+Role.335	Indole synthase (EC 4.1.2.8)
+Role.336	Indole-3-glycerol phosphate synthase (EC 4.1.1.48)
+Role.337	Inorganic pyrophosphatase (EC 3.6.1.1)
+Role.338	Inosine-5'-monophosphate dehydrogenase (EC 1.1.1.205)
+Role.339	Inositol oxygenase (EC 1.13.99.1)
+Role.340	Isochorismate synthase (EC 5.4.4.2)
+Role.341	Isocitrate dehydrogenase [NADP] (EC 1.1.1.42)
+Role.342	Isocitrate dehydrogenase [NAD] catalytic subunit (EC 1.1.1.41)
+Role.343	Isocitrate dehydrogenase [NAD] regulatory subunit (EC 1.1.1.41)
+Role.344	Isocitrate lyase (EC 4.1.3.1), group II (plants and fungi)
+Role.345	Isoleucine transport
+Role.346	Isopentenyl-diphosphate delta-isomerase (EC 5.3.3.2)
+Role.347	KAPA transport
+Role.348	Ketol-acid reductoisomerase (EC 1.1.1.86)
+Role.349	L,L-diaminopimelate aminotransferase (EC 2.6.1.83)
+Role.350	L-3-cyanoalanine synthase (EC 4.4.1.9)
+Role.351	L-Serine decarboxylase (EC 4.1.1.-)
+Role.352	L-alanine:glyoxylate aminotransferase (EC 2.6.1.44)
+Role.353	L-aspartate oxidase (EC 1.4.3.16)
+Role.354	L-lactate dehydrogenase (EC 1.1.1.27)
+Role.355	Lauryl-[acyl-carrier protein] hydrolase (EC 3.1.2.21)
+Role.356	Leucine transport
+Role.357	Light transport
+Role.358	Long-chain fatty acid omega-alcohol dehydrogenase (EC 1.1.1.-)
+Role.359	Long-chain fatty acid omega-aldehyde dehydrogenase (EC 1.2.1.-)
+Role.360	Long-chain fatty acid omega-hydroxylase (EC 1.14.13.-)
+Role.361	Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3)
+Role.362	Low-specificity L-threonine aldolase (EC 4.1.2.48)
+Role.363	Low-specificity L-threonine aldolase (EC 4.1.2.5)
+Role.364	Lysine transport
+Role.365	Malate dehydrogenase (EC 1.1.1.37)
+Role.366	Malate dehydrogenase (NADP+) (EC 1.1.1.82)
+Role.367	Malate synthase (EC 2.3.3.9)
+Role.368	Malate transport
+Role.369	Malonyl CoA-acyl carrier protein transacylase (EC 2.3.1.39)
+Role.370	Methenyltetrahydrofolate cyclohydrolase (EC 3.5.4.9)
+Role.371	Methionine S-methyltransferase (EC 2.1.1.12)
+Role.372	Methionine gamma-lyase (EC 4.4.1.11)
+Role.373	Methionine transport
+Role.374	Methionine--glyoxylate aminotransferase (EC 2.6.1.73)
+Role.375	Methionine--oxo-acid aminotransferase (EC 2.6.1.88)
+Role.376	Methylenetetrahydrofolate dehydrogenase (NADP+) (EC 1.5.1.5)
+Role.377	Methylthioribose-1-phosphate isomerase (EC 5.3.1.23)
+Role.378	Methylthioribulose-1-phosphate dehydratase (EC 4.2.1.109)
+Role.379	Mevalonate kinase (EC 2.7.1.36)
+Role.380	Mitochondrial pyruvate carrier (TC 2.A.105)
+Role.381	N-acetyl-gamma-glutamyl-phosphate reductase (EC 1.2.1.38)
+Role.382	N-acetylglutamate synthase (EC 2.3.1.1)
+Role.383	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)
+Role.384	NAD kinase (EC 2.7.1.23)
+Role.385	NAD synthetase (EC 6.3.1.5)
+Role.386	NAD(P)H-hydrate epimerase (EC 5.1.99.6)
+Role.387	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.12)
+Role.388	NAD-dependent malic enzyme (EC 1.1.1.38)
+Role.389	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 1, ND1
+Role.390	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 2, ND2
+Role.391	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 3, ND3
+Role.392	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 4, ND4
+Role.393	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 4L, ND4L
+Role.394	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 5, ND5
+Role.395	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 1
+Role.396	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 12
+Role.397	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 13
+Role.398	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 2
+Role.399	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 5
+Role.400	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 6
+Role.401	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 8
+Role.402	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 9
+Role.403	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 10
+Role.404	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 2
+Role.405	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 3
+Role.406	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 7
+Role.407	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 8
+Role.408	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 9
+Role.409	NADH dehydrogenase [ubiquinone] flavoprotein 1 (EC 1.6.5.3) (EC 1.6.99.3)
+Role.410	NADH dehydrogenase [ubiquinone] flavoprotein 2 (EC 1.6.5.3) (EC 1.6.99.3)
+Role.411	NADH dehydrogenase [ubiquinone] iron-sulfur protein 1 (EC 1.6.5.3) (EC 1.6.99.3)
+Role.412	NADH dehydrogenase [ubiquinone] iron-sulfur protein 2 (EC 1.6.5.3) (EC 1.6.99.3)
+Role.413	NADH dehydrogenase [ubiquinone] iron-sulfur protein 3 (EC 1.6.5.3) (EC 1.6.99.3)
+Role.414	NADH dehydrogenase [ubiquinone] iron-sulfur protein 4
+Role.415	NADH dehydrogenase [ubiquinone] iron-sulfur protein 5
+Role.416	NADH dehydrogenase [ubiquinone] iron-sulfur protein 6
+Role.417	NADH dehydrogenase [ubiquinone] iron-sulfur protein 7 (EC 1.6.5.3) (EC 1.6.99.3)
+Role.418	NADH dehydrogenase [ubiquinone] iron-sulfur protein 8 (EC 1.6.5.3) (EC 1.6.99.3)
+Role.419	NADH kinase (EC 2.7.1.86)
+Role.420	NADH pyrophosphatase (EC 3.6.1.22)
+Role.421	NADH-dependent hydroxypyruvate reductase (EC 1.1.1.29)
+Role.422	NADP phosphatase (EC 3.1.3.-)
+Role.423	NADP-dependent malic enzyme (EC 1.1.1.40)
+Role.424	NADP-specific glutamate dehydrogenase (EC 1.4.1.4)
+Role.425	NADPH-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.13)
+Role.426	NMN nucleosidase (EC 3.2.2.14)
+Role.427	NMN phosphatase (EC 3.1.3.5)
+Role.428	NUDIX hydrolase, NAD diphosphatase (EC 3.6.1.22)
+Role.429	Naphthoate synthase (EC 4.1.3.36)
+Role.430	Nicotinamidase (EC 3.5.1.19) of PncA family, nonfunctional
+Role.431	Nicotinamidase (EC 3.5.1.19), plant/cyanobacterial family
+Role.432	Nicotinamide-nucleotide adenylyltransferase (EC 2.7.7.1), eukaryotic PNAT family
+Role.433	Nicotinate N-methyltransferase (EC 2.1.1.7)
+Role.434	Nicotinate phosphoribosyltransferase (EC 2.4.2.11)
+Role.435	Nicotinate-nucleotide adenylyltransferase (EC 2.7.7.18), eukaryotic PNAT family
+Role.436	Nitrate reductase [NADH] (EC 1.7.1.1)
+Role.437	Nitrate transport
+Role.438	Nitrite transport
+Role.439	Non-phosphorylating glyceraldehyde-3-phosphate dehydrogenase (NADP) (EC 1.2.1.9)
+Role.440	Nucleoside diphosphate kinase (EC 2.7.4.6)
+Role.441	O-succinylbenzoate synthase (EC 4.2.1.113)
+Role.442	O-succinylbenzoic acid--CoA ligase (EC 6.2.1.26)
+Role.443	Oleoyl-[acyl carrier protein] thioesterase (EC 3.1.2.14)
+Role.444	Oleoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.14)
+Role.445	Ornithine aminotransferase (EC 2.6.1.13)
+Role.446	Ornithine carbamoyltransferase (EC 2.1.3.3)
+Role.447	Ornithine transport
+Role.448	Orotate phosphoribosyltransferase (EC 2.4.2.10)
+Role.449	Orotate transport
+Role.450	Orotidine 5'-phosphate decarboxylase (EC 4.1.1.23)
+Role.451	Oxaloacetate transport
+Role.452	Oxygen transport
+Role.453	PLP transport
+Role.454	Palmitoyl-[acyl carrier protein] thioesterase (EC 3.1.2.-)
+Role.455	Palmitoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.-)
+Role.456	Pantoate--beta-alanine ligase (EC 6.3.2.1)
+Role.457	Pantothenate kinase type II, eukaryotic (EC 2.7.1.33)
+Role.458	Para-aminobenzoate synthase, amidotransferase component (EC 2.6.1.85)
+Role.459	Para-aminobenzoate synthase, aminase component (EC 2.6.1.85)
+Role.460	Peroxidase (EC 1.11.1.7)
+Role.461	Phenylalanine ammonia-lyase (EC 4.3.1.24)
+Role.462	Phenylalanine transport
+Role.463	Phosphate transport
+Role.464	Phosphoenolpyruvate carboxykinase [ATP] (EC 4.1.1.49)
+Role.465	Phosphoenolpyruvate carboxylase (EC 4.1.1.31)
+Role.466	Phosphoenolpyruvate transport
+Role.467	Phosphoethanolamine N-methyltransferase (EC 2.1.1.103)
+Role.468	Phosphoethanolamine/phosphocholine phosphatase (EC 3.1.3.75)
+Role.469	Phosphoglucomutase (EC 5.4.2.2)
+Role.470	Phosphoglycerate kinase (EC 2.7.2.3)
+Role.471	Phosphoglycolate phosphatase (EC 3.1.3.18)
+Role.472	Phospholipase D (EC 3.1.4.4)
+Role.473	Phosphomevalonate kinase (EC 2.7.4.2)
+Role.474	Phosphopantetheine adenylyltransferase, type II eukaryotic (EC 2.7.7.3)
+Role.475	Phosphopantothenoylcysteine decarboxylase (EC 4.1.1.36)
+Role.476	Phosphopantothenoylcysteine synthetase (EC 6.3.2.5)
+Role.477	Phosphoribosyl-AMP cyclohydrolase (EC 3.5.4.19)
+Role.478	Phosphoribosyl-ATP pyrophosphatase (EC 3.6.1.31)
+Role.479	Phosphoribosylamine--glycine ligase (EC 6.3.4.13)
+Role.480	Phosphoribosylaminoimidazole carboxylase ATPase subunit (EC 4.1.1.21)
+Role.481	Phosphoribosylaminoimidazole carboxylase catalytic subunit (EC 4.1.1.21)
+Role.482	Phosphoribosylaminoimidazole-succinocarboxamide synthase (EC 6.3.2.6)
+Role.483	Phosphoribosylaminoimidazolecarboxamide formyltransferase (EC 2.1.2.3)
+Role.484	Phosphoribosylanthranilate isomerase (EC 5.3.1.24)
+Role.485	Phosphoribosylformimino-5-aminoimidazole carboxamide ribotide isomerase (EC 5.3.1.16)
+Role.486	Phosphoribosylformylglycinamidine cyclo-ligase (EC 6.3.3.1)
+Role.487	Phosphoribosylformylglycinamidine synthase, glutamine amidotransferase subunit (EC 6.3.5.3)
+Role.488	Phosphoribosylformylglycinamidine synthase, synthetase subunit (EC 6.3.5.3)
+Role.489	Phosphoribosylglycinamide formyltransferase (EC 2.1.2.2)
+Role.490	Phosphoribulokinase (EC 2.7.1.19)
+Role.491	Phosphoserine aminotransferase (EC 2.6.1.52)
+Role.492	Phosphoserine phosphatase (EC 3.1.3.3)
+Role.493	Photosystem II 10 kDa phosphoprotein (PsbH)
+Role.494	Photosystem II 10 kDa protein PsbR
+Role.495	Photosystem II 12 kDa extrinsic protein (PsbU)
+Role.496	Photosystem II 13 kDa protein Psb28 (similar to PsbW)
+Role.497	Photosystem II CP22 protein PsbS
+Role.498	Photosystem II CP43 protein (PsbC)
+Role.499	Photosystem II CP47 protein (PsbB)
+Role.500	Photosystem II manganese-stabilizing protein (PsbO)
+Role.501	Photosystem II oxygen evolving complex protein PsbP
+Role.502	Photosystem II oxygen evolving complex protein PsbQ
+Role.503	Photosystem II protein Psb27
+Role.504	Photosystem II protein PsbI
+Role.505	Photosystem II protein PsbJ
+Role.506	Photosystem II protein PsbK
+Role.507	Photosystem II protein PsbL
+Role.508	Photosystem II protein PsbM
+Role.509	Photosystem II protein PsbN
+Role.510	Photosystem II protein PsbTn
+Role.511	Photosystem II protein PsbV, cytochrome c550
+Role.512	Photosystem II protein PsbX
+Role.513	Photosystem II protein PsbY
+Role.514	Photosystem II protein PsbZ
+Role.515	Photosystem II stability/assembly factor HCF136/Ycf48
+Role.516	Plastidial ATP synthase alpha chain (EC 3.6.3.14)
+Role.517	Plastidial ATP synthase beta chain (EC 3.6.3.14)
+Role.518	Plastidial ATP synthase delta chain
+Role.519	Plastidial ATP synthase epsilon chain
+Role.520	Plastidial ATP synthase gamma chain
+Role.521	Plastoquinone transport
+Role.522	Potassium transport
+Role.523	Prephenate dehydratase (EC 4.2.1.51)
+Role.524	Probable acyl-ACP desaturase, Stearoyl-ACP desaturase (EC 1.14.19.2)
+Role.525	Probable cytochrome c oxidase subunit 5c
+Role.526	Proline transport
+Role.527	Protein CP12, regulation of Calvin cycle via association/dissociation of PRK/CP12/GAPDH complex
+Role.528	Proton transport
+Role.529	Purine nucleosidase (EC 3.2.2.1)
+Role.530	Putative chaperon-like protein Ycf39 for quinone binding in Photosystem II
+Role.531	Putative ubiquinol-cytochrome c reductase complex core protein I (subunit COR1)
+Role.532	Putative ubiquinol-cytochrome c reductase complex core protein II (subunit COR2)
+Role.533	Pyridoxal kinase (EC 2.7.1.35)
+Role.534	Pyridoxal reductase (EC 1.1.1.65)
+Role.535	Pyridoxal-5'-phosphate phosphatase (EC 3.1.3.74), eukaryotic type
+Role.536	Pyridoxamine 5'-phosphate oxidase (EC 1.4.3.5)
+Role.537	Pyridoxamine-pyruvate aminotransferase (EC 2.6.1.30)
+Role.538	Pyridoxine biosynthesis glutamine amidotransferase, glutaminase subunit (EC 2.4.2.-)
+Role.539	Pyridoxine biosynthesis glutamine amidotransferase, synthase subunit (EC 2.4.2.-)
+Role.540	Pyrophosphate transport
+Role.541	Pyrophosphate-dependent fructose 6-phosphate-1-kinase (EC 2.7.1.90)
+Role.542	Pyrophosphate-energized proton pump (EC 3.6.1.1)
+Role.543	Pyrroline-5-carboxylate reductase (EC 1.5.1.2)
+Role.544	Pyruvate decarboxylase (EC 4.1.1.1)
+Role.545	Pyruvate dehydrogenase E1 component alpha subunit (EC 1.2.4.1)
+Role.546	Pyruvate dehydrogenase E1 component beta subunit (EC 1.2.4.1)
+Role.547	Pyruvate kinase (EC 2.7.1.40)
+Role.548	Pyruvate transport
+Role.549	Pyruvate,phosphate dikinase (EC 2.7.9.1)
+Role.550	Quinolinate phosphoribosyltransferase [decarboxylating] (EC 2.4.2.19)
+Role.551	Quinolinate synthetase (EC 2.5.1.72)
+Role.552	Riboflavin kinase (EC 2.7.1.26)
+Role.553	Riboflavin synthase eubacterial/eukaryotic (EC 2.5.1.9)
+Role.554	Riboflavin transport
+Role.555	Ribokinase (EC 2.7.1.12)
+Role.556	Ribonucleotide reductase of class Ia (aerobic), alpha subunit (EC 1.17.4.1)
+Role.557	Ribonucleotide reductase of class Ia (aerobic), beta subunit (EC 1.17.4.1)
+Role.558	Ribose 5-phosphate isomerase A (EC 5.3.1.6)
+Role.559	Ribose-phosphate pyrophosphokinase (EC 2.7.6.1)
+Role.560	Ribulose bisphosphate carboxylase large chain (EC 4.1.1.39)
+Role.561	Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39)
+Role.562	Ribulose-phosphate 3-epimerase (EC 5.1.3.1)
+Role.563	S-Adenosyl-4-methylthio-2-oxobutanoate transport
+Role.564	S-Adenosylhomocysteine transport
+Role.565	S-Adenosylmethionine transport
+Role.566	S-adenosylmethionine synthetase (EC 2.5.1.6)
+Role.567	S-linalool synthase (EC 4.2.3.25)
+Role.568	Sedoheptulose-1,7-bisphosphatase (EC 3.1.3.37)
+Role.569	Serine acetyltransferase (EC 2.3.1.30)
+Role.570	Serine hydroxymethyltransferase (EC 2.1.2.1)
+Role.571	Serine racemase (EC 5.1.1.18)
+Role.572	Serine transport
+Role.573	Serine--glyoxylate aminotransferase (EC 2.6.1.45)
+Role.574	Shikimate 5-dehydrogenase I alpha (EC 1.1.1.25)
+Role.575	Shikimate O-hydroxycinnamoyltransferase (EC 2.3.1.133)
+Role.576	Shikimate kinase I (EC 2.7.1.71)
+Role.577	Solanesyl diphosphate synthase (EC 2.5.1.85)
+Role.578	Solanesyl-PP transport
+Role.579	Soluble pyridine nucleotide transhydrogenase (EC 1.6.1.1)
+Role.580	Spontaneous Reaction
+Role.581	Stearoyl-[acyl carrier protein] thioesterase (EC 3.1.2.-)
+Role.582	Stearoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.-)
+Role.583	Succinate dehydrogenase (ubiquinone) cytochrome b560 subunit SDH3/SDHC
+Role.584	Succinate dehydrogenase (ubiquinone) flavoprotein subunit SDH1/SDHA (EC 1.3.5.1)
+Role.585	Succinate dehydrogenase (ubiquinone) iron-sulfur subunit SDH2/SDHB (EC 1.3.5.1)
+Role.586	Succinate dehydrogenase (ubiquinone) membrane anchor subunit SDH4/SDHD
+Role.587	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH5
+Role.588	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH6
+Role.589	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH7
+Role.590	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH8
+Role.591	Succinate transport
+Role.592	Succinyl-CoA ligase [ADP-forming] alpha chain (EC 6.2.1.5)
+Role.593	Succinyl-CoA ligase [ADP-forming] beta chain (EC 6.2.1.5)
+Role.594	Sucrose alpha-glucosidase, alkaline/neutral invertase (EC 3.2.1.26)
+Role.595	Sucrose synthase (EC 2.4.1.13)
+Role.596	Sucrose transport
+Role.597	Sucrose-phosphate phosphatase (EC 3.1.3.24)
+Role.598	Sucrose-phosphate synthase (EC 2.4.1.14)
+Role.599	Sugar-terminal-phosphatase (EC 3.1.3.9/ EC 3.1.3.58)
+Role.600	Sulfate adenylyltransferase (EC 2.7.7.4)
+Role.601	Sulfate transport
+Role.602	Sulfite oxidase (EC 1.8.3.1)
+Role.603	Tetrahydrofolate transport
+Role.604	Thiamin monophosphate transport
+Role.605	Thiamin pyrophosphokinase (EC 2.7.6.2)
+Role.606	Thiamin transport
+Role.607	Thiamin-phosphate pyrophosphorylase (EC 2.5.1.3)
+Role.608	Thiamine-monophosphate phosphatase (EC 3.1.3.-)
+Role.609	Thiamine-triphosphatase (EC 3.6.1.28)
+Role.610	Thiamine-triphosphatase (ThTP) synthase (EC 2.7.4.15)
+Role.611	Thiazole biosynthetic enzyme Thi4
+Role.612	Thioredoxin reductase (EC 1.8.1.9)
+Role.613	Threonine dehydratase biosynthetic (EC 4.3.1.19)
+Role.614	Threonine synthase (EC 4.2.3.1)
+Role.615	Threonine transport
+Role.616	Thymidylate kinase (EC 2.7.4.9)
+Role.617	Thymidylate synthase (EC 2.1.1.45)
+Role.618	Trans-cinnamate 4-monooxygenase (EC 1.14.13.11)
+Role.619	Transaldolase (EC 2.2.1.2)
+Role.620	Transketolase (EC 2.2.1.1)
+Role.621	Triosephosphate isomerase (EC 5.3.1.1)
+Role.622	Tryptophan synthase alpha chain (EC 4.2.1.20)
+Role.623	Tryptophan synthase beta chain (EC 4.2.1.20)
+Role.624	Tryptophan transport
+Role.625	Tyramine N-feruloyltransferase (EC 2.3.1.110)
+Role.626	Tyrosine aminotransferase (EC 2.6.1.5)
+Role.627	Tyrosine transport
+Role.628	UDP-D-apiose synthase (EC 4.1.1.-)
+Role.629	UDP-glucose 4-epimerase (EC 5.1.3.2)
+Role.630	UDP-glucose dehydrogenase (EC 1.1.1.22)
+Role.631	UDP-glucose:nicotinate-N-glucosyltransferase  (EC 2.4.1.196)
+Role.632	UDP-glucose:p-aminobenzoate glucosyltransferase
+Role.633	UDP-glucose:pyridoxine 5'-O-beta-D-glucosyltransferase (EC 2.4.1.160)
+Role.634	UDP-glucuronate decarboxylase (EC 4.1.1.35)
+Role.635	UDP-sugar pyrophosphorylase (EC 2.7.7.64)
+Role.636	UTP--glucose-1-phosphate uridylyltransferase (EC 2.7.7.9)
+Role.637	Ubiquinol--cytochrome c reductase, cytochrome B subunit (EC 1.10.2.2)
+Role.638	Ubiquinol-cytochrome C reductase iron-sulfur subunit (EC 1.10.2.2)
+Role.639	Ubiquinol-cytochrome c reductase complex subunit 6 (hinge protein)
+Role.640	Ubiquinol-cytochrome c reductase complex subunit 7
+Role.641	Ubiquinol-cytochrome c reductase complex subunit 8 (ubiquinone-binding protein QP-C)
+Role.642	Ubiquinol-cytochrome c reductase complex subunit 9
+Role.643	Ubiquinone biosynthesis monooxygenase COQ6 (EC 1.14.13.-), required for C5-hydroxylation step
+Role.644	Ubiquinone-9 transport
+Role.645	Ubiquinone/menaquinone biosynthesis methyltransferase UbiE (EC 2.1.1.-)
+Role.646	Uracil phosphoribosyltransferase (EC 2.4.2.9)
+Role.647	Uracil transport
+Role.648	Urea transport
+Role.649	Urease (EC 3.5.1.5)
+Role.650	Uridine monophosphate/cytidine monophosphate kinase (EC 2.7.4.14)
+Role.651	Uridine nucleosidase (EC 3.2.2.3)
+Role.652	Valine transport
+Role.653	Water transport
+Role.654	alternative photosystem I reaction center subunit X (PsaK2)
+Role.655	beta-Fructose-6-phosphate transport
+Role.656	beta-Glucose-6-phosphate transport
+Role.657	cis-Aconitate transport
+Role.658	pABA transport
+Role.659	photosystem I 4.8K protein (PsaX)
+Role.660	photosystem I P700 chlorophyll a apoprotein subunit Ia (PsaA)
+Role.661	photosystem I P700 chlorophyll a apoprotein subunit Ib (PsaB)
+Role.662	photosystem I assembly related protein Ycf3
+Role.663	photosystem I assembly related protein Ycf37
+Role.664	photosystem I assembly related protein Ycf4
+Role.665	photosystem I biogenesis protein BtpA
+Role.666	photosystem I iron-sulfur center subunit VII (PsaC)
+Role.667	photosystem I subunit II (PsaD)
+Role.668	photosystem I subunit III precursor, plastocyanin (cyt c553) docking protein (PsaF)
+Role.669	photosystem I subunit IV (PsaE)
+Role.670	photosystem I subunit IX (PsaJ)
+Role.671	photosystem I subunit PsaG
+Role.672	photosystem I subunit PsaN
+Role.673	photosystem I subunit PsaO
+Role.674	photosystem I subunit PsaP
+Role.675	photosystem I subunit VI (PsaH)
+Role.676	photosystem I subunit VIII (PsaI)
+Role.677	photosystem I subunit X (PsaK, PsaK1)
+Role.678	photosystem I subunit XI (PsaL)
+Role.679	photosystem I subunit XII (PsaM)
+Role.680	photosystem II protein D1 (PsbA)
+Role.681	photosystem II protein D2 (PsbD)
+Role.682	trans-cinnamate 2-monooxygenase (EC 1.14.13.14)
+Role.683	ubiquinol cytochrome C oxidoreductase, cytochrome C1 subunit
