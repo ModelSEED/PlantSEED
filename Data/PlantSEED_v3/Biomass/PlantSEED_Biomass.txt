@@ -89,7 +89,7 @@ All|CA	cpd00137	c	0.013	Citrate	other
 All|CA	cpd00331	c	0.086	cis-Aconitate	other
 All|CA	cpd00159	c	0.039	Lactate	other
 
-#Pigments   		
+#Pigments
 All|CO	cpd01420	c	0.0026	Carotene	other
 
 #Minerals
@@ -102,3 +102,9 @@ All|EN	cpd00001	c	30	H2O	energy
 All|EN	cpd00008	c	-30	ADP	energy
 All|EN	cpd00009	c	-30	Pi	energy
 All|EN	cpd00067	c	-30	Proton	energy
+
+All|SM	cpd08243	d	0.0001	S-linalool	terpenoid
+All|SM	cpd06735	c	0.0001	1,8-cineol	terpenoid
+All|SM	cpd06559	d|c	0.0001	Alpha-farnesene	terpenoid
+All|SM	cpd06763	d|c	0.0001	E-beta-ocimene	terpenoid
+All|SM	cpd25460	c	0.0001	Geranyllinalool	terpenoid
