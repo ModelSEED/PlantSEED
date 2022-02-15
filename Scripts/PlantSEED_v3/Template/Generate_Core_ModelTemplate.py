@@ -182,10 +182,15 @@ for tmpl_rxn in sorted(reactions_roles):
 ## Begin Template Generation
 ############################
 
+#Load Template Role Numbers
+print("Load original template role numbers")
+sys.exit()
+
 #Generate Template Roles
 template_roles=list()
 roles_ids=dict()
 role_count=1
+template_role_file = open("Template_Roles_Record.tmp",'w')
 for role in sorted(roles):
     role_hash = { 'id':"Role."+str(role_count), 'name':role, 'source':'PlantSEED',
                   'aliases':[], 'features':sorted(roles[role]) }
@@ -193,6 +198,7 @@ for role in sorted(roles):
 
     template_roles.append(role_hash)
     roles_ids[role]=role_hash['id']
+    template_role_file.write(role_hash['id']+"\t"+role+"\n")
 
 #Generate TemplateComplex and TemplateComplexRole
 template_complexes=list()
