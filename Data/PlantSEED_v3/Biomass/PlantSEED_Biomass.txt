@@ -104,3 +104,7 @@ All|EN	cpd00009	c	-30	Pi	energy
 All|EN	cpd00067	c	-30	Proton	energy
 
 All|SM	cpd08243	d	0.0001	S-linalool	terpenoid
+All|SM	cpd06735	c	0.0001	1,8-cineol	terpenoid
+All|SM	cpd06559	d|c	0.0001	Alpha-farnesene	terpenoid
+All|SM	cpd06763	d|c	0.0001	E-beta-ocimene	terpenoid
+All|SM	cpd25460	c	0.0001	Geranyllinalool	terpenoid
