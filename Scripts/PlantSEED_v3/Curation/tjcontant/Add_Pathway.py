@@ -55,7 +55,14 @@ with open(pwy_file) as pwy_file_handle:
 
                 # If MetaCyc Pathway defined
                 if(pwy != ""):
-                    class_dict[entry].append(pwy)
+                    # One pathway for all classes
+                    if (len(pwy.split('||')) == 1):
+                        class_dict[entry].append(pwy)
+                    # Pathway for each class
+                    else:
+                        # Check if each pathway defined for each class
+                        if(pwy.split('||')[ss.split('||').index(entry)] != ""):
+                            class_dict[entry].append(pwy.split('||')[ss.split('||').index(entry)])
 
             new_role['classes'][cls]=class_dict
 
