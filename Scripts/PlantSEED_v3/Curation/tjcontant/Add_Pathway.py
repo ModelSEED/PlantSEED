@@ -22,7 +22,7 @@ for entry in roles_list:
 with open(pwy_file) as pwy_file_handle:
     for line in pwy_file_handle.readlines():
         line=line.strip('\r\n')
-        print(line.split('\t'))
+        #print(line.split('\t'))
         (rxn,role,ftr,pub,ss,cls,pwy,loc)=line.split('\t')
 
         new_role = False
@@ -96,7 +96,8 @@ with open(pwy_file) as pwy_file_handle:
                 new_role['localization'][cpt]=loc_dict
 
             roles_list.append(new_role)
+            roles_dict[role] = line
 
 with open('../../../../Data/PlantSEED_v3/PlantSEED_Roles.json','w') as new_subsystem_file:
     json.dump(roles_list,new_subsystem_file,indent=4)
-print(json.dumps(roles_list,indent=4))
+#print(json.dumps(roles_list,indent=4))
