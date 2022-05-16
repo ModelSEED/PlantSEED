@@ -62,7 +62,19 @@ with open(pwy_file) as pwy_file_handle:
                 roles_list[i]['features'].append(ftr)
                 print("\t\t  new feature:\t" + ftr)
 
-                # NEED TO ADD LOCALIZATION UPDATES
+                # Update Localization
+                for entry in loc.split('||'):
+                    (cpt,sources)=entry.split(':')
+                    sources = sources.split('|')
+
+                    # comparment in role already
+                    if(cpt in roles_list[i]['localization']):
+                        roles_list[i]['localization'][cpt].update({ftr: sources})
+                        print('\t\t  new local:\t' + loc + '\t' + ftr)
+                    # compartment not in role already
+                    else:
+                        roles_list[i]['localization'].update({cpt: {ftr: sources}})
+                        print('\t\t  new local:\t' + loc + '\t' + ftr)
 
         # new_role is True
         else:
