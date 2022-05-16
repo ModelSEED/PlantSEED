@@ -11,6 +11,9 @@ with open("../../../../Data/PlantSEED_v3/PlantSEED_Roles.json") as subsystem_fil
     roles_list = json.load(subsystem_file)
 
 roles_dict=dict()
+rxns_dict  = dict()
+ftrs_dict  = dict()
+
 spontaneous_reactions=list()
 for entry in roles_list:
     roles_dict[entry['role']]=entry
@@ -18,6 +21,8 @@ for entry in roles_list:
         for reaction in entry['reactions']:
             if(reaction not in spontaneous_reactions):
                 spontaneous_reactions.append(reaction)
+    rxns_dict[entry['role']] = entry['reactions']
+    ftrs_dict[entry['role']] = entry['features']
 
 with open(pwy_file) as pwy_file_handle:
     for line in pwy_file_handle.readlines():
@@ -32,7 +37,36 @@ with open(pwy_file) as pwy_file_handle:
             if(rxn not in spontaneous_reactions):
                 new_role = True
 
-        if(new_role is True):
+        if(new_role is False):
+            print("Duplicate Role\t" + role)
+
+            # convert rxn or ftr to list if string
+            if(isinstance(rxns_dict[role], str)):
+                rxns_dict[role] = rxns_dict[role].split()
+            if(isinstance(ftrs_dict[role], str)):
+                ftrs_dict[role] = ftrs_dict[role].split()
+
+            # find index of role
+            for i in range(len(roles_list)):
+                if(roles_list[i]['role'] == role): index = i
+
+            # same role
+            if(rxn in rxns_dict[role] and ftr in ftrs_dict[role]):
+                print('\t\t  no new information')
+            # new reaction, same role
+            elif(rxn not in rxns_dict[role]):
+                roles_list[i]['reactions'].append(rxn)
+                print("\t\t  new reaction:\t" + rxn)
+            # new feature, same role
+            elif(ftr not in ftrs_dict[role]):
+                roles_list[i]['features'].append(ftr)
+                print("\t\t  new feature:\t" + ftr)
+
+                # NEED TO ADD LOCALIZATION UPDATES
+
+        # new_role is True
+        else:
+            print("New Role\t" + role)
             new_role = {'role':'',
                         'include':True,
                         'subsystems':[],
@@ -95,8 +129,10 @@ with open(pwy_file) as pwy_file_handle:
 
                 new_role['localization'][cpt]=loc_dict
 
-            roles_list.append(new_role)
             roles_dict[role] = line
+            rxns_dict[role] = rxn
+            ftrs_dict[role] = ftr
+            roles_list.append(new_role)
 
 with open('../../../../Data/PlantSEED_v3/PlantSEED_Roles.json','w') as new_subsystem_file:
     json.dump(roles_list,new_subsystem_file,indent=4)
