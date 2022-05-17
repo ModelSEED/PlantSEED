@@ -39,26 +39,20 @@ METHIONINE to HOMOMETHIONINE (PWY-1186)
 
 3.	2-[(2'-methylsulfanyl)ethyl]malate (cpd17400) -> 3-[(2'-methylsulfanyl)ethyl]malate (cpd17402)
 
-		LSU1
+		LSU1 (Q94AR8)
 		rxn13975	Methylthioalkylmalate isomerase large subunit (EC 5.4.4.-)		Athaliana_TAIR10||AT4G13430	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids		d:PPDB
 
-		SSU2
+		SSU2 (Q9ZW84)
 		rxn13975	Methylthioalkylmalate isomerase small subunit (EC 5.4.4.-)		Athaliana_TAIR10||AT2G43100	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids		d:PPDB|GFP
 
-		SSU3
+		SSU3 (Q9LYT7)
 		rxn13975	Methylthioalkylmalate isomerase small subunit (EC 5.4.4.-)		Athaliana_TAIR10||AT3G58990	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids		d:PPDB
 
 
-4.	3-[(2'-methylsulfanyl)ethyl]malate (cpd17402) -> 2-[2-(methylsulfanyl)ethyl]-3-oxobutanedioate (cpd32609)
+4.	2-[2-(methylsulfanyl)ethyl]-3-oxobutanedioate (cpd32609) -> 5-(methylsulfanyl)-2-oxopentanoate (cpd17401)
 
-		rxn43712
-
-
-5.	2-[2-(methylsulfanyl)ethyl]-3-oxobutanedioate (cpd32609) -> 5-(methylsulfanyl)-2-oxopentanoate (cpd17401)
-
-		rxn14172	Methylthioalkylmalate dehydrogenase (EC 1.1.1.-)		Athaliana_TAIR10||AT5G14200	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids	PWY-1186	d:PPDB
-		rxn14172	Methylthioalkylmalate dehydrogenase (EC 1.1.1.-)		Athaliana_TAIR10||AT1G31180	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids	PWY-1186	d:PPDB
-
+		IMD1 (Q9FMT1)
+		rxn14172	3-isopropylmalate dehydrogenase (EC 1.1.1.85)		Athaliana_TAIR10||AT5G14200	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids	PWY-1186	d:PPDB
 
 6.	5-(methylsulfanyl)-2-oxopentanoate (cpd17401) -> L-homomethionine (cpd17403)
 
