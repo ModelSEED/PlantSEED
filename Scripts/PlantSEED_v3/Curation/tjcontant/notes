@@ -54,7 +54,7 @@ METHIONINE to HOMOMETHIONINE (PWY-1186)
 		IMD1 (Q9FMT1)
 		rxn14172	3-isopropylmalate dehydrogenase (EC 1.1.1.85)		Athaliana_TAIR10||AT5G14200	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids	PWY-1186	d:PPDB
 
-6.	5-(methylsulfanyl)-2-oxopentanoate (cpd17401) -> L-homomethionine (cpd17403)
+5.	5-(methylsulfanyl)-2-oxopentanoate (cpd17401) -> L-homomethionine (cpd17403)
 
 		BCAT3 (Q9M401)
 		rxn37767	2-oxo-5-methylthiopentanoate transaminase (EC 2.6.1.-)	Athaliana_TAIR10||AT3G49680	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids	PWY-1186	d:PPDB|AraCyc|GFP
