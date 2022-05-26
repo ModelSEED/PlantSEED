@@ -22,7 +22,7 @@
             }
         },
         "publications": [],
-        "id": "1cc588"
+        "id": "PS_role_1cc588"
     },
     {
         "role": "(E)-Cinnamoyl-CoA ligase (EC 6.2.1.-)",
@@ -47,7 +47,7 @@
             }
         },
         "publications": [],
-        "id": "783638"
+        "id": "PS_role_783638"
     },
     {
         "role": "1,2-dihydroxy-3-keto-5-methylthiopentene dioxygenase (EC 1.13.11.54)",
@@ -87,7 +87,7 @@
             }
         },
         "publications": [],
-        "id": "4a721d"
+        "id": "PS_role_4a721d"
     },
     {
         "role": "1,4-alpha-glucan (starch) branching enzyme, GH-13-type (EC 2.4.1.18)",
@@ -125,7 +125,7 @@
             }
         },
         "publications": [],
-        "id": "b3dded"
+        "id": "PS_role_b3dded"
     },
     {
         "role": "1,4-alpha-glucan phosphorylase (EC 2.4.1.1)",
@@ -159,7 +159,7 @@
             }
         },
         "publications": [],
-        "id": "32ac3c"
+        "id": "PS_role_32ac3c"
     },
     {
         "role": "1,4-dihydroxy-2-naphthoate polyprenyltransferase (EC 2.5.1.74)",
@@ -188,7 +188,7 @@
             }
         },
         "publications": [],
-        "id": "1deb43"
+        "id": "PS_role_1deb43"
     },
     {
         "role": "1,4-dihydroxy-2-naphthoyl-CoA hydrolase (EC 3.1.2.28), plant type",
@@ -225,7 +225,7 @@
             }
         },
         "publications": [],
-        "id": "4e41d3"
+        "id": "PS_role_4e41d3"
     },
     {
         "role": "1-acyl-sn-glycerol-3-phosphate acyltransferase (EC 2.3.1.51)",
@@ -293,7 +293,7 @@
             }
         },
         "publications": [],
-        "id": "1aae30"
+        "id": "PS_role_1aae30"
     },
     {
         "role": "1-aminocyclopropane-1-carboxylate synthase (EC 4.4.1.14)",
@@ -353,7 +353,7 @@
             }
         },
         "publications": [],
-        "id": "e0b12f"
+        "id": "PS_role_e0b12f"
     },
     {
         "role": "1-deoxy-D-xylulose 5-phosphate reductoisomerase (EC 1.1.1.267)",
@@ -387,7 +387,7 @@
             }
         },
         "publications": [],
-        "id": "80c5d0"
+        "id": "PS_role_80c5d0"
     },
     {
         "role": "1-deoxy-D-xylulose 5-phosphate synthase (EC 2.2.1.7)",
@@ -419,7 +419,7 @@
             }
         },
         "publications": [],
-        "id": "c1e138"
+        "id": "PS_role_c1e138"
     },
     {
         "role": "1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate synthase (EC 1.17.7.1)",
@@ -446,7 +446,7 @@
             }
         },
         "publications": [],
-        "id": "22b8b8"
+        "id": "PS_role_22b8b8"
     },
     {
         "role": "10-Formyltetrahydrofolate transport",
@@ -488,7 +488,7 @@
             }
         },
         "publications": [],
-        "id": "2b9569"
+        "id": "PS_role_2b9569"
     },
     {
         "role": "2,3-bisphosphoglycerate-dependent phosphoglycerate mutase (EC 5.4.2.11)",
@@ -534,7 +534,7 @@
             }
         },
         "publications": [],
-        "id": "1b9b08"
+        "id": "PS_role_1b9b08"
     },
     {
         "role": "2,3-bisphosphoglycerate-independent phosphoglycerate mutase (EC 5.4.2.12)",
@@ -591,7 +591,7 @@
             "21813794",
             "21813794"
         ],
-        "id": "0f609d"
+        "id": "PS_role_0f609d"
     },
     {
         "role": "2,3-diketo-5-methylthiopentyl-1-phosphate enolase-phosphatase (EC 3.1.3.77)",
@@ -620,7 +620,7 @@
             }
         },
         "publications": [],
-        "id": "0e6a3e"
+        "id": "PS_role_0e6a3e"
     },
     {
         "role": "2,3-dimethyl-6-phytyl-1,4-benzoquinone cyclase",
@@ -652,7 +652,7 @@
             }
         },
         "publications": [],
-        "id": "cdd9e1"
+        "id": "PS_role_cdd9e1"
     },
     {
         "role": "2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase (EC 4.6.1.12)",
@@ -681,7 +681,7 @@
             }
         },
         "publications": [],
-        "id": "53b0a6"
+        "id": "PS_role_53b0a6"
     },
     {
         "role": "2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase (EC 2.7.7.60)",
@@ -711,7 +711,7 @@
             }
         },
         "publications": [],
-        "id": "680504"
+        "id": "PS_role_680504"
     },
     {
         "role": "2-Carboxy-1,4-naphthoquinone phytyltransferase (EC 2.5.1.130)",
@@ -742,7 +742,7 @@
         "publications": [
             "15686525"
         ],
-        "id": "8366a7"
+        "id": "PS_role_8366a7"
     },
     {
         "role": "2-Keto-3-deoxy-D-manno-octulosonate-8-phosphate synthase (EC 2.5.1.55)",
@@ -770,7 +770,7 @@
             }
         },
         "publications": [],
-        "id": "8edcaa"
+        "id": "PS_role_8edcaa"
     },
     {
         "role": "2-Oxoglutarate transport",
@@ -797,7 +797,7 @@
             }
         },
         "publications": [],
-        "id": "7fd7b2"
+        "id": "PS_role_7fd7b2"
     },
     {
         "role": "2-amino-4-hydroxy-6-hydroxymethyldihydropteridine pyrophosphokinase (EC 2.7.6.3)",
@@ -836,7 +836,7 @@
             }
         },
         "publications": [],
-        "id": "b3ea90"
+        "id": "PS_role_b3ea90"
     },
     {
         "role": "2-dehydropantoate 2-reductase (EC 1.1.1.169)",
@@ -861,7 +861,7 @@
             }
         },
         "publications": [],
-        "id": "db03be"
+        "id": "PS_role_db03be"
     },
     {
         "role": "2-heptaprenyl-1,4-naphthoquinone methyltransferase MenG of phylloquinone biosynthesis (EC 2.1.1.-)",
@@ -892,7 +892,7 @@
             }
         },
         "publications": [],
-        "id": "082313"
+        "id": "PS_role_082313"
     },
     {
         "role": "2-isopropylmalate synthase (EC 2.3.3.13)",
@@ -939,7 +939,7 @@
             }
         },
         "publications": [],
-        "id": "0f9730"
+        "id": "PS_role_0f9730"
     },
     {
         "role": "2-keto-3-deoxy-D-arabino-heptulosonate-7-phosphate synthase II (EC 2.5.1.54)",
@@ -976,7 +976,7 @@
             }
         },
         "publications": [],
-        "id": "280045"
+        "id": "PS_role_280045"
     },
     {
         "role": "2-methyl-6-phytyl-1,4-benzoquinone cyclase",
@@ -1008,7 +1008,7 @@
             }
         },
         "publications": [],
-        "id": "c98545"
+        "id": "PS_role_c98545"
     },
     {
         "role": "2-methyl-6-phytyl-1,4-benzoquinone methyltransferase, eukaryotic type",
@@ -1039,7 +1039,7 @@
             }
         },
         "publications": [],
-        "id": "6d0b9d"
+        "id": "PS_role_6d0b9d"
     },
     {
         "role": "2-methyl-6-solanyl-1,4-benzoquinone methyltransferase, eukaryotic type",
@@ -1070,7 +1070,7 @@
             }
         },
         "publications": [],
-        "id": "0763e0"
+        "id": "PS_role_0763e0"
     },
     {
         "role": "2-nonaprenyl-6-methoxyphenol 4-monooxygenase (EC 1.14.3.-)",
@@ -1095,7 +1095,7 @@
             }
         },
         "publications": [],
-        "id": "19c3e5"
+        "id": "PS_role_19c3e5"
     },
     {
         "role": "2-octaprenyl-3-methyl-6-methoxy-1,4-benzoquinol hydroxylase (EC 1.14.13.-)",
@@ -1120,7 +1120,7 @@
             }
         },
         "publications": [],
-        "id": "2b0c2a"
+        "id": "PS_role_2b0c2a"
     },
     {
         "role": "2-oxo-5-methylthiopentanoate transaminase (EC 2.6.1.-)",
@@ -1172,7 +1172,7 @@
             }
         },
         "publications": [],
-        "id": "e9c8c3"
+        "id": "PS_role_e9c8c3"
     },
     {
         "role": "2-oxoglutarate dehydrogenase E1 component (EC 1.2.4.2)",
@@ -1207,7 +1207,7 @@
             }
         },
         "publications": [],
-        "id": "372da0"
+        "id": "PS_role_372da0"
     },
     {
         "role": "2-succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylic-acid synthase (EC 2.2.1.9)",
@@ -1232,7 +1232,7 @@
             }
         },
         "publications": [],
-        "id": "19c650"
+        "id": "PS_role_19c650"
     },
     {
         "role": "2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate synthase (EC 4.2.99.20)",
@@ -1257,7 +1257,7 @@
             }
         },
         "publications": [],
-        "id": "0acdef"
+        "id": "PS_role_0acdef"
     },
     {
         "role": "3,4-dihydroxy-2-butanone 4-phosphate synthase (EC 4.1.99.12)",
@@ -1296,7 +1296,7 @@
             }
         },
         "publications": [],
-        "id": "8ddd40"
+        "id": "PS_role_8ddd40"
     },
     {
         "role": "3,4-dihydroxy-5-polyprenylbenzoate methyltransferase (EC 2.1.1.114)",
@@ -1323,7 +1323,7 @@
             }
         },
         "publications": [],
-        "id": "fa94e4"
+        "id": "PS_role_fa94e4"
     },
     {
         "role": "3-Phosphoglycerate transport",
@@ -1350,7 +1350,7 @@
             }
         },
         "publications": [],
-        "id": "641079"
+        "id": "PS_role_641079"
     },
     {
         "role": "3-butenylglucosinolate 2-hydroxylase (no EC)",
@@ -1377,7 +1377,7 @@
             }
         },
         "publications": [],
-        "id": "cd06c2"
+        "id": "PS_role_cd06c2"
     },
     {
         "role": "3-cyanoalanine hydratase (4.2.1.65)",
@@ -1404,7 +1404,7 @@
             }
         },
         "publications": [],
-        "id": "8849a1"
+        "id": "PS_role_8849a1"
     },
     {
         "role": "3-dehydroquinate dehydratase I (EC 4.2.1.10)",
@@ -1434,7 +1434,7 @@
             }
         },
         "publications": [],
-        "id": "eb96f2"
+        "id": "PS_role_eb96f2"
     },
     {
         "role": "3-dehydroquinate synthase (EC 4.2.3.4)",
@@ -1463,7 +1463,7 @@
             }
         },
         "publications": [],
-        "id": "805d52"
+        "id": "PS_role_805d52"
     },
     {
         "role": "3-dehydrosphinganine reductase (EC 1.1.1.102)",
@@ -1497,7 +1497,7 @@
             }
         },
         "publications": [],
-        "id": "1abb57"
+        "id": "PS_role_1abb57"
     },
     {
         "role": "3-demethylubiquinol 3-O-methyltransferase (EC 2.1.1.64)",
@@ -1524,7 +1524,7 @@
             }
         },
         "publications": [],
-        "id": "03bdd2"
+        "id": "PS_role_03bdd2"
     },
     {
         "role": "3-deoxy-D-manno-octulosonate 8-phosphate phosphatase (EC 3.1.3.45)",
@@ -1549,7 +1549,7 @@
             }
         },
         "publications": [],
-        "id": "c9b0d3"
+        "id": "PS_role_c9b0d3"
     },
     {
         "role": "3-deoxy-manno-octulosonate cytidylyltransferase (EC 2.7.7.38)",
@@ -1581,7 +1581,7 @@
             }
         },
         "publications": [],
-        "id": "3a9944"
+        "id": "PS_role_3a9944"
     },
     {
         "role": "3-hydroxyacyl-[acyl-carrier-protein] dehydratase, FabZ form (EC 4.2.1.59)",
@@ -1628,7 +1628,7 @@
             }
         },
         "publications": [],
-        "id": "2588f3"
+        "id": "PS_role_2588f3"
     },
     {
         "role": "3-isopropylmalate dehydratase large subunit (EC 4.2.1.33)",
@@ -1659,7 +1659,7 @@
             }
         },
         "publications": [],
-        "id": "cfce18"
+        "id": "PS_role_cfce18"
     },
     {
         "role": "3-isopropylmalate dehydratase small subunit (EC 4.2.1.33)",
@@ -1700,7 +1700,7 @@
             }
         },
         "publications": [],
-        "id": "4f8462"
+        "id": "PS_role_4f8462"
     },
     {
         "role": "3-isopropylmalate dehydrogenase (EC 1.1.1.85)",
@@ -1740,7 +1740,7 @@
             }
         },
         "publications": [],
-        "id": "06df56"
+        "id": "PS_role_06df56"
     },
     {
         "role": "3-methyl-2-oxobutanoate hydroxymethyltransferase (EC 2.1.2.11)",
@@ -1773,7 +1773,7 @@
             }
         },
         "publications": [],
-        "id": "319d35"
+        "id": "PS_role_319d35"
     },
     {
         "role": "3-nonaprenyl-4-hydroxy-5-methoxybenzoate carboxy-lyase (EC 4.1.1.-)",
@@ -1798,7 +1798,7 @@
             }
         },
         "publications": [],
-        "id": "e19364"
+        "id": "PS_role_e19364"
     },
     {
         "role": "3-oxoacyl-[acyl-carrier protein] reductase (EC 1.1.1.100)",
@@ -1841,7 +1841,7 @@
             }
         },
         "publications": [],
-        "id": "d234b1"
+        "id": "PS_role_d234b1"
     },
     {
         "role": "3-oxoacyl-[acyl-carrier-protein] synthase, KASI (EC 2.3.1.41)",
@@ -1878,7 +1878,7 @@
             }
         },
         "publications": [],
-        "id": "7ac5d8"
+        "id": "PS_role_7ac5d8"
     },
     {
         "role": "3-oxoacyl-[acyl-carrier-protein] synthase, KASII (EC 2.3.1.179)",
@@ -1911,7 +1911,7 @@
             }
         },
         "publications": [],
-        "id": "d64370"
+        "id": "PS_role_d64370"
     },
     {
         "role": "3-oxoacyl-[acyl-carrier-protein] synthase, KASIII (EC 2.3.1.180)",
@@ -1940,7 +1940,7 @@
             }
         },
         "publications": [],
-        "id": "78ebb2"
+        "id": "PS_role_78ebb2"
     },
     {
         "role": "4-alpha-glucanotransferase (amylomaltase) (EC 2.4.1.25)",
@@ -1979,7 +1979,7 @@
             }
         },
         "publications": [],
-        "id": "66d322"
+        "id": "PS_role_66d322"
     },
     {
         "role": "4-coumarate--CoA ligase (EC 6.2.1.12)",
@@ -2016,7 +2016,7 @@
         "publications": [
             "25016610"
         ],
-        "id": "56d8a2"
+        "id": "PS_role_56d8a2"
     },
     {
         "role": "4-coumarate--CoA ligase 1 (EC 6.2.1.12)",
@@ -2039,7 +2039,7 @@
             }
         },
         "publications": [],
-        "id": "82b90f"
+        "id": "PS_role_82b90f"
     },
     {
         "role": "4-coumarate-CoA acyltransferase (EC 2.3.1.-)",
@@ -2062,7 +2062,7 @@
             }
         },
         "publications": [],
-        "id": "26955e"
+        "id": "PS_role_26955e"
     },
     {
         "role": "4-diphosphocytidyl-2-C-methyl-D-erythritol kinase (EC 2.7.1.148)",
@@ -2093,7 +2093,7 @@
             }
         },
         "publications": [],
-        "id": "58eda2"
+        "id": "PS_role_58eda2"
     },
     {
         "role": "4-hydroxy-3-methylbut-2-enyl diphosphate reductase (EC 1.17.1.2)",
@@ -2130,7 +2130,7 @@
             }
         },
         "publications": [],
-        "id": "07d6b7"
+        "id": "PS_role_07d6b7"
     },
     {
         "role": "4-hydroxy-tetrahydrodipicolinate reductase (EC 1.17.1.8)",
@@ -2169,7 +2169,7 @@
             }
         },
         "publications": [],
-        "id": "e252d7"
+        "id": "PS_role_e252d7"
     },
     {
         "role": "4-hydroxy-tetrahydrodipicolinate synthase (EC 4.3.3.7)",
@@ -2204,7 +2204,7 @@
             }
         },
         "publications": [],
-        "id": "9aff45"
+        "id": "PS_role_9aff45"
     },
     {
         "role": "4-hydroxybenzoate polyprenyltransferase (EC 2.5.1.39)",
@@ -2233,7 +2233,7 @@
             }
         },
         "publications": [],
-        "id": "11bf05"
+        "id": "PS_role_11bf05"
     },
     {
         "role": "4-hydroxybenzoate transport",
@@ -2254,7 +2254,7 @@
             }
         },
         "publications": [],
-        "id": "899b27"
+        "id": "PS_role_899b27"
     },
     {
         "role": "4-hydroxybenzoyl-CoA thioesterase (EC 3.1.2.23)",
@@ -2277,7 +2277,7 @@
             }
         },
         "publications": [],
-        "id": "bd608e"
+        "id": "PS_role_bd608e"
     },
     {
         "role": "4-hydroxyphenylpyruvate dioxygenase (EC 1.13.11.27)",
@@ -2316,7 +2316,7 @@
             }
         },
         "publications": [],
-        "id": "b0cdde"
+        "id": "PS_role_b0cdde"
     },
     {
         "role": "5' Deoxyadenosine transport",
@@ -2340,7 +2340,7 @@
             }
         },
         "publications": [],
-        "id": "ef2575"
+        "id": "PS_role_ef2575"
     },
     {
         "role": "5'-methylthioadenosine nucleosidase (EC 3.2.2.16)",
@@ -2372,7 +2372,7 @@
             }
         },
         "publications": [],
-        "id": "2b3f7d"
+        "id": "PS_role_2b3f7d"
     },
     {
         "role": "5'-nucleotidase (EC 3.1.3.5)",
@@ -2415,7 +2415,7 @@
             }
         },
         "publications": [],
-        "id": "25455b"
+        "id": "PS_role_25455b"
     },
     {
         "role": "5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase",
@@ -2511,7 +2511,7 @@
             "16339799",
             "21976482"
         ],
-        "id": "66be13"
+        "id": "PS_role_66be13"
     },
     {
         "role": "5,10-methylenetetrahydrofolate reductase (EC 1.5.1.20)",
@@ -2545,7 +2545,7 @@
             }
         },
         "publications": [],
-        "id": "521c60"
+        "id": "PS_role_521c60"
     },
     {
         "role": "5-Amino-6-(5'-phosphoribitylamino)uracil phosphatase",
@@ -2570,7 +2570,7 @@
             }
         },
         "publications": [],
-        "id": "24710e"
+        "id": "PS_role_24710e"
     },
     {
         "role": "5-Enolpyruvylshikimate-3-phosphate synthase (EC 2.5.1.19)",
@@ -2605,7 +2605,7 @@
             }
         },
         "publications": [],
-        "id": "f66dc6"
+        "id": "PS_role_f66dc6"
     },
     {
         "role": "5-Formyltetrahydrofolate transport",
@@ -2647,7 +2647,7 @@
             }
         },
         "publications": [],
-        "id": "717bf3"
+        "id": "PS_role_717bf3"
     },
     {
         "role": "5-Methylenetetrahydrofolate transport",
@@ -2689,7 +2689,7 @@
             }
         },
         "publications": [],
-        "id": "ea0421"
+        "id": "PS_role_ea0421"
     },
     {
         "role": "5-Methylenyltetrahydrofolate transport",
@@ -2731,7 +2731,7 @@
             }
         },
         "publications": [],
-        "id": "3e578e"
+        "id": "PS_role_3e578e"
     },
     {
         "role": "5-Methyltetrahydrofolate transport",
@@ -2773,7 +2773,7 @@
             }
         },
         "publications": [],
-        "id": "58cdb7"
+        "id": "PS_role_58cdb7"
     },
     {
         "role": "5-O-(4-coumaroyl)-D-quinate/shikimate 3'-hydroxylase (EC 1.14.13.36)",
@@ -2814,7 +2814,7 @@
             }
         },
         "publications": [],
-        "id": "2a82f1"
+        "id": "PS_role_2a82f1"
     },
     {
         "role": "5-amino-6-(5-phosphoribosylamino)uracil reductase (EC 1.1.1.193)",
@@ -2847,7 +2847,7 @@
             }
         },
         "publications": [],
-        "id": "49d7f6"
+        "id": "PS_role_49d7f6"
     },
     {
         "role": "5-deoxy-ribulose-1-phosphate aldolase (EC 4.1.2.-)",
@@ -2872,7 +2872,7 @@
             }
         },
         "publications": [],
-        "id": "ad9a47"
+        "id": "PS_role_ad9a47"
     },
     {
         "role": "5-deoxyadenosine phosphorylase (EC 2.4.2.-)",
@@ -2897,7 +2897,7 @@
             }
         },
         "publications": [],
-        "id": "2e474d"
+        "id": "PS_role_2e474d"
     },
     {
         "role": "5-deoxyribose-1-phosphate isomerase (EC 5.3.1.-)",
@@ -2922,7 +2922,7 @@
             }
         },
         "publications": [],
-        "id": "ef9232"
+        "id": "PS_role_ef9232"
     },
     {
         "role": "5-formyltetrahydrofolate cyclo-ligase (EC 6.3.3.2)",
@@ -2951,7 +2951,7 @@
             }
         },
         "publications": [],
-        "id": "8945da"
+        "id": "PS_role_8945da"
     },
     {
         "role": "5-methyltetrahydropteroyltriglutamate--homocysteine methyltransferase (EC 2.1.1.14)",
@@ -3008,7 +3008,7 @@
             }
         },
         "publications": [],
-        "id": "3f9431"
+        "id": "PS_role_3f9431"
     },
     {
         "role": "5-methylthioribose kinase (EC 2.7.1.100)",
@@ -3036,7 +3036,7 @@
             }
         },
         "publications": [],
-        "id": "66ab2c"
+        "id": "PS_role_66ab2c"
     },
     {
         "role": "6,7-dimethyl-8-ribityllumazine synthase (EC 2.5.1.78)",
@@ -3065,7 +3065,7 @@
             }
         },
         "publications": [],
-        "id": "53f985"
+        "id": "PS_role_53f985"
     },
     {
         "role": "6-phosphofructokinase (EC 2.7.1.11)",
@@ -3130,7 +3130,7 @@
             }
         },
         "publications": [],
-        "id": "e12d8d"
+        "id": "PS_role_e12d8d"
     },
     {
         "role": "6-phosphogluconate dehydrogenase, decarboxylating (EC 1.1.1.44)",
@@ -3175,7 +3175,7 @@
             }
         },
         "publications": [],
-        "id": "6d0b83"
+        "id": "PS_role_6d0b83"
     },
     {
         "role": "6-phosphogluconolactonase (EC 3.1.1.31), eukaryotic type",
@@ -3229,7 +3229,7 @@
             "24008768",
             "24008768"
         ],
-        "id": "717dad"
+        "id": "PS_role_717dad"
     },
     {
         "role": "8-amino-7-oxononanoate synthase (EC 2.3.1.47)",
@@ -3257,7 +3257,7 @@
             }
         },
         "publications": [],
-        "id": "7f44f4"
+        "id": "PS_role_7f44f4"
     },
     {
         "role": "AMP transport",
@@ -3282,7 +3282,7 @@
             }
         },
         "publications": [],
-        "id": "0b912c"
+        "id": "PS_role_0b912c"
     },
     {
         "role": "ATP phosphoribosyltransferase (EC 2.4.2.17)",
@@ -3317,7 +3317,7 @@
             }
         },
         "publications": [],
-        "id": "b94570"
+        "id": "PS_role_b94570"
     },
     {
         "role": "ATP synthase alpha chain (EC 3.6.3.14)",
@@ -3349,7 +3349,7 @@
             }
         },
         "publications": [],
-        "id": "2b6f0c"
+        "id": "PS_role_2b6f0c"
     },
     {
         "role": "ATP synthase beta chain (EC 3.6.3.14)",
@@ -3385,7 +3385,7 @@
             }
         },
         "publications": [],
-        "id": "9dfc2b"
+        "id": "PS_role_9dfc2b"
     },
     {
         "role": "ATP synthase delta chain (EC 3.6.3.14)",
@@ -3405,7 +3405,7 @@
         ],
         "localization": {},
         "publications": [],
-        "id": "75bb7d"
+        "id": "PS_role_75bb7d"
     },
     {
         "role": "ATP synthase delta' chain (EC 3.6.3.14)",
@@ -3433,7 +3433,7 @@
             }
         },
         "publications": [],
-        "id": "a21b83"
+        "id": "PS_role_a21b83"
     },
     {
         "role": "ATP synthase epsilon chain (EC 3.6.3.14)",
@@ -3461,7 +3461,7 @@
             }
         },
         "publications": [],
-        "id": "d50a4a"
+        "id": "PS_role_d50a4a"
     },
     {
         "role": "ATP synthase gamma chain (EC 3.6.3.14)",
@@ -3489,7 +3489,7 @@
             }
         },
         "publications": [],
-        "id": "f1ea88"
+        "id": "PS_role_f1ea88"
     },
     {
         "role": "ATP-ADP Antiporter (TC 2.A.12)",
@@ -3540,7 +3540,7 @@
             }
         },
         "publications": [],
-        "id": "f584e4"
+        "id": "PS_role_f584e4"
     },
     {
         "role": "ATP-citrate (pro-S-)-lyase, subunit 1 (EC 2.3.3.8)",
@@ -3582,7 +3582,7 @@
             "15608338",
             "15608338"
         ],
-        "id": "bcbbf5"
+        "id": "PS_role_bcbbf5"
     },
     {
         "role": "ATP-citrate (pro-S-)-lyase, subunit 2 (EC 2.3.3.8)",
@@ -3619,7 +3619,7 @@
             "15608338",
             "15608338"
         ],
-        "id": "f7f2df"
+        "id": "PS_role_f7f2df"
     },
     {
         "role": "Acetolactate synthase large subunit (EC 2.2.1.6)",
@@ -3687,7 +3687,7 @@
             "9355748",
             "9677339"
         ],
-        "id": "2a9682"
+        "id": "PS_role_2a9682"
     },
     {
         "role": "Acetolactate synthase small subunit (EC 2.2.1.6)",
@@ -3735,7 +3735,7 @@
             "10487214",
             "10487214"
         ],
-        "id": "0654ae"
+        "id": "PS_role_0654ae"
     },
     {
         "role": "Acetyl-CoA acetyltransferase (EC 2.3.1.9)",
@@ -3797,7 +3797,7 @@
             }
         },
         "publications": [],
-        "id": "db2b0b"
+        "id": "PS_role_db2b0b"
     },
     {
         "role": "Acetyl-CoA transport",
@@ -3821,7 +3821,7 @@
             }
         },
         "publications": [],
-        "id": "599656"
+        "id": "PS_role_599656"
     },
     {
         "role": "Acetyl-coenzyme A carboxyl transferase alpha chain (EC 6.4.1.2)",
@@ -3851,7 +3851,7 @@
             }
         },
         "publications": [],
-        "id": "69b945"
+        "id": "PS_role_69b945"
     },
     {
         "role": "Acetyl-coenzyme A carboxyl transferase beta chain (EC 6.4.1.2)",
@@ -3881,7 +3881,7 @@
             }
         },
         "publications": [],
-        "id": "e12765"
+        "id": "PS_role_e12765"
     },
     {
         "role": "Acetyl-coenzyme A carboxyl transferase domain of homomeric ACCase (EC 6.4.1.2)",
@@ -3916,7 +3916,7 @@
             }
         },
         "publications": [],
-        "id": "ef4598"
+        "id": "PS_role_ef4598"
     },
     {
         "role": "Acetyl-coenzyme A synthetase (EC 6.2.1.1)",
@@ -3951,7 +3951,7 @@
             "12051672",
             "16262711"
         ],
-        "id": "9d82f6"
+        "id": "PS_role_9d82f6"
     },
     {
         "role": "Acetylglutamate kinase (EC 2.7.2.8)",
@@ -3982,7 +3982,7 @@
             }
         },
         "publications": [],
-        "id": "e762da"
+        "id": "PS_role_e762da"
     },
     {
         "role": "Acetylornithine aminotransferase (EC 2.6.1.11)",
@@ -4013,7 +4013,7 @@
             }
         },
         "publications": [],
-        "id": "fa3c7f"
+        "id": "PS_role_fa3c7f"
     },
     {
         "role": "Acetylornithine deacetylase (EC 3.5.1.16)",
@@ -4044,7 +4044,7 @@
             }
         },
         "publications": [],
-        "id": "3e801b"
+        "id": "PS_role_3e801b"
     },
     {
         "role": "Aconitate hydratase (EC 4.2.1.3)",
@@ -4121,7 +4121,7 @@
             "17013749",
             "17437406"
         ],
-        "id": "21df21"
+        "id": "PS_role_21df21"
     },
     {
         "role": "Acyl-CoA thioesterase II (EC 3.1.2.-)",
@@ -4152,7 +4152,7 @@
             }
         },
         "publications": [],
-        "id": "7a367e"
+        "id": "PS_role_7a367e"
     },
     {
         "role": "Acyl-[acyl-carrier-protein]--UDP-N-acetylglucosamine O-acyltransferase (EC 2.3.1.129)",
@@ -4184,7 +4184,7 @@
             }
         },
         "publications": [],
-        "id": "cc3ffd"
+        "id": "PS_role_cc3ffd"
     },
     {
         "role": "Acylglycerol transacylase",
@@ -4209,7 +4209,7 @@
             }
         },
         "publications": [],
-        "id": "a3860e"
+        "id": "PS_role_a3860e"
     },
     {
         "role": "Adenine phosphoribosyltransferase (EC 2.4.2.7)",
@@ -4244,7 +4244,7 @@
             }
         },
         "publications": [],
-        "id": "2758ee"
+        "id": "PS_role_2758ee"
     },
     {
         "role": "Adenosine kinase (EC 2.7.1.20)",
@@ -4272,7 +4272,7 @@
             }
         },
         "publications": [],
-        "id": "8c7825"
+        "id": "PS_role_8c7825"
     },
     {
         "role": "Adenosine nucleosidase (EC 3.2.2.7)",
@@ -4300,7 +4300,7 @@
             }
         },
         "publications": [],
-        "id": "aa305d"
+        "id": "PS_role_aa305d"
     },
     {
         "role": "Adenosylhomocysteinase (EC 3.3.1.1)",
@@ -4334,7 +4334,7 @@
             }
         },
         "publications": [],
-        "id": "b8a41f"
+        "id": "PS_role_b8a41f"
     },
     {
         "role": "Adenosylmethionine-8-amino-7-oxononanoate aminotransferase (EC 2.6.1.62)",
@@ -4363,7 +4363,7 @@
             }
         },
         "publications": [],
-        "id": "5a0cac"
+        "id": "PS_role_5a0cac"
     },
     {
         "role": "Adenylate kinase (EC 2.7.4.3)",
@@ -4422,7 +4422,7 @@
             }
         },
         "publications": [],
-        "id": "4c910f"
+        "id": "PS_role_4c910f"
     },
     {
         "role": "Adenylosuccinate lyase (EC 4.3.2.2)",
@@ -4460,7 +4460,7 @@
             }
         },
         "publications": [],
-        "id": "26fc6c"
+        "id": "PS_role_26fc6c"
     },
     {
         "role": "Adenylosuccinate synthetase (EC 6.3.4.4)",
@@ -4495,7 +4495,7 @@
             }
         },
         "publications": [],
-        "id": "dec543"
+        "id": "PS_role_dec543"
     },
     {
         "role": "Adenylyl-sulfate reductase [glutathione] (EC 1.8.4.9)",
@@ -4529,7 +4529,7 @@
             }
         },
         "publications": [],
-        "id": "05ba83"
+        "id": "PS_role_05ba83"
     },
     {
         "role": "Adenylylsulfate kinase (EC 2.7.1.25)",
@@ -4565,7 +4565,7 @@
             }
         },
         "publications": [],
-        "id": "d9bdef"
+        "id": "PS_role_d9bdef"
     },
     {
         "role": "Adrenodoxin reductase (EC 1.18.1.6)",
@@ -4594,7 +4594,7 @@
             }
         },
         "publications": [],
-        "id": "314a65"
+        "id": "PS_role_314a65"
     },
     {
         "role": "Adrenodoxin, mitochondrial ferredoxin",
@@ -4629,7 +4629,7 @@
             }
         },
         "publications": [],
-        "id": "646a72"
+        "id": "PS_role_646a72"
     },
     {
         "role": "Alanine transaminase (EC 2.6.1.2)",
@@ -4694,7 +4694,7 @@
             "17319845",
             "17319845"
         ],
-        "id": "2461bb"
+        "id": "PS_role_2461bb"
     },
     {
         "role": "Alanine transport",
@@ -4715,7 +4715,7 @@
             }
         },
         "publications": [],
-        "id": "3f2b41"
+        "id": "PS_role_3f2b41"
     },
     {
         "role": "Alcohol dehydrogenase (EC 1.1.1.1)",
@@ -4794,7 +4794,7 @@
             "23707506",
             "2937058"
         ],
-        "id": "de6ab3"
+        "id": "PS_role_de6ab3"
     },
     {
         "role": "Aldehyde dehydrogenase (EC 1.2.1.3)",
@@ -4864,7 +4864,7 @@
             "14729911",
             "15830124"
         ],
-        "id": "3ed002"
+        "id": "PS_role_3ed002"
     },
     {
         "role": "Aldose 1-epimerase (EC 5.1.3.3)",
@@ -4894,7 +4894,7 @@
             }
         },
         "publications": [],
-        "id": "ef38b7"
+        "id": "PS_role_ef38b7"
     },
     {
         "role": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (hydroxylation) (no EC)",
@@ -4924,7 +4924,7 @@
             }
         },
         "publications": [],
-        "id": "0aa9aa"
+        "id": "PS_role_0aa9aa"
     },
     {
         "role": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)",
@@ -4954,7 +4954,7 @@
             }
         },
         "publications": [],
-        "id": "3a7671"
+        "id": "PS_role_3a7671"
     },
     {
         "role": "Alpha,alpha-trehalose-phosphate synthase [UDP-forming] (EC 2.4.1.15)",
@@ -5013,7 +5013,7 @@
             }
         },
         "publications": [],
-        "id": "b432dd"
+        "id": "PS_role_b432dd"
     },
     {
         "role": "Alpha-amylase (EC 3.2.1.1)",
@@ -5047,7 +5047,7 @@
             }
         },
         "publications": [],
-        "id": "f1e360"
+        "id": "PS_role_f1e360"
     },
     {
         "role": "Alpha-galactosidase (EC 3.2.1.22)",
@@ -5081,7 +5081,7 @@
             }
         },
         "publications": [],
-        "id": "707ead"
+        "id": "PS_role_707ead"
     },
     {
         "role": "Alpha-glucosidase (EC 3.2.1.20)",
@@ -5106,7 +5106,7 @@
             }
         },
         "publications": [],
-        "id": "381c1e"
+        "id": "PS_role_381c1e"
     },
     {
         "role": "Alternative oxidase, ubiquinol oxidase (EC 1.10.3.11)",
@@ -5137,7 +5137,7 @@
             }
         },
         "publications": [],
-        "id": "bead9c"
+        "id": "PS_role_bead9c"
     },
     {
         "role": "Amidophosphoribosyltransferase (EC 2.4.2.14)",
@@ -5177,7 +5177,7 @@
             }
         },
         "publications": [],
-        "id": "f8a867"
+        "id": "PS_role_f8a867"
     },
     {
         "role": "Aminodeoxychorismate lyase (EC 4.1.3.38)",
@@ -5209,7 +5209,7 @@
             }
         },
         "publications": [],
-        "id": "2b0830"
+        "id": "PS_role_2b0830"
     },
     {
         "role": "Aminomethyltransferase (glycine cleavage system T protein) (EC 2.1.2.10)",
@@ -5248,7 +5248,7 @@
         "publications": [
             "28866761"
         ],
-        "id": "60f31d"
+        "id": "PS_role_60f31d"
     },
     {
         "role": "Ammonia transport",
@@ -5273,7 +5273,7 @@
             }
         },
         "publications": [],
-        "id": "c1deef"
+        "id": "PS_role_c1deef"
     },
     {
         "role": "Anthranilate phosphoribosyltransferase (EC 2.4.2.18)",
@@ -5303,7 +5303,7 @@
             }
         },
         "publications": [],
-        "id": "55b721"
+        "id": "PS_role_55b721"
     },
     {
         "role": "Anthranilate synthase, amidotransferase component (EC 4.1.3.27)",
@@ -5356,7 +5356,7 @@
             }
         },
         "publications": [],
-        "id": "bbf347"
+        "id": "PS_role_bbf347"
     },
     {
         "role": "Anthranilate synthase, aminase component (EC 4.1.3.27)",
@@ -5399,7 +5399,7 @@
             }
         },
         "publications": [],
-        "id": "4d6dfc"
+        "id": "PS_role_4d6dfc"
     },
     {
         "role": "Apyrase, ATP-diphosphatase (EC 3.6.1.5)",
@@ -5443,7 +5443,7 @@
             }
         },
         "publications": [],
-        "id": "fcbd92"
+        "id": "PS_role_fcbd92"
     },
     {
         "role": "Arabinose 5-phosphate isomerase (EC 5.3.1.13)",
@@ -5470,7 +5470,7 @@
             }
         },
         "publications": [],
-        "id": "25735a"
+        "id": "PS_role_25735a"
     },
     {
         "role": "Arginase (EC 3.5.3.1)",
@@ -5519,7 +5519,7 @@
             }
         },
         "publications": [],
-        "id": "1184bf"
+        "id": "PS_role_1184bf"
     },
     {
         "role": "Arginine transport",
@@ -5546,7 +5546,7 @@
             }
         },
         "publications": [],
-        "id": "ca800d"
+        "id": "PS_role_ca800d"
     },
     {
         "role": "Argininosuccinate lyase (EC 4.3.2.1)",
@@ -5577,7 +5577,7 @@
             }
         },
         "publications": [],
-        "id": "2c0c10"
+        "id": "PS_role_2c0c10"
     },
     {
         "role": "Argininosuccinate synthase (EC 6.3.4.5)",
@@ -5608,7 +5608,7 @@
             }
         },
         "publications": [],
-        "id": "b3efb1"
+        "id": "PS_role_b3efb1"
     },
     {
         "role": "Arogenate dehydratase (EC 4.2.1.91)",
@@ -5665,7 +5665,7 @@
             }
         },
         "publications": [],
-        "id": "ca2275"
+        "id": "PS_role_ca2275"
     },
     {
         "role": "Arogenate dehydrogenase (EC 1.3.1.78)",
@@ -5702,7 +5702,7 @@
             }
         },
         "publications": [],
-        "id": "222c14"
+        "id": "PS_role_222c14"
     },
     {
         "role": "Asparagine synthetase [glutamine-hydrolyzing] (EC 6.3.5.4)",
@@ -5731,7 +5731,7 @@
             }
         },
         "publications": [],
-        "id": "efcc06"
+        "id": "PS_role_efcc06"
     },
     {
         "role": "Asparagine transport",
@@ -5758,7 +5758,7 @@
             }
         },
         "publications": [],
-        "id": "5ded6a"
+        "id": "PS_role_5ded6a"
     },
     {
         "role": "Aspartate aminotransferase (EC 2.6.1.1)",
@@ -5843,7 +5843,7 @@
             }
         },
         "publications": [],
-        "id": "62a094"
+        "id": "PS_role_62a094"
     },
     {
         "role": "Aspartate carbamoyltransferase (EC 2.1.3.2)",
@@ -5873,7 +5873,7 @@
             }
         },
         "publications": [],
-        "id": "e4b333"
+        "id": "PS_role_e4b333"
     },
     {
         "role": "Aspartate transport",
@@ -5900,7 +5900,7 @@
             }
         },
         "publications": [],
-        "id": "6b05a6"
+        "id": "PS_role_6b05a6"
     },
     {
         "role": "Aspartate-semialdehyde dehydrogenase (EC 1.2.1.11)",
@@ -5937,7 +5937,7 @@
             }
         },
         "publications": [],
-        "id": "c98d86"
+        "id": "PS_role_c98d86"
     },
     {
         "role": "Aspartokinase (EC 2.7.2.4)",
@@ -5988,7 +5988,7 @@
             }
         },
         "publications": [],
-        "id": "206664"
+        "id": "PS_role_206664"
     },
     {
         "role": "Benzoylated glucosinolates modification, unresolved step",
@@ -6018,7 +6018,7 @@
             }
         },
         "publications": [],
-        "id": "e06dad"
+        "id": "PS_role_e06dad"
     },
     {
         "role": "Beta-amylase (EC 3.2.1.2)",
@@ -6079,7 +6079,7 @@
             }
         },
         "publications": [],
-        "id": "ad0998"
+        "id": "PS_role_ad0998"
     },
     {
         "role": "Beta-fructofuranosidase, fructan exohydrolase (EC 3.2.1.80)",
@@ -6107,7 +6107,7 @@
             }
         },
         "publications": [],
-        "id": "079694"
+        "id": "PS_role_079694"
     },
     {
         "role": "Beta-phosphoglucomutase (EC 5.4.2.6)",
@@ -6130,7 +6130,7 @@
             }
         },
         "publications": [],
-        "id": "fb2e89"
+        "id": "PS_role_fb2e89"
     },
     {
         "role": "Beta-ureidopropionase (EC 3.5.1.6)",
@@ -6160,7 +6160,7 @@
             }
         },
         "publications": [],
-        "id": "72c999"
+        "id": "PS_role_72c999"
     },
     {
         "role": "Beta-xylosidase (EC 3.2.1.37)",
@@ -6188,7 +6188,7 @@
             }
         },
         "publications": [],
-        "id": "f7c0e3"
+        "id": "PS_role_f7c0e3"
     },
     {
         "role": "Bicarbonate transport",
@@ -6218,7 +6218,7 @@
             }
         },
         "publications": [],
-        "id": "3effb5"
+        "id": "PS_role_3effb5"
     },
     {
         "role": "Biotin carboxyl carrier domain of homomeric Acetyl-CoA carboxylase",
@@ -6253,7 +6253,7 @@
             }
         },
         "publications": [],
-        "id": "724c99"
+        "id": "PS_role_724c99"
     },
     {
         "role": "Biotin carboxyl carrier protein of acetyl-CoA carboxylase",
@@ -6288,7 +6288,7 @@
             }
         },
         "publications": [],
-        "id": "d7cbc8"
+        "id": "PS_role_d7cbc8"
     },
     {
         "role": "Biotin carboxylase domain of homomeric ACCase (EC 6.3.4.14)",
@@ -6323,7 +6323,7 @@
             }
         },
         "publications": [],
-        "id": "d3d0da"
+        "id": "PS_role_d3d0da"
     },
     {
         "role": "Biotin carboxylase of acetyl-CoA carboxylase (EC 6.3.4.14)",
@@ -6354,7 +6354,7 @@
             }
         },
         "publications": [],
-        "id": "4c1143"
+        "id": "PS_role_4c1143"
     },
     {
         "role": "Biotin synthase (EC 2.8.1.6)",
@@ -6384,7 +6384,7 @@
             }
         },
         "publications": [],
-        "id": "c97a4f"
+        "id": "PS_role_c97a4f"
     },
     {
         "role": "Biotin transport",
@@ -6408,7 +6408,7 @@
             }
         },
         "publications": [],
-        "id": "743873"
+        "id": "PS_role_743873"
     },
     {
         "role": "Biotin--protein ligase (EC 6.3.4.9)(EC 6.3.4.10)(EC 6.3.4.11)(EC 6.3.4.15)",
@@ -6435,7 +6435,7 @@
             }
         },
         "publications": [],
-        "id": "283bd2"
+        "id": "PS_role_283bd2"
     },
     {
         "role": "Branched-chain alpha-keto acid dehydrogenase, E1 component, alpha subunit (EC 1.2.4.4)",
@@ -6473,7 +6473,7 @@
             }
         },
         "publications": [],
-        "id": "201588"
+        "id": "PS_role_201588"
     },
     {
         "role": "Branched-chain alpha-keto acid dehydrogenase, E1 component, beta subunit (EC 1.2.4.4)",
@@ -6506,7 +6506,7 @@
             }
         },
         "publications": [],
-        "id": "9a1bf4"
+        "id": "PS_role_9a1bf4"
     },
     {
         "role": "Branched-chain amino acid aminotransferase (EC 2.6.1.42)",
@@ -6574,7 +6574,7 @@
             }
         },
         "publications": [],
-        "id": "bc68df"
+        "id": "PS_role_bc68df"
     },
     {
         "role": "CDP-N-methylethanolamine--1,2-diacylglycerol phosphatidyltransferase (EC 2.7.8.-)",
@@ -6602,7 +6602,7 @@
             }
         },
         "publications": [],
-        "id": "bf2823"
+        "id": "PS_role_bf2823"
     },
     {
         "role": "CDP-diacylglycerol--glycerol-3-phosphate 3-phosphatidyltransferase (EC 2.7.8.5)",
@@ -6652,7 +6652,7 @@
             }
         },
         "publications": [],
-        "id": "467253"
+        "id": "PS_role_467253"
     },
     {
         "role": "CDP-diacylglycerol--inositol 3-phosphatidyltransferase (EC 2.7.8.11)",
@@ -6680,7 +6680,7 @@
             }
         },
         "publications": [],
-        "id": "a7e7b1"
+        "id": "PS_role_a7e7b1"
     },
     {
         "role": "CDP-diacylglycerol--serine O-phosphatidyltransferase (EC 2.7.8.8)",
@@ -6705,7 +6705,7 @@
             }
         },
         "publications": [],
-        "id": "6b75fe"
+        "id": "PS_role_6b75fe"
     },
     {
         "role": "CTP synthase (EC 6.3.4.2)",
@@ -6748,7 +6748,7 @@
             }
         },
         "publications": [],
-        "id": "04cbdc"
+        "id": "PS_role_04cbdc"
     },
     {
         "role": "CYP81F4 monooxygenase",
@@ -6773,7 +6773,7 @@
             }
         },
         "publications": [],
-        "id": "c34888"
+        "id": "PS_role_c34888"
     },
     {
         "role": "Caffeic-o-methyltransferase (EC 2.1.1.68)",
@@ -6807,7 +6807,7 @@
             }
         },
         "publications": [],
-        "id": "d0bd24"
+        "id": "PS_role_d0bd24"
     },
     {
         "role": "Caffeoyl-CoA O-methyltransferase (EC 2.1.1.104)",
@@ -6836,7 +6836,7 @@
             }
         },
         "publications": [],
-        "id": "d9aeb8"
+        "id": "PS_role_d9aeb8"
     },
     {
         "role": "Callose synthase (EC 2.4.1.34)",
@@ -6884,7 +6884,7 @@
             }
         },
         "publications": [],
-        "id": "9d5790"
+        "id": "PS_role_9d5790"
     },
     {
         "role": "Carbamoyl-phosphate synthase large chain (EC 6.3.5.5)",
@@ -6920,7 +6920,7 @@
             }
         },
         "publications": [],
-        "id": "0c2641"
+        "id": "PS_role_0c2641"
     },
     {
         "role": "Carbamoyl-phosphate synthase small chain (EC 6.3.5.5)",
@@ -6956,7 +6956,7 @@
             }
         },
         "publications": [],
-        "id": "19d4a4"
+        "id": "PS_role_19d4a4"
     },
     {
         "role": "Carbon dioxide transport",
@@ -6981,7 +6981,7 @@
             }
         },
         "publications": [],
-        "id": "01a19b"
+        "id": "PS_role_01a19b"
     },
     {
         "role": "Carbon monoxide transport",
@@ -7014,7 +7014,7 @@
             }
         },
         "publications": [],
-        "id": "74ac86"
+        "id": "PS_role_74ac86"
     },
     {
         "role": "Carbonic anhydrase (EC 4.2.1.1)",
@@ -7050,7 +7050,7 @@
             }
         },
         "publications": [],
-        "id": "6b9d36"
+        "id": "PS_role_6b9d36"
     },
     {
         "role": "Cardiolipin synthetase (EC 2.7.8.-)",
@@ -7077,7 +7077,7 @@
             }
         },
         "publications": [],
-        "id": "cc1720"
+        "id": "PS_role_cc1720"
     },
     {
         "role": "Catalase (EC 1.11.1.6)",
@@ -7117,7 +7117,7 @@
             }
         },
         "publications": [],
-        "id": "4afdd3"
+        "id": "PS_role_4afdd3"
     },
     {
         "role": "Ceramide glucosyltransferase (EC 2.4.1.80)",
@@ -7142,7 +7142,7 @@
             }
         },
         "publications": [],
-        "id": "33ecbb"
+        "id": "PS_role_33ecbb"
     },
     {
         "role": "Ceramide hydroxylase",
@@ -7165,7 +7165,7 @@
             }
         },
         "publications": [],
-        "id": "a135df"
+        "id": "PS_role_a135df"
     },
     {
         "role": "Ceramide kinase (EC 2.7.1.138)",
@@ -7192,7 +7192,7 @@
             }
         },
         "publications": [],
-        "id": "5df876"
+        "id": "PS_role_5df876"
     },
     {
         "role": "Chalcone synthase (EC 2.3.1.74)",
@@ -7227,7 +7227,7 @@
             }
         },
         "publications": [],
-        "id": "abb903"
+        "id": "PS_role_abb903"
     },
     {
         "role": "Chloride transport",
@@ -7246,7 +7246,7 @@
             }
         },
         "publications": [],
-        "id": "f29c8c"
+        "id": "PS_role_f29c8c"
     },
     {
         "role": "Chlorophyll a synthase ChlG (EC 2.5.1.62)",
@@ -7281,7 +7281,7 @@
             }
         },
         "publications": [],
-        "id": "30323d"
+        "id": "PS_role_30323d"
     },
     {
         "role": "Choline kinase (EC 2.7.1.32)",
@@ -7310,7 +7310,7 @@
             }
         },
         "publications": [],
-        "id": "79c449"
+        "id": "PS_role_79c449"
     },
     {
         "role": "Cholinephosphate cytidylyltransferase (EC 2.7.7.15)",
@@ -7343,7 +7343,7 @@
             }
         },
         "publications": [],
-        "id": "82a97f"
+        "id": "PS_role_82a97f"
     },
     {
         "role": "Chorismate mutase III (EC 5.4.99.5)",
@@ -7390,7 +7390,7 @@
             }
         },
         "publications": [],
-        "id": "c95e71"
+        "id": "PS_role_c95e71"
     },
     {
         "role": "Chorismate synthase (EC 4.2.3.5)",
@@ -7420,7 +7420,7 @@
             }
         },
         "publications": [],
-        "id": "5784e9"
+        "id": "PS_role_5784e9"
     },
     {
         "role": "Chorismate transport",
@@ -7447,7 +7447,7 @@
             }
         },
         "publications": [],
-        "id": "d0b7b2"
+        "id": "PS_role_d0b7b2"
     },
     {
         "role": "Cinnamoyl-CoA reductase (EC 1.2.1.44)",
@@ -7477,7 +7477,7 @@
             }
         },
         "publications": [],
-        "id": "1dec59"
+        "id": "PS_role_1dec59"
     },
     {
         "role": "Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)",
@@ -7545,7 +7545,7 @@
             "10579494",
             "8219046"
         ],
-        "id": "cc5ec6"
+        "id": "PS_role_cc5ec6"
     },
     {
         "role": "Citrate synthase (si) (EC 2.3.3.1)",
@@ -7618,7 +7618,7 @@
             "15923350",
             "15923350"
         ],
-        "id": "8d0768"
+        "id": "PS_role_8d0768"
     },
     {
         "role": "Citrate/Isocitrate antiporter",
@@ -7645,7 +7645,7 @@
             }
         },
         "publications": [],
-        "id": "ca2db9"
+        "id": "PS_role_ca2db9"
     },
     {
         "role": "CoA transport",
@@ -7669,7 +7669,7 @@
             }
         },
         "publications": [],
-        "id": "cc4fb0"
+        "id": "PS_role_cc4fb0"
     },
     {
         "role": "Coniferin beta-glucosidase (EC 3.2.1.126)",
@@ -7694,7 +7694,7 @@
             }
         },
         "publications": [],
-        "id": "0fac33"
+        "id": "PS_role_0fac33"
     },
     {
         "role": "Coniferyl-alcohol and sinapyl-alcohol glucosyltransferase (EC 2.4.1.111)",
@@ -7731,7 +7731,7 @@
             }
         },
         "publications": [],
-        "id": "daea73"
+        "id": "PS_role_daea73"
     },
     {
         "role": "Coniferyl-aldehyde dehydrogenase (EC 1.2.1.68)",
@@ -7762,7 +7762,7 @@
             }
         },
         "publications": [],
-        "id": "cd73e7"
+        "id": "PS_role_cd73e7"
     },
     {
         "role": "Coproporphyrinogen III oxidase, aerobic (EC 1.3.3.3)",
@@ -7800,7 +7800,7 @@
             }
         },
         "publications": [],
-        "id": "dd5c0f"
+        "id": "PS_role_dd5c0f"
     },
     {
         "role": "Cyanoalanine nitrilase (EC 3.5.5.4)",
@@ -7829,7 +7829,7 @@
             }
         },
         "publications": [],
-        "id": "cb3e2e"
+        "id": "PS_role_cb3e2e"
     },
     {
         "role": "Cyclopropane desaturase (no EC)",
@@ -7854,7 +7854,7 @@
             }
         },
         "publications": [],
-        "id": "4a1a8a"
+        "id": "PS_role_4a1a8a"
     },
     {
         "role": "Cyclopropane-fatty-acyl-phospholipid synthase (EC 2.1.1.79), plant type",
@@ -7888,7 +7888,7 @@
             }
         },
         "publications": [],
-        "id": "f71106"
+        "id": "PS_role_f71106"
     },
     {
         "role": "Cystathionine beta-lyase (EC 4.4.1.8)",
@@ -7920,7 +7920,7 @@
             }
         },
         "publications": [],
-        "id": "4730ff"
+        "id": "PS_role_4730ff"
     },
     {
         "role": "Cystathionine gamma-synthase (EC 2.5.1.48)",
@@ -7943,7 +7943,7 @@
             }
         },
         "publications": [],
-        "id": "bf7b4d"
+        "id": "PS_role_bf7b4d"
     },
     {
         "role": "Cystathionine gamma-synthase, O-phospho-L-homoserine dependent (EC 2.5.1.-)",
@@ -7980,7 +7980,7 @@
             }
         },
         "publications": [],
-        "id": "0710dc"
+        "id": "PS_role_0710dc"
     },
     {
         "role": "Cysteine desulfurase (EC 2.8.1.7), IscS subfamily",
@@ -8020,7 +8020,7 @@
             }
         },
         "publications": [],
-        "id": "814ea2"
+        "id": "PS_role_814ea2"
     },
     {
         "role": "Cysteine desulfurase (EC 2.8.1.7), SufS subfamily",
@@ -8052,7 +8052,7 @@
             }
         },
         "publications": [],
-        "id": "73a1b3"
+        "id": "PS_role_73a1b3"
     },
     {
         "role": "Cysteine synthase (EC 2.5.1.47)",
@@ -8124,7 +8124,7 @@
             }
         },
         "publications": [],
-        "id": "b1bcc1"
+        "id": "PS_role_b1bcc1"
     },
     {
         "role": "Cysteine transport",
@@ -8148,7 +8148,7 @@
             }
         },
         "publications": [],
-        "id": "e4fd5d"
+        "id": "PS_role_e4fd5d"
     },
     {
         "role": "Cytochrome b559 alpha chain (PsbE)",
@@ -8179,7 +8179,7 @@
             }
         },
         "publications": [],
-        "id": "659711"
+        "id": "PS_role_659711"
     },
     {
         "role": "Cytochrome b559 beta chain (PsbF)",
@@ -8209,7 +8209,7 @@
             }
         },
         "publications": [],
-        "id": "89ce59"
+        "id": "PS_role_89ce59"
     },
     {
         "role": "Cytochrome b6-f complex alternative Rieske iron sulfur protein PetC2",
@@ -8234,7 +8234,7 @@
             }
         },
         "publications": [],
-        "id": "4c5920"
+        "id": "PS_role_4c5920"
     },
     {
         "role": "Cytochrome b6-f complex alternative Rieske iron sulfur protein PetC3",
@@ -8259,7 +8259,7 @@
             }
         },
         "publications": [],
-        "id": "235dd4"
+        "id": "PS_role_235dd4"
     },
     {
         "role": "Cytochrome b6-f complex iron-sulfur subunit PetC1 (Rieske iron sulfur protein EC 1.10.9.1)",
@@ -8288,7 +8288,7 @@
             }
         },
         "publications": [],
-        "id": "9ebea4"
+        "id": "PS_role_9ebea4"
     },
     {
         "role": "Cytochrome b6-f complex subunit IV (PetD)",
@@ -8317,7 +8317,7 @@
             }
         },
         "publications": [],
-        "id": "2c85d2"
+        "id": "PS_role_2c85d2"
     },
     {
         "role": "Cytochrome b6-f complex subunit V (PetG)",
@@ -8346,7 +8346,7 @@
             }
         },
         "publications": [],
-        "id": "fe9759"
+        "id": "PS_role_fe9759"
     },
     {
         "role": "Cytochrome b6-f complex subunit VII (PetM)",
@@ -8371,7 +8371,7 @@
             }
         },
         "publications": [],
-        "id": "fc337f"
+        "id": "PS_role_fc337f"
     },
     {
         "role": "Cytochrome b6-f complex subunit, apocytochrome f",
@@ -8400,7 +8400,7 @@
             }
         },
         "publications": [],
-        "id": "ab8316"
+        "id": "PS_role_ab8316"
     },
     {
         "role": "Cytochrome b6-f complex subunit, cytochrome b6",
@@ -8429,7 +8429,7 @@
             }
         },
         "publications": [],
-        "id": "938fec"
+        "id": "PS_role_938fec"
     },
     {
         "role": "Cytochrome b6-f complex subunit, cytochrome b6, putative",
@@ -8454,7 +8454,7 @@
             }
         },
         "publications": [],
-        "id": "513dee"
+        "id": "PS_role_513dee"
     },
     {
         "role": "Cytochrome c oxidase polypeptide I (EC 1.9.3.1)",
@@ -8481,7 +8481,7 @@
             }
         },
         "publications": [],
-        "id": "ce05e0"
+        "id": "PS_role_ce05e0"
     },
     {
         "role": "Cytochrome c oxidase polypeptide II (EC 1.9.3.1)",
@@ -8516,7 +8516,7 @@
             }
         },
         "publications": [],
-        "id": "f7cdd2"
+        "id": "PS_role_f7cdd2"
     },
     {
         "role": "Cytochrome c oxidase polypeptide III (EC 1.9.3.1)",
@@ -8547,7 +8547,7 @@
             }
         },
         "publications": [],
-        "id": "de7cc8"
+        "id": "PS_role_de7cc8"
     },
     {
         "role": "Cytochrome c oxidase subunit 5a",
@@ -8566,7 +8566,7 @@
         ],
         "localization": {},
         "publications": [],
-        "id": "d5480a"
+        "id": "PS_role_d5480a"
     },
     {
         "role": "Cytochrome c oxidase subunit 5b",
@@ -8597,7 +8597,7 @@
             }
         },
         "publications": [],
-        "id": "cd6354"
+        "id": "PS_role_cd6354"
     },
     {
         "role": "Cytochrome c oxidase subunit 6a",
@@ -8624,7 +8624,7 @@
             }
         },
         "publications": [],
-        "id": "e60a02"
+        "id": "PS_role_e60a02"
     },
     {
         "role": "Cytochrome c oxidase subunit 6b",
@@ -8655,7 +8655,7 @@
             }
         },
         "publications": [],
-        "id": "878b01"
+        "id": "PS_role_878b01"
     },
     {
         "role": "Cytochrome c oxidase, subunit IV (EC 1.9.3.1)",
@@ -8674,7 +8674,7 @@
         ],
         "localization": {},
         "publications": [],
-        "id": "5349d8"
+        "id": "PS_role_5349d8"
     },
     {
         "role": "D-3-phosphoglycerate dehydrogenase (EC 1.1.1.95)",
@@ -8704,7 +8704,7 @@
             }
         },
         "publications": [],
-        "id": "a707a2"
+        "id": "PS_role_a707a2"
     },
     {
         "role": "D-glycerate 3-kinase (EC 2.7.1.31), plant type",
@@ -8737,7 +8737,7 @@
             "15980259",
             "17400706"
         ],
-        "id": "56998d"
+        "id": "PS_role_56998d"
     },
     {
         "role": "D-serine dehydratase (EC 4.3.1.18)",
@@ -8766,7 +8766,7 @@
             }
         },
         "publications": [],
-        "id": "8898b4"
+        "id": "PS_role_8898b4"
     },
     {
         "role": "Delta-1-pyrroline-5-carboxylate dehydrogenase (EC 1.5.1.12)",
@@ -8796,7 +8796,7 @@
             }
         },
         "publications": [],
-        "id": "6739a4"
+        "id": "PS_role_6739a4"
     },
     {
         "role": "Delta-8-sphingolipid desaturase (EC 1.14.19.4)",
@@ -8824,7 +8824,7 @@
             }
         },
         "publications": [],
-        "id": "4d480e"
+        "id": "PS_role_4d480e"
     },
     {
         "role": "Demethylphylloquinone methyltransferase (EC 2.1.1.329)",
@@ -8856,7 +8856,7 @@
         "publications": [
             "17082184"
         ],
-        "id": "98e089"
+        "id": "PS_role_98e089"
     },
     {
         "role": "Deoxycytidine monophosphate deaminase (EC 3.5.4.12)",
@@ -8883,7 +8883,7 @@
             }
         },
         "publications": [],
-        "id": "41f345"
+        "id": "PS_role_41f345"
     },
     {
         "role": "Deoxyuridine 5'-triphosphate nucleotidohydrolase (EC 3.6.1.23)",
@@ -8911,7 +8911,7 @@
             }
         },
         "publications": [],
-        "id": "dfd46e"
+        "id": "PS_role_dfd46e"
     },
     {
         "role": "Dephospho-CoA kinase (EC 2.7.1.24)",
@@ -8944,7 +8944,7 @@
             }
         },
         "publications": [],
-        "id": "50e3d0"
+        "id": "PS_role_50e3d0"
     },
     {
         "role": "Desulfoglucosinolate sulfotransferase (EC 2.8.2.-)",
@@ -9010,7 +9010,7 @@
             }
         },
         "publications": [],
-        "id": "726ec8"
+        "id": "PS_role_726ec8"
     },
     {
         "role": "Dethiobiotin synthetase (EC 6.3.3.3)",
@@ -9039,7 +9039,7 @@
             }
         },
         "publications": [],
-        "id": "8bb862"
+        "id": "PS_role_8bb862"
     },
     {
         "role": "Diacylglycerol O-acyltransferase (EC 2.3.1.20)",
@@ -9086,7 +9086,7 @@
             }
         },
         "publications": [],
-        "id": "568864"
+        "id": "PS_role_568864"
     },
     {
         "role": "Diacylglycerol cholinephosphotransferase (EC 2.7.8.2)",
@@ -9123,7 +9123,7 @@
             }
         },
         "publications": [],
-        "id": "23146e"
+        "id": "PS_role_23146e"
     },
     {
         "role": "Diaminohydroxyphosphoribosylaminopyrimidine deaminase (EC 3.5.4.26)",
@@ -9156,7 +9156,7 @@
             }
         },
         "publications": [],
-        "id": "2813d5"
+        "id": "PS_role_2813d5"
     },
     {
         "role": "Diaminopimelate decarboxylase (EC 4.1.1.20)",
@@ -9191,7 +9191,7 @@
             }
         },
         "publications": [],
-        "id": "8e3194"
+        "id": "PS_role_8e3194"
     },
     {
         "role": "Diaminopimelate epimerase (EC 5.1.1.7)",
@@ -9221,7 +9221,7 @@
             }
         },
         "publications": [],
-        "id": "4bd9aa"
+        "id": "PS_role_4bd9aa"
     },
     {
         "role": "Digalactosyldiacylglycerol synthase (EC 2.4.1.241)",
@@ -9261,7 +9261,7 @@
             }
         },
         "publications": [],
-        "id": "499d8f"
+        "id": "PS_role_499d8f"
     },
     {
         "role": "Dihydrofolate reductase (EC 1.5.1.3)",
@@ -9306,7 +9306,7 @@
             }
         },
         "publications": [],
-        "id": "5002aa"
+        "id": "PS_role_5002aa"
     },
     {
         "role": "Dihydrofolate synthase (EC 6.3.2.12)",
@@ -9336,7 +9336,7 @@
             }
         },
         "publications": [],
-        "id": "cfc453"
+        "id": "PS_role_cfc453"
     },
     {
         "role": "Dihydrolipoamide acetyltransferase component of pyruvate dehydrogenase complex (EC 2.3.1.12)",
@@ -9393,7 +9393,7 @@
             "10364395",
             "10364395"
         ],
-        "id": "143636"
+        "id": "PS_role_143636"
     },
     {
         "role": "Dihydrolipoamide acyltransferase component of branched-chain alpha-keto acid dehydrogenase complex (EC 2.3.1.168)",
@@ -9424,7 +9424,7 @@
             }
         },
         "publications": [],
-        "id": "2d89fd"
+        "id": "PS_role_2d89fd"
     },
     {
         "role": "Dihydrolipoamide dehydrogenase of 2-oxoglutarate dehydrogenase (EC 1.8.1.4)",
@@ -9467,7 +9467,7 @@
             "11598235",
             "11598235"
         ],
-        "id": "8f85cd"
+        "id": "PS_role_8f85cd"
     },
     {
         "role": "Dihydrolipoamide dehydrogenase of branched-chain alpha-keto acid dehydrogenase (EC 1.8.1.4)",
@@ -9511,7 +9511,7 @@
             "11598235",
             "11598235"
         ],
-        "id": "cbdf61"
+        "id": "PS_role_cbdf61"
     },
     {
         "role": "Dihydrolipoamide dehydrogenase of glycine cleavage system, L protein (EC 1.8.1.4)",
@@ -9561,7 +9561,7 @@
             "11598235",
             "11598235"
         ],
-        "id": "10397f"
+        "id": "PS_role_10397f"
     },
     {
         "role": "Dihydrolipoamide dehydrogenase of pyruvate dehydrogenase complex (EC 1.8.1.4)",
@@ -9630,7 +9630,7 @@
             "20488895",
             "23961884"
         ],
-        "id": "630880"
+        "id": "PS_role_630880"
     },
     {
         "role": "Dihydrolipoamide succinyltransferase component (E2) of 2-oxoglutarate dehydrogenase complex (EC 2.3.1.61)",
@@ -9665,7 +9665,7 @@
             }
         },
         "publications": [],
-        "id": "c080bc"
+        "id": "PS_role_c080bc"
     },
     {
         "role": "Dihydroneopterin aldolase (EC 4.1.2.25)",
@@ -9706,7 +9706,7 @@
             }
         },
         "publications": [],
-        "id": "554ef3"
+        "id": "PS_role_554ef3"
     },
     {
         "role": "Dihydroneopterin monophosphate phosphatase (non-specific?)",
@@ -9731,7 +9731,7 @@
             }
         },
         "publications": [],
-        "id": "106df5"
+        "id": "PS_role_106df5"
     },
     {
         "role": "Dihydroneopterin triphosphate diphosphatase (EC 3.6.1.n4)",
@@ -9762,7 +9762,7 @@
             }
         },
         "publications": [],
-        "id": "e185b2"
+        "id": "PS_role_e185b2"
     },
     {
         "role": "Dihydroorotase (EC 3.5.2.3)",
@@ -9797,7 +9797,7 @@
             }
         },
         "publications": [],
-        "id": "408d79"
+        "id": "PS_role_408d79"
     },
     {
         "role": "Dihydroorotate dehydrogenase [quinone] (EC 1.3.5.2)",
@@ -9827,7 +9827,7 @@
             }
         },
         "publications": [],
-        "id": "b3ff7b"
+        "id": "PS_role_b3ff7b"
     },
     {
         "role": "Dihydroorotate transport",
@@ -9853,7 +9853,7 @@
             }
         },
         "publications": [],
-        "id": "d6a747"
+        "id": "PS_role_d6a747"
     },
     {
         "role": "Dihydropteroate synthase (EC 2.5.1.15)",
@@ -9890,7 +9890,7 @@
             }
         },
         "publications": [],
-        "id": "879fe7"
+        "id": "PS_role_879fe7"
     },
     {
         "role": "Dihydropyrimidinase (EC 3.5.2.2)",
@@ -9925,7 +9925,7 @@
             }
         },
         "publications": [],
-        "id": "edd526"
+        "id": "PS_role_edd526"
     },
     {
         "role": "Dihydropyrimidine dehydrogenase (EC 1.3.1.2)",
@@ -9957,7 +9957,7 @@
             }
         },
         "publications": [],
-        "id": "0a8e8d"
+        "id": "PS_role_0a8e8d"
     },
     {
         "role": "Dihydrosphingosine delta-4 desaturase (EC 1.14.99.-)",
@@ -9984,7 +9984,7 @@
             }
         },
         "publications": [],
-        "id": "1e0695"
+        "id": "PS_role_1e0695"
     },
     {
         "role": "Dihydroxy-acid dehydratase (EC 4.2.1.9)",
@@ -10016,7 +10016,7 @@
             }
         },
         "publications": [],
-        "id": "85ba4b"
+        "id": "PS_role_85ba4b"
     },
     {
         "role": "Dihydroxyacetone transport",
@@ -10043,7 +10043,7 @@
             }
         },
         "publications": [],
-        "id": "d7a37c"
+        "id": "PS_role_d7a37c"
     },
     {
         "role": "Dimethylallyl diphosphate transport",
@@ -10064,7 +10064,7 @@
             }
         },
         "publications": [],
-        "id": "accafa"
+        "id": "PS_role_accafa"
     },
     {
         "role": "Diphosphomevalonate decarboxylase (EC 4.1.1.33)",
@@ -10097,7 +10097,7 @@
             }
         },
         "publications": [],
-        "id": "3f7d5e"
+        "id": "PS_role_3f7d5e"
     },
     {
         "role": "Divinyl (proto)chlorophyllide a 8-vinyl-reductase (EC 1.3.1.75)",
@@ -10127,7 +10127,7 @@
             }
         },
         "publications": [],
-        "id": "80824b"
+        "id": "PS_role_80824b"
     },
     {
         "role": "Endo-1,4-beta-xylanase A precursor (EC 3.2.1.8)",
@@ -10157,7 +10157,7 @@
             }
         },
         "publications": [],
-        "id": "f45b6b"
+        "id": "PS_role_f45b6b"
     },
     {
         "role": "Enolase (EC 4.2.1.11)",
@@ -10234,7 +10234,7 @@
             "19223001",
             "19223001"
         ],
-        "id": "c46d10"
+        "id": "PS_role_c46d10"
     },
     {
         "role": "Enoyl-[acyl-carrier-protein] reductase [NADH] (EC 1.3.1.9)",
@@ -10272,7 +10272,7 @@
             }
         },
         "publications": [],
-        "id": "75fb9c"
+        "id": "PS_role_75fb9c"
     },
     {
         "role": "Epoxide hydrolase (EC 3.3.2.-)",
@@ -10299,7 +10299,7 @@
             }
         },
         "publications": [],
-        "id": "3bf671"
+        "id": "PS_role_3bf671"
     },
     {
         "role": "Ethanolamine N-methyltransferase, free-base-specific (EC 2.1.1.-)",
@@ -10328,7 +10328,7 @@
             }
         },
         "publications": [],
-        "id": "1cd9f5"
+        "id": "PS_role_1cd9f5"
     },
     {
         "role": "Ethanolamine kinase (EC 2.7.1.82)",
@@ -10359,7 +10359,7 @@
             }
         },
         "publications": [],
-        "id": "7ca8f1"
+        "id": "PS_role_7ca8f1"
     },
     {
         "role": "Ethanolamine-phosphate cytidylyltransferase (EC 2.7.7.14)",
@@ -10386,7 +10386,7 @@
             }
         },
         "publications": [],
-        "id": "6e400d"
+        "id": "PS_role_6e400d"
     },
     {
         "role": "Ethanolaminephosphotransferase (EC 2.7.8.1)",
@@ -10414,7 +10414,7 @@
             }
         },
         "publications": [],
-        "id": "26bf73"
+        "id": "PS_role_26bf73"
     },
     {
         "role": "Extradiol ring-cleavage dioxygenase [caffealdehyde, other] (EC 1.13.-.-)",
@@ -10439,7 +10439,7 @@
             }
         },
         "publications": [],
-        "id": "56fa14"
+        "id": "PS_role_56fa14"
     },
     {
         "role": "FAD pyrophosphatase (EC 3.6.1.18)",
@@ -10467,7 +10467,7 @@
             }
         },
         "publications": [],
-        "id": "d964bf"
+        "id": "PS_role_d964bf"
     },
     {
         "role": "FAD4-type (trans) fatty acid desaturase (EC 1.14.19.-)",
@@ -10504,7 +10504,7 @@
             }
         },
         "publications": [],
-        "id": "b91cfa"
+        "id": "PS_role_b91cfa"
     },
     {
         "role": "FMN adenylyltransferase (EC 2.7.7.2)",
@@ -10537,7 +10537,7 @@
             }
         },
         "publications": [],
-        "id": "8c2c6a"
+        "id": "PS_role_8c2c6a"
     },
     {
         "role": "FMN adenylyltransferase, type 2 eukaryotic (EC 2.7.7.2)",
@@ -10564,7 +10564,7 @@
             }
         },
         "publications": [],
-        "id": "da15b4"
+        "id": "PS_role_da15b4"
     },
     {
         "role": "FMN hydrolase, high substrate specificity (EC 3.1.3.-)",
@@ -10592,7 +10592,7 @@
             }
         },
         "publications": [],
-        "id": "59de8a"
+        "id": "PS_role_59de8a"
     },
     {
         "role": "Farnesyl diphosphate transport",
@@ -10613,7 +10613,7 @@
             }
         },
         "publications": [],
-        "id": "638244"
+        "id": "PS_role_638244"
     },
     {
         "role": "Farnesyl-diphosphate synthase (EC 2.5.1.10)",
@@ -10641,7 +10641,7 @@
             }
         },
         "publications": [],
-        "id": "507571"
+        "id": "PS_role_507571"
     },
     {
         "role": "Fatty acid in-chain hydroxylase (no EC)",
@@ -10668,7 +10668,7 @@
             }
         },
         "publications": [],
-        "id": "6c5dab"
+        "id": "PS_role_6c5dab"
     },
     {
         "role": "Fatty acid omega-hydroxylase (EC 1.14.13.-)",
@@ -10712,7 +10712,7 @@
             }
         },
         "publications": [],
-        "id": "373c38"
+        "id": "PS_role_373c38"
     },
     {
         "role": "Fatty acid peroxygenase [fatty acid hydroperoxide-dependent] (EC 1.11.-.-)",
@@ -10739,7 +10739,7 @@
             }
         },
         "publications": [],
-        "id": "f78cda"
+        "id": "PS_role_f78cda"
     },
     {
         "role": "Fatty acid transport",
@@ -10764,7 +10764,7 @@
             }
         },
         "publications": [],
-        "id": "c7ca92"
+        "id": "PS_role_c7ca92"
     },
     {
         "role": "Fatty acids epoxide hydrolase (no EC)",
@@ -10795,7 +10795,7 @@
             }
         },
         "publications": [],
-        "id": "23c005"
+        "id": "PS_role_23c005"
     },
     {
         "role": "Fatty aldehyde decarbonylase (EC 4.1.99.-)",
@@ -10822,7 +10822,7 @@
             }
         },
         "publications": [],
-        "id": "4f319b"
+        "id": "PS_role_4f319b"
     },
     {
         "role": "Ferredoxin--nitrite reductase (EC 1.7.7.1)",
@@ -10852,7 +10852,7 @@
             }
         },
         "publications": [],
-        "id": "5ddd5d"
+        "id": "PS_role_5ddd5d"
     },
     {
         "role": "Ferredoxin--sulfite reductase (EC 1.8.7.1)",
@@ -10881,7 +10881,7 @@
             }
         },
         "publications": [],
-        "id": "9fe2d6"
+        "id": "PS_role_9fe2d6"
     },
     {
         "role": "Ferredoxin-NADP(+) reductase (EC 1.18.1.2)",
@@ -10922,7 +10922,7 @@
             }
         },
         "publications": [],
-        "id": "1bec23"
+        "id": "PS_role_1bec23"
     },
     {
         "role": "Ferredoxin-dependent glutamate synthase (EC 1.4.7.1)",
@@ -10963,7 +10963,7 @@
             }
         },
         "publications": [],
-        "id": "72f2e3"
+        "id": "PS_role_72f2e3"
     },
     {
         "role": "Ferrochelatase, protoheme ferro-lyase (EC 4.99.1.1)",
@@ -11001,7 +11001,7 @@
             }
         },
         "publications": [],
-        "id": "55ea81"
+        "id": "PS_role_55ea81"
     },
     {
         "role": "Ferulate-5-hydroxylase (EC 1.14.13.-)",
@@ -11040,7 +11040,7 @@
             }
         },
         "publications": [],
-        "id": "3cb8f5"
+        "id": "PS_role_3cb8f5"
     },
     {
         "role": "Flavanone-3-hydroxylase (EC 1.14.13.21)",
@@ -11069,7 +11069,7 @@
             }
         },
         "publications": [],
-        "id": "5aa27a"
+        "id": "PS_role_5aa27a"
     },
     {
         "role": "Flavin-containing glucosinolate S-oxygenase (no EC)",
@@ -11118,7 +11118,7 @@
             }
         },
         "publications": [],
-        "id": "c902af"
+        "id": "PS_role_c902af"
     },
     {
         "role": "Flavonoid 3'-hydroxylase (EC 1.14.13.21)",
@@ -11145,7 +11145,7 @@
             }
         },
         "publications": [],
-        "id": "924f97"
+        "id": "PS_role_924f97"
     },
     {
         "role": "Flavonoid 3'-monooxygenase (EC 1.14.13.21)",
@@ -11174,7 +11174,7 @@
             }
         },
         "publications": [],
-        "id": "eb5be8"
+        "id": "PS_role_eb5be8"
     },
     {
         "role": "Folylpolyglutamate synthase (EC 6.3.2.17)",
@@ -11225,7 +11225,7 @@
             }
         },
         "publications": [],
-        "id": "e02c09"
+        "id": "PS_role_e02c09"
     },
     {
         "role": "Formate dehydrogenase (EC 1.2.1.2)",
@@ -11254,7 +11254,7 @@
             }
         },
         "publications": [],
-        "id": "8983e8"
+        "id": "PS_role_8983e8"
     },
     {
         "role": "Formate transport",
@@ -11284,7 +11284,7 @@
             }
         },
         "publications": [],
-        "id": "333973"
+        "id": "PS_role_333973"
     },
     {
         "role": "Formate--tetrahydrofolate ligase (EC 6.3.4.3)",
@@ -11320,7 +11320,7 @@
             }
         },
         "publications": [],
-        "id": "67cdff"
+        "id": "PS_role_67cdff"
     },
     {
         "role": "Free fatty acids epoxidase [oleate, linoleate, linolenate] (no EC)",
@@ -11361,7 +11361,7 @@
             }
         },
         "publications": [],
-        "id": "e4371f"
+        "id": "PS_role_e4371f"
     },
     {
         "role": "Fructokinase (EC 2.7.1.4)",
@@ -11401,7 +11401,7 @@
             }
         },
         "publications": [],
-        "id": "e5c843"
+        "id": "PS_role_e5c843"
     },
     {
         "role": "Fructose-1,6-bisphosphatase, type I (EC 3.1.3.11)",
@@ -11465,7 +11465,7 @@
             "1651131",
             "19220782"
         ],
-        "id": "a4a9e6"
+        "id": "PS_role_a4a9e6"
     },
     {
         "role": "Fructose-bisphosphate aldolase class I (EC 4.1.2.13)",
@@ -11558,7 +11558,7 @@
             "11261572",
             "8616263"
         ],
-        "id": "78470a"
+        "id": "PS_role_78470a"
     },
     {
         "role": "Fucose-1-phosphate guanylyltransferase (EC 2.7.7.30)",
@@ -11585,7 +11585,7 @@
             }
         },
         "publications": [],
-        "id": "47b094"
+        "id": "PS_role_47b094"
     },
     {
         "role": "Fumarate hydratase class II (EC 4.2.1.2)",
@@ -11625,7 +11625,7 @@
             "20202172",
             "20202172"
         ],
-        "id": "b89031"
+        "id": "PS_role_b89031"
     },
     {
         "role": "Fumarate transport",
@@ -11652,7 +11652,7 @@
             }
         },
         "publications": [],
-        "id": "1a2ec2"
+        "id": "PS_role_1a2ec2"
     },
     {
         "role": "GDP-L-fucose synthetase (EC 1.1.1.271)",
@@ -11678,7 +11678,7 @@
             }
         },
         "publications": [],
-        "id": "55c39f"
+        "id": "PS_role_55c39f"
     },
     {
         "role": "GDP-mannose 3,5-epimerase (EC 5.1.3.18)",
@@ -11707,7 +11707,7 @@
             }
         },
         "publications": [],
-        "id": "e3b9a4"
+        "id": "PS_role_e3b9a4"
     },
     {
         "role": "GDP-mannose 4,6-dehydratase (EC 4.2.1.47)",
@@ -11735,7 +11735,7 @@
             }
         },
         "publications": [],
-        "id": "c979f7"
+        "id": "PS_role_c979f7"
     },
     {
         "role": "GMP synthase [glutamine-hydrolyzing] (EC 6.3.5.2)",
@@ -11763,7 +11763,7 @@
             }
         },
         "publications": [],
-        "id": "d8ce45"
+        "id": "PS_role_d8ce45"
     },
     {
         "role": "GTP cyclohydrolase I (EC 3.5.4.16) type 1",
@@ -11794,7 +11794,7 @@
             }
         },
         "publications": [],
-        "id": "8263dd"
+        "id": "PS_role_8263dd"
     },
     {
         "role": "GTP cyclohydrolase II (EC 3.5.4.25)",
@@ -11833,7 +11833,7 @@
             }
         },
         "publications": [],
-        "id": "433e3f"
+        "id": "PS_role_433e3f"
     },
     {
         "role": "Galactokinase (EC 2.7.1.6)",
@@ -11861,7 +11861,7 @@
             }
         },
         "publications": [],
-        "id": "f26fff"
+        "id": "PS_role_f26fff"
     },
     {
         "role": "Galactolipid galactosyltransferase (EC 2.4.1.184)",
@@ -11888,7 +11888,7 @@
             }
         },
         "publications": [],
-        "id": "dd5f06"
+        "id": "PS_role_dd5f06"
     },
     {
         "role": "Galactose-1-phosphate uridylyltransferase (EC 2.7.7.10)",
@@ -11913,7 +11913,7 @@
             }
         },
         "publications": [],
-        "id": "ca9677"
+        "id": "PS_role_ca9677"
     },
     {
         "role": "Galactoside 2-alpha-L-fucosyltransferase (EC 2.4.1.69)",
@@ -11945,7 +11945,7 @@
             }
         },
         "publications": [],
-        "id": "74aba1"
+        "id": "PS_role_74aba1"
     },
     {
         "role": "Galacturonokinase (EC 2.7.1.44)",
@@ -11972,7 +11972,7 @@
             }
         },
         "publications": [],
-        "id": "f9e899"
+        "id": "PS_role_f9e899"
     },
     {
         "role": "Gamma-glutamyl peptidase in glucosinolates biosynthesis",
@@ -12023,7 +12023,7 @@
             }
         },
         "publications": [],
-        "id": "2b7cf0"
+        "id": "PS_role_2b7cf0"
     },
     {
         "role": "Gamma-glutamyl phosphate reductase (EC 1.2.1.41)",
@@ -12068,7 +12068,7 @@
             }
         },
         "publications": [],
-        "id": "3fabe2"
+        "id": "PS_role_3fabe2"
     },
     {
         "role": "Geranyl-diphosphate synthase (EC 2.5.1.1)",
@@ -12108,7 +12108,7 @@
             }
         },
         "publications": [],
-        "id": "2e0855"
+        "id": "PS_role_2e0855"
     },
     {
         "role": "Geranylgeranyl diphosphate reductase (EC 1.3.1.83)",
@@ -12146,7 +12146,7 @@
             }
         },
         "publications": [],
-        "id": "f142e5"
+        "id": "PS_role_f142e5"
     },
     {
         "role": "Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29)",
@@ -12213,7 +12213,7 @@
             }
         },
         "publications": [],
-        "id": "36a47a"
+        "id": "PS_role_36a47a"
     },
     {
         "role": "Glucokinase (EC 2.7.1.2)",
@@ -12242,7 +12242,7 @@
             }
         },
         "publications": [],
-        "id": "c1c960"
+        "id": "PS_role_c1c960"
     },
     {
         "role": "Gluconokinase (EC 2.7.1.12)",
@@ -12271,7 +12271,7 @@
         "publications": [
             "12447540"
         ],
-        "id": "cba3de"
+        "id": "PS_role_cba3de"
     },
     {
         "role": "Glucose-1-phosphate adenylyltransferase (EC 2.7.7.27)",
@@ -12324,7 +12324,7 @@
             }
         },
         "publications": [],
-        "id": "c57934"
+        "id": "PS_role_c57934"
     },
     {
         "role": "Glucose-1-phosphate guanylyltransferase (EC 2.7.7.34)",
@@ -12349,7 +12349,7 @@
             }
         },
         "publications": [],
-        "id": "066cce"
+        "id": "PS_role_066cce"
     },
     {
         "role": "Glucose-6-phosphate 1-dehydrogenase (EC 1.1.1.49)",
@@ -12414,7 +12414,7 @@
             "23934891",
             "21309870"
         ],
-        "id": "438e0a"
+        "id": "PS_role_438e0a"
     },
     {
         "role": "Glucose-6-phosphate isomerase (EC 5.3.1.9)",
@@ -12473,7 +12473,7 @@
             "10806248",
             "18599644"
         ],
-        "id": "13f3c3"
+        "id": "PS_role_13f3c3"
     },
     {
         "role": "Glucosylceramide synthase",
@@ -12498,7 +12498,7 @@
             }
         },
         "publications": [],
-        "id": "db2c35"
+        "id": "PS_role_db2c35"
     },
     {
         "role": "Glucuronokinase (EC 2.7.1.43)",
@@ -12526,7 +12526,7 @@
             }
         },
         "publications": [],
-        "id": "51033c"
+        "id": "PS_role_51033c"
     },
     {
         "role": "Glutamate 5-kinase (EC 2.7.2.11)",
@@ -12573,7 +12573,7 @@
             }
         },
         "publications": [],
-        "id": "46d375"
+        "id": "PS_role_46d375"
     },
     {
         "role": "Glutamate N-acetyltransferase (EC 2.3.1.35)",
@@ -12603,7 +12603,7 @@
             }
         },
         "publications": [],
-        "id": "e69b86"
+        "id": "PS_role_e69b86"
     },
     {
         "role": "Glutamate synthase [NADH] (EC 1.4.1.14)",
@@ -12633,7 +12633,7 @@
             }
         },
         "publications": [],
-        "id": "d71e8d"
+        "id": "PS_role_d71e8d"
     },
     {
         "role": "Glutamate transport",
@@ -12660,7 +12660,7 @@
             }
         },
         "publications": [],
-        "id": "c54864"
+        "id": "PS_role_c54864"
     },
     {
         "role": "Glutamate--prephenate aminotransferase (EC 2.6.1.79)",
@@ -12692,7 +12692,7 @@
             }
         },
         "publications": [],
-        "id": "8fcd53"
+        "id": "PS_role_8fcd53"
     },
     {
         "role": "Glutamate-1-semialdehyde aminotransferase (EC 5.4.3.8)",
@@ -12728,7 +12728,7 @@
             }
         },
         "publications": [],
-        "id": "be145f"
+        "id": "PS_role_be145f"
     },
     {
         "role": "Glutamate-glyoxylate aminotransferase (EC 2.6.1.4)",
@@ -12781,7 +12781,7 @@
             "17319845",
             "17319845"
         ],
-        "id": "bb2b8f"
+        "id": "PS_role_bb2b8f"
     },
     {
         "role": "Glutaminase (EC 3.5.1.2)",
@@ -12804,7 +12804,7 @@
             }
         },
         "publications": [],
-        "id": "41e45e"
+        "id": "PS_role_41e45e"
     },
     {
         "role": "Glutamine amidotransferase chain of NAD synthetase",
@@ -12829,7 +12829,7 @@
             }
         },
         "publications": [],
-        "id": "363515"
+        "id": "PS_role_363515"
     },
     {
         "role": "Glutamine synthetase type II, eukaryotic (EC 6.3.1.2)",
@@ -12894,7 +12894,7 @@
             }
         },
         "publications": [],
-        "id": "f73cee"
+        "id": "PS_role_f73cee"
     },
     {
         "role": "Glutamine transport",
@@ -12921,7 +12921,7 @@
             }
         },
         "publications": [],
-        "id": "b04038"
+        "id": "PS_role_b04038"
     },
     {
         "role": "Glutamyl-tRNA reductase (EC 1.2.1.70)",
@@ -12959,7 +12959,7 @@
             }
         },
         "publications": [],
-        "id": "fe4f8b"
+        "id": "PS_role_fe4f8b"
     },
     {
         "role": "Glutamyl-tRNA synthetase (EC 6.1.1.17)",
@@ -12986,7 +12986,7 @@
             }
         },
         "publications": [],
-        "id": "2f91cd"
+        "id": "PS_role_2f91cd"
     },
     {
         "role": "Glutathione S-transferase in Trp, Phe, Tyr-derived glucosinolates biosynthesis, predicted",
@@ -13020,7 +13020,7 @@
             }
         },
         "publications": [],
-        "id": "9af9d5"
+        "id": "PS_role_9af9d5"
     },
     {
         "role": "Glutathione S-transferase in glucosinolates biosynthesis, predicted",
@@ -13060,7 +13060,7 @@
             }
         },
         "publications": [],
-        "id": "08a707"
+        "id": "PS_role_08a707"
     },
     {
         "role": "Glutathione reductase (EC 1.8.1.7)",
@@ -13098,7 +13098,7 @@
             }
         },
         "publications": [],
-        "id": "b0ae27"
+        "id": "PS_role_b0ae27"
     },
     {
         "role": "Glyceraldehyde 3-phosphate transport",
@@ -13125,7 +13125,7 @@
             }
         },
         "publications": [],
-        "id": "206972"
+        "id": "PS_role_206972"
     },
     {
         "role": "Glycerate transport",
@@ -13152,7 +13152,7 @@
             }
         },
         "publications": [],
-        "id": "2bad8a"
+        "id": "PS_role_2bad8a"
     },
     {
         "role": "Glycerol-3-phosphate 2-O-acyltransferase (EC 2.3.1.198)",
@@ -13183,7 +13183,7 @@
             }
         },
         "publications": [],
-        "id": "42874b"
+        "id": "PS_role_42874b"
     },
     {
         "role": "Glycerol-3-phosphate acyltransferase (EC 2.3.1.15)",
@@ -13253,7 +13253,7 @@
             }
         },
         "publications": [],
-        "id": "01ec9b"
+        "id": "PS_role_01ec9b"
     },
     {
         "role": "Glycerol-3-phosphate dehydrogenase (EC 1.1.5.3)",
@@ -13285,7 +13285,7 @@
             "16415206",
             "18599644"
         ],
-        "id": "e7f677"
+        "id": "PS_role_e7f677"
     },
     {
         "role": "Glycerol-3-phosphate dehydrogenase [NAD+] (EC 1.1.1.8)",
@@ -13348,7 +13348,7 @@
             "16415206",
             "18599644"
         ],
-        "id": "f55c61"
+        "id": "PS_role_f55c61"
     },
     {
         "role": "Glycine cleavage system H protein",
@@ -13395,7 +13395,7 @@
         "publications": [
             "7480320"
         ],
-        "id": "2b2b81"
+        "id": "PS_role_2b2b81"
     },
     {
         "role": "Glycine dehydrogenase [decarboxylating] (glycine cleavage system P protein) (EC 1.4.4.2)",
@@ -13442,7 +13442,7 @@
             "17496108",
             "20089767"
         ],
-        "id": "fa51ea"
+        "id": "PS_role_fa51ea"
     },
     {
         "role": "Glycine transport",
@@ -13469,7 +13469,7 @@
             }
         },
         "publications": [],
-        "id": "8e0c9c"
+        "id": "PS_role_8e0c9c"
     },
     {
         "role": "Glycolaldehyde dehydrogenase (EC 1.2.1.21)",
@@ -13492,7 +13492,7 @@
             }
         },
         "publications": [],
-        "id": "8e0bd7"
+        "id": "PS_role_8e0bd7"
     },
     {
         "role": "Glycolate oxidase (EC 1.1.3.15)",
@@ -13553,7 +13553,7 @@
             "22286136",
             "https://doi.org/10.1105/tpc.111.093245"
         ],
-        "id": "437b19"
+        "id": "PS_role_437b19"
     },
     {
         "role": "Glycolate transport",
@@ -13580,7 +13580,7 @@
             }
         },
         "publications": [],
-        "id": "b4d2cd"
+        "id": "PS_role_b4d2cd"
     },
     {
         "role": "Glyoxylate transport",
@@ -13607,7 +13607,7 @@
             }
         },
         "publications": [],
-        "id": "cdb02a"
+        "id": "PS_role_cdb02a"
     },
     {
         "role": "Guanine phosphoribosyltransferase (EC 2.4.2.8)",
@@ -13634,7 +13634,7 @@
             }
         },
         "publications": [],
-        "id": "8ddb54"
+        "id": "PS_role_8ddb54"
     },
     {
         "role": "Guanylate kinase (EC 2.7.4.8)",
@@ -13666,7 +13666,7 @@
             }
         },
         "publications": [],
-        "id": "b300dd"
+        "id": "PS_role_b300dd"
     },
     {
         "role": "HMDHP transport",
@@ -13685,7 +13685,7 @@
             }
         },
         "publications": [],
-        "id": "c8a048"
+        "id": "PS_role_c8a048"
     },
     {
         "role": "HS transport",
@@ -13710,7 +13710,7 @@
             }
         },
         "publications": [],
-        "id": "ddbce2"
+        "id": "PS_role_ddbce2"
     },
     {
         "role": "Heme O synthase, protoheme IX farnesyltransferase (EC 2.5.1.-) COX10-CtaB",
@@ -13735,7 +13735,7 @@
             }
         },
         "publications": [],
-        "id": "fbcb5a"
+        "id": "PS_role_fbcb5a"
     },
     {
         "role": "Hexokinase (EC 2.7.1.1)",
@@ -13832,7 +13832,7 @@
             "18481082",
             "22366209"
         ],
-        "id": "481e11"
+        "id": "PS_role_481e11"
     },
     {
         "role": "Histidine transport",
@@ -13859,7 +13859,7 @@
             }
         },
         "publications": [],
-        "id": "cf74b6"
+        "id": "PS_role_cf74b6"
     },
     {
         "role": "Histidinol dehydrogenase (EC 1.1.1.23)",
@@ -13890,7 +13890,7 @@
             }
         },
         "publications": [],
-        "id": "b04198"
+        "id": "PS_role_b04198"
     },
     {
         "role": "Histidinol-phosphatase [alternative form] (EC 3.1.3.15)",
@@ -13922,7 +13922,7 @@
             }
         },
         "publications": [],
-        "id": "194287"
+        "id": "PS_role_194287"
     },
     {
         "role": "Histidinol-phosphate aminotransferase (EC 2.6.1.9)",
@@ -13968,7 +13968,7 @@
             }
         },
         "publications": [],
-        "id": "2d8f95"
+        "id": "PS_role_2d8f95"
     },
     {
         "role": "Homo, di, tri, tetra, penta & hexahomomethionine N-hydroxylase (EC 1.14.13.n5)",
@@ -14001,7 +14001,7 @@
             }
         },
         "publications": [],
-        "id": "680bc5"
+        "id": "PS_role_680bc5"
     },
     {
         "role": "Homo, di, tri, tetra, penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n5)",
@@ -14035,7 +14035,7 @@
             }
         },
         "publications": [],
-        "id": "190a6d"
+        "id": "PS_role_190a6d"
     },
     {
         "role": "Homocysteine S-methyltransferase (EC 2.1.1.10)",
@@ -14075,7 +14075,7 @@
             }
         },
         "publications": [],
-        "id": "ff36ae"
+        "id": "PS_role_ff36ae"
     },
     {
         "role": "Homogalacturonan methyltransferase (EC 2.1.1.-)",
@@ -14100,7 +14100,7 @@
             }
         },
         "publications": [],
-        "id": "6aa026"
+        "id": "PS_role_6aa026"
     },
     {
         "role": "Homogentisate phytyltransferase (EC 2.5.1.n8)",
@@ -14131,7 +14131,7 @@
             }
         },
         "publications": [],
-        "id": "8fba33"
+        "id": "PS_role_8fba33"
     },
     {
         "role": "Homogentisate solanesyltransferase (EC 2.5.-)",
@@ -14161,7 +14161,7 @@
             }
         },
         "publications": [],
-        "id": "057b72"
+        "id": "PS_role_057b72"
     },
     {
         "role": "Homoserine dehydrogenase (EC 1.1.1.3)",
@@ -14197,7 +14197,7 @@
             }
         },
         "publications": [],
-        "id": "3d9a3d"
+        "id": "PS_role_3d9a3d"
     },
     {
         "role": "Homoserine kinase (EC 2.7.1.39)",
@@ -14233,7 +14233,7 @@
             }
         },
         "publications": [],
-        "id": "21308c"
+        "id": "PS_role_21308c"
     },
     {
         "role": "Hydrouracil transport",
@@ -14257,7 +14257,7 @@
             }
         },
         "publications": [],
-        "id": "924fed"
+        "id": "PS_role_924fed"
     },
     {
         "role": "Hydroxyethylthiazole kinase (EC 2.7.1.50)",
@@ -14282,7 +14282,7 @@
             }
         },
         "publications": [],
-        "id": "ac3930"
+        "id": "PS_role_ac3930"
     },
     {
         "role": "Hydroxymethylglutaryl-CoA reductase (EC 1.1.1.34)",
@@ -14320,7 +14320,7 @@
             }
         },
         "publications": [],
-        "id": "8ba2ff"
+        "id": "PS_role_8ba2ff"
     },
     {
         "role": "Hydroxymethylglutaryl-CoA synthase (EC 2.3.3.10)",
@@ -14347,7 +14347,7 @@
             }
         },
         "publications": [],
-        "id": "678076"
+        "id": "PS_role_678076"
     },
     {
         "role": "Hydroxymethylpyrimidine kinase (EC 2.7.1.49)",
@@ -14378,7 +14378,7 @@
             }
         },
         "publications": [],
-        "id": "910b99"
+        "id": "PS_role_910b99"
     },
     {
         "role": "Hydroxymethylpyrimidine phosphate kinase ThiD (EC 2.7.4.7)",
@@ -14410,7 +14410,7 @@
             }
         },
         "publications": [],
-        "id": "6aa223"
+        "id": "PS_role_6aa223"
     },
     {
         "role": "Hydroxymethylpyrimidine phosphate synthase ThiC (EC 4.1.99.17)",
@@ -14441,7 +14441,7 @@
             }
         },
         "publications": [],
-        "id": "632120"
+        "id": "PS_role_632120"
     },
     {
         "role": "Hypothetical reaction",
@@ -14464,7 +14464,7 @@
             }
         },
         "publications": [],
-        "id": "0b563e"
+        "id": "PS_role_0b563e"
     },
     {
         "role": "IMP cyclohydrolase (EC 3.5.4.10)",
@@ -14494,7 +14494,7 @@
             }
         },
         "publications": [],
-        "id": "fbd587"
+        "id": "PS_role_fbd587"
     },
     {
         "role": "IMP transport",
@@ -14517,7 +14517,7 @@
             }
         },
         "publications": [],
-        "id": "8ed1f6"
+        "id": "PS_role_8ed1f6"
     },
     {
         "role": "Imidazole glycerol phosphate synthase amidotransferase subunit (EC 2.4.2.-)",
@@ -14547,7 +14547,7 @@
             }
         },
         "publications": [],
-        "id": "0718b5"
+        "id": "PS_role_0718b5"
     },
     {
         "role": "Imidazole glycerol phosphate synthase cyclase subunit (EC 4.1.3.-)",
@@ -14577,7 +14577,7 @@
             }
         },
         "publications": [],
-        "id": "f92d66"
+        "id": "PS_role_f92d66"
     },
     {
         "role": "Imidazoleglycerol-phosphate dehydratase (EC 4.2.1.19)",
@@ -14610,7 +14610,7 @@
             }
         },
         "publications": [],
-        "id": "62f006"
+        "id": "PS_role_62f006"
     },
     {
         "role": "Indole glucosinolate glucohydrolase (myrosinase)",
@@ -14635,7 +14635,7 @@
             }
         },
         "publications": [],
-        "id": "4db1e3"
+        "id": "PS_role_4db1e3"
     },
     {
         "role": "Indole glucosinolate methyltransferase",
@@ -14663,7 +14663,7 @@
             }
         },
         "publications": [],
-        "id": "816efa"
+        "id": "PS_role_816efa"
     },
     {
         "role": "Indole synthase (EC 4.1.2.8)",
@@ -14688,7 +14688,7 @@
             }
         },
         "publications": [],
-        "id": "71b75f"
+        "id": "PS_role_71b75f"
     },
     {
         "role": "Indole-3-glycerol phosphate synthase (EC 4.1.1.48)",
@@ -14723,7 +14723,7 @@
             }
         },
         "publications": [],
-        "id": "0039cf"
+        "id": "PS_role_0039cf"
     },
     {
         "role": "Inorganic pyrophosphatase (EC 3.6.1.1)",
@@ -14764,7 +14764,7 @@
             }
         },
         "publications": [],
-        "id": "50510d"
+        "id": "PS_role_50510d"
     },
     {
         "role": "Inosine-5'-monophosphate dehydrogenase (EC 1.1.1.205)",
@@ -14796,7 +14796,7 @@
             }
         },
         "publications": [],
-        "id": "34cefd"
+        "id": "PS_role_34cefd"
     },
     {
         "role": "Inositol oxygenase (EC 1.13.99.1)",
@@ -14837,7 +14837,7 @@
             }
         },
         "publications": [],
-        "id": "66d013"
+        "id": "PS_role_66d013"
     },
     {
         "role": "Inositol-1-monophosphatase (EC 3.1.3.25)",
@@ -14864,7 +14864,7 @@
             }
         },
         "publications": [],
-        "id": "cf2a3a"
+        "id": "PS_role_cf2a3a"
     },
     {
         "role": "Inositol-1-phosphate synthase (EC 5.5.1.4)",
@@ -14902,7 +14902,7 @@
             }
         },
         "publications": [],
-        "id": "96d724"
+        "id": "PS_role_96d724"
     },
     {
         "role": "Inositol-phosphorylceramide synthase (EC 2.7.8.-)",
@@ -14931,7 +14931,7 @@
             }
         },
         "publications": [],
-        "id": "3dfe8e"
+        "id": "PS_role_3dfe8e"
     },
     {
         "role": "Isochorismate synthase (EC 5.4.4.2)",
@@ -14964,7 +14964,7 @@
             }
         },
         "publications": [],
-        "id": "584002"
+        "id": "PS_role_584002"
     },
     {
         "role": "Isocitrate dehydrogenase [NADP] (EC 1.1.1.42)",
@@ -15016,7 +15016,7 @@
             }
         },
         "publications": [],
-        "id": "9a0eeb"
+        "id": "PS_role_9a0eeb"
     },
     {
         "role": "Isocitrate dehydrogenase [NAD] catalytic subunit (EC 1.1.1.41)",
@@ -15054,7 +15054,7 @@
         "publications": [
             "17468208"
         ],
-        "id": "7ee2d1"
+        "id": "PS_role_7ee2d1"
     },
     {
         "role": "Isocitrate dehydrogenase [NAD] regulatory subunit (EC 1.1.1.41)",
@@ -15098,7 +15098,7 @@
             "17468208",
             "9526501"
         ],
-        "id": "021c81"
+        "id": "PS_role_021c81"
     },
     {
         "role": "Isocitrate lyase (EC 4.1.3.1), group II (plants and fungi)",
@@ -15130,7 +15130,7 @@
             }
         },
         "publications": [],
-        "id": "5cecae"
+        "id": "PS_role_5cecae"
     },
     {
         "role": "Isoleucine transport",
@@ -15157,7 +15157,7 @@
             }
         },
         "publications": [],
-        "id": "b94db2"
+        "id": "PS_role_b94db2"
     },
     {
         "role": "Isopentenyl-diphosphate delta-isomerase (EC 5.3.3.2)",
@@ -15211,7 +15211,7 @@
             }
         },
         "publications": [],
-        "id": "9c323b"
+        "id": "PS_role_9c323b"
     },
     {
         "role": "KAPA transport",
@@ -15238,7 +15238,7 @@
             }
         },
         "publications": [],
-        "id": "56d2cb"
+        "id": "PS_role_56d2cb"
     },
     {
         "role": "Ketol-acid reductoisomerase (EC 1.1.1.86)",
@@ -15270,7 +15270,7 @@
             }
         },
         "publications": [],
-        "id": "499969"
+        "id": "PS_role_499969"
     },
     {
         "role": "L,L-diaminopimelate aminotransferase (EC 2.6.1.83)",
@@ -15305,7 +15305,7 @@
             }
         },
         "publications": [],
-        "id": "0ce01d"
+        "id": "PS_role_0ce01d"
     },
     {
         "role": "L-3-cyanoalanine synthase (EC 4.4.1.9)",
@@ -15334,7 +15334,7 @@
             }
         },
         "publications": [],
-        "id": "adf80b"
+        "id": "PS_role_adf80b"
     },
     {
         "role": "L-Serine decarboxylase (EC 4.1.1.-)",
@@ -15361,7 +15361,7 @@
             }
         },
         "publications": [],
-        "id": "0bfc65"
+        "id": "PS_role_0bfc65"
     },
     {
         "role": "L-alanine:glyoxylate aminotransferase (EC 2.6.1.44)",
@@ -15452,7 +15452,7 @@
             "23098902",
             "https://doi.org/10.1111/j.1745-7270.2008.00383.x"
         ],
-        "id": "571095"
+        "id": "PS_role_571095"
     },
     {
         "role": "L-arabinokinase (EC 2.7.1.46)",
@@ -15479,7 +15479,7 @@
             }
         },
         "publications": [],
-        "id": "e6d975"
+        "id": "PS_role_e6d975"
     },
     {
         "role": "L-aspartate oxidase (EC 1.4.3.16)",
@@ -15509,7 +15509,7 @@
             }
         },
         "publications": [],
-        "id": "90a295"
+        "id": "PS_role_90a295"
     },
     {
         "role": "L-fucose kinase (EC 2.7.1.52)",
@@ -15536,7 +15536,7 @@
             }
         },
         "publications": [],
-        "id": "5496f9"
+        "id": "PS_role_5496f9"
     },
     {
         "role": "L-lactate dehydrogenase (EC 1.1.1.27)",
@@ -15571,7 +15571,7 @@
             }
         },
         "publications": [],
-        "id": "85e536"
+        "id": "PS_role_85e536"
     },
     {
         "role": "Lauric acid in-chain hydroxylase (no EC)",
@@ -15596,7 +15596,7 @@
             }
         },
         "publications": [],
-        "id": "94710f"
+        "id": "PS_role_94710f"
     },
     {
         "role": "Lauryl-[acyl-carrier protein] hydrolase (EC 3.1.2.21)",
@@ -15621,7 +15621,7 @@
             }
         },
         "publications": [],
-        "id": "fcc5de"
+        "id": "PS_role_fcc5de"
     },
     {
         "role": "Leucine transport",
@@ -15648,7 +15648,7 @@
             }
         },
         "publications": [],
-        "id": "98a46b"
+        "id": "PS_role_98a46b"
     },
     {
         "role": "Light transport",
@@ -15667,7 +15667,7 @@
             }
         },
         "publications": [],
-        "id": "d603ec"
+        "id": "PS_role_d603ec"
     },
     {
         "role": "Light-dependent protochlorophyllide reductase (EC 1.3.1.33)",
@@ -15707,7 +15707,7 @@
             }
         },
         "publications": [],
-        "id": "7a5f1b"
+        "id": "PS_role_7a5f1b"
     },
     {
         "role": "Linoleoyl-CoA desaturase (EC 1.14.19.3)",
@@ -15730,7 +15730,7 @@
             }
         },
         "publications": [],
-        "id": "5dd471"
+        "id": "PS_role_5dd471"
     },
     {
         "role": "Lipid IVA 3-deoxy-D-manno-octulosonic acid transferase (EC 2.4.99.12) [often with (EC 2.4.99.13) also]",
@@ -15764,7 +15764,7 @@
             }
         },
         "publications": [],
-        "id": "7befd1"
+        "id": "PS_role_7befd1"
     },
     {
         "role": "Lipid-A-disaccharide synthase (EC 2.4.1.182)",
@@ -15791,7 +15791,7 @@
             }
         },
         "publications": [],
-        "id": "c5a335"
+        "id": "PS_role_c5a335"
     },
     {
         "role": "Long chain fatty acyl-CoA reductase [alcohol-forming] (EC 1.2.1.n2)",
@@ -15835,7 +15835,7 @@
             }
         },
         "publications": [],
-        "id": "588a4f"
+        "id": "PS_role_588a4f"
     },
     {
         "role": "Long chain fatty acyl-CoA reductase [aldehyde-forming] (EC 1.2.1.50)",
@@ -15860,7 +15860,7 @@
             }
         },
         "publications": [],
-        "id": "be48d4"
+        "id": "PS_role_be48d4"
     },
     {
         "role": "Long-chain fatty acid omega-alcohol dehydrogenase (EC 1.1.1.-)",
@@ -15891,7 +15891,7 @@
             }
         },
         "publications": [],
-        "id": "b7bb4a"
+        "id": "PS_role_b7bb4a"
     },
     {
         "role": "Long-chain fatty acid omega-aldehyde dehydrogenase (EC 1.2.1.-)",
@@ -15920,7 +15920,7 @@
             }
         },
         "publications": [],
-        "id": "7033eb"
+        "id": "PS_role_7033eb"
     },
     {
         "role": "Long-chain fatty acid omega-hydroxylase (EC 1.14.13.-)",
@@ -15949,7 +15949,7 @@
             }
         },
         "publications": [],
-        "id": "87cc1b"
+        "id": "PS_role_87cc1b"
     },
     {
         "role": "Long-chain fatty acid omega-hydroxylase of sporopollenin biosynthesis (EC 1.14.13.-)",
@@ -15974,7 +15974,7 @@
             }
         },
         "publications": [],
-        "id": "273bfc"
+        "id": "PS_role_273bfc"
     },
     {
         "role": "Long-chain-alcohol O-fatty-acyltransferase (EC 2.3.1.75)",
@@ -16005,7 +16005,7 @@
             }
         },
         "publications": [],
-        "id": "375d30"
+        "id": "PS_role_375d30"
     },
     {
         "role": "Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3)",
@@ -16077,7 +16077,7 @@
             }
         },
         "publications": [],
-        "id": "f96a63"
+        "id": "PS_role_f96a63"
     },
     {
         "role": "Low-specificity L-threonine aldolase (EC 4.1.2.48)",
@@ -16111,7 +16111,7 @@
             }
         },
         "publications": [],
-        "id": "a7f393"
+        "id": "PS_role_a7f393"
     },
     {
         "role": "Low-specificity L-threonine aldolase (EC 4.1.2.5)",
@@ -16134,7 +16134,7 @@
             }
         },
         "publications": [],
-        "id": "8bc45a"
+        "id": "PS_role_8bc45a"
     },
     {
         "role": "Lysine transport",
@@ -16161,7 +16161,7 @@
             }
         },
         "publications": [],
-        "id": "a75e7f"
+        "id": "PS_role_a75e7f"
     },
     {
         "role": "Malate dehydrogenase (EC 1.1.1.37)",
@@ -16263,7 +16263,7 @@
             "17376163",
             "18685043"
         ],
-        "id": "307485"
+        "id": "PS_role_307485"
     },
     {
         "role": "Malate dehydrogenase (NADP+) (EC 1.1.1.82)",
@@ -16294,7 +16294,7 @@
         "publications": [
             "8665917"
         ],
-        "id": "0b4082"
+        "id": "PS_role_0b4082"
     },
     {
         "role": "Malate synthase (EC 2.3.3.9)",
@@ -16323,7 +16323,7 @@
         "publications": [
             "2914930"
         ],
-        "id": "19e126"
+        "id": "PS_role_19e126"
     },
     {
         "role": "Malate transport",
@@ -16350,7 +16350,7 @@
             }
         },
         "publications": [],
-        "id": "70154b"
+        "id": "PS_role_70154b"
     },
     {
         "role": "Malonate--CoA ligase (EC 6.2.1.n3)",
@@ -16375,7 +16375,7 @@
             }
         },
         "publications": [],
-        "id": "490165"
+        "id": "PS_role_490165"
     },
     {
         "role": "Malonyl CoA-acyl carrier protein transacylase (EC 2.3.1.39)",
@@ -16408,7 +16408,7 @@
             }
         },
         "publications": [],
-        "id": "f793ab"
+        "id": "PS_role_f793ab"
     },
     {
         "role": "Malonyl-[acyl-carrier-protein] ligase (EC 6.2.1.-)",
@@ -16433,7 +16433,7 @@
             }
         },
         "publications": [],
-        "id": "fb4316"
+        "id": "PS_role_fb4316"
     },
     {
         "role": "Mannitol dehydrogenase (EC 1.1.1.255)",
@@ -16458,7 +16458,7 @@
             }
         },
         "publications": [],
-        "id": "3fcf41"
+        "id": "PS_role_3fcf41"
     },
     {
         "role": "Mannose-1-phosphate guanylyltransferase (EC 2.7.7.13 )",
@@ -16485,7 +16485,7 @@
             }
         },
         "publications": [],
-        "id": "8953de"
+        "id": "PS_role_8953de"
     },
     {
         "role": "Mannose-6-phosphate isomerase (EC 5.3.1.8)",
@@ -16518,7 +16518,7 @@
             }
         },
         "publications": [],
-        "id": "d54fb1"
+        "id": "PS_role_d54fb1"
     },
     {
         "role": "Methenyltetrahydrofolate cyclohydrolase (EC 3.5.4.9)",
@@ -16568,7 +16568,7 @@
             }
         },
         "publications": [],
-        "id": "c2a032"
+        "id": "PS_role_c2a032"
     },
     {
         "role": "Methionine S-methyltransferase (EC 2.1.1.12)",
@@ -16598,7 +16598,7 @@
             }
         },
         "publications": [],
-        "id": "ca3db9"
+        "id": "PS_role_ca3db9"
     },
     {
         "role": "Methionine gamma-lyase (EC 4.4.1.11)",
@@ -16625,7 +16625,7 @@
             }
         },
         "publications": [],
-        "id": "27326d"
+        "id": "PS_role_27326d"
     },
     {
         "role": "Methionine transport",
@@ -16652,7 +16652,7 @@
             }
         },
         "publications": [],
-        "id": "99508b"
+        "id": "PS_role_99508b"
     },
     {
         "role": "Methionine--glyoxylate aminotransferase (EC 2.6.1.73)",
@@ -16675,7 +16675,7 @@
             }
         },
         "publications": [],
-        "id": "69dfdc"
+        "id": "PS_role_69dfdc"
     },
     {
         "role": "Methionine--oxo-acid aminotransferase (EC 2.6.1.88)",
@@ -16710,7 +16710,7 @@
             }
         },
         "publications": [],
-        "id": "6f9c37"
+        "id": "PS_role_6f9c37"
     },
     {
         "role": "Methylenetetrahydrofolate dehydrogenase (NADP+) (EC 1.5.1.5)",
@@ -16756,7 +16756,7 @@
             }
         },
         "publications": [],
-        "id": "b431cc"
+        "id": "PS_role_b431cc"
     },
     {
         "role": "Methylthioalkylmalate dehydrogenase (EC 1.1.1.-)",
@@ -16806,7 +16806,7 @@
             }
         },
         "publications": [],
-        "id": "bae054"
+        "id": "PS_role_bae054"
     },
     {
         "role": "Methylthioalkylmalate isomerase large subunit (EC 5.4.4.-)",
@@ -16850,7 +16850,7 @@
             }
         },
         "publications": [],
-        "id": "419d65"
+        "id": "PS_role_419d65"
     },
     {
         "role": "Methylthioalkylmalate isomerase small subunit (EC 5.4.4.-)",
@@ -16899,7 +16899,7 @@
             }
         },
         "publications": [],
-        "id": "b63608"
+        "id": "PS_role_b63608"
     },
     {
         "role": "Methylthioalkylmalate synthase (EC 2.3.3.-)",
@@ -16950,7 +16950,7 @@
             }
         },
         "publications": [],
-        "id": "ef784f"
+        "id": "PS_role_ef784f"
     },
     {
         "role": "Methylthioribose-1-phosphate isomerase (EC 5.3.1.23)",
@@ -16978,7 +16978,7 @@
             }
         },
         "publications": [],
-        "id": "7cd262"
+        "id": "PS_role_7cd262"
     },
     {
         "role": "Methylthioribulose-1-phosphate dehydratase (EC 4.2.1.109)",
@@ -17009,7 +17009,7 @@
             }
         },
         "publications": [],
-        "id": "e76a12"
+        "id": "PS_role_e76a12"
     },
     {
         "role": "Mevalonate kinase (EC 2.7.1.36)",
@@ -17039,7 +17039,7 @@
             }
         },
         "publications": [],
-        "id": "e9a6c0"
+        "id": "PS_role_e9a6c0"
     },
     {
         "role": "Mg protoporphyrin IX monomethyl ester oxidative cyclase (aerobic) (EC 1.14.13.81)",
@@ -17074,7 +17074,7 @@
             }
         },
         "publications": [],
-        "id": "3da1c2"
+        "id": "PS_role_3da1c2"
     },
     {
         "role": "Mg-protoporphyrin O-methyltransferase (EC 2.1.1.11)",
@@ -17106,7 +17106,7 @@
             }
         },
         "publications": [],
-        "id": "909ab6"
+        "id": "PS_role_909ab6"
     },
     {
         "role": "Mid-chain alkane hydroxylase, alcohol- and ketone- forming (no EC)",
@@ -17140,7 +17140,7 @@
             }
         },
         "publications": [],
-        "id": "2b65ad"
+        "id": "PS_role_2b65ad"
     },
     {
         "role": "Mitochondrial pyruvate carrier (TC 2.A.105)",
@@ -17170,7 +17170,7 @@
             }
         },
         "publications": [],
-        "id": "a7b687"
+        "id": "PS_role_a7b687"
     },
     {
         "role": "Monogalactosyldiacylglycerol synthase (EC 2.4.1.46)",
@@ -17213,7 +17213,7 @@
             }
         },
         "publications": [],
-        "id": "0430a0"
+        "id": "PS_role_0430a0"
     },
     {
         "role": "Monooxygenase",
@@ -17240,7 +17240,7 @@
             }
         },
         "publications": [],
-        "id": "864787"
+        "id": "PS_role_864787"
     },
     {
         "role": "Monooxygenase, catalyses 4-hydroxylation of indolyl-3-methyl glucosinolate (I3M) to 4OH-I3M",
@@ -17268,7 +17268,7 @@
             }
         },
         "publications": [],
-        "id": "6e20e6"
+        "id": "PS_role_6e20e6"
     },
     {
         "role": "N-acetyl-gamma-glutamyl-phosphate reductase (EC 1.2.1.38)",
@@ -17299,7 +17299,7 @@
             }
         },
         "publications": [],
-        "id": "c22d1a"
+        "id": "PS_role_c22d1a"
     },
     {
         "role": "N-acetylglutamate synthase (EC 2.3.1.1)",
@@ -17339,7 +17339,7 @@
             }
         },
         "publications": [],
-        "id": "26a70f"
+        "id": "PS_role_26a70f"
     },
     {
         "role": "N-dimethylethanolamine-phosphate cytidylyltransferase (EC 2.7.7.-)",
@@ -17364,7 +17364,7 @@
             }
         },
         "publications": [],
-        "id": "f8693c"
+        "id": "PS_role_f8693c"
     },
     {
         "role": "N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in Trp, Phe, Tyr-derived glucosinolates biosynthesis",
@@ -17394,7 +17394,7 @@
             }
         },
         "publications": [],
-        "id": "1b2ad6"
+        "id": "PS_role_1b2ad6"
     },
     {
         "role": "N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in aliphatic glucosinolates biosynthesis",
@@ -17436,7 +17436,7 @@
             }
         },
         "publications": [],
-        "id": "e879a3"
+        "id": "PS_role_e879a3"
     },
     {
         "role": "N-methylphosphoethanolamine cytidylyltransferase (EC 2.7.7.57)",
@@ -17461,7 +17461,7 @@
             }
         },
         "publications": [],
-        "id": "34cb29"
+        "id": "PS_role_34cb29"
     },
     {
         "role": "NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)",
@@ -17504,7 +17504,7 @@
         "publications": [
             "19745225"
         ],
-        "id": "41ed72"
+        "id": "PS_role_41ed72"
     },
     {
         "role": "NAD kinase (EC 2.7.1.23)",
@@ -17542,7 +17542,7 @@
             }
         },
         "publications": [],
-        "id": "70cef8"
+        "id": "PS_role_70cef8"
     },
     {
         "role": "NAD synthetase (EC 6.3.1.5)",
@@ -17569,7 +17569,7 @@
             }
         },
         "publications": [],
-        "id": "5ed685"
+        "id": "PS_role_5ed685"
     },
     {
         "role": "NAD(P)H-hydrate epimerase (EC 5.1.99.6)",
@@ -17597,7 +17597,7 @@
             }
         },
         "publications": [],
-        "id": "25296f"
+        "id": "PS_role_25296f"
     },
     {
         "role": "NAD-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.12)",
@@ -17724,7 +17724,7 @@
             "8972600",
             "19675149"
         ],
-        "id": "70871d"
+        "id": "PS_role_70871d"
     },
     {
         "role": "NAD-dependent malic enzyme (EC 1.1.1.38)",
@@ -17772,7 +17772,7 @@
             "20528775",
             "22487558"
         ],
-        "id": "52b833"
+        "id": "PS_role_52b833"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 1, ND1",
@@ -17816,7 +17816,7 @@
             }
         },
         "publications": [],
-        "id": "3aebe3"
+        "id": "PS_role_3aebe3"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 2, ND2",
@@ -17856,7 +17856,7 @@
             }
         },
         "publications": [],
-        "id": "9c8b59"
+        "id": "PS_role_9c8b59"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 3, ND3",
@@ -17896,7 +17896,7 @@
             }
         },
         "publications": [],
-        "id": "680078"
+        "id": "PS_role_680078"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 4, ND4",
@@ -17932,7 +17932,7 @@
             }
         },
         "publications": [],
-        "id": "f188d7"
+        "id": "PS_role_f188d7"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 4L, ND4L",
@@ -17968,7 +17968,7 @@
             }
         },
         "publications": [],
-        "id": "7444d0"
+        "id": "PS_role_7444d0"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 5, ND5",
@@ -18012,7 +18012,7 @@
             }
         },
         "publications": [],
-        "id": "1fd8f7"
+        "id": "PS_role_1fd8f7"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 1",
@@ -18048,7 +18048,7 @@
             }
         },
         "publications": [],
-        "id": "ad137c"
+        "id": "PS_role_ad137c"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 12",
@@ -18084,7 +18084,7 @@
             }
         },
         "publications": [],
-        "id": "83276e"
+        "id": "PS_role_83276e"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 13",
@@ -18124,7 +18124,7 @@
             }
         },
         "publications": [],
-        "id": "36eaf1"
+        "id": "PS_role_36eaf1"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 2",
@@ -18160,7 +18160,7 @@
             }
         },
         "publications": [],
-        "id": "fb59ec"
+        "id": "PS_role_fb59ec"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 5",
@@ -18196,7 +18196,7 @@
             }
         },
         "publications": [],
-        "id": "640ce1"
+        "id": "PS_role_640ce1"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 6",
@@ -18232,7 +18232,7 @@
             }
         },
         "publications": [],
-        "id": "5168d9"
+        "id": "PS_role_5168d9"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 8",
@@ -18272,7 +18272,7 @@
             }
         },
         "publications": [],
-        "id": "ae673e"
+        "id": "PS_role_ae673e"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 9",
@@ -18308,7 +18308,7 @@
             }
         },
         "publications": [],
-        "id": "28bea7"
+        "id": "PS_role_28bea7"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 10",
@@ -18348,7 +18348,7 @@
             }
         },
         "publications": [],
-        "id": "1e28b4"
+        "id": "PS_role_1e28b4"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 2",
@@ -18384,7 +18384,7 @@
             }
         },
         "publications": [],
-        "id": "f12094"
+        "id": "PS_role_f12094"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 3",
@@ -18424,7 +18424,7 @@
             }
         },
         "publications": [],
-        "id": "ec2ebd"
+        "id": "PS_role_ec2ebd"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 7",
@@ -18460,7 +18460,7 @@
             }
         },
         "publications": [],
-        "id": "898c26"
+        "id": "PS_role_898c26"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 8",
@@ -18496,7 +18496,7 @@
             }
         },
         "publications": [],
-        "id": "419360"
+        "id": "PS_role_419360"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 9",
@@ -18532,7 +18532,7 @@
             }
         },
         "publications": [],
-        "id": "40f40e"
+        "id": "PS_role_40f40e"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] flavoprotein 1 (EC 1.6.5.3) (EC 1.6.99.3)",
@@ -18568,7 +18568,7 @@
             }
         },
         "publications": [],
-        "id": "3de7ca"
+        "id": "PS_role_3de7ca"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] flavoprotein 2 (EC 1.6.5.3) (EC 1.6.99.3)",
@@ -18604,7 +18604,7 @@
             }
         },
         "publications": [],
-        "id": "95bea4"
+        "id": "PS_role_95bea4"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 1 (EC 1.6.5.3) (EC 1.6.99.3)",
@@ -18640,7 +18640,7 @@
             }
         },
         "publications": [],
-        "id": "f38182"
+        "id": "PS_role_f38182"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 2 (EC 1.6.5.3) (EC 1.6.99.3)",
@@ -18676,7 +18676,7 @@
             }
         },
         "publications": [],
-        "id": "20eff6"
+        "id": "PS_role_20eff6"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 3 (EC 1.6.5.3) (EC 1.6.99.3)",
@@ -18712,7 +18712,7 @@
             }
         },
         "publications": [],
-        "id": "a25a46"
+        "id": "PS_role_a25a46"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 4",
@@ -18748,7 +18748,7 @@
             }
         },
         "publications": [],
-        "id": "c9661c"
+        "id": "PS_role_c9661c"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 5",
@@ -18788,7 +18788,7 @@
             }
         },
         "publications": [],
-        "id": "121610"
+        "id": "PS_role_121610"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 6",
@@ -18824,7 +18824,7 @@
             }
         },
         "publications": [],
-        "id": "c449ff"
+        "id": "PS_role_c449ff"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 7 (EC 1.6.5.3) (EC 1.6.99.3)",
@@ -18860,7 +18860,7 @@
             }
         },
         "publications": [],
-        "id": "c6088b"
+        "id": "PS_role_c6088b"
     },
     {
         "role": "NADH dehydrogenase [ubiquinone] iron-sulfur protein 8 (EC 1.6.5.3) (EC 1.6.99.3)",
@@ -18904,7 +18904,7 @@
             }
         },
         "publications": [],
-        "id": "a6ca40"
+        "id": "PS_role_a6ca40"
     },
     {
         "role": "NADH kinase (EC 2.7.1.86)",
@@ -18942,7 +18942,7 @@
             }
         },
         "publications": [],
-        "id": "2a5061"
+        "id": "PS_role_2a5061"
     },
     {
         "role": "NADH pyrophosphatase (EC 3.6.1.22)",
@@ -18976,7 +18976,7 @@
             }
         },
         "publications": [],
-        "id": "269e02"
+        "id": "PS_role_269e02"
     },
     {
         "role": "NADH-dependent hydroxypyruvate reductase (EC 1.1.1.29)",
@@ -19023,7 +19023,7 @@
             "23860243",
             "9177031"
         ],
-        "id": "639f21"
+        "id": "PS_role_639f21"
     },
     {
         "role": "NADP phosphatase (EC 3.1.3.-)",
@@ -19050,7 +19050,7 @@
             }
         },
         "publications": [],
-        "id": "c92805"
+        "id": "PS_role_c92805"
     },
     {
         "role": "NADP-dependent malic enzyme (EC 1.1.1.40)",
@@ -19106,7 +19106,7 @@
             "19725876",
             "16113210"
         ],
-        "id": "212d25"
+        "id": "PS_role_212d25"
     },
     {
         "role": "NADP-specific glutamate dehydrogenase (EC 1.4.1.4)",
@@ -19136,7 +19136,7 @@
             }
         },
         "publications": [],
-        "id": "44e0b6"
+        "id": "PS_role_44e0b6"
     },
     {
         "role": "NADPH-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.13)",
@@ -19198,7 +19198,7 @@
             "8932388",
             "8972600"
         ],
-        "id": "3a0bb1"
+        "id": "PS_role_3a0bb1"
     },
     {
         "role": "NMN nucleosidase (EC 3.2.2.14)",
@@ -19223,7 +19223,7 @@
             }
         },
         "publications": [],
-        "id": "a2a334"
+        "id": "PS_role_a2a334"
     },
     {
         "role": "NMN phosphatase (EC 3.1.3.5)",
@@ -19248,7 +19248,7 @@
             }
         },
         "publications": [],
-        "id": "6c5bb2"
+        "id": "PS_role_6c5bb2"
     },
     {
         "role": "NUDIX hydrolase, NAD diphosphatase (EC 3.6.1.22)",
@@ -19277,7 +19277,7 @@
             }
         },
         "publications": [],
-        "id": "e91ddd"
+        "id": "PS_role_e91ddd"
     },
     {
         "role": "Naphthoate synthase (EC 4.1.3.36)",
@@ -19311,7 +19311,7 @@
             }
         },
         "publications": [],
-        "id": "681a1b"
+        "id": "PS_role_681a1b"
     },
     {
         "role": "Nicotinamidase (EC 3.5.1.19) of PncA family, nonfunctional",
@@ -19338,7 +19338,7 @@
             }
         },
         "publications": [],
-        "id": "1e88fb"
+        "id": "PS_role_1e88fb"
     },
     {
         "role": "Nicotinamidase (EC 3.5.1.19), plant/cyanobacterial family",
@@ -19367,7 +19367,7 @@
             }
         },
         "publications": [],
-        "id": "54877a"
+        "id": "PS_role_54877a"
     },
     {
         "role": "Nicotinamide-nucleotide adenylyltransferase (EC 2.7.7.1), eukaryotic PNAT family",
@@ -19397,7 +19397,7 @@
             }
         },
         "publications": [],
-        "id": "b81dd7"
+        "id": "PS_role_b81dd7"
     },
     {
         "role": "Nicotinate N-methyltransferase (EC 2.1.1.7)",
@@ -19420,7 +19420,7 @@
             }
         },
         "publications": [],
-        "id": "484869"
+        "id": "PS_role_484869"
     },
     {
         "role": "Nicotinate phosphoribosyltransferase (EC 2.4.2.11)",
@@ -19450,7 +19450,7 @@
             }
         },
         "publications": [],
-        "id": "0ad9de"
+        "id": "PS_role_0ad9de"
     },
     {
         "role": "Nicotinate-nucleotide adenylyltransferase (EC 2.7.7.18), eukaryotic PNAT family",
@@ -19478,7 +19478,7 @@
             }
         },
         "publications": [],
-        "id": "29e007"
+        "id": "PS_role_29e007"
     },
     {
         "role": "Nitrate reductase [NADH] (EC 1.7.1.1)",
@@ -19506,7 +19506,7 @@
             }
         },
         "publications": [],
-        "id": "da16ce"
+        "id": "PS_role_da16ce"
     },
     {
         "role": "Nitrate transport",
@@ -19531,7 +19531,7 @@
             }
         },
         "publications": [],
-        "id": "f0c5ba"
+        "id": "PS_role_f0c5ba"
     },
     {
         "role": "Nitrite transport",
@@ -19556,7 +19556,7 @@
             }
         },
         "publications": [],
-        "id": "bf39ff"
+        "id": "PS_role_bf39ff"
     },
     {
         "role": "Non-phosphorylating glyceraldehyde-3-phosphate dehydrogenase (NADP) (EC 1.2.1.9)",
@@ -19586,7 +19586,7 @@
             }
         },
         "publications": [],
-        "id": "7bb520"
+        "id": "PS_role_7bb520"
     },
     {
         "role": "Nucleoside diphosphate kinase (EC 2.7.4.6)",
@@ -19671,7 +19671,7 @@
             }
         },
         "publications": [],
-        "id": "8072e6"
+        "id": "PS_role_8072e6"
     },
     {
         "role": "O-succinylbenzoate synthase (EC 4.2.1.113)",
@@ -19696,7 +19696,7 @@
             }
         },
         "publications": [],
-        "id": "2dab6b"
+        "id": "PS_role_2dab6b"
     },
     {
         "role": "O-succinylbenzoic acid--CoA ligase (EC 6.2.1.26)",
@@ -19730,7 +19730,7 @@
             }
         },
         "publications": [],
-        "id": "41e017"
+        "id": "PS_role_41e017"
     },
     {
         "role": "Oleoyl-[acyl carrier protein] thioesterase (EC 3.1.2.14)",
@@ -19773,7 +19773,7 @@
             }
         },
         "publications": [],
-        "id": "c6522d"
+        "id": "PS_role_c6522d"
     },
     {
         "role": "Oleoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.14)",
@@ -19798,7 +19798,7 @@
             }
         },
         "publications": [],
-        "id": "7b1157"
+        "id": "PS_role_7b1157"
     },
     {
         "role": "Omega-3 fatty acid desaturase (EC 1.14.19.-)",
@@ -19880,7 +19880,7 @@
             }
         },
         "publications": [],
-        "id": "f894f6"
+        "id": "PS_role_f894f6"
     },
     {
         "role": "Omega-3 linoleate desaturase (EC 1.14.19.-)",
@@ -19922,7 +19922,7 @@
             }
         },
         "publications": [],
-        "id": "59b8ea"
+        "id": "PS_role_59b8ea"
     },
     {
         "role": "Omega-6 fatty acid desaturase (EC 1.14.19.-)",
@@ -19991,7 +19991,7 @@
             }
         },
         "publications": [],
-        "id": "2e83aa"
+        "id": "PS_role_2e83aa"
     },
     {
         "role": "Omega-6 oleate desaturase (EC 1.14.19.-)",
@@ -20033,7 +20033,7 @@
             }
         },
         "publications": [],
-        "id": "d53511"
+        "id": "PS_role_d53511"
     },
     {
         "role": "Ornithine aminotransferase (EC 2.6.1.13)",
@@ -20069,7 +20069,7 @@
             }
         },
         "publications": [],
-        "id": "127d6b"
+        "id": "PS_role_127d6b"
     },
     {
         "role": "Ornithine carbamoyltransferase (EC 2.1.3.3)",
@@ -20099,7 +20099,7 @@
             }
         },
         "publications": [],
-        "id": "23fed7"
+        "id": "PS_role_23fed7"
     },
     {
         "role": "Ornithine transport",
@@ -20126,7 +20126,7 @@
             }
         },
         "publications": [],
-        "id": "e6cac3"
+        "id": "PS_role_e6cac3"
     },
     {
         "role": "Orotate phosphoribosyltransferase (EC 2.4.2.10)",
@@ -20156,7 +20156,7 @@
             }
         },
         "publications": [],
-        "id": "d7206b"
+        "id": "PS_role_d7206b"
     },
     {
         "role": "Orotate transport",
@@ -20179,7 +20179,7 @@
             }
         },
         "publications": [],
-        "id": "8ef88d"
+        "id": "PS_role_8ef88d"
     },
     {
         "role": "Orotidine 5'-phosphate decarboxylase (EC 4.1.1.23)",
@@ -20209,7 +20209,7 @@
             }
         },
         "publications": [],
-        "id": "768607"
+        "id": "PS_role_768607"
     },
     {
         "role": "Oxaloacetate transport",
@@ -20236,7 +20236,7 @@
             }
         },
         "publications": [],
-        "id": "878ad7"
+        "id": "PS_role_878ad7"
     },
     {
         "role": "Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis",
@@ -20271,7 +20271,7 @@
             }
         },
         "publications": [],
-        "id": "c61b82"
+        "id": "PS_role_c61b82"
     },
     {
         "role": "Oxime metabolizining monooxygenase in aliphatic glucosinolates biosynthesis",
@@ -20318,7 +20318,7 @@
             }
         },
         "publications": [],
-        "id": "8975d1"
+        "id": "PS_role_8975d1"
     },
     {
         "role": "Oxygen transport",
@@ -20346,7 +20346,7 @@
             }
         },
         "publications": [],
-        "id": "bac0c3"
+        "id": "PS_role_bac0c3"
     },
     {
         "role": "PLP transport",
@@ -20376,7 +20376,7 @@
             }
         },
         "publications": [],
-        "id": "c00e62"
+        "id": "PS_role_c00e62"
     },
     {
         "role": "Palmitoyl-[acyl carrier protein] thioesterase (EC 3.1.2.-)",
@@ -20406,7 +20406,7 @@
             }
         },
         "publications": [],
-        "id": "af43ef"
+        "id": "PS_role_af43ef"
     },
     {
         "role": "Palmitoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.-)",
@@ -20431,7 +20431,7 @@
             }
         },
         "publications": [],
-        "id": "be865b"
+        "id": "PS_role_be865b"
     },
     {
         "role": "Palmitoyl-monogalactosyldiacylglycerol delta-7 desaturase (EC 1.14.19.-)",
@@ -20465,7 +20465,7 @@
             }
         },
         "publications": [],
-        "id": "dad28d"
+        "id": "PS_role_dad28d"
     },
     {
         "role": "Pantoate--beta-alanine ligase (EC 6.3.2.1)",
@@ -20495,7 +20495,7 @@
             }
         },
         "publications": [],
-        "id": "42691b"
+        "id": "PS_role_42691b"
     },
     {
         "role": "Pantothenate kinase type II, eukaryotic (EC 2.7.1.33)",
@@ -20523,7 +20523,7 @@
             }
         },
         "publications": [],
-        "id": "04277c"
+        "id": "PS_role_04277c"
     },
     {
         "role": "Para-aminobenzoate synthase, amidotransferase component (EC 2.6.1.85)",
@@ -20554,7 +20554,7 @@
             }
         },
         "publications": [],
-        "id": "459f31"
+        "id": "PS_role_459f31"
     },
     {
         "role": "Para-aminobenzoate synthase, aminase component (EC 2.6.1.85)",
@@ -20585,7 +20585,7 @@
             }
         },
         "publications": [],
-        "id": "bc9739"
+        "id": "PS_role_bc9739"
     },
     {
         "role": "Pectinesterase (EC 3.1.1.11)",
@@ -20625,7 +20625,7 @@
             }
         },
         "publications": [],
-        "id": "78236a"
+        "id": "PS_role_78236a"
     },
     {
         "role": "Penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n6)",
@@ -20658,7 +20658,7 @@
             }
         },
         "publications": [],
-        "id": "e5b2c2"
+        "id": "PS_role_e5b2c2"
     },
     {
         "role": "Peroxidase (EC 1.11.1.7)",
@@ -20754,7 +20754,7 @@
             }
         },
         "publications": [],
-        "id": "0b7f7d"
+        "id": "PS_role_0b7f7d"
     },
     {
         "role": "Phenylalanine N-monooxygenase (EC 1.14.13.124)",
@@ -20785,7 +20785,7 @@
             }
         },
         "publications": [],
-        "id": "fb7a11"
+        "id": "PS_role_fb7a11"
     },
     {
         "role": "Phenylalanine ammonia-lyase (EC 4.3.1.24)",
@@ -20821,7 +20821,7 @@
         "publications": [
             "28392421"
         ],
-        "id": "b49604"
+        "id": "PS_role_b49604"
     },
     {
         "role": "Phenylalanine transport",
@@ -20848,7 +20848,7 @@
             }
         },
         "publications": [],
-        "id": "bc9f5d"
+        "id": "PS_role_bc9f5d"
     },
     {
         "role": "Phophatidylinositol-4-phosphate 5-kinase (EC 2.7.1.68)",
@@ -20893,7 +20893,7 @@
             }
         },
         "publications": [],
-        "id": "721239"
+        "id": "PS_role_721239"
     },
     {
         "role": "Phosphate transport",
@@ -20918,7 +20918,7 @@
             }
         },
         "publications": [],
-        "id": "8bfd3c"
+        "id": "PS_role_8bfd3c"
     },
     {
         "role": "Phosphatidate cytidylyltransferase (EC 2.7.7.41)",
@@ -20967,7 +20967,7 @@
             }
         },
         "publications": [],
-        "id": "532751"
+        "id": "PS_role_532751"
     },
     {
         "role": "Phosphatidate phosphatase (EC 3.1.3.4)",
@@ -20998,7 +20998,7 @@
             }
         },
         "publications": [],
-        "id": "2043f0"
+        "id": "PS_role_2043f0"
     },
     {
         "role": "Phosphatidyl-N-methylethanolamine N-methyltransferase (EC 2.1.1.71)",
@@ -21032,7 +21032,7 @@
             }
         },
         "publications": [],
-        "id": "37cf6a"
+        "id": "PS_role_37cf6a"
     },
     {
         "role": "Phosphatidylcholine:diacylglycerol cholinephosphotransferase (EC 2.7.8.-)",
@@ -21055,7 +21055,7 @@
         ],
         "localization": {},
         "publications": [],
-        "id": "346d5e"
+        "id": "PS_role_346d5e"
     },
     {
         "role": "Phosphatidylglycerophosphatase A (EC 3.1.3.27)",
@@ -21087,7 +21087,7 @@
             }
         },
         "publications": [],
-        "id": "786eb7"
+        "id": "PS_role_786eb7"
     },
     {
         "role": "Phosphatidylglycerophosphatase B (EC 3.1.3.27)",
@@ -21119,7 +21119,7 @@
             }
         },
         "publications": [],
-        "id": "b34f66"
+        "id": "PS_role_b34f66"
     },
     {
         "role": "Phosphatidylinositol 3,5-bisphosphate phosphatase (EC 3.1.3-)",
@@ -21144,7 +21144,7 @@
             }
         },
         "publications": [],
-        "id": "854575"
+        "id": "PS_role_854575"
     },
     {
         "role": "Phosphatidylinositol 3-kinase (EC 2.7.1.137)",
@@ -21171,7 +21171,7 @@
             }
         },
         "publications": [],
-        "id": "5fb815"
+        "id": "PS_role_5fb815"
     },
     {
         "role": "Phosphatidylinositol 4-kinase alpha (EC 2.7.1.67)",
@@ -21204,7 +21204,7 @@
             }
         },
         "publications": [],
-        "id": "b8cd1c"
+        "id": "PS_role_b8cd1c"
     },
     {
         "role": "Phosphatidylinositol 4-kinase beta (EC 2.7.1.67)",
@@ -21240,7 +21240,7 @@
             }
         },
         "publications": [],
-        "id": "aa0da4"
+        "id": "PS_role_aa0da4"
     },
     {
         "role": "Phosphatidylinositol-3-phosphate 5-kinase (EC 2.7.1.150)",
@@ -21265,7 +21265,7 @@
             }
         },
         "publications": [],
-        "id": "3e5031"
+        "id": "PS_role_3e5031"
     },
     {
         "role": "Phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit, alpha isoform (EC 2.7.1.153)",
@@ -21290,7 +21290,7 @@
             }
         },
         "publications": [],
-        "id": "9d7532"
+        "id": "PS_role_9d7532"
     },
     {
         "role": "Phosphatidylinositol-4-phosphate 3-kinase C2 domain-containing alpha polypeptide (EC 2.7.1.154)",
@@ -21315,7 +21315,7 @@
             }
         },
         "publications": [],
-        "id": "ef0466"
+        "id": "PS_role_ef0466"
     },
     {
         "role": "Phosphatidylinositol-4-phosphate 3-kinase C2 domain-containing beta polypeptide (EC 2.7.1.154)",
@@ -21340,7 +21340,7 @@
             }
         },
         "publications": [],
-        "id": "475df6"
+        "id": "PS_role_475df6"
     },
     {
         "role": "Phosphatidylserine decarboxylase (EC 4.1.1.65)",
@@ -21369,7 +21369,7 @@
             }
         },
         "publications": [],
-        "id": "0657e8"
+        "id": "PS_role_0657e8"
     },
     {
         "role": "Phosphoenolpyruvate carboxykinase [ATP] (EC 4.1.1.49)",
@@ -21413,7 +21413,7 @@
             "22007864",
             "17283014"
         ],
-        "id": "264715"
+        "id": "PS_role_264715"
     },
     {
         "role": "Phosphoenolpyruvate carboxylase (EC 4.1.1.31)",
@@ -21476,7 +21476,7 @@
             "16283377",
             "20836890"
         ],
-        "id": "1cb917"
+        "id": "PS_role_1cb917"
     },
     {
         "role": "Phosphoenolpyruvate transport",
@@ -21503,7 +21503,7 @@
             }
         },
         "publications": [],
-        "id": "8dee88"
+        "id": "PS_role_8dee88"
     },
     {
         "role": "Phosphoethanolamine N-methyltransferase (EC 2.1.1.103)",
@@ -21542,7 +21542,7 @@
             }
         },
         "publications": [],
-        "id": "6771b2"
+        "id": "PS_role_6771b2"
     },
     {
         "role": "Phosphoethanolamine/phosphocholine phosphatase (EC 3.1.3.75)",
@@ -21567,7 +21567,7 @@
             }
         },
         "publications": [],
-        "id": "94d926"
+        "id": "PS_role_94d926"
     },
     {
         "role": "Phosphoglucan phosphatase DSP4/SEX4 (EC 3.1.3.-)",
@@ -21599,7 +21599,7 @@
             }
         },
         "publications": [],
-        "id": "d3c4cf"
+        "id": "PS_role_d3c4cf"
     },
     {
         "role": "Phosphoglucan, water dikinase (EC 2.7.9.5)",
@@ -21635,7 +21635,7 @@
             }
         },
         "publications": [],
-        "id": "13f7f3"
+        "id": "PS_role_13f7f3"
     },
     {
         "role": "Phosphoglucomutase (EC 5.4.2.2)",
@@ -21686,7 +21686,7 @@
             }
         },
         "publications": [],
-        "id": "2eb26c"
+        "id": "PS_role_2eb26c"
     },
     {
         "role": "Phosphoglycerate kinase (EC 2.7.2.3)",
@@ -21747,7 +21747,7 @@
             "10520454",
             "28951489"
         ],
-        "id": "402086"
+        "id": "PS_role_402086"
     },
     {
         "role": "Phosphoglycolate phosphatase (EC 3.1.3.18)",
@@ -21803,7 +21803,7 @@
             "17478634",
             "17478634"
         ],
-        "id": "f5d2e8"
+        "id": "PS_role_f5d2e8"
     },
     {
         "role": "Phospholipase D (EC 3.1.4.4)",
@@ -21856,7 +21856,7 @@
             }
         },
         "publications": [],
-        "id": "f79512"
+        "id": "PS_role_f79512"
     },
     {
         "role": "Phospholipid:diacylglycerol acyltransferase (EC 2.3.1.158)",
@@ -21885,7 +21885,7 @@
             }
         },
         "publications": [],
-        "id": "f37746"
+        "id": "PS_role_f37746"
     },
     {
         "role": "Phosphomannomutase (EC 5.4.2.8)",
@@ -21912,7 +21912,7 @@
             }
         },
         "publications": [],
-        "id": "5a561b"
+        "id": "PS_role_5a561b"
     },
     {
         "role": "Phosphomevalonate kinase (EC 2.7.4.2)",
@@ -21947,7 +21947,7 @@
             }
         },
         "publications": [],
-        "id": "b51e37"
+        "id": "PS_role_b51e37"
     },
     {
         "role": "Phosphopantetheine adenylyltransferase, type II eukaryotic (EC 2.7.7.3)",
@@ -21974,7 +21974,7 @@
             }
         },
         "publications": [],
-        "id": "0e7457"
+        "id": "PS_role_0e7457"
     },
     {
         "role": "Phosphopantothenoylcysteine decarboxylase (EC 4.1.1.36)",
@@ -22002,7 +22002,7 @@
             }
         },
         "publications": [],
-        "id": "8c404c"
+        "id": "PS_role_8c404c"
     },
     {
         "role": "Phosphopantothenoylcysteine synthetase (EC 6.3.2.5)",
@@ -22030,7 +22030,7 @@
             }
         },
         "publications": [],
-        "id": "a7c89b"
+        "id": "PS_role_a7c89b"
     },
     {
         "role": "Phosphoribosyl-AMP cyclohydrolase (EC 3.5.4.19)",
@@ -22060,7 +22060,7 @@
             }
         },
         "publications": [],
-        "id": "2b6a9c"
+        "id": "PS_role_2b6a9c"
     },
     {
         "role": "Phosphoribosyl-ATP pyrophosphatase (EC 3.6.1.31)",
@@ -22090,7 +22090,7 @@
             }
         },
         "publications": [],
-        "id": "c2be5b"
+        "id": "PS_role_c2be5b"
     },
     {
         "role": "Phosphoribosylamine--glycine ligase (EC 6.3.4.13)",
@@ -22120,7 +22120,7 @@
             }
         },
         "publications": [],
-        "id": "9819e0"
+        "id": "PS_role_9819e0"
     },
     {
         "role": "Phosphoribosylaminoimidazole carboxylase ATPase subunit (EC 4.1.1.21)",
@@ -22150,7 +22150,7 @@
             }
         },
         "publications": [],
-        "id": "e3268c"
+        "id": "PS_role_e3268c"
     },
     {
         "role": "Phosphoribosylaminoimidazole carboxylase catalytic subunit (EC 4.1.1.21)",
@@ -22184,7 +22184,7 @@
             }
         },
         "publications": [],
-        "id": "5ebb39"
+        "id": "PS_role_5ebb39"
     },
     {
         "role": "Phosphoribosylaminoimidazole-succinocarboxamide synthase (EC 6.3.2.6)",
@@ -22214,7 +22214,7 @@
             }
         },
         "publications": [],
-        "id": "3d8cf2"
+        "id": "PS_role_3d8cf2"
     },
     {
         "role": "Phosphoribosylaminoimidazolecarboxamide formyltransferase (EC 2.1.2.3)",
@@ -22244,7 +22244,7 @@
             }
         },
         "publications": [],
-        "id": "e8ba19"
+        "id": "PS_role_e8ba19"
     },
     {
         "role": "Phosphoribosylanthranilate isomerase (EC 5.3.1.24)",
@@ -22288,7 +22288,7 @@
             }
         },
         "publications": [],
-        "id": "32ada1"
+        "id": "PS_role_32ada1"
     },
     {
         "role": "Phosphoribosylformimino-5-aminoimidazole carboxamide ribotide isomerase (EC 5.3.1.16)",
@@ -22318,7 +22318,7 @@
             }
         },
         "publications": [],
-        "id": "95316b"
+        "id": "PS_role_95316b"
     },
     {
         "role": "Phosphoribosylformylglycinamidine cyclo-ligase (EC 6.3.3.1)",
@@ -22348,7 +22348,7 @@
             }
         },
         "publications": [],
-        "id": "dcd5fb"
+        "id": "PS_role_dcd5fb"
     },
     {
         "role": "Phosphoribosylformylglycinamidine synthase, glutamine amidotransferase subunit (EC 6.3.5.3)",
@@ -22384,7 +22384,7 @@
             }
         },
         "publications": [],
-        "id": "7706f5"
+        "id": "PS_role_7706f5"
     },
     {
         "role": "Phosphoribosylformylglycinamidine synthase, synthetase subunit (EC 6.3.5.3)",
@@ -22420,7 +22420,7 @@
             }
         },
         "publications": [],
-        "id": "484c8d"
+        "id": "PS_role_484c8d"
     },
     {
         "role": "Phosphoribosylglycinamide formyltransferase (EC 2.1.2.2)",
@@ -22450,7 +22450,7 @@
             }
         },
         "publications": [],
-        "id": "2caef0"
+        "id": "PS_role_2caef0"
     },
     {
         "role": "Phosphoribulokinase (EC 2.7.1.19)",
@@ -22487,7 +22487,7 @@
             "1651130",
             "19825612"
         ],
-        "id": "850f74"
+        "id": "PS_role_850f74"
     },
     {
         "role": "Phosphoserine aminotransferase (EC 2.6.1.52)",
@@ -22522,7 +22522,7 @@
             }
         },
         "publications": [],
-        "id": "6498e3"
+        "id": "PS_role_6498e3"
     },
     {
         "role": "Phosphoserine phosphatase (EC 3.1.3.3)",
@@ -22551,7 +22551,7 @@
             }
         },
         "publications": [],
-        "id": "9c636c"
+        "id": "PS_role_9c636c"
     },
     {
         "role": "Photosystem II 10 kDa phosphoprotein (PsbH)",
@@ -22582,7 +22582,7 @@
             }
         },
         "publications": [],
-        "id": "5c046e"
+        "id": "PS_role_5c046e"
     },
     {
         "role": "Photosystem II 10 kDa protein PsbR",
@@ -22613,7 +22613,7 @@
             }
         },
         "publications": [],
-        "id": "b970ea"
+        "id": "PS_role_b970ea"
     },
     {
         "role": "Photosystem II 12 kDa extrinsic protein (PsbU)",
@@ -22638,7 +22638,7 @@
             }
         },
         "publications": [],
-        "id": "f54e19"
+        "id": "PS_role_f54e19"
     },
     {
         "role": "Photosystem II 13 kDa protein Psb28 (similar to PsbW)",
@@ -22673,7 +22673,7 @@
             }
         },
         "publications": [],
-        "id": "dfe057"
+        "id": "PS_role_dfe057"
     },
     {
         "role": "Photosystem II CP22 protein PsbS",
@@ -22704,7 +22704,7 @@
             }
         },
         "publications": [],
-        "id": "8cc86b"
+        "id": "PS_role_8cc86b"
     },
     {
         "role": "Photosystem II CP43 protein (PsbC)",
@@ -22735,7 +22735,7 @@
             }
         },
         "publications": [],
-        "id": "0c7024"
+        "id": "PS_role_0c7024"
     },
     {
         "role": "Photosystem II CP47 protein (PsbB)",
@@ -22766,7 +22766,7 @@
             }
         },
         "publications": [],
-        "id": "c0421a"
+        "id": "PS_role_c0421a"
     },
     {
         "role": "Photosystem II manganese-stabilizing protein (PsbO)",
@@ -22801,7 +22801,7 @@
             }
         },
         "publications": [],
-        "id": "c07c32"
+        "id": "PS_role_c07c32"
     },
     {
         "role": "Photosystem II oxygen evolving complex protein PsbP",
@@ -22836,7 +22836,7 @@
             }
         },
         "publications": [],
-        "id": "221485"
+        "id": "PS_role_221485"
     },
     {
         "role": "Photosystem II oxygen evolving complex protein PsbQ",
@@ -22871,7 +22871,7 @@
             }
         },
         "publications": [],
-        "id": "e93640"
+        "id": "PS_role_e93640"
     },
     {
         "role": "Photosystem II protein Psb27",
@@ -22901,7 +22901,7 @@
             }
         },
         "publications": [],
-        "id": "ad1b09"
+        "id": "PS_role_ad1b09"
     },
     {
         "role": "Photosystem II protein PsbI",
@@ -22932,7 +22932,7 @@
             }
         },
         "publications": [],
-        "id": "f1057a"
+        "id": "PS_role_f1057a"
     },
     {
         "role": "Photosystem II protein PsbJ",
@@ -22962,7 +22962,7 @@
             }
         },
         "publications": [],
-        "id": "69a769"
+        "id": "PS_role_69a769"
     },
     {
         "role": "Photosystem II protein PsbK",
@@ -22992,7 +22992,7 @@
             }
         },
         "publications": [],
-        "id": "95bde0"
+        "id": "PS_role_95bde0"
     },
     {
         "role": "Photosystem II protein PsbL",
@@ -23022,7 +23022,7 @@
             }
         },
         "publications": [],
-        "id": "5a8fc6"
+        "id": "PS_role_5a8fc6"
     },
     {
         "role": "Photosystem II protein PsbM",
@@ -23052,7 +23052,7 @@
             }
         },
         "publications": [],
-        "id": "151b2c"
+        "id": "PS_role_151b2c"
     },
     {
         "role": "Photosystem II protein PsbN",
@@ -23082,7 +23082,7 @@
             }
         },
         "publications": [],
-        "id": "a9ff8a"
+        "id": "PS_role_a9ff8a"
     },
     {
         "role": "Photosystem II protein PsbTn",
@@ -23116,7 +23116,7 @@
             }
         },
         "publications": [],
-        "id": "a1c0a6"
+        "id": "PS_role_a1c0a6"
     },
     {
         "role": "Photosystem II protein PsbV, cytochrome c550",
@@ -23141,7 +23141,7 @@
             }
         },
         "publications": [],
-        "id": "0f7696"
+        "id": "PS_role_0f7696"
     },
     {
         "role": "Photosystem II protein PsbX",
@@ -23172,7 +23172,7 @@
             }
         },
         "publications": [],
-        "id": "6c4a23"
+        "id": "PS_role_6c4a23"
     },
     {
         "role": "Photosystem II protein PsbY",
@@ -23203,7 +23203,7 @@
             }
         },
         "publications": [],
-        "id": "74d1a2"
+        "id": "PS_role_74d1a2"
     },
     {
         "role": "Photosystem II protein PsbZ",
@@ -23233,7 +23233,7 @@
             }
         },
         "publications": [],
-        "id": "99d4ce"
+        "id": "PS_role_99d4ce"
     },
     {
         "role": "Photosystem II stability/assembly factor HCF136/Ycf48",
@@ -23263,7 +23263,7 @@
             }
         },
         "publications": [],
-        "id": "a23110"
+        "id": "PS_role_a23110"
     },
     {
         "role": "Plastidial ATP synthase alpha chain (EC 3.6.3.14)",
@@ -23291,7 +23291,7 @@
             }
         },
         "publications": [],
-        "id": "70a382"
+        "id": "PS_role_70a382"
     },
     {
         "role": "Plastidial ATP synthase beta chain (EC 3.6.3.14)",
@@ -23319,7 +23319,7 @@
             }
         },
         "publications": [],
-        "id": "51b403"
+        "id": "PS_role_51b403"
     },
     {
         "role": "Plastidial ATP synthase delta chain",
@@ -23347,7 +23347,7 @@
             }
         },
         "publications": [],
-        "id": "e5bd7d"
+        "id": "PS_role_e5bd7d"
     },
     {
         "role": "Plastidial ATP synthase epsilon chain",
@@ -23375,7 +23375,7 @@
             }
         },
         "publications": [],
-        "id": "cc41f6"
+        "id": "PS_role_cc41f6"
     },
     {
         "role": "Plastidial ATP synthase gamma chain",
@@ -23407,7 +23407,7 @@
             }
         },
         "publications": [],
-        "id": "5825d3"
+        "id": "PS_role_5825d3"
     },
     {
         "role": "Plastoquinone transport",
@@ -23428,7 +23428,7 @@
             }
         },
         "publications": [],
-        "id": "481766"
+        "id": "PS_role_481766"
     },
     {
         "role": "Polygalacturonase (EC 3.2.1.15)",
@@ -23457,7 +23457,7 @@
             }
         },
         "publications": [],
-        "id": "5c13ce"
+        "id": "PS_role_5c13ce"
     },
     {
         "role": "Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43)",
@@ -23508,7 +23508,7 @@
             }
         },
         "publications": [],
-        "id": "47d4c5"
+        "id": "PS_role_47d4c5"
     },
     {
         "role": "Porphobilinogen deaminase (EC 2.5.1.61)",
@@ -23540,7 +23540,7 @@
             }
         },
         "publications": [],
-        "id": "a546f8"
+        "id": "PS_role_a546f8"
     },
     {
         "role": "Porphobilinogen synthase (EC 4.2.1.24)",
@@ -23573,7 +23573,7 @@
             }
         },
         "publications": [],
-        "id": "0c088f"
+        "id": "PS_role_0c088f"
     },
     {
         "role": "Potassium transport",
@@ -23592,7 +23592,7 @@
             }
         },
         "publications": [],
-        "id": "712fb7"
+        "id": "PS_role_712fb7"
     },
     {
         "role": "Precorrin-2 oxidase (EC 1.3.1.76)",
@@ -23615,7 +23615,7 @@
             }
         },
         "publications": [],
-        "id": "5b11f3"
+        "id": "PS_role_5b11f3"
     },
     {
         "role": "Prephenate dehydratase (EC 4.2.1.51)",
@@ -23655,7 +23655,7 @@
             }
         },
         "publications": [],
-        "id": "7d78b2"
+        "id": "PS_role_7d78b2"
     },
     {
         "role": "Probable acyl-ACP desaturase, Palmitoyl-ACP 9-desaturase (EC 1.14.19.-)",
@@ -23682,7 +23682,7 @@
             }
         },
         "publications": [],
-        "id": "641176"
+        "id": "PS_role_641176"
     },
     {
         "role": "Probable acyl-ACP desaturase, Stearoyl-ACP desaturase (EC 1.14.19.2)",
@@ -23719,7 +23719,7 @@
             }
         },
         "publications": [],
-        "id": "1f944c"
+        "id": "PS_role_1f944c"
     },
     {
         "role": "Probable cytochrome c oxidase subunit 5c",
@@ -23754,7 +23754,7 @@
             }
         },
         "publications": [],
-        "id": "b7ed45"
+        "id": "PS_role_b7ed45"
     },
     {
         "role": "Proline transport",
@@ -23781,7 +23781,7 @@
             }
         },
         "publications": [],
-        "id": "66525b"
+        "id": "PS_role_66525b"
     },
     {
         "role": "Protein CP12, regulation of Calvin cycle via association/dissociation of PRK/CP12/GAPDH complex",
@@ -23838,7 +23838,7 @@
             "22514274",
             "20399532"
         ],
-        "id": "804a15"
+        "id": "PS_role_804a15"
     },
     {
         "role": "Proton transport",
@@ -23866,7 +23866,7 @@
             }
         },
         "publications": [],
-        "id": "46049b"
+        "id": "PS_role_46049b"
     },
     {
         "role": "Protoporphyrin IX Mg-chelatase subunit D (EC 6.6.1.1)",
@@ -23897,7 +23897,7 @@
             }
         },
         "publications": [],
-        "id": "b34493"
+        "id": "PS_role_b34493"
     },
     {
         "role": "Protoporphyrin IX Mg-chelatase subunit H (EC 6.6.1.1)",
@@ -23929,7 +23929,7 @@
             }
         },
         "publications": [],
-        "id": "f75f02"
+        "id": "PS_role_f75f02"
     },
     {
         "role": "Protoporphyrin IX Mg-chelatase subunit I (EC 6.6.1.1)",
@@ -23965,7 +23965,7 @@
             }
         },
         "publications": [],
-        "id": "472f23"
+        "id": "PS_role_472f23"
     },
     {
         "role": "Protoporphyrinogen IX oxidase, aerobic, HemY (EC 1.3.3.4)",
@@ -24002,7 +24002,7 @@
             }
         },
         "publications": [],
-        "id": "e0f61d"
+        "id": "PS_role_e0f61d"
     },
     {
         "role": "Purine nucleosidase (EC 3.2.2.1)",
@@ -24027,7 +24027,7 @@
             }
         },
         "publications": [],
-        "id": "44a05e"
+        "id": "PS_role_44a05e"
     },
     {
         "role": "Putative chaperon-like protein Ycf39 for quinone binding in Photosystem II",
@@ -24057,7 +24057,7 @@
             }
         },
         "publications": [],
-        "id": "6baf80"
+        "id": "PS_role_6baf80"
     },
     {
         "role": "Putative ubiquinol-cytochrome c reductase complex core protein I (subunit COR1)",
@@ -24088,7 +24088,7 @@
             }
         },
         "publications": [],
-        "id": "f877fa"
+        "id": "PS_role_f877fa"
     },
     {
         "role": "Putative ubiquinol-cytochrome c reductase complex core protein II (subunit COR2)",
@@ -24115,7 +24115,7 @@
             }
         },
         "publications": [],
-        "id": "5a7b67"
+        "id": "PS_role_5a7b67"
     },
     {
         "role": "Pyridoxal kinase (EC 2.7.1.35)",
@@ -24155,7 +24155,7 @@
             }
         },
         "publications": [],
-        "id": "f9290f"
+        "id": "PS_role_f9290f"
     },
     {
         "role": "Pyridoxal reductase (EC 1.1.1.65)",
@@ -24183,7 +24183,7 @@
             }
         },
         "publications": [],
-        "id": "d12054"
+        "id": "PS_role_d12054"
     },
     {
         "role": "Pyridoxal-5'-phosphate phosphatase (EC 3.1.3.74), eukaryotic type",
@@ -24206,7 +24206,7 @@
             }
         },
         "publications": [],
-        "id": "b95023"
+        "id": "PS_role_b95023"
     },
     {
         "role": "Pyridoxamine 5'-phosphate oxidase (EC 1.4.3.5)",
@@ -24243,7 +24243,7 @@
             }
         },
         "publications": [],
-        "id": "dabbef"
+        "id": "PS_role_dabbef"
     },
     {
         "role": "Pyridoxamine-pyruvate aminotransferase (EC 2.6.1.30)",
@@ -24266,7 +24266,7 @@
             }
         },
         "publications": [],
-        "id": "02c18d"
+        "id": "PS_role_02c18d"
     },
     {
         "role": "Pyridoxine biosynthesis glutamine amidotransferase, glutaminase subunit (EC 2.4.2.-)",
@@ -24304,7 +24304,7 @@
             }
         },
         "publications": [],
-        "id": "de392c"
+        "id": "PS_role_de392c"
     },
     {
         "role": "Pyridoxine biosynthesis glutamine amidotransferase, synthase subunit (EC 2.4.2.-)",
@@ -24347,7 +24347,7 @@
             }
         },
         "publications": [],
-        "id": "9b5508"
+        "id": "PS_role_9b5508"
     },
     {
         "role": "Pyrophosphate transport",
@@ -24375,7 +24375,7 @@
             }
         },
         "publications": [],
-        "id": "d35d10"
+        "id": "PS_role_d35d10"
     },
     {
         "role": "Pyrophosphate-dependent fructose 6-phosphate-1-kinase (EC 2.7.1.90)",
@@ -24425,7 +24425,7 @@
             "19533038",
             "19533038"
         ],
-        "id": "ade757"
+        "id": "PS_role_ade757"
     },
     {
         "role": "Pyrophosphate-energized proton pump (EC 3.6.1.1)",
@@ -24467,7 +24467,7 @@
             }
         },
         "publications": [],
-        "id": "ea775b"
+        "id": "PS_role_ea775b"
     },
     {
         "role": "Pyrroline-5-carboxylate reductase (EC 1.5.1.2)",
@@ -24506,7 +24506,7 @@
             }
         },
         "publications": [],
-        "id": "7208c7"
+        "id": "PS_role_7208c7"
     },
     {
         "role": "Pyruvate decarboxylase (EC 4.1.1.1)",
@@ -24569,7 +24569,7 @@
             "12805625",
             "23574450"
         ],
-        "id": "9b5459"
+        "id": "PS_role_9b5459"
     },
     {
         "role": "Pyruvate dehydrogenase E1 component alpha subunit (EC 1.2.4.1)",
@@ -24619,7 +24619,7 @@
             "9393637",
             "https://doi.org/10.1016/0378-1119(95)00465-I"
         ],
-        "id": "83e405"
+        "id": "PS_role_83e405"
     },
     {
         "role": "Pyruvate dehydrogenase E1 component beta subunit (EC 1.2.4.1)",
@@ -24664,7 +24664,7 @@
             "9393637",
             "9393637"
         ],
-        "id": "ecca2f"
+        "id": "PS_role_ecca2f"
     },
     {
         "role": "Pyruvate kinase (EC 2.7.1.40)",
@@ -24771,7 +24771,7 @@
             "16049677",
             "https://doi.org/10.1104/pp.107.108340"
         ],
-        "id": "5a9489"
+        "id": "PS_role_5a9489"
     },
     {
         "role": "Pyruvate transport",
@@ -24798,7 +24798,7 @@
             }
         },
         "publications": [],
-        "id": "f64d06"
+        "id": "PS_role_f64d06"
     },
     {
         "role": "Pyruvate,phosphate dikinase (EC 2.7.9.1)",
@@ -24838,7 +24838,7 @@
             "21414960",
             "21883547"
         ],
-        "id": "7477d0"
+        "id": "PS_role_7477d0"
     },
     {
         "role": "Quinolinate phosphoribosyltransferase [decarboxylating] (EC 2.4.2.19)",
@@ -24867,7 +24867,7 @@
             }
         },
         "publications": [],
-        "id": "2f6581"
+        "id": "PS_role_2f6581"
     },
     {
         "role": "Quinolinate synthetase (EC 2.5.1.72)",
@@ -24897,7 +24897,7 @@
             }
         },
         "publications": [],
-        "id": "6b4c4e"
+        "id": "PS_role_6b4c4e"
     },
     {
         "role": "Riboflavin kinase (EC 2.7.1.26)",
@@ -24927,7 +24927,7 @@
             }
         },
         "publications": [],
-        "id": "6bac91"
+        "id": "PS_role_6bac91"
     },
     {
         "role": "Riboflavin synthase eubacterial/eukaryotic (EC 2.5.1.9)",
@@ -24957,7 +24957,7 @@
             }
         },
         "publications": [],
-        "id": "ea9200"
+        "id": "PS_role_ea9200"
     },
     {
         "role": "Riboflavin transport",
@@ -24981,7 +24981,7 @@
             }
         },
         "publications": [],
-        "id": "cc0652"
+        "id": "PS_role_cc0652"
     },
     {
         "role": "Ribokinase (EC 2.7.1.12)",
@@ -25015,7 +25015,7 @@
             }
         },
         "publications": [],
-        "id": "b57bb4"
+        "id": "PS_role_b57bb4"
     },
     {
         "role": "Ribonucleotide reductase of class Ia (aerobic), alpha subunit (EC 1.17.4.1)",
@@ -25062,7 +25062,7 @@
             }
         },
         "publications": [],
-        "id": "33993f"
+        "id": "PS_role_33993f"
     },
     {
         "role": "Ribonucleotide reductase of class Ia (aerobic), beta subunit (EC 1.17.4.1)",
@@ -25113,7 +25113,7 @@
             }
         },
         "publications": [],
-        "id": "94ef8d"
+        "id": "PS_role_94ef8d"
     },
     {
         "role": "Ribose 5-phosphate isomerase A (EC 5.3.1.6)",
@@ -25173,7 +25173,7 @@
         "publications": [
             "19744161"
         ],
-        "id": "e22cd9"
+        "id": "PS_role_e22cd9"
     },
     {
         "role": "Ribose-phosphate pyrophosphokinase (EC 2.7.6.1)",
@@ -25223,7 +25223,7 @@
             "10082968",
             "12853141"
         ],
-        "id": "bd86b7"
+        "id": "PS_role_bd86b7"
     },
     {
         "role": "Ribulose bisphosphate carboxylase large chain (EC 4.1.1.39)",
@@ -25267,7 +25267,7 @@
             "24053212",
             "9489018"
         ],
-        "id": "bbc230"
+        "id": "PS_role_bbc230"
     },
     {
         "role": "Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39)",
@@ -25334,7 +25334,7 @@
             "22223809",
             "22223809"
         ],
-        "id": "58cc6b"
+        "id": "PS_role_58cc6b"
     },
     {
         "role": "Ribulose-phosphate 3-epimerase (EC 5.1.3.1)",
@@ -25382,7 +25382,7 @@
         "publications": [
             "https://doi.org/10.1104/pp.118.1.199"
         ],
-        "id": "688347"
+        "id": "PS_role_688347"
     },
     {
         "role": "S-Adenosyl-4-methylthio-2-oxobutanoate transport",
@@ -25406,7 +25406,7 @@
             }
         },
         "publications": [],
-        "id": "dd722d"
+        "id": "PS_role_dd722d"
     },
     {
         "role": "S-Adenosylhomocysteine transport",
@@ -25430,7 +25430,7 @@
             }
         },
         "publications": [],
-        "id": "268e2c"
+        "id": "PS_role_268e2c"
     },
     {
         "role": "S-Adenosylmethionine transport",
@@ -25454,7 +25454,7 @@
             }
         },
         "publications": [],
-        "id": "375d40"
+        "id": "PS_role_375d40"
     },
     {
         "role": "S-adenosylmethionine synthetase (EC 2.5.1.6)",
@@ -25499,7 +25499,7 @@
             }
         },
         "publications": [],
-        "id": "09b231"
+        "id": "PS_role_09b231"
     },
     {
         "role": "S-alkyl-thiohydroximate lyase (EC 4.4.1.-)",
@@ -25550,7 +25550,7 @@
             }
         },
         "publications": [],
-        "id": "cb78cd"
+        "id": "PS_role_cb78cd"
     },
     {
         "role": "Sedoheptulose-1,7-bisphosphatase (EC 3.1.3.37)",
@@ -25584,7 +25584,7 @@
             "22402261",
             "7811976"
         ],
-        "id": "e4380c"
+        "id": "PS_role_e4380c"
     },
     {
         "role": "Serine acetyltransferase (EC 2.3.1.30)",
@@ -25645,7 +25645,7 @@
             }
         },
         "publications": [],
-        "id": "b24e55"
+        "id": "PS_role_b24e55"
     },
     {
         "role": "Serine hydroxymethyltransferase (EC 2.1.2.1)",
@@ -25745,7 +25745,7 @@
             "16339799",
             "21976482"
         ],
-        "id": "d7bdc5"
+        "id": "PS_role_d7bdc5"
     },
     {
         "role": "Serine palmitoyltransferase (EC 2.3.1.50)",
@@ -25777,7 +25777,7 @@
             }
         },
         "publications": [],
-        "id": "69f5df"
+        "id": "PS_role_69f5df"
     },
     {
         "role": "Serine racemase (EC 5.1.1.18)",
@@ -25808,7 +25808,7 @@
             }
         },
         "publications": [],
-        "id": "3dc3fe"
+        "id": "PS_role_3dc3fe"
     },
     {
         "role": "Serine transport",
@@ -25835,7 +25835,7 @@
             }
         },
         "publications": [],
-        "id": "ea3382"
+        "id": "PS_role_ea3382"
     },
     {
         "role": "Serine--glyoxylate aminotransferase (EC 2.6.1.45)",
@@ -25874,7 +25874,7 @@
             "18235971",
             "23098902"
         ],
-        "id": "7b06c8"
+        "id": "PS_role_7b06c8"
     },
     {
         "role": "Shikimate 5-dehydrogenase I alpha (EC 1.1.1.25)",
@@ -25904,7 +25904,7 @@
             }
         },
         "publications": [],
-        "id": "8d3421"
+        "id": "PS_role_8d3421"
     },
     {
         "role": "Shikimate O-hydroxycinnamoyltransferase (EC 2.3.1.133)",
@@ -25937,7 +25937,7 @@
             }
         },
         "publications": [],
-        "id": "f36f33"
+        "id": "PS_role_f36f33"
     },
     {
         "role": "Shikimate kinase I (EC 2.7.1.71)",
@@ -25971,7 +25971,7 @@
             }
         },
         "publications": [],
-        "id": "f2b17b"
+        "id": "PS_role_f2b17b"
     },
     {
         "role": "Sinapine esterase (EC 3.1.1.49)",
@@ -25996,7 +25996,7 @@
             }
         },
         "publications": [],
-        "id": "de0505"
+        "id": "PS_role_de0505"
     },
     {
         "role": "Sinapoylated glucosinolates modification, unresolved step",
@@ -26026,7 +26026,7 @@
             }
         },
         "publications": [],
-        "id": "ebc9a3"
+        "id": "PS_role_ebc9a3"
     },
     {
         "role": "Sinapoylglucose--choline O-sinapoyltransferase (EC 2.3.1.91)",
@@ -26053,7 +26053,7 @@
             }
         },
         "publications": [],
-        "id": "bc8c46"
+        "id": "PS_role_bc8c46"
     },
     {
         "role": "Sinapoylglucose--malate O-sinapoyltransferase (EC 2.3.1.92)",
@@ -26080,7 +26080,7 @@
             }
         },
         "publications": [],
-        "id": "ab76f6"
+        "id": "PS_role_ab76f6"
     },
     {
         "role": "Sinapoylglucose--sinapoylglucose O-sinapoyltransferase (EC 2.3.1.103)",
@@ -26109,7 +26109,7 @@
             }
         },
         "publications": [],
-        "id": "36a0dc"
+        "id": "PS_role_36a0dc"
     },
     {
         "role": "Sirohydrochlorin ferrochelatase (EC 4.99.1.4)",
@@ -26139,7 +26139,7 @@
             }
         },
         "publications": [],
-        "id": "67da61"
+        "id": "PS_role_67da61"
     },
     {
         "role": "Solanesyl diphosphate synthase (EC 2.5.1.85)",
@@ -26200,7 +26200,7 @@
             }
         },
         "publications": [],
-        "id": "9adb48"
+        "id": "PS_role_9adb48"
     },
     {
         "role": "Solanesyl-PP transport",
@@ -26224,7 +26224,7 @@
             }
         },
         "publications": [],
-        "id": "a21670"
+        "id": "PS_role_a21670"
     },
     {
         "role": "Soluble pyridine nucleotide transhydrogenase (EC 1.6.1.1)",
@@ -26249,7 +26249,7 @@
             }
         },
         "publications": [],
-        "id": "3c14be"
+        "id": "PS_role_3c14be"
     },
     {
         "role": "Sphinganine C(4)-monooxygenase (EC 1.14.13.169)",
@@ -26277,7 +26277,7 @@
             }
         },
         "publications": [],
-        "id": "4de28b"
+        "id": "PS_role_4de28b"
     },
     {
         "role": "Sphinganine kinase (EC 2.7.1.91)",
@@ -26305,7 +26305,7 @@
             }
         },
         "publications": [],
-        "id": "4ba0d3"
+        "id": "PS_role_4ba0d3"
     },
     {
         "role": "Sphingosine N-acyltransferase (EC 2.3.1.24)",
@@ -26330,7 +26330,7 @@
             }
         },
         "publications": [],
-        "id": "c16b02"
+        "id": "PS_role_c16b02"
     },
     {
         "role": "Spontaneous Reaction",
@@ -26353,7 +26353,7 @@
             }
         },
         "publications": [],
-        "id": "f44be4"
+        "id": "PS_role_f44be4"
     },
     {
         "role": "Spontaneous Reaction",
@@ -26395,7 +26395,7 @@
             }
         },
         "publications": [],
-        "id": "ed6b6e"
+        "id": "PS_role_ed6b6e"
     },
     {
         "role": "Spontaneous Reaction",
@@ -26418,7 +26418,7 @@
             }
         },
         "publications": [],
-        "id": "937403"
+        "id": "PS_role_937403"
     },
     {
         "role": "Spontaneous Reaction",
@@ -26441,7 +26441,7 @@
             }
         },
         "publications": [],
-        "id": "971b51"
+        "id": "PS_role_971b51"
     },
     {
         "role": "Spontaneous Reaction",
@@ -26466,7 +26466,7 @@
             }
         },
         "publications": [],
-        "id": "1656b1"
+        "id": "PS_role_1656b1"
     },
     {
         "role": "Spontaneous Reaction",
@@ -26489,7 +26489,7 @@
             }
         },
         "publications": [],
-        "id": "630e35"
+        "id": "PS_role_630e35"
     },
     {
         "role": "Spontaneous Reaction",
@@ -26515,7 +26515,7 @@
             }
         },
         "publications": [],
-        "id": "2e0bfe"
+        "id": "PS_role_2e0bfe"
     },
     {
         "role": "Spontaneous Reaction",
@@ -26538,7 +26538,7 @@
             }
         },
         "publications": [],
-        "id": "3a0d87"
+        "id": "PS_role_3a0d87"
     },
     {
         "role": "Spontaneous Reaction",
@@ -26561,7 +26561,7 @@
             }
         },
         "publications": [],
-        "id": "a7a2ef"
+        "id": "PS_role_a7a2ef"
     },
     {
         "role": "Spontaneous Reaction",
@@ -26588,7 +26588,7 @@
         "publications": [
             "27837168"
         ],
-        "id": "b129ec"
+        "id": "PS_role_b129ec"
     },
     {
         "role": "Starch debranching enzyme, isoamylase (EC 3.2.1.68)",
@@ -26625,7 +26625,7 @@
             }
         },
         "publications": [],
-        "id": "8915c5"
+        "id": "PS_role_8915c5"
     },
     {
         "role": "Starch debranching enzyme, pullulanase (EC 3.2.1.142)",
@@ -26653,7 +26653,7 @@
             }
         },
         "publications": [],
-        "id": "c1fdc8"
+        "id": "PS_role_c1fdc8"
     },
     {
         "role": "Starch synthase, ADP-glucose transglucosylase (EC 2.4.1.21)",
@@ -26704,7 +26704,7 @@
             }
         },
         "publications": [],
-        "id": "c8f4f1"
+        "id": "PS_role_c8f4f1"
     },
     {
         "role": "Starch, water dikinase (EC 2.7.9.4)",
@@ -26736,7 +26736,7 @@
             }
         },
         "publications": [],
-        "id": "725b95"
+        "id": "PS_role_725b95"
     },
     {
         "role": "Stearoyl-[acyl carrier protein] thioesterase (EC 3.1.2.-)",
@@ -26766,7 +26766,7 @@
             }
         },
         "publications": [],
-        "id": "50aba3"
+        "id": "PS_role_50aba3"
     },
     {
         "role": "Stearoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.-)",
@@ -26791,7 +26791,7 @@
             }
         },
         "publications": [],
-        "id": "7bb52e"
+        "id": "PS_role_7bb52e"
     },
     {
         "role": "Succinate dehydrogenase (ubiquinone) cytochrome b560 subunit SDH3/SDHC",
@@ -26830,7 +26830,7 @@
             }
         },
         "publications": [],
-        "id": "717701"
+        "id": "PS_role_717701"
     },
     {
         "role": "Succinate dehydrogenase (ubiquinone) flavoprotein subunit SDH1/SDHA (EC 1.3.5.1)",
@@ -26880,7 +26880,7 @@
             "21921116",
             "23711731"
         ],
-        "id": "06d9bf"
+        "id": "PS_role_06d9bf"
     },
     {
         "role": "Succinate dehydrogenase (ubiquinone) iron-sulfur subunit SDH2/SDHB (EC 1.3.5.1)",
@@ -26936,7 +26936,7 @@
             "19261733",
             "19932106"
         ],
-        "id": "313ea2"
+        "id": "PS_role_313ea2"
     },
     {
         "role": "Succinate dehydrogenase (ubiquinone) membrane anchor subunit SDH4/SDHD",
@@ -26975,7 +26975,7 @@
             "23154507",
             "9799365"
         ],
-        "id": "d68df5"
+        "id": "PS_role_d68df5"
     },
     {
         "role": "Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH5",
@@ -27013,7 +27013,7 @@
         "publications": [
             "23154507"
         ],
-        "id": "1dd259"
+        "id": "PS_role_1dd259"
     },
     {
         "role": "Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH6",
@@ -27049,7 +27049,7 @@
             }
         },
         "publications": [],
-        "id": "ef4bbf"
+        "id": "PS_role_ef4bbf"
     },
     {
         "role": "Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH7",
@@ -27087,7 +27087,7 @@
             }
         },
         "publications": [],
-        "id": "c5687f"
+        "id": "PS_role_c5687f"
     },
     {
         "role": "Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH8",
@@ -27121,7 +27121,7 @@
             }
         },
         "publications": [],
-        "id": "32c7d3"
+        "id": "PS_role_32c7d3"
     },
     {
         "role": "Succinate transport",
@@ -27148,7 +27148,7 @@
             }
         },
         "publications": [],
-        "id": "4932b1"
+        "id": "PS_role_4932b1"
     },
     {
         "role": "Succinyl-CoA ligase [ADP-forming] alpha chain (EC 6.2.1.5)",
@@ -27181,7 +27181,7 @@
             }
         },
         "publications": [],
-        "id": "d2581f"
+        "id": "PS_role_d2581f"
     },
     {
         "role": "Succinyl-CoA ligase [ADP-forming] beta chain (EC 6.2.1.5)",
@@ -27210,7 +27210,7 @@
             }
         },
         "publications": [],
-        "id": "076af3"
+        "id": "PS_role_076af3"
     },
     {
         "role": "Sucrose alpha-glucosidase, alkaline/neutral invertase (EC 3.2.1.26)",
@@ -27266,7 +27266,7 @@
             }
         },
         "publications": [],
-        "id": "0278da"
+        "id": "PS_role_0278da"
     },
     {
         "role": "Sucrose synthase (EC 2.4.1.13)",
@@ -27310,7 +27310,7 @@
             }
         },
         "publications": [],
-        "id": "62b999"
+        "id": "PS_role_62b999"
     },
     {
         "role": "Sucrose transport",
@@ -27335,7 +27335,7 @@
             }
         },
         "publications": [],
-        "id": "a941df"
+        "id": "PS_role_a941df"
     },
     {
         "role": "Sucrose-phosphate phosphatase (EC 3.1.3.24)",
@@ -27365,7 +27365,7 @@
             }
         },
         "publications": [],
-        "id": "6151fd"
+        "id": "PS_role_6151fd"
     },
     {
         "role": "Sucrose-phosphate synthase (EC 2.4.1.14)",
@@ -27400,7 +27400,7 @@
         "publications": [
             "https://doi.org/10.1111/j.1365-313X.2005.02427.x"
         ],
-        "id": "26ecf3"
+        "id": "PS_role_26ecf3"
     },
     {
         "role": "Sugar-terminal-phosphatase (EC 3.1.3.9/ EC 3.1.3.58)",
@@ -27441,7 +27441,7 @@
             "17136424",
             "23179445"
         ],
-        "id": "5ac161"
+        "id": "PS_role_5ac161"
     },
     {
         "role": "Sulfate adenylyltransferase (EC 2.7.7.4)",
@@ -27496,7 +27496,7 @@
             }
         },
         "publications": [],
-        "id": "cd782a"
+        "id": "PS_role_cd782a"
     },
     {
         "role": "Sulfate transport",
@@ -27521,7 +27521,7 @@
             }
         },
         "publications": [],
-        "id": "1258bf"
+        "id": "PS_role_1258bf"
     },
     {
         "role": "Sulfite oxidase (EC 1.8.3.1)",
@@ -27554,7 +27554,7 @@
             }
         },
         "publications": [],
-        "id": "42c104"
+        "id": "PS_role_42c104"
     },
     {
         "role": "Tetraacyldisaccharide 4'-kinase (EC 2.7.1.130)",
@@ -27581,7 +27581,7 @@
             }
         },
         "publications": [],
-        "id": "c110b2"
+        "id": "PS_role_c110b2"
     },
     {
         "role": "Tetrahydrofolate transport",
@@ -27623,7 +27623,7 @@
             }
         },
         "publications": [],
-        "id": "730663"
+        "id": "PS_role_730663"
     },
     {
         "role": "Thiamin monophosphate transport",
@@ -27644,7 +27644,7 @@
             }
         },
         "publications": [],
-        "id": "2c6f5e"
+        "id": "PS_role_2c6f5e"
     },
     {
         "role": "Thiamin pyrophosphokinase (EC 2.7.6.2)",
@@ -27678,7 +27678,7 @@
             }
         },
         "publications": [],
-        "id": "6148bc"
+        "id": "PS_role_6148bc"
     },
     {
         "role": "Thiamin transport",
@@ -27699,7 +27699,7 @@
             }
         },
         "publications": [],
-        "id": "2edbbb"
+        "id": "PS_role_2edbbb"
     },
     {
         "role": "Thiamin-phosphate pyrophosphorylase (EC 2.5.1.3)",
@@ -27734,7 +27734,7 @@
             }
         },
         "publications": [],
-        "id": "e16e1e"
+        "id": "PS_role_e16e1e"
     },
     {
         "role": "Thiamine-monophosphate phosphatase (EC 3.1.3.-)",
@@ -27762,7 +27762,7 @@
             }
         },
         "publications": [],
-        "id": "7bc02a"
+        "id": "PS_role_7bc02a"
     },
     {
         "role": "Thiamine-triphosphatase (EC 3.6.1.28)",
@@ -27785,7 +27785,7 @@
             }
         },
         "publications": [],
-        "id": "94ee08"
+        "id": "PS_role_94ee08"
     },
     {
         "role": "Thiamine-triphosphatase (ThTP) synthase (EC 2.7.4.15)",
@@ -27808,7 +27808,7 @@
             }
         },
         "publications": [],
-        "id": "7b2dc9"
+        "id": "PS_role_7b2dc9"
     },
     {
         "role": "Thiazole biosynthetic enzyme Thi4",
@@ -27840,7 +27840,7 @@
             }
         },
         "publications": [],
-        "id": "eb4442"
+        "id": "PS_role_eb4442"
     },
     {
         "role": "Thioredoxin reductase (EC 1.8.1.9)",
@@ -27893,7 +27893,7 @@
             }
         },
         "publications": [],
-        "id": "e68575"
+        "id": "PS_role_e68575"
     },
     {
         "role": "Threonine dehydratase biosynthetic (EC 4.3.1.19)",
@@ -27921,7 +27921,7 @@
             }
         },
         "publications": [],
-        "id": "7f6e9a"
+        "id": "PS_role_7f6e9a"
     },
     {
         "role": "Threonine synthase (EC 4.2.3.1)",
@@ -27956,7 +27956,7 @@
             }
         },
         "publications": [],
-        "id": "ce5990"
+        "id": "PS_role_ce5990"
     },
     {
         "role": "Threonine transport",
@@ -27983,7 +27983,7 @@
             }
         },
         "publications": [],
-        "id": "c3f269"
+        "id": "PS_role_c3f269"
     },
     {
         "role": "Thymidylate kinase (EC 2.7.4.9)",
@@ -28013,7 +28013,7 @@
             }
         },
         "publications": [],
-        "id": "579dbd"
+        "id": "PS_role_579dbd"
     },
     {
         "role": "Thymidylate synthase (EC 2.1.1.45)",
@@ -28052,7 +28052,7 @@
             }
         },
         "publications": [],
-        "id": "b69556"
+        "id": "PS_role_b69556"
     },
     {
         "role": "Trans-cinnamate 4-monooxygenase (EC 1.14.13.11)",
@@ -28088,7 +28088,7 @@
             }
         },
         "publications": [],
-        "id": "2e7341"
+        "id": "PS_role_2e7341"
     },
     {
         "role": "Transaldolase (EC 2.2.1.2)",
@@ -28127,7 +28127,7 @@
             }
         },
         "publications": [],
-        "id": "0bc038"
+        "id": "PS_role_0bc038"
     },
     {
         "role": "Transketolase (EC 2.2.1.1)",
@@ -28174,7 +28174,7 @@
             "24328790",
             "24328790"
         ],
-        "id": "a90791"
+        "id": "PS_role_a90791"
     },
     {
         "role": "Trehalase (EC 3.2.1.28)",
@@ -28201,7 +28201,7 @@
             }
         },
         "publications": [],
-        "id": "cfbb9f"
+        "id": "PS_role_cfbb9f"
     },
     {
         "role": "Trehalose-6-phosphate phosphatase (EC 3.1.3.12)",
@@ -28262,7 +28262,7 @@
             }
         },
         "publications": [],
-        "id": "f15cef"
+        "id": "PS_role_f15cef"
     },
     {
         "role": "Triosephosphate isomerase (EC 5.3.1.1)",
@@ -28325,7 +28325,7 @@
             "8165257",
             "20097871"
         ],
-        "id": "03d7c3"
+        "id": "PS_role_03d7c3"
     },
     {
         "role": "Tryptophan N-monooxygenase (EC 1.14.13.125)",
@@ -28360,7 +28360,7 @@
             }
         },
         "publications": [],
-        "id": "4b6628"
+        "id": "PS_role_4b6628"
     },
     {
         "role": "Tryptophan synthase alpha chain (EC 4.2.1.20)",
@@ -28391,7 +28391,7 @@
             }
         },
         "publications": [],
-        "id": "830b5f"
+        "id": "PS_role_830b5f"
     },
     {
         "role": "Tryptophan synthase beta chain (EC 4.2.1.20)",
@@ -28429,7 +28429,7 @@
             }
         },
         "publications": [],
-        "id": "a2c730"
+        "id": "PS_role_a2c730"
     },
     {
         "role": "Tryptophan transport",
@@ -28456,7 +28456,7 @@
             }
         },
         "publications": [],
-        "id": "e2c4cd"
+        "id": "PS_role_e2c4cd"
     },
     {
         "role": "Tyramine N-feruloyltransferase (EC 2.3.1.110)",
@@ -28481,7 +28481,7 @@
             }
         },
         "publications": [],
-        "id": "fea87c"
+        "id": "PS_role_fea87c"
     },
     {
         "role": "Tyrosine aminotransferase (EC 2.6.1.5)",
@@ -28524,7 +28524,7 @@
             }
         },
         "publications": [],
-        "id": "ddc5da"
+        "id": "PS_role_ddc5da"
     },
     {
         "role": "Tyrosine transport",
@@ -28551,7 +28551,7 @@
             }
         },
         "publications": [],
-        "id": "566d52"
+        "id": "PS_role_566d52"
     },
     {
         "role": "UDP-2,3-diacylglucosamine diphosphatase (EC 3.6.1.54)",
@@ -28576,7 +28576,7 @@
             }
         },
         "publications": [],
-        "id": "afc4dc"
+        "id": "PS_role_afc4dc"
     },
     {
         "role": "UDP-3-O-[3-hydroxymyristoyl] N-acetylglucosamine deacetylase (EC 3.5.1.108)",
@@ -28607,7 +28607,7 @@
             }
         },
         "publications": [],
-        "id": "289dd5"
+        "id": "PS_role_289dd5"
     },
     {
         "role": "UDP-3-O-[3-hydroxymyristoyl] glucosamine N-acyltransferase (EC 2.3.1.191)",
@@ -28635,7 +28635,7 @@
             }
         },
         "publications": [],
-        "id": "40023b"
+        "id": "PS_role_40023b"
     },
     {
         "role": "UDP-4-dehydro-6-deoxy-glucose 3,5-epimerase (no EC)",
@@ -28666,7 +28666,7 @@
             }
         },
         "publications": [],
-        "id": "b7f044"
+        "id": "PS_role_b7f044"
     },
     {
         "role": "UDP-4-dehydro-rhamnose reductase (EC 1.1.1.-)",
@@ -28697,7 +28697,7 @@
             }
         },
         "publications": [],
-        "id": "29b963"
+        "id": "PS_role_29b963"
     },
     {
         "role": "UDP-D-apiose synthase (EC 4.1.1.-)",
@@ -28725,7 +28725,7 @@
             }
         },
         "publications": [],
-        "id": "c5896e"
+        "id": "PS_role_c5896e"
     },
     {
         "role": "UDP-arabinose 4-epimerase (EC 5.1.3.5)",
@@ -28760,7 +28760,7 @@
             }
         },
         "publications": [],
-        "id": "a2589c"
+        "id": "PS_role_a2589c"
     },
     {
         "role": "UDP-glucose 4,6-dehydratase (EC 4.2.1.76)",
@@ -28792,7 +28792,7 @@
             }
         },
         "publications": [],
-        "id": "246162"
+        "id": "PS_role_246162"
     },
     {
         "role": "UDP-glucose 4-epimerase (EC 5.1.3.2)",
@@ -28826,7 +28826,7 @@
             }
         },
         "publications": [],
-        "id": "dd5ac2"
+        "id": "PS_role_dd5ac2"
     },
     {
         "role": "UDP-glucose dehydrogenase (EC 1.1.1.22)",
@@ -28858,7 +28858,7 @@
             }
         },
         "publications": [],
-        "id": "20f8e0"
+        "id": "PS_role_20f8e0"
     },
     {
         "role": "UDP-glucose--hexose-1-phosphate uridylyltransferase (EC 2.7.7.12)",
@@ -28883,7 +28883,7 @@
             }
         },
         "publications": [],
-        "id": "97f29e"
+        "id": "PS_role_97f29e"
     },
     {
         "role": "UDP-glucose:nicotinate-N-glucosyltransferase  (EC 2.4.1.196)",
@@ -28906,7 +28906,7 @@
             }
         },
         "publications": [],
-        "id": "8c2d66"
+        "id": "PS_role_8c2d66"
     },
     {
         "role": "UDP-glucose:p-aminobenzoate glucosyltransferase",
@@ -28936,7 +28936,7 @@
             }
         },
         "publications": [],
-        "id": "d0acaa"
+        "id": "PS_role_d0acaa"
     },
     {
         "role": "UDP-glucose:pyridoxine 5'-O-beta-D-glucosyltransferase (EC 2.4.1.160)",
@@ -28959,7 +28959,7 @@
             }
         },
         "publications": [],
-        "id": "07c538"
+        "id": "PS_role_07c538"
     },
     {
         "role": "UDP-glucose:sinapate glucosyltransferase (EC 2.4.1.120)",
@@ -28986,7 +28986,7 @@
             }
         },
         "publications": [],
-        "id": "e90dbd"
+        "id": "PS_role_e90dbd"
     },
     {
         "role": "UDP-glucuronate 4-epimerase (EC 5.1.3.6)",
@@ -29026,7 +29026,7 @@
             }
         },
         "publications": [],
-        "id": "bc8433"
+        "id": "PS_role_bc8433"
     },
     {
         "role": "UDP-glucuronate decarboxylase (EC 4.1.1.35)",
@@ -29060,7 +29060,7 @@
             }
         },
         "publications": [],
-        "id": "dc20f0"
+        "id": "PS_role_dc20f0"
     },
     {
         "role": "UDP-sugar pyrophosphorylase (EC 2.7.7.64)",
@@ -29100,7 +29100,7 @@
             }
         },
         "publications": [],
-        "id": "0262fd"
+        "id": "PS_role_0262fd"
     },
     {
         "role": "UDP-sulfoquinovose synthase (EC 3.13.1.1)",
@@ -29131,7 +29131,7 @@
             }
         },
         "publications": [],
-        "id": "c7e6c3"
+        "id": "PS_role_c7e6c3"
     },
     {
         "role": "UDP-sulfoquinovose:DAG sulfoquinovosyltransferase (EC 2.4.1.-)",
@@ -29162,7 +29162,7 @@
             }
         },
         "publications": [],
-        "id": "c1c3d8"
+        "id": "PS_role_c1c3d8"
     },
     {
         "role": "UTP--glucose-1-phosphate uridylyltransferase (EC 2.7.7.9)",
@@ -29195,7 +29195,7 @@
             }
         },
         "publications": [],
-        "id": "e9c139"
+        "id": "PS_role_e9c139"
     },
     {
         "role": "Ubiquinol--cytochrome c reductase, cytochrome B subunit (EC 1.10.2.2)",
@@ -29226,7 +29226,7 @@
             }
         },
         "publications": [],
-        "id": "837adb"
+        "id": "PS_role_837adb"
     },
     {
         "role": "Ubiquinol-cytochrome C reductase iron-sulfur subunit (EC 1.10.2.2)",
@@ -29257,7 +29257,7 @@
             }
         },
         "publications": [],
-        "id": "7032e9"
+        "id": "PS_role_7032e9"
     },
     {
         "role": "Ubiquinol-cytochrome c reductase complex subunit 6 (hinge protein)",
@@ -29288,7 +29288,7 @@
             }
         },
         "publications": [],
-        "id": "910905"
+        "id": "PS_role_910905"
     },
     {
         "role": "Ubiquinol-cytochrome c reductase complex subunit 7",
@@ -29319,7 +29319,7 @@
             }
         },
         "publications": [],
-        "id": "1ae99d"
+        "id": "PS_role_1ae99d"
     },
     {
         "role": "Ubiquinol-cytochrome c reductase complex subunit 8 (ubiquinone-binding protein QP-C)",
@@ -29350,7 +29350,7 @@
             }
         },
         "publications": [],
-        "id": "85c8a5"
+        "id": "PS_role_85c8a5"
     },
     {
         "role": "Ubiquinol-cytochrome c reductase complex subunit 9",
@@ -29377,7 +29377,7 @@
             }
         },
         "publications": [],
-        "id": "1b4ace"
+        "id": "PS_role_1b4ace"
     },
     {
         "role": "Ubiquinone biosynthesis monooxygenase COQ6 (EC 1.14.13.-), required for C5-hydroxylation step",
@@ -29404,7 +29404,7 @@
             }
         },
         "publications": [],
-        "id": "ec3fe5"
+        "id": "PS_role_ec3fe5"
     },
     {
         "role": "Ubiquinone-9 transport",
@@ -29425,7 +29425,7 @@
             }
         },
         "publications": [],
-        "id": "985a1c"
+        "id": "PS_role_985a1c"
     },
     {
         "role": "Ubiquinone/menaquinone biosynthesis methyltransferase UbiE (EC 2.1.1.-)",
@@ -29452,7 +29452,7 @@
             }
         },
         "publications": [],
-        "id": "f567fb"
+        "id": "PS_role_f567fb"
     },
     {
         "role": "Uracil phosphoribosyltransferase (EC 2.4.2.9)",
@@ -29480,7 +29480,7 @@
             }
         },
         "publications": [],
-        "id": "b459de"
+        "id": "PS_role_b459de"
     },
     {
         "role": "Uracil transport",
@@ -29504,7 +29504,7 @@
             }
         },
         "publications": [],
-        "id": "f8d259"
+        "id": "PS_role_f8d259"
     },
     {
         "role": "Urea transport",
@@ -29529,7 +29529,7 @@
             }
         },
         "publications": [],
-        "id": "ab4a59"
+        "id": "PS_role_ab4a59"
     },
     {
         "role": "Urease (EC 3.5.1.5)",
@@ -29560,7 +29560,7 @@
             }
         },
         "publications": [],
-        "id": "0e9f21"
+        "id": "PS_role_0e9f21"
     },
     {
         "role": "Uridine monophosphate/cytidine monophosphate kinase (EC 2.7.4.14)",
@@ -29590,7 +29590,7 @@
             }
         },
         "publications": [],
-        "id": "90c7d9"
+        "id": "PS_role_90c7d9"
     },
     {
         "role": "Uridine nucleosidase (EC 3.2.2.3)",
@@ -29617,7 +29617,7 @@
             }
         },
         "publications": [],
-        "id": "376fd4"
+        "id": "PS_role_376fd4"
     },
     {
         "role": "Uroporphyrinogen III decarboxylase (EC 4.1.1.37)",
@@ -29657,7 +29657,7 @@
             }
         },
         "publications": [],
-        "id": "601ac4"
+        "id": "PS_role_601ac4"
     },
     {
         "role": "Uroporphyrinogen-III methyltransferase (EC 2.1.1.107)",
@@ -29684,7 +29684,7 @@
             }
         },
         "publications": [],
-        "id": "ee24c7"
+        "id": "PS_role_ee24c7"
     },
     {
         "role": "Uroporphyrinogen-III synthase (EC 4.2.1.75)",
@@ -29717,7 +29717,7 @@
             }
         },
         "publications": [],
-        "id": "5f0ac3"
+        "id": "PS_role_5f0ac3"
     },
     {
         "role": "V-type ATP synthase subunit A (EC 3.6.3.14)",
@@ -29745,7 +29745,7 @@
             }
         },
         "publications": [],
-        "id": "c6ec34"
+        "id": "PS_role_c6ec34"
     },
     {
         "role": "V-type ATP synthase subunit B (EC 3.6.3.14)",
@@ -29781,7 +29781,7 @@
             }
         },
         "publications": [],
-        "id": "4ad3d5"
+        "id": "PS_role_4ad3d5"
     },
     {
         "role": "V-type ATP synthase subunit C (EC 3.6.3.14)",
@@ -29809,7 +29809,7 @@
             }
         },
         "publications": [],
-        "id": "86402c"
+        "id": "PS_role_86402c"
     },
     {
         "role": "V-type ATP synthase subunit D (EC 3.6.3.14)",
@@ -29837,7 +29837,7 @@
             }
         },
         "publications": [],
-        "id": "68144e"
+        "id": "PS_role_68144e"
     },
     {
         "role": "V-type ATP synthase subunit E (EC 3.6.3.14)",
@@ -29873,7 +29873,7 @@
             }
         },
         "publications": [],
-        "id": "85c2da"
+        "id": "PS_role_85c2da"
     },
     {
         "role": "V-type ATP synthase subunit F (EC 3.6.3.14)",
@@ -29901,7 +29901,7 @@
             }
         },
         "publications": [],
-        "id": "9318c4"
+        "id": "PS_role_9318c4"
     },
     {
         "role": "V-type ATP synthase subunit G (EC 3.6.3.14)",
@@ -29937,7 +29937,7 @@
             }
         },
         "publications": [],
-        "id": "eb179b"
+        "id": "PS_role_eb179b"
     },
     {
         "role": "V-type ATP synthase subunit H (EC 3.6.3.14)",
@@ -29965,7 +29965,7 @@
             }
         },
         "publications": [],
-        "id": "75d945"
+        "id": "PS_role_75d945"
     },
     {
         "role": "Valine transport",
@@ -29992,7 +29992,7 @@
             }
         },
         "publications": [],
-        "id": "64145c"
+        "id": "PS_role_64145c"
     },
     {
         "role": "Very-long-chain (3R)-3-hydroxyacyl-[acyl-carrier protein] dehydratase (EC 4.2.1.134)",
@@ -30026,7 +30026,7 @@
             }
         },
         "publications": [],
-        "id": "71f788"
+        "id": "PS_role_71f788"
     },
     {
         "role": "Very-long-chain 3-oxoacyl-CoA reductase of elongase (EC 1.1.1.330)",
@@ -30062,7 +30062,7 @@
             }
         },
         "publications": [],
-        "id": "e706bf"
+        "id": "PS_role_e706bf"
     },
     {
         "role": "Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)",
@@ -30114,7 +30114,7 @@
             }
         },
         "publications": [],
-        "id": "d1fc19"
+        "id": "PS_role_d1fc19"
     },
     {
         "role": "Very-long-chain enoyl-CoA reductase (EC 1.3.1.93)",
@@ -30141,7 +30141,7 @@
             }
         },
         "publications": [],
-        "id": "053c6d"
+        "id": "PS_role_053c6d"
     },
     {
         "role": "Water transport",
@@ -30172,7 +30172,7 @@
             }
         },
         "publications": [],
-        "id": "757fdb"
+        "id": "PS_role_757fdb"
     },
     {
         "role": "XXLG xyloglucan galactosyltransferase",
@@ -30197,7 +30197,7 @@
             }
         },
         "publications": [],
-        "id": "5fdd66"
+        "id": "PS_role_5fdd66"
     },
     {
         "role": "Xylogalacturonan beta-1,3-xylosyltransferase (EC 2.4.2.41)",
@@ -30229,7 +30229,7 @@
             }
         },
         "publications": [],
-        "id": "b5bfac"
+        "id": "PS_role_b5bfac"
     },
     {
         "role": "Xyloglucan galactosyltransferase (no EC)",
@@ -30260,7 +30260,7 @@
             }
         },
         "publications": [],
-        "id": "359bfd"
+        "id": "PS_role_359bfd"
     },
     {
         "role": "Xylose isomerase (EC 5.3.1.5)",
@@ -30289,7 +30289,7 @@
             }
         },
         "publications": [],
-        "id": "1609c6"
+        "id": "PS_role_1609c6"
     },
     {
         "role": "Xylulose kinase (EC 2.7.1.17)",
@@ -30330,7 +30330,7 @@
             }
         },
         "publications": [],
-        "id": "307260"
+        "id": "PS_role_307260"
     },
     {
         "role": "alternative photosystem I reaction center subunit X (PsaK2)",
@@ -30353,7 +30353,7 @@
             }
         },
         "publications": [],
-        "id": "e0bf23"
+        "id": "PS_role_e0bf23"
     },
     {
         "role": "beta-Fructose-6-phosphate transport",
@@ -30374,7 +30374,7 @@
             }
         },
         "publications": [],
-        "id": "fbbe49"
+        "id": "PS_role_fbbe49"
     },
     {
         "role": "beta-Glucose-6-phosphate transport",
@@ -30395,7 +30395,7 @@
             }
         },
         "publications": [],
-        "id": "658156"
+        "id": "PS_role_658156"
     },
     {
         "role": "cis-Aconitate transport",
@@ -30422,7 +30422,7 @@
             }
         },
         "publications": [],
-        "id": "59dfb3"
+        "id": "PS_role_59dfb3"
     },
     {
         "role": "delta-tocopherol methyltransferase (EC 2.1.1.95)",
@@ -30453,7 +30453,7 @@
             }
         },
         "publications": [],
-        "id": "44ce12"
+        "id": "PS_role_44ce12"
     },
     {
         "role": "gamma-tocopherol methyltransferase (EC 2.1.1.95)",
@@ -30484,7 +30484,7 @@
             }
         },
         "publications": [],
-        "id": "2437f6"
+        "id": "PS_role_2437f6"
     },
     {
         "role": "glucan phosphatase (EC 3.1.3.-)",
@@ -30509,7 +30509,7 @@
             }
         },
         "publications": [],
-        "id": "29154f"
+        "id": "PS_role_29154f"
     },
     {
         "role": "kestotetraose hydrolase (EC 3.2.1.-)",
@@ -30534,7 +30534,7 @@
             }
         },
         "publications": [],
-        "id": "e5b2fd"
+        "id": "PS_role_e5b2fd"
     },
     {
         "role": "levan hydrolase (EC 3.2.1.-)",
@@ -30559,7 +30559,7 @@
             }
         },
         "publications": [],
-        "id": "3725d4"
+        "id": "PS_role_3725d4"
     },
     {
         "role": "pABA transport",
@@ -30581,7 +30581,7 @@
             }
         },
         "publications": [],
-        "id": "b580ce"
+        "id": "PS_role_b580ce"
     },
     {
         "role": "photosystem I 4.8K protein (PsaX)",
@@ -30604,7 +30604,7 @@
             }
         },
         "publications": [],
-        "id": "070e7e"
+        "id": "PS_role_070e7e"
     },
     {
         "role": "photosystem I P700 chlorophyll a apoprotein subunit Ia (PsaA)",
@@ -30633,7 +30633,7 @@
             }
         },
         "publications": [],
-        "id": "445157"
+        "id": "PS_role_445157"
     },
     {
         "role": "photosystem I P700 chlorophyll a apoprotein subunit Ib (PsaB)",
@@ -30664,7 +30664,7 @@
         "publications": [
             "https://doi.org/10.21577/0103-5053.20170238"
         ],
-        "id": "fb63ff"
+        "id": "PS_role_fb63ff"
     },
     {
         "role": "photosystem I assembly related protein Ycf3",
@@ -30692,7 +30692,7 @@
             }
         },
         "publications": [],
-        "id": "e4c878"
+        "id": "PS_role_e4c878"
     },
     {
         "role": "photosystem I assembly related protein Ycf37",
@@ -30715,7 +30715,7 @@
             }
         },
         "publications": [],
-        "id": "362277"
+        "id": "PS_role_362277"
     },
     {
         "role": "photosystem I assembly related protein Ycf4",
@@ -30743,7 +30743,7 @@
             }
         },
         "publications": [],
-        "id": "564d95"
+        "id": "PS_role_564d95"
     },
     {
         "role": "photosystem I biogenesis protein BtpA",
@@ -30766,7 +30766,7 @@
             }
         },
         "publications": [],
-        "id": "d9335e"
+        "id": "PS_role_d9335e"
     },
     {
         "role": "photosystem I iron-sulfur center subunit VII (PsaC)",
@@ -30795,7 +30795,7 @@
             }
         },
         "publications": [],
-        "id": "579899"
+        "id": "PS_role_579899"
     },
     {
         "role": "photosystem I subunit II (PsaD)",
@@ -30828,7 +30828,7 @@
             }
         },
         "publications": [],
-        "id": "1522c8"
+        "id": "PS_role_1522c8"
     },
     {
         "role": "photosystem I subunit III precursor, plastocyanin (cyt c553) docking protein (PsaF)",
@@ -30857,7 +30857,7 @@
             }
         },
         "publications": [],
-        "id": "03d895"
+        "id": "PS_role_03d895"
     },
     {
         "role": "photosystem I subunit IV (PsaE)",
@@ -30890,7 +30890,7 @@
             }
         },
         "publications": [],
-        "id": "739b26"
+        "id": "PS_role_739b26"
     },
     {
         "role": "photosystem I subunit IX (PsaJ)",
@@ -30918,7 +30918,7 @@
             }
         },
         "publications": [],
-        "id": "1f0db8"
+        "id": "PS_role_1f0db8"
     },
     {
         "role": "photosystem I subunit PsaG",
@@ -30947,7 +30947,7 @@
             }
         },
         "publications": [],
-        "id": "39872b"
+        "id": "PS_role_39872b"
     },
     {
         "role": "photosystem I subunit PsaN",
@@ -30976,7 +30976,7 @@
             }
         },
         "publications": [],
-        "id": "c02f1d"
+        "id": "PS_role_c02f1d"
     },
     {
         "role": "photosystem I subunit PsaO",
@@ -31005,7 +31005,7 @@
             }
         },
         "publications": [],
-        "id": "228387"
+        "id": "PS_role_228387"
     },
     {
         "role": "photosystem I subunit PsaP",
@@ -31034,7 +31034,7 @@
             }
         },
         "publications": [],
-        "id": "8b7141"
+        "id": "PS_role_8b7141"
     },
     {
         "role": "photosystem I subunit VI (PsaH)",
@@ -31067,7 +31067,7 @@
             }
         },
         "publications": [],
-        "id": "f90d98"
+        "id": "PS_role_f90d98"
     },
     {
         "role": "photosystem I subunit VIII (PsaI)",
@@ -31095,7 +31095,7 @@
             }
         },
         "publications": [],
-        "id": "bfed59"
+        "id": "PS_role_bfed59"
     },
     {
         "role": "photosystem I subunit X (PsaK, PsaK1)",
@@ -31124,7 +31124,7 @@
             }
         },
         "publications": [],
-        "id": "4921cd"
+        "id": "PS_role_4921cd"
     },
     {
         "role": "photosystem I subunit XI (PsaL)",
@@ -31153,7 +31153,7 @@
             }
         },
         "publications": [],
-        "id": "8dbedd"
+        "id": "PS_role_8dbedd"
     },
     {
         "role": "photosystem I subunit XII (PsaM)",
@@ -31176,7 +31176,7 @@
             }
         },
         "publications": [],
-        "id": "b483ec"
+        "id": "PS_role_b483ec"
     },
     {
         "role": "photosystem II protein D1 (PsbA)",
@@ -31207,7 +31207,7 @@
             }
         },
         "publications": [],
-        "id": "9bc471"
+        "id": "PS_role_9bc471"
     },
     {
         "role": "photosystem II protein D2 (PsbD)",
@@ -31238,7 +31238,7 @@
             }
         },
         "publications": [],
-        "id": "3c6f1d"
+        "id": "PS_role_3c6f1d"
     },
     {
         "role": "trans-cinnamate 2-monooxygenase (EC 1.14.13.14)",
@@ -31261,7 +31261,7 @@
             }
         },
         "publications": [],
-        "id": "01687d"
+        "id": "PS_role_01687d"
     },
     {
         "role": "ubiquinol cytochrome C oxidoreductase, cytochrome C1 subunit",
@@ -31292,7 +31292,7 @@
             }
         },
         "publications": [],
-        "id": "f06a9c"
+        "id": "PS_role_f06a9c"
     },
     {
         "role": "2-Dehydropantoate transport",
@@ -31317,7 +31317,7 @@
             }
         },
         "publications": [],
-        "id": "c3d05f"
+        "id": "PS_role_c3d05f"
     },
     {
         "role": "Hydrogen peroxide transport",
@@ -31346,7 +31346,7 @@
             }
         },
         "publications": [],
-        "id": "e489c2"
+        "id": "PS_role_e489c2"
     },
     {
         "role": "S-linalool synthase (EC 4.2.3.25)",
@@ -31377,7 +31377,7 @@
         "publications": [
             "33367256"
         ],
-        "id": "f2f905"
+        "id": "PS_role_f2f905"
     },
     {
         "role": "1,8-cineole synthase (EC 4.2.3.108)",
@@ -31407,7 +31407,7 @@
         "publications": [
             "https://doi:10.1104/pp.104.044388"
         ],
-        "id": "c5d566"
+        "id": "PS_role_c5d566"
     },
     {
         "role": "(E)-beta-Ocimene Synthase (EC 4.2.3.106)",
@@ -31445,7 +31445,7 @@
             "12624761",
             "20463089"
         ],
-        "id": "7d46a6"
+        "id": "PS_role_7d46a6"
     },
     {
         "role": "Alpha-farnesene synthase (EC 4.2.3.46)",
@@ -31482,7 +31482,7 @@
         "publications": [
             "20463089"
         ],
-        "id": "a47232"
+        "id": "PS_role_a47232"
     },
     {
         "role": "Geranyllinalool synthase (EC 4.2.3.144)",
@@ -31513,6 +31513,6 @@
         "publications": [
             "18398052"
         ],
-        "id": "e2539e"
+        "id": "PS_role_e2539e"
     }
 ]

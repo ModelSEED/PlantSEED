@@ -12,7 +12,7 @@ for entry in roles_list:
     str = entry['role'] + entry['reactions'][0] + entry['subsystems'][0]
 
     # create unique (truncated) hash ID from str and store in list
-    entry['id'] = hashlib.sha256(str.encode('utf-8')).hexdigest()[:6]
+    entry['id'] = 'PS_role_' + hashlib.sha256(str.encode('utf-8')).hexdigest()[:6]
     ID_list.append(entry['id'])
 
 # check for collisions (duplicate ID's)
