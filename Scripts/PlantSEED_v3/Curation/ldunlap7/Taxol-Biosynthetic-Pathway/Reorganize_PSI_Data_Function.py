@@ -16,9 +16,9 @@ import os       #Import operating system
 cwd = os.getcwd()  # Get the current working directory (cwd)
 files = os.listdir(cwd)  # Get all the files in that directory
 
-for file in os.listdir(cwd):
+for file in sorted(os.listdir(cwd)):
     if file.endswith(".csv"):   #Creates file exception for csv files within the cwd
-        file_path = f"{cwd}\{file}" #Finds the csv files within the cwd
+        file_path = os.path.join(cwd,file) #f"{cwd}\{file}" #Finds the csv files within the cwd
         shout(file_path)    #runs the function
 
 # open the filehandle for reading the PSI input
