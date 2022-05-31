@@ -13,6 +13,7 @@ with open("../../../../Data/PlantSEED_v3/PlantSEED_Roles.json") as subsystem_fil
 roles_dict = dict()
 rxns_dict  = dict()
 ftrs_dict  = dict()
+pubs_dict  = dict()
 
 # Adding roles to roles_dict and spontaneous_reactions
 spontaneous_reactions = list()
@@ -24,6 +25,7 @@ for entry in roles_list:
                 spontaneous_reactions.append(reaction)
     rxns_dict[entry['role']] = entry['reactions']
     ftrs_dict[entry['role']] = entry['features']
+    pubs_dict[entry['role']] = entry['publications']
 
 # Reading each line in biosynthesis file
 with open(pwy_file) as pwy_file_handle:
@@ -42,7 +44,7 @@ with open(pwy_file) as pwy_file_handle:
         ####################################
         # UPDATE EXISTING ROLE
         if(new_role is False):
-            print("Update Role\t" + role)
+            print("Existing Role\t" + role)
 
             # Convert rxn or ftr to list if string
             if(isinstance(rxns_dict[role], str)):
@@ -56,6 +58,8 @@ with open(pwy_file) as pwy_file_handle:
             else: rxn = rxn.split()
             if(';' in ftr): ftr = ftr.split(';')
             else: ftr = ftr.split()
+            if(',' in pub): pub = pub.split(',')
+            else: pub = pub.split()
 
             # Find index of role
             for i in range(len(roles_list)):
@@ -71,7 +75,7 @@ with open(pwy_file) as pwy_file_handle:
 
             ####################################
             # New feature
-            elif(not set(ftr).issubset(set(ftrs_dict[role]))):
+            if(not set(ftr).issubset(set(ftrs_dict[role]))):
                 for entry in ftr:
                     if entry not in ftrs_dict[role]:
                         roles_list[index]['features'].append(entry)
@@ -90,8 +94,24 @@ with open(pwy_file) as pwy_file_handle:
                     loc_dict[gene]=[]
 
                 if(cpt not in roles_list[index]['localization']):
+                    print('\t\t  new cpt:\t' + entry)
                     roles_list[index]['localization'][cpt] = dict()
-                roles_list[index]['localization'][cpt][gene]=loc_dict[gene]
+                elif(gene not in roles_list[index]['localization'][cpt]):
+                    print('\t\t  new gene:\t' + entry)
+                    roles_list[index]['localization'][cpt][gene]=loc_dict[gene]
+                else:
+                    for src in loc_dict[gene]:
+                        if(src not in roles_list[index]['localization'][cpt][gene]):
+                            print('\t\t  new source:\t' + entry)
+                            roles_list[index]['localization'][cpt][gene].append(src)
+
+            ####################################
+            # New Publication
+            if(not set(pub).issubset(set(pubs_dict[role]))):
+                for entry in pub:
+                    if entry not in pubs_dict[role]:
+                        roles_list[index]['publications'].append(entry)
+                        print("\t\t  new publication:\t" + entry)
 
         ####################################
         # ADD NEW ROLE
