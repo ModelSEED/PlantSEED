@@ -1171,7 +1171,9 @@
                 "rxn27070": []
             }
         },
-        "publications": [],
+        "publications": [
+            "10.1104/pp.001602"
+        ],
         "kbase_id": "PS_role_e9c8c3"
     },
     {
@@ -1721,7 +1723,8 @@
             "Athaliana_TAIR10||AT1G31180"
         ],
         "reactions": [
-            "rxn03062"
+            "rxn03062",
+            "rxn14172"
         ],
         "localization": {
             "d": {
@@ -1739,7 +1742,9 @@
                 ]
             }
         },
-        "publications": [],
+        "publications": [
+            "10.1199/tab.0137"
+        ],
         "kbase_id": "PS_role_06df56"
     },
     {
@@ -16709,7 +16714,9 @@
                 "rxn00454": []
             }
         },
-        "publications": [],
+        "publications": [
+            "10.1105/tpc.105.039339"
+        ],
         "kbase_id": "PS_role_6f9c37"
     },
     {
@@ -16849,7 +16856,9 @@
                 "rxn13975": []
             }
         },
-        "publications": [],
+        "publications": [
+            "10.1199/tab.0137"
+        ],
         "kbase_id": "PS_role_419d65"
     },
     {
@@ -16898,7 +16907,9 @@
                 "rxn13975": []
             }
         },
-        "publications": [],
+        "publications": [
+            "10.1199/tab.0137"
+        ],
         "kbase_id": "PS_role_b63608"
     },
     {
@@ -16949,7 +16960,10 @@
                 "rxn14347": []
             }
         },
-        "publications": [],
+        "publications": [
+            "12432038",
+            "10.1104/pp.106.091579"
+        ],
         "kbase_id": "PS_role_ef784f"
     },
     {
