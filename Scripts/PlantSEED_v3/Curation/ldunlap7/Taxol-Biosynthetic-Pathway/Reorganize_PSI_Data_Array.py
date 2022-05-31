@@ -10,7 +10,8 @@ files = ["PSI_OG0000004.csv","PSI_OG0000005.csv","PSI_OG0000008.csv"]
 # open the filehandle for reading the PSI input
 #
 header ='PSI'
-for x in files:
+for x in sorted(files):
+    Print(x)
     with open(x) as psi_filehandle:    #PSI_OG0000004.txt
         for line in psi_filehandle.readlines():
             line=line.strip('\r\n')
