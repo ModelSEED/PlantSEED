@@ -1139,7 +1139,9 @@
                 "rxn27070": []
             }
         },
-        "publications": []
+        "publications": [
+            "10.1104/pp.001602"
+        ]
     },
     {
         "role": "2-oxoglutarate dehydrogenase E1 component (EC 1.2.4.2)",
@@ -1671,7 +1673,8 @@
             "Athaliana_TAIR10||AT1G31180"
         ],
         "reactions": [
-            "rxn03062"
+            "rxn03062",
+            "rxn14172"
         ],
         "localization": {
             "d": {
@@ -1689,7 +1692,9 @@
                 ]
             }
         },
-        "publications": []
+        "publications": [
+            "10.1199/tab.0137"
+        ]
     },
     {
         "role": "3-methyl-2-oxobutanoate hydroxymethyltransferase (EC 2.1.2.11)",
@@ -16233,7 +16238,9 @@
                 "rxn00454": []
             }
         },
-        "publications": []
+        "publications": [
+            "10.1105/tpc.105.039339"
+        ]
     },
     {
         "role": "Methylenetetrahydrofolate dehydrogenase (NADP+) (EC 1.5.1.5)",
@@ -16370,7 +16377,9 @@
                 "rxn13975": []
             }
         },
-        "publications": []
+        "publications": [
+            "10.1199/tab.0137"
+        ]
     },
     {
         "role": "Methylthioalkylmalate isomerase small subunit (EC 5.4.4.-)",
@@ -16418,7 +16427,9 @@
                 "rxn13975": []
             }
         },
-        "publications": []
+        "publications": [
+            "10.1199/tab.0137"
+        ]
     },
     {
         "role": "Methylthioalkylmalate synthase (EC 2.3.3.-)",
@@ -16468,7 +16479,10 @@
                 "rxn14347": []
             }
         },
-        "publications": []
+        "publications": [
+            "12432038",
+            "10.1104/pp.106.091579"
+        ]
     },
     {
         "role": "Methylthioribose-1-phosphate isomerase (EC 5.3.1.23)",
