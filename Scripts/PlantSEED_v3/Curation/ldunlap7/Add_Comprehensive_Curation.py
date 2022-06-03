@@ -119,14 +119,20 @@ for pwy_file in glob.glob(search_path):
 
                 ####################################
                 # Add subsystem and class
-                class_dict=dict()
-                for entry in ss.split('||'):
-                    new_role['subsystems'].append(entry)
-                    class_dict[entry]=[]
+                # Formatting:   separate subsystems by `||`
+                                # separate pathways by '||' and ',' for subsystems and pathways
 
-                    # If MetaCyc Pathway defined
-                    if(pwy != ""):
-                        class_dict[entry].append(pwy)
+
+                class_dict=dict()
+                for i in range(0, len(ss.split('||'))):
+                    subsystem = ss.split('||')[i]
+                    new_role['subsystems'].append(subsystem)
+
+                    if(subsystem not in class_dict):
+                        class_dict[subsystem] = list()
+
+                    for pathway in pwy.split('||')[i].split(','):
+                        class_dict[subsystem].append(pathway)
 
                 new_role['classes'][cls]=class_dict
 
@@ -150,17 +156,17 @@ for pwy_file in glob.glob(search_path):
                 # Add localization
                 for entry in loc.split(';'):
                     loc_dict=dict()
-                    cpt=entry
                     #if protein localization data used
                     if(':' in entry):
-                        pass
-                        #(cpt,gene,sources)=entry.split(':')
-                        #loc_dict[gene]=sources.split('|')
+                        (cpt,gene,sources)=entry.split(':')
+                        loc_dict[gene]=sources.split('|')
                     #assumed reaction compartment
                     else:
                         loc_dict[rxn]=[]
 
-                    new_role['localization'][cpt]=loc_dict
+                    if(cpt not in new_role['localization']):
+                        new_role['localization'][cpt] = dict()
+                    new_role['localization'][cpt][gene]=loc_dict[gene]
 
                 ####################################
                 # Add predictions

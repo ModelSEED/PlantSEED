@@ -30604,5 +30604,378 @@
         "publications": [
             "18398052"
         ]
+    },
+    {
+        "role": "Taxadiene synthase (EC 4.2.3.17)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5660",
+                    "PWY-7392"
+                ]
+            }
+        },
+        "features": [
+            "Uniprot||Q41594"
+        ],
+        "reactions": [
+            "rxn04179"
+        ],
+        "localization": {
+            "d": {
+                "Q41594": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            "8621577"
+        ],
+        "predictions": {
+            "Uniprot||Q41594": {
+                "Taxus_chinensis||evm2.model.Chr09.377": "0.82",
+                "Taxus_chinensis||evm2.model.Chr09.378": "0.84",
+                "Taxus_chinensis||evm2.model.unplaceContig_980.1": "0.85",
+                "Taxus_chinensis||evm2.model.Chr09.416": "0.98"
+            }
+        },
+        "sequences": {
+            "Uniprot||Q41594": "MAQLSFNAALKMNALGNKAIHDPTNCRAKSERQMMWVCSRSGRTRVKMSRGSGGPGPVVMMSSSTGTSKVVSETSSTIVDDIPRLSANYHGDLWHHNVIQTLETPFRESSTYQERADELVVKIKDMFNALGDGDISPSAYDTAWVARLATISSDGSEKPRFPQALNWVFNNQLQDGSWGIESHFSLCDRLLNTTNSVIALSVWKTGHSQVQQGAEFIAENLRLLNEEDELSPDFQIIFPALLQKAKALGINLPYDLPFIKYLSTTREARLTDVSAAADNIPANMLNALEGLEEVIDWNKIMRFQSKDGSFLSSPASTACVLMNTGDEKCFTFLNNLLDKFGGCVPCMYSIDLLERLSLVDNIEHLGIGRHFKQEIKGALDYVYRHWSERGIGWGRDSLVPDLNTTALGLRTLRMHGYNVSSDVLNNFKDENGRFFSSAGQTHVELRSVVNLFRASDLAFPDERAMDDARKFAEPYLREALATKISTNTKLFKEIEYVVEYPWHMSIPRLEARSYIDSYDDNYVWQRKTLYRMPSLSNSKCLELAKLDFNIVQSLHQEELKLLTRWWKESGMADINFTRHRVAEVYFSSATFEPEYSATRIAFTKIGCLQVLFDDMADIFATLDELKSFTEGVKRWDTSLLHEIPECMQTCFKVWFKLMEEVNNDVVKVQGRDMLAHIRKPWELYFNCYVQEREWLEAGYIPTFEEYLKTYAISVGLGPCTLQPILLMGELVKDDVVEKVHYPSNMFELVSLSWRLTNDTKTYQAEKARGQQASGIACYMKDNPGATEEDAIKHICRVVDRALKEASFEYFKPSNDIPMGCKSFIFNLRLCVQIFYKFIDGYGIANEEIKDYIRKVYIDPIQV"
+        }
+    },
+    {
+        "role": "Taxadiene 5\u00ce\u00b1-hydroxylase (EC 1.14.99.37)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5660"
+                ]
+            }
+        },
+        "features": [
+            "Uniprot||Q6WG30"
+        ],
+        "reactions": [
+            "rxn45526"
+        ],
+        "localization": {
+            "d": {
+                "Q6WG30": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "8807878"
+        ],
+        "predictions": {
+            "Uniprot||Q6WG30": {
+                "Taxus_chinensis||evm2.model.Chr09.379": "1.0"
+            }
+        },
+        "sequences": {}
+    },
+    {
+        "role": "Taxane 13\u00ce\u00b1-hydroxylase (EC 1.14.14.106)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5660"
+                ]
+            }
+        },
+        "features": [
+            "Uniprot||Q8W4T9"
+        ],
+        "reactions": [
+            "rxn46178"
+        ],
+        "localization": {
+            "d": {
+                "Q8W4T9": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "11707604"
+        ],
+        "predictions": {
+            "Uniprot||Q8W4T9": {
+                "Taxus_chinensis||evm2.model.Chr09.140": "0.91",
+                "Taxus_chinensis||evm2.model.Chr09.125": "0.93",
+                "Taxus_chinensis||evm2.model.Chr09.143": "0.95"
+            }
+        },
+        "sequences": {
+            "Uniprot||Q8W4T9": "MDALKQLEVSPSILFVTLAVMAGIILFFRSKRHSSVKLPPGNLGFPLVGETLQFVRSLGSSTPQQFIEERMSKFGDVFKTSIIGHPTVVLCGPAGNRLVLSNENKLVQMSWPSSMMKLIGEDCLGGKTGEQHRIVRAALTRFLGPQALQNHFAKMSSGIQRHINEKWKGKDEATVLPLVKDLVFSVASRLFFGITEEHLQEQLHNLLEVILVGSFSVPLNIPGFSYHKAIQARATLADIMTHLIEKRRNELRAGTASENQDLLSVLLTFTDERGNSLADKEILDNFSMLLHGSYDSTNSPLTMLIKVLASHPESYEKVAQEQFGILSTKMEGEEIAWKDLKEMKYSWQVVQETLRMYPPIFGTFRKAITDIHYNGYTIPKGWKLLWTTYSTQTKEEYFKDADQFKPSRFEEEGKHVTPYTYLPFGGGMRVCPGWEFAKMETLLFLHHFVKAFSGLKAIDPNEKLSGKPLPPLPVNGLPIKLYSRS"
+        }
+    },
+    {
+        "role": "Taxa-4(20), 11(12)-dien-5a-ol-o-acetyl transferase (EC 2.3.1.162)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5660"
+                ]
+            }
+        },
+        "features": [
+            "Uniprot||Q9M6F0"
+        ],
+        "reactions": [
+            "rxn04180"
+        ],
+        "localization": {
+            "d": {
+                "Q9M6F0": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "10666320"
+        ],
+        "predictions": {},
+        "sequences": {
+            "Uniprot||Q9M6F0": "MEKTDLHVNLIEKVMVGPSPPLPKTTLQLSSIDNLPGVRGSIFNALLIYNASPSPTMISADPAKPIREALAKILVYYPPFAGRLRETENGDLEVECTGEGAMFLEAMADNELSVLGDFDDSNPSFQQLLFSLPLDTNFKDLSLLVVQVTRFTCGGFVVGVSFHHGVCDGRGAAQFLKGLAEMARGEVKLSLEPIWNRELVKLDDPKYLQFFHFEFLRAPSIVEKIVQTYFIIDFETINYIKQSVMEECKEFCSSFEVASAMTWIARTRAFQIPESEYVKILFGMDMRNSFNPPLPSGYYGNSIGTACAVDNVQDLLSGSLLRAIMIIKKSKVSLNDNFKSRAVVKPSELDVNMNHENVVAFADWSRLGFDEVDFGWGNAVSVSPVQQQSALAMQNYFLFLKPSKNKPDGIKILMFLPLSKMKSFKIEMEAMMKKYVAKV"
+        }
+    },
+    {
+        "role": "Taxane 10\u00ce\u00b2-hydroxylase (EC 1.14.14.105)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5660"
+                ]
+            }
+        },
+        "features": [
+            "Uniprot||Q9AXM6"
+        ],
+        "reactions": [
+            "rxn48051"
+        ],
+        "localization": {
+            "d": {
+                "Q9AXM6": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "11171980"
+        ],
+        "predictions": {
+            "Uniprot||Q9AXM6": {
+                "Taxus_chinensis||evm2.model.Chr09.176": "0.83",
+                "Taxus_chinensis||evm2.model.Chr09.177": "0.99"
+            }
+        },
+        "sequences": {
+            "Uniprot||Q9AXM6": "MDSFIFLRSIGTKFGQLESSPAILSLTLAPILAIILLLLFRYNHRSSVKLPPGKLGFPLIGETIQLLRTLRSETPQKFFDDRLKKFGPVYMTSLIGHPTVVLCGPAGNKLVLSNEDKLVEMEGPKSFMKLIGEDSIVAKRGEDHRILRTALARFLGAQALQNYLGRMSSEIGHHFNEKWKGKDEVKVLPLVRGLIFSIASTLFFDVNDGHQQKQLHHLLETILVGSLSVPLDFPGTRYRKGLQARLKLDEILSSLIKRRRRDLRSGIASDDQDLLSVLLTFRDEKGNSLTDQGILDNFSAMFHASYDTTVAPMALIFKLLYSNPEYHEKVFQEQLEIIGNKKEGEEISWKDLKSMKYTWQAVQESLRMYPPVFGIFRKAITDIHYDGYTIPKGWRVLCSPYTTHLREEYFPEPEEFRPSRFEDEGRHVTPYTYVPFGGGLRTCPGWEFSKIEILLFVHHFVKNFSSYIPVDPNEKVLSDPLPPLPANGFSIKLFPRS"
+        }
+    },
+    {
+        "role": "Taxoid 14\u00ce\u00b2-hydroxylase (EC 1.14.13.146)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5660"
+                ]
+            }
+        },
+        "features": [
+            "Uniprot||Q84KI1"
+        ],
+        "reactions": [
+            "rxn45029"
+        ],
+        "localization": {
+            "d": {
+                "Q84KI1": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "12729625"
+        ],
+        "predictions": {},
+        "sequences": {
+            "Uniprot||Q84KI1": "MDVFYPLKSTVAKFNECFPAILFIVLSAVAGIVLPLLLFLRSKRRSSVGLPPGKLGYPFIGESLLFLKALRSNTVEQFLDERVKNFGNVFKTSLIGHPTVVLCGPAGNRLILANEEKLVQMSWPKSSMKLMGEKSITAKRGEGHMIIRSALQGFFSPGALQKYIGQMSKTIENHINEKWKGNDQVSVVALVGDLVFDISACLFFNINEKHERERLFELLEIIAVGVLAVPVDLPGFAYHRALQARSKLNAILSGLIEKRKMDLSSGLATSNQDLLSVFLTFKDDRGNPCSDEEILDNFSGLLHGSYDTTVSAMACVFKLLSSNPECYEKVVQEQLGILSNKLEGDEITWKDVKSMKYTWQVVQETLRLYPSIFGSFRQAITDIHYNGYIIPKGWKLLWTPYTTHPKEMYFSEPEKFLPSRFDQEGKLVAPYTFLPFGGGQRSCPGWEFSKMEILLSVHHFVKTFSTFTPVDPAEIIARDSLCPLPSNGFSVKLFPRSYSLHTGNQVKKI"
+        }
+    },
+    {
+        "role": "Taxane 2\u00ce\u00b1-O-benzoyltransferase (EC 2.3.1.166)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5660"
+                ]
+            }
+        },
+        "features": [
+            "Uniprot||Q9FPW3"
+        ],
+        "reactions": [
+            "rxn04192"
+        ],
+        "localization": {
+            "d": {
+                "Q9FPW3": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "11095755"
+        ],
+        "predictions": {
+            "Uniprot||Q9FPW3": {
+                "Taxus_chinensis||evm2.model.Chr01.690": "0.82",
+                "Taxus_chinensis||evm2.model.Chr01.941": "0.82",
+                "Taxus_chinensis||evm2.model.Chr01.933": "0.83",
+                "Taxus_chinensis||evm2.model.Chr01.691": "0.92"
+            }
+        },
+        "sequences": {
+            "Uniprot||Q9FPW3": "MGRFNVDMIERVIVAPCLQSPKNILHLSPIDNKTRGLTNILSVYNASQRVSVSADPAKTIREALSKVLVYYPPFAGRLRNTENGDLEVECTGEGAVFVEAMADNDLSVLQDFNEYDPSFQQLVFNLREDVNIEDLHLLTVQVTRFTCGGFVVGTRFHHSVSDGKGIGQLLKGMGEMARGEFKPSLEPIWNREMVKPEDIMYLQFDHFDFIHPPLNLEKSIQASMVISFERINYIKRCMMEECKEFFSAFEVVVALIWLARTKSFRIPPNEYVKIIFPIDMRNSFDSPLPKGYYGNAIGNACAMDNVKDLLNGSLLYALMLIKKSKFALNENFKSRILTKPSTLDANMKHENVVGCGDWRNLGFYEADFGWGNAVNVSPMQQQREHELAMQNYFLFLRSAKNMIDGIKILMFMPASMVKPFKIEMEVTINKYVAKICNSKL"
+        }
+    },
+    {
+        "role": "10-deacetylbaccatin III-10-O-caetyl transferase (EC 2.3.1.167)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5660"
+                ]
+            }
+        },
+        "features": [
+            "Uniprot||Q9M6E2"
+        ],
+        "reactions": [
+            "rxn04184"
+        ],
+        "localization": {
+            "d": {
+                "Q9M6E2": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "10639122"
+        ],
+        "predictions": {},
+        "sequences": {
+            "Uniprot||Q9M6E2": "MAGSTEFVVRSLERVMVAPSQPSPKAFLQLSTLDNLPGVRENIFNTLLVYNASDRVSVDPAKVIRQALSKVLVYYSPFAGRLRKKENGDLEVECTGEGALFVEAMADTDLSVLGDLDDYSPSLEQLLFCLPPDTDIEDIHPLVVQVTRFTCGGFVVGVSFCHGICDGLGAGQFLIAMGEMARGEIKPSSEPIWKRELLKPEDPLYRFQYYHFQLICPPSTFGKIVQGSLVITSETINCIKQCLREESKEFCSAFEVVSALAWIARTRALQIPHSENVKLIFAMDMRKLFNPPLSKGYYGNFVGTVCAMDNVKDLLSGSLLRVVRIIKKAKVSLNEHFTSTIVTPRSGSDESINYENIVGFGDRRRLGFDEVDFGWGHADNVSLVQHGLKDVSVVQSYFLFIRPPKNNPDGIKILSFMPPSIVKSFKFEMETMTNKYVTKP"
+        }
+    },
+    {
+        "role": "Phenylpropanoyltransferase (EC 2.3.1.-)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5660"
+                ]
+            }
+        },
+        "features": [
+            "Uniprot||Q8H2B5"
+        ],
+        "reactions": [
+            "rxn25197"
+        ],
+        "localization": {
+            "d": {
+                "Q8H2B5": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "12232048"
+        ],
+        "predictions": {
+            "Uniprot||Q8H2B5": {
+                "Taxus_chinensis||evm2.model.Chr01.3225": "0.88"
+            }
+        },
+        "sequences": {
+            "Uniprot||Q8H2B5": "MKKTGSFAEFHVNMIERVMVRPCLPSPKTILPLSAIDNMARAFSNVLLVYAANMDRVSADPAKVIREALSKVLVYYYPFAGRLRNKENGELEVECTGQGVLFLEAMADSDLSVLTDLDNYNPSFQQLIFSLPQDTDIEDLHLLIVQVTRFTCGGFVVGANVYGSACDAKGFGQFLQSMAEMARGEVKPSIEPIWNRELVKLEHCMPFRMSHLQIIHAPVIEEKFVQTSLVINFEIINHIRRRIMEERKESLSSFEIVAALVWLAKIKAFQIPHSENVKLLFAMDLRRSFNPPLPHGYYGNAFGIACAMDNVHDLLSGSLLRTIMIIKKSKFSLHKELNSKTVMSSSVVDVNTKFEDVVSISDWRHSIYYEVDFGWGDAMNVSTMLQQQEHEKSLPTYFSFLQSTKNMPDGIKMLMFMPPSKLKKFKIEIEAMIKKYVTKVCPSKL"
+        }
+    },
+    {
+        "role": "Taxoid C13-side chain N-benzoyltransferase (EC 2.3.1.-)",
+        "include": true,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5660"
+                ]
+            }
+        },
+        "features": [
+            "Uniprot||Q8LL69"
+        ],
+        "reactions": [
+            "rxn12020"
+        ],
+        "localization": {
+            "d": {
+                "Q8LL69": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "12232048",
+            "12089320"
+        ],
+        "predictions": {},
+        "sequences": {
+            "Uniprot||Q8LL69": "MEKAGSTDFHVKKFDPVMVAPSLPSPKATVQLSVVDSLTICRGIFNTLLVFNAPDNISADPVKIIREALSKVLVYYFPLAGRLRSKEIGELEVECTGDGALFVEAMVEDTISVLRDLDDLNPSFQQLVFWHPLDTAIEDLHLVIVQVTRFTCGGIAVGVTLPHSVCDGRGAAQFVTALAEMARGEVKPSLEPIWNRELLNPEDPLHLQLNQFDSICPPPMLEELGQASFVINVDTIEYMKQCVMEECNEFCSSFEVVAALVWIARTKALQIPHTENVKLLFAMDLRKLFNPPLPNGYYGNAIGTAYAMDNVQDLLNGSLLRAIMIIKKAKADLKDNYSRSRVVTNPYSLDVNKKSDNILALSDWRRLGFYEADFGWGGPLNVSSLQRLENGLPMFSTFLYLLPAKNKSDGIKLLLSCMPPTTLKSFKIVMEAMIEKYVSKV"
+        }
     }
 ]
