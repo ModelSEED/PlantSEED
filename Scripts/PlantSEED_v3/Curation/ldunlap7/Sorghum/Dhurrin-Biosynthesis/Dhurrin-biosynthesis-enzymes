@@ -1,3 +1,3 @@
-rxn00523	tyrosine N-monooxygenase (E.C. 1.14.14.36)	Sobic.001G012300	Uniprot||Q43135	 10049494,7876084,7487064	 Terpenoid metabolism	 Secondary metabolism	 PWY-7088,PWY-7901,PWY-861	c:Assumed
-rxn02998	4-hydroxyphenylacetaldehyde oxime monooxygenase (E.C. 1.14.14.37)	 Sobic.001G012200	 Uniprot||Q48958	26361733,10049494	 Terpenoid metabolism	 Secondary metabolism	 PWY-7088,PWY-861	 c:Assumed
-rxn02991	UDP-glucose:p-hydroxymandelonitrile-O-glucosyltransferase (E.C. 2.4.1.85)	 Sobic.001G012400	 Uniprot||Q9SBL1	10585420,16169969	 Terpenoid metabolism	 Secondary metabolism	 PWY-861	c:Assumed
+rxn00523	tyrosine N-monooxygenase (E.C. 1.14.14.36)	Sbicolor_3.1.1||Sobic.001G012300;Uniprot||Q43135	 10049494,7876084,7487064	 Terpenoid metabolism	 Secondary metabolism	 PWY-7088,PWY-7901,PWY-861	c:Assumed
+rxn02998	4-hydroxyphenylacetaldehyde oxime monooxygenase (E.C. 1.14.14.37)	 Sbicolor_3.1.1||Sobic.001G012200;Uniprot||Q48958	26361733,10049494	 Terpenoid metabolism	 Secondary metabolism	 PWY-7088,PWY-861	 c:Assumed
+rxn02991	UDP-glucose:p-hydroxymandelonitrile-O-glucosyltransferase (E.C. 2.4.1.85)	 Sbicolor_3.1.1||Sobic.001G012400;Uniprot||Q9SBL1	10585420,16169969	 Terpenoid metabolism	 Secondary metabolism	 PWY-861	c:Assumed
