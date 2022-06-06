@@ -1,10 +1,10 @@
-rxn04179	Taxadiene synthase (EC 4.2.3.17)	Uniprot||Q41594	 8621577	Terpenoid metabolism	Secondary metabolism	PWY-5660,PWY-7392	 d:Literature
-rxn45526	Taxadiene 5α-hydroxylase (EC 1.14.99.37)	Uniprot||Q6WG30	 8807878	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Assumed
-rxn46178	Taxane 13α-hydroxylase (EC 1.14.14.106)	 Uniprot||Q8W4T9	11707604	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Assumed
-rxn04180	Taxa-4(20), 11(12)-dien-5α-ol-O-acetyl transferase (EC 2.3.1.162)	 Uniprot||Q9M6F0	10666320	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Assumed
-rxn48051	Taxane 10β-hydroxylase (EC 1.14.14.105)	 Uniprot||Q9AXM6	11171980	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Assumed
-rxn45029	Taxoid 14β-hydroxylase (EC 1.14.13.146)	 Uniprot||Q84KI1	12729625	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Assumed
-rxn04192	Taxane 2α-O-benzoyltransferase (EC 2.3.1.166)	 Uniprot||Q9FPW3	11095755	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Assumed
-rxn04184	10-deacetylbaccatin III-10-O-caetyl transferase (EC 2.3.1.167)	Uniprot||Q9M6E2	 10639122	 Terpenoid metabolism	 Secondary metabolism	 PWY-5660	 d:Assumed
-rxn25197	Phenylpropanoyltransferase (EC 2.3.1.-)	 Uniprot||Q8H2B5	12232048	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Assumed
-rxn12020	Taxoid C13-side chain N-benzoyltransferase (EC 2.3.1.-)	 Uniprot||Q8LL69	12232048,12089320	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Assumed
+rxn04179	Taxadiene synthase (EC 4.2.3.17)	Uniprot||Q41594	8621577	Terpenoid metabolism	Secondary metabolism	PWY-5660,PWY-7392	d:Q41594:Literature
+rxn45526	Taxadiene 5α-hydroxylase (EC 1.14.99.37)	Uniprot||Q6WG30	8807878	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Q6WG30:Assumed
+rxn46178	Taxane 13α-hydroxylase (EC 1.14.14.106)	Uniprot||Q8W4T9	11707604	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Q8W4T9:Assumed
+rxn04180	Taxa-4(20), 11(12)-dien-5a-ol-o-acetyl transferase (EC 2.3.1.162)	Uniprot||Q9M6F0	10666320	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Q9M6F0:Assumed
+rxn48051	Taxane 10β-hydroxylase (EC 1.14.14.105)	Uniprot||Q9AXM6	11171980	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Q9AXM6:Assumed
+rxn45029	Taxoid 14β-hydroxylase (EC 1.14.13.146)	Uniprot||Q84KI1	12729625	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Q84KI1:Assumed
+rxn04192	Taxane 2α-O-benzoyltransferase (EC 2.3.1.166)	Uniprot||Q9FPW3	11095755	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Q9FPW3:Assumed
+rxn04184	10-deacetylbaccatin III-10-O-caetyl transferase (EC 2.3.1.167)	Uniprot||Q9M6E2	10639122	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Q9M6E2:Assumed
+rxn25197	Phenylpropanoyltransferase (EC 2.3.1.-)	Uniprot||Q8H2B5	12232048	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Q8H2B5:Assumed
+rxn12020	Taxoid C13-side chain N-benzoyltransferase (EC 2.3.1.-)	Uniprot||Q8LL69	12232048,12089320	Terpenoid metabolism	Secondary metabolism	PWY-5660	d:Q8LL69:Assumed

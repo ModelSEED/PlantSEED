@@ -108,3 +108,4 @@ All|SM	cpd06735	c	0.0001	1,8-cineol	terpenoid
 All|SM	cpd06559	d|c	0.0001	Alpha-farnesene	terpenoid
 All|SM	cpd06763	d|c	0.0001	E-beta-ocimene	terpenoid
 All|SM	cpd25460	c	0.0001	Geranyllinalool	terpenoid
+All|SM	cpd17403	d	0.0001	Homomethionine protein glucosinolate

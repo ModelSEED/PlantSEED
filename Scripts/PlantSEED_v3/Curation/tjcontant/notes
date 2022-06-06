@@ -1,0 +1,65 @@
+NOTES
+
+comound and reaction ID from PlantSEED
+gene abbreviation from Bekaert et al.
+main compounds only in reactions
+classes the did not relate to glucosinolates were not included (yet)
+
+some roles have the genes in c local. but the rxns in d
+
+
+METHIONINE to HOMOMETHIONINE (PWY-1186)
+
+1.	L-methionine (cpd00060) -> 4-(methylsulfanyl)-2-oxobutanoate (cpd00869)
+
+		BCAT4 (same enzyme, two reactions) (Q9LE06)
+		rxn37695	Methionine--oxo-acid aminotransferase (EC 2.6.1.88)	Athaliana_TAIR10||AT3G19710		Methionine_and_cysteine_metabolism_in_plants||Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids	||PWY-1186	c:PPDB|GFP
+		rxn00454	Methionine--oxo-acid aminotransferase (EC 2.6.1.88)	Athaliana_TAIR10||AT3G19710		Methionine_and_cysteine_metabolism_in_plants||Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids	||PWY-1186	c:PPDB|GFP
+
+
+2. 	4-(methylsulfanyl)-2-oxobutanoate (cpd00869) -> 2-[(2'-methylsulfanyl)ethyl]malate (cpd17400)
+
+		MAM1 (same reaction, two enzymes) (Q9FG67)
+		rxn14004	Methylthioalkylmalate synthase (EC 2.3.3.-)	Athaliana_TAIR10||AT5G23010	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids	PWY-1186	d:AraCyc
+
+		MAM3 (same reaction, two enzymes) (Q9FN52)
+		rxn14004	Methylthioalkylmalate synthase (EC 2.3.3.-)	Athaliana_TAIR10||AT5G23020	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids	PWY-1186	d:PPDB|AraCyc
+
+
+3.a	2-[(2'-methylsulfanyl)ethyl]malate (cpd17400) -> 2-[(2'-methylsulfanyl)ethyl]maleate (cpd33422)
+
+		rxn46433
+
+
+3.b	2-[(2'-methylsulfanyl)ethyl]maleate (cpd33422) -> 3-[(2'-methylsulfanyl)ethyl]malate (cpd17402)
+		SSU2 (AT2G43100), SSU3 (AT3G58990)SSU2 (AT2G43100), SSU3 (AT3G58990)
+
+		rxn48196
+
+
+3.	2-[(2'-methylsulfanyl)ethyl]malate (cpd17400) -> 3-[(2'-methylsulfanyl)ethyl]malate (cpd17402)
+
+		LSU1 (Q94AR8)
+		rxn13975	Methylthioalkylmalate isomerase large subunit (EC 5.4.4.-)		Athaliana_TAIR10||AT4G13430	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids		d:PPDB
+
+		SSU2 (Q9ZW84)
+		rxn13975	Methylthioalkylmalate isomerase small subunit (EC 5.4.4.-)		Athaliana_TAIR10||AT2G43100	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids		d:PPDB|GFP
+
+		SSU3 (Q9LYT7)
+		rxn13975	Methylthioalkylmalate isomerase small subunit (EC 5.4.4.-)		Athaliana_TAIR10||AT3G58990	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids		d:PPDB
+
+
+4.	2-[2-(methylsulfanyl)ethyl]-3-oxobutanedioate (cpd32609) -> 5-(methylsulfanyl)-2-oxopentanoate (cpd17401)
+
+		IMD1 (Q9FMT1)
+		rxn14172	3-isopropylmalate dehydrogenase (EC 1.1.1.85)		Athaliana_TAIR10||AT5G14200	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids	PWY-1186	d:PPDB
+
+5.	5-(methylsulfanyl)-2-oxopentanoate (cpd17401) -> L-homomethionine (cpd17403)
+
+		BCAT3 (Q9M401)
+		rxn37767	2-oxo-5-methylthiopentanoate transaminase (EC 2.6.1.-)	Athaliana_TAIR10||AT3G49680	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids	PWY-1186	d:PPDB|AraCyc|GFP
+
+
+
+HOMOMETHIONINE CHAIN ELONGATION
+
