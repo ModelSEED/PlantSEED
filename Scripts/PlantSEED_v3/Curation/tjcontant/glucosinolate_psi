@@ -1,0 +1,738 @@
+{
+    "AT3G49680": {
+        "genomes": {
+            "Alyrata_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "485328": 0.95,
+                    "929873": 0.95
+                }
+            },
+            "Alyrata_v2.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AL3G33180.t1": 0.95,
+                    "AL5G29630.t1": 0.95
+                }
+            },
+            "Athaliana_Araport11": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AT3G19710.1": 1.0,
+                    "AT3G49680.1": 1.0
+                }
+            },
+            "Athaliana_TAIR10": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AT3G19710.1": 1.0,
+                    "AT3G49680.1": 1.0
+                }
+            },
+            "Boleraceacapitata_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Bol021961": 0.85,
+                    "Bol037342": 0.87
+                }
+            },
+            "Bstricta_v1.2": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Bostr.19424s0689.1": 0.93,
+                    "Bostr.6864s0274.1": 0.92
+                }
+            },
+            "Cgrandiflora_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Cagra.1838s0013.1": 0.91,
+                    "Cagra.6943s0014.1": 0.91
+                }
+            },
+            "Crubella_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Carubv10016165m": 0.91,
+                    "Carubv10017327m": 0.91
+                }
+            },
+            "Crubella_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Carub.0003s1959.1.v1.1": 0.91,
+                    "Carub.0005s1603.1.v1.1": 0.91
+                }
+            },
+            "Esalsugineum_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Thhalv10010409m": 0.86
+                }
+            },
+            "Sparvula_v2.2": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Sp5g12410.1": 0.88
+                }
+            }
+        },
+        "total_brassicaceae_genes": 20,
+        "total_not_brassicaceae_genes": 0
+    },
+    "AT3G19710": {
+        "genomes": {
+            "Alyrata_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "485328": 0.95,
+                    "929873": 0.95
+                }
+            },
+            "Alyrata_v2.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AL3G33180.t1": 0.95,
+                    "AL5G29630.t1": 0.95
+                }
+            },
+            "Athaliana_Araport11": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AT3G19710.1": 1.0,
+                    "AT3G49680.1": 1.0
+                }
+            },
+            "Athaliana_TAIR10": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AT3G19710.1": 1.0,
+                    "AT3G49680.1": 1.0
+                }
+            },
+            "Boleraceacapitata_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Bol021961": 0.85,
+                    "Bol037342": 0.87
+                }
+            },
+            "Bstricta_v1.2": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Bostr.19424s0689.1": 0.93,
+                    "Bostr.6864s0274.1": 0.92
+                }
+            },
+            "Cgrandiflora_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Cagra.1838s0013.1": 0.91,
+                    "Cagra.6943s0014.1": 0.91
+                }
+            },
+            "Crubella_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Carubv10016165m": 0.91,
+                    "Carubv10017327m": 0.91
+                }
+            },
+            "Crubella_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Carub.0003s1959.1.v1.1": 0.91,
+                    "Carub.0005s1603.1.v1.1": 0.91
+                }
+            },
+            "Esalsugineum_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Thhalv10010409m": 0.86
+                }
+            },
+            "Sparvula_v2.2": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Sp5g12410.1": 0.88
+                }
+            }
+        },
+        "total_brassicaceae_genes": 20,
+        "total_not_brassicaceae_genes": 0
+    },
+    "AT5G14200": {
+        "genomes": {
+            "Alyrata_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 3,
+                "genes": {
+                    "473708": 0.95,
+                    "477193": 0.85,
+                    "488253": 0.93
+                }
+            },
+            "Alyrata_v2.1": {
+                "family": "Brassicaceae",
+                "total_genes": 3,
+                "genes": {
+                    "AL1G50860.t1": 0.95,
+                    "AL2G40900.t1": 0.85,
+                    "AL6G24870.t1": 0.93
+                }
+            },
+            "Athaliana_Araport11": {
+                "family": "Brassicaceae",
+                "total_genes": 3,
+                "genes": {
+                    "AT1G31180.2": 0.99,
+                    "AT1G80560.1": 0.85,
+                    "AT5G14200.1": 0.93
+                }
+            },
+            "Athaliana_TAIR10": {
+                "family": "Brassicaceae",
+                "total_genes": 3,
+                "genes": {
+                    "AT1G31180.1": 0.93,
+                    "AT1G80560.1": 0.85,
+                    "AT5G14200.1": 0.93
+                }
+            },
+            "Bstricta_v1.2": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Bostr.26959s0005.1": 0.85,
+                    "Bostr.2902s0156.1": 0.92
+                }
+            },
+            "Cgrandiflora_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Cagra.1725s0085.1": 0.85,
+                    "Cagra.3166s0027.1": 0.9
+                }
+            },
+            "Crubella_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Carubv10003397m": 0.9,
+                    "Carubv10021490m": 0.85
+                }
+            },
+            "Crubella_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Carub.0002s2699.1.v1.1": 0.85,
+                    "Carub.0006s1240.1.v1.1": 0.9
+                }
+            },
+            "Esalsugineum_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Thhalv10013695m": 0.88,
+                    "Thhalv10018649m": 0.85
+                }
+            },
+            "Sparvula_v2.2": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Sp6g29830.1": 0.88,
+                    "SpUn0049_0030.1": 0.88
+                }
+            }
+        },
+        "total_brassicaceae_genes": 24,
+        "total_not_brassicaceae_genes": 0
+    },
+    "AT1G31180": {
+        "genomes": {
+            "Alyrata_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 3,
+                "genes": {
+                    "473708": 0.95,
+                    "477193": 0.85,
+                    "488253": 0.93
+                }
+            },
+            "Alyrata_v2.1": {
+                "family": "Brassicaceae",
+                "total_genes": 3,
+                "genes": {
+                    "AL1G50860.t1": 0.95,
+                    "AL2G40900.t1": 0.85,
+                    "AL6G24870.t1": 0.93
+                }
+            },
+            "Athaliana_Araport11": {
+                "family": "Brassicaceae",
+                "total_genes": 3,
+                "genes": {
+                    "AT1G31180.2": 0.99,
+                    "AT1G80560.1": 0.85,
+                    "AT5G14200.1": 0.93
+                }
+            },
+            "Athaliana_TAIR10": {
+                "family": "Brassicaceae",
+                "total_genes": 3,
+                "genes": {
+                    "AT1G31180.1": 0.93,
+                    "AT1G80560.1": 0.85,
+                    "AT5G14200.1": 0.93
+                }
+            },
+            "Bstricta_v1.2": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Bostr.26959s0005.1": 0.85,
+                    "Bostr.2902s0156.1": 0.92
+                }
+            },
+            "Cgrandiflora_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Cagra.1725s0085.1": 0.85,
+                    "Cagra.3166s0027.1": 0.9
+                }
+            },
+            "Crubella_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Carubv10003397m": 0.9,
+                    "Carubv10021490m": 0.85
+                }
+            },
+            "Crubella_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Carub.0002s2699.1.v1.1": 0.85,
+                    "Carub.0006s1240.1.v1.1": 0.9
+                }
+            },
+            "Esalsugineum_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Thhalv10013695m": 0.88,
+                    "Thhalv10018649m": 0.85
+                }
+            },
+            "Sparvula_v2.2": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Sp6g29830.1": 0.88,
+                    "SpUn0049_0030.1": 0.88
+                }
+            }
+        },
+        "total_brassicaceae_genes": 24,
+        "total_not_brassicaceae_genes": 0
+    },
+    "AT4G13430": {
+        "genomes": {
+            "Alyrata_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "915044": 0.98
+                }
+            },
+            "Alyrata_v2.1": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "AL9U10130.t2": 0.98
+                }
+            },
+            "Athaliana_Araport11": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "AT4G13430.1": 1.0
+                }
+            },
+            "Athaliana_TAIR10": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "AT4G13430.1": 1.0
+                }
+            },
+            "Boleraceacapitata_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Bol033454": 0.95,
+                    "Bol040343": 0.94
+                }
+            },
+            "Bstricta_v1.2": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Bostr.2021s0100.1": 0.97
+                }
+            },
+            "Cgrandiflora_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Cagra.5804s0002.1": 0.86
+                }
+            },
+            "Crubella_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Carubv10007528m": 0.96
+                }
+            },
+            "Crubella_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Carub.0007s2912.1.v1.1": 0.96
+                }
+            },
+            "Esalsugineum_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Thhalv10024960m": 0.95
+                }
+            },
+            "Sparvula_v2.2": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Sp7g10990.1": 0.95
+                }
+            }
+        },
+        "total_brassicaceae_genes": 12,
+        "total_not_brassicaceae_genes": 0
+    },
+    "AT2G43100": {
+        "genomes": {
+            "Alyrata_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "483411": 0.95,
+                    "938903": 0.94
+                }
+            },
+            "Alyrata_v2.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AL4G41750.t1": 0.95,
+                    "AL5G40810.t1": 0.94
+                }
+            },
+            "Athaliana_Araport11": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AT2G43100.1": 1.0,
+                    "AT3G58990.1": 1.0
+                }
+            },
+            "Athaliana_TAIR10": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AT2G43100.1": 1.0,
+                    "AT3G58990.1": 1.0
+                }
+            },
+            "Bstricta_v1.2": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Bostr.20903s0130.1": 0.92,
+                    "Bostr.25993s0465.1": 0.9
+                }
+            },
+            "Cgrandiflora_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Cagra.0202s0001.1": 0.89
+                }
+            },
+            "Crubella_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 3,
+                "genes": {
+                    "Carubv10019269m": 0.87,
+                    "Carubv10022058m": 0.88,
+                    "Carubv10023897m": 0.89
+                }
+            },
+            "Crubella_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 3,
+                "genes": {
+                    "Carub.0002s0595.1.v1.1": 0.88,
+                    "Carub.0004s2558.1.v1.1": 0.89,
+                    "Carub.0005s2573.1.v1.1": 0.87
+                }
+            }
+        },
+        "total_brassicaceae_genes": 17,
+        "total_not_brassicaceae_genes": 0
+    },
+    "AT3G58990": {
+        "genomes": {
+            "Alyrata_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "483411": 0.95,
+                    "938903": 0.94
+                }
+            },
+            "Alyrata_v2.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AL4G41750.t1": 0.95,
+                    "AL5G40810.t1": 0.94
+                }
+            },
+            "Athaliana_Araport11": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AT2G43100.1": 1.0,
+                    "AT3G58990.1": 1.0
+                }
+            },
+            "Athaliana_TAIR10": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AT2G43100.1": 1.0,
+                    "AT3G58990.1": 1.0
+                }
+            },
+            "Bstricta_v1.2": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Bostr.20903s0130.1": 0.92,
+                    "Bostr.25993s0465.1": 0.9
+                }
+            },
+            "Cgrandiflora_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Cagra.0202s0001.1": 0.89
+                }
+            },
+            "Crubella_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 3,
+                "genes": {
+                    "Carubv10019269m": 0.87,
+                    "Carubv10022058m": 0.88,
+                    "Carubv10023897m": 0.89
+                }
+            },
+            "Crubella_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 3,
+                "genes": {
+                    "Carub.0002s0595.1.v1.1": 0.88,
+                    "Carub.0004s2558.1.v1.1": 0.89,
+                    "Carub.0005s2573.1.v1.1": 0.87
+                }
+            }
+        },
+        "total_brassicaceae_genes": 17,
+        "total_not_brassicaceae_genes": 0
+    },
+    "AT5G23020": {
+        "genomes": {
+            "Alyrata_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "941819": 0.92,
+                    "941820": 0.92
+                }
+            },
+            "Alyrata_v2.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AL6G34140.t1": 0.92,
+                    "AL6G34150.t1": 0.92
+                }
+            },
+            "Athaliana_Araport11": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AT5G23010.2": 1.0,
+                    "AT5G23020.1": 1.0
+                }
+            },
+            "Athaliana_TAIR10": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "AT5G23020.1": 1.0
+                }
+            },
+            "Bstricta_v1.2": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Bostr.10199s0143.1": 0.87,
+                    "Bostr.10199s0144.1": 0.88
+                }
+            },
+            "Cgrandiflora_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Cagra.3954s0036.1": 0.86
+                }
+            },
+            "Crubella_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Carubv10003425m": 0.86
+                }
+            },
+            "Crubella_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Carub.0006s2078.1.v1.1": 0.86
+                }
+            },
+            "Esalsugineum_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Thhalv10003976m": 0.85
+                }
+            }
+        },
+        "total_brassicaceae_genes": 13,
+        "total_not_brassicaceae_genes": 0
+    },
+    "AT5G23010": {
+        "genomes": {
+            "Alyrata_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "941819": 0.92,
+                    "941820": 0.92
+                }
+            },
+            "Alyrata_v2.1": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AL6G34140.t1": 0.92,
+                    "AL6G34150.t1": 0.92
+                }
+            },
+            "Athaliana_Araport11": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "AT5G23010.2": 1.0,
+                    "AT5G23020.1": 1.0
+                }
+            },
+            "Athaliana_TAIR10": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "AT5G23020.1": 1.0
+                }
+            },
+            "Bstricta_v1.2": {
+                "family": "Brassicaceae",
+                "total_genes": 2,
+                "genes": {
+                    "Bostr.10199s0143.1": 0.87,
+                    "Bostr.10199s0144.1": 0.88
+                }
+            },
+            "Cgrandiflora_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Cagra.3954s0036.1": 0.86
+                }
+            },
+            "Crubella_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Carubv10003425m": 0.86
+                }
+            },
+            "Crubella_v1.1": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Carub.0006s2078.1.v1.1": 0.86
+                }
+            },
+            "Esalsugineum_v1.0": {
+                "family": "Brassicaceae",
+                "total_genes": 1,
+                "genes": {
+                    "Thhalv10003976m": 0.85
+                }
+            }
+        },
+        "total_brassicaceae_genes": 13,
+        "total_not_brassicaceae_genes": 0
+    }
+}
