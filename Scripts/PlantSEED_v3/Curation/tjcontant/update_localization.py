@@ -22,7 +22,7 @@ with open(pwy_file) as pwy_file_handle:
         if(role not in roles_dict):
             print("Warning: role ("+role+") not found in database")
             continue
-
+        
         if(ftr not in roles_dict[role]['features']):
             print("Warning: feature ("+ftr+") not found in database for "+role)
             continue
