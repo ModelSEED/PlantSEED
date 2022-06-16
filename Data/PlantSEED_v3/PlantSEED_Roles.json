@@ -1124,7 +1124,7 @@
     },
     {
         "role": "2-oxo-5-methylthiopentanoate transaminase (EC 2.6.1.-)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)",
             "Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants"
@@ -16767,7 +16767,7 @@
     },
     {
         "role": "Methylthioalkylmalate dehydrogenase (EC 1.1.1.-)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)",
             "Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants"
@@ -16820,7 +16820,7 @@
     },
     {
         "role": "Methylthioalkylmalate isomerase large subunit (EC 5.4.4.-)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)",
             "Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants"
@@ -16866,7 +16866,7 @@
     },
     {
         "role": "Methylthioalkylmalate isomerase small subunit (EC 5.4.4.-)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)",
             "Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants"
@@ -16918,7 +16918,7 @@
     },
     {
         "role": "Methylthioalkylmalate synthase (EC 2.3.3.-)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)",
             "Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants"
