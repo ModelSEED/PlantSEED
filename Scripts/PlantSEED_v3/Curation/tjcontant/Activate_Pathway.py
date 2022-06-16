@@ -15,8 +15,9 @@ for entry in roles_list:
     roles_dict[entry['role']]=entry
 
 with open(pwy_file) as pwy_file_handle:
-    for role in pwy_file_handle.readlines():
-        role=role.strip('\r\n')
+    for line in pwy_file_handle.readlines():
+        line=line.strip('\r\n')
+        (rxn,role,ftr,pub,ss,cls,pwy,loc)=line.split('\t')
 
         if(role not in roles_dict):
             print("Warning: role ("+role+") not found in database")
