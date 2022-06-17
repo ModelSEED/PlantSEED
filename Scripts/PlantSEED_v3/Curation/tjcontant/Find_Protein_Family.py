@@ -9,7 +9,7 @@ with open('../../../../Data/PlantSEED_v3/PlantSEED_Roles.json') as subsystem_fil
 
 # user input
 SUBSYSTEM = 'Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants'
-FILE_NAME = 'glucosinolate_psi'
+FILE_NAME = 'glucosinolate_psi.json'
 THRESHOLD = 0.85
 BRASSICACEAE = ['Alyrata_v1.0', 'Alyrata_v2.1', 'Athaliana_Araport11', 'Athaliana_TAIR10', 'Boleraceacapitata_v1.0', 'Bstricta_v1.2', 'Cgrandiflora_v1.1', 'Crubella_v1.0', 'Crubella_v1.1', 'Esalsugineum_v1.0', 'Sparvula_v2.2']
 
