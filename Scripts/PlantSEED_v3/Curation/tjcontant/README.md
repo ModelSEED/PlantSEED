@@ -1,1 +1,1 @@
-This is my work.
+Orthogroups file is stored locally for Find_Protein_Family.py to avoid storing on GitHub. The file can be accessed in the shared Google Drive folder.
