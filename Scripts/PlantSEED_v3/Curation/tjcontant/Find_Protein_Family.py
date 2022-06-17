@@ -21,7 +21,7 @@ for entry in roles_list:
             gene_list.append(gene.split('||')[1])
 
 # read in orthogroup data and create dataframe/dictoinary
-df = pd.read_csv('Orthogroups.tsv', sep='\t', low_memory=False)
+df = pd.read_csv('../../../../../../Argonne/2022/Phytozome_April21_Orthogroups.tsv', sep='\t', low_memory=False)
 protein_fam_df = pd.DataFrame()
 protein_fam_dict = dict()
 
