@@ -6757,7 +6757,7 @@
     },
     {
         "role": "CYP81F4 monooxygenase",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -8953,7 +8953,7 @@
     },
     {
         "role": "Desulfoglucosinolate sulfotransferase (EC 2.8.2.-)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)",
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
@@ -11981,7 +11981,7 @@
     },
     {
         "role": "Gamma-glutamyl peptidase in glucosinolates biosynthesis",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)",
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
@@ -12995,7 +12995,7 @@
     },
     {
         "role": "Glutathione S-transferase in Trp, Phe, Tyr-derived glucosinolates biosynthesis, predicted",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -14619,7 +14619,7 @@
     },
     {
         "role": "Indole glucosinolate glucohydrolase (myrosinase)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -14644,7 +14644,7 @@
     },
     {
         "role": "Indole glucosinolate methyltransferase",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -17263,7 +17263,7 @@
     },
     {
         "role": "Monooxygenase, catalyses 4-hydroxylation of indolyl-3-methyl glucosinolate (I3M) to 4OH-I3M",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -17387,7 +17387,7 @@
     },
     {
         "role": "N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in Trp, Phe, Tyr-derived glucosinolates biosynthesis",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -20259,7 +20259,7 @@
     },
     {
         "role": "Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -20777,7 +20777,7 @@
     },
     {
         "role": "Phenylalanine N-monooxygenase (EC 1.14.13.124)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -25522,7 +25522,7 @@
     },
     {
         "role": "S-alkyl-thiohydroximate lyase (EC 4.4.1.-)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)",
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
@@ -26489,7 +26489,7 @@
     },
     {
         "role": "Spontaneous Reaction",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -28348,7 +28348,7 @@
     },
     {
         "role": "Tryptophan N-monooxygenase (EC 1.14.13.125)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
