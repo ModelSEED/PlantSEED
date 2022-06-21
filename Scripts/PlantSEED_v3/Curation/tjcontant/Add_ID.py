@@ -19,7 +19,7 @@ for entry in roles_list:
 
         # create new id if already in list
         while entry_id in ID_list:
-            entry_id = 'PS_role_' + hashlib.sha256(str.encode('utf-8')).hexdigest()[:6]
+            entry_id = 'PS_role_' + hashlib.sha256(entry_id.encode('utf-8')).hexdigest()[:6]
 
         entry['kbase_id'] = entry_id
         print('New ID:\t' + entry_id + '\t' + entry['role'])
