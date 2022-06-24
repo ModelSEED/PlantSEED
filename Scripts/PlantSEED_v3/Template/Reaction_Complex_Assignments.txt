@@ -566,7 +566,7 @@ rxn04113_d	Cpx.530	PS_role_07d6b7	4-hydroxy-3-methylbut-2-enyl diphosphate reduc
 rxn04179_d	Cpx.531	PS_role_76493f	Taxadiene synthase (EC 4.2.3.17)	Uniprot||Q41594
 rxn04180_d	Cpx.532	PS_role_6b8c1c	Taxa-4(20), 11(12)-dien-5a-ol-o-acetyl transferase (EC 2.3.1.162)	Uniprot||Q9M6F0
 rxn04184_d	Cpx.533	PS_role_921ab3	10-deacetylbaccatin III-10-O-caetyl transferase (EC 2.3.1.167)	Uniprot||Q9M6E2
-rxn04192_d	Cpx.534	PS_role_48fc9e	Taxane 2Î±-O-benzoyltransferase (EC 2.3.1.166)	Uniprot||Q9FPW3
+rxn04192_d	Cpx.534	PS_role_48fc9e	Taxane 2-alpha-O-benzoyltransferase (EC 2.3.1.166)	Uniprot||Q9FPW3
 rxn04426_c	Cpx.535	PS_role_3cb8f5	Ferulate-5-hydroxylase (EC 1.14.13.-)	Athaliana_TAIR10||AT4G36220
 rxn04426_r	Cpx.536	PS_role_3cb8f5	Ferulate-5-hydroxylase (EC 1.14.13.-)	Athaliana_TAIR10||AT4G36220
 rxn04430_c	Cpx.537	PS_role_d0bd24	Caffeic-o-methyltransferase (EC 2.1.1.68)	
@@ -1459,10 +1459,10 @@ rxn42688_d	Cpx.1296	PS_role_b129ec	Spontaneous Reaction
 rxn44037_d	Cpx.1297	PS_role_969a13	Cyanogenic beta-glucosidase dhurrinase 2 (EC 3.2.1.-)	Sbicolor_v3.1.1||Sobic.008G08040|Uniprot||Q93XR2
 rxn44037_d	Cpx.1298	PS_role_949c57	Dhurrinase beta-glucosidase (EC 3.2.1.-)	Sbicolor_v3.1.1||Sobic.008G079800|Uniprot||Q41290
 rxn44318_d	Cpx.1299	PS_role_8366a7	2-Carboxy-1,4-naphthoquinone phytyltransferase (EC 2.5.1.130)	Athaliana_TAIR10||AT1G60600
-rxn45029_d	Cpx.1300	PS_role_4ea08d	Taxoid 14Î²-hydroxylase (EC 1.14.13.146)	Uniprot||Q84KI1
-rxn45526_d	Cpx.1301	PS_role_3ad0bc	Taxadiene 5Î±-hydroxylase (EC 1.14.99.37)	Uniprot||Q6WG30
-rxn46178_d	Cpx.1302	PS_role_28c1a1	Taxane 13Î±-hydroxylase (EC 1.14.14.106)	Uniprot||Q8W4T9
-rxn48051_d	Cpx.1303	PS_role_a0ec4a	Taxane 10Î²-hydroxylase (EC 1.14.14.105)	Uniprot||Q9AXM6
+rxn45029_d	Cpx.1300	PS_role_4ea08d	Taxoid 14-beta-hydroxylase (EC 1.14.13.146)	Uniprot||Q84KI1
+rxn45526_d	Cpx.1301	PS_role_3ad0bc	Taxadiene 5-alpha-hydroxylase (EC 1.14.99.37)	Uniprot||Q6WG30
+rxn46178_d	Cpx.1302	PS_role_28c1a1	Taxane 13-alpha-hydroxylase (EC 1.14.14.106)	Uniprot||Q8W4T9
+rxn48051_d	Cpx.1303	PS_role_a0ec4a	Taxane 10-beta-hydroxylase (EC 1.14.14.105)	Uniprot||Q9AXM6
 rxn48590_cd	Cpx.1304	PS_role_41ed72	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)	Athaliana_TAIR10||AT1G25380|Athaliana_TAIR10||AT2G47490
 rxn48590_cm	Cpx.1305	PS_role_41ed72	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)	Athaliana_TAIR10||AT1G25380|Athaliana_TAIR10||AT2G47490
 rxn48591_cd	Cpx.1306	PS_role_41ed72	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)	Athaliana_TAIR10||AT1G25380|Athaliana_TAIR10||AT2G47490
