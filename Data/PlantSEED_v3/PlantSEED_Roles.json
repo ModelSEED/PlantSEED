@@ -31916,5 +31916,231 @@
             "Uniprot||Q8LL69": "MEKAGSTDFHVKKFDPVMVAPSLPSPKATVQLSVVDSLTICRGIFNTLLVFNAPDNISADPVKIIREALSKVLVYYFPLAGRLRSKEIGELEVECTGDGALFVEAMVEDTISVLRDLDDLNPSFQQLVFWHPLDTAIEDLHLVIVQVTRFTCGGIAVGVTLPHSVCDGRGAAQFVTALAEMARGEVKPSLEPIWNRELLNPEDPLHLQLNQFDSICPPPMLEELGQASFVINVDTIEYMKQCVMEECNEFCSSFEVVAALVWIARTKALQIPHTENVKLLFAMDLRKLFNPPLPNGYYGNAIGTAYAMDNVQDLLNGSLLRAIMIIKKAKADLKDNYSRSRVVTNPYSLDVNKKSDNILALSDWRRLGFYEADFGWGGPLNVSSLQRLENGLPMFSTFLYLLPAKNKSDGIKLLLSCMPPTTLKSFKIVMEAMIEKYVSKV"
         },
         "kbase_id": "PS_role_3f4c32"
+    },
+    {
+        "role": "tyrosine N-monooxygenase (E.C. 1.14.14.36)",
+        "include": true,
+        "subsystems": [
+            " Terpenoid metabolism"
+        ],
+        "classes": {
+            " Secondary metabolism": {
+                " Terpenoid metabolism": [
+                    " PWY-7088",
+                    "PWY-7901",
+                    "PWY-861"
+                ]
+            }
+        },
+        "features": [
+            "Sbicolor_3.1.1||Sobic.001G012300",
+            "Uniprot||Q43135"
+        ],
+        "reactions": [
+            "rxn00523"
+        ],
+        "localization": {
+            "c": {
+                "Sbicolor_3.1.1||Sobic.001G012300": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            " 10049494",
+            "7876084",
+            "7487064"
+        ],
+        "predictions": {},
+        "sequences": {
+            "Uniprot||Q43135": "MATMEVEAAAATVLAAPLLSSSAILKLLLFVVTLSYLARALRRPRKSTTKCSSTTCASPPAGVGNPPLPPGPVPWPVVGNLPEMLLNKPAFRWIHQMMREMGTDIACVKLGGVHVVSITCPEIAREVLRKQDANFISRPLTFASETFSGGYRNAVLSPYGDQWKKMRRVLTSEIICPSRHAWLHDKRTDEADNLTRYVYNLATKAATGDVAVDVRHVARHYCGNVIRRLMFNRRYFGEPQADGGPGPMEVLHMDAVFTSLGLLYAFCVSDYLPWLRGLDLDGHEKIVKEANVAVNRLHDTVIDDRWRQWKSGERQEMEDFLDVLITLKDAQGNPLLTIEEVKAQSQDITFAAVDNPSNAVEWALAEMVNNPEVMAKAMEELDRVVGRERLVQESDIPKLNYVKACIREAFRLHPVAPFNVPHVALADTTIAGYRVPKGSHVILSRTGLGRNPRVWDEPLRFYPDRHLATAASDVALTENDLRFISFSTGRRGCIAASLGTAMSVMLFGRLLQGFTWSKPAGVEAVDLSESKSDTFMATPLVLHAEPRLPAHLYPSISI"
+        },
+        "kbase_id": "PS_role_0537a9"
+    },
+    {
+        "role": "4-hydroxyphenylacetaldehyde oxime monooxygenase (E.C. 1.14.14.37)",
+        "include": true,
+        "subsystems": [
+            " Terpenoid metabolism"
+        ],
+        "classes": {
+            " Secondary metabolism": {
+                " Terpenoid metabolism": [
+                    " PWY-7088",
+                    "PWY-861"
+                ]
+            }
+        },
+        "features": [
+            " Sbicolor_3.1.1||Sobic.001G012200",
+            "Uniprot||Q48958"
+        ],
+        "reactions": [
+            "rxn02998"
+        ],
+        "localization": {
+            " c": {
+                "Sbicolor_3.1.1||Sobic.001G012200": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "26361733",
+            "10049494"
+        ],
+        "predictions": {},
+        "sequences": {},
+        "kbase_id": "PS_role_9f1313"
+    },
+    {
+        "role": "UDP-glucose:p-hydroxymandelonitrile-O-glucosyltransferase (E.C. 2.4.1.85)",
+        "include": true,
+        "subsystems": [
+            " Terpenoid metabolism"
+        ],
+        "classes": {
+            " Secondary metabolism": {
+                " Terpenoid metabolism": [
+                    " PWY-861"
+                ]
+            }
+        },
+        "features": [
+            " Sbicolor_3.1.1||Sobic.001G012400",
+            "Uniprot||Q9SBL1"
+        ],
+        "reactions": [
+            "rxn02991"
+        ],
+        "localization": {
+            "c": {
+                "Sbicolor_3.1.1||Sobic.001G012400": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "10585420",
+            "16169969"
+        ],
+        "predictions": {},
+        "sequences": {
+            "Uniprot||Q9SBL1": "MGSNAPPPPTPHVVLVPFPGQGHVAPLMQLARLLHARGARVTFVYTQYNYRRLLRAKGEAAVRPPATSSARFRIEVIDDGLSLSVPQNDVGGLVDSLRKNCLHPFRALLRRLGQEVEGQDAPPVTCVVGDVVMTFAAAAAREAGIPEVQFFTASACGLLGYLHYGELVERGLVPFRDASLLADDDYLDTPLEWVPGMSHMRLRDMPTFCRTTDPDDVMVSATLQQMESAAGSKALILNTLYELEKDVVDALAAFFPPIYTVGPLAEVIASSDSASAGLAAMDISIWQEDTRCLSWLDGKPAGSVVYVNFGSMAVMTAAQAREFALGLASCGSPFLWVKRPDVVEGEEVLLPEALLDEVARGRGLVVPWCPQAAVLKHAAVGLFVSHCGWNSLLEATAAGQPVLAWPCHGEQTTNCRQLCEVWGNGAQLPREVESGAVARLVREMMVGDLGKEKRAKAAEWKAAAEAAARKGGASWRNVERVVNDLLLVGGKQ"
+        },
+        "kbase_id": "PS_role_1fdeec"
+    },
+    {
+        "role": "Dhurrinase beta-glucosidase (E.C. 3.2.1.-)",
+        "include": true,
+        "subsystems": [
+            " Terpenoid metabolism"
+        ],
+        "classes": {
+            " Secondary metabolism": {
+                " Terpenoid metabolism": [
+                    " PWY-5976"
+                ]
+            }
+        },
+        "features": [
+            " Sbicolor_3.1.1||Sobic.008G079800",
+            "Uniprot||Q41290"
+        ],
+        "reactions": [
+            "rxn44037"
+        ],
+        "localization": {
+            " d": {
+                "Sbicolor_3.1.1||Sobic.008G079800": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            "15148317",
+            "16661725",
+            "9536065"
+        ],
+        "predictions": {},
+        "sequences": {
+            "Uniprot||Q41290": "MALLLASAINHTAHPAGLRSHPNNESFSRHHLCSSPQNISKRRSNLSFRPRAQTISSESAGIHRLSPWEIPRRDWFPPSFLFGAATSAYQIEGAWNEDGKGPSTWDHFCHNFPEWIVDRSNGDVAADSYHMYAEDVRLLKEMGMDAYRFSISWPRILPKGTLAGGINEKGVEYYNKLIDLLLENGIEPYITIFHWDTPQALVDAYGGFLDEEDYKDYTDFAKVCFEKFGKTVKNWLTFNEPETFCSVSYGTGVLAPGRCSPGVSCAVPTGNSLSEPYIVAHNLLRAHAETVDIYNKYHKGADGRIGLALNVFGRVPYTNTFLDQQAQERSMDKCLGWFLEPVVRGDYPFSMRVSARDRVPYFKEKEQEKLVGSYDMIGINYYTSTFSKHIDLSPNNSPVLNTDDAYASQETKGPDGNAIGPPTGNAWINMYPKGLHDILMTMKNKYGNPPMYITENGMGDIDKGDLPKPVALEDHTRLDYIQRHLSVLKQSIDLGADVRGYFAWSLLDNFEWSSGYTERFGIVYVDRENGCERTMKRSARWLQEFNGAAKKVENNKILTPAGQLN"
+        },
+        "kbase_id": "PS_role_949c57"
+    },
+    {
+        "role": "Cyanogenic beta-glucosidase dhurrinase 2 (E.C. 3.2.1.-)",
+        "include": true,
+        "subsystems": [
+            " Terpenoid metabolism"
+        ],
+        "classes": {
+            " Secondary metabolism": {
+                " Terpenoid metabolism": [
+                    " PWY-5976"
+                ]
+            }
+        },
+        "features": [
+            "Sbicolor_3.1.1||Sobic.008G08040",
+            "Uniprot||Q93XR2"
+        ],
+        "reactions": [
+            "rxn44037"
+        ],
+        "localization": {
+            " d": {
+                "Sbicolor_3.1.1||Sobic.008G08040": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            "15148317",
+            "16661725",
+            "9536065"
+        ],
+        "predictions": {},
+        "sequences": {
+            "Uniprot||Q93XR2": "MAPLLLHASAISHSAHPGLRSHIGPNNEHISRHLSSSSQNTKRRCNISLRSRAQRISSQLGGQKLEHWEIPKRDWFPPSFTFGAATSAFQIEGGWNEDGKGPSTWDHFCHTYPDFIADKSNGDVAADSYHLYEEDVKLLKEMGMDAYRFSISWPRILPNGTLSDINEKGIAYYNNLINLLIDNGIEPYVTIFHWDTPQALVDDYGGFLDKRIIKDYTDFAGLCFERFGDRVNNWLTFNEPHTFTCLSYGTGILAPGRCSPGMKCPDPTGDSIREPYLVGHNFLLAHAETVDLYNKFHRGEKGRIGLALNVMGTVPYGSTFLDEQAHERCMDYNLGWYLEPVVRGDYPHSMRSSVRDRLPHFTEKEQQKLVGSYDMIGINYYSSRFAKHVDITENFSPELNTHDCCATEEITGPNGNTIGPATGNAWVYMYPKGLKDILMIMKKRYGNPPVYITENGMGDIDNGDLSMEAALDDHIRLDYLQRHISVLKDSIDSGANVRGHFTWSLLDNFEWSSGYTERFGIVYVDRENGCKRTLKRSARWLKEFNGAAKRPGNLIKPNFSEINKIKVVTPA"
+        },
+        "kbase_id": "PS_role_969a13"
+    },
+    {
+        "role": "Hydroxynitrile lyase (E.C. 4.1.2.11)",
+        "include": true,
+        "subsystems": [
+            " Terpenoid metabolism"
+        ],
+        "classes": {
+            " Secondary metabolism": {
+                " Terpenoid metabolism": [
+                    " N/A"
+                ]
+            }
+        },
+        "features": [
+            "Sbicolor_3.1.1||Sobic.004G33550",
+            "Uniprot||P52708"
+        ],
+        "reactions": [
+            "rxn01935"
+        ],
+        "localization": {
+            "d": {
+                "Sbicolor_3.1.1||Sobic.004G33550": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            " 7948927",
+            "16661725"
+        ],
+        "predictions": {},
+        "sequences": {
+            "Uniprot||P52708": "MAVFISSSGSPGRATATTTTTTTLLLAVLAAAAAAGLLLAPVAARGSPPEHDKQLQLQQQEDDRIPGLPGQPNGVAFGMYGGYVTIDDNNGRALYYWFQEADTADPAAAPLVLWLNGGPGCSSIGLGAMQELGPFRVHTNGESLLLNEYAWNKAANILFAESPAGVVFSYSNTSSDLSMGDDKMAQDTYTFLVKWFERFPHYNYREFYIAGESGHFIPQLSQVVYRNRNNSPFINFQGLLVSSGLTNDHEDMIGMFELWWHHGLISDETRDSGLKVCPGTSFMHPTPECTEVWNKALAEQGNINPYTIYTPTCDREPSPYQRRFWAPHGRAAPPPLMLPPYDPCAVFNSINYLNLPEVQTALHANVSGIVEYPWTVCSNTIFDQWGQAADDLLPVYRELIQAGLRVWVYSGDTDSVVPVSSTRRSLAALELPVKTSWYPWYMAPTEREVGGWSVQYEGLTYVSPSGAGHLVPVHRPAQAFLLFKQFLKGEPMPAEEKNDILLPSEKAPFY"
+        },
+        "kbase_id": "PS_role_3c30f2"
     }
 ]
