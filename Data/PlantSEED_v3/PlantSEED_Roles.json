@@ -31918,22 +31918,22 @@
         "kbase_id": "PS_role_3f4c32"
     },
     {
-        "role": "tyrosine N-monooxygenase (E.C. 1.14.14.36)",
+        "role": "tyrosine N-monooxygenase (EC 1.14.14.36)",
         "include": true,
         "subsystems": [
-            " Terpenoid metabolism"
+            "Dhurrin biosynthesis"
         ],
         "classes": {
-            " Secondary metabolism": {
-                " Terpenoid metabolism": [
-                    " PWY-7088",
+            "Secondary metabolism": {
+                "Dhurrin biosynthesis": [
+                    "PWY-7088",
                     "PWY-7901",
                     "PWY-861"
                 ]
             }
         },
         "features": [
-            "Sbicolor_3.1.1||Sobic.001G012300",
+            "Sbicolor_v3.1.1||Sobic.001G012300",
             "Uniprot||Q43135"
         ],
         "reactions": [
@@ -31941,13 +31941,13 @@
         ],
         "localization": {
             "c": {
-                "Sbicolor_3.1.1||Sobic.001G012300": [
+                "Sbicolor_v3.1.1||Sobic.001G012300": [
                     "Assumed"
                 ]
             }
         },
         "publications": [
-            " 10049494",
+            "10049494",
             "7876084",
             "7487064"
         ],
@@ -31958,29 +31958,29 @@
         "kbase_id": "PS_role_0537a9"
     },
     {
-        "role": "4-hydroxyphenylacetaldehyde oxime monooxygenase (E.C. 1.14.14.37)",
+        "role": "4-hydroxyphenylacetaldehyde oxime monooxygenase (EC 1.14.14.37)",
         "include": true,
         "subsystems": [
-            " Terpenoid metabolism"
+            "Dhurrin biosynthesis"
         ],
         "classes": {
-            " Secondary metabolism": {
-                " Terpenoid metabolism": [
-                    " PWY-7088",
+            "Secondary metabolism": {
+                "Dhurrin biosynthesis": [
+                    "PWY-7088",
                     "PWY-861"
                 ]
             }
         },
         "features": [
-            " Sbicolor_3.1.1||Sobic.001G012200",
+            "Sbicolor_v3.1.1||Sobic.001G012200",
             "Uniprot||Q48958"
         ],
         "reactions": [
             "rxn02998"
         ],
         "localization": {
-            " c": {
-                "Sbicolor_3.1.1||Sobic.001G012200": [
+            "c": {
+                "Sbicolor_v3.1.1||Sobic.001G012200": [
                     "Assumed"
                 ]
             }
@@ -31994,20 +31994,20 @@
         "kbase_id": "PS_role_9f1313"
     },
     {
-        "role": "UDP-glucose:p-hydroxymandelonitrile-O-glucosyltransferase (E.C. 2.4.1.85)",
+        "role": "UDP-glucose:p-hydroxymandelonitrile-O-glucosyltransferase (EC 2.4.1.85)",
         "include": true,
         "subsystems": [
-            " Terpenoid metabolism"
+            "Dhurrin biosynthesis"
         ],
         "classes": {
-            " Secondary metabolism": {
-                " Terpenoid metabolism": [
-                    " PWY-861"
+            "Secondary metabolism": {
+                "Dhurrin biosynthesis": [
+                    "PWY-861"
                 ]
             }
         },
         "features": [
-            " Sbicolor_3.1.1||Sobic.001G012400",
+            "Sbicolor_v3.1.1||Sobic.001G012400",
             "Uniprot||Q9SBL1"
         ],
         "reactions": [
@@ -32015,7 +32015,7 @@
         ],
         "localization": {
             "c": {
-                "Sbicolor_3.1.1||Sobic.001G012400": [
+                "Sbicolor_v3.1.1||Sobic.001G012400": [
                     "Assumed"
                 ]
             }
@@ -32031,28 +32031,28 @@
         "kbase_id": "PS_role_1fdeec"
     },
     {
-        "role": "Dhurrinase beta-glucosidase (E.C. 3.2.1.-)",
+        "role": "Dhurrinase beta-glucosidase (EC 3.2.1.-)",
         "include": true,
         "subsystems": [
-            " Terpenoid metabolism"
+            "Dhurrin degradation"
         ],
         "classes": {
-            " Secondary metabolism": {
-                " Terpenoid metabolism": [
-                    " PWY-5976"
+            "Secondary metabolism": {
+                "Dhurrin degradation": [
+                    "PWY-5976"
                 ]
             }
         },
         "features": [
-            " Sbicolor_3.1.1||Sobic.008G079800",
+            "Sbicolor_v3.1.1||Sobic.008G079800",
             "Uniprot||Q41290"
         ],
         "reactions": [
             "rxn44037"
         ],
         "localization": {
-            " d": {
-                "Sbicolor_3.1.1||Sobic.008G079800": [
+            "d": {
+                "Sbicolor_v3.1.1||Sobic.008G079800": [
                     "Literature"
                 ]
             }
@@ -32069,28 +32069,28 @@
         "kbase_id": "PS_role_949c57"
     },
     {
-        "role": "Cyanogenic beta-glucosidase dhurrinase 2 (E.C. 3.2.1.-)",
+        "role": "Cyanogenic beta-glucosidase dhurrinase 2 (EC 3.2.1.-)",
         "include": true,
         "subsystems": [
-            " Terpenoid metabolism"
+            "Dhurrin degradation"
         ],
         "classes": {
-            " Secondary metabolism": {
-                " Terpenoid metabolism": [
-                    " PWY-5976"
+            "Secondary metabolism": {
+                "Dhurrin degradation": [
+                    "PWY-5976"
                 ]
             }
         },
         "features": [
-            "Sbicolor_3.1.1||Sobic.008G08040",
+            "Sbicolor_v3.1.1||Sobic.008G08040",
             "Uniprot||Q93XR2"
         ],
         "reactions": [
             "rxn44037"
         ],
         "localization": {
-            " d": {
-                "Sbicolor_3.1.1||Sobic.008G08040": [
+            "d": {
+                "Sbicolor_v3.1.1||Sobic.008G08040": [
                     "Literature"
                 ]
             }
@@ -32107,20 +32107,20 @@
         "kbase_id": "PS_role_969a13"
     },
     {
-        "role": "Hydroxynitrile lyase (E.C. 4.1.2.11)",
+        "role": "Hydroxynitrile lyase (EC 4.1.2.11)",
         "include": true,
         "subsystems": [
-            " Terpenoid metabolism"
+            "Dhurrin degradation"
         ],
         "classes": {
-            " Secondary metabolism": {
-                " Terpenoid metabolism": [
-                    " N/A"
+            "Secondary metabolism": {
+                "Dhurrin degradation": [
+                    "N/A"
                 ]
             }
         },
         "features": [
-            "Sbicolor_3.1.1||Sobic.004G33550",
+            "Sbicolor_v3.1.1||Sobic.004G33550",
             "Uniprot||P52708"
         ],
         "reactions": [
@@ -32128,13 +32128,13 @@
         ],
         "localization": {
             "d": {
-                "Sbicolor_3.1.1||Sobic.004G33550": [
+                "Sbicolor_v3.1.1||Sobic.004G33550": [
                     "Literature"
                 ]
             }
         },
         "publications": [
-            " 7948927",
+            "7948927",
             "16661725"
         ],
         "predictions": {},
