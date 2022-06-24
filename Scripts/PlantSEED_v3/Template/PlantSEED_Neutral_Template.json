@@ -61873,7 +61873,7 @@
         },
         {
             "id": "PS_role_3ad0bc",
-            "name": "Taxadiene 5\u00ce\u00b1-hydroxylase (EC 1.14.99.37)",
+            "name": "Taxadiene 5-alpha-hydroxylase (EC 1.14.99.37)",
             "source": "PlantSEED",
             "aliases": [],
             "features": [
@@ -61891,7 +61891,7 @@
         },
         {
             "id": "PS_role_a0ec4a",
-            "name": "Taxane 10\u00ce\u00b2-hydroxylase (EC 1.14.14.105)",
+            "name": "Taxane 10-beta-hydroxylase (EC 1.14.14.105)",
             "source": "PlantSEED",
             "aliases": [],
             "features": [
@@ -61900,7 +61900,7 @@
         },
         {
             "id": "PS_role_28c1a1",
-            "name": "Taxane 13\u00ce\u00b1-hydroxylase (EC 1.14.14.106)",
+            "name": "Taxane 13-alpha-hydroxylase (EC 1.14.14.106)",
             "source": "PlantSEED",
             "aliases": [],
             "features": [
@@ -61909,7 +61909,7 @@
         },
         {
             "id": "PS_role_48fc9e",
-            "name": "Taxane 2\u00ce\u00b1-O-benzoyltransferase (EC 2.3.1.166)",
+            "name": "Taxane 2-alpha-O-benzoyltransferase (EC 2.3.1.166)",
             "source": "PlantSEED",
             "aliases": [],
             "features": [
@@ -61918,7 +61918,7 @@
         },
         {
             "id": "PS_role_4ea08d",
-            "name": "Taxoid 14\u00ce\u00b2-hydroxylase (EC 1.14.13.146)",
+            "name": "Taxoid 14-beta-hydroxylase (EC 1.14.13.146)",
             "source": "PlantSEED",
             "aliases": [],
             "features": [

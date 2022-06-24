@@ -1,0 +1,716 @@
+PS_role_1cc588	(3R)-hydroxypalmitoyl-[acyl carrier protein] dehydratase (EC 4.2.1.-)
+PS_role_783638	(E)-Cinnamoyl-CoA ligase (EC 6.2.1.-)
+PS_role_7d46a6	(E)-beta-Ocimene Synthase (EC 4.2.3.106)
+PS_role_4a721d	1,2-dihydroxy-3-keto-5-methylthiopentene dioxygenase (EC 1.13.11.54)
+PS_role_1deb43	1,4-dihydroxy-2-naphthoate polyprenyltransferase (EC 2.5.1.74)
+PS_role_4e41d3	1,4-dihydroxy-2-naphthoyl-CoA hydrolase (EC 3.1.2.28), plant type
+PS_role_c5d566	1,8-cineole synthase (EC 4.2.3.108)
+PS_role_e0b12f	1-aminocyclopropane-1-carboxylate synthase (EC 4.4.1.14)
+PS_role_80c5d0	1-deoxy-D-xylulose 5-phosphate reductoisomerase (EC 1.1.1.267)
+PS_role_c1e138	1-deoxy-D-xylulose 5-phosphate synthase (EC 2.2.1.7)
+PS_role_22b8b8	1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate synthase (EC 1.17.7.1)
+PS_role_2b9569	10-Formyltetrahydrofolate transport
+PS_role_921ab3	10-deacetylbaccatin III-10-O-caetyl transferase (EC 2.3.1.167)
+PS_role_1b9b08	2,3-bisphosphoglycerate-dependent phosphoglycerate mutase (EC 5.4.2.11)
+PS_role_0f609d	2,3-bisphosphoglycerate-independent phosphoglycerate mutase (EC 5.4.2.12)
+PS_role_0e6a3e	2,3-diketo-5-methylthiopentyl-1-phosphate enolase-phosphatase (EC 3.1.3.77)
+PS_role_53b0a6	2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase (EC 4.6.1.12)
+PS_role_680504	2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase (EC 2.7.7.60)
+PS_role_8366a7	2-Carboxy-1,4-naphthoquinone phytyltransferase (EC 2.5.1.130)
+PS_role_c3d05f	2-Dehydropantoate transport
+PS_role_7fd7b2	2-Oxoglutarate transport
+PS_role_b3ea90	2-amino-4-hydroxy-6-hydroxymethyldihydropteridine pyrophosphokinase (EC 2.7.6.3)
+PS_role_db03be	2-dehydropantoate 2-reductase (EC 1.1.1.169)
+PS_role_082313	2-heptaprenyl-1,4-naphthoquinone methyltransferase MenG of phylloquinone biosynthesis (EC 2.1.1.-)
+PS_role_0f9730	2-isopropylmalate synthase (EC 2.3.3.13)
+PS_role_280045	2-keto-3-deoxy-D-arabino-heptulosonate-7-phosphate synthase II (EC 2.5.1.54)
+PS_role_0763e0	2-methyl-6-solanyl-1,4-benzoquinone methyltransferase, eukaryotic type
+PS_role_19c3e5	2-nonaprenyl-6-methoxyphenol 4-monooxygenase (EC 1.14.3.-)
+PS_role_2b0c2a	2-octaprenyl-3-methyl-6-methoxy-1,4-benzoquinol hydroxylase (EC 1.14.13.-)
+PS_role_e9c8c3	2-oxo-5-methylthiopentanoate transaminase (EC 2.6.1.-)
+PS_role_372da0	2-oxoglutarate dehydrogenase E1 component (EC 1.2.4.2)
+PS_role_19c650	2-succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylic-acid synthase (EC 2.2.1.9)
+PS_role_0acdef	2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate synthase (EC 4.2.99.20)
+PS_role_8ddd40	3,4-dihydroxy-2-butanone 4-phosphate synthase (EC 4.1.99.12)
+PS_role_fa94e4	3,4-dihydroxy-5-polyprenylbenzoate methyltransferase (EC 2.1.1.114)
+PS_role_641079	3-Phosphoglycerate transport
+PS_role_8849a1	3-cyanoalanine hydratase (4.2.1.65)
+PS_role_eb96f2	3-dehydroquinate dehydratase I (EC 4.2.1.10)
+PS_role_805d52	3-dehydroquinate synthase (EC 4.2.3.4)
+PS_role_03bdd2	3-demethylubiquinol 3-O-methyltransferase (EC 2.1.1.64)
+PS_role_2588f3	3-hydroxyacyl-[acyl-carrier-protein] dehydratase, FabZ form (EC 4.2.1.59)
+PS_role_cfce18	3-isopropylmalate dehydratase large subunit (EC 4.2.1.33)
+PS_role_4f8462	3-isopropylmalate dehydratase small subunit (EC 4.2.1.33)
+PS_role_06df56	3-isopropylmalate dehydrogenase (EC 1.1.1.85)
+PS_role_319d35	3-methyl-2-oxobutanoate hydroxymethyltransferase (EC 2.1.2.11)
+PS_role_e19364	3-nonaprenyl-4-hydroxy-5-methoxybenzoate carboxy-lyase (EC 4.1.1.-)
+PS_role_d234b1	3-oxoacyl-[acyl-carrier protein] reductase (EC 1.1.1.100)
+PS_role_7ac5d8	3-oxoacyl-[acyl-carrier-protein] synthase, KASI (EC 2.3.1.41)
+PS_role_d64370	3-oxoacyl-[acyl-carrier-protein] synthase, KASII (EC 2.3.1.179)
+PS_role_78ebb2	3-oxoacyl-[acyl-carrier-protein] synthase, KASIII (EC 2.3.1.180)
+PS_role_56d8a2	4-coumarate--CoA ligase (EC 6.2.1.12)
+PS_role_82b90f	4-coumarate--CoA ligase 1 (EC 6.2.1.12)
+PS_role_26955e	4-coumarate-CoA acyltransferase (EC 2.3.1.-)
+PS_role_58eda2	4-diphosphocytidyl-2-C-methyl-D-erythritol kinase (EC 2.7.1.148)
+PS_role_07d6b7	4-hydroxy-3-methylbut-2-enyl diphosphate reductase (EC 1.17.1.2)
+PS_role_e252d7	4-hydroxy-tetrahydrodipicolinate reductase (EC 1.17.1.8)
+PS_role_9aff45	4-hydroxy-tetrahydrodipicolinate synthase (EC 4.3.3.7)
+PS_role_11bf05	4-hydroxybenzoate polyprenyltransferase (EC 2.5.1.39)
+PS_role_899b27	4-hydroxybenzoate transport
+PS_role_bd608e	4-hydroxybenzoyl-CoA thioesterase (EC 3.1.2.23)
+PS_role_9f1313	4-hydroxyphenylacetaldehyde oxime monooxygenase (EC 1.14.14.37)
+PS_role_b0cdde	4-hydroxyphenylpyruvate dioxygenase (EC 1.13.11.27)
+PS_role_ef2575	5' Deoxyadenosine transport
+PS_role_2b3f7d	5'-methylthioadenosine nucleosidase (EC 3.2.2.16)
+PS_role_25455b	5'-nucleotidase (EC 3.1.3.5)
+PS_role_66be13	5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase
+PS_role_521c60	5,10-methylenetetrahydrofolate reductase (EC 1.5.1.20)
+PS_role_24710e	5-Amino-6-(5'-phosphoribitylamino)uracil phosphatase
+PS_role_f66dc6	5-Enolpyruvylshikimate-3-phosphate synthase (EC 2.5.1.19)
+PS_role_717bf3	5-Formyltetrahydrofolate transport
+PS_role_ea0421	5-Methylenetetrahydrofolate transport
+PS_role_3e578e	5-Methylenyltetrahydrofolate transport
+PS_role_58cdb7	5-Methyltetrahydrofolate transport
+PS_role_2a82f1	5-O-(4-coumaroyl)-D-quinate/shikimate 3'-hydroxylase (EC 1.14.13.36)
+PS_role_49d7f6	5-amino-6-(5-phosphoribosylamino)uracil reductase (EC 1.1.1.193)
+PS_role_ad9a47	5-deoxy-ribulose-1-phosphate aldolase (EC 4.1.2.-)
+PS_role_2e474d	5-deoxyadenosine phosphorylase (EC 2.4.2.-)
+PS_role_ef9232	5-deoxyribose-1-phosphate isomerase (EC 5.3.1.-)
+PS_role_8945da	5-formyltetrahydrofolate cyclo-ligase (EC 6.3.3.2)
+PS_role_3f9431	5-methyltetrahydropteroyltriglutamate--homocysteine methyltransferase (EC 2.1.1.14)
+PS_role_66ab2c	5-methylthioribose kinase (EC 2.7.1.100)
+PS_role_53f985	6,7-dimethyl-8-ribityllumazine synthase (EC 2.5.1.78)
+PS_role_e12d8d	6-phosphofructokinase (EC 2.7.1.11)
+PS_role_6d0b83	6-phosphogluconate dehydrogenase, decarboxylating (EC 1.1.1.44)
+PS_role_717dad	6-phosphogluconolactonase (EC 3.1.1.31), eukaryotic type
+PS_role_7f44f4	8-amino-7-oxononanoate synthase (EC 2.3.1.47)
+PS_role_0b912c	AMP transport
+PS_role_b94570	ATP phosphoribosyltransferase (EC 2.4.2.17)
+PS_role_2b6f0c	ATP synthase alpha chain (EC 3.6.3.14)
+PS_role_9dfc2b	ATP synthase beta chain (EC 3.6.3.14)
+PS_role_75bb7d	ATP synthase delta chain (EC 3.6.3.14)
+PS_role_a21b83	ATP synthase delta' chain (EC 3.6.3.14)
+PS_role_d50a4a	ATP synthase epsilon chain (EC 3.6.3.14)
+PS_role_f1ea88	ATP synthase gamma chain (EC 3.6.3.14)
+PS_role_f584e4	ATP-ADP Antiporter (TC 2.A.12)
+PS_role_bcbbf5	ATP-citrate (pro-S-)-lyase, subunit 1 (EC 2.3.3.8)
+PS_role_f7f2df	ATP-citrate (pro-S-)-lyase, subunit 2 (EC 2.3.3.8)
+PS_role_2a9682	Acetolactate synthase large subunit (EC 2.2.1.6)
+PS_role_0654ae	Acetolactate synthase small subunit (EC 2.2.1.6)
+PS_role_db2b0b	Acetyl-CoA acetyltransferase (EC 2.3.1.9)
+PS_role_599656	Acetyl-CoA transport
+PS_role_69b945	Acetyl-coenzyme A carboxyl transferase alpha chain (EC 6.4.1.2)
+PS_role_e12765	Acetyl-coenzyme A carboxyl transferase beta chain (EC 6.4.1.2)
+PS_role_ef4598	Acetyl-coenzyme A carboxyl transferase domain of homomeric ACCase (EC 6.4.1.2)
+PS_role_9d82f6	Acetyl-coenzyme A synthetase (EC 6.2.1.1)
+PS_role_e762da	Acetylglutamate kinase (EC 2.7.2.8)
+PS_role_fa3c7f	Acetylornithine aminotransferase (EC 2.6.1.11)
+PS_role_3e801b	Acetylornithine deacetylase (EC 3.5.1.16)
+PS_role_21df21	Aconitate hydratase (EC 4.2.1.3)
+PS_role_7a367e	Acyl-CoA thioesterase II (EC 3.1.2.-)
+PS_role_2758ee	Adenine phosphoribosyltransferase (EC 2.4.2.7)
+PS_role_8c7825	Adenosine kinase (EC 2.7.1.20)
+PS_role_aa305d	Adenosine nucleosidase (EC 3.2.2.7)
+PS_role_b8a41f	Adenosylhomocysteinase (EC 3.3.1.1)
+PS_role_5a0cac	Adenosylmethionine-8-amino-7-oxononanoate aminotransferase (EC 2.6.1.62)
+PS_role_4c910f	Adenylate kinase (EC 2.7.4.3)
+PS_role_26fc6c	Adenylosuccinate lyase (EC 4.3.2.2)
+PS_role_dec543	Adenylosuccinate synthetase (EC 6.3.4.4)
+PS_role_05ba83	Adenylyl-sulfate reductase [glutathione] (EC 1.8.4.9)
+PS_role_d9bdef	Adenylylsulfate kinase (EC 2.7.1.25)
+PS_role_314a65	Adrenodoxin reductase (EC 1.18.1.6)
+PS_role_646a72	Adrenodoxin, mitochondrial ferredoxin
+PS_role_2461bb	Alanine transaminase (EC 2.6.1.2)
+PS_role_3f2b41	Alanine transport
+PS_role_de6ab3	Alcohol dehydrogenase (EC 1.1.1.1)
+PS_role_3ed002	Aldehyde dehydrogenase (EC 1.2.1.3)
+PS_role_a47232	Alpha-farnesene synthase (EC 4.2.3.46)
+PS_role_bead9c	Alternative oxidase, ubiquinol oxidase (EC 1.10.3.11)
+PS_role_f8a867	Amidophosphoribosyltransferase (EC 2.4.2.14)
+PS_role_2b0830	Aminodeoxychorismate lyase (EC 4.1.3.38)
+PS_role_60f31d	Aminomethyltransferase (glycine cleavage system T protein) (EC 2.1.2.10)
+PS_role_c1deef	Ammonia transport
+PS_role_55b721	Anthranilate phosphoribosyltransferase (EC 2.4.2.18)
+PS_role_bbf347	Anthranilate synthase, amidotransferase component (EC 4.1.3.27)
+PS_role_4d6dfc	Anthranilate synthase, aminase component (EC 4.1.3.27)
+PS_role_fcbd92	Apyrase, ATP-diphosphatase (EC 3.6.1.5)
+PS_role_1184bf	Arginase (EC 3.5.3.1)
+PS_role_ca800d	Arginine transport
+PS_role_2c0c10	Argininosuccinate lyase (EC 4.3.2.1)
+PS_role_b3efb1	Argininosuccinate synthase (EC 6.3.4.5)
+PS_role_ca2275	Arogenate dehydratase (EC 4.2.1.91)
+PS_role_222c14	Arogenate dehydrogenase (EC 1.3.1.78)
+PS_role_efcc06	Asparagine synthetase [glutamine-hydrolyzing] (EC 6.3.5.4)
+PS_role_5ded6a	Asparagine transport
+PS_role_62a094	Aspartate aminotransferase (EC 2.6.1.1)
+PS_role_e4b333	Aspartate carbamoyltransferase (EC 2.1.3.2)
+PS_role_6b05a6	Aspartate transport
+PS_role_c98d86	Aspartate-semialdehyde dehydrogenase (EC 1.2.1.11)
+PS_role_206664	Aspartokinase (EC 2.7.2.4)
+PS_role_72c999	Beta-ureidopropionase (EC 3.5.1.6)
+PS_role_3effb5	Bicarbonate transport
+PS_role_724c99	Biotin carboxyl carrier domain of homomeric Acetyl-CoA carboxylase
+PS_role_d7cbc8	Biotin carboxyl carrier protein of acetyl-CoA carboxylase
+PS_role_d3d0da	Biotin carboxylase domain of homomeric ACCase (EC 6.3.4.14)
+PS_role_4c1143	Biotin carboxylase of acetyl-CoA carboxylase (EC 6.3.4.14)
+PS_role_c97a4f	Biotin synthase (EC 2.8.1.6)
+PS_role_743873	Biotin transport
+PS_role_283bd2	Biotin--protein ligase (EC 6.3.4.9)(EC 6.3.4.10)(EC 6.3.4.11)(EC 6.3.4.15)
+PS_role_201588	Branched-chain alpha-keto acid dehydrogenase, E1 component, alpha subunit (EC 1.2.4.4)
+PS_role_9a1bf4	Branched-chain alpha-keto acid dehydrogenase, E1 component, beta subunit (EC 1.2.4.4)
+PS_role_bc68df	Branched-chain amino acid aminotransferase (EC 2.6.1.42)
+PS_role_04cbdc	CTP synthase (EC 6.3.4.2)
+PS_role_c34888	CYP81F4 monooxygenase
+PS_role_d0bd24	Caffeic-o-methyltransferase (EC 2.1.1.68)
+PS_role_d9aeb8	Caffeoyl-CoA O-methyltransferase (EC 2.1.1.104)
+PS_role_0c2641	Carbamoyl-phosphate synthase large chain (EC 6.3.5.5)
+PS_role_19d4a4	Carbamoyl-phosphate synthase small chain (EC 6.3.5.5)
+PS_role_01a19b	Carbon dioxide transport
+PS_role_74ac86	Carbon monoxide transport
+PS_role_6b9d36	Carbonic anhydrase (EC 4.2.1.1)
+PS_role_4afdd3	Catalase (EC 1.11.1.6)
+PS_role_abb903	Chalcone synthase (EC 2.3.1.74)
+PS_role_f29c8c	Chloride transport
+PS_role_82a97f	Cholinephosphate cytidylyltransferase (EC 2.7.7.15)
+PS_role_c95e71	Chorismate mutase III (EC 5.4.99.5)
+PS_role_5784e9	Chorismate synthase (EC 4.2.3.5)
+PS_role_d0b7b2	Chorismate transport
+PS_role_1dec59	Cinnamoyl-CoA reductase (EC 1.2.1.44)
+PS_role_cc5ec6	Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)
+PS_role_8d0768	Citrate synthase (si) (EC 2.3.3.1)
+PS_role_ca2db9	Citrate/Isocitrate antiporter
+PS_role_cc4fb0	CoA transport
+PS_role_0fac33	Coniferin beta-glucosidase (EC 3.2.1.126)
+PS_role_daea73	Coniferyl-alcohol and sinapyl-alcohol glucosyltransferase (EC 2.4.1.111)
+PS_role_cd73e7	Coniferyl-aldehyde dehydrogenase (EC 1.2.1.68)
+PS_role_cb3e2e	Cyanoalanine nitrilase (EC 3.5.5.4)
+PS_role_969a13	Cyanogenic beta-glucosidase dhurrinase 2 (EC 3.2.1.-)
+PS_role_4730ff	Cystathionine beta-lyase (EC 4.4.1.8)
+PS_role_bf7b4d	Cystathionine gamma-synthase (EC 2.5.1.48)
+PS_role_0710dc	Cystathionine gamma-synthase, O-phospho-L-homoserine dependent (EC 2.5.1.-)
+PS_role_814ea2	Cysteine desulfurase (EC 2.8.1.7), IscS subfamily
+PS_role_73a1b3	Cysteine desulfurase (EC 2.8.1.7), SufS subfamily
+PS_role_b1bcc1	Cysteine synthase (EC 2.5.1.47)
+PS_role_e4fd5d	Cysteine transport
+PS_role_659711	Cytochrome b559 alpha chain (PsbE)
+PS_role_89ce59	Cytochrome b559 beta chain (PsbF)
+PS_role_4c5920	Cytochrome b6-f complex alternative Rieske iron sulfur protein PetC2
+PS_role_235dd4	Cytochrome b6-f complex alternative Rieske iron sulfur protein PetC3
+PS_role_9ebea4	Cytochrome b6-f complex iron-sulfur subunit PetC1 (Rieske iron sulfur protein EC 1.10.9.1)
+PS_role_2c85d2	Cytochrome b6-f complex subunit IV (PetD)
+PS_role_fe9759	Cytochrome b6-f complex subunit V (PetG)
+PS_role_fc337f	Cytochrome b6-f complex subunit VII (PetM)
+PS_role_ab8316	Cytochrome b6-f complex subunit, apocytochrome f
+PS_role_938fec	Cytochrome b6-f complex subunit, cytochrome b6
+PS_role_513dee	Cytochrome b6-f complex subunit, cytochrome b6, putative
+PS_role_ce05e0	Cytochrome c oxidase polypeptide I (EC 1.9.3.1)
+PS_role_f7cdd2	Cytochrome c oxidase polypeptide II (EC 1.9.3.1)
+PS_role_de7cc8	Cytochrome c oxidase polypeptide III (EC 1.9.3.1)
+PS_role_d5480a	Cytochrome c oxidase subunit 5a
+PS_role_cd6354	Cytochrome c oxidase subunit 5b
+PS_role_e60a02	Cytochrome c oxidase subunit 6a
+PS_role_878b01	Cytochrome c oxidase subunit 6b
+PS_role_5349d8	Cytochrome c oxidase, subunit IV (EC 1.9.3.1)
+PS_role_a707a2	D-3-phosphoglycerate dehydrogenase (EC 1.1.1.95)
+PS_role_56998d	D-glycerate 3-kinase (EC 2.7.1.31), plant type
+PS_role_8898b4	D-serine dehydratase (EC 4.3.1.18)
+PS_role_6739a4	Delta-1-pyrroline-5-carboxylate dehydrogenase (EC 1.5.1.12)
+PS_role_98e089	Demethylphylloquinone methyltransferase (EC 2.1.1.329)
+PS_role_41f345	Deoxycytidine monophosphate deaminase (EC 3.5.4.12)
+PS_role_dfd46e	Deoxyuridine 5'-triphosphate nucleotidohydrolase (EC 3.6.1.23)
+PS_role_50e3d0	Dephospho-CoA kinase (EC 2.7.1.24)
+PS_role_726ec8	Desulfoglucosinolate sulfotransferase (EC 2.8.2.-)
+PS_role_8bb862	Dethiobiotin synthetase (EC 6.3.3.3)
+PS_role_949c57	Dhurrinase beta-glucosidase (EC 3.2.1.-)
+PS_role_23146e	Diacylglycerol cholinephosphotransferase (EC 2.7.8.2)
+PS_role_2813d5	Diaminohydroxyphosphoribosylaminopyrimidine deaminase (EC 3.5.4.26)
+PS_role_8e3194	Diaminopimelate decarboxylase (EC 4.1.1.20)
+PS_role_4bd9aa	Diaminopimelate epimerase (EC 5.1.1.7)
+PS_role_5002aa	Dihydrofolate reductase (EC 1.5.1.3)
+PS_role_cfc453	Dihydrofolate synthase (EC 6.3.2.12)
+PS_role_143636	Dihydrolipoamide acetyltransferase component of pyruvate dehydrogenase complex (EC 2.3.1.12)
+PS_role_2d89fd	Dihydrolipoamide acyltransferase component of branched-chain alpha-keto acid dehydrogenase complex (EC 2.3.1.168)
+PS_role_8f85cd	Dihydrolipoamide dehydrogenase of 2-oxoglutarate dehydrogenase (EC 1.8.1.4)
+PS_role_cbdf61	Dihydrolipoamide dehydrogenase of branched-chain alpha-keto acid dehydrogenase (EC 1.8.1.4)
+PS_role_10397f	Dihydrolipoamide dehydrogenase of glycine cleavage system, L protein (EC 1.8.1.4)
+PS_role_630880	Dihydrolipoamide dehydrogenase of pyruvate dehydrogenase complex (EC 1.8.1.4)
+PS_role_c080bc	Dihydrolipoamide succinyltransferase component (E2) of 2-oxoglutarate dehydrogenase complex (EC 2.3.1.61)
+PS_role_554ef3	Dihydroneopterin aldolase (EC 4.1.2.25)
+PS_role_106df5	Dihydroneopterin monophosphate phosphatase (non-specific?)
+PS_role_e185b2	Dihydroneopterin triphosphate diphosphatase (EC 3.6.1.n4)
+PS_role_408d79	Dihydroorotase (EC 3.5.2.3)
+PS_role_b3ff7b	Dihydroorotate dehydrogenase [quinone] (EC 1.3.5.2)
+PS_role_d6a747	Dihydroorotate transport
+PS_role_879fe7	Dihydropteroate synthase (EC 2.5.1.15)
+PS_role_edd526	Dihydropyrimidinase (EC 3.5.2.2)
+PS_role_0a8e8d	Dihydropyrimidine dehydrogenase (EC 1.3.1.2)
+PS_role_85ba4b	Dihydroxy-acid dehydratase (EC 4.2.1.9)
+PS_role_d7a37c	Dihydroxyacetone transport
+PS_role_accafa	Dimethylallyl diphosphate transport
+PS_role_3f7d5e	Diphosphomevalonate decarboxylase (EC 4.1.1.33)
+PS_role_c46d10	Enolase (EC 4.2.1.11)
+PS_role_75fb9c	Enoyl-[acyl-carrier-protein] reductase [NADH] (EC 1.3.1.9)
+PS_role_1cd9f5	Ethanolamine N-methyltransferase, free-base-specific (EC 2.1.1.-)
+PS_role_7ca8f1	Ethanolamine kinase (EC 2.7.1.82)
+PS_role_56fa14	Extradiol ring-cleavage dioxygenase [caffealdehyde, other] (EC 1.13.-.-)
+PS_role_d964bf	FAD pyrophosphatase (EC 3.6.1.18)
+PS_role_8c2c6a	FMN adenylyltransferase (EC 2.7.7.2)
+PS_role_da15b4	FMN adenylyltransferase, type 2 eukaryotic (EC 2.7.7.2)
+PS_role_59de8a	FMN hydrolase, high substrate specificity (EC 3.1.3.-)
+PS_role_638244	Farnesyl diphosphate transport
+PS_role_507571	Farnesyl-diphosphate synthase (EC 2.5.1.10)
+PS_role_373c38	Fatty acid omega-hydroxylase (EC 1.14.13.-)
+PS_role_c7ca92	Fatty acid transport
+PS_role_5ddd5d	Ferredoxin--nitrite reductase (EC 1.7.7.1)
+PS_role_9fe2d6	Ferredoxin--sulfite reductase (EC 1.8.7.1)
+PS_role_1bec23	Ferredoxin-NADP(+) reductase (EC 1.18.1.2)
+PS_role_72f2e3	Ferredoxin-dependent glutamate synthase (EC 1.4.7.1)
+PS_role_3cb8f5	Ferulate-5-hydroxylase (EC 1.14.13.-)
+PS_role_5aa27a	Flavanone-3-hydroxylase (EC 1.14.13.21)
+PS_role_924f97	Flavonoid 3'-hydroxylase (EC 1.14.13.21)
+PS_role_eb5be8	Flavonoid 3'-monooxygenase (EC 1.14.13.21)
+PS_role_e02c09	Folylpolyglutamate synthase (EC 6.3.2.17)
+PS_role_8983e8	Formate dehydrogenase (EC 1.2.1.2)
+PS_role_333973	Formate transport
+PS_role_67cdff	Formate--tetrahydrofolate ligase (EC 6.3.4.3)
+PS_role_e5c843	Fructokinase (EC 2.7.1.4)
+PS_role_a4a9e6	Fructose-1,6-bisphosphatase, type I (EC 3.1.3.11)
+PS_role_78470a	Fructose-bisphosphate aldolase class I (EC 4.1.2.13)
+PS_role_b89031	Fumarate hydratase class II (EC 4.2.1.2)
+PS_role_1a2ec2	Fumarate transport
+PS_role_d8ce45	GMP synthase [glutamine-hydrolyzing] (EC 6.3.5.2)
+PS_role_8263dd	GTP cyclohydrolase I (EC 3.5.4.16) type 1
+PS_role_433e3f	GTP cyclohydrolase II (EC 3.5.4.25)
+PS_role_2b7cf0	Gamma-glutamyl peptidase in glucosinolates biosynthesis
+PS_role_3fabe2	Gamma-glutamyl phosphate reductase (EC 1.2.1.41)
+PS_role_2e0855	Geranyl-diphosphate synthase (EC 2.5.1.1)
+PS_role_f142e5	Geranylgeranyl diphosphate reductase (EC 1.3.1.83)
+PS_role_36a47a	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29)
+PS_role_e2539e	Geranyllinalool synthase (EC 4.2.3.144)
+PS_role_cba3de	Gluconokinase (EC 2.7.1.12)
+PS_role_438e0a	Glucose-6-phosphate 1-dehydrogenase (EC 1.1.1.49)
+PS_role_13f3c3	Glucose-6-phosphate isomerase (EC 5.3.1.9)
+PS_role_51033c	Glucuronokinase (EC 2.7.1.43)
+PS_role_46d375	Glutamate 5-kinase (EC 2.7.2.11)
+PS_role_e69b86	Glutamate N-acetyltransferase (EC 2.3.1.35)
+PS_role_d71e8d	Glutamate synthase [NADH] (EC 1.4.1.14)
+PS_role_c54864	Glutamate transport
+PS_role_8fcd53	Glutamate--prephenate aminotransferase (EC 2.6.1.79)
+PS_role_bb2b8f	Glutamate-glyoxylate aminotransferase (EC 2.6.1.4)
+PS_role_41e45e	Glutaminase (EC 3.5.1.2)
+PS_role_363515	Glutamine amidotransferase chain of NAD synthetase
+PS_role_f73cee	Glutamine synthetase type II, eukaryotic (EC 6.3.1.2)
+PS_role_b04038	Glutamine transport
+PS_role_9af9d5	Glutathione S-transferase in Trp, Phe, Tyr-derived glucosinolates biosynthesis, predicted
+PS_role_b0ae27	Glutathione reductase (EC 1.8.1.7)
+PS_role_206972	Glyceraldehyde 3-phosphate transport
+PS_role_2bad8a	Glycerate transport
+PS_role_e7f677	Glycerol-3-phosphate dehydrogenase (EC 1.1.5.3)
+PS_role_f55c61	Glycerol-3-phosphate dehydrogenase [NAD+] (EC 1.1.1.8)
+PS_role_2b2b81	Glycine cleavage system H protein
+PS_role_fa51ea	Glycine dehydrogenase [decarboxylating] (glycine cleavage system P protein) (EC 1.4.4.2)
+PS_role_8e0c9c	Glycine transport
+PS_role_8e0bd7	Glycolaldehyde dehydrogenase (EC 1.2.1.21)
+PS_role_437b19	Glycolate oxidase (EC 1.1.3.15)
+PS_role_b4d2cd	Glycolate transport
+PS_role_cdb02a	Glyoxylate transport
+PS_role_8ddb54	Guanine phosphoribosyltransferase (EC 2.4.2.8)
+PS_role_b300dd	Guanylate kinase (EC 2.7.4.8)
+PS_role_c8a048	HMDHP transport
+PS_role_ddbce2	HS transport
+PS_role_481e11	Hexokinase (EC 2.7.1.1)
+PS_role_cf74b6	Histidine transport
+PS_role_b04198	Histidinol dehydrogenase (EC 1.1.1.23)
+PS_role_194287	Histidinol-phosphatase [alternative form] (EC 3.1.3.15)
+PS_role_2d8f95	Histidinol-phosphate aminotransferase (EC 2.6.1.9)
+PS_role_ff36ae	Homocysteine S-methyltransferase (EC 2.1.1.10)
+PS_role_057b72	Homogentisate solanesyltransferase (EC 2.5.-)
+PS_role_3d9a3d	Homoserine dehydrogenase (EC 1.1.1.3)
+PS_role_21308c	Homoserine kinase (EC 2.7.1.39)
+PS_role_e489c2	Hydrogen peroxide transport
+PS_role_924fed	Hydrouracil transport
+PS_role_ac3930	Hydroxyethylthiazole kinase (EC 2.7.1.50)
+PS_role_8ba2ff	Hydroxymethylglutaryl-CoA reductase (EC 1.1.1.34)
+PS_role_678076	Hydroxymethylglutaryl-CoA synthase (EC 2.3.3.10)
+PS_role_910b99	Hydroxymethylpyrimidine kinase (EC 2.7.1.49)
+PS_role_6aa223	Hydroxymethylpyrimidine phosphate kinase ThiD (EC 2.7.4.7)
+PS_role_632120	Hydroxymethylpyrimidine phosphate synthase ThiC (EC 4.1.99.17)
+PS_role_3c30f2	Hydroxynitrile lyase (EC 4.1.2.11)
+PS_role_0b563e	Hypothetical reaction
+PS_role_fbd587	IMP cyclohydrolase (EC 3.5.4.10)
+PS_role_8ed1f6	IMP transport
+PS_role_0718b5	Imidazole glycerol phosphate synthase amidotransferase subunit (EC 2.4.2.-)
+PS_role_f92d66	Imidazole glycerol phosphate synthase cyclase subunit (EC 4.1.3.-)
+PS_role_62f006	Imidazoleglycerol-phosphate dehydratase (EC 4.2.1.19)
+PS_role_4db1e3	Indole glucosinolate glucohydrolase (myrosinase)
+PS_role_816efa	Indole glucosinolate methyltransferase
+PS_role_71b75f	Indole synthase (EC 4.1.2.8)
+PS_role_0039cf	Indole-3-glycerol phosphate synthase (EC 4.1.1.48)
+PS_role_50510d	Inorganic pyrophosphatase (EC 3.6.1.1)
+PS_role_34cefd	Inosine-5'-monophosphate dehydrogenase (EC 1.1.1.205)
+PS_role_66d013	Inositol oxygenase (EC 1.13.99.1)
+PS_role_584002	Isochorismate synthase (EC 5.4.4.2)
+PS_role_9a0eeb	Isocitrate dehydrogenase [NADP] (EC 1.1.1.42)
+PS_role_7ee2d1	Isocitrate dehydrogenase [NAD] catalytic subunit (EC 1.1.1.41)
+PS_role_021c81	Isocitrate dehydrogenase [NAD] regulatory subunit (EC 1.1.1.41)
+PS_role_5cecae	Isocitrate lyase (EC 4.1.3.1), group II (plants and fungi)
+PS_role_b94db2	Isoleucine transport
+PS_role_9c323b	Isopentenyl-diphosphate delta-isomerase (EC 5.3.3.2)
+PS_role_56d2cb	KAPA transport
+PS_role_499969	Ketol-acid reductoisomerase (EC 1.1.1.86)
+PS_role_0ce01d	L,L-diaminopimelate aminotransferase (EC 2.6.1.83)
+PS_role_adf80b	L-3-cyanoalanine synthase (EC 4.4.1.9)
+PS_role_0bfc65	L-Serine decarboxylase (EC 4.1.1.-)
+PS_role_571095	L-alanine:glyoxylate aminotransferase (EC 2.6.1.44)
+PS_role_90a295	L-aspartate oxidase (EC 1.4.3.16)
+PS_role_85e536	L-lactate dehydrogenase (EC 1.1.1.27)
+PS_role_fcc5de	Lauryl-[acyl-carrier protein] hydrolase (EC 3.1.2.21)
+PS_role_98a46b	Leucine transport
+PS_role_d603ec	Light transport
+PS_role_b7bb4a	Long-chain fatty acid omega-alcohol dehydrogenase (EC 1.1.1.-)
+PS_role_7033eb	Long-chain fatty acid omega-aldehyde dehydrogenase (EC 1.2.1.-)
+PS_role_87cc1b	Long-chain fatty acid omega-hydroxylase (EC 1.14.13.-)
+PS_role_f96a63	Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3)
+PS_role_a7f393	Low-specificity L-threonine aldolase (EC 4.1.2.48)
+PS_role_8bc45a	Low-specificity L-threonine aldolase (EC 4.1.2.5)
+PS_role_a75e7f	Lysine transport
+PS_role_307485	Malate dehydrogenase (EC 1.1.1.37)
+PS_role_0b4082	Malate dehydrogenase (NADP+) (EC 1.1.1.82)
+PS_role_19e126	Malate synthase (EC 2.3.3.9)
+PS_role_70154b	Malate transport
+PS_role_f793ab	Malonyl CoA-acyl carrier protein transacylase (EC 2.3.1.39)
+PS_role_c2a032	Methenyltetrahydrofolate cyclohydrolase (EC 3.5.4.9)
+PS_role_ca3db9	Methionine S-methyltransferase (EC 2.1.1.12)
+PS_role_27326d	Methionine gamma-lyase (EC 4.4.1.11)
+PS_role_99508b	Methionine transport
+PS_role_69dfdc	Methionine--glyoxylate aminotransferase (EC 2.6.1.73)
+PS_role_6f9c37	Methionine--oxo-acid aminotransferase (EC 2.6.1.88)
+PS_role_b431cc	Methylenetetrahydrofolate dehydrogenase (NADP+) (EC 1.5.1.5)
+PS_role_bae054	Methylthioalkylmalate dehydrogenase (EC 1.1.1.-)
+PS_role_419d65	Methylthioalkylmalate isomerase large subunit (EC 5.4.4.-)
+PS_role_b63608	Methylthioalkylmalate isomerase small subunit (EC 5.4.4.-)
+PS_role_ef784f	Methylthioalkylmalate synthase (EC 2.3.3.-)
+PS_role_7cd262	Methylthioribose-1-phosphate isomerase (EC 5.3.1.23)
+PS_role_e76a12	Methylthioribulose-1-phosphate dehydratase (EC 4.2.1.109)
+PS_role_e9a6c0	Mevalonate kinase (EC 2.7.1.36)
+PS_role_a7b687	Mitochondrial pyruvate carrier (TC 2.A.105)
+PS_role_6e20e6	Monooxygenase, catalyses 4-hydroxylation of indolyl-3-methyl glucosinolate (I3M) to 4OH-I3M
+PS_role_c22d1a	N-acetyl-gamma-glutamyl-phosphate reductase (EC 1.2.1.38)
+PS_role_26a70f	N-acetylglutamate synthase (EC 2.3.1.1)
+PS_role_1b2ad6	N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in Trp, Phe, Tyr-derived glucosinolates biosynthesis
+PS_role_41ed72	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)
+PS_role_70cef8	NAD kinase (EC 2.7.1.23)
+PS_role_5ed685	NAD synthetase (EC 6.3.1.5)
+PS_role_25296f	NAD(P)H-hydrate epimerase (EC 5.1.99.6)
+PS_role_70871d	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.12)
+PS_role_52b833	NAD-dependent malic enzyme (EC 1.1.1.38)
+PS_role_3aebe3	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 1, ND1
+PS_role_9c8b59	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 2, ND2
+PS_role_680078	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 3, ND3
+PS_role_f188d7	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 4, ND4
+PS_role_7444d0	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 4L, ND4L
+PS_role_1fd8f7	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 5, ND5
+PS_role_ad137c	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 1
+PS_role_83276e	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 12
+PS_role_36eaf1	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 13
+PS_role_fb59ec	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 2
+PS_role_640ce1	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 5
+PS_role_5168d9	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 6
+PS_role_ae673e	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 8
+PS_role_28bea7	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 9
+PS_role_1e28b4	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 10
+PS_role_f12094	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 2
+PS_role_ec2ebd	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 3
+PS_role_898c26	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 7
+PS_role_419360	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 8
+PS_role_40f40e	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 9
+PS_role_3de7ca	NADH dehydrogenase [ubiquinone] flavoprotein 1 (EC 1.6.5.3) (EC 1.6.99.3)
+PS_role_95bea4	NADH dehydrogenase [ubiquinone] flavoprotein 2 (EC 1.6.5.3) (EC 1.6.99.3)
+PS_role_f38182	NADH dehydrogenase [ubiquinone] iron-sulfur protein 1 (EC 1.6.5.3) (EC 1.6.99.3)
+PS_role_20eff6	NADH dehydrogenase [ubiquinone] iron-sulfur protein 2 (EC 1.6.5.3) (EC 1.6.99.3)
+PS_role_a25a46	NADH dehydrogenase [ubiquinone] iron-sulfur protein 3 (EC 1.6.5.3) (EC 1.6.99.3)
+PS_role_c9661c	NADH dehydrogenase [ubiquinone] iron-sulfur protein 4
+PS_role_121610	NADH dehydrogenase [ubiquinone] iron-sulfur protein 5
+PS_role_c449ff	NADH dehydrogenase [ubiquinone] iron-sulfur protein 6
+PS_role_c6088b	NADH dehydrogenase [ubiquinone] iron-sulfur protein 7 (EC 1.6.5.3) (EC 1.6.99.3)
+PS_role_a6ca40	NADH dehydrogenase [ubiquinone] iron-sulfur protein 8 (EC 1.6.5.3) (EC 1.6.99.3)
+PS_role_2a5061	NADH kinase (EC 2.7.1.86)
+PS_role_269e02	NADH pyrophosphatase (EC 3.6.1.22)
+PS_role_639f21	NADH-dependent hydroxypyruvate reductase (EC 1.1.1.29)
+PS_role_c92805	NADP phosphatase (EC 3.1.3.-)
+PS_role_212d25	NADP-dependent malic enzyme (EC 1.1.1.40)
+PS_role_44e0b6	NADP-specific glutamate dehydrogenase (EC 1.4.1.4)
+PS_role_3a0bb1	NADPH-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.13)
+PS_role_a2a334	NMN nucleosidase (EC 3.2.2.14)
+PS_role_6c5bb2	NMN phosphatase (EC 3.1.3.5)
+PS_role_e91ddd	NUDIX hydrolase, NAD diphosphatase (EC 3.6.1.22)
+PS_role_681a1b	Naphthoate synthase (EC 4.1.3.36)
+PS_role_1e88fb	Nicotinamidase (EC 3.5.1.19) of PncA family, nonfunctional
+PS_role_54877a	Nicotinamidase (EC 3.5.1.19), plant/cyanobacterial family
+PS_role_b81dd7	Nicotinamide-nucleotide adenylyltransferase (EC 2.7.7.1), eukaryotic PNAT family
+PS_role_484869	Nicotinate N-methyltransferase (EC 2.1.1.7)
+PS_role_0ad9de	Nicotinate phosphoribosyltransferase (EC 2.4.2.11)
+PS_role_29e007	Nicotinate-nucleotide adenylyltransferase (EC 2.7.7.18), eukaryotic PNAT family
+PS_role_da16ce	Nitrate reductase [NADH] (EC 1.7.1.1)
+PS_role_f0c5ba	Nitrate transport
+PS_role_bf39ff	Nitrite transport
+PS_role_7bb520	Non-phosphorylating glyceraldehyde-3-phosphate dehydrogenase (NADP) (EC 1.2.1.9)
+PS_role_8072e6	Nucleoside diphosphate kinase (EC 2.7.4.6)
+PS_role_2dab6b	O-succinylbenzoate synthase (EC 4.2.1.113)
+PS_role_41e017	O-succinylbenzoic acid--CoA ligase (EC 6.2.1.26)
+PS_role_c6522d	Oleoyl-[acyl carrier protein] thioesterase (EC 3.1.2.14)
+PS_role_7b1157	Oleoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.14)
+PS_role_127d6b	Ornithine aminotransferase (EC 2.6.1.13)
+PS_role_23fed7	Ornithine carbamoyltransferase (EC 2.1.3.3)
+PS_role_e6cac3	Ornithine transport
+PS_role_d7206b	Orotate phosphoribosyltransferase (EC 2.4.2.10)
+PS_role_8ef88d	Orotate transport
+PS_role_768607	Orotidine 5'-phosphate decarboxylase (EC 4.1.1.23)
+PS_role_878ad7	Oxaloacetate transport
+PS_role_c61b82	Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis
+PS_role_bac0c3	Oxygen transport
+PS_role_c00e62	PLP transport
+PS_role_af43ef	Palmitoyl-[acyl carrier protein] thioesterase (EC 3.1.2.-)
+PS_role_be865b	Palmitoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.-)
+PS_role_42691b	Pantoate--beta-alanine ligase (EC 6.3.2.1)
+PS_role_04277c	Pantothenate kinase type II, eukaryotic (EC 2.7.1.33)
+PS_role_459f31	Para-aminobenzoate synthase, amidotransferase component (EC 2.6.1.85)
+PS_role_bc9739	Para-aminobenzoate synthase, aminase component (EC 2.6.1.85)
+PS_role_0b7f7d	Peroxidase (EC 1.11.1.7)
+PS_role_fb7a11	Phenylalanine N-monooxygenase (EC 1.14.13.124)
+PS_role_b49604	Phenylalanine ammonia-lyase (EC 4.3.1.24)
+PS_role_bc9f5d	Phenylalanine transport
+PS_role_9906ae	Phenylpropanoyltransferase (EC 2.3.1.-)
+PS_role_8bfd3c	Phosphate transport
+PS_role_264715	Phosphoenolpyruvate carboxykinase [ATP] (EC 4.1.1.49)
+PS_role_1cb917	Phosphoenolpyruvate carboxylase (EC 4.1.1.31)
+PS_role_8dee88	Phosphoenolpyruvate transport
+PS_role_6771b2	Phosphoethanolamine N-methyltransferase (EC 2.1.1.103)
+PS_role_94d926	Phosphoethanolamine/phosphocholine phosphatase (EC 3.1.3.75)
+PS_role_2eb26c	Phosphoglucomutase (EC 5.4.2.2)
+PS_role_402086	Phosphoglycerate kinase (EC 2.7.2.3)
+PS_role_f5d2e8	Phosphoglycolate phosphatase (EC 3.1.3.18)
+PS_role_f79512	Phospholipase D (EC 3.1.4.4)
+PS_role_b51e37	Phosphomevalonate kinase (EC 2.7.4.2)
+PS_role_0e7457	Phosphopantetheine adenylyltransferase, type II eukaryotic (EC 2.7.7.3)
+PS_role_8c404c	Phosphopantothenoylcysteine decarboxylase (EC 4.1.1.36)
+PS_role_a7c89b	Phosphopantothenoylcysteine synthetase (EC 6.3.2.5)
+PS_role_2b6a9c	Phosphoribosyl-AMP cyclohydrolase (EC 3.5.4.19)
+PS_role_c2be5b	Phosphoribosyl-ATP pyrophosphatase (EC 3.6.1.31)
+PS_role_9819e0	Phosphoribosylamine--glycine ligase (EC 6.3.4.13)
+PS_role_e3268c	Phosphoribosylaminoimidazole carboxylase ATPase subunit (EC 4.1.1.21)
+PS_role_5ebb39	Phosphoribosylaminoimidazole carboxylase catalytic subunit (EC 4.1.1.21)
+PS_role_3d8cf2	Phosphoribosylaminoimidazole-succinocarboxamide synthase (EC 6.3.2.6)
+PS_role_e8ba19	Phosphoribosylaminoimidazolecarboxamide formyltransferase (EC 2.1.2.3)
+PS_role_32ada1	Phosphoribosylanthranilate isomerase (EC 5.3.1.24)
+PS_role_95316b	Phosphoribosylformimino-5-aminoimidazole carboxamide ribotide isomerase (EC 5.3.1.16)
+PS_role_dcd5fb	Phosphoribosylformylglycinamidine cyclo-ligase (EC 6.3.3.1)
+PS_role_7706f5	Phosphoribosylformylglycinamidine synthase, glutamine amidotransferase subunit (EC 6.3.5.3)
+PS_role_484c8d	Phosphoribosylformylglycinamidine synthase, synthetase subunit (EC 6.3.5.3)
+PS_role_2caef0	Phosphoribosylglycinamide formyltransferase (EC 2.1.2.2)
+PS_role_850f74	Phosphoribulokinase (EC 2.7.1.19)
+PS_role_6498e3	Phosphoserine aminotransferase (EC 2.6.1.52)
+PS_role_9c636c	Phosphoserine phosphatase (EC 3.1.3.3)
+PS_role_5c046e	Photosystem II 10 kDa phosphoprotein (PsbH)
+PS_role_b970ea	Photosystem II 10 kDa protein PsbR
+PS_role_f54e19	Photosystem II 12 kDa extrinsic protein (PsbU)
+PS_role_dfe057	Photosystem II 13 kDa protein Psb28 (similar to PsbW)
+PS_role_8cc86b	Photosystem II CP22 protein PsbS
+PS_role_0c7024	Photosystem II CP43 protein (PsbC)
+PS_role_c0421a	Photosystem II CP47 protein (PsbB)
+PS_role_c07c32	Photosystem II manganese-stabilizing protein (PsbO)
+PS_role_221485	Photosystem II oxygen evolving complex protein PsbP
+PS_role_e93640	Photosystem II oxygen evolving complex protein PsbQ
+PS_role_ad1b09	Photosystem II protein Psb27
+PS_role_f1057a	Photosystem II protein PsbI
+PS_role_69a769	Photosystem II protein PsbJ
+PS_role_95bde0	Photosystem II protein PsbK
+PS_role_5a8fc6	Photosystem II protein PsbL
+PS_role_151b2c	Photosystem II protein PsbM
+PS_role_a9ff8a	Photosystem II protein PsbN
+PS_role_a1c0a6	Photosystem II protein PsbTn
+PS_role_0f7696	Photosystem II protein PsbV, cytochrome c550
+PS_role_6c4a23	Photosystem II protein PsbX
+PS_role_74d1a2	Photosystem II protein PsbY
+PS_role_99d4ce	Photosystem II protein PsbZ
+PS_role_a23110	Photosystem II stability/assembly factor HCF136/Ycf48
+PS_role_70a382	Plastidial ATP synthase alpha chain (EC 3.6.3.14)
+PS_role_51b403	Plastidial ATP synthase beta chain (EC 3.6.3.14)
+PS_role_e5bd7d	Plastidial ATP synthase delta chain
+PS_role_cc41f6	Plastidial ATP synthase epsilon chain
+PS_role_5825d3	Plastidial ATP synthase gamma chain
+PS_role_481766	Plastoquinone transport
+PS_role_712fb7	Potassium transport
+PS_role_7d78b2	Prephenate dehydratase (EC 4.2.1.51)
+PS_role_1f944c	Probable acyl-ACP desaturase, Stearoyl-ACP desaturase (EC 1.14.19.2)
+PS_role_b7ed45	Probable cytochrome c oxidase subunit 5c
+PS_role_66525b	Proline transport
+PS_role_804a15	Protein CP12, regulation of Calvin cycle via association/dissociation of PRK/CP12/GAPDH complex
+PS_role_46049b	Proton transport
+PS_role_44a05e	Purine nucleosidase (EC 3.2.2.1)
+PS_role_6baf80	Putative chaperon-like protein Ycf39 for quinone binding in Photosystem II
+PS_role_f877fa	Putative ubiquinol-cytochrome c reductase complex core protein I (subunit COR1)
+PS_role_5a7b67	Putative ubiquinol-cytochrome c reductase complex core protein II (subunit COR2)
+PS_role_f9290f	Pyridoxal kinase (EC 2.7.1.35)
+PS_role_d12054	Pyridoxal reductase (EC 1.1.1.65)
+PS_role_b95023	Pyridoxal-5'-phosphate phosphatase (EC 3.1.3.74), eukaryotic type
+PS_role_dabbef	Pyridoxamine 5'-phosphate oxidase (EC 1.4.3.5)
+PS_role_02c18d	Pyridoxamine-pyruvate aminotransferase (EC 2.6.1.30)
+PS_role_de392c	Pyridoxine biosynthesis glutamine amidotransferase, glutaminase subunit (EC 2.4.2.-)
+PS_role_9b5508	Pyridoxine biosynthesis glutamine amidotransferase, synthase subunit (EC 2.4.2.-)
+PS_role_d35d10	Pyrophosphate transport
+PS_role_ade757	Pyrophosphate-dependent fructose 6-phosphate-1-kinase (EC 2.7.1.90)
+PS_role_ea775b	Pyrophosphate-energized proton pump (EC 3.6.1.1)
+PS_role_7208c7	Pyrroline-5-carboxylate reductase (EC 1.5.1.2)
+PS_role_9b5459	Pyruvate decarboxylase (EC 4.1.1.1)
+PS_role_83e405	Pyruvate dehydrogenase E1 component alpha subunit (EC 1.2.4.1)
+PS_role_ecca2f	Pyruvate dehydrogenase E1 component beta subunit (EC 1.2.4.1)
+PS_role_5a9489	Pyruvate kinase (EC 2.7.1.40)
+PS_role_f64d06	Pyruvate transport
+PS_role_7477d0	Pyruvate,phosphate dikinase (EC 2.7.9.1)
+PS_role_2f6581	Quinolinate phosphoribosyltransferase [decarboxylating] (EC 2.4.2.19)
+PS_role_6b4c4e	Quinolinate synthetase (EC 2.5.1.72)
+PS_role_6bac91	Riboflavin kinase (EC 2.7.1.26)
+PS_role_ea9200	Riboflavin synthase eubacterial/eukaryotic (EC 2.5.1.9)
+PS_role_cc0652	Riboflavin transport
+PS_role_b57bb4	Ribokinase (EC 2.7.1.12)
+PS_role_33993f	Ribonucleotide reductase of class Ia (aerobic), alpha subunit (EC 1.17.4.1)
+PS_role_94ef8d	Ribonucleotide reductase of class Ia (aerobic), beta subunit (EC 1.17.4.1)
+PS_role_e22cd9	Ribose 5-phosphate isomerase A (EC 5.3.1.6)
+PS_role_bd86b7	Ribose-phosphate pyrophosphokinase (EC 2.7.6.1)
+PS_role_bbc230	Ribulose bisphosphate carboxylase large chain (EC 4.1.1.39)
+PS_role_58cc6b	Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39)
+PS_role_688347	Ribulose-phosphate 3-epimerase (EC 5.1.3.1)
+PS_role_dd722d	S-Adenosyl-4-methylthio-2-oxobutanoate transport
+PS_role_268e2c	S-Adenosylhomocysteine transport
+PS_role_375d40	S-Adenosylmethionine transport
+PS_role_09b231	S-adenosylmethionine synthetase (EC 2.5.1.6)
+PS_role_cb78cd	S-alkyl-thiohydroximate lyase (EC 4.4.1.-)
+PS_role_f2f905	S-linalool synthase (EC 4.2.3.25)
+PS_role_e4380c	Sedoheptulose-1,7-bisphosphatase (EC 3.1.3.37)
+PS_role_b24e55	Serine acetyltransferase (EC 2.3.1.30)
+PS_role_d7bdc5	Serine hydroxymethyltransferase (EC 2.1.2.1)
+PS_role_3dc3fe	Serine racemase (EC 5.1.1.18)
+PS_role_ea3382	Serine transport
+PS_role_7b06c8	Serine--glyoxylate aminotransferase (EC 2.6.1.45)
+PS_role_8d3421	Shikimate 5-dehydrogenase I alpha (EC 1.1.1.25)
+PS_role_f36f33	Shikimate O-hydroxycinnamoyltransferase (EC 2.3.1.133)
+PS_role_f2b17b	Shikimate kinase I (EC 2.7.1.71)
+PS_role_9adb48	Solanesyl diphosphate synthase (EC 2.5.1.85)
+PS_role_a21670	Solanesyl-PP transport
+PS_role_3c14be	Soluble pyridine nucleotide transhydrogenase (EC 1.6.1.1)
+PS_role_b129ec	Spontaneous Reaction
+PS_role_50aba3	Stearoyl-[acyl carrier protein] thioesterase (EC 3.1.2.-)
+PS_role_7bb52e	Stearoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.-)
+PS_role_717701	Succinate dehydrogenase (ubiquinone) cytochrome b560 subunit SDH3/SDHC
+PS_role_06d9bf	Succinate dehydrogenase (ubiquinone) flavoprotein subunit SDH1/SDHA (EC 1.3.5.1)
+PS_role_313ea2	Succinate dehydrogenase (ubiquinone) iron-sulfur subunit SDH2/SDHB (EC 1.3.5.1)
+PS_role_d68df5	Succinate dehydrogenase (ubiquinone) membrane anchor subunit SDH4/SDHD
+PS_role_1dd259	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH5
+PS_role_ef4bbf	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH6
+PS_role_c5687f	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH7
+PS_role_32c7d3	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH8
+PS_role_4932b1	Succinate transport
+PS_role_d2581f	Succinyl-CoA ligase [ADP-forming] alpha chain (EC 6.2.1.5)
+PS_role_076af3	Succinyl-CoA ligase [ADP-forming] beta chain (EC 6.2.1.5)
+PS_role_0278da	Sucrose alpha-glucosidase, alkaline/neutral invertase (EC 3.2.1.26)
+PS_role_62b999	Sucrose synthase (EC 2.4.1.13)
+PS_role_a941df	Sucrose transport
+PS_role_6151fd	Sucrose-phosphate phosphatase (EC 3.1.3.24)
+PS_role_26ecf3	Sucrose-phosphate synthase (EC 2.4.1.14)
+PS_role_5ac161	Sugar-terminal-phosphatase (EC 3.1.3.9/ EC 3.1.3.58)
+PS_role_cd782a	Sulfate adenylyltransferase (EC 2.7.7.4)
+PS_role_1258bf	Sulfate transport
+PS_role_42c104	Sulfite oxidase (EC 1.8.3.1)
+PS_role_6b8c1c	Taxa-4(20), 11(12)-dien-5a-ol-o-acetyl transferase (EC 2.3.1.162)
+PS_role_3ad0bc	Taxadiene 5-alpha-hydroxylase (EC 1.14.99.37)
+PS_role_76493f	Taxadiene synthase (EC 4.2.3.17)
+PS_role_a0ec4a	Taxane 10-beta-hydroxylase (EC 1.14.14.105)
+PS_role_28c1a1	Taxane 13-alpha-hydroxylase (EC 1.14.14.106)
+PS_role_48fc9e	Taxane 2-alpha-O-benzoyltransferase (EC 2.3.1.166)
+PS_role_4ea08d	Taxoid 14-beta-hydroxylase (EC 1.14.13.146)
+PS_role_3f4c32	Taxoid C13-side chain N-benzoyltransferase (EC 2.3.1.-)
+PS_role_730663	Tetrahydrofolate transport
+PS_role_2c6f5e	Thiamin monophosphate transport
+PS_role_6148bc	Thiamin pyrophosphokinase (EC 2.7.6.2)
+PS_role_2edbbb	Thiamin transport
+PS_role_e16e1e	Thiamin-phosphate pyrophosphorylase (EC 2.5.1.3)
+PS_role_7bc02a	Thiamine-monophosphate phosphatase (EC 3.1.3.-)
+PS_role_94ee08	Thiamine-triphosphatase (EC 3.6.1.28)
+PS_role_7b2dc9	Thiamine-triphosphatase (ThTP) synthase (EC 2.7.4.15)
+PS_role_eb4442	Thiazole biosynthetic enzyme Thi4
+PS_role_e68575	Thioredoxin reductase (EC 1.8.1.9)
+PS_role_7f6e9a	Threonine dehydratase biosynthetic (EC 4.3.1.19)
+PS_role_ce5990	Threonine synthase (EC 4.2.3.1)
+PS_role_c3f269	Threonine transport
+PS_role_579dbd	Thymidylate kinase (EC 2.7.4.9)
+PS_role_b69556	Thymidylate synthase (EC 2.1.1.45)
+PS_role_2e7341	Trans-cinnamate 4-monooxygenase (EC 1.14.13.11)
+PS_role_0bc038	Transaldolase (EC 2.2.1.2)
+PS_role_a90791	Transketolase (EC 2.2.1.1)
+PS_role_03d7c3	Triosephosphate isomerase (EC 5.3.1.1)
+PS_role_4b6628	Tryptophan N-monooxygenase (EC 1.14.13.125)
+PS_role_830b5f	Tryptophan synthase alpha chain (EC 4.2.1.20)
+PS_role_a2c730	Tryptophan synthase beta chain (EC 4.2.1.20)
+PS_role_e2c4cd	Tryptophan transport
+PS_role_fea87c	Tyramine N-feruloyltransferase (EC 2.3.1.110)
+PS_role_ddc5da	Tyrosine aminotransferase (EC 2.6.1.5)
+PS_role_566d52	Tyrosine transport
+PS_role_c5896e	UDP-D-apiose synthase (EC 4.1.1.-)
+PS_role_dd5ac2	UDP-glucose 4-epimerase (EC 5.1.3.2)
+PS_role_20f8e0	UDP-glucose dehydrogenase (EC 1.1.1.22)
+PS_role_8c2d66	UDP-glucose:nicotinate-N-glucosyltransferase  (EC 2.4.1.196)
+PS_role_d0acaa	UDP-glucose:p-aminobenzoate glucosyltransferase
+PS_role_1fdeec	UDP-glucose:p-hydroxymandelonitrile-O-glucosyltransferase (EC 2.4.1.85)
+PS_role_07c538	UDP-glucose:pyridoxine 5'-O-beta-D-glucosyltransferase (EC 2.4.1.160)
+PS_role_dc20f0	UDP-glucuronate decarboxylase (EC 4.1.1.35)
+PS_role_0262fd	UDP-sugar pyrophosphorylase (EC 2.7.7.64)
+PS_role_e9c139	UTP--glucose-1-phosphate uridylyltransferase (EC 2.7.7.9)
+PS_role_837adb	Ubiquinol--cytochrome c reductase, cytochrome B subunit (EC 1.10.2.2)
+PS_role_7032e9	Ubiquinol-cytochrome C reductase iron-sulfur subunit (EC 1.10.2.2)
+PS_role_910905	Ubiquinol-cytochrome c reductase complex subunit 6 (hinge protein)
+PS_role_1ae99d	Ubiquinol-cytochrome c reductase complex subunit 7
+PS_role_85c8a5	Ubiquinol-cytochrome c reductase complex subunit 8 (ubiquinone-binding protein QP-C)
+PS_role_1b4ace	Ubiquinol-cytochrome c reductase complex subunit 9
+PS_role_ec3fe5	Ubiquinone biosynthesis monooxygenase COQ6 (EC 1.14.13.-), required for C5-hydroxylation step
+PS_role_985a1c	Ubiquinone-9 transport
+PS_role_f567fb	Ubiquinone/menaquinone biosynthesis methyltransferase UbiE (EC 2.1.1.-)
+PS_role_b459de	Uracil phosphoribosyltransferase (EC 2.4.2.9)
+PS_role_f8d259	Uracil transport
+PS_role_ab4a59	Urea transport
+PS_role_0e9f21	Urease (EC 3.5.1.5)
+PS_role_90c7d9	Uridine monophosphate/cytidine monophosphate kinase (EC 2.7.4.14)
+PS_role_376fd4	Uridine nucleosidase (EC 3.2.2.3)
+PS_role_64145c	Valine transport
+PS_role_757fdb	Water transport
+PS_role_e0bf23	alternative photosystem I reaction center subunit X (PsaK2)
+PS_role_fbbe49	beta-Fructose-6-phosphate transport
+PS_role_658156	beta-Glucose-6-phosphate transport
+PS_role_59dfb3	cis-Aconitate transport
+PS_role_b580ce	pABA transport
+PS_role_070e7e	photosystem I 4.8K protein (PsaX)
+PS_role_445157	photosystem I P700 chlorophyll a apoprotein subunit Ia (PsaA)
+PS_role_fb63ff	photosystem I P700 chlorophyll a apoprotein subunit Ib (PsaB)
+PS_role_e4c878	photosystem I assembly related protein Ycf3
+PS_role_362277	photosystem I assembly related protein Ycf37
+PS_role_564d95	photosystem I assembly related protein Ycf4
+PS_role_d9335e	photosystem I biogenesis protein BtpA
+PS_role_579899	photosystem I iron-sulfur center subunit VII (PsaC)
+PS_role_1522c8	photosystem I subunit II (PsaD)
+PS_role_03d895	photosystem I subunit III precursor, plastocyanin (cyt c553) docking protein (PsaF)
+PS_role_739b26	photosystem I subunit IV (PsaE)
+PS_role_1f0db8	photosystem I subunit IX (PsaJ)
+PS_role_39872b	photosystem I subunit PsaG
+PS_role_c02f1d	photosystem I subunit PsaN
+PS_role_228387	photosystem I subunit PsaO
+PS_role_8b7141	photosystem I subunit PsaP
+PS_role_f90d98	photosystem I subunit VI (PsaH)
+PS_role_bfed59	photosystem I subunit VIII (PsaI)
+PS_role_4921cd	photosystem I subunit X (PsaK, PsaK1)
+PS_role_8dbedd	photosystem I subunit XI (PsaL)
+PS_role_b483ec	photosystem I subunit XII (PsaM)
+PS_role_9bc471	photosystem II protein D1 (PsbA)
+PS_role_3c6f1d	photosystem II protein D2 (PsbD)
+PS_role_01687d	trans-cinnamate 2-monooxygenase (EC 1.14.13.14)
+PS_role_0537a9	tyrosine N-monooxygenase (EC 1.14.14.36)
+PS_role_f06a9c	ubiquinol cytochrome C oxidoreductase, cytochrome C1 subunit
