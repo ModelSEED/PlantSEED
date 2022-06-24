@@ -31538,11 +31538,11 @@
         "role": "Taxadiene synthase (EC 4.2.3.17)",
         "include": true,
         "subsystems": [
-            "Terpenoid metabolism"
+            "Taxol biosynthesis"
         ],
         "classes": {
             "Secondary metabolism": {
-                "Terpenoid metabolism": [
+                "Taxol biosynthesis": [
                     "PWY-5660",
                     "PWY-7392"
                 ]
@@ -31578,14 +31578,14 @@
         "kbase_id": "PS_role_76493f"
     },
     {
-        "role": "Taxadiene 5\u00ce\u00b1-hydroxylase (EC 1.14.99.37)",
+        "role": "Taxadiene 5-alpha-hydroxylase (EC 1.14.99.37)",
         "include": true,
         "subsystems": [
-            "Terpenoid metabolism"
+            "Taxol biosynthesis"
         ],
         "classes": {
             "Secondary metabolism": {
-                "Terpenoid metabolism": [
+                "Taxol biosynthesis": [
                     "PWY-5660"
                 ]
             }
@@ -31615,14 +31615,14 @@
         "kbase_id": "PS_role_3ad0bc"
     },
     {
-        "role": "Taxane 13\u00ce\u00b1-hydroxylase (EC 1.14.14.106)",
+        "role": "Taxane 13-alpha-hydroxylase (EC 1.14.14.106)",
         "include": true,
         "subsystems": [
-            "Terpenoid metabolism"
+            "Taxol biosynthesis"
         ],
         "classes": {
             "Secondary metabolism": {
-                "Terpenoid metabolism": [
+                "Taxol biosynthesis": [
                     "PWY-5660"
                 ]
             }
@@ -31659,11 +31659,11 @@
         "role": "Taxa-4(20), 11(12)-dien-5a-ol-o-acetyl transferase (EC 2.3.1.162)",
         "include": true,
         "subsystems": [
-            "Terpenoid metabolism"
+            "Taxol biosynthesis"
         ],
         "classes": {
             "Secondary metabolism": {
-                "Terpenoid metabolism": [
+                "Taxol biosynthesis": [
                     "PWY-5660"
                 ]
             }
@@ -31691,14 +31691,14 @@
         "kbase_id": "PS_role_6b8c1c"
     },
     {
-        "role": "Taxane 10\u00ce\u00b2-hydroxylase (EC 1.14.14.105)",
+        "role": "Taxane 10-beta-hydroxylase (EC 1.14.14.105)",
         "include": true,
         "subsystems": [
-            "Terpenoid metabolism"
+            "Taxol biosynthesis"
         ],
         "classes": {
             "Secondary metabolism": {
-                "Terpenoid metabolism": [
+                "Taxol biosynthesis": [
                     "PWY-5660"
                 ]
             }
@@ -31731,14 +31731,14 @@
         "kbase_id": "PS_role_a0ec4a"
     },
     {
-        "role": "Taxoid 14\u00ce\u00b2-hydroxylase (EC 1.14.13.146)",
+        "role": "Taxoid 14-beta-hydroxylase (EC 1.14.13.146)",
         "include": true,
         "subsystems": [
-            "Terpenoid metabolism"
+            "Taxol biosynthesis"
         ],
         "classes": {
             "Secondary metabolism": {
-                "Terpenoid metabolism": [
+                "Taxol biosynthesis": [
                     "PWY-5660"
                 ]
             }
@@ -31766,14 +31766,14 @@
         "kbase_id": "PS_role_4ea08d"
     },
     {
-        "role": "Taxane 2\u00ce\u00b1-O-benzoyltransferase (EC 2.3.1.166)",
+        "role": "Taxane 2-alpha-O-benzoyltransferase (EC 2.3.1.166)",
         "include": true,
         "subsystems": [
-            "Terpenoid metabolism"
+            "Taxol biosynthesis"
         ],
         "classes": {
             "Secondary metabolism": {
-                "Terpenoid metabolism": [
+                "Taxol biosynthesis": [
                     "PWY-5660"
                 ]
             }
@@ -31811,11 +31811,11 @@
         "role": "10-deacetylbaccatin III-10-O-caetyl transferase (EC 2.3.1.167)",
         "include": true,
         "subsystems": [
-            "Terpenoid metabolism"
+            "Taxol biosynthesis"
         ],
         "classes": {
             "Secondary metabolism": {
-                "Terpenoid metabolism": [
+                "Taxol biosynthesis": [
                     "PWY-5660"
                 ]
             }
@@ -31846,11 +31846,11 @@
         "role": "Phenylpropanoyltransferase (EC 2.3.1.-)",
         "include": true,
         "subsystems": [
-            "Terpenoid metabolism"
+            "Taxol biosynthesis"
         ],
         "classes": {
             "Secondary metabolism": {
-                "Terpenoid metabolism": [
+                "Taxol biosynthesis": [
                     "PWY-5660"
                 ]
             }
@@ -31885,11 +31885,11 @@
         "role": "Taxoid C13-side chain N-benzoyltransferase (EC 2.3.1.-)",
         "include": true,
         "subsystems": [
-            "Terpenoid metabolism"
+            "Taxol biosynthesis"
         ],
         "classes": {
             "Secondary metabolism": {
-                "Terpenoid metabolism": [
+                "Taxol biosynthesis": [
                     "PWY-5660"
                 ]
             }

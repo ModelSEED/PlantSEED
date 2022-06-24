@@ -1,3 +1,3 @@
-rxn44037	Dhurrinase beta-glucosidase (E.C. 3.2.1.-)	Sbicolor_3.1.1||Sobic.008G079800;Uniprot||Q41290	15148317,16661725,9536065	Dhurrin degradation	Secondary metabolism	PWY-5976	d:Sbicolor_3.1.1||Sobic.008G079800:Literature
-rxn44037	Cyanogenic beta-glucosidase dhurrinase 2 (E.C. 3.2.1.-)	Sbicolor_3.1.1||Sobic.008G08040;Uniprot||Q93XR2	15148317,16661725,9536065	Dhurrin degradation	Secondary metabolism	PWY-5976	d:Sbicolor_3.1.1||Sobic.008G08040:Literature
-rxn01935	Hydroxynitrile lyase (E.C. 4.1.2.11)	Sbicolor_3.1.1||Sobic.004G33550;Uniprot||P52708	7948927,16661725	Dhurrin degradation	Secondary metabolism	N/A	d:Sbicolor_3.1.1||Sobic.004G33550:Literature
+rxn44037	Dhurrinase beta-glucosidase (E.C. 3.2.1.-)	Sbicolor_v3.1.1||Sobic.008G079800;Uniprot||Q41290	15148317,16661725,9536065	Dhurrin degradation	Secondary metabolism	PWY-5976	d:Sbicolor_v3.1.1||Sobic.008G079800:Literature
+rxn44037	Cyanogenic beta-glucosidase dhurrinase 2 (E.C. 3.2.1.-)	Sbicolor_v3.1.1||Sobic.008G08040;Uniprot||Q93XR2	15148317,16661725,9536065	Dhurrin degradation	Secondary metabolism	PWY-5976	d:Sbicolor_v3.1.1||Sobic.008G08040:Literature
+rxn01935	Hydroxynitrile lyase (E.C. 4.1.2.11)	Sbicolor_v3.1.1||Sobic.004G33550;Uniprot||P52708	7948927,16661725	Dhurrin degradation	Secondary metabolism		d:Sbicolor_v3.1.1||Sobic.004G33550:Literature
