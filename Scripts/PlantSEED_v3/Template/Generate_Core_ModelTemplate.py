@@ -117,9 +117,13 @@ with open("../../../Data/PlantSEED_v3/PlantSEED_Roles.json") as subsystem_file:
 #Collect Compartmentalized Reactions
 reactions_roles=dict()
 roles=dict();
+roles_ids=dict();
 for entry in roles_list:
     if(entry['include'] is False):
         continue
+
+    if('kbase_id' in entry):
+        roles_ids[entry['role']]=entry['kbase_id']
     
     if(entry['role'] not in roles):
         roles[entry['role']]=list()
@@ -184,15 +188,21 @@ for tmpl_rxn in sorted(reactions_roles):
 
 #Generate Template Roles
 template_roles=list()
-roles_ids=dict()
+#roles_ids=dict()
 role_count=1
+template_role_file = open("Template_Roles_Record.tmp",'w')
 for role in sorted(roles):
-    role_hash = { 'id':"Role."+str(role_count), 'name':role, 'source':'PlantSEED',
-                  'aliases':[], 'features':sorted(roles[role]) }
-    role_count+=1
+    if(role in roles_ids):
+        role_hash = { 'id':roles_ids[role], 'name':role, 'source':'PlantSEED',
+                      'aliases':[], 'features':sorted(roles[role]) }
+        #role_count+=1
 
-    template_roles.append(role_hash)
-    roles_ids[role]=role_hash['id']
+        template_roles.append(role_hash)
+#        roles_ids[role]=role_hash['id']
+        template_role_file.write(role_hash['id']+"\t"+role+"\n")
+
+    else:
+        print(role)
 
 #Generate TemplateComplex and TemplateComplexRole
 template_complexes=list()
