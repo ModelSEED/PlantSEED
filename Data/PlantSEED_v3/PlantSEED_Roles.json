@@ -1356,7 +1356,7 @@
     },
     {
         "role": "3-butenylglucosinolate 2-hydroxylase (no EC)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -4903,7 +4903,7 @@
     },
     {
         "role": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (hydroxylation) (no EC)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -4933,7 +4933,7 @@
     },
     {
         "role": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -5997,7 +5997,7 @@
     },
     {
         "role": "Benzoylated glucosinolates modification, unresolved step",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -11078,7 +11078,7 @@
     },
     {
         "role": "Flavin-containing glucosinolate S-oxygenase (no EC)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -13029,7 +13029,7 @@
     },
     {
         "role": "Glutathione S-transferase in glucosinolates biosynthesis, predicted",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -13977,7 +13977,7 @@
     },
     {
         "role": "Homo, di, tri, tetra, penta & hexahomomethionine N-hydroxylase (EC 1.14.13.n5)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -14010,7 +14010,7 @@
     },
     {
         "role": "Homo, di, tri, tetra, penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n5)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -17417,7 +17417,7 @@
     },
     {
         "role": "N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in aliphatic glucosinolates biosynthesis",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -20294,7 +20294,7 @@
     },
     {
         "role": "Oxime metabolizining monooxygenase in aliphatic glucosinolates biosynthesis",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -20648,7 +20648,7 @@
     },
     {
         "role": "Penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n6)",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
@@ -26019,7 +26019,7 @@
     },
     {
         "role": "Sinapoylated glucosinolates modification, unresolved step",
-        "include": false,
+        "include": true,
         "subsystems": [
             "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
