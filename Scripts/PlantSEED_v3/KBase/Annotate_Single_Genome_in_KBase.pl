@@ -95,7 +95,7 @@ while(<FH>){
     }
 }
 
-$local_file = "../../../../../Argonne/local/2022/".$genome.".json";;
+$local_file = "../../../../../Argonne/2022/local/".$genome.".json";;
 
 open(ANC, " >> Annotation_Count.txt");
 my %Propagated_Proteins=();
