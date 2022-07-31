@@ -14653,17 +14653,43 @@
         },
         "features": [
             "Athaliana_TAIR10||AT1G21120",
-            "Athaliana_TAIR10||AT1G21130"
+            "Athaliana_TAIR10||AT1G21130",
+            "Athaliana_TAIR10||AT1G76790",
+            "Athaliana_TAIR10||AT1G21100",
+            "Athaliana_TAIR10||AT5G53810",
+            "Athaliana_TAIR10||AT1G21110"
         ],
         "reactions": [
-            "rxn23776"
+            "rxn23776",
+            "rxn48396",
+            "rxn42934"
         ],
         "localization": {
             "c": {
-                "rxn23776": []
+                "rxn23776": [],
+                "Athaliana_TAIR10||AT1G76790": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT1G21100": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT1G21120": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT5G53810": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT1G21130": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT1G21110": [
+                    "AraCyc"
+                ]
             }
         },
-        "publications": [],
+        "publications": [
+            "10.1105/tpc.110.081711"
+        ],
         "kbase_id": "PS_role_816efa"
     },
     {
@@ -20264,11 +20290,15 @@
             }
         },
         "features": [
-            "Athaliana_TAIR10||AT4G31500"
+            "Athaliana_TAIR10||AT4G31500",
+            "Athaliana_TAIR10||AT5G57220",
+            "Athaliana_TAIR10||AT4G37400",
+            "Athaliana_TAIR10||AT4G37430"
         ],
         "reactions": [
             "rxn21795",
-            "rxn21793"
+            "rxn21793",
+            "rxn40669"
         ],
         "localization": {
             "r": {
@@ -20278,10 +20308,21 @@
             },
             "c": {
                 "rxn21795": [],
-                "rxn21793": []
+                "rxn21793": [],
+                "Athaliana_TAIR10||AT5G57220": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT4G37400": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT4G37430": [
+                    "AraCyc"
+                ]
             }
         },
-        "publications": [],
+        "publications": [
+            "10.1105/tpc.110.081711"
+        ],
         "kbase_id": "PS_role_c61b82"
     },
     {
@@ -20771,11 +20812,11 @@
         "role": "Phenylalanine N-monooxygenase (EC 1.14.13.124)",
         "include": true,
         "subsystems": [
-          "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-              "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-2821"
                 ]
             }
@@ -32134,5 +32175,35 @@
             "Uniprot||P52708": "MAVFISSSGSPGRATATTTTTTTLLLAVLAAAAAAGLLLAPVAARGSPPEHDKQLQLQQQEDDRIPGLPGQPNGVAFGMYGGYVTIDDNNGRALYYWFQEADTADPAAAPLVLWLNGGPGCSSIGLGAMQELGPFRVHTNGESLLLNEYAWNKAANILFAESPAGVVFSYSNTSSDLSMGDDKMAQDTYTFLVKWFERFPHYNYREFYIAGESGHFIPQLSQVVYRNRNNSPFINFQGLLVSSGLTNDHEDMIGMFELWWHHGLISDETRDSGLKVCPGTSFMHPTPECTEVWNKALAEQGNINPYTIYTPTCDREPSPYQRRFWAPHGRAAPPPLMLPPYDPCAVFNSINYLNLPEVQTALHANVSGIVEYPWTVCSNTIFDQWGQAADDLLPVYRELIQAGLRVWVYSGDTDSVVPVSSTRRSLAALELPVKTSWYPWYMAPTEREVGGWSVQYEGLTYVSPSGAGHLVPVHRPAQAFLLFKQFLKGEPMPAEEKNDILLPSEKAPFY"
         },
         "kbase_id": "PS_role_3c30f2"
+    },
+    {
+        "role": "Cytochrome 9450",
+        "include": true,
+        "subsystems": [
+            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+        ],
+        "classes": {
+            "Secondary": {
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                    "PWY-601"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT4G37410"
+        ],
+        "reactions": [
+            "rxn45715"
+        ],
+        "localization": {
+            "c": {
+                "Athaliana_TAIR10||AT4G37410": [
+                    "AraCyc"
+                ]
+            }
+        },
+        "publications": [
+            "10.1105/tpc.110.081711"
+        ]
     }
 ]
