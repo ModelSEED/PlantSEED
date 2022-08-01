@@ -1132,11 +1132,7 @@
         "classes": {
             "Amino acids": {
                 "Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants": [
-                    "PWY-1186"
-                ]
-            },
-            "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                    "PWY-1186",
                     "PWYQT-4450"
                 ]
             }
@@ -1356,13 +1352,13 @@
     },
     {
         "role": "3-butenylglucosinolate 2-hydroxylase (no EC)",
-        "include": false,
+        "include": true,
         "subsystems": [
-            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWYQT-4471"
                 ]
             }
@@ -4903,13 +4899,13 @@
     },
     {
         "role": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (hydroxylation) (no EC)",
-        "include": false,
+        "include": true,
         "subsystems": [
-            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-1187",
                     "PWYQT-4471"
                 ]
@@ -4933,13 +4929,13 @@
     },
     {
         "role": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)",
-        "include": false,
+        "include": true,
         "subsystems": [
-            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-1187",
                     "PWYQT-4471"
                 ]
@@ -5997,13 +5993,13 @@
     },
     {
         "role": "Benzoylated glucosinolates modification, unresolved step",
-        "include": false,
+        "include": true,
         "subsystems": [
-            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-1187",
                     "PWYQT-4471"
                 ]
@@ -6759,11 +6755,11 @@
         "role": "CYP81F4 monooxygenase",
         "include": true,
         "subsystems": [
-            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-601"
                 ]
             }
@@ -8960,11 +8956,11 @@
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-601",
                     "PWY-2821"
                 ],
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-1187",
                     "PWYQT-4471",
                     "PWYQT-4472",
@@ -11078,13 +11074,13 @@
     },
     {
         "role": "Flavin-containing glucosinolate S-oxygenase (no EC)",
-        "include": false,
+        "include": true,
         "subsystems": [
-            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-1187",
                     "PWYQT-4471",
                     "PWYQT-4472",
@@ -11988,11 +11984,11 @@
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-601",
                     "PWY-2821"
                 ],
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-1187",
                     "PWYQT-4471",
                     "PWYQT-4472",
@@ -12997,11 +12993,11 @@
         "role": "Glutathione S-transferase in Trp, Phe, Tyr-derived glucosinolates biosynthesis, predicted",
         "include": true,
         "subsystems": [
-            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-601",
                     "PWY-2821"
                 ]
@@ -13029,13 +13025,13 @@
     },
     {
         "role": "Glutathione S-transferase in glucosinolates biosynthesis, predicted",
-        "include": false,
+        "include": true,
         "subsystems": [
-            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-1187",
                     "PWYQT-4471",
                     "PWYQT-4472",
@@ -13977,13 +13973,13 @@
     },
     {
         "role": "Homo, di, tri, tetra, penta & hexahomomethionine N-hydroxylase (EC 1.14.13.n5)",
-        "include": false,
+        "include": true,
         "subsystems": [
-            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWYQT-4474",
                     "PWYQT-4475"
                 ]
@@ -14010,13 +14006,13 @@
     },
     {
         "role": "Homo, di, tri, tetra, penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n5)",
-        "include": false,
+        "include": true,
         "subsystems": [
-            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-1187",
                     "PWYQT-4471",
                     "PWYQT-4472",
@@ -14646,28 +14642,54 @@
         "role": "Indole glucosinolate methyltransferase",
         "include": true,
         "subsystems": [
-            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-601"
                 ]
             }
         },
         "features": [
             "Athaliana_TAIR10||AT1G21120",
-            "Athaliana_TAIR10||AT1G21130"
+            "Athaliana_TAIR10||AT1G21130",
+            "Athaliana_TAIR10||AT1G76790",
+            "Athaliana_TAIR10||AT1G21100",
+            "Athaliana_TAIR10||AT5G53810",
+            "Athaliana_TAIR10||AT1G21110"
         ],
         "reactions": [
-            "rxn23776"
+            "rxn23776",
+            "rxn48396",
+            "rxn42934"
         ],
         "localization": {
             "c": {
-                "rxn23776": []
+                "rxn23776": [],
+                "Athaliana_TAIR10||AT1G76790": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT1G21100": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT1G21120": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT5G53810": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT1G21130": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT1G21110": [
+                    "AraCyc"
+                ]
             }
         },
-        "publications": [],
+        "publications": [
+            "10.1105/tpc.110.081711"
+        ],
         "kbase_id": "PS_role_816efa"
     },
     {
@@ -16926,11 +16948,7 @@
         "classes": {
             "Amino acids": {
                 "Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants": [
-                    "PWY-1186"
-                ]
-            },
-            "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                    "PWY-1186",
                     "PWYQT-4450"
                 ]
             }
@@ -17265,11 +17283,11 @@
         "role": "Monooxygenase, catalyses 4-hydroxylation of indolyl-3-methyl glucosinolate (I3M) to 4OH-I3M",
         "include": true,
         "subsystems": [
-            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-601"
                 ]
             }
@@ -17389,11 +17407,11 @@
         "role": "N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in Trp, Phe, Tyr-derived glucosinolates biosynthesis",
         "include": true,
         "subsystems": [
-            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-601",
                     "PWY-2821"
                 ]
@@ -17417,13 +17435,13 @@
     },
     {
         "role": "N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in aliphatic glucosinolates biosynthesis",
-        "include": false,
+        "include": true,
         "subsystems": [
-            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-1187",
                     "PWYQT-4471",
                     "PWYQT-4472",
@@ -20261,22 +20279,26 @@
         "role": "Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis",
         "include": true,
         "subsystems": [
-            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-601",
                     "PWY-2821"
                 ]
             }
         },
         "features": [
-            "Athaliana_TAIR10||AT4G31500"
+            "Athaliana_TAIR10||AT4G31500",
+            "Athaliana_TAIR10||AT5G57220",
+            "Athaliana_TAIR10||AT4G37400",
+            "Athaliana_TAIR10||AT4G37430"
         ],
         "reactions": [
             "rxn21795",
-            "rxn21793"
+            "rxn21793",
+            "rxn40669"
         ],
         "localization": {
             "r": {
@@ -20286,21 +20308,32 @@
             },
             "c": {
                 "rxn21795": [],
-                "rxn21793": []
+                "rxn21793": [],
+                "Athaliana_TAIR10||AT5G57220": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT4G37400": [
+                    "AraCyc"
+                ],
+                "Athaliana_TAIR10||AT4G37430": [
+                    "AraCyc"
+                ]
             }
         },
-        "publications": [],
+        "publications": [
+            "10.1105/tpc.110.081711"
+        ],
         "kbase_id": "PS_role_c61b82"
     },
     {
         "role": "Oxime metabolizining monooxygenase in aliphatic glucosinolates biosynthesis",
-        "include": false,
+        "include": true,
         "subsystems": [
-            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-1187",
                     "PWYQT-4471",
                     "PWYQT-4472",
@@ -20648,13 +20681,13 @@
     },
     {
         "role": "Penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n6)",
-        "include": false,
+        "include": true,
         "subsystems": [
-            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWYQT-4474",
                     "PWYQT-4475"
                 ]
@@ -20779,11 +20812,11 @@
         "role": "Phenylalanine N-monooxygenase (EC 1.14.13.124)",
         "include": true,
         "subsystems": [
-            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-2821"
                 ]
             }
@@ -25529,11 +25562,11 @@
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-601",
                     "PWY-2821"
                 ],
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-1187",
                     "PWYQT-4471",
                     "PWYQT-4472",
@@ -26019,13 +26052,13 @@
     },
     {
         "role": "Sinapoylated glucosinolates modification, unresolved step",
-        "include": false,
+        "include": true,
         "subsystems": [
-            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-1187",
                     "PWYQT-4471"
                 ]
@@ -28350,11 +28383,11 @@
         "role": "Tryptophan N-monooxygenase (EC 1.14.13.125)",
         "include": true,
         "subsystems": [
-            "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
         ],
         "classes": {
             "Secondary": {
-                "Biosynthesis_of_aliphatic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
                     "PWY-601"
                 ]
             }
@@ -32142,5 +32175,35 @@
             "Uniprot||P52708": "MAVFISSSGSPGRATATTTTTTTLLLAVLAAAAAAGLLLAPVAARGSPPEHDKQLQLQQQEDDRIPGLPGQPNGVAFGMYGGYVTIDDNNGRALYYWFQEADTADPAAAPLVLWLNGGPGCSSIGLGAMQELGPFRVHTNGESLLLNEYAWNKAANILFAESPAGVVFSYSNTSSDLSMGDDKMAQDTYTFLVKWFERFPHYNYREFYIAGESGHFIPQLSQVVYRNRNNSPFINFQGLLVSSGLTNDHEDMIGMFELWWHHGLISDETRDSGLKVCPGTSFMHPTPECTEVWNKALAEQGNINPYTIYTPTCDREPSPYQRRFWAPHGRAAPPPLMLPPYDPCAVFNSINYLNLPEVQTALHANVSGIVEYPWTVCSNTIFDQWGQAADDLLPVYRELIQAGLRVWVYSGDTDSVVPVSSTRRSLAALELPVKTSWYPWYMAPTEREVGGWSVQYEGLTYVSPSGAGHLVPVHRPAQAFLLFKQFLKGEPMPAEEKNDILLPSEKAPFY"
         },
         "kbase_id": "PS_role_3c30f2"
+    },
+    {
+        "role": "Cytochrome 9450",
+        "include": true,
+        "subsystems": [
+            "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)"
+        ],
+        "classes": {
+            "Secondary": {
+                "Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)": [
+                    "PWY-601"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT4G37410"
+        ],
+        "reactions": [
+            "rxn45715"
+        ],
+        "localization": {
+            "c": {
+                "Athaliana_TAIR10||AT4G37410": [
+                    "AraCyc"
+                ]
+            }
+        },
+        "publications": [
+            "10.1105/tpc.110.081711"
+        ]
     }
 ]
