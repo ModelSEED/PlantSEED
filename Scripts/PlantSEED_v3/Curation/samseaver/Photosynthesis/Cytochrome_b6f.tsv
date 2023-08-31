@@ -1,0 +1,8 @@
+Athaliana_TAIR10||ATCG00540	Cytochrome b6-f complex subunit, apocytochrome f	Cytochrome b6-f complex PetA, apocytochrome f (EC 7.1.1.6)	10.1111/j.1469-8137.1951.tb05172.x|10.1111/j.1432-1033.1981.tb06379.x	include	Fe
+Athaliana_TAIR10||ATCG00720	Cytochrome b6-f complex subunit, cytochrome b6	Cytochrome b6-f complex PetB, cytochrome b6 (EC 7.1.1.6)	10.1111/j.1432-1033.1981.tb06379.x|10.1073/pnas.81.3.674	include	2Fe
+Athaliana_TAIR10||AT4G03280	Cytochrome b6-f complex iron-sulfur subunit PetC1 (Rieske iron sulfur protein EC 1.10.9.1)	Cytochrome b6-f complex PetC, Rieske iron-sulfur protein (EC 7.1.1.6)	10.1104/pp.103.024190|10.1007/BF00425507|10.1007/BF00337775	include	Fe2S2
+Athaliana_TAIR10||ATCG00730	Cytochrome b6-f complex subunit IV (PetD)	Cytochrome b6-f complex PetD, subunit IV (EC 7.1.1.6)	10.1111/j.1432-1033.1981.tb06379.x|10.1073/pnas.81.3.674	include	
+Athaliana_TAIR10||ATCG00600	Cytochrome b6-f complex subunit V (PetG)	Cytochrome b6-f complex PetG, subunit V (EC 7.1.1.6)	10.1104/pp.107.100131|10.1016/j.resmic.2006.10.002	include	
+Athaliana_TAIR10||ATCG00590		Cytochrome b6-f complex PetL (EC 7.1.1.6)	10.1104/pp.107.100131|10.1016/j.resmic.2006.10.002	exclude	
+Athaliana_TAIR10||AT2G26500		Cytochrome b6-f complex PetM (EC 7.1.1.6)	10.1074/jbc.271.18.10667|10.1093/pcp/pcab116	include	
+Athaliana_TAIR10||ATCG00210		Cytochrome b6-f complex PetN (EC 7.1.1.6)	10.1016/j.resmic.2006.10.002|10.1104/pp.107.100131	include	
