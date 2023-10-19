@@ -35,7 +35,7 @@ with open(pwy_file) as pwy_file_handle:
 
         if(new_role is True):
             new_role = {'role':'',
-                        'include':True,
+                        'include':False,
                         'subsystems':[],
                         'classes':{},
                         'features':[],

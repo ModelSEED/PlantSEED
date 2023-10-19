@@ -32213,5 +32213,285 @@
         "publications": [
             "10.1105/tpc.110.081711"
         ]
+    },
+    {
+        "role": "-_-beta_caryophyllene synthase (EC 4.2.3.57)",
+        "include": false,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5425,PWY-6275"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT5G23960"
+        ],
+        "reactions": [
+            "rxn12182"
+        ],
+        "localization": {
+            "d": {
+                "Athaliana_TAIR10||AT5G23960": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "15918888",
+            "12566586"
+        ]
+    },
+    {
+        "role": "Alpha-Humulene synthase (EC 4.2.3.104)",
+        "include": false,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5425,PWY-6275"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT5G23960"
+        ],
+        "reactions": [
+            "rxn12056"
+        ],
+        "localization": {
+            "d": {
+                "Athaliana_TAIR10||AT5G23960": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "15918888",
+            "12566586"
+        ]
+    },
+    {
+        "role": "Beta-chamigrene synthase (EC 4.2.3.78)",
+        "include": false,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5425,PWY-6275"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT5G44630"
+        ],
+        "reactions": [
+            "rxn24915"
+        ],
+        "localization": {
+            "c": {
+                "Athaliana_TAIR10||AT5G44630": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            "15918888",
+            "15965019"
+        ]
+    },
+    {
+        "role": "Ent-copalyl-diphosphate synthase (EC 5.5.1.13)",
+        "include": false,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-2981,PWY-5032,PWY-6887,PWY-7994"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT4G02780"
+        ],
+        "reactions": [
+            "rxn01490"
+        ],
+        "localization": {
+            "d": {
+                "Athaliana_TAIR10||AT4G02780": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            "10.1111/j.1399-3054.1997.tb01054.x"
+        ]
+    },
+    {
+        "role": "Ent-kaurene synthase (EC 4.2.3.19)",
+        "include": false,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5032,PWY-6887"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT1G79460"
+        ],
+        "reactions": [
+            "rxn03452"
+        ],
+        "localization": {
+            "d": {
+                "Athaliana_TAIR10||AT1G79460": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            "9536043"
+        ]
+    },
+    {
+        "role": "Myrcene synthase (EC 4.2.3.15)",
+        "include": false,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-3041"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT2G24210"
+        ],
+        "reactions": [
+            "rxn01471"
+        ],
+        "localization": {
+            "d": {
+                "Athaliana_TAIR10||AT2G24210": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            "10700382"
+        ]
+    },
+    {
+        "role": "Rhizathalene A synthase (EC 4.2.3.195)",
+        "include": false,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "N/A"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT4G20210"
+        ],
+        "reactions": [
+            "rxn48319"
+        ],
+        "localization": {
+            "d": {
+                "Athaliana_TAIR10||AT4G20210": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            "23512856"
+        ]
+    },
+    {
+        "role": "Thujopsene synthase (EC 4.2.3.79)",
+        "include": false,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5425,PWY-6275"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT5G44630"
+        ],
+        "reactions": [
+            "rxn24911"
+        ],
+        "localization": {
+            "c": {
+                "Athaliana_TAIR10||AT5G44630": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            "15918888",
+            "15965019"
+        ]
+    },
+    {
+        "role": "Z-gamma-bisabolene synthase (EC 4.2.3.40)",
+        "include": false,
+        "subsystems": [
+            "Terpenoid metabolism"
+        ],
+        "classes": {
+            "Secondary metabolism": {
+                "Terpenoid metabolism": [
+                    "PWY-5425,PWY-6275"
+                ]
+            }
+        },
+        "features": [
+            "Athaliana_TAIR10||AT4G13280",
+            "Athaliana_TAIR10||AT4G13300"
+        ],
+        "reactions": [
+            "rxn16462"
+        ],
+        "localization": {
+            "c": {
+                "Athaliana_TAIR10||AT4G13280": [
+                    "Assumed"
+                ]
+            },
+            "d": {
+                "Athaliana_TAIR10||AT4G13300": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [
+            "16297850"
+        ]
     }
 ]
