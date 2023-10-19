@@ -1,4 +1,5 @@
 #!/bin/bash
+ws-url https://appdev.kbase.us/services/ws
 for i in $(ws-listobj Phytozome_Genomes -t KBaseGenomes.Genome | grep Genome | awk '{print $2}')
 do
     echo $i

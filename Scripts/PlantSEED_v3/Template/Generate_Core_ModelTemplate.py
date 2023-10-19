@@ -186,6 +186,10 @@ for tmpl_rxn in sorted(reactions_roles):
 ## Begin Template Generation
 ############################
 
+#Load Template Role Numbers
+print("Load original template role numbers")
+sys.exit()
+
 #Generate Template Roles
 template_roles=list()
 #roles_ids=dict()

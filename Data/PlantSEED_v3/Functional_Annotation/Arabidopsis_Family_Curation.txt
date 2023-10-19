@@ -1,0 +1,2030 @@
+OG0006824	Athaliana_TAIR10||AT1G63970.1	2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase (EC 4.6.1.12) # plastid
+OG0000359	Athaliana_TAIR10||AT4G39770.1	Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0000359	Athaliana_TAIR10||AT4G12430.1	Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0000359	Athaliana_TAIR10||AT1G35910.1	Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0000359	Athaliana_TAIR10||AT1G22210.1	Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0000359	Athaliana_TAIR10||AT5G10100.1	Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0000359	Athaliana_TAIR10||AT5G51460.1	Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0000359	Athaliana_TAIR10||AT2G22190.1	Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0000359	Athaliana_TAIR10||AT1G78090.1	Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0000359	Athaliana_TAIR10||AT4G22590.1	Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0000359	Athaliana_TAIR10||AT5G65140.1	Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0006476	Athaliana_TAIR10||AT5G14800.1	Pyrroline-5-carboxylate reductase (EC 1.5.1.2) # cytosol # plastid
+OG0002238	Athaliana_TAIR10||AT3G61580.1	Delta-8-sphingolipid desaturase (EC 1.14.19.4)
+OG0002238	Athaliana_TAIR10||AT2G46210.1	Delta-8-sphingolipid desaturase (EC 1.14.19.4)
+OG0000974	Athaliana_TAIR10||ATCG01110.1	Uncurated
+OG0000974	Athaliana_TAIR10||ATMG00510.1	NADH dehydrogenase [ubiquinone] iron-sulfur protein 2 (EC 1.6.5.3) (EC 1.6.99.3) # mitointer
+OG0004730	Athaliana_TAIR10||AT2G43100.1	3-isopropylmalate dehydratase small subunit (EC 4.2.1.33) / Methylthioalkylmalate isomerase small subunit (EC 5.4.4.-) # plastid
+OG0004730	Athaliana_TAIR10||AT3G58990.1	3-isopropylmalate dehydratase small subunit (EC 4.2.1.33) / Methylthioalkylmalate isomerase small subunit (EC 5.4.4.-) # plastid
+OG0004730	Athaliana_TAIR10||AT2G43090.1	3-isopropylmalate dehydratase small subunit (EC 4.2.1.33) # plastid
+OG0004921	Athaliana_TAIR10||AT5G03430.1	FMN adenylyltransferase, type 2 eukaryotic (EC 2.7.7.2)
+OG0000609	Athaliana_TAIR10||AT1G02205.3	Fatty aldehyde decarbonylase (EC 4.1.99.-)
+OG0000609	Athaliana_TAIR10||AT1G02190.1	Uncurated
+OG0000609	Athaliana_TAIR10||AT5G57800.1	Uncurated
+OG0000609	Athaliana_TAIR10||AT2G37700.1	Uncurated
+OG0002479	Athaliana_TAIR10||AT2G39770.1	Mannose-1-phosphate guanylyltransferase (EC 2.7.7.13 )
+OG0002479	Athaliana_TAIR10||AT4G30570.1	Uncurated
+OG0002479	Athaliana_TAIR10||AT3G55590.1	Uncurated
+OG0003632	Athaliana_TAIR10||AT1G73370.1	Sucrose synthase (EC 2.4.1.13)
+OG0003632	Athaliana_TAIR10||AT5G37180.1	Sucrose synthase (EC 2.4.1.13)
+OG0003860	Athaliana_TAIR10||AT1G36160.1	Acetyl-coenzyme A carboxyl transferase domain of homomeric ACCase (EC 6.4.1.2) / Biotin carboxyl carrier domain of homomeric Acetyl-CoA carboxylase / Biotin carboxylase domain of homomeric ACCase (EC 6.3.4.14) # cytosol
+OG0003860	Athaliana_TAIR10||AT1G36180.1	Acetyl-coenzyme A carboxyl transferase domain of homomeric ACCase (EC 6.4.1.2) / Biotin carboxyl carrier domain of homomeric Acetyl-CoA carboxylase / Biotin carboxylase domain of homomeric ACCase (EC 6.3.4.14) # plastid
+OG0004855	Athaliana_TAIR10||AT4G33010.1	Glycine dehydrogenase [decarboxylating] (glycine cleavage system P protein) (EC 1.4.4.2) # mitochondria
+OG0004855	Athaliana_TAIR10||AT2G26080.1	Glycine dehydrogenase [decarboxylating] (glycine cleavage system P protein) (EC 1.4.4.2) # mitochondria
+OG0007769	Athaliana_TAIR10||AT1G08480.1	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH6 # mitochondria
+OG0005405	Athaliana_TAIR10||AT5G40610.1	Glycerol-3-phosphate dehydrogenase [NAD+] (EC 1.1.1.8) # plastid
+OG0003085	Athaliana_TAIR10||AT5G48220.1	Indole-3-glycerol phosphate synthase (EC 4.1.1.48) # plastid
+OG0003085	Athaliana_TAIR10||AT2G04400.1	Indole-3-glycerol phosphate synthase (EC 4.1.1.48) # plastid
+OG0005917	Athaliana_TAIR10||AT3G18410.1	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 10 # mitointer
+OG0005917	Athaliana_TAIR10||AT1G49140.1	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 10 # mitointer
+OG0003829	Athaliana_TAIR10||AT4G21534.1	Sphinganine kinase (EC 2.7.1.91)
+OG0003829	Athaliana_TAIR10||AT4G21540.1	Sphinganine kinase (EC 2.7.1.91)
+OG0002283	Athaliana_TAIR10||AT3G13930.1	Dihydrolipoamide acetyltransferase component of pyruvate dehydrogenase complex (EC 2.3.1.12) # mitochondria
+OG0002283	Athaliana_TAIR10||AT3G52200.2	Dihydrolipoamide acetyltransferase component of pyruvate dehydrogenase complex (EC 2.3.1.12) # mitochondria
+OG0002283	Athaliana_TAIR10||AT1G54220.1	Dihydrolipoamide acetyltransferase component of pyruvate dehydrogenase complex (EC 2.3.1.12) # mitochondria
+OG0007240	Athaliana_TAIR10||AT1G16340.4	2-Keto-3-deoxy-D-manno-octulosonate-8-phosphate synthase (EC 2.5.1.55)
+OG0007240	Athaliana_TAIR10||AT1G79500.5	2-Keto-3-deoxy-D-manno-octulosonate-8-phosphate synthase (EC 2.5.1.55)
+OG0001334	Athaliana_TAIR10||AT3G11170.1	Omega-3 fatty acid desaturase (EC 1.14.19.-) # plastid
+OG0001334	Athaliana_TAIR10||AT2G29980.1	Omega-3 fatty acid desaturase (EC 1.14.19.-) / Omega-3 linoleate desaturase (EC 1.14.19.-) # endoplasm
+OG0001334	Athaliana_TAIR10||AT5G05580.1	Omega-3 fatty acid desaturase (EC 1.14.19.-) # plastid
+OG0004877	Athaliana_TAIR10||AT3G52730.1	Ubiquinol-cytochrome c reductase complex subunit 9 # mitointer
+OG0006551	Athaliana_TAIR10||AT1G68750.1	Phosphoenolpyruvate carboxylase (EC 4.1.1.31) # cytosol
+OG0000975	Athaliana_TAIR10||AT5G11670.1	NADP-dependent malic enzyme (EC 1.1.1.40) # cytosol
+OG0000975	Athaliana_TAIR10||AT2G19900.1	NADP-dependent malic enzyme (EC 1.1.1.40) # cytosol
+OG0000975	Athaliana_TAIR10||AT1G79750.1	NADP-dependent malic enzyme (EC 1.1.1.40) # plastid
+OG0000975	Athaliana_TAIR10||AT5G25880.1	NADP-dependent malic enzyme (EC 1.1.1.40) # cytosol
+OG0003471	Athaliana_TAIR10||AT4G04040.1	Pyrophosphate-dependent fructose 6-phosphate-1-kinase (EC 2.7.1.90) # cytosol
+OG0003471	Athaliana_TAIR10||AT1G12000.1	Pyrophosphate-dependent fructose 6-phosphate-1-kinase (EC 2.7.1.90) # plastid
+OG0005782	Athaliana_TAIR10||AT3G55360.1	Very-long-chain enoyl-CoA reductase (EC 1.3.1.93)
+OG0000457	Athaliana_TAIR10||AT4G15760.1	Uncurated
+OG0000457	Athaliana_TAIR10||AT5G05320.1	Monooxygenase
+OG0000457	Athaliana_TAIR10||AT2G29720.1	Uncurated
+OG0000457	Athaliana_TAIR10||AT2G35660.1	Uncurated
+OG0000457	Athaliana_TAIR10||AT4G15765.1	Uncurated
+OG0000457	Athaliana_TAIR10||AT4G38540.1	Uncurated
+OG0003799	Athaliana_TAIR10||AT5G23250.1	Succinyl-CoA ligase [ADP-forming] alpha chain (EC 6.2.1.5) # mitochondria
+OG0003799	Athaliana_TAIR10||AT5G08300.1	Succinyl-CoA ligase [ADP-forming] alpha chain (EC 6.2.1.5) # mitochondria
+OG0005142	Athaliana_TAIR10||AT3G60100.1	Citrate synthase (si) (EC 2.3.3.1) # mitochondria
+OG0005142	Athaliana_TAIR10||AT2G44350.2	Citrate synthase (si) (EC 2.3.3.1) # mitochondria
+OG0006704	Athaliana_TAIR10||AT1G68760.1	Dihydroneopterin triphosphate diphosphatase (EC 3.6.1.n4) # cytosol
+OG0005031	Athaliana_TAIR10||AT5G52560.1	UDP-sugar pyrophosphorylase (EC 2.7.7.64)
+OG0005600	Athaliana_TAIR10||AT1G14810.1	Aspartate-semialdehyde dehydrogenase (EC 1.2.1.11) # cytosol # plastid
+OG0002377	Athaliana_TAIR10||AT2G13560.1	NAD-dependent malic enzyme (EC 1.1.1.38) # mitochondria
+OG0002377	Athaliana_TAIR10||AT4G00570.1	NAD-dependent malic enzyme (EC 1.1.1.38) # mitochondria
+OG0003064	Athaliana_TAIR10||AT4G24450.1	Phosphoglucan, water dikinase (EC 2.7.9.5) # plastid
+OG0003064	Athaliana_TAIR10||AT1G10760.1	Starch, water dikinase (EC 2.7.9.4) # plastid
+OG0005254	Athaliana_TAIR10||AT5G26570.1	Phosphoglucan, water dikinase (EC 2.7.9.5) # plastid
+OG0001851	Athaliana_TAIR10||AT3G55610.1	Gamma-glutamyl phosphate reductase (EC 1.2.1.41) / Glutamate 5-kinase (EC 2.7.2.11) # cytosol # plastid
+OG0001851	Athaliana_TAIR10||AT2G39800.1	Gamma-glutamyl phosphate reductase (EC 1.2.1.41) / Glutamate 5-kinase (EC 2.7.2.11) # cytosol # plastid
+OG0002845	Athaliana_TAIR10||ATCG00540.1	Cytochrome b6-f complex subunit, apocytochrome f # plastid
+OG0001508	Athaliana_TAIR10||AT4G33510.1	2-keto-3-deoxy-D-arabino-heptulosonate-7-phosphate synthase II (EC 2.5.1.54) # plastid
+OG0001508	Athaliana_TAIR10||AT1G22410.1	2-keto-3-deoxy-D-arabino-heptulosonate-7-phosphate synthase II (EC 2.5.1.54) # plastid
+OG0001508	Athaliana_TAIR10||AT4G39980.1	2-keto-3-deoxy-D-arabino-heptulosonate-7-phosphate synthase II (EC 2.5.1.54) # plastid
+OG0005170	Athaliana_TAIR10||AT2G44050.1	6,7-dimethyl-8-ribityllumazine synthase (EC 2.5.1.78) # plastid
+OG0004686	Athaliana_TAIR10||AT1G21640.2	NAD kinase (EC 2.7.1.23) # plastid
+OG0004672	Athaliana_TAIR10||AT3G06580.1	Galactokinase (EC 2.7.1.6)
+OG0002694	Athaliana_TAIR10||AT2G32260.1	Cholinephosphate cytidylyltransferase (EC 2.7.7.15)
+OG0007321	Athaliana_TAIR10||AT5G57590.1	Adenosylmethionine-8-amino-7-oxononanoate aminotransferase (EC 2.6.1.62) / Dethiobiotin synthetase (EC 6.3.3.3) # mitochondria
+OG0000357	Athaliana_TAIR10||AT5G22420.1	Long chain fatty acyl-CoA reductase [alcohol-forming] (EC 1.2.1.n2)
+OG0000357	Athaliana_TAIR10||AT3G44550.1	Long chain fatty acyl-CoA reductase [alcohol-forming] (EC 1.2.1.n2)
+OG0000357	Athaliana_TAIR10||AT3G56700.1	Long chain fatty acyl-CoA reductase [alcohol-forming] (EC 1.2.1.n2)
+OG0000357	Athaliana_TAIR10||AT3G44560.1	Long chain fatty acyl-CoA reductase [alcohol-forming] (EC 1.2.1.n2)
+OG0000357	Athaliana_TAIR10||AT5G22500.1	Long chain fatty acyl-CoA reductase [alcohol-forming] (EC 1.2.1.n2)
+OG0000357	Athaliana_TAIR10||AT3G44540.1	Long chain fatty acyl-CoA reductase [alcohol-forming] (EC 1.2.1.n2)
+OG0000357	Athaliana_TAIR10||AT4G33790.1	Long chain fatty acyl-CoA reductase [alcohol-forming] (EC 1.2.1.n2) # endoplasm
+OG0000357	Athaliana_TAIR10||AT3G11980.1	Long chain fatty acyl-CoA reductase [alcohol-forming] (EC 1.2.1.n2) # plastid
+OG0001925	Athaliana_TAIR10||AT1G43710.1	L-Serine decarboxylase (EC 4.1.1.-)
+OG0007192	Athaliana_TAIR10||AT2G37500.1	Glutamate N-acetyltransferase (EC 2.3.1.35) / N-acetylglutamate synthase (EC 2.3.1.1) # plastid
+OG0001153	Athaliana_TAIR10||AT4G23920.1	UDP-glucose 4-epimerase (EC 5.1.3.2)
+OG0001153	Athaliana_TAIR10||AT1G64440.1	UDP-glucose 4-epimerase (EC 5.1.3.2)
+OG0001153	Athaliana_TAIR10||AT4G10960.1	UDP-glucose 4-epimerase (EC 5.1.3.2)
+OG0001153	Athaliana_TAIR10||AT1G12780.1	UDP-glucose 4-epimerase (EC 5.1.3.2)
+OG0001153	Athaliana_TAIR10||AT1G63180.1	UDP-glucose 4-epimerase (EC 5.1.3.2)
+OG0002628	Athaliana_TAIR10||AT5G52920.1	Pyruvate kinase (EC 2.7.1.40) # plastid
+OG0002628	Athaliana_TAIR10||AT1G32440.1	Pyruvate kinase (EC 2.7.1.40) # plastid
+OG0003725	Athaliana_TAIR10||AT5G25450.1	Ubiquinol-cytochrome c reductase complex subunit 7 # mitointer
+OG0003725	Athaliana_TAIR10||AT4G32470.1	Ubiquinol-cytochrome c reductase complex subunit 7 # mitointer
+OG0000558	Athaliana_TAIR10||AT4G12250.1	UDP-glucuronate 4-epimerase (EC 5.1.3.6)
+OG0000558	Athaliana_TAIR10||AT4G30440.1	UDP-glucuronate 4-epimerase (EC 5.1.3.6) # golgi
+OG0000558	Athaliana_TAIR10||AT3G23820.1	UDP-glucuronate 4-epimerase (EC 5.1.3.6) # golgi
+OG0000558	Athaliana_TAIR10||AT4G00110.1	UDP-glucuronate 4-epimerase (EC 5.1.3.6)
+OG0000558	Athaliana_TAIR10||AT1G02000.1	UDP-glucuronate 4-epimerase (EC 5.1.3.6)
+OG0000558	Athaliana_TAIR10||AT2G45310.1	UDP-glucuronate 4-epimerase (EC 5.1.3.6)
+OG0006552	Athaliana_TAIR10||AT3G03070.1	NADH dehydrogenase [ubiquinone] iron-sulfur protein 6 # mitointer
+OG0001036	Athaliana_TAIR10||AT5G38420.1	Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39) # plastid
+OG0001036	Athaliana_TAIR10||AT5G38430.1	Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39) # plastid
+OG0001036	Athaliana_TAIR10||AT5G38410.3	Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39) # plastid
+OG0001036	Athaliana_TAIR10||AT1G67090.1	Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39) # plastid # peroxisome
+OG0002237	Athaliana_TAIR10||AT4G36220.1	Ferulate-5-hydroxylase (EC 1.14.13.-) # endoplasm
+OG0002237	Athaliana_TAIR10||AT5G04330.1	Uncurated
+OG0003090	Athaliana_TAIR10||AT2G30570.1	Photosystem II 13 kDa protein Psb28 (similar to PsbW) # plastid
+OG0001138	Athaliana_TAIR10||AT2G17640.1	Serine acetyltransferase (EC 2.3.1.30) # cytosol
+OG0001138	Athaliana_TAIR10||AT1G55920.1	Serine acetyltransferase (EC 2.3.1.30) # cytosol # plastid
+OG0001138	Athaliana_TAIR10||AT4G35640.1	Serine acetyltransferase (EC 2.3.1.30) # cytosol
+OG0001138	Athaliana_TAIR10||AT5G56760.1	Serine acetyltransferase (EC 2.3.1.30) # cytosol
+OG0001138	Athaliana_TAIR10||AT3G13110.1	Serine acetyltransferase (EC 2.3.1.30) # mitochondria
+OG0004865	Athaliana_TAIR10||AT1G51400.1	Photosystem II protein PsbTn # plastid
+OG0004865	Athaliana_TAIR10||AT3G21055.1	Photosystem II protein PsbTn # plastid
+OG0006952	Athaliana_TAIR10||AT1G49570.1	Peroxidase (EC 1.11.1.7)
+OG0006739	Athaliana_TAIR10||AT2G15620.1	Ferredoxin--nitrite reductase (EC 1.7.7.1) # plastid
+OG0005665	Athaliana_TAIR10||AT5G47570.1	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 8 # mitointer
+OG0008066	Athaliana_TAIR10||AT1G79790.1	FMN hydrolase, high substrate specificity (EC 3.1.3.-) # plastid
+OG0007656	Athaliana_TAIR10||AT1G60600.2	1,4-dihydroxy-2-naphthoate polyprenyltransferase (EC 2.5.1.74) / 2-Carboxy-1,4-naphthoquinone phytyltransferase (EC 2.5.1.130) # plastid
+OG0006075	Athaliana_TAIR10||AT1G37150.2	Uncurated
+OG0006075	Athaliana_TAIR10||AT2G25710.1	Biotin--protein ligase (EC 6.3.4.9)(EC 6.3.4.10)(EC 6.3.4.11)(EC 6.3.4.15)
+OG0004080	Athaliana_TAIR10||AT3G02780.1	Isopentenyl-diphosphate delta-isomerase (EC 5.3.3.2) # cytosol # plastid # mitochondria
+OG0004080	Athaliana_TAIR10||AT5G16440.1	Isopentenyl-diphosphate delta-isomerase (EC 5.3.3.2) # cytosol # plastid
+OG0002618	Athaliana_TAIR10||AT3G23580.1	Ribonucleotide reductase of class Ia (aerobic), beta subunit (EC 1.17.4.1) # cytosol
+OG0002618	Athaliana_TAIR10||AT3G27060.1	Ribonucleotide reductase of class Ia (aerobic), beta subunit (EC 1.17.4.1) # cytosol
+OG0006561	Athaliana_TAIR10||AT3G29090.1	Pectinesterase (EC 3.1.1.11)
+OG0005096	Athaliana_TAIR10||AT4G12800.1	photosystem I subunit XI (PsaL) # plastid
+OG0002978	Athaliana_TAIR10||AT5G36790.1	Phosphoglycolate phosphatase (EC 3.1.3.18) # cytosol # plastid # nucleus
+OG0002978	Athaliana_TAIR10||AT5G36700.1	Phosphoglycolate phosphatase (EC 3.1.3.18) # plastid
+OG0002978	Athaliana_TAIR10||AT5G47760.1	Phosphoglycolate phosphatase (EC 3.1.3.18) # plastid
+OG0000387	Athaliana_TAIR10||AT4G32170.1	Uncurated
+OG0000387	Athaliana_TAIR10||AT1G57750.1	Mid-chain alkane hydroxylase, alcohol- and ketone- forming (no EC) # endoplasm
+OG0000387	Athaliana_TAIR10||AT5G52320.1	Uncurated
+OG0000387	Athaliana_TAIR10||AT2G21910.1	Uncurated
+OG0000387	Athaliana_TAIR10||AT1G65340.1	Uncurated
+OG0000387	Athaliana_TAIR10||AT5G02900.1	Uncurated
+OG0000387	Athaliana_TAIR10||AT4G39500.1	Uncurated
+OG0000387	Athaliana_TAIR10||AT2G23180.1	Uncurated
+OG0000387	Athaliana_TAIR10||AT4G39480.1	Uncurated
+OG0000387	Athaliana_TAIR10||AT4G39510.1	Uncurated
+OG0000387	Athaliana_TAIR10||AT5G51900.1	Uncurated
+OG0000387	Athaliana_TAIR10||AT1G66030.1	Uncurated
+OG0000387	Athaliana_TAIR10||AT1G47620.1	Uncurated
+OG0000387	Athaliana_TAIR10||AT4G39490.1	Uncurated
+OG0000673	Athaliana_TAIR10||AT4G33580.2	Uncurated
+OG0000673	Athaliana_TAIR10||AT1G23730.1	Uncurated
+OG0000673	Athaliana_TAIR10||AT1G58180.2	Uncurated
+OG0000673	Athaliana_TAIR10||AT3G01500.2	Carbonic anhydrase (EC 4.2.1.1) # plastid
+OG0000673	Athaliana_TAIR10||AT1G70410.2	Uncurated
+OG0000673	Athaliana_TAIR10||AT5G14740.1	Carbonic anhydrase (EC 4.2.1.1) # cytosol # plastid
+OG0007911	Athaliana_TAIR10||AT5G64860.1	4-alpha-glucanotransferase (amylomaltase) (EC 2.4.1.25) # plastid
+OG0001117	Athaliana_TAIR10||AT5G03650.1	1,4-alpha-glucan (starch) branching enzyme, GH-13-type (EC 2.4.1.18) # plastid
+OG0001117	Athaliana_TAIR10||AT2G36390.1	1,4-alpha-glucan (starch) branching enzyme, GH-13-type (EC 2.4.1.18) # plastid
+OG0001117	Athaliana_TAIR10||AT3G20440.2	1,4-alpha-glucan (starch) branching enzyme, GH-13-type (EC 2.4.1.18) # plastid
+OG0002646	Athaliana_TAIR10||AT1G71695.1	Peroxidase (EC 1.11.1.7) # cellwall
+OG0002260	Athaliana_TAIR10||AT2G30490.1	Trans-cinnamate 4-monooxygenase (EC 1.14.13.11) # endoplasm
+OG0003466	Athaliana_TAIR10||ATCG00600.1	Cytochrome b6-f complex subunit V (PetG) # plastid
+OG0000313	Athaliana_TAIR10||AT5G57840.1	Uncurated
+OG0000313	Athaliana_TAIR10||AT5G48930.1	Shikimate O-hydroxycinnamoyltransferase (EC 2.3.1.133)
+OG0000313	Athaliana_TAIR10||AT2G19070.1	Uncurated
+OG0004774	Athaliana_TAIR10||AT1G49820.1	5-methylthioribose kinase (EC 2.7.1.100) # cytosol
+OG0007671	Athaliana_TAIR10||AT5G47500.1	Pectinesterase (EC 3.1.1.11)
+OG0003894	Athaliana_TAIR10||AT2G24270.4	Non-phosphorylating glyceraldehyde-3-phosphate dehydrogenase (NADP) (EC 1.2.1.9) # cytosol
+OG0008617	Athaliana_TAIR10||AT2G21370.1	Xylulose kinase (EC 2.7.1.17) # cytosol # plastid
+OG0001688	Athaliana_TAIR10||AT2G36580.1	Pyruvate kinase (EC 2.7.1.40) # cytosol
+OG0001688	Athaliana_TAIR10||AT3G52990.1	Pyruvate kinase (EC 2.7.1.40) # cytosol
+OG0005264	Athaliana_TAIR10||AT1G44575.1	Photosystem II CP22 protein PsbS # plastid
+OG0001499	Athaliana_TAIR10||AT3G14790.1	UDP-4-dehydro-6-deoxy-glucose 3,5-epimerase (no EC) / UDP-4-dehydro-rhamnose reductase (EC 1.1.1.-) / UDP-glucose 4,6-dehydratase (EC 4.2.1.76)
+OG0001499	Athaliana_TAIR10||AT1G53500.1	UDP-4-dehydro-6-deoxy-glucose 3,5-epimerase (no EC) / UDP-4-dehydro-rhamnose reductase (EC 1.1.1.-) / UDP-glucose 4,6-dehydratase (EC 4.2.1.76)
+OG0001499	Athaliana_TAIR10||AT1G78570.1	UDP-4-dehydro-6-deoxy-glucose 3,5-epimerase (no EC) / UDP-4-dehydro-rhamnose reductase (EC 1.1.1.-) / UDP-glucose 4,6-dehydratase (EC 4.2.1.76) # cytosol
+OG0002253	Athaliana_TAIR10||AT4G26770.1	Phosphatidate cytidylyltransferase (EC 2.7.7.41)
+OG0002253	Athaliana_TAIR10||AT4G22340.3	Phosphatidate cytidylyltransferase (EC 2.7.7.41)
+OG0002253	Athaliana_TAIR10||AT1G62430.1	Phosphatidate cytidylyltransferase (EC 2.7.7.41)
+OG0004643	Athaliana_TAIR10||AT5G47890.1	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 2 # mitointer
+OG0003181	Athaliana_TAIR10||AT5G54770.1	Thiazole biosynthetic enzyme Thi4 # plastid
+OG0006236	Athaliana_TAIR10||AT5G60600.1	1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate synthase (EC 1.17.7.1) # plastid
+OG0001659	Athaliana_TAIR10||AT3G47340.1	Asparagine synthetase [glutamine-hydrolyzing] (EC 6.3.5.4)
+OG0001659	Athaliana_TAIR10||AT5G10240.1	Asparagine synthetase [glutamine-hydrolyzing] (EC 6.3.5.4)
+OG0001659	Athaliana_TAIR10||AT5G65010.2	Asparagine synthetase [glutamine-hydrolyzing] (EC 6.3.5.4)
+OG0007060	Athaliana_TAIR10||AT4G32360.1	Adrenodoxin reductase (EC 1.18.1.6) # mitochondria
+OG0002894	Athaliana_TAIR10||AT2G06520.1	Photosystem II protein PsbX # plastid
+OG0006513	Athaliana_TAIR10||AT1G71920.2	Histidinol-phosphate aminotransferase (EC 2.6.1.9) # plastid
+OG0006513	Athaliana_TAIR10||AT5G10330.1	Histidinol-phosphate aminotransferase (EC 2.6.1.9) # plastid
+OG0003985	Athaliana_TAIR10||AT2G17420.1	Thioredoxin reductase (EC 1.8.1.9) # cytosol # mitochondria
+OG0003985	Athaliana_TAIR10||AT4G35460.1	Thioredoxin reductase (EC 1.8.1.9) # cytosol # mitochondria
+OG0009093	Athaliana_TAIR10||AT5G14220.1	Protoporphyrinogen IX oxidase, aerobic, HemY (EC 1.3.3.4)
+OG0006330	Athaliana_TAIR10||AT1G08380.1	photosystem I subunit PsaO # plastid
+OG0000647	Athaliana_TAIR10||AT3G25110.1	Oleoyl-[acyl carrier protein] thioesterase (EC 3.1.2.14) # plastid
+OG0000647	Athaliana_TAIR10||AT1G08510.1	Oleoyl-[acyl carrier protein] thioesterase (EC 3.1.2.14) / Palmitoyl-[acyl carrier protein] thioesterase (EC 3.1.2.-) / Stearoyl-[acyl carrier protein] thioesterase (EC 3.1.2.-) # plastid
+OG0000647	Athaliana_TAIR10||AT4G13050.1	Oleoyl-[acyl carrier protein] thioesterase (EC 3.1.2.14) # plastid
+OG0001276	Athaliana_TAIR10||AT2G17370.1	Hydroxymethylglutaryl-CoA reductase (EC 1.1.1.34)
+OG0001276	Athaliana_TAIR10||AT1G76490.1	Hydroxymethylglutaryl-CoA reductase (EC 1.1.1.34) # cytosol # endoplasm
+OG0004255	Athaliana_TAIR10||AT3G61530.1	3-methyl-2-oxobutanoate hydroxymethyltransferase (EC 2.1.2.11) # mitochondria
+OG0004255	Athaliana_TAIR10||AT2G46110.1	3-methyl-2-oxobutanoate hydroxymethyltransferase (EC 2.1.2.11) # mitochondria
+OG0005945	Athaliana_TAIR10||AT3G16190.1	Nicotinamidase (EC 3.5.1.19) of PncA family, nonfunctional
+OG0073630	Athaliana_TAIR10||AT3G14300.1	Pectinesterase (EC 3.1.1.11)
+OG0007994	Athaliana_TAIR10||AT1G01220.1	Fucose-1-phosphate guanylyltransferase (EC 2.7.7.30) / L-fucose kinase (EC 2.7.1.52)
+OG0000952	Athaliana_TAIR10||AT1G64400.1	Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3)
+OG0000952	Athaliana_TAIR10||AT4G11030.1	Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3)
+OG0000952	Athaliana_TAIR10||AT4G23850.1	Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3)
+OG0000952	Athaliana_TAIR10||AT2G47240.1	Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3) # endoplasm
+OG0000952	Athaliana_TAIR10||AT1G49430.1	Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3)
+OG0003158	Athaliana_TAIR10||AT2G16570.1	Amidophosphoribosyltransferase (EC 2.4.2.14) # plastid
+OG0003158	Athaliana_TAIR10||AT4G34740.1	Amidophosphoribosyltransferase (EC 2.4.2.14) # plastid
+OG0003158	Athaliana_TAIR10||AT4G38880.1	Amidophosphoribosyltransferase (EC 2.4.2.14) # plastid
+OG0006641	Athaliana_TAIR10||AT2G02510.1	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 3 # mitointer
+OG0006641	Athaliana_TAIR10||AT1G14450.1	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 3 # mitointer
+OG0003239	Athaliana_TAIR10||AT4G39540.3	Shikimate kinase I (EC 2.7.1.71) # plastid
+OG0003239	Athaliana_TAIR10||AT2G21940.4	Shikimate kinase I (EC 2.7.1.71) # plastid
+OG0002540	Athaliana_TAIR10||AT1G06690.1	Uncurated
+OG0002540	Athaliana_TAIR10||AT5G53580.1	Pyridoxal reductase (EC 1.1.1.65) # plastid
+OG0000074	Athaliana_TAIR10||AT1G68540.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT5G58490.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT2G02400.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT5G19440.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT2G33590.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT1G09480.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT2G33600.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT1G09510.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT1G80820.1	Cinnamoyl-CoA reductase (EC 1.2.1.44)
+OG0000074	Athaliana_TAIR10||AT1G51410.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT1G09490.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT4G35420.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT1G09500.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT1G66800.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT1G76470.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT1G25460.1	Uncurated
+OG0000074	Athaliana_TAIR10||AT1G15950.1	Cinnamoyl-CoA reductase (EC 1.2.1.44)
+OG0004115	Athaliana_TAIR10||AT5G67590.1	NADH dehydrogenase [ubiquinone] iron-sulfur protein 4 # mitointer
+OG0004317	Athaliana_TAIR10||AT4G02620.1	V-type ATP synthase subunit F (EC 3.6.3.14) # vacuole
+OG0007600	Athaliana_TAIR10||AT5G46180.1	Ornithine aminotransferase (EC 2.6.1.13) # mitochondria
+OG0004463	Athaliana_TAIR10||AT3G51160.1	GDP-mannose 4,6-dehydratase (EC 4.2.1.47)
+OG0004463	Athaliana_TAIR10||AT5G66280.1	GDP-mannose 4,6-dehydratase (EC 4.2.1.47)
+OG0005063	Athaliana_TAIR10||AT4G25970.1	Phosphatidylserine decarboxylase (EC 4.1.1.65)
+OG0005063	Athaliana_TAIR10||AT5G57190.1	Phosphatidylserine decarboxylase (EC 4.1.1.65)
+OG0006430	Athaliana_TAIR10||AT4G20960.1	5-amino-6-(5-phosphoribosylamino)uracil reductase (EC 1.1.1.193) / Diaminohydroxyphosphoribosylaminopyrimidine deaminase (EC 3.5.4.26) # plastid
+OG0007031	Athaliana_TAIR10||AT5G66380.1	10-Formyltetrahydrofolate transport / 5-Formyltetrahydrofolate transport / 5-Methylenetetrahydrofolate transport / 5-Methylenyltetrahydrofolate transport / 5-Methyltetrahydrofolate transport / Tetrahydrofolate transport # plastid
+OG0005877	Athaliana_TAIR10||AT5G13420.1	Transaldolase (EC 2.2.1.2) # plastid
+OG0006413	Athaliana_TAIR10||AT2G44520.1	Heme O synthase, protoheme IX farnesyltransferase (EC 2.5.1.-) COX10-CtaB
+OG0004751	Athaliana_TAIR10||AT1G25210.1	UDP-3-O-[3-hydroxymyristoyl] N-acetylglucosamine deacetylase (EC 3.5.1.108)
+OG0004751	Athaliana_TAIR10||AT1G24793.1	UDP-3-O-[3-hydroxymyristoyl] N-acetylglucosamine deacetylase (EC 3.5.1.108)
+OG0004751	Athaliana_TAIR10||AT1G25145.1	UDP-3-O-[3-hydroxymyristoyl] N-acetylglucosamine deacetylase (EC 3.5.1.108)
+OG0004751	Athaliana_TAIR10||AT1G25054.1	UDP-3-O-[3-hydroxymyristoyl] N-acetylglucosamine deacetylase (EC 3.5.1.108)
+OG0007045	Athaliana_TAIR10||AT1G68010.2	NADH-dependent hydroxypyruvate reductase (EC 1.1.1.29) # plastid # peroxisome
+OG0003485	Athaliana_TAIR10||AT1G67070.1	Mannose-6-phosphate isomerase (EC 5.3.1.8)
+OG0003485	Athaliana_TAIR10||AT3G02570.1	Mannose-6-phosphate isomerase (EC 5.3.1.8)
+OG0000737	Athaliana_TAIR10||AT5G47650.1	NUDIX hydrolase, NAD diphosphatase (EC 3.6.1.22)
+OG0000737	Athaliana_TAIR10||AT4G25434.2	NADH pyrophosphatase (EC 3.6.1.22)
+OG0000737	Athaliana_TAIR10||AT2G04440.1	Uncurated
+OG0000737	Athaliana_TAIR10||AT2G04430.1	Uncurated
+OG0000737	Athaliana_TAIR10||AT4G12720.4	NUDIX hydrolase, NAD diphosphatase (EC 3.6.1.22)
+OG0000737	Athaliana_TAIR10||AT5G47240.1	Uncurated
+OG0000737	Athaliana_TAIR10||AT2G04450.1	NUDIX hydrolase, NAD diphosphatase (EC 3.6.1.22)
+OG0005038	Athaliana_TAIR10||AT1G52230.1	photosystem I subunit VI (PsaH) # plastid
+OG0005038	Athaliana_TAIR10||AT3G16140.1	photosystem I subunit VI (PsaH) # plastid
+OG0002708	Athaliana_TAIR10||AT1G11990.1	1-deoxy-D-xylulose 5-phosphate reductoisomerase (EC 1.1.1.267)
+OG0002708	Athaliana_TAIR10||AT1G29200.2	Uncurated
+OG0002708	Athaliana_TAIR10||AT1G62330.1	1-deoxy-D-xylulose 5-phosphate reductoisomerase (EC 1.1.1.267)
+OG0004428	Athaliana_TAIR10||AT1G48850.1	Chorismate synthase (EC 4.2.3.5) # plastid
+OG0002212	Athaliana_TAIR10||AT1G56190.1	Phosphoglycerate kinase (EC 2.7.2.3) # plastid
+OG0002212	Athaliana_TAIR10||AT3G12780.1	Phosphoglycerate kinase (EC 2.7.2.3) # cytosol # plastid
+OG0002212	Athaliana_TAIR10||AT1G79550.1	Phosphoglycerate kinase (EC 2.7.2.3) # cytosol
+OG0002724	Athaliana_TAIR10||AT4G35260.1	Isocitrate dehydrogenase [NAD] regulatory subunit (EC 1.1.1.41) # mitochondria
+OG0002724	Athaliana_TAIR10||AT4G35650.1	Isocitrate dehydrogenase [NAD] regulatory subunit (EC 1.1.1.41) # mitochondria
+OG0002724	Athaliana_TAIR10||AT1G32480.1	Uncurated
+OG0002724	Athaliana_TAIR10||AT2G17130.1	Isocitrate dehydrogenase [NAD] regulatory subunit (EC 1.1.1.41) # mitochondria
+OG0005095	Athaliana_TAIR10||AT2G20420.1	Succinyl-CoA ligase [ADP-forming] beta chain (EC 6.2.1.5) # mitochondria
+OG0000247	Athaliana_TAIR10||AT1G55120.1	Beta-fructofuranosidase, fructan exohydrolase (EC 3.2.1.80)
+OG0000247	Athaliana_TAIR10||AT3G13790.1	Uncurated
+OG0000247	Athaliana_TAIR10||AT1G12240.1	Uncurated
+OG0000247	Athaliana_TAIR10||AT5G11920.1	Beta-fructofuranosidase, fructan exohydrolase (EC 3.2.1.80)
+OG0000247	Athaliana_TAIR10||AT1G62660.1	Uncurated
+OG0000247	Athaliana_TAIR10||AT2G36190.1	Uncurated
+OG0000247	Athaliana_TAIR10||AT3G13784.1	Uncurated
+OG0000247	Athaliana_TAIR10||AT3G52600.1	Uncurated
+OG0002372	Athaliana_TAIR10||AT1G23190.1	Phosphoglucomutase (EC 5.4.2.2) # cytosol
+OG0002372	Athaliana_TAIR10||AT5G51820.1	Phosphoglucomutase (EC 5.4.2.2) # plastid
+OG0002372	Athaliana_TAIR10||AT1G70730.3	Phosphoglucomutase (EC 5.4.2.2)
+OG0000870	Athaliana_TAIR10||AT5G05260.1	Phenylalanine N-monooxygenase (EC 1.14.13.124)
+OG0000870	Athaliana_TAIR10||AT1G58260.1	Uncurated
+OG0000870	Athaliana_TAIR10||AT2G22330.1	Tryptophan N-monooxygenase (EC 1.14.13.125)
+OG0000870	Athaliana_TAIR10||AT4G39950.1	Tryptophan N-monooxygenase (EC 1.14.13.125) # plastid
+OG0000870	Athaliana_TAIR10||AT1G79370.1	Uncurated
+OG0000870	Athaliana_TAIR10||AT5G35917.1	Uncurated
+OG0002734	Athaliana_TAIR10||ATCG00580.1	Cytochrome b559 alpha chain (PsbE) # plastid
+OG0002621	Athaliana_TAIR10||ATCG00710.1	Photosystem II 10 kDa phosphoprotein (PsbH) # plastid
+OG0005345	Athaliana_TAIR10||AT3G53900.2	Uracil phosphoribosyltransferase (EC 2.4.2.9) # plastid
+OG0005147	Athaliana_TAIR10||AT2G47690.1	NADH dehydrogenase [ubiquinone] iron-sulfur protein 5 # mitointer
+OG0005147	Athaliana_TAIR10||AT3G62790.1	NADH dehydrogenase [ubiquinone] iron-sulfur protein 5 # mitointer
+OG0006100	Athaliana_TAIR10||AT2G20690.1	Riboflavin synthase eubacterial/eukaryotic (EC 2.5.1.9) # plastid
+OG0000808	Athaliana_TAIR10||AT5G24300.1	Starch synthase, ADP-glucose transglucosylase (EC 2.4.1.21) # plastid
+OG0000808	Athaliana_TAIR10||AT3G01180.1	Starch synthase, ADP-glucose transglucosylase (EC 2.4.1.21) # plastid
+OG0000808	Athaliana_TAIR10||AT1G32900.1	Starch synthase, ADP-glucose transglucosylase (EC 2.4.1.21) # plastid
+OG0000835	Athaliana_TAIR10||AT4G23590.1	Uncurated
+OG0000835	Athaliana_TAIR10||AT2G24850.1	Tyrosine aminotransferase (EC 2.6.1.5) # plastid
+OG0000835	Athaliana_TAIR10||AT4G28420.2	Uncurated
+OG0000835	Athaliana_TAIR10||AT5G36160.1	Tyrosine aminotransferase (EC 2.6.1.5) # plastid
+OG0000835	Athaliana_TAIR10||AT4G23600.1	Uncurated
+OG0000835	Athaliana_TAIR10||AT5G53970.1	Tyrosine aminotransferase (EC 2.6.1.5) # plastid
+OG0000835	Athaliana_TAIR10||AT2G20610.1	S-alkyl-thiohydroximate lyase (EC 4.4.1.-)
+OG0000835	Athaliana_TAIR10||AT4G28410.1	Uncurated
+OG0004353	Athaliana_TAIR10||AT1G18640.2	Phosphoserine phosphatase (EC 3.1.3.3) # plastid
+OG0004937	Athaliana_TAIR10||AT2G26830.1	Ethanolamine kinase (EC 2.7.1.82)
+OG0001833	Athaliana_TAIR10||AT3G08860.1	L-alanine:glyoxylate aminotransferase (EC 2.6.1.44) # mitochondria
+OG0001833	Athaliana_TAIR10||AT2G38400.2	L-alanine:glyoxylate aminotransferase (EC 2.6.1.44) # mitochondria
+OG0001833	Athaliana_TAIR10||AT4G39660.1	L-alanine:glyoxylate aminotransferase (EC 2.6.1.44) # mitochondria # peroxisome
+OG0000013	Athaliana_TAIR10||AT2G47550.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT3G60730.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT1G02810.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT5G04960.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT5G51490.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT3G05610.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT1G53830.1	Pectinesterase (EC 3.1.1.11)
+OG0000013	Athaliana_TAIR10||AT4G00190.1	Pectinesterase (EC 3.1.1.11)
+OG0000013	Athaliana_TAIR10||AT4G02330.1	Pectinesterase (EC 3.1.1.11)
+OG0000013	Athaliana_TAIR10||AT4G33230.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT5G51500.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT3G05620.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT2G47030.1	Pectinesterase (EC 3.1.1.11)
+OG0000013	Athaliana_TAIR10||AT2G26440.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT2G43050.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT1G11370.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT3G14310.1	Pectinesterase (EC 3.1.1.11)
+OG0000013	Athaliana_TAIR10||AT4G02300.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT3G59010.1	Pectinesterase (EC 3.1.1.11)
+OG0000013	Athaliana_TAIR10||AT5G49180.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT2G47040.1	Pectinesterase (EC 3.1.1.11)
+OG0000013	Athaliana_TAIR10||AT4G02320.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT3G10720.2	Uncurated
+OG0000013	Athaliana_TAIR10||AT1G23200.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT3G47400.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT1G11580.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT1G53840.1	Pectinesterase (EC 3.1.1.11)
+OG0000013	Athaliana_TAIR10||AT5G27870.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT3G10710.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT3G06830.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT2G45220.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT3G43270.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT5G04970.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT4G15980.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT3G62170.1	Pectinesterase (EC 3.1.1.11)
+OG0000013	Athaliana_TAIR10||AT5G53370.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT3G49220.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT4G33220.1	Uncurated
+OG0000013	Athaliana_TAIR10||AT2G26450.1	Uncurated
+OG0000750	Athaliana_TAIR10||AT1G09420.2	Glucose-6-phosphate 1-dehydrogenase (EC 1.1.1.49) # cytosol
+OG0000750	Athaliana_TAIR10||AT5G13110.1	Glucose-6-phosphate 1-dehydrogenase (EC 1.1.1.49) # plastid
+OG0000750	Athaliana_TAIR10||AT5G40760.1	Glucose-6-phosphate 1-dehydrogenase (EC 1.1.1.49) # cytosol
+OG0000750	Athaliana_TAIR10||AT3G27300.1	Glucose-6-phosphate 1-dehydrogenase (EC 1.1.1.49) # cytosol
+OG0000750	Athaliana_TAIR10||AT5G35790.1	Glucose-6-phosphate 1-dehydrogenase (EC 1.1.1.49) # plastid
+OG0000750	Athaliana_TAIR10||AT1G24280.1	Glucose-6-phosphate 1-dehydrogenase (EC 1.1.1.49) # plastid
+OG0004527	Athaliana_TAIR10||AT4G23900.1	Nucleoside diphosphate kinase (EC 2.7.4.6) # mitochondria
+OG0004527	Athaliana_TAIR10||AT4G23895.3	Nucleoside diphosphate kinase (EC 2.7.4.6) # cytosol
+OG0004527	Athaliana_TAIR10||AT4G11010.1	Nucleoside diphosphate kinase (EC 2.7.4.6) # mitochondria
+OG0003979	Athaliana_TAIR10||AT1G43670.1	Fructose-1,6-bisphosphatase, type I (EC 3.1.3.11) # cytosol
+OG0004022	Athaliana_TAIR10||AT3G42050.1	V-type ATP synthase subunit H (EC 3.6.3.14) # vacuole
+OG0000648	Athaliana_TAIR10||AT5G14130.1	Peroxidase (EC 1.11.1.7)
+OG0000648	Athaliana_TAIR10||AT5G67400.1	Peroxidase (EC 1.11.1.7)
+OG0000648	Athaliana_TAIR10||AT4G30170.1	Peroxidase (EC 1.11.1.7)
+OG0000648	Athaliana_TAIR10||AT4G37530.1	Peroxidase (EC 1.11.1.7)
+OG0000648	Athaliana_TAIR10||AT3G49960.1	Peroxidase (EC 1.11.1.7)
+OG0000648	Athaliana_TAIR10||AT2G18980.1	Peroxidase (EC 1.11.1.7)
+OG0000648	Athaliana_TAIR10||AT4G37520.1	Peroxidase (EC 1.11.1.7)
+OG0004339	Athaliana_TAIR10||AT3G07270.1	GTP cyclohydrolase I (EC 3.5.4.16) type 1 # cytosol
+OG0002356	Athaliana_TAIR10||AT4G01950.1	Glycerol-3-phosphate 2-O-acyltransferase (EC 2.3.1.198) / Glycerol-3-phosphate acyltransferase (EC 2.3.1.15)
+OG0002356	Athaliana_TAIR10||AT1G02390.1	Glycerol-3-phosphate 2-O-acyltransferase (EC 2.3.1.198) / Glycerol-3-phosphate acyltransferase (EC 2.3.1.15)
+OG0005332	Athaliana_TAIR10||AT2G17630.1	Phosphoserine aminotransferase (EC 2.6.1.52) # plastid
+OG0005332	Athaliana_TAIR10||AT4G35630.1	Phosphoserine aminotransferase (EC 2.6.1.52) # plastid
+OG0002611	Athaliana_TAIR10||AT1G73600.2	Phosphoethanolamine N-methyltransferase (EC 2.1.1.103)
+OG0002611	Athaliana_TAIR10||AT1G48600.2	Phosphoethanolamine N-methyltransferase (EC 2.1.1.103)
+OG0002611	Athaliana_TAIR10||AT3G18000.1	Phosphoethanolamine N-methyltransferase (EC 2.1.1.103)
+OG0000291	Athaliana_TAIR10||AT5G15180.1	Peroxidase (EC 1.11.1.7)
+OG0000291	Athaliana_TAIR10||AT3G01190.1	Peroxidase (EC 1.11.1.7)
+OG0000291	Athaliana_TAIR10||AT2G39040.1	Peroxidase (EC 1.11.1.7)
+OG0000291	Athaliana_TAIR10||AT1G05250.1	Peroxidase (EC 1.11.1.7)
+OG0000291	Athaliana_TAIR10||AT4G11290.1	Peroxidase (EC 1.11.1.7)
+OG0000291	Athaliana_TAIR10||AT3G21770.1	Peroxidase (EC 1.11.1.7)
+OG0000291	Athaliana_TAIR10||AT1G05260.1	Peroxidase (EC 1.11.1.7) # cellwall
+OG0000291	Athaliana_TAIR10||AT1G05240.1	Peroxidase (EC 1.11.1.7)
+OG0005506	Athaliana_TAIR10||AT1G11860.1	Aminomethyltransferase (glycine cleavage system T protein) (EC 2.1.2.10) # mitochondria
+OG0005768	Athaliana_TAIR10||AT4G32770.1	2,3-dimethyl-6-phytyl-1,4-benzoquinone cyclase / 2-methyl-6-phytyl-1,4-benzoquinone cyclase # plastid
+OG0007173	Athaliana_TAIR10||AT3G55800.1	Sedoheptulose-1,7-bisphosphatase (EC 3.1.3.37) # plastid
+OG0003791	Athaliana_TAIR10||AT5G50950.1	Fumarate hydratase class II (EC 4.2.1.2) # mitochondria
+OG0003791	Athaliana_TAIR10||AT2G47510.1	Fumarate hydratase class II (EC 4.2.1.2) # mitochondria
+OG0000482	Athaliana_TAIR10||AT4G37930.1	5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase / Serine hydroxymethyltransferase (EC 2.1.2.1) # cytosol # plastid # mitochondria
+OG0000482	Athaliana_TAIR10||AT1G36370.1	5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase / Serine hydroxymethyltransferase (EC 2.1.2.1) # cytosol # plastid
+OG0000482	Athaliana_TAIR10||AT1G22020.1	5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase / Serine hydroxymethyltransferase (EC 2.1.2.1) # cytosol
+OG0000482	Athaliana_TAIR10||AT4G32520.1	5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase / Serine hydroxymethyltransferase (EC 2.1.2.1) # plastid
+OG0000482	Athaliana_TAIR10||AT5G26780.2	5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase / Serine hydroxymethyltransferase (EC 2.1.2.1) # cytosol
+OG0000482	Athaliana_TAIR10||AT4G13890.1	5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase / Serine hydroxymethyltransferase (EC 2.1.2.1) # cytosol
+OG0000482	Athaliana_TAIR10||AT4G13930.1	5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase / Serine hydroxymethyltransferase (EC 2.1.2.1) # cytosol
+OG0004946	Athaliana_TAIR10||AT1G09830.1	Phosphoribosylamine--glycine ligase (EC 6.3.4.13) # plastid
+OG0009540	Athaliana_TAIR10||AT1G55180.1	Phospholipase D (EC 3.1.4.4)
+OG0006081	Athaliana_TAIR10||AT5G49970.1	NAD(P)H-hydrate epimerase (EC 5.1.99.6) / Pyridoxamine 5'-phosphate oxidase (EC 1.4.3.5) # plastid
+OG0001144	Athaliana_TAIR10||AT1G62600.1	Uncurated
+OG0001144	Athaliana_TAIR10||AT1G62620.1	Uncurated
+OG0001144	Athaliana_TAIR10||AT1G63390.1	Uncurated
+OG0001144	Athaliana_TAIR10||AT1G12130.1	Uncurated
+OG0001144	Athaliana_TAIR10||AT1G62540.1	Flavin-containing glucosinolate S-oxygenase (no EC)
+OG0001144	Athaliana_TAIR10||AT1G12200.1	Uncurated
+OG0001144	Athaliana_TAIR10||AT1G62570.1	Flavin-containing glucosinolate S-oxygenase (no EC)
+OG0001144	Athaliana_TAIR10||AT1G63370.1	Uncurated
+OG0001144	Athaliana_TAIR10||AT1G62560.1	Flavin-containing glucosinolate S-oxygenase (no EC)
+OG0001144	Athaliana_TAIR10||AT1G62580.1	Uncurated
+OG0001144	Athaliana_TAIR10||AT1G12160.1	Uncurated
+OG0001144	Athaliana_TAIR10||AT1G65860.1	Flavin-containing glucosinolate S-oxygenase (no EC) # cytosol
+OG0001144	Athaliana_TAIR10||AT1G12140.1	Flavin-containing glucosinolate S-oxygenase (no EC)
+OG0001144	Athaliana_TAIR10||AT1G63340.1	Uncurated
+OG0002632	Athaliana_TAIR10||AT4G38510.5	V-type ATP synthase subunit B (EC 3.6.3.14) # vacuole
+OG0002632	Athaliana_TAIR10||AT1G20260.1	V-type ATP synthase subunit B (EC 3.6.3.14) # vacuole
+OG0002632	Athaliana_TAIR10||AT1G76030.1	V-type ATP synthase subunit B (EC 3.6.3.14) # vacuole
+OG0005080	Athaliana_TAIR10||AT5G04590.1	Ferredoxin--sulfite reductase (EC 1.8.7.1) # plastid
+OG0014836	Athaliana_TAIR10||AT1G44980.1	Pectinesterase (EC 3.1.1.11)
+OG0014836	Athaliana_TAIR10||AT4G03930.1	Uncurated
+OG0014836	Athaliana_TAIR10||AT3G27980.1	Uncurated
+OG0014836	Athaliana_TAIR10||AT1G11590.1	Uncurated
+OG0004427	Athaliana_TAIR10||AT3G58730.1	V-type ATP synthase subunit D (EC 3.6.3.14) # vacuole
+OG0005733	Athaliana_TAIR10||AT1G63660.1	GMP synthase [glutamine-hydrolyzing] (EC 6.3.5.2) # cytosol
+OG0001681	Athaliana_TAIR10||AT1G69370.1	Chorismate mutase III (EC 5.4.99.5) # plastid
+OG0001681	Athaliana_TAIR10||AT3G29200.1	Chorismate mutase III (EC 5.4.99.5) # plastid
+OG0001681	Athaliana_TAIR10||AT5G10870.1	Chorismate mutase III (EC 5.4.99.5) # cytosol
+OG0002093	Athaliana_TAIR10||AT5G44480.1	UDP-arabinose 4-epimerase (EC 5.1.3.5)
+OG0002093	Athaliana_TAIR10||AT4G20460.1	UDP-arabinose 4-epimerase (EC 5.1.3.5)
+OG0002093	Athaliana_TAIR10||AT1G30620.1	UDP-arabinose 4-epimerase (EC 5.1.3.5) # golgi
+OG0002093	Athaliana_TAIR10||AT2G34850.1	UDP-arabinose 4-epimerase (EC 5.1.3.5)
+OG0008572	Athaliana_TAIR10||ATCG00220.1	Photosystem II protein PsbM # plastid
+OG0001261	Athaliana_TAIR10||ATCG00490.1	Ribulose bisphosphate carboxylase large chain (EC 4.1.1.39) # plastid
+OG0001261	Athaliana_TAIR10||ATMG00280.1	Uncurated
+OG0001261	Athaliana_TAIR10||AT2G07732.1	Uncurated
+OG0004125	Athaliana_TAIR10||AT5G11770.1	NADH dehydrogenase [ubiquinone] iron-sulfur protein 7 (EC 1.6.5.3) (EC 1.6.99.3) # mitointer
+OG0003188	Athaliana_TAIR10||AT1G48320.1	1,4-dihydroxy-2-naphthoyl-CoA hydrolase (EC 3.1.2.28), plant type # peroxisome
+OG0003188	Athaliana_TAIR10||AT5G48950.1	1,4-dihydroxy-2-naphthoyl-CoA hydrolase (EC 3.1.2.28), plant type # peroxisome
+OG0006836	Athaliana_TAIR10||AT2G01350.1	Quinolinate phosphoribosyltransferase [decarboxylating] (EC 2.4.2.19) # plastid
+OG0000795	Athaliana_TAIR10||AT1G66200.3	Glutamine synthetase type II, eukaryotic (EC 6.3.1.2) # cytosol
+OG0000795	Athaliana_TAIR10||AT3G17820.1	Glutamine synthetase type II, eukaryotic (EC 6.3.1.2) # cytosol
+OG0000795	Athaliana_TAIR10||AT5G16570.1	Glutamine synthetase type II, eukaryotic (EC 6.3.1.2) # cytosol
+OG0000795	Athaliana_TAIR10||AT5G35630.1	Glutamine synthetase type II, eukaryotic (EC 6.3.1.2) # plastid # mitochondria
+OG0000795	Athaliana_TAIR10||AT5G37600.1	Glutamine synthetase type II, eukaryotic (EC 6.3.1.2) # cytosol
+OG0000795	Athaliana_TAIR10||AT1G48470.1	Glutamine synthetase type II, eukaryotic (EC 6.3.1.2) # cytosol
+OG0000982	Athaliana_TAIR10||AT1G14290.1	Sphinganine C(4)-monooxygenase (EC 1.14.13.169)
+OG0000982	Athaliana_TAIR10||AT1G69640.1	Sphinganine C(4)-monooxygenase (EC 1.14.13.169)
+OG0004203	Athaliana_TAIR10||AT1G48030.1	Dihydrolipoamide dehydrogenase of 2-oxoglutarate dehydrogenase (EC 1.8.1.4) / Dihydrolipoamide dehydrogenase of branched-chain alpha-keto acid dehydrogenase (EC 1.8.1.4) / Dihydrolipoamide dehydrogenase of glycine cleavage system, L protein (EC 1.8.1.4) / Dihydrolipoamide dehydrogenase of pyruvate dehydrogenase complex (EC 1.8.1.4) # mitochondria
+OG0004203	Athaliana_TAIR10||AT3G17240.1	Dihydrolipoamide dehydrogenase of 2-oxoglutarate dehydrogenase (EC 1.8.1.4) / Dihydrolipoamide dehydrogenase of branched-chain alpha-keto acid dehydrogenase (EC 1.8.1.4) / Dihydrolipoamide dehydrogenase of glycine cleavage system, L protein (EC 1.8.1.4) / Dihydrolipoamide dehydrogenase of pyruvate dehydrogenase complex (EC 1.8.1.4) # mitochondria
+OG0008986	Athaliana_TAIR10||ATCG00630.1	photosystem I subunit IX (PsaJ) # plastid
+OG0003617	Athaliana_TAIR10||ATCG01090.1	NADH dehydrogenase [ubiquinone] iron-sulfur protein 8 (EC 1.6.5.3) (EC 1.6.99.3) # mitointer
+OG0011064	Athaliana_TAIR10||AT2G46505.1	Succinate dehydrogenase (ubiquinone) membrane anchor subunit SDH4/SDHD # mitochondria
+OG0003086	Athaliana_TAIR10||AT1G67810.1	Uncurated
+OG0003086	Athaliana_TAIR10||AT5G50210.1	Quinolinate synthetase (EC 2.5.1.72) # plastid
+OG0000020	Athaliana_TAIR10||AT5G58390.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT3G49120.1	Peroxidase (EC 1.11.1.7) # cellwall
+OG0000020	Athaliana_TAIR10||AT3G49110.1	Peroxidase (EC 1.11.1.7) # cellwall
+OG0000020	Athaliana_TAIR10||AT3G32980.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT4G08780.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT1G44970.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT2G18140.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT2G22420.1	Uncurated
+OG0000020	Athaliana_TAIR10||AT4G36430.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT4G08770.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT2G38380.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT4G16270.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT5G06720.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT5G05340.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT5G66390.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT1G14540.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT2G35380.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT5G19880.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT1G14550.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT5G19890.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT2G18150.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT5G58400.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT5G06730.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT3G50990.1	Peroxidase (EC 1.11.1.7)
+OG0000020	Athaliana_TAIR10||AT2G38390.1	Peroxidase (EC 1.11.1.7)
+OG0004553	Athaliana_TAIR10||AT1G06780.2	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43)
+OG0004553	Athaliana_TAIR10||AT2G30575.1	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43)
+OG0008914	Athaliana_TAIR10||AT4G29540.2	Acyl-[acyl-carrier-protein]--UDP-N-acetylglucosamine O-acyltransferase (EC 2.3.1.129) # mitochondria
+OG0005848	Athaliana_TAIR10||AT5G13630.1	Protoporphyrin IX Mg-chelatase subunit H (EC 6.6.1.1) # plastid
+OG0002258	Athaliana_TAIR10||AT5G51890.1	Peroxidase (EC 1.11.1.7)
+OG0002258	Athaliana_TAIR10||AT5G42180.1	Peroxidase (EC 1.11.1.7)
+OG0007013	Athaliana_TAIR10||AT1G68850.1	Peroxidase (EC 1.11.1.7)
+OG0001157	Athaliana_TAIR10||AT3G21230.1	4-coumarate--CoA ligase (EC 6.2.1.12)
+OG0001157	Athaliana_TAIR10||AT1G51680.1	4-coumarate--CoA ligase (EC 6.2.1.12)
+OG0001157	Athaliana_TAIR10||AT1G65060.1	4-coumarate--CoA ligase (EC 6.2.1.12)
+OG0001157	Athaliana_TAIR10||AT3G21240.1	4-coumarate--CoA ligase (EC 6.2.1.12)
+OG0002153	Athaliana_TAIR10||AT2G45880.1	Beta-amylase (EC 3.2.1.2) # nucleus
+OG0002153	Athaliana_TAIR10||AT4G00490.1	Beta-amylase (EC 3.2.1.2) # plastid
+OG0002153	Athaliana_TAIR10||AT5G45300.1	Beta-amylase (EC 3.2.1.2) # nucleus
+OG0004482	Athaliana_TAIR10||AT2G13360.1	L-alanine:glyoxylate aminotransferase (EC 2.6.1.44) / Serine--glyoxylate aminotransferase (EC 2.6.1.45) # plastid # peroxisome
+OG0003661	Athaliana_TAIR10||AT3G01120.1	Cystathionine gamma-synthase, O-phospho-L-homoserine dependent (EC 2.5.1.-) # plastid
+OG0003661	Athaliana_TAIR10||AT1G33320.1	Cystathionine gamma-synthase, O-phospho-L-homoserine dependent (EC 2.5.1.-) # cytosol
+OG0004824	Athaliana_TAIR10||AT1G80600.1	Acetylornithine aminotransferase (EC 2.6.1.11) # plastid
+OG0006272	Athaliana_TAIR10||AT1G31220.1	Phosphoribosylglycinamide formyltransferase (EC 2.1.2.2) # plastid
+OG0005164	Athaliana_TAIR10||AT5G09350.1	Phosphatidylinositol 4-kinase beta (EC 2.7.1.67)
+OG0005164	Athaliana_TAIR10||AT5G64070.1	Phosphatidylinositol 4-kinase beta (EC 2.7.1.67) # cytosol # cellwall
+OG0001217	Athaliana_TAIR10||AT3G23530.1	Cyclopropane-fatty-acyl-phospholipid synthase (EC 2.1.1.79), plant type
+OG0001217	Athaliana_TAIR10||AT3G23470.1	Cyclopropane-fatty-acyl-phospholipid synthase (EC 2.1.1.79), plant type
+OG0001217	Athaliana_TAIR10||AT3G23510.1	Cyclopropane-fatty-acyl-phospholipid synthase (EC 2.1.1.79), plant type
+OG0001217	Athaliana_TAIR10||AT3G23480.2	Cyclopropane-fatty-acyl-phospholipid synthase (EC 2.1.1.79), plant type
+OG0001217	Athaliana_TAIR10||AT3G23460.1	Cyclopropane-fatty-acyl-phospholipid synthase (EC 2.1.1.79), plant type
+OG0001900	Athaliana_TAIR10||AT4G09760.1	Choline kinase (EC 2.7.1.32)
+OG0001900	Athaliana_TAIR10||AT1G71697.1	Choline kinase (EC 2.7.1.32)
+OG0001900	Athaliana_TAIR10||AT1G74320.1	Choline kinase (EC 2.7.1.32)
+OG0003833	Athaliana_TAIR10||AT3G59890.1	4-hydroxy-tetrahydrodipicolinate reductase (EC 1.17.1.8) # plastid
+OG0003833	Athaliana_TAIR10||AT2G44040.1	4-hydroxy-tetrahydrodipicolinate reductase (EC 1.17.1.8) # plastid
+OG0001086	Athaliana_TAIR10||AT4G15560.1	1-deoxy-D-xylulose 5-phosphate synthase (EC 2.2.1.7) # plastid
+OG0001086	Athaliana_TAIR10||AT3G21500.2	1-deoxy-D-xylulose 5-phosphate synthase (EC 2.2.1.7)
+OG0001086	Athaliana_TAIR10||AT5G11380.1	1-deoxy-D-xylulose 5-phosphate synthase (EC 2.2.1.7)
+OG0003112	Athaliana_TAIR10||AT5G55070.1	Dihydrolipoamide succinyltransferase component (E2) of 2-oxoglutarate dehydrogenase complex (EC 2.3.1.61) # mitochondria
+OG0003112	Athaliana_TAIR10||AT4G26910.1	Dihydrolipoamide succinyltransferase component (E2) of 2-oxoglutarate dehydrogenase complex (EC 2.3.1.61) # mitochondria
+OG0000560	Athaliana_TAIR10||AT5G04230.2	Phenylalanine ammonia-lyase (EC 4.3.1.24)
+OG0000560	Athaliana_TAIR10||AT3G10340.1	Phenylalanine ammonia-lyase (EC 4.3.1.24)
+OG0000560	Athaliana_TAIR10||AT2G37040.1	Phenylalanine ammonia-lyase (EC 4.3.1.24)
+OG0000560	Athaliana_TAIR10||AT3G53260.1	Phenylalanine ammonia-lyase (EC 4.3.1.24)
+OG0001283	Athaliana_TAIR10||AT5G61680.1	Uncurated
+OG0001283	Athaliana_TAIR10||AT5G07420.1	Uncurated
+OG0001283	Athaliana_TAIR10||AT5G07410.1	Uncurated
+OG0001283	Athaliana_TAIR10||AT5G07430.1	Uncurated
+OG0001283	Athaliana_TAIR10||AT1G69940.1	Pectinesterase (EC 3.1.1.11)
+OG0003145	Athaliana_TAIR10||ATCG00270.1	photosystem II protein D2 (PsbD) # plastid
+OG0009117	Athaliana_TAIR10||AT1G80860.1	Phosphatidyl-N-methylethanolamine N-methyltransferase (EC 2.1.1.71)
+OG0002408	Athaliana_TAIR10||AT1G51260.1	1-acyl-sn-glycerol-3-phosphate acyltransferase (EC 2.3.1.51)
+OG0002408	Athaliana_TAIR10||AT3G57650.1	1-acyl-sn-glycerol-3-phosphate acyltransferase (EC 2.3.1.51)
+OG0003261	Athaliana_TAIR10||AT3G02090.2	Putative ubiquinol-cytochrome c reductase complex core protein II (subunit COR2) # mitointer
+OG0003793	Athaliana_TAIR10||AT5G14780.1	Formate dehydrogenase (EC 1.2.1.2) # mitochondria
+OG0005513	Athaliana_TAIR10||AT5G12200.1	Dihydropyrimidinase (EC 3.5.2.2) # cytosol # endoplasm
+OG0003949	Athaliana_TAIR10||AT4G34350.1	4-hydroxy-3-methylbut-2-enyl diphosphate reductase (EC 1.17.1.2) # plastid
+OG0007794	Athaliana_TAIR10||AT3G11945.2	Homogentisate solanesyltransferase (EC 2.5.-) # plastid
+OG0004351	Athaliana_TAIR10||ATCG00500.1	Acetyl-coenzyme A carboxyl transferase beta chain (EC 6.4.1.2) # plastid
+OG0001205	Athaliana_TAIR10||AT3G25960.1	Pyruvate kinase (EC 2.7.1.40) # cytosol
+OG0001205	Athaliana_TAIR10||AT4G26390.1	Pyruvate kinase (EC 2.7.1.40) # cytosol
+OG0001205	Athaliana_TAIR10||AT3G55810.1	Pyruvate kinase (EC 2.7.1.40) # cytosol
+OG0001205	Athaliana_TAIR10||AT5G56350.1	Pyruvate kinase (EC 2.7.1.40) # cytosol
+OG0001205	Athaliana_TAIR10||AT5G63680.1	Pyruvate kinase (EC 2.7.1.40) # cytosol
+OG0001205	Athaliana_TAIR10||AT3G04050.1	Pyruvate kinase (EC 2.7.1.40) # cytosol
+OG0001205	Athaliana_TAIR10||AT5G08570.1	Pyruvate kinase (EC 2.7.1.40) # cytosol
+OG0001205	Athaliana_TAIR10||AT3G55650.1	Pyruvate kinase (EC 2.7.1.40) # cytosol
+OG0003502	Athaliana_TAIR10||AT2G38650.1	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43) # golgi
+OG0001238	Athaliana_TAIR10||AT5G20830.1	Sucrose synthase (EC 2.4.1.13)
+OG0001238	Athaliana_TAIR10||AT5G49190.1	Sucrose synthase (EC 2.4.1.13) # cytosol # plastid
+OG0001238	Athaliana_TAIR10||AT4G02280.1	Sucrose synthase (EC 2.4.1.13)
+OG0001238	Athaliana_TAIR10||AT3G43190.1	Sucrose synthase (EC 2.4.1.13)
+OG0005420	Athaliana_TAIR10||AT4G11640.1	D-serine dehydratase (EC 4.3.1.18) / Serine racemase (EC 5.1.1.18) # cytosol
+OG0005062	Athaliana_TAIR10||AT5G08280.1	Porphobilinogen deaminase (EC 2.5.1.61) # plastid
+OG0004143	Athaliana_TAIR10||AT1G02880.3	Thiamin pyrophosphokinase (EC 2.7.6.2) # cytosol
+OG0004143	Athaliana_TAIR10||AT2G44750.2	Thiamin pyrophosphokinase (EC 2.7.6.2) # cytosol
+OG0001821	Athaliana_TAIR10||AT1G06090.1	Uncurated
+OG0001821	Athaliana_TAIR10||AT3G15850.1	Palmitoyl-monogalactosyldiacylglycerol delta-7 desaturase (EC 1.14.19.-) # plastid
+OG0001821	Athaliana_TAIR10||AT2G31360.1	Uncurated
+OG0001821	Athaliana_TAIR10||AT1G06100.1	Uncurated
+OG0001821	Athaliana_TAIR10||AT1G06120.1	Uncurated
+OG0001821	Athaliana_TAIR10||AT1G06350.1	Uncurated
+OG0001821	Athaliana_TAIR10||AT3G15870.1	Uncurated
+OG0001821	Athaliana_TAIR10||AT1G06360.1	Uncurated
+OG0001821	Athaliana_TAIR10||AT1G06080.1	Uncurated
+OG0005744	Athaliana_TAIR10||AT1G44318.1	Porphobilinogen synthase (EC 4.2.1.24)
+OG0005744	Athaliana_TAIR10||AT1G69740.1	Porphobilinogen synthase (EC 4.2.1.24) # plastid
+OG0000539	Athaliana_TAIR10||AT5G11720.1	Uncurated
+OG0000539	Athaliana_TAIR10||AT1G68560.1	Uncurated
+OG0000539	Athaliana_TAIR10||AT5G63840.1	Uncurated
+OG0000539	Athaliana_TAIR10||AT3G45940.1	Uncurated
+OG0000539	Athaliana_TAIR10||AT3G23640.1	Alpha-glucosidase (EC 3.2.1.20)
+OG0003326	Athaliana_TAIR10||AT2G21790.1	Ribonucleotide reductase of class Ia (aerobic), alpha subunit (EC 1.17.4.1) # cytosol
+OG0004795	Athaliana_TAIR10||AT3G46940.1	Deoxyuridine 5'-triphosphate nucleotidohydrolase (EC 3.6.1.23) # cytosol
+OG0007582	Athaliana_TAIR10||AT1G54100.1	Aldehyde dehydrogenase (EC 1.2.1.3) # cytosol
+OG0003144	Athaliana_TAIR10||AT4G37670.2	N-acetylglutamate synthase (EC 2.3.1.1) # plastid
+OG0003144	Athaliana_TAIR10||AT2G22910.1	N-acetylglutamate synthase (EC 2.3.1.1) # plastid
+OG0002137	Athaliana_TAIR10||AT5G43850.1	1,2-dihydroxy-3-keto-5-methylthiopentene dioxygenase (EC 1.13.11.54) # cytosol
+OG0002137	Athaliana_TAIR10||AT4G14716.1	1,2-dihydroxy-3-keto-5-methylthiopentene dioxygenase (EC 1.13.11.54) # cytosol
+OG0002137	Athaliana_TAIR10||AT2G26400.1	1,2-dihydroxy-3-keto-5-methylthiopentene dioxygenase (EC 1.13.11.54) # cytosol
+OG0002137	Athaliana_TAIR10||AT4G14710.5	1,2-dihydroxy-3-keto-5-methylthiopentene dioxygenase (EC 1.13.11.54) # cytosol
+OG0000529	Athaliana_TAIR10||AT1G27680.1	Glucose-1-phosphate adenylyltransferase (EC 2.7.7.27) # plastid
+OG0000529	Athaliana_TAIR10||AT1G05610.1	Glucose-1-phosphate adenylyltransferase (EC 2.7.7.27) # plastid
+OG0000529	Athaliana_TAIR10||AT5G48300.1	Glucose-1-phosphate adenylyltransferase (EC 2.7.7.27) # plastid
+OG0000529	Athaliana_TAIR10||AT2G21590.1	Glucose-1-phosphate adenylyltransferase (EC 2.7.7.27) # plastid
+OG0000529	Athaliana_TAIR10||AT5G19220.1	Glucose-1-phosphate adenylyltransferase (EC 2.7.7.27) # plastid
+OG0000529	Athaliana_TAIR10||AT4G39210.1	Glucose-1-phosphate adenylyltransferase (EC 2.7.7.27) # plastid
+OG0001896	Athaliana_TAIR10||AT2G35370.1	Glycine cleavage system H protein # mitochondria
+OG0001896	Athaliana_TAIR10||AT1G32470.1	Glycine cleavage system H protein # mitochondria
+OG0001896	Athaliana_TAIR10||AT2G35120.1	Glycine cleavage system H protein # mitochondria
+OG0002370	Athaliana_TAIR10||AT3G54660.1	Glutathione reductase (EC 1.8.1.7) # plastid # mitochondria
+OG0002370	Athaliana_TAIR10||AT3G24170.1	Uncurated
+OG0002163	Athaliana_TAIR10||AT3G51520.1	Diacylglycerol O-acyltransferase (EC 2.3.1.20)
+OG0003401	Athaliana_TAIR10||AT3G63410.1	2-methyl-6-phytyl-1,4-benzoquinone methyltransferase, eukaryotic type / 2-methyl-6-solanyl-1,4-benzoquinone methyltransferase, eukaryotic type # plastid
+OG0003276	Athaliana_TAIR10||AT1G09780.1	2,3-bisphosphoglycerate-independent phosphoglycerate mutase (EC 5.4.2.12) # cytosol
+OG0003276	Athaliana_TAIR10||AT3G08590.1	2,3-bisphosphoglycerate-independent phosphoglycerate mutase (EC 5.4.2.12) # cytosol
+OG0003316	Athaliana_TAIR10||AT2G39030.1	Uncurated
+OG0003316	Athaliana_TAIR10||AT2G39020.1	Tyramine N-feruloyltransferase (EC 2.3.1.110)
+OG0000840	Athaliana_TAIR10||AT3G56310.1	Alpha-galactosidase (EC 3.2.1.22)
+OG0000840	Athaliana_TAIR10||AT5G08380.1	Alpha-galactosidase (EC 3.2.1.22)
+OG0000840	Athaliana_TAIR10||AT5G08370.1	Alpha-galactosidase (EC 3.2.1.22) # cellwall
+OG0004552	Athaliana_TAIR10||AT4G03280.1	Cytochrome b6-f complex iron-sulfur subunit PetC1 (Rieske iron sulfur protein EC 1.10.9.1) # plastid
+OG0000115	Athaliana_TAIR10||AT1G06620.1	Uncurated
+OG0000115	Athaliana_TAIR10||AT1G03410.1	Uncurated
+OG0000115	Athaliana_TAIR10||AT2G30830.1	Uncurated
+OG0000115	Athaliana_TAIR10||AT5G59540.1	Uncurated
+OG0000115	Athaliana_TAIR10||AT5G59530.1	Uncurated
+OG0000115	Athaliana_TAIR10||AT5G43450.1	Uncurated
+OG0000115	Athaliana_TAIR10||AT1G06640.1	Uncurated
+OG0000115	Athaliana_TAIR10||AT2G25450.1	3-butenylglucosinolate 2-hydroxylase (no EC)
+OG0000115	Athaliana_TAIR10||AT1G06645.1	Uncurated
+OG0000115	Athaliana_TAIR10||AT1G03400.1	Uncurated
+OG0000115	Athaliana_TAIR10||AT1G04380.1	Uncurated
+OG0000115	Athaliana_TAIR10||AT1G06650.2	Uncurated
+OG0000115	Athaliana_TAIR10||AT3G61400.1	Uncurated
+OG0000115	Athaliana_TAIR10||AT1G04350.1	Uncurated
+OG0000115	Athaliana_TAIR10||AT5G43440.1	Uncurated
+OG0000115	Athaliana_TAIR10||AT2G30840.1	Uncurated
+OG0002049	Athaliana_TAIR10||AT1G15710.1	Arogenate dehydrogenase (EC 1.3.1.78) # plastid
+OG0002049	Athaliana_TAIR10||AT5G34930.1	Arogenate dehydrogenase (EC 1.3.1.78) # plastid
+OG0005457	Athaliana_TAIR10||AT5G18670.1	Beta-amylase (EC 3.2.1.2)
+OG0004753	Athaliana_TAIR10||AT1G68890.1	2-succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylic-acid synthase (EC 2.2.1.9) / 2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate synthase (EC 4.2.99.20) / O-succinylbenzoate synthase (EC 4.2.1.113)
+OG0000021	Athaliana_TAIR10||AT5G28510.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT5G16580.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G51490.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT3G21370.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G45191.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G66270.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT3G60120.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT3G09260.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT5G54570.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G75940.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT3G60140.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT4G22100.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT2G44490.1	Indole glucosinolate glucohydrolase (myrosinase)
+OG0000021	Athaliana_TAIR10||AT2G44460.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT2G44450.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G60090.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G61820.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT3G62750.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G02850.4	Uncurated
+OG0000021	Athaliana_TAIR10||AT4G21760.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT2G25630.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT3G18080.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT3G03640.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT2G32860.2	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G61810.3	Uncurated
+OG0000021	Athaliana_TAIR10||AT2G44470.3	Uncurated
+OG0000021	Athaliana_TAIR10||AT5G24550.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT3G18070.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G60260.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT4G27830.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT5G44640.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G60270.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G66280.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G51470.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT2G44480.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G47600.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G26560.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT3G60130.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT5G36890.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT5G42260.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT4G27820.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT3G62740.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT5G24540.1	Uncurated
+OG0000021	Athaliana_TAIR10||AT1G52400.1	Uncurated
+OG0004010	Athaliana_TAIR10||AT1G74260.1	Phosphoribosylformylglycinamidine synthase, glutamine amidotransferase subunit (EC 6.3.5.3) / Phosphoribosylformylglycinamidine synthase, synthetase subunit (EC 6.3.5.3) # plastid # mitochondria
+OG0002688	Athaliana_TAIR10||AT5G65750.1	2-oxoglutarate dehydrogenase E1 component (EC 1.2.4.2) # mitochondria
+OG0002688	Athaliana_TAIR10||AT3G55410.1	2-oxoglutarate dehydrogenase E1 component (EC 1.2.4.2) # mitochondria
+OG0001811	Athaliana_TAIR10||AT5G04140.2	Ferredoxin-dependent glutamate synthase (EC 1.4.7.1) # plastid # mitochondria
+OG0001811	Athaliana_TAIR10||AT2G41220.1	Ferredoxin-dependent glutamate synthase (EC 1.4.7.1) # plastid
+OG0001811	Athaliana_TAIR10||AT5G53460.1	Glutamate synthase [NADH] (EC 1.4.1.14) # plastid
+OG0005242	Athaliana_TAIR10||AT3G12260.1	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 6 # mitointer
+OG0004739	Athaliana_TAIR10||AT1G78510.1	Solanesyl diphosphate synthase (EC 2.5.1.85) # plastid # mitochondria # endoplasm
+OG0004739	Athaliana_TAIR10||AT1G17050.1	Solanesyl diphosphate synthase (EC 2.5.1.85) # plastid
+OG0000983	Athaliana_TAIR10||AT4G36250.1	Aldehyde dehydrogenase (EC 1.2.1.3) # cytosol
+OG0000983	Athaliana_TAIR10||AT4G34240.1	Aldehyde dehydrogenase (EC 1.2.1.3) # plastid
+OG0000983	Athaliana_TAIR10||AT1G44170.1	Aldehyde dehydrogenase (EC 1.2.1.3) # cytosol
+OG0002599	Athaliana_TAIR10||AT3G10940.1	Uncurated
+OG0002599	Athaliana_TAIR10||AT3G52180.1	Phosphoglucan phosphatase DSP4/SEX4 (EC 3.1.3.-) # plastid
+OG0004023	Athaliana_TAIR10||AT1G01090.1	Pyruvate dehydrogenase E1 component alpha subunit (EC 1.2.4.1) # plastid
+OG0000550	Athaliana_TAIR10||AT4G29130.1	Hexokinase (EC 2.7.1.1) # mitochondria
+OG0000550	Athaliana_TAIR10||AT3G20040.1	Hexokinase (EC 2.7.1.1) # mitochondria
+OG0000550	Athaliana_TAIR10||AT1G47840.1	Uncurated
+OG0000550	Athaliana_TAIR10||AT2G19860.1	Hexokinase (EC 2.7.1.1) # mitochondria
+OG0000550	Athaliana_TAIR10||AT1G50460.1	Hexokinase (EC 2.7.1.1) # mitochondria
+OG0000550	Athaliana_TAIR10||AT4G37840.1	Uncurated
+OG0001578	Athaliana_TAIR10||AT4G26260.2	Inositol oxygenase (EC 1.13.99.1) # cytosol # nucleus
+OG0001578	Athaliana_TAIR10||AT2G19800.1	Inositol oxygenase (EC 1.13.99.1) # cytosol
+OG0001578	Athaliana_TAIR10||AT5G56640.1	Inositol oxygenase (EC 1.13.99.1)
+OG0001578	Athaliana_TAIR10||AT1G14520.1	Inositol oxygenase (EC 1.13.99.1)
+OG0004842	Athaliana_TAIR10||AT5G37510.2	NADH dehydrogenase [ubiquinone] iron-sulfur protein 1 (EC 1.6.5.3) (EC 1.6.99.3) # mitointer
+OG0000304	Athaliana_TAIR10||AT5G12420.1	Uncurated
+OG0000304	Athaliana_TAIR10||AT2G38995.1	Uncurated
+OG0000304	Athaliana_TAIR10||AT3G49210.1	Uncurated
+OG0000304	Athaliana_TAIR10||AT5G16350.1	Uncurated
+OG0000304	Athaliana_TAIR10||AT5G53380.1	Uncurated
+OG0000304	Athaliana_TAIR10||AT5G37300.1	Diacylglycerol O-acyltransferase (EC 2.3.1.20) / Long-chain-alcohol O-fatty-acyltransferase (EC 2.3.1.75) # endoplasm
+OG0000304	Athaliana_TAIR10||AT2G43255.2	Uncurated
+OG0000304	Athaliana_TAIR10||AT3G49190.1	Uncurated
+OG0000304	Athaliana_TAIR10||AT5G22490.1	Uncurated
+OG0000304	Athaliana_TAIR10||AT1G72110.1	Uncurated
+OG0000304	Athaliana_TAIR10||AT5G53390.1	Diacylglycerol O-acyltransferase (EC 2.3.1.20) / Long-chain-alcohol O-fatty-acyltransferase (EC 2.3.1.75)
+OG0000304	Athaliana_TAIR10||AT3G49200.1	Uncurated
+OG0001120	Athaliana_TAIR10||AT1G56560.1	Sucrose alpha-glucosidase, alkaline/neutral invertase (EC 3.2.1.26) # mitochondria
+OG0001120	Athaliana_TAIR10||AT3G05820.1	Sucrose alpha-glucosidase, alkaline/neutral invertase (EC 3.2.1.26)
+OG0001120	Athaliana_TAIR10||AT3G06500.1	Sucrose alpha-glucosidase, alkaline/neutral invertase (EC 3.2.1.26)
+OG0001120	Athaliana_TAIR10||AT5G22510.1	Sucrose alpha-glucosidase, alkaline/neutral invertase (EC 3.2.1.26) # plastid
+OG0002675	Athaliana_TAIR10||AT1G24360.1	3-oxoacyl-[acyl-carrier protein] reductase (EC 1.1.1.100) # plastid
+OG0005975	Athaliana_TAIR10||AT4G14910.2	Imidazoleglycerol-phosphate dehydratase (EC 4.2.1.19) # plastid
+OG0005975	Athaliana_TAIR10||AT3G22425.2	Imidazoleglycerol-phosphate dehydratase (EC 4.2.1.19) # plastid
+OG0000319	Athaliana_TAIR10||AT1G80320.1	Uncurated
+OG0000319	Athaliana_TAIR10||AT1G52800.1	Uncurated
+OG0000319	Athaliana_TAIR10||AT1G15540.1	Uncurated
+OG0000319	Athaliana_TAIR10||AT4G03070.1	Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)
+OG0000319	Athaliana_TAIR10||AT1G52820.1	Uncurated
+OG0000319	Athaliana_TAIR10||AT4G03050.2	Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (hydroxylation) (no EC)
+OG0000319	Athaliana_TAIR10||AT1G52810.1	Uncurated
+OG0000319	Athaliana_TAIR10||AT1G52790.1	Uncurated
+OG0000319	Athaliana_TAIR10||AT1G28030.1	Uncurated
+OG0009016	Athaliana_TAIR10||AT1G01280.1	Lauric acid in-chain hydroxylase (no EC)
+OG0008341	Athaliana_TAIR10||AT5G52100.1	4-hydroxy-tetrahydrodipicolinate reductase (EC 1.17.1.8) # plastid
+OG0005892	Athaliana_TAIR10||AT5G57655.2	Xylose isomerase (EC 5.3.1.5)
+OG0009139	Athaliana_TAIR10||ATMG00650.1	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 4L, ND4L # mitointer
+OG0002909	Athaliana_TAIR10||AT5G13440.1	Ubiquinol-cytochrome C reductase iron-sulfur subunit (EC 1.10.2.2) # mitointer
+OG0002909	Athaliana_TAIR10||AT5G13430.1	Ubiquinol-cytochrome C reductase iron-sulfur subunit (EC 1.10.2.2) # mitointer
+OG0002514	Athaliana_TAIR10||AT1G34430.1	Dihydrolipoamide acetyltransferase component of pyruvate dehydrogenase complex (EC 2.3.1.12) # plastid
+OG0002514	Athaliana_TAIR10||AT3G25860.1	Dihydrolipoamide acetyltransferase component of pyruvate dehydrogenase complex (EC 2.3.1.12) # plastid
+OG0005910	Athaliana_TAIR10||AT1G55090.1	Glutamine amidotransferase chain of NAD synthetase / NAD synthetase (EC 6.3.1.5)
+OG0009851	Athaliana_TAIR10||ATCG00560.1	Photosystem II protein PsbL # plastid
+OG0003035	Athaliana_TAIR10||AT1G72810.1	Threonine synthase (EC 4.2.3.1) # plastid
+OG0003035	Athaliana_TAIR10||AT4G29840.1	Threonine synthase (EC 4.2.3.1) # plastid
+OG0006256	Athaliana_TAIR10||AT3G57050.1	Cystathionine beta-lyase (EC 4.4.1.8) # plastid
+OG0005614	Athaliana_TAIR10||AT1G31330.1	photosystem I subunit III precursor, plastocyanin (cyt c553) docking protein (PsaF) # plastid
+OG0004870	Athaliana_TAIR10||AT1G53000.1	3-deoxy-manno-octulosonate cytidylyltransferase (EC 2.7.7.38) # mitochondria
+OG0004186	Athaliana_TAIR10||AT1G64970.1	delta-tocopherol methyltransferase (EC 2.1.1.95) / gamma-tocopherol methyltransferase (EC 2.1.1.95) # plastid
+OG0004649	Athaliana_TAIR10||AT2G45790.1	Phosphomannomutase (EC 5.4.2.8)
+OG0003111	Athaliana_TAIR10||ATCG00730.1	Cytochrome b6-f complex subunit IV (PetD) # plastid
+OG0000865	Athaliana_TAIR10||AT2G36880.1	S-adenosylmethionine synthetase (EC 2.5.1.6) # cytosol
+OG0000865	Athaliana_TAIR10||AT4G01850.1	S-adenosylmethionine synthetase (EC 2.5.1.6) # nucleus
+OG0000865	Athaliana_TAIR10||AT1G02500.1	S-adenosylmethionine synthetase (EC 2.5.1.6) # cytosol
+OG0000865	Athaliana_TAIR10||AT3G17390.1	S-adenosylmethionine synthetase (EC 2.5.1.6) # cytosol
+OG0008392	Athaliana_TAIR10||ATCG00080.1	Photosystem II protein PsbI # plastid
+OG0007208	Athaliana_TAIR10||AT5G51290.1	Ceramide kinase (EC 2.7.1.138)
+OG0003999	Athaliana_TAIR10||AT5G66570.1	Photosystem II manganese-stabilizing protein (PsbO) # plastid
+OG0003999	Athaliana_TAIR10||AT4G37230.1	Uncurated
+OG0003999	Athaliana_TAIR10||AT3G50820.1	Photosystem II manganese-stabilizing protein (PsbO) # plastid
+OG0003515	Athaliana_TAIR10||AT1G74470.1	Geranylgeranyl diphosphate reductase (EC 1.3.1.83) # plastid
+OG0001863	Athaliana_TAIR10||AT5G26030.1	Ferrochelatase, protoheme ferro-lyase (EC 4.99.1.1) # plastid
+OG0001863	Athaliana_TAIR10||AT2G30390.2	Ferrochelatase, protoheme ferro-lyase (EC 4.99.1.1) # plastid
+OG0003047	Athaliana_TAIR10||AT4G32180.1	Pantothenate kinase type II, eukaryotic (EC 2.7.1.33)
+OG0003047	Athaliana_TAIR10||AT1G60440.1	Pantothenate kinase type II, eukaryotic (EC 2.7.1.33)
+OG0003915	Athaliana_TAIR10||AT2G27490.1	Dephospho-CoA kinase (EC 2.7.1.24) # peroxisome
+OG0004062	Athaliana_TAIR10||AT5G59440.3	Thymidylate kinase (EC 2.7.4.9) # mitochondria
+OG0005462	Athaliana_TAIR10||AT1G67740.1	Photosystem II protein PsbY # plastid
+OG0008042	Athaliana_TAIR10||AT4G04870.1	Cardiolipin synthetase (EC 2.7.8.-)
+OG0006170	Athaliana_TAIR10||AT5G66120.2	3-dehydroquinate synthase (EC 4.2.3.4) # plastid
+OG0003105	Athaliana_TAIR10||AT3G60880.2	4-hydroxy-tetrahydrodipicolinate synthase (EC 4.3.3.7) # plastid
+OG0003105	Athaliana_TAIR10||AT2G45440.1	4-hydroxy-tetrahydrodipicolinate synthase (EC 4.3.3.7) # plastid
+OG0004224	Athaliana_TAIR10||AT4G00520.2	Acyl-CoA thioesterase II (EC 3.1.2.-)
+OG0004224	Athaliana_TAIR10||AT1G01710.1	Acyl-CoA thioesterase II (EC 3.1.2.-) # peroxisome
+OG0002111	Athaliana_TAIR10||AT4G27550.1	Alpha,alpha-trehalose-phosphate synthase [UDP-forming] (EC 2.4.1.15)
+OG0002111	Athaliana_TAIR10||AT1G16980.1	Alpha,alpha-trehalose-phosphate synthase [UDP-forming] (EC 2.4.1.15)
+OG0002111	Athaliana_TAIR10||AT1G78580.1	Alpha,alpha-trehalose-phosphate synthase [UDP-forming] (EC 2.4.1.15) # cytosol
+OG0009492	Athaliana_TAIR10||ATCG00510.1	photosystem I subunit VIII (PsaI) # plastid
+OG0002991	Athaliana_TAIR10||AT3G44310.1	Uncurated
+OG0002991	Athaliana_TAIR10||AT5G22300.1	3-cyanoalanine hydratase (4.2.1.65) / Cyanoalanine nitrilase (EC 3.5.5.4) # mitochondria
+OG0002991	Athaliana_TAIR10||AT3G44300.1	Uncurated
+OG0002991	Athaliana_TAIR10||AT3G44320.1	Uncurated
+OG0002025	Athaliana_TAIR10||AT2G18950.1	Homogentisate phytyltransferase (EC 2.5.1.n8) # plastid
+OG0002889	Athaliana_TAIR10||AT5G47840.1	Adenylate kinase (EC 2.7.4.3) # plastid
+OG0002889	Athaliana_TAIR10||AT5G35170.1	Uncurated
+OG0003570	Athaliana_TAIR10||AT3G55030.1	CDP-diacylglycerol--glycerol-3-phosphate 3-phosphatidyltransferase (EC 2.7.8.5)
+OG0003570	Athaliana_TAIR10||AT2G39290.1	CDP-diacylglycerol--glycerol-3-phosphate 3-phosphatidyltransferase (EC 2.7.8.5) # plastid # mitochondria
+OG0006255	Athaliana_TAIR10||AT3G53580.1	Diaminopimelate epimerase (EC 5.1.1.7) # plastid
+OG0001708	Athaliana_TAIR10||AT5G13640.1	Phospholipid:diacylglycerol acyltransferase (EC 2.3.1.158)
+OG0001708	Athaliana_TAIR10||AT3G44830.1	Uncurated
+OG0007185	Athaliana_TAIR10||AT5G08340.1	FMN adenylyltransferase (EC 2.7.7.2) # plastid
+OG0007185	Athaliana_TAIR10||AT5G23330.1	FMN adenylyltransferase (EC 2.7.7.2) # plastid
+OG0003370	Athaliana_TAIR10||AT2G22480.1	6-phosphofructokinase (EC 2.7.1.11) # plastid
+OG0006290	Athaliana_TAIR10||AT4G01690.1	Protoporphyrinogen IX oxidase, aerobic, HemY (EC 1.3.3.4) # plastid
+OG0002887	Athaliana_TAIR10||AT1G37130.1	Nitrate reductase [NADH] (EC 1.7.1.1)
+OG0002887	Athaliana_TAIR10||AT1G77760.1	Nitrate reductase [NADH] (EC 1.7.1.1)
+OG0007313	Athaliana_TAIR10||ATMG00730.1	Cytochrome c oxidase polypeptide III (EC 1.9.3.1) # mitointer
+OG0007313	Athaliana_TAIR10||AT2G07687.1	Cytochrome c oxidase polypeptide III (EC 1.9.3.1) # mitointer
+OG0000029	Athaliana_TAIR10||AT3G21760.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT3G21790.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT2G29750.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT5G26310.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT3G16520.3	Uncurated
+OG0000029	Athaliana_TAIR10||AT3G50740.1	Coniferyl-alcohol and sinapyl-alcohol glucosyltransferase (EC 2.4.1.111)
+OG0000029	Athaliana_TAIR10||AT3G21750.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT4G15280.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT1G01390.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT4G36770.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT1G07250.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT4G15260.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT1G07260.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT2G29740.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT3G21800.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT2G29730.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT4G01070.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT2G29710.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT2G18560.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT4G15270.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT3G21780.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT2G18570.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT1G01420.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT1G07240.1	Uncurated
+OG0000029	Athaliana_TAIR10||AT5G66690.1	Coniferyl-alcohol and sinapyl-alcohol glucosyltransferase (EC 2.4.1.111)
+OG0005824	Athaliana_TAIR10||AT1G29900.1	Carbamoyl-phosphate synthase large chain (EC 6.3.5.5) # plastid
+OG0007721	Athaliana_TAIR10||AT1G60550.1	Naphthoate synthase (EC 4.1.3.36) # plastid # peroxisome
+OG0000757	Athaliana_TAIR10||ATCG00350.1	photosystem I P700 chlorophyll a apoprotein subunit Ia (PsaA) # plastid
+OG0000757	Athaliana_TAIR10||ATCG00340.1	photosystem I P700 chlorophyll a apoprotein subunit Ib (PsaB) # plastid
+OG0007930	Athaliana_TAIR10||AT3G08610.1	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 1 # mitointer
+OG0003268	Athaliana_TAIR10||AT5G50850.1	Pyruvate dehydrogenase E1 component beta subunit (EC 1.2.4.1) # mitochondria
+OG0009703	Athaliana_TAIR10||ATCG00570.1	Cytochrome b559 beta chain (PsbF) # plastid
+OG0004698	Athaliana_TAIR10||ATCG00470.1	Plastidial ATP synthase epsilon chain # plastid
+OG0005562	Athaliana_TAIR10||ATCG00700.1	Photosystem II protein PsbN # plastid
+OG0004634	Athaliana_TAIR10||AT1G30510.2	Ferredoxin-NADP(+) reductase (EC 1.18.1.2) # plastid
+OG0004634	Athaliana_TAIR10||AT4G05390.1	Ferredoxin-NADP(+) reductase (EC 1.18.1.2) # plastid
+OG0003092	Athaliana_TAIR10||AT2G21550.1	Dihydrofolate reductase (EC 1.5.1.3) / Thymidylate synthase (EC 2.1.1.45) # cytosol
+OG0003092	Athaliana_TAIR10||AT4G34570.1	Dihydrofolate reductase (EC 1.5.1.3) / Thymidylate synthase (EC 2.1.1.45) # cytosol # mitochondria
+OG0003092	Athaliana_TAIR10||AT2G16370.1	Dihydrofolate reductase (EC 1.5.1.3) / Thymidylate synthase (EC 2.1.1.45) # cytosol
+OG0001972	Athaliana_TAIR10||AT3G01390.1	V-type ATP synthase subunit G (EC 3.6.3.14) # vacuole
+OG0001972	Athaliana_TAIR10||AT4G25950.1	V-type ATP synthase subunit G (EC 3.6.3.14) # vacuole
+OG0001972	Athaliana_TAIR10||AT4G23710.1	V-type ATP synthase subunit G (EC 3.6.3.14) # vacuole
+OG0006012	Athaliana_TAIR10||AT1G12230.2	Transaldolase (EC 2.2.1.2) # plastid
+OG0005089	Athaliana_TAIR10||AT3G15820.1	Phosphatidylcholine:diacylglycerol cholinephosphotransferase (EC 2.7.8.-)
+OG0005089	Athaliana_TAIR10||AT3G15830.1	Uncurated
+OG0001054	Athaliana_TAIR10||AT1G02640.1	Uncurated
+OG0001054	Athaliana_TAIR10||AT5G09730.1	Uncurated
+OG0001054	Athaliana_TAIR10||AT5G49360.1	Beta-xylosidase (EC 3.2.1.37)
+OG0001054	Athaliana_TAIR10||AT3G19620.1	Uncurated
+OG0001054	Athaliana_TAIR10||AT5G64570.1	Beta-xylosidase (EC 3.2.1.37)
+OG0002651	Athaliana_TAIR10||AT5G20090.1	Mitochondrial pyruvate carrier (TC 2.A.105) # mitochondria
+OG0008261	Athaliana_TAIR10||AT1G71750.2	Guanine phosphoribosyltransferase (EC 2.4.2.8)
+OG0006917	Athaliana_TAIR10||AT1G55670.1	photosystem I subunit PsaG # plastid
+OG0001077	Athaliana_TAIR10||AT5G54950.1	Uncurated
+OG0001077	Athaliana_TAIR10||AT2G05710.1	Aconitate hydratase (EC 4.2.1.3) # cytosol # plastid # mitochondria
+OG0001077	Athaliana_TAIR10||AT4G26970.1	Aconitate hydratase (EC 4.2.1.3) # cytosol # plastid # mitochondria
+OG0001077	Athaliana_TAIR10||AT4G35830.1	Aconitate hydratase (EC 4.2.1.3) # cytosol # mitochondria
+OG0000643	Athaliana_TAIR10||AT3G23920.1	Beta-amylase (EC 3.2.1.2) # plastid
+OG0000643	Athaliana_TAIR10||AT5G55700.1	Beta-amylase (EC 3.2.1.2)
+OG0000643	Athaliana_TAIR10||AT4G17090.1	Beta-amylase (EC 3.2.1.2) # plastid
+OG0000643	Athaliana_TAIR10||AT4G15210.1	Beta-amylase (EC 3.2.1.2)
+OG0000643	Athaliana_TAIR10||AT2G32290.1	Beta-amylase (EC 3.2.1.2)
+OG0001773	Athaliana_TAIR10||ATCG00020.1	photosystem II protein D1 (PsbA) # plastid
+OG0000432	Athaliana_TAIR10||AT4G26220.1	Caffeoyl-CoA O-methyltransferase (EC 2.1.1.104)
+OG0000432	Athaliana_TAIR10||AT4G34050.1	Caffeoyl-CoA O-methyltransferase (EC 2.1.1.104)
+OG0000432	Athaliana_TAIR10||AT3G62000.2	Uncurated
+OG0000432	Athaliana_TAIR10||AT1G67990.1	Uncurated
+OG0000432	Athaliana_TAIR10||AT3G61990.1	Uncurated
+OG0000432	Athaliana_TAIR10||AT1G24735.2	Uncurated
+OG0000432	Athaliana_TAIR10||AT1G67980.1	Caffeoyl-CoA O-methyltransferase (EC 2.1.1.104)
+OG0005814	Athaliana_TAIR10||AT4G34700.1	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 9 # mitointer
+OG0000855	Athaliana_TAIR10||AT3G14150.1	Glycolate oxidase (EC 1.1.3.15) # peroxisome
+OG0000855	Athaliana_TAIR10||AT4G18360.1	Glycolate oxidase (EC 1.1.3.15) # peroxisome
+OG0000855	Athaliana_TAIR10||AT3G14130.1	Glycolate oxidase (EC 1.1.3.15)
+OG0000855	Athaliana_TAIR10||AT3G14415.2	Glycolate oxidase (EC 1.1.3.15) # peroxisome
+OG0000855	Athaliana_TAIR10||AT3G14420.1	Glycolate oxidase (EC 1.1.3.15) # plastid # peroxisome
+OG0005649	Athaliana_TAIR10||AT4G28660.2	Photosystem II 13 kDa protein Psb28 (similar to PsbW) # plastid
+OG0004333	Athaliana_TAIR10||AT2G44160.1	5,10-methylenetetrahydrofolate reductase (EC 1.5.1.20) # cytosol
+OG0004333	Athaliana_TAIR10||AT3G59970.3	5,10-methylenetetrahydrofolate reductase (EC 1.5.1.20) # cytosol
+OG0004892	Athaliana_TAIR10||AT5G49810.1	Methionine S-methyltransferase (EC 2.1.1.12) # cytosol
+OG0003613	Athaliana_TAIR10||AT3G18850.1	1-acyl-sn-glycerol-3-phosphate acyltransferase (EC 2.3.1.51)
+OG0003613	Athaliana_TAIR10||AT1G75020.1	1-acyl-sn-glycerol-3-phosphate acyltransferase (EC 2.3.1.51)
+OG0004609	Athaliana_TAIR10||ATMG01360.1	Cytochrome c oxidase polypeptide I (EC 1.9.3.1) # mitointer
+OG0003334	Athaliana_TAIR10||AT4G21470.1	Riboflavin kinase (EC 2.7.1.26)
+OG0000720	Athaliana_TAIR10||AT5G46290.3	3-oxoacyl-[acyl-carrier-protein] synthase, KASI (EC 2.3.1.41) # plastid
+OG0000720	Athaliana_TAIR10||AT1G74960.1	3-oxoacyl-[acyl-carrier-protein] synthase, KASII (EC 2.3.1.179) # plastid
+OG0003408	Athaliana_TAIR10||AT1G76550.1	Pyrophosphate-dependent fructose 6-phosphate-1-kinase (EC 2.7.1.90) # cytosol
+OG0003408	Athaliana_TAIR10||AT1G20950.1	Pyrophosphate-dependent fructose 6-phosphate-1-kinase (EC 2.7.1.90) # cytosol
+OG0007323	Athaliana_TAIR10||AT4G30950.1	Omega-6 fatty acid desaturase (EC 1.14.19.-) # plastid
+OG0008754	Athaliana_TAIR10||AT2G04560.1	Lipid-A-disaccharide synthase (EC 2.4.1.182)
+OG0000083	Athaliana_TAIR10||AT4G34250.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT5G49070.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT1G71160.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT4G34510.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT1G68530.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199) # peroxisome
+OG0000083	Athaliana_TAIR10||AT1G25450.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT2G26250.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT1G04220.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT2G46720.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT3G52160.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT2G15090.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT4G34520.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT1G19440.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT5G43760.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT1G01120.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT3G10280.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT2G26640.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0000083	Athaliana_TAIR10||AT2G16280.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0004100	Athaliana_TAIR10||AT1G79040.1	Photosystem II 10 kDa protein PsbR # plastid
+OG0005602	Athaliana_TAIR10||AT1G63000.1	UDP-4-dehydro-6-deoxy-glucose 3,5-epimerase (no EC) / UDP-4-dehydro-rhamnose reductase (EC 1.1.1.-)
+OG0002784	Athaliana_TAIR10||AT4G20050.1	Polygalacturonase (EC 3.2.1.15)
+OG0002784	Athaliana_TAIR10||AT4G20040.1	Uncurated
+OG0006937	Athaliana_TAIR10||AT1G60490.1	Phosphatidylinositol 3-kinase (EC 2.7.1.137)
+OG0005581	Athaliana_TAIR10||AT4G26900.1	Imidazole glycerol phosphate synthase amidotransferase subunit (EC 2.4.2.-) / Imidazole glycerol phosphate synthase cyclase subunit (EC 4.1.3.-) # plastid
+OG0000028	Athaliana_TAIR10||AT1G13080.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G48270.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26300.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G53290.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT1G13110.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT1G11610.2	Uncurated
+OG0000028	Athaliana_TAIR10||AT2G24180.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT4G13770.1	Oxime metabolizining monooxygenase in aliphatic glucosinolates biosynthesis # endoplasm
+OG0000028	Athaliana_TAIR10||AT3G26270.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT5G57260.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26150.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26180.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G48280.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G53300.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26320.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT5G25130.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT2G30750.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26310.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26830.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT1G13090.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT5G24950.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT2G30770.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G48310.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26290.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT5G35715.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26280.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G48320.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26160.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT4G20240.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26200.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT5G24960.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26190.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26330.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G48290.2	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G53280.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT4G13290.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT4G31500.1	Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis # endoplasm
+OG0000028	Athaliana_TAIR10||AT3G26230.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT5G42590.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT5G25140.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT1G13100.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26210.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT2G02580.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26220.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT5G25120.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G44250.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT5G25180.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G48300.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT4G13310.1	Uncurated
+OG0000028	Athaliana_TAIR10||AT3G26170.1	Uncurated
+OG0003541	Athaliana_TAIR10||AT4G28750.1	photosystem I subunit IV (PsaE) # plastid
+OG0003541	Athaliana_TAIR10||AT2G20260.1	photosystem I subunit IV (PsaE) # plastid
+OG0005033	Athaliana_TAIR10||AT4G37830.1	Cytochrome c oxidase subunit 6a # mitointer
+OG0006537	Athaliana_TAIR10||AT3G51820.1	Chlorophyll a synthase ChlG (EC 2.5.1.62) # plastid
+OG0007061	Athaliana_TAIR10||AT4G33030.1	UDP-sulfoquinovose synthase (EC 3.13.1.1) # plastid
+OG0007802	Athaliana_TAIR10||AT5G23220.1	Nicotinamidase (EC 3.5.1.19), plant/cyanobacterial family
+OG0007802	Athaliana_TAIR10||AT5G23230.1	Nicotinamidase (EC 3.5.1.19), plant/cyanobacterial family
+OG0001818	Athaliana_TAIR10||AT4G09320.1	Nucleoside diphosphate kinase (EC 2.7.4.6) # cytosol # nucleus # peroxisome
+OG0001818	Athaliana_TAIR10||AT5G63310.1	Nucleoside diphosphate kinase (EC 2.7.4.6) # plastid # nucleus
+OG0004410	Athaliana_TAIR10||AT2G32040.1	10-Formyltetrahydrofolate transport / 5-Formyltetrahydrofolate transport / 5-Methylenetetrahydrofolate transport / 5-Methylenyltetrahydrofolate transport / 5-Methyltetrahydrofolate transport / Tetrahydrofolate transport # plastid
+OG0006284	Athaliana_TAIR10||AT1G47420.1	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH5 # mitochondria
+OG0004177	Athaliana_TAIR10||AT1G32060.1	Phosphoribulokinase (EC 2.7.1.19) # plastid
+OG0007588	Athaliana_TAIR10||AT1G30520.1	O-succinylbenzoic acid--CoA ligase (EC 6.2.1.26) # plastid # peroxisome
+OG0004215	Athaliana_TAIR10||AT3G02870.1	Inositol-1-monophosphatase (EC 3.1.3.25)
+OG0002492	Athaliana_TAIR10||AT2G27860.1	UDP-D-apiose synthase (EC 4.1.1.-) / UDP-glucuronate decarboxylase (EC 4.1.1.35)
+OG0002492	Athaliana_TAIR10||AT1G08200.1	UDP-D-apiose synthase (EC 4.1.1.-) / UDP-glucuronate decarboxylase (EC 4.1.1.35)
+OG0003153	Athaliana_TAIR10||AT3G05630.1	Phospholipase D (EC 3.1.4.4) # vacuole
+OG0003153	Athaliana_TAIR10||AT3G16785.1	Phospholipase D (EC 3.1.4.4)
+OG0002652	Athaliana_TAIR10||AT5G05980.1	Folylpolyglutamate synthase (EC 6.3.2.17) # cytosol # plastid
+OG0002652	Athaliana_TAIR10||AT3G55630.3	Folylpolyglutamate synthase (EC 6.3.2.17) # cytosol
+OG0002652	Athaliana_TAIR10||AT3G10160.1	Folylpolyglutamate synthase (EC 6.3.2.17) # mitochondria
+OG0007988	Athaliana_TAIR10||AT1G67550.1	Urease (EC 3.5.1.5) # cytosol
+OG0004697	Athaliana_TAIR10||ATCG00300.1	Photosystem II protein PsbZ # plastid
+OG0004154	Athaliana_TAIR10||AT2G22570.1	Nicotinamidase (EC 3.5.1.19), plant/cyanobacterial family
+OG0014096	Athaliana_TAIR10||AT1G16400.1	Penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n6) # endoplasm
+OG0014096	Athaliana_TAIR10||AT1G16410.1	Homo, di, tri, tetra, penta & hexahomomethionine N-hydroxylase (EC 1.14.13.n5) # endoplasm
+OG0001065	Athaliana_TAIR10||AT4G09510.1	Sucrose alpha-glucosidase, alkaline/neutral invertase (EC 3.2.1.26)
+OG0001065	Athaliana_TAIR10||AT1G22650.1	Uncurated
+OG0001065	Athaliana_TAIR10||AT4G34860.1	Sucrose alpha-glucosidase, alkaline/neutral invertase (EC 3.2.1.26)
+OG0001065	Athaliana_TAIR10||AT1G72000.1	Sucrose alpha-glucosidase, alkaline/neutral invertase (EC 3.2.1.26)
+OG0001065	Athaliana_TAIR10||AT1G35580.1	Sucrose alpha-glucosidase, alkaline/neutral invertase (EC 3.2.1.26) # cytosol # nucleus
+OG0004588	Athaliana_TAIR10||AT5G18800.1	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 8 # mitointer
+OG0004588	Athaliana_TAIR10||AT3G06310.1	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 8 # mitointer
+OG0006761	Athaliana_TAIR10||AT2G40840.1	4-alpha-glucanotransferase (amylomaltase) (EC 2.4.1.25) # cytosol
+OG0007847	Athaliana_TAIR10||AT3G10700.1	Galacturonokinase (EC 2.7.1.44)
+OG0007270	Athaliana_TAIR10||AT5G48840.1	Pantoate--beta-alanine ligase (EC 6.3.2.1) # cytosol
+OG0003862	Athaliana_TAIR10||AT1G20020.1	Ferredoxin-NADP(+) reductase (EC 1.18.1.2) # plastid
+OG0003862	Athaliana_TAIR10||AT5G66190.1	Ferredoxin-NADP(+) reductase (EC 1.18.1.2) # plastid
+OG0006518	Athaliana_TAIR10||AT3G60620.1	Phosphatidate cytidylyltransferase (EC 2.7.7.41) # plastid
+OG0006518	Athaliana_TAIR10||AT2G45150.1	Phosphatidate cytidylyltransferase (EC 2.7.7.41) # plastid
+OG0006678	Athaliana_TAIR10||AT4G35295.1	Uncurated
+OG0006678	Athaliana_TAIR10||AT2G17265.1	Homoserine kinase (EC 2.7.1.39) # plastid
+OG0000512	Athaliana_TAIR10||AT1G23460.1	Uncurated
+OG0000512	Athaliana_TAIR10||AT1G80140.1	Uncurated
+OG0000512	Athaliana_TAIR10||AT2G41850.1	Polygalacturonase (EC 3.2.1.15)
+OG0000512	Athaliana_TAIR10||AT3G57510.1	Polygalacturonase (EC 3.2.1.15)
+OG0000512	Athaliana_TAIR10||AT3G07970.1	Polygalacturonase (EC 3.2.1.15)
+OG0000512	Athaliana_TAIR10||AT1G70500.1	Uncurated
+OG0000512	Athaliana_TAIR10||AT1G80170.1	Uncurated
+OG0007475	Athaliana_TAIR10||AT2G20360.1	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 9 # mitointer
+OG0006124	Athaliana_TAIR10||AT1G23360.1	2-heptaprenyl-1,4-naphthoquinone methyltransferase MenG of phylloquinone biosynthesis (EC 2.1.1.-) / Demethylphylloquinone methyltransferase (EC 2.1.1.329) # plastid
+OG0000945	Athaliana_TAIR10||AT1G15690.1	Pyrophosphate-energized proton pump (EC 3.6.1.1) # vacuole # cellwall
+OG0007081	Athaliana_TAIR10||AT2G29630.1	Hydroxymethylpyrimidine phosphate synthase ThiC (EC 4.1.99.17) # plastid
+OG0000688	Athaliana_TAIR10||AT3G02620.1	Probable acyl-ACP desaturase, Stearoyl-ACP desaturase (EC 1.14.19.2)
+OG0000688	Athaliana_TAIR10||AT3G02630.1	Probable acyl-ACP desaturase, Stearoyl-ACP desaturase (EC 1.14.19.2) # plastid
+OG0000688	Athaliana_TAIR10||AT2G43710.1	Probable acyl-ACP desaturase, Stearoyl-ACP desaturase (EC 1.14.19.2) # plastid
+OG0000688	Athaliana_TAIR10||AT3G02610.1	Probable acyl-ACP desaturase, Stearoyl-ACP desaturase (EC 1.14.19.2)
+OG0000688	Athaliana_TAIR10||AT5G16230.1	Probable acyl-ACP desaturase, Stearoyl-ACP desaturase (EC 1.14.19.2)
+OG0000688	Athaliana_TAIR10||AT5G16240.1	Probable acyl-ACP desaturase, Stearoyl-ACP desaturase (EC 1.14.19.2)
+OG0000688	Athaliana_TAIR10||AT1G43800.1	Probable acyl-ACP desaturase, Palmitoyl-ACP 9-desaturase (EC 1.14.19.-)
+OG0001920	Athaliana_TAIR10||AT3G62410.1	Protein CP12, regulation of Calvin cycle via association/dissociation of PRK/CP12/GAPDH complex # plastid
+OG0001920	Athaliana_TAIR10||AT2G47400.1	Protein CP12, regulation of Calvin cycle via association/dissociation of PRK/CP12/GAPDH complex # plastid
+OG0001920	Athaliana_TAIR10||AT1G76560.1	Protein CP12, regulation of Calvin cycle via association/dissociation of PRK/CP12/GAPDH complex # plastid
+OG0003803	Athaliana_TAIR10||AT1G63050.1	Phospholipid:diacylglycerol acyltransferase (EC 2.3.1.158)
+OG0003803	Athaliana_TAIR10||AT1G12640.1	Phospholipid:diacylglycerol acyltransferase (EC 2.3.1.158)
+OG0005579	Athaliana_TAIR10||AT4G09520.1	2,3-bisphosphoglycerate-independent phosphoglycerate mutase (EC 5.4.2.12) # cytosol
+OG0005579	Athaliana_TAIR10||AT3G30841.1	2,3-bisphosphoglycerate-independent phosphoglycerate mutase (EC 5.4.2.12) # cytosol
+OG0002919	Athaliana_TAIR10||AT2G42910.1	Ribose-phosphate pyrophosphokinase (EC 2.7.6.1) # cytosol
+OG0002919	Athaliana_TAIR10||AT1G10700.1	Ribose-phosphate pyrophosphokinase (EC 2.7.6.1) # plastid
+OG0006024	Athaliana_TAIR10||AT2G36230.1	Phosphoribosylformimino-5-aminoimidazole carboxamide ribotide isomerase (EC 5.3.1.16) # plastid
+OG0002350	Athaliana_TAIR10||AT5G28237.1	Tryptophan synthase beta chain (EC 4.2.1.20)
+OG0002350	Athaliana_TAIR10||AT4G27070.1	Tryptophan synthase beta chain (EC 4.2.1.20) # plastid
+OG0002350	Athaliana_TAIR10||AT5G54810.1	Tryptophan synthase beta chain (EC 4.2.1.20) # plastid
+OG0000409	Athaliana_TAIR10||AT4G38300.1	Uncurated
+OG0000409	Athaliana_TAIR10||AT1G58370.1	Endo-1,4-beta-xylanase A precursor (EC 3.2.1.8)
+OG0000409	Athaliana_TAIR10||AT4G38650.1	Endo-1,4-beta-xylanase A precursor (EC 3.2.1.8)
+OG0000409	Athaliana_TAIR10||AT4G33820.1	Uncurated
+OG0000409	Athaliana_TAIR10||AT4G33810.1	Uncurated
+OG0000409	Athaliana_TAIR10||AT4G33830.1	Uncurated
+OG0000409	Athaliana_TAIR10||AT4G33840.1	Uncurated
+OG0000409	Athaliana_TAIR10||AT2G14690.1	Uncurated
+OG0000409	Athaliana_TAIR10||AT4G08160.1	Endo-1,4-beta-xylanase A precursor (EC 3.2.1.8)
+OG0000409	Athaliana_TAIR10||AT1G10050.1	Endo-1,4-beta-xylanase A precursor (EC 3.2.1.8)
+OG0000409	Athaliana_TAIR10||AT4G33860.1	Uncurated
+OG0003422	Athaliana_TAIR10||AT5G49460.1	ATP-citrate (pro-S-)-lyase, subunit 2 (EC 2.3.3.8) # cytosol
+OG0003422	Athaliana_TAIR10||AT3G06650.1	ATP-citrate (pro-S-)-lyase, subunit 2 (EC 2.3.3.8) # cytosol
+OG0000049	Athaliana_TAIR10||AT3G20960.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT2G27010.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT4G15380.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT2G14100.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT4G15350.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT1G50520.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT3G20120.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT3G20130.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT4G15330.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT3G20080.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT3G32047.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT3G20100.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT5G47990.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT3G20090.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT2G42250.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT2G27000.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT5G07990.1	Flavonoid 3'-monooxygenase (EC 1.14.13.21)
+OG0000049	Athaliana_TAIR10||AT1G50560.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT5G06905.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT1G28430.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT3G20950.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT3G20940.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT5G06900.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT3G20140.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT3G20110.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT3G20935.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT5G42580.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT2G05180.1	Uncurated
+OG0000049	Athaliana_TAIR10||AT4G15360.1	Uncurated
+OG0001082	Athaliana_TAIR10||AT5G15490.1	UDP-glucose dehydrogenase (EC 1.1.1.22)
+OG0001082	Athaliana_TAIR10||AT3G29360.1	UDP-glucose dehydrogenase (EC 1.1.1.22)
+OG0001082	Athaliana_TAIR10||AT1G26570.1	UDP-glucose dehydrogenase (EC 1.1.1.22)
+OG0001082	Athaliana_TAIR10||AT3G01010.1	Uncurated
+OG0001082	Athaliana_TAIR10||AT5G39320.1	UDP-glucose dehydrogenase (EC 1.1.1.22)
+OG0002904	Athaliana_TAIR10||AT3G48560.1	Acetolactate synthase large subunit (EC 2.2.1.6) # plastid
+OG0001467	Athaliana_TAIR10||AT2G22450.1	3,4-dihydroxy-2-butanone 4-phosphate synthase (EC 4.1.99.12) / GTP cyclohydrolase II (EC 3.5.4.25) # plastid
+OG0001467	Athaliana_TAIR10||AT5G59750.2	3,4-dihydroxy-2-butanone 4-phosphate synthase (EC 4.1.99.12) / GTP cyclohydrolase II (EC 3.5.4.25) # plastid
+OG0001467	Athaliana_TAIR10||AT5G64300.1	3,4-dihydroxy-2-butanone 4-phosphate synthase (EC 4.1.99.12) / GTP cyclohydrolase II (EC 3.5.4.25) # plastid
+OG0006106	Athaliana_TAIR10||AT1G08490.1	Cysteine desulfurase (EC 2.8.1.7), SufS subfamily # plastid
+OG0005168	Athaliana_TAIR10||AT4G24160.1	1-acyl-sn-glycerol-3-phosphate acyltransferase (EC 2.3.1.51)
+OG0003885	Athaliana_TAIR10||AT2G22230.1	3-hydroxyacyl-[acyl-carrier-protein] dehydratase, FabZ form (EC 4.2.1.59) # plastid
+OG0003885	Athaliana_TAIR10||AT5G10160.1	3-hydroxyacyl-[acyl-carrier-protein] dehydratase, FabZ form (EC 4.2.1.59) # plastid
+OG0001358	Athaliana_TAIR10||AT1G17290.1	Alanine transaminase (EC 2.6.1.2) # cytosol # plastid # mitochondria
+OG0001358	Athaliana_TAIR10||AT1G23310.1	Alanine transaminase (EC 2.6.1.2) / Glutamate-glyoxylate aminotransferase (EC 2.6.1.4) / L-alanine:glyoxylate aminotransferase (EC 2.6.1.44) # plastid # peroxisome
+OG0001358	Athaliana_TAIR10||AT1G72330.3	Alanine transaminase (EC 2.6.1.2) # mitochondria
+OG0001358	Athaliana_TAIR10||AT1G70580.1	Alanine transaminase (EC 2.6.1.2) / Glutamate-glyoxylate aminotransferase (EC 2.6.1.4) / L-alanine:glyoxylate aminotransferase (EC 2.6.1.44) # plastid # peroxisome
+OG0001608	Athaliana_TAIR10||AT3G29320.1	1,4-alpha-glucan phosphorylase (EC 2.4.1.1) # plastid
+OG0001608	Athaliana_TAIR10||AT3G46970.1	1,4-alpha-glucan phosphorylase (EC 2.4.1.1) # cytosol
+OG0004054	Athaliana_TAIR10||ATCG00520.1	photosystem I assembly related protein Ycf4 # plastid
+OG0007221	Athaliana_TAIR10||AT4G25080.1	Mg-protoporphyrin O-methyltransferase (EC 2.1.1.11) # plastid
+OG0001241	Athaliana_TAIR10||AT3G12120.1	Omega-6 fatty acid desaturase (EC 1.14.19.-) / Omega-6 oleate desaturase (EC 1.14.19.-) # endoplasm
+OG0000268	Athaliana_TAIR10||AT1G01460.1	Phophatidylinositol-4-phosphate 5-kinase (EC 2.7.1.68)
+OG0000268	Athaliana_TAIR10||AT1G77740.1	Phophatidylinositol-4-phosphate 5-kinase (EC 2.7.1.68)
+OG0000268	Athaliana_TAIR10||AT4G01190.1	Phophatidylinositol-4-phosphate 5-kinase (EC 2.7.1.68)
+OG0000268	Athaliana_TAIR10||AT1G60890.2	Phophatidylinositol-4-phosphate 5-kinase (EC 2.7.1.68)
+OG0000268	Athaliana_TAIR10||AT3G07960.1	Phophatidylinositol-4-phosphate 5-kinase (EC 2.7.1.68) # cellwall
+OG0000268	Athaliana_TAIR10||AT1G10900.1	Phophatidylinositol-4-phosphate 5-kinase (EC 2.7.1.68)
+OG0000268	Athaliana_TAIR10||AT1G21980.1	Phophatidylinositol-4-phosphate 5-kinase (EC 2.7.1.68)
+OG0000268	Athaliana_TAIR10||AT2G41210.1	Phophatidylinositol-4-phosphate 5-kinase (EC 2.7.1.68)
+OG0000268	Athaliana_TAIR10||AT2G26420.1	Phophatidylinositol-4-phosphate 5-kinase (EC 2.7.1.68)
+OG0000268	Athaliana_TAIR10||AT3G56960.1	Phophatidylinositol-4-phosphate 5-kinase (EC 2.7.1.68) # cellwall
+OG0000268	Athaliana_TAIR10||AT3G09920.1	Phophatidylinositol-4-phosphate 5-kinase (EC 2.7.1.68)
+OG0000507	Athaliana_TAIR10||AT1G06520.1	Glycerol-3-phosphate acyltransferase (EC 2.3.1.15) # mitochondria # endoplasm
+OG0000507	Athaliana_TAIR10||AT2G38110.1	Glycerol-3-phosphate 2-O-acyltransferase (EC 2.3.1.198)
+OG0000507	Athaliana_TAIR10||AT5G06090.1	Glycerol-3-phosphate 2-O-acyltransferase (EC 2.3.1.198)
+OG0000507	Athaliana_TAIR10||AT3G11430.1	Glycerol-3-phosphate 2-O-acyltransferase (EC 2.3.1.198)
+OG0000507	Athaliana_TAIR10||AT1G01610.1	Glycerol-3-phosphate 2-O-acyltransferase (EC 2.3.1.198)
+OG0000507	Athaliana_TAIR10||AT4G00400.1	Glycerol-3-phosphate 2-O-acyltransferase (EC 2.3.1.198)
+OG0000507	Athaliana_TAIR10||AT3G11325.1	Uncurated
+OG0006008	Athaliana_TAIR10||AT5G63890.2	Histidinol dehydrogenase (EC 1.1.1.23) # plastid
+OG0002450	Athaliana_TAIR10||AT5G65690.1	Phosphoenolpyruvate carboxykinase [ATP] (EC 4.1.1.49) # cytosol
+OG0002450	Athaliana_TAIR10||AT4G37870.1	Phosphoenolpyruvate carboxykinase [ATP] (EC 4.1.1.49) # cytosol # nucleus
+OG0003306	Athaliana_TAIR10||ATCG00360.1	photosystem I assembly related protein Ycf3 # plastid
+OG0002305	Athaliana_TAIR10||AT5G35360.3	Biotin carboxylase of acetyl-CoA carboxylase (EC 6.3.4.14) # plastid
+OG0002305	Athaliana_TAIR10||AT1G03090.2	Uncurated
+OG0004798	Athaliana_TAIR10||AT2G18250.1	Phosphopantetheine adenylyltransferase, type II eukaryotic (EC 2.7.7.3)
+OG0003759	Athaliana_TAIR10||AT5G66760.1	Succinate dehydrogenase (ubiquinone) flavoprotein subunit SDH1/SDHA (EC 1.3.5.1) # mitochondria
+OG0003759	Athaliana_TAIR10||AT2G18450.1	Succinate dehydrogenase (ubiquinone) flavoprotein subunit SDH1/SDHA (EC 1.3.5.1) # mitochondria
+OG0001487	Athaliana_TAIR10||AT4G30540.1	Uncurated
+OG0001487	Athaliana_TAIR10||AT4G30550.1	Uncurated
+OG0001487	Athaliana_TAIR10||AT4G30530.1	Gamma-glutamyl peptidase in glucosinolates biosynthesis
+OG0001487	Athaliana_TAIR10||AT2G23960.1	Uncurated
+OG0001487	Athaliana_TAIR10||AT2G23970.1	Uncurated
+OG0008927	Athaliana_TAIR10||AT3G20480.1	Tetraacyldisaccharide 4'-kinase (EC 2.7.1.130)
+OG0002483	Athaliana_TAIR10||AT5G18870.1	Uncurated
+OG0002483	Athaliana_TAIR10||AT5G18890.1	Uncurated
+OG0002483	Athaliana_TAIR10||AT5G18860.1	Adenosine nucleosidase (EC 3.2.2.7)
+OG0005238	Athaliana_TAIR10||AT2G30920.1	3,4-dihydroxy-5-polyprenylbenzoate methyltransferase (EC 2.1.1.114) / 3-demethylubiquinol 3-O-methyltransferase (EC 2.1.1.64)
+OG0005294	Athaliana_TAIR10||AT5G08530.1	NADH dehydrogenase [ubiquinone] flavoprotein 1 (EC 1.6.5.3) (EC 1.6.99.3) # mitointer
+OG0003522	Athaliana_TAIR10||AT5G43910.2	Ribokinase (EC 2.7.1.12) # cytosol
+OG0003522	Athaliana_TAIR10||AT4G28706.4	Uncurated
+OG0003733	Athaliana_TAIR10||AT4G13430.1	3-isopropylmalate dehydratase large subunit (EC 4.2.1.33) / Methylthioalkylmalate isomerase large subunit (EC 5.4.4.-) # plastid
+OG0007372	Athaliana_TAIR10||AT2G26540.1	Uroporphyrinogen-III synthase (EC 4.2.1.75) # plastid
+OG0005159	Athaliana_TAIR10||AT3G57560.1	Acetylglutamate kinase (EC 2.7.2.8) # plastid
+OG0000674	Athaliana_TAIR10||AT2G44890.1	Uncurated
+OG0000674	Athaliana_TAIR10||AT1G69500.1	Long-chain fatty acid omega-hydroxylase of sporopollenin biosynthesis (EC 1.14.13.-)
+OG0000674	Athaliana_TAIR10||AT2G45510.1	Uncurated
+OG0002762	Athaliana_TAIR10||AT2G38740.1	Sugar-terminal-phosphatase (EC 3.1.3.9/ EC 3.1.3.58) # cytosol
+OG0005977	Athaliana_TAIR10||AT3G23940.1	Dihydroxy-acid dehydratase (EC 4.2.1.9) # plastid
+OG0002677	Athaliana_TAIR10||AT4G17190.1	Farnesyl-diphosphate synthase (EC 2.5.1.10) / Geranyl-diphosphate synthase (EC 2.5.1.1)
+OG0002677	Athaliana_TAIR10||AT5G47770.1	Farnesyl-diphosphate synthase (EC 2.5.1.10) / Geranyl-diphosphate synthase (EC 2.5.1.1)
+OG0005300	Athaliana_TAIR10||AT5G65720.1	Cysteine desulfurase (EC 2.8.1.7), IscS subfamily # cytosol # mitochondria
+OG0001224	Athaliana_TAIR10||AT5G24400.1	6-phosphogluconolactonase (EC 3.1.1.31), eukaryotic type # plastid
+OG0001224	Athaliana_TAIR10||AT5G24410.1	6-phosphogluconolactonase (EC 3.1.1.31), eukaryotic type # cytosol
+OG0001224	Athaliana_TAIR10||AT5G24420.1	6-phosphogluconolactonase (EC 3.1.1.31), eukaryotic type # cytosol
+OG0001224	Athaliana_TAIR10||AT1G13700.1	6-phosphogluconolactonase (EC 3.1.1.31), eukaryotic type # cytosol
+OG0001224	Athaliana_TAIR10||AT3G49360.1	6-phosphogluconolactonase (EC 3.1.1.31), eukaryotic type # cytosol
+OG0007340	Athaliana_TAIR10||AT5G03770.1	Lipid IVA 3-deoxy-D-manno-octulosonic acid transferase (EC 2.4.99.12) [often with (EC 2.4.99.13) also] # mitochondria
+OG0004850	Athaliana_TAIR10||AT3G01910.1	Sulfite oxidase (EC 1.8.3.1) # peroxisome
+OG0001298	Athaliana_TAIR10||ATCG00120.1	Plastidial ATP synthase alpha chain (EC 3.6.3.14) # plastid
+OG0001298	Athaliana_TAIR10||AT2G07698.1	ATP synthase alpha chain (EC 3.6.3.14) # mitointer
+OG0001298	Athaliana_TAIR10||ATMG01190.1	ATP synthase alpha chain (EC 3.6.3.14) # mitointer
+OG0003148	Athaliana_TAIR10||AT5G13280.1	Aspartokinase (EC 2.7.2.4) # plastid
+OG0003148	Athaliana_TAIR10||AT5G14060.1	Aspartokinase (EC 2.7.2.4) # plastid
+OG0003148	Athaliana_TAIR10||AT3G02020.1	Aspartokinase (EC 2.7.2.4) # plastid
+OG0006777	Athaliana_TAIR10||AT2G41680.1	Thioredoxin reductase (EC 1.8.1.9) # plastid
+OG0000881	Athaliana_TAIR10||AT1G62800.2	Aspartate aminotransferase (EC 2.6.1.1) # cytosol
+OG0000881	Athaliana_TAIR10||AT5G19550.1	Aspartate aminotransferase (EC 2.6.1.1) # cytosol
+OG0000881	Athaliana_TAIR10||AT5G11520.1	Aspartate aminotransferase (EC 2.6.1.1) # plastid # peroxisome
+OG0000881	Athaliana_TAIR10||AT4G31990.3	Aspartate aminotransferase (EC 2.6.1.1) # plastid
+OG0000881	Athaliana_TAIR10||AT2G30970.1	Aspartate aminotransferase (EC 2.6.1.1) # mitochondria
+OG0000915	Athaliana_TAIR10||AT3G61130.1	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43) # golgi
+OG0000915	Athaliana_TAIR10||AT4G38270.1	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43)
+OG0000915	Athaliana_TAIR10||AT2G46480.1	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43)
+OG0000915	Athaliana_TAIR10||AT5G47780.1	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43)
+OG0000195	Athaliana_TAIR10||AT2G25160.1	Uncurated
+OG0000195	Athaliana_TAIR10||AT4G31940.1	Uncurated
+OG0000195	Athaliana_TAIR10||AT4G31970.1	Uncurated
+OG0000195	Athaliana_TAIR10||AT4G31950.1	Uncurated
+OG0000195	Athaliana_TAIR10||AT3G25180.1	Flavanone-3-hydroxylase (EC 1.14.13.21)
+OG0003672	Athaliana_TAIR10||AT5G26710.1	Glutamyl-tRNA synthetase (EC 6.1.1.17)
+OG0004709	Athaliana_TAIR10||ATCG00070.1	Photosystem II protein PsbK # plastid
+OG0003017	Athaliana_TAIR10||AT5G16290.1	Acetolactate synthase small subunit (EC 2.2.1.6) # plastid
+OG0003017	Athaliana_TAIR10||AT2G31810.1	Acetolactate synthase small subunit (EC 2.2.1.6) # plastid
+OG0000687	Athaliana_TAIR10||AT3G59480.1	Fructokinase (EC 2.7.1.4)
+OG0000687	Athaliana_TAIR10||AT1G66430.1	Fructokinase (EC 2.7.1.4) # plastid
+OG0000687	Athaliana_TAIR10||AT4G10260.1	Fructokinase (EC 2.7.1.4)
+OG0000687	Athaliana_TAIR10||AT1G06020.1	Fructokinase (EC 2.7.1.4)
+OG0000687	Athaliana_TAIR10||AT1G06030.1	Fructokinase (EC 2.7.1.4)
+OG0000687	Athaliana_TAIR10||AT5G51830.1	Fructokinase (EC 2.7.1.4)
+OG0000687	Athaliana_TAIR10||AT2G31390.1	Fructokinase (EC 2.7.1.4)
+OG0000687	Athaliana_TAIR10||AT1G50390.1	Fructokinase (EC 2.7.1.4)
+OG0009279	Athaliana_TAIR10||AT4G16700.1	Phosphatidylserine decarboxylase (EC 4.1.1.65)
+OG0008550	Athaliana_TAIR10||AT4G21220.1	UDP-3-O-[3-hydroxymyristoyl] glucosamine N-acyltransferase (EC 2.3.1.191)
+OG0008550	Athaliana_TAIR10||AT4G05210.1	UDP-3-O-[3-hydroxymyristoyl] glucosamine N-acyltransferase (EC 2.3.1.191)
+OG0005378	Athaliana_TAIR10||AT4G08900.1	Arginase (EC 3.5.3.1) # plastid # mitochondria
+OG0005378	Athaliana_TAIR10||AT4G08870.1	Arginase (EC 3.5.3.1) # plastid # mitochondria
+OG0004356	Athaliana_TAIR10||AT5G10480.3	Very-long-chain (3R)-3-hydroxyacyl-[acyl-carrier protein] dehydratase (EC 4.2.1.134) # endoplasm
+OG0003890	Athaliana_TAIR10||ATCG00440.1	Uncurated
+OG0003890	Athaliana_TAIR10||ATMG00990.1	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 3, ND3 # mitointer
+OG0003890	Athaliana_TAIR10||AT2G07751.1	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 3, ND3 # mitointer
+OG0002453	Athaliana_TAIR10||AT3G14930.1	Uroporphyrinogen III decarboxylase (EC 4.1.1.37) # plastid
+OG0002453	Athaliana_TAIR10||AT2G40490.1	Uroporphyrinogen III decarboxylase (EC 4.1.1.37) # plastid
+OG0004065	Athaliana_TAIR10||AT2G34630.2	Geranyl-diphosphate synthase (EC 2.5.1.1) / Solanesyl diphosphate synthase (EC 2.5.1.85) # plastid # mitochondria
+OG0003945	Athaliana_TAIR10||AT4G18480.1	Protoporphyrin IX Mg-chelatase subunit I (EC 6.6.1.1) # plastid
+OG0003945	Athaliana_TAIR10||AT5G45930.1	Protoporphyrin IX Mg-chelatase subunit I (EC 6.6.1.1) # plastid
+OG0003321	Athaliana_TAIR10||AT5G01220.1	UDP-sulfoquinovose:DAG sulfoquinovosyltransferase (EC 2.4.1.-) # plastid
+OG0005680	Athaliana_TAIR10||ATMG00070.1	NADH dehydrogenase [ubiquinone] iron-sulfur protein 3 (EC 1.6.5.3) (EC 1.6.99.3) # mitointer
+OG0007943	Athaliana_TAIR10||AT2G40690.1	Glycerol-3-phosphate dehydrogenase [NAD+] (EC 1.1.1.8) # plastid
+OG0001607	Athaliana_TAIR10||AT5G67520.1	Uncurated
+OG0001607	Athaliana_TAIR10||AT3G03900.1	Uncurated
+OG0001607	Athaliana_TAIR10||AT4G39940.1	Adenylylsulfate kinase (EC 2.7.1.25) # plastid
+OG0001607	Athaliana_TAIR10||AT2G14750.1	Adenylylsulfate kinase (EC 2.7.1.25) # plastid
+OG0001923	Athaliana_TAIR10||AT4G35090.1	Catalase (EC 1.11.1.6) # peroxisome
+OG0001923	Athaliana_TAIR10||AT1G20630.1	Catalase (EC 1.11.1.6) # peroxisome
+OG0001923	Athaliana_TAIR10||AT1G20620.1	Catalase (EC 1.11.1.6) # peroxisome
+OG0003102	Athaliana_TAIR10||AT5G28840.1	GDP-mannose 3,5-epimerase (EC 5.1.3.18)
+OG0004799	Athaliana_TAIR10||AT3G48730.1	Glutamate-1-semialdehyde aminotransferase (EC 5.4.3.8) # plastid
+OG0004799	Athaliana_TAIR10||AT5G63570.1	Glutamate-1-semialdehyde aminotransferase (EC 5.4.3.8) # plastid
+OG0000139	Athaliana_TAIR10||AT3G59100.1	Callose synthase (EC 2.4.1.34)
+OG0000139	Athaliana_TAIR10||AT3G14780.1	Uncurated
+OG0000139	Athaliana_TAIR10||AT2G36850.1	Callose synthase (EC 2.4.1.34)
+OG0000139	Athaliana_TAIR10||AT1G05570.1	Callose synthase (EC 2.4.1.34) # cytosol
+OG0000139	Athaliana_TAIR10||AT3G07160.1	Callose synthase (EC 2.4.1.34) # cellwall
+OG0000139	Athaliana_TAIR10||AT3G14570.1	Callose synthase (EC 2.4.1.34)
+OG0000139	Athaliana_TAIR10||AT4G03550.1	Callose synthase (EC 2.4.1.34) # cellwall
+OG0000139	Athaliana_TAIR10||AT4G04970.1	Callose synthase (EC 2.4.1.34)
+OG0000139	Athaliana_TAIR10||AT2G31960.1	Callose synthase (EC 2.4.1.34)
+OG0000139	Athaliana_TAIR10||AT1G06490.1	Callose synthase (EC 2.4.1.34)
+OG0000139	Athaliana_TAIR10||AT2G13680.1	Uncurated
+OG0000139	Athaliana_TAIR10||AT5G36870.1	Callose synthase (EC 2.4.1.34)
+OG0000139	Athaliana_TAIR10||AT5G13000.1	Callose synthase (EC 2.4.1.34)
+OG0001475	Athaliana_TAIR10||AT4G25280.1	Uncurated
+OG0001475	Athaliana_TAIR10||AT3G60180.1	Uncurated
+OG0001475	Athaliana_TAIR10||AT5G26667.1	Uridine monophosphate/cytidine monophosphate kinase (EC 2.7.4.14) # cytosol
+OG0001475	Athaliana_TAIR10||AT3G60961.1	Uncurated
+OG0006703	Athaliana_TAIR10||AT3G03100.1	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 12 # mitointer
+OG0004078	Athaliana_TAIR10||AT1G16700.1	NADH dehydrogenase [ubiquinone] iron-sulfur protein 8 (EC 1.6.5.3) (EC 1.6.99.3) # mitointer
+OG0004078	Athaliana_TAIR10||AT1G79010.1	NADH dehydrogenase [ubiquinone] iron-sulfur protein 8 (EC 1.6.5.3) (EC 1.6.99.3) # mitointer
+OG0004456	Athaliana_TAIR10||AT5G05370.1	Ubiquinol-cytochrome c reductase complex subunit 8 (ubiquinone-binding protein QP-C) # mitointer
+OG0004456	Athaliana_TAIR10||AT3G10860.1	Ubiquinol-cytochrome c reductase complex subunit 8 (ubiquinone-binding protein QP-C) # mitointer
+OG0007176	Athaliana_TAIR10||AT2G02500.1	2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase (EC 2.7.7.60) # plastid
+OG0002265	Athaliana_TAIR10||AT1G09430.1	ATP-citrate (pro-S-)-lyase, subunit 1 (EC 2.3.3.8) # cytosol
+OG0002265	Athaliana_TAIR10||AT1G10670.3	ATP-citrate (pro-S-)-lyase, subunit 1 (EC 2.3.3.8) # cytosol
+OG0002265	Athaliana_TAIR10||AT1G60810.1	ATP-citrate (pro-S-)-lyase, subunit 1 (EC 2.3.3.8) # cytosol
+OG0002380	Athaliana_TAIR10||AT2G44530.1	Uncurated
+OG0002380	Athaliana_TAIR10||AT1G32380.1	Ribose-phosphate pyrophosphokinase (EC 2.7.6.1) # plastid
+OG0002380	Athaliana_TAIR10||AT2G35390.2	Ribose-phosphate pyrophosphokinase (EC 2.7.6.1) # plastid
+OG0001968	Athaliana_TAIR10||AT4G11150.1	V-type ATP synthase subunit E (EC 3.6.3.14) # vacuole
+OG0001968	Athaliana_TAIR10||AT3G08560.1	V-type ATP synthase subunit E (EC 3.6.3.14) # vacuole
+OG0001968	Athaliana_TAIR10||AT1G64200.1	V-type ATP synthase subunit E (EC 3.6.3.14) # vacuole
+OG0002539	Athaliana_TAIR10||AT5G50370.1	Adenylate kinase (EC 2.7.4.3) # mitochondria
+OG0002539	Athaliana_TAIR10||AT5G63400.1	Adenylate kinase (EC 2.7.4.3) # mitochondria
+OG0003136	Athaliana_TAIR10||AT5G16390.1	Biotin carboxyl carrier protein of acetyl-CoA carboxylase # plastid
+OG0003136	Athaliana_TAIR10||AT5G15530.1	Biotin carboxyl carrier protein of acetyl-CoA carboxylase # plastid
+OG0006536	Athaliana_TAIR10||AT4G22930.1	Dihydroorotase (EC 3.5.2.3) # cytosol # plastid
+OG0002939	Athaliana_TAIR10||AT1G58290.1	Glutamyl-tRNA reductase (EC 1.2.1.70) # plastid
+OG0002939	Athaliana_TAIR10||AT2G31250.1	Glutamyl-tRNA reductase (EC 1.2.1.70)
+OG0002939	Athaliana_TAIR10||AT1G09940.1	Glutamyl-tRNA reductase (EC 1.2.1.70) # plastid
+OG0004839	Athaliana_TAIR10||AT1G32200.1	Glycerol-3-phosphate acyltransferase (EC 2.3.1.15) # plastid
+OG0007797	Athaliana_TAIR10||AT3G24030.1	Hydroxyethylthiazole kinase (EC 2.7.1.50)
+OG0005639	Athaliana_TAIR10||AT1G63290.1	Ribulose-phosphate 3-epimerase (EC 5.1.3.1) # plastid
+OG0005639	Athaliana_TAIR10||AT3G01850.1	Ribulose-phosphate 3-epimerase (EC 5.1.3.1) # plastid
+OG0005237	Athaliana_TAIR10||AT1G80560.1	3-isopropylmalate dehydrogenase (EC 1.1.1.85) # plastid
+OG0005237	Athaliana_TAIR10||AT5G14200.1	3-isopropylmalate dehydrogenase (EC 1.1.1.85) / Methylthioalkylmalate dehydrogenase (EC 1.1.1.-) # plastid
+OG0005237	Athaliana_TAIR10||AT1G31180.1	3-isopropylmalate dehydrogenase (EC 1.1.1.85) / Methylthioalkylmalate dehydrogenase (EC 1.1.1.-) # plastid
+OG0005484	Athaliana_TAIR10||ATCG01060.1	photosystem I iron-sulfur center subunit VII (PsaC) # plastid
+OG0001297	Athaliana_TAIR10||AT5G17920.1	5-methyltetrahydropteroyltriglutamate--homocysteine methyltransferase (EC 2.1.1.14) # cytosol # peroxisome
+OG0001297	Athaliana_TAIR10||AT5G20980.1	5-methyltetrahydropteroyltriglutamate--homocysteine methyltransferase (EC 2.1.1.14) # plastid
+OG0001297	Athaliana_TAIR10||AT3G03780.1	5-methyltetrahydropteroyltriglutamate--homocysteine methyltransferase (EC 2.1.1.14) # cytosol
+OG0001699	Athaliana_TAIR10||AT1G72880.1	5'-nucleotidase (EC 3.1.3.5) # cytosol
+OG0001699	Athaliana_TAIR10||AT4G14930.1	5'-nucleotidase (EC 3.1.3.5) # cytosol
+OG0001388	Athaliana_TAIR10||AT1G34510.1	Uncurated
+OG0001388	Athaliana_TAIR10||AT5G22410.1	Uncurated
+OG0001388	Athaliana_TAIR10||AT5G17820.1	Peroxidase (EC 1.11.1.7)
+OG0001388	Athaliana_TAIR10||AT3G03670.1	Peroxidase (EC 1.11.1.7)
+OG0001388	Athaliana_TAIR10||AT4G26010.1	Peroxidase (EC 1.11.1.7)
+OG0004956	Athaliana_TAIR10||AT4G15530.5	Pyruvate,phosphate dikinase (EC 2.7.9.1) # plastid
+OG0004162	Athaliana_TAIR10||AT4G23660.3	4-hydroxybenzoate polyprenyltransferase (EC 2.5.1.39) # mitochondria
+OG0004443	Athaliana_TAIR10||AT1G51650.1	ATP synthase epsilon chain (EC 3.6.3.14) # mitointer
+OG0004206	Athaliana_TAIR10||AT3G14390.1	Diaminopimelate decarboxylase (EC 4.1.1.20) # plastid
+OG0004206	Athaliana_TAIR10||AT5G11880.1	Diaminopimelate decarboxylase (EC 4.1.1.20) # plastid
+OG0003286	Athaliana_TAIR10||AT1G24180.1	Pyruvate dehydrogenase E1 component alpha subunit (EC 1.2.4.1) # mitochondria
+OG0003286	Athaliana_TAIR10||AT1G59900.1	Pyruvate dehydrogenase E1 component alpha subunit (EC 1.2.4.1) # mitochondria
+OG0005578	Athaliana_TAIR10||AT5G61410.1	Ribulose-phosphate 3-epimerase (EC 5.1.3.1) # plastid
+OG0003147	Athaliana_TAIR10||AT2G05990.1	Enoyl-[acyl-carrier-protein] reductase [NADH] (EC 1.3.1.9) # plastid
+OG0000689	Athaliana_TAIR10||AT4G25000.1	Alpha-amylase (EC 3.2.1.1)
+OG0000689	Athaliana_TAIR10||AT1G69830.1	Alpha-amylase (EC 3.2.1.1) # plastid
+OG0000689	Athaliana_TAIR10||AT1G76130.1	Uncurated
+OG0004556	Athaliana_TAIR10||AT5G49650.1	Xylulose kinase (EC 2.7.1.17) # cytosol
+OG0005964	Athaliana_TAIR10||AT5G17990.1	Anthranilate phosphoribosyltransferase (EC 2.4.2.18) # plastid
+OG0000252	Athaliana_TAIR10||AT4G00240.1	Phospholipase D (EC 3.1.4.4)
+OG0000252	Athaliana_TAIR10||AT1G52570.1	Phospholipase D (EC 3.1.4.4)
+OG0000252	Athaliana_TAIR10||AT4G35790.1	Phospholipase D (EC 3.1.4.4) # cytosol
+OG0000252	Athaliana_TAIR10||AT4G11830.2	Phospholipase D (EC 3.1.4.4)
+OG0000252	Athaliana_TAIR10||AT2G42010.1	Phospholipase D (EC 3.1.4.4)
+OG0000252	Athaliana_TAIR10||AT4G11850.1	Phospholipase D (EC 3.1.4.4)
+OG0000252	Athaliana_TAIR10||AT4G11840.1	Phospholipase D (EC 3.1.4.4)
+OG0000252	Athaliana_TAIR10||AT5G25370.1	Phospholipase D (EC 3.1.4.4)
+OG0000252	Athaliana_TAIR10||AT3G15730.1	Phospholipase D (EC 3.1.4.4) # mitochondria
+OG0004283	Athaliana_TAIR10||AT5G62790.2	1-deoxy-D-xylulose 5-phosphate reductoisomerase (EC 1.1.1.267) # plastid
+OG0006535	Athaliana_TAIR10||AT5G57300.1	Ubiquinone/menaquinone biosynthesis methyltransferase UbiE (EC 2.1.1.-)
+OG0002028	Athaliana_TAIR10||AT1G12900.1	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.12) / NADPH-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.13) # plastid
+OG0002028	Athaliana_TAIR10||AT1G42970.1	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.12) / NADPH-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.13) # plastid
+OG0002028	Athaliana_TAIR10||AT3G26650.1	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.12) / NADPH-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.13) # plastid
+OG0002126	Athaliana_TAIR10||AT1G77590.1	Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3) # plastid # endoplasm
+OG0002126	Athaliana_TAIR10||AT2G04350.1	Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3) # endoplasm
+OG0000144	Athaliana_TAIR10||AT3G07850.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT3G14040.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT2G15450.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT4G13760.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT5G48140.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT3G07830.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT2G33160.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT1G17150.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT1G78400.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT2G15460.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT4G18180.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT3G07820.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT1G02790.1	Polygalacturonase (EC 3.2.1.15)
+OG0000144	Athaliana_TAIR10||AT2G40310.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT1G43100.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT2G26620.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT1G43080.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT1G43090.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT2G15470.1	Uncurated
+OG0000144	Athaliana_TAIR10||AT3G07840.1	Uncurated
+OG0004300	Athaliana_TAIR10||AT2G38040.1	Acetyl-coenzyme A carboxyl transferase alpha chain (EC 6.4.1.2) # plastid
+OG0003380	Athaliana_TAIR10||AT3G06060.1	3-dehydrosphinganine reductase (EC 1.1.1.102) # endoplasm
+OG0003380	Athaliana_TAIR10||AT5G19200.1	3-dehydrosphinganine reductase (EC 1.1.1.102) # endoplasm
+OG0005850	Athaliana_TAIR10||AT2G30200.1	Malonyl CoA-acyl carrier protein transacylase (EC 2.3.1.39) # plastid
+OG0007086	Athaliana_TAIR10||AT1G08520.1	Protoporphyrin IX Mg-chelatase subunit D (EC 6.6.1.1) # plastid
+OG0000145	Athaliana_TAIR10||AT4G37400.1	Monooxygenase, catalyses 4-hydroxylation of indolyl-3-methyl glucosinolate (I3M) to 4OH-I3M
+OG0000145	Athaliana_TAIR10||AT5G10610.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT2G23190.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT4G37360.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT3G28740.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT5G67310.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT1G66540.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT4G37320.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT4G37340.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT4G37410.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT4G37330.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT5G57220.1	Monooxygenase, catalyses 4-hydroxylation of indolyl-3-methyl glucosinolate (I3M) to 4OH-I3M
+OG0000145	Athaliana_TAIR10||AT2G23220.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT4G37430.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT4G37310.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT4G37370.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT5G10600.1	Uncurated
+OG0000145	Athaliana_TAIR10||AT5G36220.1	Uncurated
+OG0001783	Athaliana_TAIR10||ATCG00720.1	Cytochrome b6-f complex subunit, cytochrome b6 # plastid
+OG0001783	Athaliana_TAIR10||AT2G07727.1	Ubiquinol--cytochrome c reductase, cytochrome B subunit (EC 1.10.2.2) # mitointer
+OG0001783	Athaliana_TAIR10||ATMG00220.1	Ubiquinol--cytochrome c reductase, cytochrome B subunit (EC 1.10.2.2) # mitointer
+OG0004831	Athaliana_TAIR10||AT5G02080.1	Phosphopantothenoylcysteine synthetase (EC 6.3.2.5)
+OG0004831	Athaliana_TAIR10||AT1G12350.1	Phosphopantothenoylcysteine synthetase (EC 6.3.2.5)
+OG0002272	Athaliana_TAIR10||AT1G18580.1	Uncurated
+OG0002272	Athaliana_TAIR10||AT2G20810.1	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43)
+OG0002083	Athaliana_TAIR10||AT2G45290.1	Transketolase (EC 2.2.1.1) # plastid
+OG0002083	Athaliana_TAIR10||AT3G60750.1	Transketolase (EC 2.2.1.1) # plastid
+OG0001143	Athaliana_TAIR10||AT5G18280.2	Apyrase, ATP-diphosphatase (EC 3.6.1.5) # cytosol # golgi
+OG0001143	Athaliana_TAIR10||AT3G04080.1	Apyrase, ATP-diphosphatase (EC 3.6.1.5) # cytosol # golgi
+OG0003918	Athaliana_TAIR10||AT3G16950.2	Dihydrolipoamide dehydrogenase of pyruvate dehydrogenase complex (EC 1.8.1.4) # plastid # nucleus
+OG0003918	Athaliana_TAIR10||AT4G16155.1	Dihydrolipoamide dehydrogenase of pyruvate dehydrogenase complex (EC 1.8.1.4) # plastid
+OG0001601	Athaliana_TAIR10||AT2G36310.1	Adenosine nucleosidase (EC 3.2.2.7) / Uridine nucleosidase (EC 3.2.2.3) # cytosol
+OG0001601	Athaliana_TAIR10||AT1G05620.1	Uncurated
+OG0002147	Athaliana_TAIR10||AT2G37940.1	Inositol-phosphorylceramide synthase (EC 2.7.8.-)
+OG0002147	Athaliana_TAIR10||AT2G29525.1	Inositol-phosphorylceramide synthase (EC 2.7.8.-)
+OG0002147	Athaliana_TAIR10||AT3G54020.1	Inositol-phosphorylceramide synthase (EC 2.7.8.-)
+OG0006289	Athaliana_TAIR10||AT5G64040.2	photosystem I subunit PsaN # plastid
+OG0006620	Athaliana_TAIR10||AT3G24200.2	Ubiquinone biosynthesis monooxygenase COQ6 (EC 1.14.13.-), required for C5-hydroxylation step
+OG0007238	Athaliana_TAIR10||AT2G28880.1	Para-aminobenzoate synthase, amidotransferase component (EC 2.6.1.85) / Para-aminobenzoate synthase, aminase component (EC 2.6.1.85) # plastid
+OG0007400	Athaliana_TAIR10||AT3G48540.1	Deoxycytidine monophosphate deaminase (EC 3.5.4.12) # cytosol
+OG0000793	Athaliana_TAIR10||AT5G08680.1	ATP synthase beta chain (EC 3.6.3.14) # mitointer
+OG0000793	Athaliana_TAIR10||AT5G08690.1	ATP synthase beta chain (EC 3.6.3.14) # mitointer
+OG0000793	Athaliana_TAIR10||AT5G08670.1	ATP synthase beta chain (EC 3.6.3.14) # mitointer
+OG0000793	Athaliana_TAIR10||ATCG00480.1	Plastidial ATP synthase beta chain (EC 3.6.3.14) # plastid
+OG0006862	Athaliana_TAIR10||AT4G30580.1	1-acyl-sn-glycerol-3-phosphate acyltransferase (EC 2.3.1.51) # plastid
+OG0006689	Athaliana_TAIR10||AT4G32210.1	Succinate dehydrogenase (ubiquinone) cytochrome b560 subunit SDH3/SDHC # mitochondria
+OG0006689	Athaliana_TAIR10||AT5G09600.1	Succinate dehydrogenase (ubiquinone) cytochrome b560 subunit SDH3/SDHC # mitochondria
+OG0005572	Athaliana_TAIR10||AT5G13050.1	5-formyltetrahydrofolate cyclo-ligase (EC 6.3.3.2) # mitochondria
+OG0002890	Athaliana_TAIR10||AT2G39930.1	Starch debranching enzyme, isoamylase (EC 3.2.1.68) # plastid
+OG0002890	Athaliana_TAIR10||AT4G09020.1	Starch debranching enzyme, isoamylase (EC 3.2.1.68) # plastid
+OG0003278	Athaliana_TAIR10||AT5G23670.1	Serine palmitoyltransferase (EC 2.3.1.50) # endoplasm
+OG0003278	Athaliana_TAIR10||AT3G48780.1	Serine palmitoyltransferase (EC 2.3.1.50)
+OG0003278	Athaliana_TAIR10||AT3G48790.1	Uncurated
+OG0006146	Athaliana_TAIR10||AT5G10920.1	Argininosuccinate lyase (EC 4.3.2.1) # plastid
+OG0000402	Athaliana_TAIR10||AT2G29040.1	Uncurated
+OG0000402	Athaliana_TAIR10||AT4G22580.1	Uncurated
+OG0000402	Athaliana_TAIR10||AT1G68470.1	Uncurated
+OG0000402	Athaliana_TAIR10||AT2G31990.1	Uncurated
+OG0000402	Athaliana_TAIR10||AT2G20370.1	Xyloglucan galactosyltransferase (no EC) # golgi
+OG0000402	Athaliana_TAIR10||AT4G13990.1	Uncurated
+OG0000402	Athaliana_TAIR10||AT2G32750.1	Uncurated
+OG0000402	Athaliana_TAIR10||AT2G32740.1	Uncurated
+OG0003429	Athaliana_TAIR10||AT1G08630.1	Low-specificity L-threonine aldolase (EC 4.1.2.48) # cytosol
+OG0003429	Athaliana_TAIR10||AT3G04520.1	Low-specificity L-threonine aldolase (EC 4.1.2.48) # cytosol
+OG0005838	Athaliana_TAIR10||AT5G55590.1	Pectinesterase (EC 3.1.1.11)
+OG0004590	Athaliana_TAIR10||AT4G02770.1	photosystem I subunit II (PsaD) # plastid
+OG0004590	Athaliana_TAIR10||AT1G03130.1	photosystem I subunit II (PsaD) # plastid
+OG0001551	Athaliana_TAIR10||AT4G00550.1	Digalactosyldiacylglycerol synthase (EC 2.4.1.241) # plastid
+OG0001551	Athaliana_TAIR10||AT3G11670.1	Digalactosyldiacylglycerol synthase (EC 2.4.1.241) # plastid
+OG0007845	Athaliana_TAIR10||AT5G14760.1	L-aspartate oxidase (EC 1.4.3.16) # plastid
+OG0001825	Athaliana_TAIR10||ATCG00680.1	Photosystem II CP47 protein (PsbB) # plastid
+OG0005828	Athaliana_TAIR10||AT1G17890.1	GDP-L-fucose synthetase (EC 1.1.1.271)
+OG0005828	Athaliana_TAIR10||AT1G73250.1	GDP-L-fucose synthetase (EC 1.1.1.271)
+OG0007110	Athaliana_TAIR10||AT1G50170.1	Sirohydrochlorin ferrochelatase (EC 4.99.1.4) # plastid
+OG0000823	Athaliana_TAIR10||AT5G39580.1	Peroxidase (EC 1.11.1.7)
+OG0000823	Athaliana_TAIR10||AT5G64110.1	Peroxidase (EC 1.11.1.7)
+OG0000823	Athaliana_TAIR10||AT2G41480.1	Peroxidase (EC 1.11.1.7)
+OG0000823	Athaliana_TAIR10||AT4G25980.1	Peroxidase (EC 1.11.1.7)
+OG0000823	Athaliana_TAIR10||AT5G64100.1	Peroxidase (EC 1.11.1.7)
+OG0000823	Athaliana_TAIR10||AT1G77100.1	Peroxidase (EC 1.11.1.7)
+OG0000823	Athaliana_TAIR10||AT5G64120.1	Peroxidase (EC 1.11.1.7)
+OG0003022	Athaliana_TAIR10||AT2G39270.1	Uncurated
+OG0003022	Athaliana_TAIR10||AT2G37250.1	Adenylate kinase (EC 2.7.4.3) # cytosol # plastid # nucleus
+OG0006541	Athaliana_TAIR10||AT3G56940.1	Mg protoporphyrin IX monomethyl ester oxidative cyclase (aerobic) (EC 1.14.13.81) # plastid
+OG0002758	Athaliana_TAIR10||AT4G02610.1	Uncurated
+OG0002758	Athaliana_TAIR10||AT3G54640.1	Tryptophan synthase alpha chain (EC 4.2.1.20) # plastid
+OG0001058	Athaliana_TAIR10||AT5G54960.1	Pyruvate decarboxylase (EC 4.1.1.1) # cytosol
+OG0001058	Athaliana_TAIR10||AT4G33070.1	Pyruvate decarboxylase (EC 4.1.1.1) # cytosol
+OG0001058	Athaliana_TAIR10||AT5G01330.1	Pyruvate decarboxylase (EC 4.1.1.1) # cytosol
+OG0001058	Athaliana_TAIR10||AT5G01320.1	Pyruvate decarboxylase (EC 4.1.1.1) # cytosol
+OG0003339	Athaliana_TAIR10||AT5G61310.1	Probable cytochrome c oxidase subunit 5c # mitointer
+OG0003339	Athaliana_TAIR10||AT2G47380.1	Probable cytochrome c oxidase subunit 5c # mitointer
+OG0003339	Athaliana_TAIR10||AT5G40382.1	Probable cytochrome c oxidase subunit 5c # mitointer
+OG0005055	Athaliana_TAIR10||AT2G02050.1	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 7 # mitointer
+OG0000014	Athaliana_TAIR10||AT3G53140.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT5G37170.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT1G21110.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT1G63140.2	Uncurated
+OG0000014	Athaliana_TAIR10||AT1G21100.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT1G21130.1	Indole glucosinolate methyltransferase
+OG0000014	Athaliana_TAIR10||AT1G77530.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT1G77520.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT1G62900.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT5G53810.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT5G54160.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT1G33030.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT1G76790.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT1G51990.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT4G35150.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT4G35160.1	Uncurated
+OG0000014	Athaliana_TAIR10||AT1G21120.1	Indole glucosinolate methyltransferase
+OG0002431	Athaliana_TAIR10||AT3G22960.1	Pyruvate kinase (EC 2.7.1.40) # plastid
+OG0000888	Athaliana_TAIR10||AT5G22630.1	Arogenate dehydratase (EC 4.2.1.91) # plastid
+OG0000888	Athaliana_TAIR10||AT2G27820.1	Arogenate dehydratase (EC 4.2.1.91) # plastid
+OG0000888	Athaliana_TAIR10||AT3G44720.1	Arogenate dehydratase (EC 4.2.1.91) # plastid
+OG0000888	Athaliana_TAIR10||AT3G07630.1	Arogenate dehydratase (EC 4.2.1.91) / Prephenate dehydratase (EC 4.2.1.51) # plastid
+OG0000888	Athaliana_TAIR10||AT1G08250.1	Arogenate dehydratase (EC 4.2.1.91) / Prephenate dehydratase (EC 4.2.1.51) # plastid
+OG0000888	Athaliana_TAIR10||AT1G11790.1	Arogenate dehydratase (EC 4.2.1.91) / Prephenate dehydratase (EC 4.2.1.51) # plastid
+OG0005819	Athaliana_TAIR10||AT4G30000.2	2-amino-4-hydroxy-6-hydroxymethyldihydropteridine pyrophosphokinase (EC 2.7.6.3) / Dihydropteroate synthase (EC 2.5.1.15) # mitochondria
+OG0005819	Athaliana_TAIR10||AT1G69190.1	2-amino-4-hydroxy-6-hydroxymethyldihydropteridine pyrophosphokinase (EC 2.7.6.3) / Dihydropteroate synthase (EC 2.5.1.15) # cytosol
+OG0000652	Athaliana_TAIR10||AT2G22780.1	Malate dehydrogenase (EC 1.1.1.37) # peroxisome
+OG0000652	Athaliana_TAIR10||AT3G47520.1	Malate dehydrogenase (EC 1.1.1.37) # plastid # mitochondria
+OG0000652	Athaliana_TAIR10||AT5G09660.4	Malate dehydrogenase (EC 1.1.1.37) # peroxisome
+OG0000652	Athaliana_TAIR10||AT3G15020.1	Malate dehydrogenase (EC 1.1.1.37) # mitochondria
+OG0000652	Athaliana_TAIR10||AT1G53240.1	Malate dehydrogenase (EC 1.1.1.37) # mitochondria
+OG0002421	Athaliana_TAIR10||AT1G80230.1	Cytochrome c oxidase subunit 5b # mitointer
+OG0002421	Athaliana_TAIR10||AT3G15640.1	Cytochrome c oxidase subunit 5b # mitointer
+OG0002421	Athaliana_TAIR10||AT1G52710.1	Uncurated
+OG0001815	Athaliana_TAIR10||AT2G11810.1	Monogalactosyldiacylglycerol synthase (EC 2.4.1.46) # plastid
+OG0001815	Athaliana_TAIR10||AT4G31780.2	Monogalactosyldiacylglycerol synthase (EC 2.4.1.46) # plastid
+OG0001815	Athaliana_TAIR10||AT5G20410.1	Monogalactosyldiacylglycerol synthase (EC 2.4.1.46) # plastid
+OG0005003	Athaliana_TAIR10||AT1G62190.1	FAD4-type (trans) fatty acid desaturase (EC 1.14.19.-)
+OG0005003	Athaliana_TAIR10||AT4G27030.1	FAD4-type (trans) fatty acid desaturase (EC 1.14.19.-) # plastid
+OG0005003	Athaliana_TAIR10||AT2G22890.1	FAD4-type (trans) fatty acid desaturase (EC 1.14.19.-)
+OG0004578	Athaliana_TAIR10||AT3G57610.1	Adenylosuccinate synthetase (EC 6.3.4.4) # plastid
+OG0000889	Athaliana_TAIR10||AT1G15080.1	Phosphatidate phosphatase (EC 3.1.3.4)
+OG0000889	Athaliana_TAIR10||AT2G01180.1	Phosphatidate phosphatase (EC 3.1.3.4)
+OG0000889	Athaliana_TAIR10||AT3G18220.1	Phosphatidate phosphatase (EC 3.1.3.4)
+OG0000889	Athaliana_TAIR10||AT3G02600.1	Phosphatidate phosphatase (EC 3.1.3.4)
+OG0001842	Athaliana_TAIR10||AT2G01290.1	Ribose 5-phosphate isomerase A (EC 5.3.1.6) # cytosol # nucleus
+OG0001842	Athaliana_TAIR10||AT1G71100.1	Ribose 5-phosphate isomerase A (EC 5.3.1.6) # cytosol # nucleus
+OG0001842	Athaliana_TAIR10||AT3G04790.1	Ribose 5-phosphate isomerase A (EC 5.3.1.6) # plastid
+OG0007484	Athaliana_TAIR10||AT4G33420.1	Peroxidase (EC 1.11.1.7)
+OG0003394	Athaliana_TAIR10||AT3G09820.1	Adenosine kinase (EC 2.7.1.20)
+OG0003394	Athaliana_TAIR10||AT5G03300.1	Adenosine kinase (EC 2.7.1.20)
+OG0005956	Athaliana_TAIR10||AT2G42070.1	FAD pyrophosphatase (EC 3.6.1.18) # plastid
+OG0004130	Athaliana_TAIR10||AT1G78900.1	V-type ATP synthase subunit A (EC 3.6.3.14) # vacuole
+OG0005632	Athaliana_TAIR10||AT2G43360.1	Biotin synthase (EC 2.8.1.6) # mitochondria
+OG0007403	Athaliana_TAIR10||AT5G64370.1	Beta-ureidopropionase (EC 3.5.1.6) # cytosol
+OG0006414	Athaliana_TAIR10||AT1G31910.1	Phosphomevalonate kinase (EC 2.7.4.2) # cytosol # peroxisome
+OG0004280	Athaliana_TAIR10||AT1G12840.1	V-type ATP synthase subunit C (EC 3.6.3.14) # vacuole
+OG0000348	Athaliana_TAIR10||AT3G48170.1	Uncurated
+OG0000348	Athaliana_TAIR10||AT1G74920.1	Uncurated
+OG0000348	Athaliana_TAIR10||AT3G24503.1	Coniferyl-aldehyde dehydrogenase (EC 1.2.1.68)
+OG0000348	Athaliana_TAIR10||AT3G48000.1	Aldehyde dehydrogenase (EC 1.2.1.3) # mitochondria
+OG0000348	Athaliana_TAIR10||AT1G23800.1	Aldehyde dehydrogenase (EC 1.2.1.3) # cytosol
+OG0000348	Athaliana_TAIR10||AT1G79440.1	Uncurated
+OG0004736	Athaliana_TAIR10||AT3G27740.1	Carbamoyl-phosphate synthase small chain (EC 6.3.5.5) # plastid
+OG0000196	Athaliana_TAIR10||AT2G02930.1	Uncurated
+OG0000196	Athaliana_TAIR10||AT4G02520.1	Uncurated
+OG0000196	Athaliana_TAIR10||AT1G02920.1	Uncurated
+OG0000196	Athaliana_TAIR10||AT5G17220.1	Uncurated
+OG0000196	Athaliana_TAIR10||AT1G02940.1	Uncurated
+OG0000196	Athaliana_TAIR10||AT3G03190.1	Uncurated
+OG0000196	Athaliana_TAIR10||AT1G49860.1	Uncurated
+OG0000196	Athaliana_TAIR10||AT2G30870.1	Glutathione S-transferase in Trp, Phe, Tyr-derived glucosinolates biosynthesis, predicted # cytosol
+OG0000196	Athaliana_TAIR10||AT1G02930.1	Uncurated
+OG0000196	Athaliana_TAIR10||AT2G47730.1	Uncurated
+OG0000196	Athaliana_TAIR10||AT1G02950.2	Uncurated
+OG0000196	Athaliana_TAIR10||AT2G30860.1	Uncurated
+OG0000196	Athaliana_TAIR10||AT3G62760.1	Uncurated
+OG0004169	Athaliana_TAIR10||AT3G09810.1	Isocitrate dehydrogenase [NAD] catalytic subunit (EC 1.1.1.41) # mitochondria
+OG0004169	Athaliana_TAIR10||AT5G03290.1	Isocitrate dehydrogenase [NAD] catalytic subunit (EC 1.1.1.41) # mitochondria
+OG0003751	Athaliana_TAIR10||ATMG00580.1	NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 4, ND4 # mitointer
+OG0005797	Athaliana_TAIR10||AT1G18870.1	Isochorismate synthase (EC 5.4.4.2) # plastid
+OG0005797	Athaliana_TAIR10||AT1G74710.2	Isochorismate synthase (EC 5.4.4.2) # plastid
+OG0004303	Athaliana_TAIR10||AT5G60620.1	Glycerol-3-phosphate acyltransferase (EC 2.3.1.15)
+OG0003012	Athaliana_TAIR10||AT4G00895.1	Uncurated
+OG0003012	Athaliana_TAIR10||AT4G09650.1	Plastidial ATP synthase delta chain # plastid
+OG0000501	Athaliana_TAIR10||AT1G14100.1	Uncurated
+OG0000501	Athaliana_TAIR10||AT2G03210.1	Uncurated
+OG0000501	Athaliana_TAIR10||AT1G14080.1	Uncurated
+OG0000501	Athaliana_TAIR10||AT2G15390.2	Uncurated
+OG0000501	Athaliana_TAIR10||AT2G15370.1	Uncurated
+OG0000501	Athaliana_TAIR10||AT2G15350.1	Uncurated
+OG0000501	Athaliana_TAIR10||AT1G74420.2	Uncurated
+OG0000501	Athaliana_TAIR10||AT2G03220.1	Galactoside 2-alpha-L-fucosyltransferase (EC 2.4.1.69) # golgi
+OG0000501	Athaliana_TAIR10||AT1G14070.1	Uncurated
+OG0000501	Athaliana_TAIR10||AT1G14110.1	Uncurated
+OG0007280	Athaliana_TAIR10||AT3G17810.1	Dihydropyrimidine dehydrogenase (EC 1.3.1.2) # plastid
+OG0006104	Athaliana_TAIR10||AT5G40850.1	Uroporphyrinogen-III methyltransferase (EC 2.1.1.107)
+OG0004984	Athaliana_TAIR10||AT4G28005.1	Uncurated
+OG0004984	Athaliana_TAIR10||AT5G52840.1	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 5 # mitointer
+OG0001249	Athaliana_TAIR10||AT2G38660.1	Methenyltetrahydrofolate cyclohydrolase (EC 3.5.4.9) / Methylenetetrahydrofolate dehydrogenase (NADP+) (EC 1.5.1.5) # mitochondria
+OG0001249	Athaliana_TAIR10||AT4G00600.1	Methenyltetrahydrofolate cyclohydrolase (EC 3.5.4.9) / Methylenetetrahydrofolate dehydrogenase (NADP+) (EC 1.5.1.5) # plastid
+OG0001249	Athaliana_TAIR10||AT3G12290.1	Methenyltetrahydrofolate cyclohydrolase (EC 3.5.4.9) / Methylenetetrahydrofolate dehydrogenase (NADP+) (EC 1.5.1.5) # cytosol
+OG0001249	Athaliana_TAIR10||AT4G00620.1	Methenyltetrahydrofolate cyclohydrolase (EC 3.5.4.9) / Methylenetetrahydrofolate dehydrogenase (NADP+) (EC 1.5.1.5) # plastid
+OG0000073	Athaliana_TAIR10||AT2G43840.1	UDP-glucose:p-aminobenzoate glucosyltransferase
+OG0000073	Athaliana_TAIR10||AT1G05530.1	Uncurated
+OG0000073	Athaliana_TAIR10||AT4G15500.1	Uncurated
+OG0000073	Athaliana_TAIR10||AT2G23250.1	Uncurated
+OG0000073	Athaliana_TAIR10||AT2G31750.1	Uncurated
+OG0000073	Athaliana_TAIR10||AT3G21560.1	UDP-glucose:sinapate glucosyltransferase (EC 2.4.1.120)
+OG0000073	Athaliana_TAIR10||AT1G05680.1	Uncurated
+OG0000073	Athaliana_TAIR10||AT1G05675.1	Uncurated
+OG0000073	Athaliana_TAIR10||AT4G15490.1	Uncurated
+OG0000073	Athaliana_TAIR10||AT1G24100.1	N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in Trp, Phe, Tyr-derived glucosinolates biosynthesis
+OG0000073	Athaliana_TAIR10||AT2G23210.1	Uncurated
+OG0000073	Athaliana_TAIR10||AT2G31790.1	N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in aliphatic glucosinolates biosynthesis
+OG0000073	Athaliana_TAIR10||AT2G43820.1	UDP-glucose:p-aminobenzoate glucosyltransferase
+OG0000073	Athaliana_TAIR10||AT4G14090.1	Uncurated
+OG0000073	Athaliana_TAIR10||AT4G15480.1	Uncurated
+OG0000073	Athaliana_TAIR10||AT1G05560.1	UDP-glucose:p-aminobenzoate glucosyltransferase # cytosol
+OG0000073	Athaliana_TAIR10||AT2G23260.1	Uncurated
+OG0000073	Athaliana_TAIR10||AT4G15550.1	Uncurated
+OG0000948	Athaliana_TAIR10||AT3G19710.1	Methionine--oxo-acid aminotransferase (EC 2.6.1.88) # cytosol
+OG0000948	Athaliana_TAIR10||AT1G10070.1	Branched-chain amino acid aminotransferase (EC 2.6.1.42) # plastid # mitochondria
+OG0000948	Athaliana_TAIR10||AT3G49680.1	2-oxo-5-methylthiopentanoate transaminase (EC 2.6.1.-) / Branched-chain amino acid aminotransferase (EC 2.6.1.42) # plastid
+OG0000948	Athaliana_TAIR10||AT1G10060.2	Branched-chain amino acid aminotransferase (EC 2.6.1.42) # mitochondria
+OG0000948	Athaliana_TAIR10||AT1G50090.1	Branched-chain amino acid aminotransferase (EC 2.6.1.42) # cytosol
+OG0000948	Athaliana_TAIR10||AT1G50110.1	Branched-chain amino acid aminotransferase (EC 2.6.1.42) # cytosol
+OG0004478	Athaliana_TAIR10||AT3G54050.1	Fructose-1,6-bisphosphatase, type I (EC 3.1.3.11) # plastid
+OG0001760	Athaliana_TAIR10||AT3G02360.1	6-phosphogluconate dehydrogenase, decarboxylating (EC 1.1.1.44) # cytosol
+OG0001760	Athaliana_TAIR10||AT1G64190.1	6-phosphogluconate dehydrogenase, decarboxylating (EC 1.1.1.44) # plastid
+OG0001760	Athaliana_TAIR10||AT5G41670.1	6-phosphogluconate dehydrogenase, decarboxylating (EC 1.1.1.44) # mitochondria
+OG0003031	Athaliana_TAIR10||AT2G22240.1	Inositol-1-phosphate synthase (EC 5.5.1.4) # cytosol
+OG0003031	Athaliana_TAIR10||AT5G10170.1	Inositol-1-phosphate synthase (EC 5.5.1.4) # cytosol
+OG0003031	Athaliana_TAIR10||AT4G39800.1	Inositol-1-phosphate synthase (EC 5.5.1.4) # cytosol
+OG0003690	Athaliana_TAIR10||AT4G04640.1	Plastidial ATP synthase gamma chain # plastid
+OG0003690	Athaliana_TAIR10||AT1G15700.1	Plastidial ATP synthase gamma chain # plastid
+OG0003538	Athaliana_TAIR10||AT4G05450.1	Adrenodoxin, mitochondrial ferredoxin # mitochondria
+OG0003538	Athaliana_TAIR10||AT4G21090.1	Adrenodoxin, mitochondrial ferredoxin # mitochondria
+OG0005846	Athaliana_TAIR10||AT2G12280.1	Uncurated
+OG0005846	Athaliana_TAIR10||AT1G50480.1	Formate--tetrahydrofolate ligase (EC 6.3.4.3) # cytosol
+OG0003528	Athaliana_TAIR10||AT2G34590.1	Pyruvate dehydrogenase E1 component beta subunit (EC 1.2.4.1) # plastid
+OG0003528	Athaliana_TAIR10||AT1G30120.1	Pyruvate dehydrogenase E1 component beta subunit (EC 1.2.4.1) # plastid
+OG0008038	Athaliana_TAIR10||AT1G78590.1	NADH kinase (EC 2.7.1.86) # peroxisome
+OG0000132	Athaliana_TAIR10||AT3G07620.1	Uncurated
+OG0000132	Athaliana_TAIR10||AT5G25310.1	Uncurated
+OG0000132	Athaliana_TAIR10||AT4G32790.1	Uncurated
+OG0000132	Athaliana_TAIR10||AT5G20260.1	Uncurated
+OG0000132	Athaliana_TAIR10||AT3G42180.1	Uncurated
+OG0000132	Athaliana_TAIR10||AT5G03795.1	Uncurated
+OG0000132	Athaliana_TAIR10||AT5G11130.1	Uncurated
+OG0000132	Athaliana_TAIR10||AT5G25820.1	Uncurated
+OG0000132	Athaliana_TAIR10||AT5G19670.1	Uncurated
+OG0000132	Athaliana_TAIR10||AT5G33290.1	Xylogalacturonan beta-1,3-xylosyltransferase (EC 2.4.2.41) # golgi
+OG0000132	Athaliana_TAIR10||AT4G16745.2	Uncurated
+OG0000132	Athaliana_TAIR10||AT5G37000.1	Uncurated
+OG0000132	Athaliana_TAIR10||AT4G38040.1	Uncurated
+OG0000132	Athaliana_TAIR10||AT5G11610.1	Uncurated
+OG0002710	Athaliana_TAIR10||AT3G05970.1	Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3) # peroxisome
+OG0002710	Athaliana_TAIR10||AT5G27600.1	Long-chain-fatty-acid--CoA ligase (EC 6.2.1.3) # peroxisome
+OG0003872	Athaliana_TAIR10||AT3G21730.1	Dihydroneopterin aldolase (EC 4.1.2.25) # cytosol
+OG0003872	Athaliana_TAIR10||AT5G62980.1	Dihydroneopterin aldolase (EC 4.1.2.25) # cytosol
+OG0003872	Athaliana_TAIR10||AT3G11750.1	Dihydroneopterin aldolase (EC 4.1.2.25) # cytosol
+OG0007113	Athaliana_TAIR10||AT5G23120.1	Photosystem II stability/assembly factor HCF136/Ycf48 # plastid
+OG0003928	Athaliana_TAIR10||AT1G06680.1	Photosystem II oxygen evolving complex protein PsbP # plastid
+OG0003928	Athaliana_TAIR10||AT2G30790.1	Photosystem II oxygen evolving complex protein PsbP # plastid
+OG0000246	Athaliana_TAIR10||AT5G61320.1	Uncurated
+OG0000246	Athaliana_TAIR10||AT3G03470.1	Uncurated
+OG0000246	Athaliana_TAIR10||AT1G64930.1	Uncurated
+OG0000246	Athaliana_TAIR10||AT5G04660.1	Free fatty acids epoxidase [oleate, linoleate, linolenate] (no EC)
+OG0000246	Athaliana_TAIR10||AT2G12190.1	Uncurated
+OG0000246	Athaliana_TAIR10||AT1G11600.1	Uncurated
+OG0000246	Athaliana_TAIR10||AT3G10560.1	Uncurated
+OG0000246	Athaliana_TAIR10||AT3G10570.1	Fatty acid in-chain hydroxylase (no EC)
+OG0000246	Athaliana_TAIR10||AT1G64900.1	Uncurated
+OG0000246	Athaliana_TAIR10||AT1G64940.1	Uncurated
+OG0000246	Athaliana_TAIR10||AT5G04630.1	Uncurated
+OG0000246	Athaliana_TAIR10||AT1G64950.1	Uncurated
+OG0002224	Athaliana_TAIR10||AT5G56720.1	Malate dehydrogenase (EC 1.1.1.37) # cytosol
+OG0002224	Athaliana_TAIR10||AT5G43330.1	Malate dehydrogenase (EC 1.1.1.37) # cytosol
+OG0002224	Athaliana_TAIR10||AT1G04410.1	Malate dehydrogenase (EC 1.1.1.37) # cytosol
+OG0000822	Athaliana_TAIR10||AT3G47800.1	Aldose 1-epimerase (EC 5.1.3.3)
+OG0000822	Athaliana_TAIR10||AT5G15140.1	Aldose 1-epimerase (EC 5.1.3.3)
+OG0000822	Athaliana_TAIR10||AT3G17940.1	Aldose 1-epimerase (EC 5.1.3.3)
+OG0000822	Athaliana_TAIR10||AT3G01260.1	Aldose 1-epimerase (EC 5.1.3.3)
+OG0004991	Athaliana_TAIR10||AT1G80380.2	D-glycerate 3-kinase (EC 2.7.1.31), plant type # plastid
+OG0003649	Athaliana_TAIR10||AT1G80950.1	1-acyl-sn-glycerol-3-phosphate acyltransferase (EC 2.3.1.51)
+OG0002891	Athaliana_TAIR10||AT4G15093.1	Extradiol ring-cleavage dioxygenase [caffealdehyde, other] (EC 1.13.-.-)
+OG0006612	Athaliana_TAIR10||AT5G60540.1	Pyridoxine biosynthesis glutamine amidotransferase, glutaminase subunit (EC 2.4.2.-) # cytosol # nucleus
+OG0003361	Athaliana_TAIR10||AT5G53850.2	2,3-diketo-5-methylthiopentyl-1-phosphate enolase-phosphatase (EC 3.1.3.77) / Methylthioribulose-1-phosphate dehydratase (EC 4.2.1.109) # plastid
+OG0003452	Athaliana_TAIR10||AT5G57890.1	Anthranilate synthase, amidotransferase component (EC 4.1.3.27) # plastid
+OG0003452	Athaliana_TAIR10||AT1G24807.1	Anthranilate synthase, amidotransferase component (EC 4.1.3.27) # plastid
+OG0003452	Athaliana_TAIR10||AT1G25220.2	Anthranilate synthase, amidotransferase component (EC 4.1.3.27) # plastid
+OG0003452	Athaliana_TAIR10||AT1G25155.1	Anthranilate synthase, amidotransferase component (EC 4.1.3.27) # plastid
+OG0003452	Athaliana_TAIR10||AT1G24909.1	Anthranilate synthase, amidotransferase component (EC 4.1.3.27) # plastid
+OG0003452	Athaliana_TAIR10||AT1G25083.1	Anthranilate synthase, amidotransferase component (EC 4.1.3.27) # plastid
+OG0002641	Athaliana_TAIR10||AT1G13560.1	Diacylglycerol cholinephosphotransferase (EC 2.7.8.2) / Ethanolaminephosphotransferase (EC 2.7.8.1)
+OG0002641	Athaliana_TAIR10||AT3G25585.1	Diacylglycerol cholinephosphotransferase (EC 2.7.8.2) / Ethanolaminephosphotransferase (EC 2.7.8.1)
+OG0007196	Athaliana_TAIR10||AT1G48300.1	Diacylglycerol O-acyltransferase (EC 2.3.1.20) # cytosol
+OG0005308	Athaliana_TAIR10||AT1G75330.1	Ornithine carbamoyltransferase (EC 2.1.3.3) # plastid
+OG0006741	Athaliana_TAIR10||AT1G76200.1	NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 2 # mitointer
+OG0003780	Athaliana_TAIR10||AT2G22250.2	Aspartate aminotransferase (EC 2.6.1.1) / Glutamate--prephenate aminotransferase (EC 2.6.1.79) # plastid
+OG0000736	Athaliana_TAIR10||AT1G16300.1	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.12) # plastid
+OG0000736	Athaliana_TAIR10||AT1G13440.1	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.12) # cytosol # mitochondria # nucleus
+OG0000736	Athaliana_TAIR10||AT3G04120.1	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.12) # cytosol # mitochondria # nucleus
+OG0000736	Athaliana_TAIR10||AT1G79530.1	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.12) # plastid
+OG0006895	Athaliana_TAIR10||AT5G41480.1	Dihydrofolate synthase (EC 6.3.2.12) # mitochondria
+OG0000629	Athaliana_TAIR10||AT1G24540.1	Uncurated
+OG0000629	Athaliana_TAIR10||AT1G63710.1	Uncurated
+OG0000629	Athaliana_TAIR10||AT2G45970.1	Fatty acid omega-hydroxylase (EC 1.14.13.-)
+OG0000629	Athaliana_TAIR10||AT5G58860.1	Uncurated
+OG0000629	Athaliana_TAIR10||AT1G01600.1	Fatty acid omega-hydroxylase (EC 1.14.13.-)
+OG0000629	Athaliana_TAIR10||AT3G26125.1	Uncurated
+OG0000629	Athaliana_TAIR10||AT1G13140.1	Uncurated
+OG0000629	Athaliana_TAIR10||AT1G13150.1	Uncurated
+OG0000629	Athaliana_TAIR10||AT5G23190.1	Uncurated
+OG0000629	Athaliana_TAIR10||AT5G08250.1	Uncurated
+OG0000629	Athaliana_TAIR10||AT4G00360.1	Fatty acid omega-hydroxylase (EC 1.14.13.-) # endoplasm
+OG0002744	Athaliana_TAIR10||AT1G74550.1	Uncurated
+OG0002744	Athaliana_TAIR10||AT2G40890.1	5-O-(4-coumaroyl)-D-quinate/shikimate 3'-hydroxylase (EC 1.14.13.36) # endoplasm
+OG0002744	Athaliana_TAIR10||AT1G74540.1	Uncurated
+OG0005341	Athaliana_TAIR10||AT4G34840.1	5'-methylthioadenosine nucleosidase (EC 3.2.2.16) # cytosol
+OG0005341	Athaliana_TAIR10||AT4G38800.1	5'-methylthioadenosine nucleosidase (EC 3.2.2.16) # cytosol
+OG0001886	Athaliana_TAIR10||AT4G14680.1	Sulfate adenylyltransferase (EC 2.7.7.4) # plastid # nucleus
+OG0001886	Athaliana_TAIR10||AT5G43780.1	Sulfate adenylyltransferase (EC 2.7.7.4) # plastid
+OG0001886	Athaliana_TAIR10||AT1G19920.1	Sulfate adenylyltransferase (EC 2.7.7.4) # plastid
+OG0001886	Athaliana_TAIR10||AT3G22890.1	Sulfate adenylyltransferase (EC 2.7.7.4) # plastid
+OG0005908	Athaliana_TAIR10||AT3G58490.1	Phosphatidate phosphatase (EC 3.1.3.4)
+OG0000903	Athaliana_TAIR10||AT3G14510.1	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29)
+OG0000903	Athaliana_TAIR10||AT4G38460.1	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29) # plastid
+OG0000903	Athaliana_TAIR10||AT2G18640.1	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29) # endoplasm
+OG0000903	Athaliana_TAIR10||AT3G32040.1	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29)
+OG0000903	Athaliana_TAIR10||AT3G20160.1	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29)
+OG0000903	Athaliana_TAIR10||AT2G23800.1	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29) # endoplasm
+OG0000903	Athaliana_TAIR10||AT4G36810.1	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29) # plastid
+OG0000903	Athaliana_TAIR10||AT1G49530.1	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29) # mitochondria
+OG0000903	Athaliana_TAIR10||AT3G29430.1	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29)
+OG0000903	Athaliana_TAIR10||AT3G14550.1	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29) # plastid
+OG0000903	Athaliana_TAIR10||AT3G14530.1	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29)
+OG0000903	Athaliana_TAIR10||AT2G18620.1	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29)
+OG0005129	Athaliana_TAIR10||AT3G10370.1	Glycerol-3-phosphate dehydrogenase (EC 1.1.5.3) # mitochondria
+OG0003753	Athaliana_TAIR10||AT4G36940.1	Nicotinate phosphoribosyltransferase (EC 2.4.2.11)
+OG0003753	Athaliana_TAIR10||AT2G23420.1	Nicotinate phosphoribosyltransferase (EC 2.4.2.11)
+OG0006708	Athaliana_TAIR10||AT5G62530.1	Delta-1-pyrroline-5-carboxylate dehydrogenase (EC 1.5.1.12) # mitochondria
+OG0006244	Athaliana_TAIR10||AT3G20330.1	Aspartate carbamoyltransferase (EC 2.1.3.2) # plastid
+OG0003381	Athaliana_TAIR10||AT4G19710.2	Aspartokinase (EC 2.7.2.4) / Homoserine dehydrogenase (EC 1.1.1.3) # plastid
+OG0003381	Athaliana_TAIR10||AT1G31230.1	Aspartokinase (EC 2.7.2.4) / Homoserine dehydrogenase (EC 1.1.1.3) # plastid
+OG0002920	Athaliana_TAIR10||AT5G54190.1	Light-dependent protochlorophyllide reductase (EC 1.3.1.33) # plastid
+OG0002920	Athaliana_TAIR10||AT4G27440.1	Light-dependent protochlorophyllide reductase (EC 1.3.1.33) # plastid
+OG0002920	Athaliana_TAIR10||AT1G03630.1	Light-dependent protochlorophyllide reductase (EC 1.3.1.33) # plastid
+OG0006724	Athaliana_TAIR10||AT1G22940.1	Hydroxymethylpyrimidine kinase (EC 2.7.1.49) / Hydroxymethylpyrimidine phosphate kinase ThiD (EC 2.7.4.7) / Thiamin-phosphate pyrophosphorylase (EC 2.5.1.3) # plastid
+OG0004132	Athaliana_TAIR10||AT3G21070.1	NAD kinase (EC 2.7.1.23) / NADH kinase (EC 2.7.1.86) # cytosol
+OG0003481	Athaliana_TAIR10||AT2G01090.1	Ubiquinol-cytochrome c reductase complex subunit 6 (hinge protein) # mitointer
+OG0003481	Athaliana_TAIR10||AT1G15120.2	Ubiquinol-cytochrome c reductase complex subunit 6 (hinge protein) # mitointer
+OG0006798	Athaliana_TAIR10||AT4G04930.1	Dihydrosphingosine delta-4 desaturase (EC 1.14.99.-)
+OG0002721	Athaliana_TAIR10||AT4G13940.1	Adenosylhomocysteinase (EC 3.3.1.1) # cytosol
+OG0002721	Athaliana_TAIR10||AT3G23810.1	Adenosylhomocysteinase (EC 3.3.1.1) # cytosol
+OG0008433	Athaliana_TAIR10||AT2G38680.1	5'-nucleotidase (EC 3.1.3.5) # cytosol
+OG0001904	Athaliana_TAIR10||AT2G38230.1	Pyridoxine biosynthesis glutamine amidotransferase, synthase subunit (EC 2.4.2.-) # cytosol
+OG0001904	Athaliana_TAIR10||AT3G16050.1	Uncurated
+OG0001904	Athaliana_TAIR10||AT5G01410.1	Pyridoxine biosynthesis glutamine amidotransferase, synthase subunit (EC 2.4.2.-) # cytosol # nucleus
+OG0001904	Athaliana_TAIR10||AT2G38210.1	Uncurated
+OG0001583	Athaliana_TAIR10||AT3G22370.1	Alternative oxidase, ubiquinol oxidase (EC 1.10.3.11)
+OG0001583	Athaliana_TAIR10||AT3G22360.1	Alternative oxidase, ubiquinol oxidase (EC 1.10.3.11)
+OG0001583	Athaliana_TAIR10||AT1G32350.1	Alternative oxidase, ubiquinol oxidase (EC 1.10.3.11)
+OG0001583	Athaliana_TAIR10||AT3G27620.1	Alternative oxidase, ubiquinol oxidase (EC 1.10.3.11)
+OG0001583	Athaliana_TAIR10||AT5G64210.1	Alternative oxidase, ubiquinol oxidase (EC 1.10.3.11) # mitochondria
+OG0000189	Athaliana_TAIR10||AT4G37970.1	Alcohol dehydrogenase (EC 1.1.1.1) / Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)
+OG0000189	Athaliana_TAIR10||AT2G21890.1	Alcohol dehydrogenase (EC 1.1.1.1) / Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)
+OG0000189	Athaliana_TAIR10||AT4G34230.1	Alcohol dehydrogenase (EC 1.1.1.1) / Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195) # cytosol # cellwall
+OG0000189	Athaliana_TAIR10||AT4G37990.1	Alcohol dehydrogenase (EC 1.1.1.1) / Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)
+OG0000189	Athaliana_TAIR10||AT3G19450.1	Alcohol dehydrogenase (EC 1.1.1.1) / Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)
+OG0000189	Athaliana_TAIR10||AT1G72680.1	Alcohol dehydrogenase (EC 1.1.1.1) / Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)
+OG0000189	Athaliana_TAIR10||AT4G37980.1	Alcohol dehydrogenase (EC 1.1.1.1) / Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)
+OG0000189	Athaliana_TAIR10||AT2G21730.1	Alcohol dehydrogenase (EC 1.1.1.1) / Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)
+OG0000189	Athaliana_TAIR10||AT4G39330.1	Alcohol dehydrogenase (EC 1.1.1.1) / Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)
+OG0006827	Athaliana_TAIR10||AT1G51720.1	NADP-specific glutamate dehydrogenase (EC 1.4.1.4) # cytosol
+OG0003982	Athaliana_TAIR10||AT1G36280.1	Adenylosuccinate lyase (EC 4.3.2.2) # plastid
+OG0003982	Athaliana_TAIR10||AT4G18440.1	Adenylosuccinate lyase (EC 4.3.2.2) # plastid
+OG0001096	Athaliana_TAIR10||AT4G02120.1	CTP synthase (EC 6.3.4.2) # cytosol
+OG0001096	Athaliana_TAIR10||AT4G20320.1	CTP synthase (EC 6.3.4.2) # cytosol
+OG0001096	Athaliana_TAIR10||AT1G30820.1	CTP synthase (EC 6.3.4.2) # cytosol
+OG0001096	Athaliana_TAIR10||AT2G34890.1	CTP synthase (EC 6.3.4.2) # cytosol
+OG0001096	Athaliana_TAIR10||AT3G12670.1	CTP synthase (EC 6.3.4.2) # cytosol
+OG0004326	Athaliana_TAIR10||AT2G19450.1	Diacylglycerol O-acyltransferase (EC 2.3.1.20) # cytosol # endoplasm
+OG0000977	Athaliana_TAIR10||AT1G74030.1	Enolase (EC 4.2.1.11) # cytosol # plastid # nucleus
+OG0000977	Athaliana_TAIR10||AT2G29560.1	Enolase (EC 4.2.1.11) # cytosol # nucleus
+OG0000977	Athaliana_TAIR10||AT2G36530.1	Enolase (EC 4.2.1.11) # cytosol # nucleus
+OG0000490	Athaliana_TAIR10||AT5G28020.1	Cysteine synthase (EC 2.5.1.47) # cytosol
+OG0000490	Athaliana_TAIR10||AT3G59760.1	Cysteine synthase (EC 2.5.1.47) # mitochondria
+OG0000490	Athaliana_TAIR10||AT3G22460.1	Cysteine synthase (EC 2.5.1.47) # cytosol
+OG0000490	Athaliana_TAIR10||AT3G03630.1	Uncurated
+OG0000490	Athaliana_TAIR10||AT3G61440.1	Cysteine synthase (EC 2.5.1.47) / L-3-cyanoalanine synthase (EC 4.4.1.9) # plastid # mitochondria
+OG0000490	Athaliana_TAIR10||AT5G28030.1	Uncurated
+OG0000490	Athaliana_TAIR10||AT2G43750.1	Cysteine synthase (EC 2.5.1.47) # plastid # mitochondria
+OG0000490	Athaliana_TAIR10||AT3G04940.1	Cysteine synthase (EC 2.5.1.47) # cytosol
+OG0000490	Athaliana_TAIR10||AT4G14880.1	Cysteine synthase (EC 2.5.1.47) # cytosol
+OG0004144	Athaliana_TAIR10||AT2G25870.1	Sugar-terminal-phosphatase (EC 3.1.3.9/ EC 3.1.3.58) # plastid
+OG0003719	Athaliana_TAIR10||AT5G36880.2	Acetyl-coenzyme A synthetase (EC 6.2.1.1) # plastid
+OG0004502	Athaliana_TAIR10||AT4G38570.1	CDP-diacylglycerol--inositol 3-phosphatidyltransferase (EC 2.7.8.11)
+OG0004502	Athaliana_TAIR10||AT1G68000.1	CDP-diacylglycerol--inositol 3-phosphatidyltransferase (EC 2.7.8.11)
+OG0003351	Athaliana_TAIR10||AT5G34780.1	Uncurated
+OG0003351	Athaliana_TAIR10||AT1G21400.1	Branched-chain alpha-keto acid dehydrogenase, E1 component, alpha subunit (EC 1.2.4.4) # plastid # mitochondria
+OG0003351	Athaliana_TAIR10||AT5G09300.1	Branched-chain alpha-keto acid dehydrogenase, E1 component, alpha subunit (EC 1.2.4.4) # mitochondria
+OG0000283	Athaliana_TAIR10||AT2G27690.1	Fatty acid omega-hydroxylase (EC 1.14.13.-)
+OG0000283	Athaliana_TAIR10||AT3G01900.1	Uncurated
+OG0000283	Athaliana_TAIR10||AT5G63450.1	Uncurated
+OG0000283	Athaliana_TAIR10||AT3G56630.1	Uncurated
+OG0000283	Athaliana_TAIR10||AT3G48520.1	Uncurated
+OG0000283	Athaliana_TAIR10||AT1G34540.1	Uncurated
+OG0002670	Athaliana_TAIR10||AT2G33150.1	Acetyl-CoA acetyltransferase (EC 2.3.1.9) # peroxisome
+OG0002670	Athaliana_TAIR10||AT5G48880.2	Acetyl-CoA acetyltransferase (EC 2.3.1.9) # cytosol # peroxisome
+OG0002670	Athaliana_TAIR10||AT1G04710.1	Acetyl-CoA acetyltransferase (EC 2.3.1.9) # peroxisome
+OG0001108	Athaliana_TAIR10||AT1G27450.3	Adenine phosphoribosyltransferase (EC 2.4.2.7) # cytosol
+OG0001108	Athaliana_TAIR10||AT1G80050.1	Adenine phosphoribosyltransferase (EC 2.4.2.7)
+OG0001108	Athaliana_TAIR10||AT4G22570.1	Adenine phosphoribosyltransferase (EC 2.4.2.7) # cytosol
+OG0001108	Athaliana_TAIR10||AT4G12440.2	Uncurated
+OG0001108	Athaliana_TAIR10||AT5G11160.1	Uncurated
+OG0004857	Athaliana_TAIR10||AT5G20070.1	NADH pyrophosphatase (EC 3.6.1.22) # plastid
+OG0005771	Athaliana_TAIR10||AT5G58330.1	Malate dehydrogenase (NADP+) (EC 1.1.1.82) # plastid
+OG0004949	Athaliana_TAIR10||AT1G78920.1	Pyrophosphate-energized proton pump (EC 3.6.1.1) # golgi
+OG0004949	Athaliana_TAIR10||AT1G16780.1	Pyrophosphate-energized proton pump (EC 3.6.1.1)
+OG0003691	Athaliana_TAIR10||AT3G57550.2	Guanylate kinase (EC 2.7.4.8) # cytosol
+OG0003691	Athaliana_TAIR10||AT2G41880.1	Guanylate kinase (EC 2.7.4.8) # cytosol
+OG0002190	Athaliana_TAIR10||AT3G27380.1	Succinate dehydrogenase (ubiquinone) iron-sulfur subunit SDH2/SDHB (EC 1.3.5.1) # mitochondria
+OG0002190	Athaliana_TAIR10||AT5G40650.1	Succinate dehydrogenase (ubiquinone) iron-sulfur subunit SDH2/SDHB (EC 1.3.5.1) # mitochondria
+OG0002190	Athaliana_TAIR10||AT5G65165.1	Succinate dehydrogenase (ubiquinone) iron-sulfur subunit SDH2/SDHB (EC 1.3.5.1) # mitochondria
+OG0005610	Athaliana_TAIR10||AT3G21110.1	Phosphoribosylaminoimidazole-succinocarboxamide synthase (EC 6.3.2.6) # plastid
+OG0000555	Athaliana_TAIR10||AT3G46440.1	UDP-glucuronate decarboxylase (EC 4.1.1.35)
+OG0000555	Athaliana_TAIR10||AT2G47650.2	UDP-glucuronate decarboxylase (EC 4.1.1.35)
+OG0000555	Athaliana_TAIR10||AT2G28760.1	UDP-glucuronate decarboxylase (EC 4.1.1.35)
+OG0000555	Athaliana_TAIR10||AT5G59290.2	UDP-glucuronate decarboxylase (EC 4.1.1.35)
+OG0000555	Athaliana_TAIR10||AT3G62830.1	UDP-glucuronate decarboxylase (EC 4.1.1.35)
+OG0000555	Athaliana_TAIR10||AT3G53520.4	UDP-glucuronate decarboxylase (EC 4.1.1.35)
+OG0001752	Athaliana_TAIR10||AT3G22740.1	Homocysteine S-methyltransferase (EC 2.1.1.10) # cytosol
+OG0001752	Athaliana_TAIR10||AT3G25900.1	Homocysteine S-methyltransferase (EC 2.1.1.10) # cytosol
+OG0001752	Athaliana_TAIR10||AT3G63250.1	Homocysteine S-methyltransferase (EC 2.1.1.10) # cytosol
+OG0001939	Athaliana_TAIR10||AT1G51980.1	Putative ubiquinol-cytochrome c reductase complex core protein I (subunit COR1) # mitointer
+OG0001939	Athaliana_TAIR10||AT3G16480.1	Putative ubiquinol-cytochrome c reductase complex core protein I (subunit COR1) # mitointer
+OG0000400	Athaliana_TAIR10||AT1G14190.1	Uncurated
+OG0000400	Athaliana_TAIR10||AT1G73050.1	Uncurated
+OG0000400	Athaliana_TAIR10||AT1G12570.1	Uncurated
+OG0000400	Athaliana_TAIR10||AT1G14185.1	Uncurated
+OG0000400	Athaliana_TAIR10||AT3G56060.1	Uncurated
+OG0000400	Athaliana_TAIR10||AT5G51930.1	Uncurated
+OG0000400	Athaliana_TAIR10||AT5G51950.1	Uncurated
+OG0000400	Athaliana_TAIR10||AT1G72970.1	Long-chain fatty acid omega-alcohol dehydrogenase (EC 1.1.1.-)
+OG0073271	Athaliana_TAIR10||AT1G24880.2	UDP-3-O-[3-hydroxymyristoyl] N-acetylglucosamine deacetylase (EC 3.5.1.108)
+OG0005210	Athaliana_TAIR10||AT4G02580.1	NADH dehydrogenase [ubiquinone] flavoprotein 2 (EC 1.6.5.3) (EC 1.6.99.3) # mitointer
+OG0001603	Athaliana_TAIR10||AT3G03250.1	UTP--glucose-1-phosphate uridylyltransferase (EC 2.7.7.9)
+OG0001603	Athaliana_TAIR10||AT3G03600.1	Uncurated
+OG0001603	Athaliana_TAIR10||AT5G17310.2	UTP--glucose-1-phosphate uridylyltransferase (EC 2.7.7.9)
+OG0000066	Athaliana_TAIR10||AT3G60970.1	Uncurated
+OG0000066	Athaliana_TAIR10||AT3G21250.2	Uncurated
+OG0000066	Athaliana_TAIR10||AT3G13080.1	Uncurated
+OG0000066	Athaliana_TAIR10||AT1G30400.1	10-Formyltetrahydrofolate transport / 5-Formyltetrahydrofolate transport / 5-Methylenetetrahydrofolate transport / 5-Methylenyltetrahydrofolate transport / 5-Methyltetrahydrofolate transport / Tetrahydrofolate transport # vacuole
+OG0000066	Athaliana_TAIR10||AT3G60160.1	Uncurated
+OG0000066	Athaliana_TAIR10||AT3G13100.1	Uncurated
+OG0000066	Athaliana_TAIR10||AT3G59140.1	Uncurated
+OG0000066	Athaliana_TAIR10||AT2G34660.1	Uncurated
+OG0000066	Athaliana_TAIR10||AT1G30420.1	Uncurated
+OG0000066	Athaliana_TAIR10||AT2G47800.1	Uncurated
+OG0000066	Athaliana_TAIR10||AT1G04120.1	Uncurated
+OG0000066	Athaliana_TAIR10||AT2G07680.1	Uncurated
+OG0000066	Athaliana_TAIR10||AT3G62700.1	Uncurated
+OG0000066	Athaliana_TAIR10||AT3G13090.1	Uncurated
+OG0000066	Athaliana_TAIR10||AT1G30410.1	Uncurated
+OG0006003	Athaliana_TAIR10||AT5G42740.1	Glucose-6-phosphate isomerase (EC 5.3.1.9) # cytosol
+OG0002270	Athaliana_TAIR10||AT2G35840.1	Sucrose-phosphate phosphatase (EC 3.1.3.24)
+OG0002270	Athaliana_TAIR10||AT3G52340.1	Sucrose-phosphate phosphatase (EC 3.1.3.24)
+OG0002270	Athaliana_TAIR10||AT1G51420.1	Sucrose-phosphate phosphatase (EC 3.1.3.24)
+OG0002270	Athaliana_TAIR10||AT3G54270.1	Sucrose-phosphate phosphatase (EC 3.1.3.24)
+OG0003482	Athaliana_TAIR10||AT3G10050.1	Methionine gamma-lyase (EC 4.4.1.11) / Threonine dehydratase biosynthetic (EC 4.3.1.19) # cytosol # plastid
+OG0005002	Athaliana_TAIR10||AT4G24830.1	Argininosuccinate synthase (EC 6.3.4.5) # plastid
+OG0006211	Athaliana_TAIR10||AT5G23300.1	Dihydroorotate dehydrogenase [quinone] (EC 1.3.5.2) # mitochondria
+OG0001032	Athaliana_TAIR10||AT1G67730.1	Very-long-chain 3-oxoacyl-CoA reductase of elongase (EC 1.1.1.330) # endoplasm
+OG0001032	Athaliana_TAIR10||AT1G24470.1	Uncurated
+OG0002826	Athaliana_TAIR10||AT4G14695.1	Uncurated
+OG0002826	Athaliana_TAIR10||AT4G05590.2	Mitochondrial pyruvate carrier (TC 2.A.105) # mitochondria
+OG0002826	Athaliana_TAIR10||AT4G22310.1	Uncurated
+OG0007449	Athaliana_TAIR10||AT5G18660.1	Divinyl (proto)chlorophyllide a 8-vinyl-reductase (EC 1.3.1.75) # plastid
+OG0002988	Athaliana_TAIR10||AT3G58610.1	Ketol-acid reductoisomerase (EC 1.1.1.86) # plastid
+OG0005275	Athaliana_TAIR10||AT5G05590.1	Phosphoribosylanthranilate isomerase (EC 5.3.1.24) # plastid
+OG0005275	Athaliana_TAIR10||AT1G07780.1	Phosphoribosylanthranilate isomerase (EC 5.3.1.24) # plastid
+OG0005275	Athaliana_TAIR10||AT1G29410.2	Phosphoribosylanthranilate isomerase (EC 5.3.1.24) # plastid
+OG0003750	Athaliana_TAIR10||AT3G54470.1	Orotate phosphoribosyltransferase (EC 2.4.2.10) / Orotidine 5'-phosphate decarboxylase (EC 4.1.1.23) # cytosol
+OG0004924	Athaliana_TAIR10||AT2G33220.1	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 13 # mitointer
+OG0004924	Athaliana_TAIR10||AT1G04630.1	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 13 # mitointer
+OG0002476	Athaliana_TAIR10||AT2G38670.1	Ethanolamine-phosphate cytidylyltransferase (EC 2.7.7.14)
+OG0001431	Athaliana_TAIR10||AT3G19480.1	Uncurated
+OG0001431	Athaliana_TAIR10||AT1G17745.2	D-3-phosphoglycerate dehydrogenase (EC 1.1.1.95) # plastid
+OG0001431	Athaliana_TAIR10||AT4G34200.1	Uncurated
+OG0003209	Athaliana_TAIR10||AT1G48605.1	Phosphopantothenoylcysteine decarboxylase (EC 4.1.1.36)
+OG0003209	Athaliana_TAIR10||AT3G18030.1	Phosphopantothenoylcysteine decarboxylase (EC 4.1.1.36)
+OG0004289	Athaliana_TAIR10||AT1G31860.1	Phosphoribosyl-AMP cyclohydrolase (EC 3.5.4.19) / Phosphoribosyl-ATP pyrophosphatase (EC 3.6.1.31) # plastid
+OG0006479	Athaliana_TAIR10||AT3G47390.1	5-amino-6-(5-phosphoribosylamino)uracil reductase (EC 1.1.1.193) / Diaminohydroxyphosphoribosylaminopyrimidine deaminase (EC 3.5.4.26) # plastid
+OG0004213	Athaliana_TAIR10||AT4G16130.1	L-arabinokinase (EC 2.7.1.46)
+OG0004213	Athaliana_TAIR10||AT3G42850.1	Uncurated
+OG0000709	Athaliana_TAIR10||AT5G56630.1	6-phosphofructokinase (EC 2.7.1.11) # cytosol
+OG0000709	Athaliana_TAIR10||AT5G47810.1	6-phosphofructokinase (EC 2.7.1.11) # cytosol
+OG0000709	Athaliana_TAIR10||AT4G32840.1	6-phosphofructokinase (EC 2.7.1.11) # cytosol
+OG0000709	Athaliana_TAIR10||AT4G26270.1	6-phosphofructokinase (EC 2.7.1.11) # cytosol
+OG0000709	Athaliana_TAIR10||AT4G29220.1	6-phosphofructokinase (EC 2.7.1.11) # cytosol
+OG0000709	Athaliana_TAIR10||AT5G61580.1	6-phosphofructokinase (EC 2.7.1.11) # plastid
+OG0003559	Athaliana_TAIR10||AT4G17260.1	L-lactate dehydrogenase (EC 1.1.1.27) # cytosol
+OG0008186	Athaliana_TAIR10||AT2G16790.1	Gluconokinase (EC 2.7.1.12) # cytosol
+OG0004129	Athaliana_TAIR10||AT1G06570.1	4-hydroxyphenylpyruvate dioxygenase (EC 1.13.11.27) # cytosol # plastid
+OG0000456	Athaliana_TAIR10||AT1G70290.1	Alpha,alpha-trehalose-phosphate synthase [UDP-forming] (EC 2.4.1.15) / Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0000456	Athaliana_TAIR10||AT1G68020.2	Alpha,alpha-trehalose-phosphate synthase [UDP-forming] (EC 2.4.1.15) / Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0000456	Athaliana_TAIR10||AT1G23870.1	Alpha,alpha-trehalose-phosphate synthase [UDP-forming] (EC 2.4.1.15) / Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0000456	Athaliana_TAIR10||AT1G06410.1	Alpha,alpha-trehalose-phosphate synthase [UDP-forming] (EC 2.4.1.15) / Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0000456	Athaliana_TAIR10||AT1G60140.1	Alpha,alpha-trehalose-phosphate synthase [UDP-forming] (EC 2.4.1.15) / Trehalose-6-phosphate phosphatase (EC 3.1.3.12) # peroxisome
+OG0000456	Athaliana_TAIR10||AT2G18700.1	Alpha,alpha-trehalose-phosphate synthase [UDP-forming] (EC 2.4.1.15) / Trehalose-6-phosphate phosphatase (EC 3.1.3.12) # cytosol # mitochondria # nucleus
+OG0000456	Athaliana_TAIR10||AT4G17770.1	Alpha,alpha-trehalose-phosphate synthase [UDP-forming] (EC 2.4.1.15) / Trehalose-6-phosphate phosphatase (EC 3.1.3.12)
+OG0004258	Athaliana_TAIR10||ATMG01280.1	Cytochrome c oxidase polypeptide II (EC 1.9.3.1) # mitointer
+OG0004258	Athaliana_TAIR10||AT2G07695.1	Cytochrome c oxidase polypeptide II (EC 1.9.3.1) # mitointer
+OG0004258	Athaliana_TAIR10||ATMG00160.1	Cytochrome c oxidase polypeptide II (EC 1.9.3.1) # mitointer
+OG0001912	Athaliana_TAIR10||AT3G06350.1	3-dehydroquinate dehydratase I (EC 4.2.1.10) / Shikimate 5-dehydrogenase I alpha (EC 1.1.1.25) # plastid
+OG0005276	Athaliana_TAIR10||AT3G54250.1	Diphosphomevalonate decarboxylase (EC 4.1.1.33)
+OG0005276	Athaliana_TAIR10||AT2G38700.1	Diphosphomevalonate decarboxylase (EC 4.1.1.33) # peroxisome
+OG0002951	Athaliana_TAIR10||AT3G07690.1	Uncurated
+OG0002951	Athaliana_TAIR10||AT2G41540.1	Glycerol-3-phosphate dehydrogenase [NAD+] (EC 1.1.1.8) # cytosol
+OG0007341	Athaliana_TAIR10||AT5G04360.1	Starch debranching enzyme, pullulanase (EC 3.2.1.142) # plastid
+OG0004091	Athaliana_TAIR10||AT5G09650.1	Inorganic pyrophosphatase (EC 3.6.1.1) # plastid
+OG0002216	Athaliana_TAIR10||AT3G02350.1	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43)
+OG0002216	Athaliana_TAIR10||AT3G25140.1	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43)
+OG0003177	Athaliana_TAIR10||AT1G62180.1	Adenylyl-sulfate reductase [glutathione] (EC 1.8.4.9) # plastid
+OG0003177	Athaliana_TAIR10||AT4G21990.1	Adenylyl-sulfate reductase [glutathione] (EC 1.8.4.9)
+OG0003177	Athaliana_TAIR10||AT4G04610.1	Adenylyl-sulfate reductase [glutathione] (EC 1.8.4.9) # plastid
+OG0004908	Athaliana_TAIR10||AT3G58750.1	Citrate synthase (si) (EC 2.3.3.1) # peroxisome
+OG0004908	Athaliana_TAIR10||AT3G58740.1	Citrate synthase (si) (EC 2.3.3.1) # peroxisome
+OG0004908	Athaliana_TAIR10||AT2G42790.1	Citrate synthase (si) (EC 2.3.3.1) # peroxisome
+OG0000182	Athaliana_TAIR10||AT4G00040.1	Uncurated
+OG0000182	Athaliana_TAIR10||AT5G13930.1	Chalcone synthase (EC 2.3.1.74) # nucleus # endoplasm
+OG0000182	Athaliana_TAIR10||AT1G02050.1	Uncurated
+OG0000182	Athaliana_TAIR10||AT4G34850.1	Uncurated
+OG0001286	Athaliana_TAIR10||AT2G28630.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0001286	Athaliana_TAIR10||AT1G07720.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0001286	Athaliana_TAIR10||AT5G04530.1	Very-long-chain 3-oxoacyl-CoA synthase (EC 2.3.1.199)
+OG0007941	Athaliana_TAIR10||AT1G55510.1	Branched-chain alpha-keto acid dehydrogenase, E1 component, beta subunit (EC 1.2.4.4) # mitochondria
+OG0007941	Athaliana_TAIR10||AT3G13450.1	Branched-chain alpha-keto acid dehydrogenase, E1 component, beta subunit (EC 1.2.4.4) # mitochondria
+OG0000471	Athaliana_TAIR10||AT1G73540.1	Uncurated
+OG0000471	Athaliana_TAIR10||AT3G12600.1	Uncurated
+OG0000471	Athaliana_TAIR10||AT1G18300.1	NADH pyrophosphatase (EC 3.6.1.22)
+OG0000471	Athaliana_TAIR10||AT1G14860.1	Uncurated
+OG0000471	Athaliana_TAIR10||AT2G01670.1	Uncurated
+OG0000471	Athaliana_TAIR10||AT3G26690.1	Uncurated
+OG0000471	Athaliana_TAIR10||AT1G12880.1	Uncurated
+OG0002841	Athaliana_TAIR10||AT4G11820.2	Hydroxymethylglutaryl-CoA synthase (EC 2.3.3.10)
+OG0006716	Athaliana_TAIR10||AT1G03600.1	Photosystem II protein Psb27 # plastid
+OG0002982	Athaliana_TAIR10||AT5G47030.1	ATP synthase delta' chain (EC 3.6.3.14) # mitointer
+OG0002795	Athaliana_TAIR10||AT1G25380.1	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10) # mitochondria
+OG0002795	Athaliana_TAIR10||AT2G47490.1	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10) # plastid
+OG0006701	Athaliana_TAIR10||AT3G47833.1	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH7 # mitochondria
+OG0006701	Athaliana_TAIR10||AT5G62575.2	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH7 # mitochondria
+OG0006174	Athaliana_TAIR10||AT1G78690.1	1-acyl-sn-glycerol-3-phosphate acyltransferase (EC 2.3.1.51) # cellwall
+OG0005035	Athaliana_TAIR10||AT2G45300.1	5-Enolpyruvylshikimate-3-phosphate synthase (EC 2.5.1.19) # plastid
+OG0005035	Athaliana_TAIR10||AT1G48860.1	5-Enolpyruvylshikimate-3-phosphate synthase (EC 2.5.1.19) # plastid
+OG0006263	Athaliana_TAIR10||AT5G27450.1	Mevalonate kinase (EC 2.7.1.36) # cytosol
+OG0004048	Athaliana_TAIR10||AT2G05140.1	Phosphoribosylaminoimidazole carboxylase catalytic subunit (EC 4.1.1.21) # plastid
+OG0004048	Athaliana_TAIR10||AT2G37690.1	Phosphoribosylaminoimidazole carboxylase ATPase subunit (EC 4.1.1.21) / Phosphoribosylaminoimidazole carboxylase catalytic subunit (EC 4.1.1.21) # plastid
+OG0001412	Athaliana_TAIR10||AT1G11720.2	Starch synthase, ADP-glucose transglucosylase (EC 2.4.1.21) # plastid
+OG0001412	Athaliana_TAIR10||AT4G18240.1	Starch synthase, ADP-glucose transglucosylase (EC 2.4.1.21) # plastid
+OG0006694	Athaliana_TAIR10||AT3G01640.1	Glucuronokinase (EC 2.7.1.43)
+OG0006694	Athaliana_TAIR10||AT5G14470.1	Glucuronokinase (EC 2.7.1.43)
+OG0000443	Athaliana_TAIR10||AT5G24760.1	Uncurated
+OG0000443	Athaliana_TAIR10||AT1G64710.1	Uncurated
+OG0000443	Athaliana_TAIR10||AT5G43940.2	Uncurated
+OG0000443	Athaliana_TAIR10||AT1G32780.1	Uncurated
+OG0000443	Athaliana_TAIR10||AT1G77120.1	Alcohol dehydrogenase (EC 1.1.1.1)
+OG0000162	Athaliana_TAIR10||AT5G09640.1	Sinapoylglucose--choline O-sinapoyltransferase (EC 2.3.1.91)
+OG0000162	Athaliana_TAIR10||AT3G25420.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT2G22990.3	Sinapoylglucose--malate O-sinapoyltransferase (EC 2.3.1.92) / Sinapoylglucose--sinapoylglucose O-sinapoyltransferase (EC 2.3.1.103)
+OG0000162	Athaliana_TAIR10||AT2G22970.3	Uncurated
+OG0000162	Athaliana_TAIR10||AT3G10450.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT3G12203.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT2G22920.2	Uncurated
+OG0000162	Athaliana_TAIR10||AT2G22960.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT1G73310.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT3G12240.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT1G73270.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT1G73290.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT2G22980.4	Sinapoylglucose--sinapoylglucose O-sinapoyltransferase (EC 2.3.1.103)
+OG0000162	Athaliana_TAIR10||AT3G12230.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT3G12220.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT1G73280.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT1G33540.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT2G23000.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT1G73300.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT5G36180.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT4G12910.1	Uncurated
+OG0000162	Athaliana_TAIR10||AT2G23010.1	Sinapoylglucose--sinapoylglucose O-sinapoyltransferase (EC 2.3.1.103)
+OG0001136	Athaliana_TAIR10||AT3G58790.1	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43)
+OG0001136	Athaliana_TAIR10||AT5G54690.1	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43) # golgi
+OG0001136	Athaliana_TAIR10||AT3G01040.1	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43)
+OG0001136	Athaliana_TAIR10||AT5G15470.1	Polygalacturonate 4-alpha-galacturonosyltransferase (EC 2.4.1.43)
+OG0001344	Athaliana_TAIR10||AT2G42600.1	Phosphoenolpyruvate carboxylase (EC 4.1.1.31) # cytosol
+OG0001344	Athaliana_TAIR10||AT3G14940.1	Phosphoenolpyruvate carboxylase (EC 4.1.1.31) # cytosol
+OG0001344	Athaliana_TAIR10||AT1G53310.1	Phosphoenolpyruvate carboxylase (EC 4.1.1.31) # cytosol
+OG0000084	Athaliana_TAIR10||AT2G03750.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT1G18590.1	Desulfoglucosinolate sulfotransferase (EC 2.8.2.-) # cytosol
+OG0000084	Athaliana_TAIR10||AT2G03760.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT4G26280.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT2G14920.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT3G51210.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT5G07000.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT5G07010.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT3G45080.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT2G27570.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT3G45070.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT1G74090.1	Desulfoglucosinolate sulfotransferase (EC 2.8.2.-) # cytosol
+OG0000084	Athaliana_TAIR10||AT1G28170.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT2G03770.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT1G13430.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT5G43690.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT1G13420.1	Uncurated
+OG0000084	Athaliana_TAIR10||AT1G74100.1	Desulfoglucosinolate sulfotransferase (EC 2.8.2.-) # cytosol
+OG0001445	Athaliana_TAIR10||AT3G55440.1	Triosephosphate isomerase (EC 5.3.1.1) # mitochondria
+OG0001445	Athaliana_TAIR10||AT2G21170.1	Triosephosphate isomerase (EC 5.3.1.1) # cytosol # plastid # mitochondria
+OG0004470	Athaliana_TAIR10||AT4G24040.1	Trehalase (EC 3.2.1.28)
+OG0007150	Athaliana_TAIR10||AT2G05830.1	Methylthioribose-1-phosphate isomerase (EC 5.3.1.23) # cytosol
+OG0005449	Athaliana_TAIR10||AT5G55810.2	Nicotinamide-nucleotide adenylyltransferase (EC 2.7.7.1), eukaryotic PNAT family / Nicotinate-nucleotide adenylyltransferase (EC 2.7.7.18), eukaryotic PNAT family
+OG0004049	Athaliana_TAIR10||AT4G05180.1	Photosystem II oxygen evolving complex protein PsbQ # plastid
+OG0004049	Athaliana_TAIR10||AT4G21280.2	Photosystem II oxygen evolving complex protein PsbQ # plastid
+OG0002552	Athaliana_TAIR10||AT5G48230.2	Acetyl-CoA acetyltransferase (EC 2.3.1.9) # cytosol
+OG0002552	Athaliana_TAIR10||AT5G47720.2	Acetyl-CoA acetyltransferase (EC 2.3.1.9) # cytosol # peroxisome
+OG0001906	Athaliana_TAIR10||AT3G28200.1	Uncurated
+OG0001906	Athaliana_TAIR10||AT1G24110.1	Uncurated
+OG0001906	Athaliana_TAIR10||AT4G17690.1	Uncurated
+OG0001906	Athaliana_TAIR10||AT5G47000.1	Peroxidase (EC 1.11.1.7)
+OG0001906	Athaliana_TAIR10||AT5G40150.1	Uncurated
+OG0004597	Athaliana_TAIR10||AT1G51040.1	Phosphatidylinositol 4-kinase alpha (EC 2.7.1.67)
+OG0004597	Athaliana_TAIR10||AT1G49340.1	Phosphatidylinositol 4-kinase alpha (EC 2.7.1.67) # nucleus
+OG0000540	Athaliana_TAIR10||AT4G26520.1	Fructose-bisphosphate aldolase class I (EC 4.1.2.13) # cytosol
+OG0000540	Athaliana_TAIR10||AT2G21330.1	Fructose-bisphosphate aldolase class I (EC 4.1.2.13) # plastid
+OG0000540	Athaliana_TAIR10||AT2G01140.1	Fructose-bisphosphate aldolase class I (EC 4.1.2.13) # plastid
+OG0000540	Athaliana_TAIR10||AT5G03690.1	Fructose-bisphosphate aldolase class I (EC 4.1.2.13) # plastid
+OG0000540	Athaliana_TAIR10||AT2G36460.1	Fructose-bisphosphate aldolase class I (EC 4.1.2.13) # cytosol
+OG0000540	Athaliana_TAIR10||AT4G38970.1	Fructose-bisphosphate aldolase class I (EC 4.1.2.13) # plastid
+OG0000540	Athaliana_TAIR10||AT3G52930.1	Fructose-bisphosphate aldolase class I (EC 4.1.2.13) # cytosol
+OG0000540	Athaliana_TAIR10||AT4G26530.1	Fructose-bisphosphate aldolase class I (EC 4.1.2.13) # cytosol
+OG0004092	Athaliana_TAIR10||AT2G21610.1	Pectinesterase (EC 3.1.1.11)
+OG0004399	Athaliana_TAIR10||AT1G16350.1	Inosine-5'-monophosphate dehydrogenase (EC 1.1.1.205) # cytosol
+OG0004399	Athaliana_TAIR10||AT1G79470.1	Inosine-5'-monophosphate dehydrogenase (EC 1.1.1.205) # cytosol
+OG0004150	Athaliana_TAIR10||AT2G35040.1	IMP cyclohydrolase (EC 3.5.4.10) / Phosphoribosylaminoimidazolecarboxamide formyltransferase (EC 2.1.2.3) # plastid
+OG0005936	Athaliana_TAIR10||AT4G24620.1	Glucose-6-phosphate isomerase (EC 5.3.1.9) # plastid
+OG0002739	Athaliana_TAIR10||AT1G22170.1	2,3-bisphosphoglycerate-dependent phosphoglycerate mutase (EC 5.4.2.11) # plastid
+OG0002739	Athaliana_TAIR10||AT1G78050.1	2,3-bisphosphoglycerate-dependent phosphoglycerate mutase (EC 5.4.2.11) # plastid
+OG0001332	Athaliana_TAIR10||AT5G14590.1	Isocitrate dehydrogenase [NADP] (EC 1.1.1.42) # mitochondria
+OG0001332	Athaliana_TAIR10||AT1G54340.1	Isocitrate dehydrogenase [NADP] (EC 1.1.1.42) # peroxisome
+OG0001332	Athaliana_TAIR10||AT1G65930.1	Isocitrate dehydrogenase [NADP] (EC 1.1.1.42) # cytosol # plastid
+OG0002075	Athaliana_TAIR10||AT1G18500.1	2-isopropylmalate synthase (EC 2.3.3.13) # plastid
+OG0002075	Athaliana_TAIR10||AT1G74040.1	2-isopropylmalate synthase (EC 2.3.3.13) # plastid
+OG0002075	Athaliana_TAIR10||AT5G23020.1	2-isopropylmalate synthase (EC 2.3.3.13) / Methylthioalkylmalate synthase (EC 2.3.3.-) # plastid
+OG0002075	Athaliana_TAIR10||AT5G23010.1	2-isopropylmalate synthase (EC 2.3.3.13) / Methylthioalkylmalate synthase (EC 2.3.3.-) # plastid
+OG0001775	Athaliana_TAIR10||AT4G28060.1	Cytochrome c oxidase subunit 6b # mitointer
+OG0001775	Athaliana_TAIR10||AT5G57815.1	Uncurated
+OG0001775	Athaliana_TAIR10||AT1G22450.1	Cytochrome c oxidase subunit 6b # mitointer
+OG0001775	Athaliana_TAIR10||AT1G32710.1	Uncurated
+OG0002647	Athaliana_TAIR10||ATCG00280.1	Photosystem II CP43 protein (PsbC) # plastid
+OG0005859	Athaliana_TAIR10||AT4G17830.2	Acetylornithine deacetylase (EC 3.5.1.16) # cytosol
+OG0004257	Athaliana_TAIR10||AT2G33040.1	ATP synthase gamma chain (EC 3.6.3.14) # mitointer
+OG0006484	Athaliana_TAIR10||AT3G54690.1	Arabinose 5-phosphate isomerase (EC 5.3.1.13)
+OG0004314	Athaliana_TAIR10||AT1G31070.2	Uncurated
+OG0004314	Athaliana_TAIR10||AT2G35020.1	UDP-sugar pyrophosphorylase (EC 2.7.7.64)
+OG0007756	Athaliana_TAIR10||AT4G35250.1	Putative chaperon-like protein Ycf39 for quinone binding in Photosystem II # plastid
+OG0006246	Athaliana_TAIR10||AT3G21720.1	Isocitrate lyase (EC 4.1.3.1), group II (plants and fungi) # peroxisome
+OG0007507	Athaliana_TAIR10||AT2G26930.1	4-diphosphocytidyl-2-C-methyl-D-erythritol kinase (EC 2.7.1.148) # plastid
+OG0006564	Athaliana_TAIR10||AT1G30380.1	photosystem I subunit X (PsaK, PsaK1) # plastid
+OG0000805	Athaliana_TAIR10||AT2G46860.1	Inorganic pyrophosphatase (EC 3.6.1.1)
+OG0000805	Athaliana_TAIR10||AT2G18230.1	Inorganic pyrophosphatase (EC 3.6.1.1)
+OG0000805	Athaliana_TAIR10||AT4G01480.1	Inorganic pyrophosphatase (EC 3.6.1.1)
+OG0000805	Athaliana_TAIR10||AT1G01050.1	Inorganic pyrophosphatase (EC 3.6.1.1) # cytosol
+OG0000805	Athaliana_TAIR10||AT3G53620.1	Inorganic pyrophosphatase (EC 3.6.1.1) # cytosol
+OG0002481	Athaliana_TAIR10||AT5G05730.2	Anthranilate synthase, aminase component (EC 4.1.3.27) # plastid
+OG0002481	Athaliana_TAIR10||AT2G29690.1	Anthranilate synthase, aminase component (EC 4.1.3.27) # plastid
+OG0002481	Athaliana_TAIR10||AT3G55870.1	Anthranilate synthase, aminase component (EC 4.1.3.27) # plastid
+OG0005764	Athaliana_TAIR10||AT5G04620.2	8-amino-7-oxononanoate synthase (EC 2.3.1.47) # cytosol
+OG0003930	Athaliana_TAIR10||AT1G62640.1	3-oxoacyl-[acyl-carrier-protein] synthase, KASIII (EC 2.3.1.180) # plastid
+OG0008551	Athaliana_TAIR10||AT5G64380.1	Fructose-1,6-bisphosphatase, type I (EC 3.1.3.11) # plastid
+OG0007771	Athaliana_TAIR10||AT4G31760.1	Peroxidase (EC 1.11.1.7)
+OG0007771	Athaliana_TAIR10||AT2G24800.1	Peroxidase (EC 1.11.1.7)
+OG0004223	Athaliana_TAIR10||AT1G09795.1	ATP phosphoribosyltransferase (EC 2.4.2.17) # plastid
+OG0004223	Athaliana_TAIR10||AT1G58080.1	ATP phosphoribosyltransferase (EC 2.4.2.17) # plastid
+OG0004233	Athaliana_TAIR10||AT1G03475.1	Coproporphyrinogen III oxidase, aerobic (EC 1.3.3.3) # plastid
+OG0004233	Athaliana_TAIR10||AT4G03205.2	Coproporphyrinogen III oxidase, aerobic (EC 1.3.3.3)
+OG0006792	Athaliana_TAIR10||AT5G37850.1	Pyridoxal kinase (EC 2.7.1.35) # cytosol # plastid
+OG0010276	Athaliana_TAIR10||AT2G46390.1	Succinate dehydrogenase (ubiquinone) plant-specific subunit SDH8 # mitochondria
+OG0002186	Athaliana_TAIR10||AT4G33680.1	L,L-diaminopimelate aminotransferase (EC 2.6.1.83) # plastid
+OG0002186	Athaliana_TAIR10||AT2G13810.1	L,L-diaminopimelate aminotransferase (EC 2.6.1.83) # plastid
+OG0000724	Athaliana_TAIR10||AT1G52220.1	Uncurated
+OG0000724	Athaliana_TAIR10||AT4G38100.1	Uncurated
+OG0000724	Athaliana_TAIR10||AT2G46820.1	photosystem I subunit PsaP # plastid
+OG0000724	Athaliana_TAIR10||AT4G01150.1	Uncurated
+OG0003234	Athaliana_TAIR10||AT5G57850.1	Aminodeoxychorismate lyase (EC 4.1.3.38) # plastid
+OG0006378	Athaliana_TAIR10||AT4G39120.1	Histidinol-phosphatase [alternative form] (EC 3.1.3.15) # plastid
+OG0007542	Athaliana_TAIR10||AT5G03860.1	Malate synthase (EC 2.3.3.9)
+OG0004915	Athaliana_TAIR10||ATCG00550.1	Photosystem II protein PsbJ # plastid
+OG0001080	Athaliana_TAIR10||AT4G10120.1	Sucrose-phosphate synthase (EC 2.4.1.14)
+OG0001080	Athaliana_TAIR10||AT1G04920.1	Sucrose-phosphate synthase (EC 2.4.1.14)
+OG0001080	Athaliana_TAIR10||AT5G11110.1	Sucrose-phosphate synthase (EC 2.4.1.14)
+OG0001080	Athaliana_TAIR10||AT5G20280.1	Sucrose-phosphate synthase (EC 2.4.1.14) # cytosol
+OG0000340	Athaliana_TAIR10||AT5G51690.1	Uncurated
+OG0000340	Athaliana_TAIR10||AT4G11280.1	1-aminocyclopropane-1-carboxylate synthase (EC 4.4.1.14) # cytosol
+OG0000340	Athaliana_TAIR10||AT5G65800.1	1-aminocyclopropane-1-carboxylate synthase (EC 4.4.1.14) # cytosol
+OG0000340	Athaliana_TAIR10||AT3G49700.1	1-aminocyclopropane-1-carboxylate synthase (EC 4.4.1.14) # cytosol
+OG0000340	Athaliana_TAIR10||AT1G01480.1	1-aminocyclopropane-1-carboxylate synthase (EC 4.4.1.14) # cytosol
+OG0000340	Athaliana_TAIR10||AT2G22810.1	1-aminocyclopropane-1-carboxylate synthase (EC 4.4.1.14) # cytosol
+OG0000340	Athaliana_TAIR10||AT1G62960.1	Uncurated
+OG0000340	Athaliana_TAIR10||AT4G26200.1	1-aminocyclopropane-1-carboxylate synthase (EC 4.4.1.14) # cytosol
+OG0000340	Athaliana_TAIR10||AT4G08040.1	1-aminocyclopropane-1-carboxylate synthase (EC 4.4.1.14) # cytosol
+OG0000340	Athaliana_TAIR10||AT3G61510.1	1-aminocyclopropane-1-carboxylate synthase (EC 4.4.1.14) # cytosol
+OG0000340	Athaliana_TAIR10||AT4G37770.1	1-aminocyclopropane-1-carboxylate synthase (EC 4.4.1.14) # cytosol
+OG0003801	Athaliana_TAIR10||AT3G55010.1	Phosphoribosylformylglycinamidine cyclo-ligase (EC 6.3.3.1) # plastid
+OG0003103	Athaliana_TAIR10||AT5G40810.1	ubiquinol cytochrome C oxidoreductase, cytochrome C1 subunit # mitointer
+OG0003103	Athaliana_TAIR10||AT3G27240.1	ubiquinol cytochrome C oxidoreductase, cytochrome C1 subunit # mitointer
+OG0006680	Athaliana_TAIR10||AT1G17160.1	Ribokinase (EC 2.7.1.12) # plastid
+OG0007288	Athaliana_TAIR10||AT3G06850.1	Dihydrolipoamide acyltransferase component of branched-chain alpha-keto acid dehydrogenase complex (EC 2.3.1.168) # mitochondria
