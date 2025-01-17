@@ -114,9 +114,10 @@ for entry in roles_list:
 	if(updated_role is True):
 		if('curators' not in entry):
 			entry['curators']=list()
-			
-		entry['curators'].append('riocon001')
-		entry['curators'].append('pelle283')
+		if ('ricon001' not in entry['curators']):
+			entry['curators'].append('ricon001')
+		if ('pelle283' not in entry['curators']):
+			entry['curators'].append('pelle283')
 		if('samseaver' not in entry['curators']):
 			entry['curators'].append('samseaver')
 		updated_roles=True
