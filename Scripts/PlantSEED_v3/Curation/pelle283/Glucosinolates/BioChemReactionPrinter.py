@@ -25,38 +25,47 @@ ec_values = ec_values = {
 #Additional comments about the ec values:
 #EC 1.14.14.45 should be Phenolic and Indolic
 
-def find_reaction(ec_num, dB):
+
+def data_files(dB, all_files):
+    for entry in os.listdir(dB):
+        full_path = os.path.join(dB, entry)
+        #print(full_path)
+        if os.path.isdir(full_path):
+            data_files(full_path, all_files)
+        else:
+            all_files.append(full_path)
+           # data_files(full_path, all_files)
+    return all_files
+
+#data_files returns Data directory as a list of files
+
+
+def find_reaction(ec_num, fileList):
 #function that will find the reaction associated with an ec number and then return it
-    for root, dirs, files, in os.walk(dB):
-    #loop through dataBase
-        for directory in dirs:
-            find_reaction(ec_num, os.path.join(root, directory))
-            for file in files:
-                with open(os.path.join(root, dB)) as f:
-                    content = f.read()
-                    if (ec_num in content) and ("reactions" in content) and ("role" in content):
-                    #if ec_num is found, search for its reaction and return it
-                        start_index = content.find("role")
-                        end_index = content.find("pathways")
-                        reaction_info = content[start_index:end_index]
-                        return reaction_info
-                #sub string with role of enzyme info and reaction info is returned
+    for files in fileList:
+        f = open(files, "r")
+        content = f.read()
+        if (ec_num in content) and ("reactions" in content) and ("role" in content):
+        #if ec_num is found, search for its reaction and return it
+            start_index = content.find("role")
+            end_index = content.find("pathways")
+            reaction_info = content[start_index:end_index]
+            return reaction_info
+            #sub string with role of enzyme info and reaction info is returned
                 
     return "ec reaction not found"
-    #if code gets to this point, it means that ec reaction was not found in dataBase
+    #if code gets to this point, it means that ec reaction was not found in dataBase             
 
-for stepKey in ec_values:
+data = []
+data_files(dataBase, data)
+for stepKey, ec_nums in ec_values.items():
     print(stepKey + " result: ")
-    for value in stepKey:
-        print(find_reaction(value, dataBase) + "\n")
+    for value in ec_nums:
+        print(find_reaction(value,data ) + "\n")
+
 #for loop goes through ec values and prints results determined by find_reaction function
 
 
-#updated TO-DO:
-#find_reaction function is doing too much work, must split into smaller tasks
-#need one function to go thru dataBase to open and check for directores
-#said function needs to return a list of files with their paths
-#second additional function needs to go through the list of file paths to find the wanted ec number
 
 
 
