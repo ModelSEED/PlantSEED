@@ -15,6 +15,7 @@ def find_reaction(ec_num, plant_json):
 #function that will find the reactions associated with an enzyme and then return it
     reaction_info = []
     found = False
+    inDB = False
     with open(plant_json, 'r') as openfile:
         content = json.load(openfile)
         for info in content: 
@@ -23,6 +24,7 @@ def find_reaction(ec_num, plant_json):
                     if ec_num in info[item]:
                        # print(ec_num + " this ec is in the info!")
                         found = True
+                        inDB = True
                 if item == ("reactions") and found == True :
                     start_index = item.find("reactions")
                     for i in range (len(info[item])):
@@ -35,8 +37,10 @@ def find_reaction(ec_num, plant_json):
         return reaction_info
             #list of enzyme reactions if present in plantseed json file
     else:
-       # print (count)
-        return "ec reaction not found"
+        if (inDB == False):
+            return "The following ec " + ec_num + " is not in PlantSEED_Roles.json"
+        else:
+            return "The following ec " + ec_num + " is present in PlantSEED_Roles.json but no reactions are listed"
     #if code gets to this point, it means that ec reaction was not found in dataBase             
 
 if __name__ == "__main__": 
@@ -46,7 +50,7 @@ if __name__ == "__main__":
 
     print("Testing with all enzymes:\n")
     ec_List = ["EC 1.14.14.42", "EC 1.14.14.40", "EC 1.14.14.156", "EC 1.14.14.43","EC 1.14.14.45",
-     "EC 1.14.14.45","EC 3.4.19.16", "EC 4.4.1.13", "EC 2.4.1.195"]
+     "EC 1.14.14.45","EC 3.4.19.16", "EC 4.4.1.13", "EC 2.4.1.195", "EC 1.14.13.237", "EC 2.8.2.24"]
     for i in range (len(ec_List)):
         target = ec_List[i]
         print(find_reaction(target, dataBase))
