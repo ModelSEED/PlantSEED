@@ -131,7 +131,11 @@ excluded_roles=list()
 excluded_roles_complexes=list()
 complexes=dict()
 for entry in roles_list:
-	if(entry['include'] is False):
+	#print(entry['include'])
+	if ('include' not in entry):
+		raise Exception("The following enzyme is missing include: " + entry['role'])
+	if(entry['include'] == False):
+		#print("made it")
 		excluded_roles.append(entry['role'])
 		continue
 
