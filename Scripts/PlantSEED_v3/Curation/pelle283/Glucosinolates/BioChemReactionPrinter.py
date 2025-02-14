@@ -7,7 +7,7 @@ import os
 import json
 from pathlib import Path
 
-dataBase = "/home/tesse044/Bio_Research/PlantSEED/Data/PlantSEED_v3/PlantSEED_Roles.json"
+dataBase = "/Users/pelle283/Documents/PlantSEED/Data/PlantSEED_v3/PlantSEED_Roles.json"
 #path to PlantSEED_Roles.json file
 
 
@@ -44,16 +44,16 @@ def find_reaction(ec_num, plant_json):
     #if code gets to this point, it means that ec reaction was not found in dataBase             
 
 if __name__ == "__main__": 
-    # search_target = input("Enter the name or ec number of enzyme: ")
-    # print(find_reaction(search_target, dataBase))
+    search_target = input("Enter the name or ec number of enzyme: ")
+    print(find_reaction(search_target, dataBase))
 
 
-    print("Testing with all enzymes:\n")
-    ec_List = ["EC 1.14.14.42", "EC 1.14.14.40", "EC 1.14.14.156", "EC 1.14.14.43","EC 1.14.14.45",
-     "EC 1.14.14.45","EC 3.4.19.16", "EC 4.4.1.13", "EC 2.4.1.195", "EC 1.14.13.237", "EC 2.8.2.24"]
-    for i in range (len(ec_List)):
-        target = ec_List[i]
-        print(find_reaction(target, dataBase))
+    # print("Testing with all enzymes:\n")
+    # ec_List = ["EC 1.14.14.42", "EC 1.14.14.40", "EC 1.14.14.156", "EC 1.14.14.43","EC 1.14.14.45",
+    #  "EC 1.14.14.45","EC 3.4.19.16", "EC 4.4.1.13", "EC 2.4.1.195", "EC 1.14.13.237", "EC 2.8.2.24"]
+    # for i in range (len(ec_List)):
+    #     target = ec_List[i]
+    #     print(find_reaction(target, dataBase))
     #result: EC 2.8.2.24 and EC 1.14.13.237 not found
     #true negative for EC 1.14.13.237, it is not in plantSEED_Roles.json
     #EC 2.8.2.24 is in plantSEED_Roles.json but no reactions listed for it
