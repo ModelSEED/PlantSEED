@@ -7,7 +7,7 @@ import os
 import json
 from pathlib import Path
 
-dataBase = "/Users/pelle283/Documents/PlantSEED/Data/PlantSEED_v3/PlantSEED_Roles.json"
+dataBase = "/home/tesse044/Bio_Research/PlantSEED/Data/PlantSEED_v3/PlantSEED_Roles.json"
 #path to PlantSEED_Roles.json file
 
 
@@ -16,6 +16,7 @@ def find_reaction(ec_num, plant_json):
     reaction_info = []
     found = False
     inDB = False
+    fullName = ""
     with open(plant_json, 'r') as openfile:
         content = json.load(openfile)
         for info in content: 
@@ -23,6 +24,7 @@ def find_reaction(ec_num, plant_json):
                 if item == ("role"):
                     if ec_num in info[item]:
                        # print(ec_num + " this ec is in the info!")
+                        fullName += info[item]
                         found = True
                         inDB = True
                 if item == ("reactions") and found == True :
@@ -34,18 +36,19 @@ def find_reaction(ec_num, plant_json):
                     
     if (len(reaction_info)) > 0:
         print("Results for: " + ec_num)
-        return reaction_info
+        print(reaction_info) 
+        print("NAME OF ENZYME AS IN DATA BASE: " + fullName +"\n")
             #list of enzyme reactions if present in plantseed json file
     else:
         if (inDB == False):
-            return "The following ec " + ec_num + " is not in PlantSEED_Roles.json"
+            print("The following ec " + ec_num + " is not in PlantSEED_Roles.json")
         else:
-            return "The following ec " + ec_num + " is present in PlantSEED_Roles.json but no reactions are listed"
+            print("The following ec " + ec_num + " is present in PlantSEED_Roles.json but no reactions are listed")
     #if code gets to this point, it means that ec reaction was not found in dataBase             
 
 if __name__ == "__main__": 
     search_target = input("Enter the name or ec number of enzyme: ")
-    print(find_reaction(search_target, dataBase))
+    find_reaction(search_target, dataBase)
 
 
     # print("Testing with all enzymes:\n")
