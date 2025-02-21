@@ -54143,6 +54143,7 @@
     },
     {
         "role": "Aromatic desulfoglucosinolate sulfotransferase (EC 2.8.2.24)",
+        "include": true,
         "features": [
             "Athaliana_TAIR10||AT1G74100"
         ],
