@@ -7,7 +7,7 @@ import os
 import json
 from pathlib import Path
 
-dataBase = "/home/tesse044/Bio_Research/PlantSEED/Data/PlantSEED_v3/PlantSEED_Roles.json"
+dataBase = "/Users/pelle283/Documents/PlantSEED/Data/PlantSEED_v3/PlantSEED_Roles.json"
 #path to PlantSEED_Roles.json file
 
 
