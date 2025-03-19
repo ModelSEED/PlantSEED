@@ -127,16 +127,16 @@ for entry in roles_list:
 		updated_roles=True
 		print("made it")
 
-	# if(updated_role is True):
-	# 	if('curators' not in entry):
-	# 		entry['curators']=list()
-	# 	if ('ricon001' not in entry['curators']):
-	# 		entry['curators'].append('ricon001')
-	# 	if ('pelle283' not in entry['curators']):
-	# 		entry['curators'].append('pelle283')
-	# 	if('samseaver' not in entry['curators']):
-	# 		entry['curators'].append('samseaver')
-	# 	updated_roles=True
+	if(updated_role is True):
+		if('curators' not in entry):
+			entry['curators']=list()
+		if ('ricon001' not in entry['curators']):
+			entry['curators'].append('ricon001')
+		if ('pelle283' not in entry['curators']):
+			entry['curators'].append('pelle283')
+		if('samseaver' not in entry['curators']):
+			entry['curators'].append('samseaver')
+		updated_roles=True
 
 if(updated_roles is True):
 	with open('/home/tesse044/Bio_Research/PlantSEED/Data/PlantSEED_v3/PlantSEED_Roles.json','w') as new_subsystem_file:
