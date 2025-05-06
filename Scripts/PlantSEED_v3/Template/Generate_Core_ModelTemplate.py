@@ -141,6 +141,7 @@ for entry in roles_list:
 
 	# Skip vacuolar ATP synthase, for pumping protons into vacuole
 	if ('reactions' not in entry):
+		continue
 		raise Exception("The following enzyme is missing reactions: " + entry['role'])
 	if ('localization' not in entry):
 		raise Exception("The following enzyme is missing localization: " + entry['role'])
