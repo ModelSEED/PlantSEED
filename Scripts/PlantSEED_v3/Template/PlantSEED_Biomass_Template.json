@@ -45481,7 +45481,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_2af797"
+                "~/complexes/id/PS_complex_1ef972"
             ]
         },
         {
@@ -45529,7 +45529,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_2af797"
+                "~/complexes/id/PS_complex_1ef972"
             ]
         },
         {
@@ -45849,7 +45849,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_0d57b4"
+                "~/complexes/id/PS_complex_3a008c"
             ]
         },
         {
@@ -46549,7 +46549,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_2af797"
+                "~/complexes/id/PS_complex_1ef972"
             ]
         },
         {
@@ -46597,7 +46597,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_2af797"
+                "~/complexes/id/PS_complex_1ef972"
             ]
         },
         {
@@ -52065,7 +52065,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_18fc94"
+                "~/complexes/id/PS_complex_928948"
             ]
         },
         {
@@ -52101,7 +52101,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_18fc94"
+                "~/complexes/id/PS_complex_928948"
             ]
         },
         {
@@ -52137,7 +52137,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_18fc94"
+                "~/complexes/id/PS_complex_928948"
             ]
         },
         {
@@ -52173,7 +52173,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_18fc94"
+                "~/complexes/id/PS_complex_928948"
             ]
         },
         {
@@ -52209,7 +52209,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_18fc94"
+                "~/complexes/id/PS_complex_928948"
             ]
         },
         {
@@ -52245,7 +52245,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_18fc94"
+                "~/complexes/id/PS_complex_928948"
             ]
         },
         {
@@ -58661,7 +58661,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_0d57b4"
+                "~/complexes/id/PS_complex_3a008c"
             ]
         },
         {
@@ -58697,7 +58697,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_0d57b4"
+                "~/complexes/id/PS_complex_3a008c"
             ]
         },
         {
@@ -58733,7 +58733,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_0d57b4"
+                "~/complexes/id/PS_complex_3a008c"
             ]
         },
         {
@@ -58769,7 +58769,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_0d57b4"
+                "~/complexes/id/PS_complex_3a008c"
             ]
         },
         {
@@ -58805,7 +58805,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_0d57b4"
+                "~/complexes/id/PS_complex_3a008c"
             ]
         },
         {
@@ -60365,6 +60365,15 @@
             ]
         },
         {
+            "id": "PS_role_8975d1",
+            "name": "(Methylsulfanyl)alkanaldoxime N-monooxygenase (EC 1.14.14.43)",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": [
+                "Athaliana_TAIR10||AT4G13770"
+            ]
+        },
+        {
             "id": "PS_role_4a721d",
             "name": "1,2-dihydroxy-3-keto-5-methylthiopentene dioxygenase (EC 1.13.11.54)",
             "source": "PlantSEED",
@@ -61564,6 +61573,16 @@
             ]
         },
         {
+            "id": "PS_role_726ec8",
+            "name": "Aliphatic desulfoglucosinolate sulfotransferase (EC 2.8.2.38)",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": [
+                "Athaliana_TAIR10||AT1G18590",
+                "Athaliana_TAIR10||AT1G74090"
+            ]
+        },
+        {
             "id": "PS_role_0aa9aa",
             "name": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (hydroxylation) (no EC)",
             "source": "PlantSEED",
@@ -61579,6 +61598,15 @@
             "aliases": [],
             "features": [
                 "Athaliana_TAIR10||AT4G03070"
+            ]
+        },
+        {
+            "id": "PS_role_cb78cd",
+            "name": "Alkylthiohydroximate C-S lyase (EC 4.4.1.13)",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": [
+                "Athaliana_TAIR10||AT2G20610"
             ]
         },
         {
@@ -61728,6 +61756,16 @@
             "features": [
                 "Athaliana_TAIR10||AT1G15710",
                 "Athaliana_TAIR10||AT5G34930"
+            ]
+        },
+        {
+            "id": "PS_role_c61b82",
+            "name": "Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": [
+                "Athaliana_TAIR10||AT4G13770",
+                "Athaliana_TAIR10||AT4G31500"
             ]
         },
         {
@@ -62485,17 +62523,6 @@
             ]
         },
         {
-            "id": "PS_role_726ec8",
-            "name": "Desulfoglucosinolate sulfotransferase (EC 2.8.2.-)",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": [
-                "Athaliana_TAIR10||AT1G18590",
-                "Athaliana_TAIR10||AT1G74090",
-                "Athaliana_TAIR10||AT1G74100"
-            ]
-        },
-        {
             "id": "PS_role_8bb862",
             "name": "Dethiobiotin synthetase (EC 6.3.3.3)",
             "source": "PlantSEED",
@@ -63110,15 +63137,6 @@
             ]
         },
         {
-            "id": "PS_role_2b7cf0",
-            "name": "Gamma-glutamyl peptidase in glucosinolates biosynthesis",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": [
-                "Athaliana_TAIR10||AT4G30530"
-            ]
-        },
-        {
             "id": "PS_role_3fabe2",
             "name": "Gamma-glutamyl phosphate reductase (EC 1.2.1.41)",
             "source": "PlantSEED",
@@ -63208,6 +63226,21 @@
             "features": [
                 "Athaliana_TAIR10||AT4G24620",
                 "Athaliana_TAIR10||AT5G42740"
+            ]
+        },
+        {
+            "id": "PS_role_2b7cf0",
+            "name": "Glucosinolate gamma-glutamyl hydrolase (EC 3.4.19.16)",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": [
+                "Athalian_TAIR10||AT2G23960",
+                "Athalian_TAIR10||AT2G23970",
+                "Athalian_TAIR10||AT4G29210",
+                "Athalian_TAIR10||AT4G30530",
+                "Athalian_TAIR10||AT4G30540",
+                "Athalian_TAIR10||AT4G30550",
+                "Athaliana_TAIR10||AT4G30530"
             ]
         },
         {
@@ -63343,19 +63376,16 @@
         },
         {
             "id": "PS_role_9af9d5",
-            "name": "Glutathione S-transferase in Trp, Phe, Tyr-derived glucosinolates biosynthesis, predicted",
+            "name": "Glutathione S-transferase",
             "source": "PlantSEED",
             "aliases": [],
             "features": [
-                "Athaliana_TAIR10||AT2G30870"
+                "Athaliana_TAIR10||AT1G27130",
+                "Athaliana_TAIR10||AT1G78370",
+                "Athaliana_TAIR10||AT2G30860",
+                "Athaliana_TAIR10||AT2G30870",
+                "Athaliana_TAIR10||AT3G03190"
             ]
-        },
-        {
-            "id": "PS_role_08a707",
-            "name": "Glutathione S-transferase in glucosinolates biosynthesis, predicted",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": []
         },
         {
             "id": "PS_role_b0ae27",
@@ -63552,22 +63582,6 @@
             ]
         },
         {
-            "id": "PS_role_680bc5",
-            "name": "Homo, di, tri, tetra, penta & hexahomomethionine N-hydroxylase (EC 1.14.13.n5)",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": [
-                "Athaliana_TAIR10||AT1G16410"
-            ]
-        },
-        {
-            "id": "PS_role_190a6d",
-            "name": "Homo, di, tri, tetra, penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n5)",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": []
-        },
-        {
             "id": "PS_role_ff36ae",
             "name": "Homocysteine S-methyltransferase (EC 2.1.1.10)",
             "source": "PlantSEED",
@@ -63585,6 +63599,24 @@
             "aliases": [],
             "features": [
                 "Athaliana_TAIR10||AT3G11945"
+            ]
+        },
+        {
+            "id": "PS_role_680bc5",
+            "name": "Homomethionine N-monooxygenase (EC 1.14.14.42)",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": [
+                "Athaliana_TAIR10||AT1G16410"
+            ]
+        },
+        {
+            "id": "PS_role_e5b2c2",
+            "name": "Homomethionine N-monooxygenase, 10C-11C only (EC 1.14.14.42)",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": [
+                "Athaliana_TAIR10||AT1G16400"
             ]
         },
         {
@@ -64307,20 +64339,11 @@
         },
         {
             "id": "PS_role_1b2ad6",
-            "name": "N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in Trp, Phe, Tyr-derived glucosinolates biosynthesis",
+            "name": "N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195)",
             "source": "PlantSEED",
             "aliases": [],
             "features": [
                 "Athaliana_TAIR10||AT1G24100"
-            ]
-        },
-        {
-            "id": "PS_role_e879a3",
-            "name": "N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in aliphatic glucosinolates biosynthesis",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": [
-                "Athaliana_TAIR10||AT2G31790"
             ]
         },
         {
@@ -64967,27 +64990,6 @@
             "features": []
         },
         {
-            "id": "PS_role_c61b82",
-            "name": "Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": [
-                "Athaliana_TAIR10||AT4G31500",
-                "Athaliana_TAIR10||AT4G37400",
-                "Athaliana_TAIR10||AT4G37430",
-                "Athaliana_TAIR10||AT5G57220"
-            ]
-        },
-        {
-            "id": "PS_role_8975d1",
-            "name": "Oxime metabolizining monooxygenase in aliphatic glucosinolates biosynthesis",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": [
-                "Athaliana_TAIR10||AT4G13770"
-            ]
-        },
-        {
             "id": "PS_role_bac0c3",
             "name": "Oxygen transport",
             "source": "PlantSEED",
@@ -65052,15 +65054,6 @@
             "aliases": [],
             "features": [
                 "Athaliana_TAIR10||AT2G28880"
-            ]
-        },
-        {
-            "id": "PS_role_e5b2c2",
-            "name": "Penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n6)",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": [
-                "Athaliana_TAIR10||AT1G16400"
             ]
         },
         {
@@ -65131,7 +65124,7 @@
         },
         {
             "id": "PS_role_fb7a11",
-            "name": "Phenylalanine N-monooxygenase (EC 1.14.13.124)",
+            "name": "Phenylalanine N-monooxygenase (EC 1.14.14.40)",
             "source": "PlantSEED",
             "aliases": [],
             "features": [
@@ -66298,15 +66291,6 @@
             ]
         },
         {
-            "id": "PS_role_cb78cd",
-            "name": "S-alkyl-thiohydroximate lyase (EC 4.4.1.-)",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": [
-                "Athaliana_TAIR10||AT2G20610"
-            ]
-        },
-        {
             "id": "PS_role_f2f905",
             "name": "S-linalool synthase (EC 4.2.3.25)",
             "source": "PlantSEED",
@@ -66915,7 +66899,7 @@
         },
         {
             "id": "PS_role_4b6628",
-            "name": "Tryptophan N-monooxygenase (EC 1.14.13.125)",
+            "name": "Tryptophan N-monooxygenase (EC 1.14.14.156)",
             "source": "PlantSEED",
             "aliases": [],
             "features": [
@@ -68504,20 +68488,6 @@
             ]
         },
         {
-            "id": "PS_complex_0d57b4",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_e879a3",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
             "id": "PS_complex_0d956b",
             "name": "",
             "reference": "",
@@ -69133,20 +69103,6 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_7b06c8",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
-            "id": "PS_complex_18fc94",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_08a707",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -70370,20 +70326,6 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_e19364",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
-            "id": "PS_complex_2af797",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_190a6d",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -80775,6 +80717,14 @@
             "type": "defaultGrowth",
             "templateBiomassComponents": [
                 {
+                    "class": "specialized",
+                    "templatecompcompound_ref": "~/compcompounds/id/cpb22000_c",
+                    "coefficient_type": "EXACT",
+                    "coefficient": -0.001,
+                    "linked_compound_refs": [],
+                    "link_coefficients": []
+                },
+                {
                     "class": "energy",
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00001_c",
                     "coefficient_type": "EXACT",
@@ -81319,6 +81269,46 @@
                     "link_coefficients": []
                 },
                 {
+                    "class": "specialized",
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd03467_c",
+                    "coefficient_type": "EXACT",
+                    "coefficient": -0.001,
+                    "linked_compound_refs": [],
+                    "link_coefficients": []
+                },
+                {
+                    "class": "specialized",
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd05333_c",
+                    "coefficient_type": "EXACT",
+                    "coefficient": -0.001,
+                    "linked_compound_refs": [],
+                    "link_coefficients": []
+                },
+                {
+                    "class": "specialized",
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd05334_c",
+                    "coefficient_type": "EXACT",
+                    "coefficient": -0.001,
+                    "linked_compound_refs": [],
+                    "link_coefficients": []
+                },
+                {
+                    "class": "specialized",
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd05335_c",
+                    "coefficient_type": "EXACT",
+                    "coefficient": -0.001,
+                    "linked_compound_refs": [],
+                    "link_coefficients": []
+                },
+                {
+                    "class": "specialized # three carbon",
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd05338_c",
+                    "coefficient_type": "EXACT",
+                    "coefficient": -0.001,
+                    "linked_compound_refs": [],
+                    "link_coefficients": []
+                },
+                {
                     "class": "other",
                     "templatecompcompound_ref": "~/compcompounds/id/cpd11416_c",
                     "coefficient_type": "EXACT",
@@ -81375,10 +81365,26 @@
                     "link_coefficients": []
                 },
                 {
+                    "class": "specialized",
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd28704_c",
+                    "coefficient_type": "EXACT",
+                    "coefficient": -0.001,
+                    "linked_compound_refs": [],
+                    "link_coefficients": []
+                },
+                {
                     "class": "cellwall",
                     "templatecompcompound_ref": "~/compcompounds/id/cpd30321_c",
                     "coefficient_type": "EXACT",
                     "coefficient": -0.2271,
+                    "linked_compound_refs": [],
+                    "link_coefficients": []
+                },
+                {
+                    "class": "specialized",
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd34716_c",
+                    "coefficient_type": "EXACT",
+                    "coefficient": -0.001,
                     "linked_compound_refs": [],
                     "link_coefficients": []
                 }
