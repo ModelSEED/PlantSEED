@@ -71,6 +71,8 @@ biomass_hash['templateBiomassComponents']=sorted(template_biomass_components,
 												 key = lambda bcpd:bcpd['templatecompcompound_ref'])
 plantseed_template_obj['biomasses'].append(biomass_hash)
 
+print("Saving template with biomass")
+
 #Save Template
 with open("PlantSEED_Biomass_Template.json",'w') as ps_tmpl_fh:
 	json.dump(plantseed_template_obj,ps_tmpl_fh,indent=4)
