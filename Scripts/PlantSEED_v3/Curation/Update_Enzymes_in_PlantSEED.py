@@ -106,27 +106,32 @@ for entry in roles_list:
 				entry[field]=list()
 
 			for input in add_dict[entry['role']][field].keys():
-				print("ADD",field,input)
+
 				# Check to see if it's not there, and add it
 				if(input not in entry[field]):
 					entry[field].append(input)
 
-				# Update localization
+				# Update localization if feature
 				if(field == 'features' and 'localization' in entry):
-
 					for cpt in entry['localization']:
-						
 						if(add_dict[entry['role']][field][input] in entry['localization'][cpt]):
 							entry['localization'][cpt][input] = entry['localization'][cpt][add_dict[entry['role']][field][input]]
 
 				# Update compartmentalization
 				if(field == 'reactions'):
-					for cpts in entry['compartmentalization']:
-						if(cpts in add_dict[entry['role']][field][input]):
-							tmpl_rxn = input+'_'+entry['compartmentalization'][cpts]['reaction']
-							for complex in entry['compartmentalization'][cpts]['kbase_ids']:
-								if(input not in entry['compartmentalization'][cpts]['kbase_ids'][complex]):
-									entry['compartmentalization'][cpts]['kbase_ids'][complex].append(tmpl_rxn)
+					if(add_dict[entry['role']][field][input]==1):
+						print("No compartments specified for reaction: "+input)
+						continue
+					else:
+						cpt = add_dict[entry['role']][field][input]
+						if(cpt not in entry['compartmentalization']):
+							print("Compartment "+cpt+" not found for reaction: "+input)
+							continue
+						else:
+							tmpl_rxn = input+'_'+entry['compartmentalization'][cpt]['reaction']
+							for complex in entry['compartmentalization'][cpt]['kbase_ids']:
+								if(input not in entry['compartmentalization'][cpt]['kbase_ids'][complex]):
+									entry['compartmentalization'][cpt]['kbase_ids'][complex].append(tmpl_rxn)
 
 		updated_role=True
 
