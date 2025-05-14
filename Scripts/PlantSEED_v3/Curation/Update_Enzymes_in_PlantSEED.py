@@ -34,8 +34,7 @@ with open(input_file) as updates_file:
 		# This action is reserved for adding a new (empty) field to the functional role
 		# It should ideally be followed up with an ADD action
 		if(action == "NEW"):
-			field = tmp_lst[2]
-			new_list.append(field)
+			new_list.append(enzyme)
 
 		# This action is reserved for adding new data to a field in the functional role
 		# Some fields take a key-value pair to add to a dict,
