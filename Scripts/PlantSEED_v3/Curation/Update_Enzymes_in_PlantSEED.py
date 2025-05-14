@@ -86,8 +86,20 @@ for entry in roles_list:
 		print("Warning, New Role already present: "+entry['role'])
 		sys.exit()
 
+default_role_dict = {'role':None,
+					 'features':list(),
+					 'reactions':list(),
+					 'subsystems':list(),
+					 'classes':list(),
+					 'curators':list(),
+					 'localization':dict(),
+					 'publications':list(),
+					 'include':True}
+
 for new in new_list:
-	roles_list.append({'role':new})
+	new_role = copy.deepcopy(default_role_dict)
+	new_role['role'] = new
+	roles_list.append(new_role)
 
 updated_roles=False
 for entry in roles_list:
@@ -111,10 +123,12 @@ for entry in roles_list:
 					entry[field].append(input)
 
 				# Update localization if feature
-				if(field == 'features' and 'localization' in entry):
-					for cpt in entry['localization']:
-						if(add_dict[entry['role']][field][input] in entry['localization'][cpt]):
-							entry['localization'][cpt][input] = entry['localization'][cpt][add_dict[entry['role']][field][input]]
+				if(field == 'features' and add_dict[entry['role']][field][input]!=1):
+					(cpt,code) = add_dict[entry['role']][field][input].split('|')
+					if(cpt in entry['localization']):
+						entry['localization'][cpt][input]=[code]
+					else:
+						entry['localization'][cpt]={input:[code]}
 
 				# Update compartmentalization
 				if(field == 'reactions'):
