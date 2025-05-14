@@ -66,7 +66,7 @@ with open(input_file) as updates_file:
 		# This action is reserved for rekeying a key-value pair in a dict
 		# At the present time, it's only reserved for localization and compartmentalization
 		# If the localization is updated, then the entire compartmentalization entry will also be updated
-		if(action == "REKEY"):
+		if(action == "RELOCATE"):
 			field = tmp_lst[2]
 			entry = tmp_lst[3]
 			new_entry = tmp_lst[4]
