@@ -34,8 +34,7 @@ with open(input_file) as updates_file:
 		# This action is reserved for adding a new (empty) field to the functional role
 		# It should ideally be followed up with an ADD action
 		if(action == "NEW"):
-			field = tmp_lst[2]
-			new_list.append(field)
+			new_list.append(enzyme)
 
 		# This action is reserved for adding new data to a field in the functional role
 		# Some fields take a key-value pair to add to a dict,
@@ -87,8 +86,20 @@ for entry in roles_list:
 		print("Warning, New Role already present: "+entry['role'])
 		sys.exit()
 
+default_role_dict = {'role':None,
+					 'features':list(),
+					 'reactions':list(),
+					 'subsystems':list(),
+					 'classes':list(),
+					 'curators':list(),
+					 'localization':dict(),
+					 'publications':list(),
+					 'include':True}
+
 for new in new_list:
-	roles_list.append({'role':new})
+	new_role = copy.deepcopy(default_role_dict)
+	new_role['role'] = new
+	roles_list.append(new_role)
 
 updated_roles=False
 for entry in roles_list:
@@ -106,27 +117,34 @@ for entry in roles_list:
 				entry[field]=list()
 
 			for input in add_dict[entry['role']][field].keys():
-				print("ADD",field,input)
+
 				# Check to see if it's not there, and add it
 				if(input not in entry[field]):
 					entry[field].append(input)
 
-				# Update localization
-				if(field == 'features' and 'localization' in entry):
-
-					for cpt in entry['localization']:
-						
-						if(add_dict[entry['role']][field][input] in entry['localization'][cpt]):
-							entry['localization'][cpt][input] = entry['localization'][cpt][add_dict[entry['role']][field][input]]
+				# Update localization if feature
+				if(field == 'features' and add_dict[entry['role']][field][input]!=1):
+					(cpt,code) = add_dict[entry['role']][field][input].split('|')
+					if(cpt in entry['localization']):
+						entry['localization'][cpt][input]=[code]
+					else:
+						entry['localization'][cpt]={input:[code]}
 
 				# Update compartmentalization
 				if(field == 'reactions'):
-					for cpts in entry['compartmentalization']:
-						if(cpts in add_dict[entry['role']][field][input]):
-							tmpl_rxn = input+'_'+entry['compartmentalization'][cpts]['reaction']
-							for complex in entry['compartmentalization'][cpts]['kbase_ids']:
-								if(input not in entry['compartmentalization'][cpts]['kbase_ids'][complex]):
-									entry['compartmentalization'][cpts]['kbase_ids'][complex].append(tmpl_rxn)
+					if(add_dict[entry['role']][field][input]==1):
+						print("No compartments specified for reaction: "+input)
+						continue
+					else:
+						cpt = add_dict[entry['role']][field][input]
+						if(cpt not in entry['compartmentalization']):
+							print("Compartment "+cpt+" not found for reaction: "+input)
+							continue
+						else:
+							tmpl_rxn = input+'_'+entry['compartmentalization'][cpt]['reaction']
+							for complex in entry['compartmentalization'][cpt]['kbase_ids']:
+								if(input not in entry['compartmentalization'][cpt]['kbase_ids'][complex]):
+									entry['compartmentalization'][cpt]['kbase_ids'][complex].append(tmpl_rxn)
 
 		updated_role=True
 
