@@ -17,6 +17,10 @@ key_dict=dict()
 with open(input_file) as updates_file:
 	for line in updates_file.readlines():
 		line=line.strip('\r\n')
+
+		if(line.startswith('#')):
+			continue
+
 		tmp_lst=line.split('\t')
 		print(tmp_lst)
 
@@ -124,7 +128,7 @@ for entry in roles_list:
 
 				# Update localization if feature
 				if(field == 'features' and add_dict[entry['role']][field][input]!=1):
-					(cpt,code) = add_dict[entry['role']][field][input].split('|')
+					(cpt,code) = add_dict[entry['role']][field][input].split(':')
 					if(cpt in entry['localization']):
 						entry['localization'][cpt][input]=[code]
 					else:
