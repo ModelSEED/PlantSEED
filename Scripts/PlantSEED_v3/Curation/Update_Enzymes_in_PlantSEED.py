@@ -150,7 +150,7 @@ for entry in roles_list:
 				# Update compartmentalization
 				if(field == 'reactions'):
 					if(add_dict[entry['role']][field][input]==1):
-						print("No compartments specified for reaction: "+input)
+						# print("No compartments specified for reaction: "+input)
 						continue
 					else:
 						cpt = add_dict[entry['role']][field][input]

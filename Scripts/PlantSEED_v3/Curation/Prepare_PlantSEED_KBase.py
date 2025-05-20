@@ -25,14 +25,16 @@ enzymes_roles = dict()
 for entry in roles_list:
 
 	if('abstract_enzyme' not in entry or 'role' not in entry or 'reactions' not in entry or 'localization' not in entry):
-		print("Warning, missing abstract_enzyme, role, reactions, or compartments for role: "+entry['role'])
-		print("\tCannot create unique KBase Complex ID")
-			
+		# print("Warning, missing abstract_enzyme, role, reactions, or compartments for role: "+entry['role'])
+		# print("\tCannot create unique KBase Complex ID")
+		pass
+
 	if('abstract_enzyme' not in entry):
 		print("Warning, missing abstract_enzyme for role: "+entry['role'])
 	elif(entry['abstract_enzyme'] == entry['role']):
 		if('transport' not in entry['abstract_enzyme'] and 'Spontaneous' not in entry['role']):
-			print("Warning, abstract_enzyme is the same as role: "+entry['role'])
+			# print("Warning, abstract_enzyme is the same as role: "+entry['role'])
+			pass
 	else:
 		roles_enzymes[entry['role']] = entry['abstract_enzyme']
 		if(entry['abstract_enzyme'] not in enzymes_roles):
@@ -41,16 +43,13 @@ for entry in roles_list:
 			enzymes_roles[entry['abstract_enzyme']].append(entry['role'])
 	
 	if('kbase_id' in entry):
-		if('kbase_id' in role_ID_list):
+		if(entry['kbase_id'] in role_ID_list):
 			print("Warning, duplicate kbase_id: "+entry['kbase_id'] + " for role: "+entry['role'])
 		else:
 			role_ID_list.append(entry['kbase_id'])
 
-
 	if('compartmentalization' in entry):
-
 		for cpt in entry['compartmentalization']:
-
 			cpx_dict = entry['compartmentalization'][cpt]
 		
 			if('kbase_ids' in cpx_dict):
@@ -61,17 +60,20 @@ for entry in roles_list:
 							if(rxn_cpt not in complex_ID_dict[kbase_id]):
 								complex_ID_dict[kbase_id].append(rxn_cpt)
 
-	if('reactions' in entry):
-		for rxn in entry['reactions']:
-			if(entry['role'] not in roles_reactions):
-				roles_reactions[entry['role']]=list()
-			if(rxn not in roles_reactions[entry['role']]):
-				roles_reactions[entry['role']].append(rxn)
+	if('reactions' in entry and 'localization' in entry):
+		for cpt in entry['localization']:
+			for rxn in entry['reactions']:
+				tmpl_rxn = rxn+"_"+cpt
 
-			if(rxn not in reactions_roles):
-				reactions_roles[rxn]=list()
-			if(entry['role'] not in reactions_roles[rxn]):
-				reactions_roles[rxn].append(entry['role'])
+				if(entry['role'] not in roles_reactions):
+					roles_reactions[entry['role']]=list()
+				if(tmpl_rxn not in roles_reactions[entry['role']]):
+					roles_reactions[entry['role']].append(tmpl_rxn)
+
+				if(tmpl_rxn not in reactions_roles):
+					reactions_roles[tmpl_rxn]=list()
+				if(entry['role'] not in reactions_roles[tmpl_rxn]):
+					reactions_roles[tmpl_rxn].append(entry['role'])
 
 # Go back through database
 updated_roles = False
@@ -95,8 +97,10 @@ for entry in roles_list:
 			entry_id = 'PS_role_' + hashlib.sha256(role_str.encode('utf-8')).hexdigest()[:6]
 
 			# create new id if already in list
-			while entry_id in ID_list:
+			while entry_id in role_ID_list:
 				entry_id = 'PS_role_' + hashlib.sha256(entry_id.encode('utf-8')).hexdigest()[:6]
+
+			role_ID_list.append(entry_id)
 
 			entry['kbase_id'] = entry_id
 			print('New ID:\t' + entry_id + '\t' + entry['role'])
@@ -106,47 +110,54 @@ for entry in roles_list:
 	if('compartmentalization' not in entry):
 		entry['compartmentalization'] = dict()
 
-		for cpt in entry['localization']:
-			cpx_dict = {'reaction':cpt,'kbase_ids':{},'exclude':False}
-			for rxn in entry['reactions']:
-				tmpl_rxn = rxn+"_"+cpt
+	for cpt in entry['localization']:
+		if(cpt in entry['compartmentalization']):
+			continue
 
-				if(tmpl_rxn not in reactions_roles):
-					print("Warning: template_reaction not found: "+tmpl_rxn)
-					continue
+		cpx_dict = {'reaction':cpt,'kbase_ids':{},'exclude':False}
+		for rxn in entry['reactions']:
+			tmpl_rxn = rxn+"_"+cpt
 
-				enzymes = list()
-				for role in reactions_roles[tmpl_rxn]:
-					if(role not in roles_enzymes):
-						print("Warning: role not found :"+role)
+			if(tmpl_rxn not in reactions_roles):
+				print("Warning: template_reaction not found: "+tmpl_rxn)
+				continue
 
-					if(roles_enzymes[role] not in enzymes):
-						enzymes.append(roles_enzymes[role])
+			enzymes = list()
+			for role in reactions_roles[tmpl_rxn]:
+				if(role not in roles_enzymes):
+					print("Warning: role not found :"+role)
 
-				tmpl_rxns = list()
-				for enzyme in enzymes:
-					for role in enzymes[enzyme]:
-						for rxn in roles_reactions[role]:
-							if(rxn not in tmpl_rxns):
-								tmpl_rxns.append(rxn)
+				if(roles_enzymes[role] not in enzymes):
+					enzymes.append(roles_enzymes[role])
 
-				sorted_enzymes = sorted(enzymes)
-				sorted_roles = sorted(reactions_roles[tmpl_rxn])
-				sorted_reactions = sorted(tmpl_rxns)
+			tmpl_rxns = list()
+			for enzyme in enzymes:
+				for role in enzymes_roles[enzyme]:
+					for rxn in roles_reactions[role]:
+						if(rxn not in tmpl_rxns):
+							tmpl_rxns.append(rxn)
 
-				# string with unique info for each complex
-				cpx_str = " / ".join(sorted_enzymes) + " / " + " / ".join(sorted_roles) + " / " + " / ".join(sorted_reactions)
+			sorted_enzymes = sorted(enzymes)
+			sorted_roles = sorted(reactions_roles[tmpl_rxn])
+			sorted_reactions = sorted(tmpl_rxns)
 
-				# generate unique hash of complex string
-				entry_id = 'PS_complex_' + hashlib.sha256(cpx_str.encode('utf-8')).hexdigest()[:6]
-				while(entry_id in complex_ID_dict):
-					entry_id = 'PS_complex_' + hashlib.sha256(entry_id.encode('utf-8')).hexdigest()[:6]
+			# string with unique info for each complex
+			cpx_str = " / ".join(sorted_enzymes) + " / " + " / ".join(sorted_roles) + " / " + " / ".join(sorted_reactions)
+
+			# generate unique hash of complex string
+			entry_id = 'PS_complex_' + hashlib.sha256(cpx_str.encode('utf-8')).hexdigest()[:6]
+			while(entry_id in complex_ID_dict):
+				entry_id = 'PS_complex_' + hashlib.sha256(entry_id.encode('utf-8')).hexdigest()[:6]
 				
-				if(entry_id not in cpx_dict['kbase_ids']):
-					cpx_dict['kbase_ids'][entry_id]=list()
-					updated_roles=True
-				if(tmpl_rxn not in cpx_dict['kbase_ids'][entry_id]):
-					cpx_dict['kbase_ids'][entry_id].append(tmpl_rxn)
+			complex_ID_dict[entry_id] = []
+
+			if(entry_id not in cpx_dict['kbase_ids']):
+				cpx_dict['kbase_ids'][entry_id]=list()
+				updated_roles=True
+			if(tmpl_rxn not in cpx_dict['kbase_ids'][entry_id]):
+				cpx_dict['kbase_ids'][entry_id].append(tmpl_rxn)
+		print(cpx_dict)
+		entry['compartmentalization'][cpt]=cpx_dict
 
 if(updated_roles is True):
 	with open(os.path.join(database_relative_path, "PlantSEED_Roles.json"),'w') as new_subsystem_file:
