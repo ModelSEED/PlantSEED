@@ -94,15 +94,17 @@ default_role_dict = {'role':None,
 					 'features':list(),
 					 'reactions':list(),
 					 'subsystems':list(),
-					 'classes':list(),
 					 'curators':list(),
 					 'localization':dict(),
 					 'publications':list(),
+					 'classes':dict(),
 					 'include':True}
 
 for new in new_list:
 	new_role = copy.deepcopy(default_role_dict)
 	new_role['role'] = new
+
+	new_role['abstract_enzyme']=new.split(' (EC')[0]
 	roles_list.append(new_role)
 
 updated_roles=False
@@ -120,7 +122,7 @@ for entry in roles_list:
 			if(field not in entry['role']):
 				entry[field]=list()
 
-			for input in add_dict[entry['role']][field].keys():
+			for input in add_dict[entry['role']][field]:
 
 				# Check to see if it's not there, and add it
 				if(input not in entry[field]):
@@ -134,10 +136,21 @@ for entry in roles_list:
 					else:
 						entry['localization'][cpt]={input:[code]}
 
+				# Update classes
+				if(field == 'subsystems'):
+					sys_cls = add_dict[entry['role']][field][input]
+					print(sys_cls)
+					print(entry)
+					if('classes' not in entry):
+						entry['classes'] = dict()
+					if(sys_cls not in entry['classes']):
+						entry['classes'][sys_cls] = dict()
+					entry['classes'][sys_cls][input]=[]
+
 				# Update compartmentalization
 				if(field == 'reactions'):
 					if(add_dict[entry['role']][field][input]==1):
-						print("No compartments specified for reaction: "+input)
+						# print("No compartments specified for reaction: "+input)
 						continue
 					else:
 						cpt = add_dict[entry['role']][field][input]

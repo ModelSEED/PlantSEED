@@ -54127,5 +54127,38 @@
             }
         },
         "type": "conditional"
+    },
+    {
+        "role": "Glutamate-cysteine ligase (EC 6.3.2.2)",
+        "features": [
+            "Athaliana_TAIR10||AT4G23100."
+        ],
+        "reactions": [
+            "rxn00646"
+        ],
+        "subsystems": [
+            "Glutathionine_biosynthesis"
+        ],
+        "curators": [
+            "pelle283"
+        ],
+        "localization": {
+            "d": {
+                "Athaliana_TAIR10||AT4G23100.": [
+                    "PPDB"
+                ]
+            }
+        },
+        "publications": [
+            "10.1074/jbc.M405127200",
+            "10.1111/j.1365-313X.2004.02269.x"
+        ],
+        "classes": {
+            "Other": {
+                "Glutathionine_biosynthesis": []
+            }
+        },
+        "include": true,
+        "abstract_enzyme": "Glutamate-cysteine ligase"
     }
 ]

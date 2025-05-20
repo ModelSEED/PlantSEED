@@ -131,22 +131,13 @@ excluded_roles=list()
 excluded_roles_complexes=list()
 complexes=dict()
 for entry in roles_list:
-	#print(entry['include'])
-	if ('include' not in entry):
-		print("The following enzyme is missing include: " + entry['role'])
-		continue
-	if(entry['include'] == False):
-		#print("made it")
+	if(entry['include'] is False):
 		excluded_roles.append(entry['role'])
 		continue
 
+	if('reactions' not in entry):
+		continue
 	# Skip vacuolar ATP synthase, for pumping protons into vacuole
-	if ('reactions' not in entry):
-		print("The following enzyme is missing reactions: " + entry['role'])
-		continue
-	if ('localization' not in entry):
-		print("The following enzyme is missing localization: " + entry['role'])
-		continue
 	if("rxn08173" in entry["reactions"] and "v" in entry["localization"]):
 		print("Skipping vacuolar ATP synthase")
 		continue
@@ -432,12 +423,13 @@ for template_reaction in sorted(reactions_roles):
 
 ########################################################################
 # This is for transport in aliphatic glucosinolate biosynthesis
-glc_tns = {'cpd17400':'d'}
+glc_tns = {'cpd17400':'d','cpd00506':'d'}
 glc_count=1
 for glc_met in glc_tns.keys():
 	
 	template_reaction_hash = copy.deepcopy(default_template_reaction)
 	template_reaction_hash['id']='glucosinolates_'+str(glc_count)
+	print("Glucosinolate transport reaction id: "+template_reaction_hash['id'])
 	template_reaction_hash['name']='Glucosinolate Transport'
 	template_reaction_hash['templatecompartment_ref']="~/compartments/id/"+glc_tns[glc_met]
 
