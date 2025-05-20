@@ -33332,9 +33332,7 @@
             "Athaliana_TAIR10||AT4G13770"
         ],
         "reactions": [
-            "rxn21795",
-            "rxn21793",
-            "rxn40669"
+            "rxn14107"
         ],
         "localization": {
             "r": {
@@ -33376,7 +33374,8 @@
                     "PS_complex_58ad0d": [
                         "rxn21795_c",
                         "rxn21793_c",
-                        "rxn40669_c"
+                        "rxn40669_c",
+                        "rxn14107_c"
                     ]
                 },
                 "exclude": false
@@ -34205,9 +34204,7 @@
             "Athaliana_TAIR10||AT5G05260"
         ],
         "reactions": [
-            "rxn16424",
-            "rxn22372",
-            "rxn16423"
+            "rxn16425"
         ],
         "localization": {
             "c": {
@@ -34235,7 +34232,8 @@
                     "PS_complex_c4671e": [
                         "rxn16424_c",
                         "rxn22372_c",
-                        "rxn16423_c"
+                        "rxn16423_c",
+                        "rxn16425_c"
                     ]
                 },
                 "exclude": false
@@ -42192,14 +42190,9 @@
             "Athaliana_TAIR10||AT2G20610"
         ],
         "reactions": [
-            "rxn21826",
-            "rxn21832",
-            "rxn21831",
-            "rxn21828",
-            "rxn21825",
-            "rxn21830",
-            "rxn21833",
-            "rxn21827"
+            "rxn24582",
+            "rxn14068",
+            "rxn12019"
         ],
         "localization": {
             "c": {
@@ -42237,7 +42230,10 @@
                         "rxn21825_c",
                         "rxn21830_c",
                         "rxn21833_c",
-                        "rxn21827_c"
+                        "rxn21827_c",
+                        "rxn24582_c",
+                        "rxn14068_c",
+                        "rxn12019_c"
                     ]
                 },
                 "exclude": false
