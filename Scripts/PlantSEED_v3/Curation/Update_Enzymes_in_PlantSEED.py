@@ -103,6 +103,8 @@ default_role_dict = {'role':None,
 for new in new_list:
 	new_role = copy.deepcopy(default_role_dict)
 	new_role['role'] = new
+
+	new_role['abstract_enzyme']=new.split(' (EC')[0]
 	roles_list.append(new_role)
 
 updated_roles=False
