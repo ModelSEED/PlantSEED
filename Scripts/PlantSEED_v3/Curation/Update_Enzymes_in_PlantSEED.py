@@ -94,10 +94,10 @@ default_role_dict = {'role':None,
 					 'features':list(),
 					 'reactions':list(),
 					 'subsystems':list(),
-					 'classes':list(),
 					 'curators':list(),
 					 'localization':dict(),
 					 'publications':list(),
+					 'classes':dict(),
 					 'include':True}
 
 for new in new_list:
@@ -137,6 +137,8 @@ for entry in roles_list:
 				# Update classes
 				if(field == 'subsystems'):
 					sys_cls = add_dict[entry['role']][field][input]
+					print(sys_cls)
+					print(entry)
 					if('classes' not in entry):
 						entry['classes'] = dict()
 					if(sys_cls not in entry['classes']):
