@@ -23063,7 +23063,7 @@
             "rxn14285"
         ],
         "localization": {
-            "r": {
+            "c": {
                 "Athaliana_TAIR10||AT1G16410": [
                     "AraCyc"
                 ]
@@ -23082,16 +23082,16 @@
         "type": "conditional",
         "is_transporter": false,
         "compartmentalization": {
-            "r": {
-                "reaction": "r",
+            "c": {
+                "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_1ef972": [
-                        "rxn14237_r",
-                        "rxn14161_r",
-                        "rxn14305_r",
-                        "rxn13986_r",
-                        "rxn13984_r",
-                        "rxn14285_r"
+                        "rxn14237_c",
+                        "rxn14161_c",
+                        "rxn14305_c",
+                        "rxn13986_c",
+                        "rxn13984_c",
+                        "rxn14285_c"
                     ]
                 },
                 "exclude": false
@@ -33335,7 +33335,7 @@
             "rxn14107"
         ],
         "localization": {
-            "r": {
+            "c": {
                 "Athaliana_TAIR10||AT4G31500": [
                     "GFP"
                 ]
@@ -33357,25 +33357,13 @@
         "type": "conditional",
         "is_transporter": false,
         "compartmentalization": {
-            "r": {
-                "reaction": "r",
-                "kbase_ids": {
-                    "PS_complex_05c4b8": [
-                        "rxn21795_r",
-                        "rxn21793_r",
-                        "rxn40669_r"
-                    ]
-                },
-                "exclude": false
-            },
             "c": {
                 "reaction": "c",
                 "kbase_ids": {
-                    "PS_complex_58ad0d": [
+                    "PS_complex_05c4b8": [
                         "rxn21795_c",
                         "rxn21793_c",
-                        "rxn40669_c",
-                        "rxn14107_c"
+                        "rxn40669_c"
                     ]
                 },
                 "exclude": false
@@ -33413,18 +33401,10 @@
             "rxn21800"
         ],
         "localization": {
-            "r": {
+            "c": {
                 "Athaliana_TAIR10||AT4G13770": [
                     "GFP"
                 ]
-            },
-            "c": {
-                "rxn21796": [],
-                "rxn21804": [],
-                "rxn21802": [],
-                "rxn21798": [],
-                "rxn21806": [],
-                "rxn21800": []
             }
         },
         "publications": [
@@ -33440,24 +33420,10 @@
         "type": "conditional",
         "is_transporter": false,
         "compartmentalization": {
-            "r": {
-                "reaction": "r",
-                "kbase_ids": {
-                    "PS_complex_53c95f": [
-                        "rxn21796_r",
-                        "rxn21804_r",
-                        "rxn21802_r",
-                        "rxn21798_r",
-                        "rxn21806_r",
-                        "rxn21800_r"
-                    ]
-                },
-                "exclude": false
-            },
             "c": {
                 "reaction": "c",
                 "kbase_ids": {
-                    "PS_complex_13699c": [
+                    "PS_complex_53c95f": [
                         "rxn21796_c",
                         "rxn21804_c",
                         "rxn21802_c",
@@ -34032,7 +33998,7 @@
             "rxn14161"
         ],
         "localization": {
-            "r": {
+            "c": {
                 "Athaliana_TAIR10||AT1G16400": [
                     "AraCyc"
                 ]
@@ -34051,12 +34017,12 @@
         "type": "conditional",
         "is_transporter": false,
         "compartmentalization": {
-            "r": {
-                "reaction": "r",
+            "c": {
+                "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_1ef972": [
-                        "rxn14237_r",
-                        "rxn14161_r"
+                        "rxn14237_c",
+                        "rxn14161_c"
                     ]
                 },
                 "exclude": false
@@ -46938,7 +46904,7 @@
             "rxn16428"
         ],
         "localization": {
-            "d": {
+            "c": {
                 "Athaliana_TAIR10||AT4G39950": [
                     "AraCyc"
                 ]
@@ -46958,13 +46924,13 @@
         "type": "conditional",
         "is_transporter": false,
         "compartmentalization": {
-            "d": {
-                "reaction": "d",
+            "c": {
+                "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_2c5605": [
-                        "rxn16427_d",
-                        "rxn16426_d",
-                        "rxn16428_d"
+                        "rxn16427_c",
+                        "rxn16426_c",
+                        "rxn16428_c"
                     ]
                 },
                 "exclude": false
