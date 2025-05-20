@@ -54159,6 +54159,18 @@
             }
         },
         "include": true,
-        "abstract_enzyme": "Glutamate-cysteine ligase"
+        "abstract_enzyme": "Glutamate-cysteine ligase",
+        "kbase_id": "PS_role_e82ade",
+        "compartmentalization": {
+            "d": {
+                "reaction": "d",
+                "kbase_ids": {
+                    "PS_complex_e282e9": [
+                        "rxn00646_d"
+                    ]
+                },
+                "exclude": false
+            }
+        }
     }
 ]
