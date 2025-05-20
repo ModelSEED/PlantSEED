@@ -120,7 +120,7 @@ for entry in roles_list:
 			if(field not in entry['role']):
 				entry[field]=list()
 
-			for input in add_dict[entry['role']][field].keys():
+			for input in add_dict[entry['role']][field]:
 
 				# Check to see if it's not there, and add it
 				if(input not in entry[field]):
@@ -133,6 +133,15 @@ for entry in roles_list:
 						entry['localization'][cpt][input]=[code]
 					else:
 						entry['localization'][cpt]={input:[code]}
+
+				# Update classes
+				if(field == 'subsystems'):
+					sys_cls = add_dict[entry['role']][field][input]
+					if('classes' not in entry):
+						entry['classes'] = dict()
+					if(sys_cls not in entry['classes']):
+						entry['classes'][sys_cls] = dict()
+					entry['classes'][sys_cls][input]=[]
 
 				# Update compartmentalization
 				if(field == 'reactions'):
