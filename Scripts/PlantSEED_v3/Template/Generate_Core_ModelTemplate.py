@@ -135,6 +135,8 @@ for entry in roles_list:
 		excluded_roles.append(entry['role'])
 		continue
 
+	if('reactions' not in entry):
+		continue
 	# Skip vacuolar ATP synthase, for pumping protons into vacuole
 	if("rxn08173" in entry["reactions"] and "v" in entry["localization"]):
 		print("Skipping vacuolar ATP synthase")
@@ -421,12 +423,13 @@ for template_reaction in sorted(reactions_roles):
 
 ########################################################################
 # This is for transport in aliphatic glucosinolate biosynthesis
-glc_tns = {'cpd17400':'d'}
+glc_tns = {'cpd17400':'d','cpd00506':'d'}
 glc_count=1
 for glc_met in glc_tns.keys():
 	
 	template_reaction_hash = copy.deepcopy(default_template_reaction)
 	template_reaction_hash['id']='glucosinolates_'+str(glc_count)
+	print("Glucosinolate transport reaction id: "+template_reaction_hash['id'])
 	template_reaction_hash['name']='Glucosinolate Transport'
 	template_reaction_hash['templatecompartment_ref']="~/compartments/id/"+glc_tns[glc_met]
 
