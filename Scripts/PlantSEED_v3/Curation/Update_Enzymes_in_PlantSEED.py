@@ -154,14 +154,11 @@ for entry in roles_list:
 						continue
 					else:
 						cpt = add_dict[entry['role']][field][input]
-						if(cpt not in entry['compartmentalization']):
-							print("Compartment "+cpt+" not found for reaction: "+input)
-							continue
-						else:
-							tmpl_rxn = input+'_'+entry['compartmentalization'][cpt]['reaction']
-							for complex in entry['compartmentalization'][cpt]['kbase_ids']:
-								if(input not in entry['compartmentalization'][cpt]['kbase_ids'][complex]):
-									entry['compartmentalization'][cpt]['kbase_ids'][complex].append(tmpl_rxn)
+						if('localization' not in entry):
+							entry['localization']=dict()
+						if(cpt not in entry['localization']):
+							entry['localization'][cpt]=dict()
+						entry['localization'][cpt][input]=["Assumed"]
 
 		updated_role=True
 
