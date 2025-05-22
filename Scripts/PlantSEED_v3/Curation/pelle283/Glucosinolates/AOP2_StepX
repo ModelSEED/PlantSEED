@@ -1,0 +1,6 @@
+Glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)	NEW
+Glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)	ADD	features	Athaliana_TAIR10||AT4G03060.	c:PPDB
+Glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)	ADD	reactions	rxn23785
+Glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)	ADD	reactions	rxn27066
+Glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)	ADD	publications	10.1105/tpc.13.3.681
+Glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)	ADD	subsystems	Aliphatic glucosinolate biosynthesis	Specialized metabolism
