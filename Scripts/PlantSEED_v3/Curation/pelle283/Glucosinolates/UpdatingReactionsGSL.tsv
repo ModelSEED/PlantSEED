@@ -3,3 +3,6 @@ Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)	ADD	reactions	rxn14107	c
 Alkylthiohydroximate C-S lyase (EC 4.4.1.13)	ADD	reactions	rxn24582	c
 Alkylthiohydroximate C-S lyase (EC 4.4.1.13)	ADD	reactions	rxn14068	c
 Alkylthiohydroximate C-S lyase (EC 4.4.1.13)	ADD	reactions	rxn12019	c
+Phenylalanine N-monooxygenase (EC 1.14.14.40)	ADD	reactions	rxn16423	c
+Phenylalanine N-monooxygenase (EC 1.14.14.40)	ADD	reactions	rxn16424	c
+Phenylalanine N-monooxygenase (EC 1.14.14.40)	REMOVE	reactions	rxn22372
