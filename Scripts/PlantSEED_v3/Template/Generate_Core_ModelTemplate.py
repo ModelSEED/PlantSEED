@@ -402,7 +402,8 @@ for template_reaction in sorted(reactions_roles):
 		# print(template_reaction_hash['id'],json.dumps(template_reaction_hash['templateReactionReagents'],indent=2))
 
 	# Update usage of NAD in Methylthioalkylmalate dehydrogenase in glucosinolate biosynthesis
-	if('rxn14172' in template_reaction_hash['id']):
+	imdh_rxns = ['rxn14172','rxn14182','rxn13977','rxn14122','rxn14244','rxn13983']
+	if(template_reaction_hash['id'].split('_')[0] in imdh_rxns):
 		(rxn,cpt)=template_reaction_hash['id'].split('_')
 		nad  = {'coefficient': -1.0,
         		'templatecompcompound_ref': '~/compcompounds/id/cpd00003_'+cpt}
