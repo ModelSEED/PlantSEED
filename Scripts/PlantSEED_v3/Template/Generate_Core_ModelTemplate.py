@@ -392,7 +392,8 @@ for template_reaction in sorted(reactions_roles):
 		# print(template_reaction_hash['id'],json.dumps(template_reaction_hash['templateReactionReagents'],indent=2))
 
 	# Update generic transaminases involved in glucosinolate biosynthesis
-	if('rxn23780' in template_reaction_hash['id']):
+	bcat3_rxns = ['rxn23780','rxn27069','rxn27070','rxn27071','rxn27072','rxn27073']
+	if(template_reaction_hash['id'].split('_')[0] in bcat3_rxns):
 		replace_generic={'cpd22369':'cpd00023','cpd21904':'cpd00024'}
 		for rgt in template_reaction_hash['templateReactionReagents']:
 			for cpd in replace_generic.keys():
@@ -424,7 +425,13 @@ for template_reaction in sorted(reactions_roles):
 
 ########################################################################
 # This is for transport in aliphatic glucosinolate biosynthesis
-glc_tns = {'cpd17400':'d','cpd00506':'d'}
+glc_tns = {'cpd17400':'d',
+		   'cpd17407':'d',
+		   'cpd17411':'d',
+		   'cpd17415':'d',
+		   'cpd17419':'d',
+		   'cpd17423':'d',
+		   'cpd00506':'d'} # Glutamylcysteine
 glc_count=1
 for glc_met in glc_tns.keys():
 	
