@@ -4,3 +4,4 @@
 .localhistory
 .vshistory
 .history
+*.pickle
