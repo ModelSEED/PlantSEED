@@ -19716,12 +19716,12 @@
         },
         "features": [
             "Athaliana_TAIR10||AT4G30530",
-            "Athalian_TAIR10||AT4G30530",
-            "Athalian_TAIR10||AT4G30540",
-            "Athalian_TAIR10||AT4G30550",
-            "Athalian_TAIR10||AT2G23960",
-            "Athalian_TAIR10||AT2G23970",
-            "Athalian_TAIR10||AT4G29210"
+            "Athaliana_TAIR10||AT4G30530",
+            "Athaliana_TAIR10||AT4G30540",
+            "Athaliana_TAIR10||AT4G30550",
+            "Athaliana_TAIR10||AT2G23960",
+            "Athaliana_TAIR10||AT2G23970",
+            "Athaliana_TAIR10||AT4G29210"
         ],
         "reactions": [
             "rxn21822",
@@ -54142,8 +54142,9 @@
     },
     {
         "role": "Glutamate-cysteine ligase (EC 6.3.2.2)",
+        "type": "universal",
         "features": [
-            "Athaliana_TAIR10||AT4G23100."
+            "Athaliana_TAIR10||AT4G23100"
         ],
         "reactions": [
             "rxn00646"
@@ -54156,7 +54157,7 @@
         ],
         "localization": {
             "d": {
-                "Athaliana_TAIR10||AT4G23100.": [
+                "Athaliana_TAIR10||AT4G23100": [
                     "PPDB"
                 ]
             }
@@ -54187,8 +54188,9 @@
     },
     {
         "role": "Glutathione synthase (EC 6.3.2.3)",
+        "type": "universal",
         "features": [
-            "Athaliana_TAIR10||AT5G27380."
+            "Athaliana_TAIR10||AT5G27380"
         ],
         "reactions": [
             "rxn00351"
@@ -54201,7 +54203,7 @@
         ],
         "localization": {
             "c": {
-                "Athaliana_TAIR10||AT5G27380.": [
+                "Athaliana_TAIR10||AT5G27380": [
                     "PPDB"
                 ]
             }
@@ -54233,8 +54235,9 @@
     },
     {
         "role": "Glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)",
+        "type": "conditional",
         "features": [
-            "Athaliana_TAIR10||AT4G03060."
+            "Athaliana_TAIR10||AT4G03060"
         ],
         "reactions": [
             "rxn23785",
@@ -54248,7 +54251,7 @@
         ],
         "localization": {
             "c": {
-                "Athaliana_TAIR10||AT4G03060.": [
+                "Athaliana_TAIR10||AT4G03060": [
                     "PPDB"
                 ]
             }
@@ -54281,8 +54284,9 @@
     },
     {
         "role": "3'(2'),5'-bisphosphate nucleotidase (EC 3.1.3.7)",
+        "type": "universal",
         "features": [
-            "Athaliana_TAIR10||AT5G63980.",
+            "Athaliana_TAIR10||AT5G63980",
             "Athaliana_TAIR10||AT5G64000"
         ],
         "reactions": [
@@ -54296,7 +54300,7 @@
         ],
         "localization": {
             "c": {
-                "Athaliana_TAIR10||AT5G63980.": [
+                "Athaliana_TAIR10||AT5G63980": [
                     "PPDB"
                 ]
             }
@@ -54327,6 +54331,7 @@
     },
     {
         "role": "cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)",
+        "type": "universal",
         "features": [],
         "reactions": [
             "rxn43940"
