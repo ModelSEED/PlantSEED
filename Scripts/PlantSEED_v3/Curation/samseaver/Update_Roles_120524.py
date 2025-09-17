@@ -11,17 +11,21 @@ rem_dict=dict()
 replace_dict=dict()
 new_list=list()
 with open(sys.argv[1]) as updates_file:
+	print("opened file")
 	for line in updates_file.readlines():
 		line=line.strip('\r\n')
-		tmp_lst=line.split('\t')
-		print(tmp_lst)
-		if(tmp_lst[1] == "UPDATE"):
+		tmp_lst=line.split('   ') # I switch this to be the size of three spaces instead because tab did not work
+		print("what is this") #added for testing
+		print(tmp_lst) #equivalent of one line in .tsv added for testing
+		
+		if(tmp_lst[1] == "UPDATE"): #updated_roles_dict
 			replace_dict[tmp_lst[0]]=tmp_lst[2]
 
 		if(tmp_lst[1] == "NEW"):
 			new_list.append(tmp_lst[2])
 
-		if(tmp_lst[1] == "ADD"):
+		if(tmp_lst[1] == "ADD"): #add_dict
+			print(tmp_lst[0] )
 			if(tmp_lst[0] not in add_dict):
 				add_dict[tmp_lst[0]]=dict()
 			if(tmp_lst[2] not in add_dict[tmp_lst[0]]):
@@ -37,31 +41,40 @@ with open(sys.argv[1]) as updates_file:
 				rem_dict[tmp_lst[0]][tmp_lst[2]]=list()
 			rem_dict[tmp_lst[0]][tmp_lst[2]].append(tmp_lst[3])	
 
-print(replace_dict)
-with open("../../../../Data/PlantSEED_v3/PlantSEED_Roles.json") as subsystem_file:
+
+			
+with open("/home/tesse044/Bio_Research/PlantSEED/Data/PlantSEED_v3/PlantSEED_Roles.json") as subsystem_file:
 	roles_list = json.load(subsystem_file)
 
+print(len(roles_list)) # roles_list has 935 lines, testing
 # check for "new" roles first
 for entry in roles_list:
 	if(entry['role'] in new_list):
 		print("Warning, New Role already present: "+entry['role'])
 		sys.exit()
-
+print("makes it here")
 for new in new_list:
 	roles_list.append({'role':new})
 
+
 updated_roles=False
+print(updated_roles) #makes it to this point I added this for testing
+print((add_dict))
 for entry in roles_list:
-	updated_role=False
+	updated_roles=False
 
 	# Must change role name first if need to!
 	if(entry['role'] in replace_dict):
 		entry['role'] = replace_dict[entry['role']]
-		updated_role=True
+		updated_roles=True
 
 	# Iterate through entries to add to role
-	if(entry['role'] in add_dict):
+					# print("what is in entry[role]")
+	#print(entry['role'])
+	if(entry['role'] in add_dict.keys()):
+		print("FOUND") # added for testing
 		for field in add_dict[entry['role']]:
+			print(len(add_dict[entry['role']]))
 			if(field not in entry['role']):
 				entry[field]=list()
 
@@ -81,6 +94,7 @@ for entry in roles_list:
 
 				# Update compartmentalization
 				if(field == 'reactions'):
+					print("found reaction feild")
 					for cpts in entry['compartmentalization']:
 						if(cpts in add_dict[entry['role']][field][input]):
 							tmpl_rxn = input+'_'+entry['compartmentalization'][cpts]['reaction']
@@ -88,8 +102,9 @@ for entry in roles_list:
 								if(input not in entry['compartmentalization'][cpts]['kbase_ids'][complex]):
 									entry['compartmentalization'][cpts]['kbase_ids'][complex].append(tmpl_rxn)
 
-		updated_role=True
-
+		updated_roles=True 
+		print("updated role below") #for testing
+		print(updated_roles) # for testing
 	# Iterate through entries to remove from role
 	if(entry['role'] in rem_dict):
 		for field in rem_dict[entry['role']]:
@@ -109,7 +124,8 @@ for entry in roles_list:
 					for cpt in delete_cpts:
 						del(entry['localization'][cpt])
 
-		updated_role=True
+		updated_roles=True
+		print("made it")
 
 	if(updated_role is True):
 		if('curators' not in entry):
@@ -123,5 +139,5 @@ for entry in roles_list:
 		updated_roles=True
 
 if(updated_roles is True):
-	with open('../../../../Data/PlantSEED_v3/PlantSEED_Roles.json','w') as new_subsystem_file:
+	with open('/home/tesse044/Bio_Research/PlantSEED/Data/PlantSEED_v3/PlantSEED_Roles.json','w') as new_subsystem_file:
 		json.dump(roles_list,new_subsystem_file,indent=4)

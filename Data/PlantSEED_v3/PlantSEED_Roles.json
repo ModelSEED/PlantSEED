@@ -18197,21 +18197,14 @@
         "abstract_enzyme": "Flavanone-3-hydroxylase"
     },
     {
-        "role": "Flavin-containing glucosinolate S-oxygenase (no EC)",
+        "role": "Aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)",
         "include": true,
         "subsystems": [
             "Aliphatic glucosinolate biosynthesis"
         ],
         "classes": {
             "Specialized metabolism": {
-                "Aliphatic glucosinolate biosynthesis": [
-                    "PWY-1187",
-                    "PWYQT-4471",
-                    "PWYQT-4472",
-                    "PWYQT-4473",
-                    "PWYQT-4474",
-                    "PWYQT-4475"
-                ]
+                "Aliphatic glucosinolate biosynthesis": []
             }
         },
         "features": [
@@ -18222,12 +18215,7 @@
             "Athaliana_TAIR10||AT1G65860"
         ],
         "reactions": [
-            "rxn27060",
-            "rxn27064",
-            "rxn27063",
-            "rxn27061",
-            "rxn23784",
-            "rxn27062"
+            "rxn41751"
         ],
         "localization": {
             "c": {
@@ -18236,11 +18224,14 @@
                 ]
             }
         },
-        "publications": [],
+        "publications": [
+            "10.1104/pp.108.125757"
+        ],
         "kbase_id": "PS_role_c902af",
         "curators": [
             "SvetaG",
-            "samseaver"
+            "samseaver",
+            "pelle283"
         ],
         "type": "conditional",
         "is_transporter": false,
@@ -23063,7 +23054,7 @@
             "rxn14285"
         ],
         "localization": {
-            "r": {
+            "c": {
                 "Athaliana_TAIR10||AT1G16410": [
                     "AraCyc"
                 ]
@@ -23082,16 +23073,16 @@
         "type": "conditional",
         "is_transporter": false,
         "compartmentalization": {
-            "r": {
-                "reaction": "r",
+            "c": {
+                "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_1ef972": [
-                        "rxn14237_r",
-                        "rxn14161_r",
-                        "rxn14305_r",
-                        "rxn13986_r",
-                        "rxn13984_r",
-                        "rxn14285_r"
+                        "rxn14237_c",
+                        "rxn14161_c",
+                        "rxn14305_c",
+                        "rxn13986_c",
+                        "rxn13984_c",
+                        "rxn14285_c"
                     ]
                 },
                 "exclude": false
@@ -33332,12 +33323,10 @@
             "Athaliana_TAIR10||AT4G13770"
         ],
         "reactions": [
-            "rxn21795",
-            "rxn21793",
-            "rxn40669"
+            "rxn14107"
         ],
         "localization": {
-            "r": {
+            "c": {
                 "Athaliana_TAIR10||AT4G31500": [
                     "GFP"
                 ]
@@ -33359,21 +33348,10 @@
         "type": "conditional",
         "is_transporter": false,
         "compartmentalization": {
-            "r": {
-                "reaction": "r",
-                "kbase_ids": {
-                    "PS_complex_05c4b8": [
-                        "rxn21795_r",
-                        "rxn21793_r",
-                        "rxn40669_r"
-                    ]
-                },
-                "exclude": false
-            },
             "c": {
                 "reaction": "c",
                 "kbase_ids": {
-                    "PS_complex_58ad0d": [
+                    "PS_complex_05c4b8": [
                         "rxn21795_c",
                         "rxn21793_c",
                         "rxn40669_c"
@@ -33414,18 +33392,10 @@
             "rxn21800"
         ],
         "localization": {
-            "r": {
+            "c": {
                 "Athaliana_TAIR10||AT4G13770": [
                     "GFP"
                 ]
-            },
-            "c": {
-                "rxn21796": [],
-                "rxn21804": [],
-                "rxn21802": [],
-                "rxn21798": [],
-                "rxn21806": [],
-                "rxn21800": []
             }
         },
         "publications": [
@@ -33441,24 +33411,10 @@
         "type": "conditional",
         "is_transporter": false,
         "compartmentalization": {
-            "r": {
-                "reaction": "r",
-                "kbase_ids": {
-                    "PS_complex_53c95f": [
-                        "rxn21796_r",
-                        "rxn21804_r",
-                        "rxn21802_r",
-                        "rxn21798_r",
-                        "rxn21806_r",
-                        "rxn21800_r"
-                    ]
-                },
-                "exclude": false
-            },
             "c": {
                 "reaction": "c",
                 "kbase_ids": {
-                    "PS_complex_13699c": [
+                    "PS_complex_53c95f": [
                         "rxn21796_c",
                         "rxn21804_c",
                         "rxn21802_c",
@@ -34033,7 +33989,7 @@
             "rxn14161"
         ],
         "localization": {
-            "r": {
+            "c": {
                 "Athaliana_TAIR10||AT1G16400": [
                     "AraCyc"
                 ]
@@ -34052,12 +34008,12 @@
         "type": "conditional",
         "is_transporter": false,
         "compartmentalization": {
-            "r": {
-                "reaction": "r",
+            "c": {
+                "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_1ef972": [
-                        "rxn14237_r",
-                        "rxn14161_r"
+                        "rxn14237_c",
+                        "rxn14161_c"
                     ]
                 },
                 "exclude": false
@@ -34205,9 +34161,7 @@
             "Athaliana_TAIR10||AT5G05260"
         ],
         "reactions": [
-            "rxn16424",
-            "rxn22372",
-            "rxn16423"
+            "rxn16425"
         ],
         "localization": {
             "c": {
@@ -34235,7 +34189,8 @@
                     "PS_complex_c4671e": [
                         "rxn16424_c",
                         "rxn22372_c",
-                        "rxn16423_c"
+                        "rxn16423_c",
+                        "rxn16425_c"
                     ]
                 },
                 "exclude": false
@@ -42192,14 +42147,9 @@
             "Athaliana_TAIR10||AT2G20610"
         ],
         "reactions": [
-            "rxn21826",
-            "rxn21832",
-            "rxn21831",
-            "rxn21828",
-            "rxn21825",
-            "rxn21830",
-            "rxn21833",
-            "rxn21827"
+            "rxn24582",
+            "rxn14068",
+            "rxn12019"
         ],
         "localization": {
             "c": {
@@ -42237,7 +42187,10 @@
                         "rxn21825_c",
                         "rxn21830_c",
                         "rxn21833_c",
-                        "rxn21827_c"
+                        "rxn21827_c",
+                        "rxn24582_c",
+                        "rxn14068_c",
+                        "rxn12019_c"
                     ]
                 },
                 "exclude": false
@@ -46942,7 +46895,7 @@
             "rxn16428"
         ],
         "localization": {
-            "d": {
+            "c": {
                 "Athaliana_TAIR10||AT4G39950": [
                     "AraCyc"
                 ]
@@ -46962,13 +46915,13 @@
         "type": "conditional",
         "is_transporter": false,
         "compartmentalization": {
-            "d": {
-                "reaction": "d",
+            "c": {
+                "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_2c5605": [
-                        "rxn16427_d",
-                        "rxn16426_d",
-                        "rxn16428_d"
+                        "rxn16427_c",
+                        "rxn16426_c",
+                        "rxn16428_c"
                     ]
                 },
                 "exclude": false
@@ -54165,5 +54118,230 @@
             }
         },
         "type": "conditional"
+    },
+    {
+        "role": "Glutamate-cysteine ligase (EC 6.3.2.2)",
+        "features": [
+            "Athaliana_TAIR10||AT4G23100."
+        ],
+        "reactions": [
+            "rxn00646"
+        ],
+        "subsystems": [
+            "Glutathionine_biosynthesis"
+        ],
+        "curators": [
+            "pelle283"
+        ],
+        "localization": {
+            "d": {
+                "Athaliana_TAIR10||AT4G23100.": [
+                    "PPDB"
+                ]
+            }
+        },
+        "publications": [
+            "10.1074/jbc.M405127200",
+            "10.1111/j.1365-313X.2004.02269.x"
+        ],
+        "classes": {
+            "Other": {
+                "Glutathionine_biosynthesis": []
+            }
+        },
+        "include": true,
+        "abstract_enzyme": "Glutamate-cysteine ligase",
+        "kbase_id": "PS_role_e82ade",
+        "compartmentalization": {
+            "d": {
+                "reaction": "d",
+                "kbase_ids": {
+                    "PS_complex_e282e9": [
+                        "rxn00646_d"
+                    ]
+                },
+                "exclude": false
+            }
+        }
+    },
+    {
+        "role": "Glutathione synthase (EC 6.3.2.3)",
+        "features": [
+            "Athaliana_TAIR10||AT5G27380."
+        ],
+        "reactions": [
+            "rxn00351"
+        ],
+        "subsystems": [
+            "Glutathionine_biosynthesis"
+        ],
+        "curators": [
+            "pelle283"
+        ],
+        "localization": {
+            "c": {
+                "Athaliana_TAIR10||AT5G27380.": [
+                    "PPDB"
+                ]
+            }
+        },
+        "publications": [
+            "10.1074/jbc.M407961200",
+            "10.1016/0014-5793(95)01253-1",
+            "10.1111/j.1365-313X.2004.02269.x"
+        ],
+        "classes": {
+            "Other": {
+                "Glutathionine_biosynthesis": []
+            }
+        },
+        "include": true,
+        "abstract_enzyme": "Glutathione synthase",
+        "kbase_id": "PS_role_465867",
+        "compartmentalization": {
+            "c": {
+                "reaction": "c",
+                "kbase_ids": {
+                    "PS_complex_9fe4b7": [
+                        "rxn00351_c"
+                    ]
+                },
+                "exclude": false
+            }
+        }
+    },
+    {
+        "role": "Glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)",
+        "features": [
+            "Athaliana_TAIR10||AT4G03060."
+        ],
+        "reactions": [
+            "rxn23785",
+            "rxn27066"
+        ],
+        "subsystems": [
+            "Aliphatic glucosinolate biosynthesis"
+        ],
+        "curators": [
+            "pelle283"
+        ],
+        "localization": {
+            "c": {
+                "Athaliana_TAIR10||AT4G03060.": [
+                    "PPDB"
+                ]
+            }
+        },
+        "publications": [
+            "10.1105/tpc.13.3.681"
+        ],
+        "classes": {
+            "Specialized metabolism": {
+                "Aliphatic glucosinolate biosynthesis": []
+            }
+        },
+        "include": true,
+        "abstract_enzyme": "Glucosinolate 2-oxoglutarate-dependent dioxygenase",
+        "kbase_id": "PS_role_54b04e",
+        "compartmentalization": {
+            "c": {
+                "reaction": "c",
+                "kbase_ids": {
+                    "PS_complex_2e191a": [
+                        "rxn23785_c"
+                    ],
+                    "PS_complex_19fd4e": [
+                        "rxn27066_c"
+                    ]
+                },
+                "exclude": false
+            }
+        }
+    },
+    {
+        "role": "3'(2'),5'-bisphosphate nucleotidase (EC 3.1.3.7)",
+        "features": [
+            "Athaliana_TAIR10||AT5G63980.",
+            "Athaliana_TAIR10||AT5G64000"
+        ],
+        "reactions": [
+            "rxn00137"
+        ],
+        "subsystems": [
+            "Sulfur_metabolism"
+        ],
+        "curators": [
+            "pelle283"
+        ],
+        "localization": {
+            "c": {
+                "Athaliana_TAIR10||AT5G63980.": [
+                    "PPDB"
+                ]
+            }
+        },
+        "publications": [
+            "10.1105/tpc.8.3.529",
+            "10.1111/j.1365-313X.2008.03770.x"
+        ],
+        "classes": {
+            "other": {
+                "Sulfur_metabolism": []
+            }
+        },
+        "include": true,
+        "abstract_enzyme": "3'(2'),5'-bisphosphate nucleotidase",
+        "kbase_id": "PS_role_39a69e",
+        "compartmentalization": {
+            "c": {
+                "reaction": "c",
+                "kbase_ids": {
+                    "PS_complex_07769b": [
+                        "rxn00137_c"
+                    ]
+                },
+                "exclude": false
+            }
+        }
+    },
+    {
+        "role": "cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)",
+        "features": [],
+        "reactions": [
+            "rxn43940"
+        ],
+        "subsystems": [
+            "Aliphatic glucosinolate biosynthesis"
+        ],
+        "curators": [
+            "pelle283"
+        ],
+        "localization": {
+            "c": {
+                "rxn43940": [
+                    "Assumed"
+                ]
+            }
+        },
+        "publications": [],
+        "classes": {
+            "Specialized metabolism": {
+                "Aliphatic glucosinolate biosynthesis": []
+            }
+        },
+        "include": true,
+        "abstract_enzyme": "cysteinylglycine-S-conjugate dipeptidase",
+        "kbase_id": "PS_role_fd6fda",
+        "compartmentalization": {
+            "c": {
+                "reaction": "c",
+                "kbase_ids": {
+                    "PS_complex_ab30da": [
+                        "rxn43940_c"
+                    ]
+                },
+                "exclude": false
+            }
+        }
     }
 ]

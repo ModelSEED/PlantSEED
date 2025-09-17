@@ -105,3 +105,22 @@ All|EN	cpd00067	c	-30	Proton	energy
 
 #Specialized
 All|SP	cpd17403	d	0.001	Homomethionine	specialized
+
+
+#Glucosinolates
+# Aliphatic
+All|GS	cpd05338	c	0.001	Sinigrin GSL	specialized # three carbon
+All|GS	cpb22000	c	0.001	Glucomalcommin	specialized
+
+#Phenolic
+All|GS	cpd28704	c	0.001	Glucotropaeolin	specialized
+
+#Indolic
+All|GS	cpd03467	c	0.001	Glucobrassicin	specialized
+All|GS	cpd05333	c	0.001	4-Hydroxyglucobrassicin	specialized
+All|GS	cpd05335	c	0.001	Neoglucobrassicin	specialized
+All|GS	cpd05334	c	0.001	4-Methoxy-glucobrassicin	specialized
+
+
+#????????????
+All|GS	cpd34716	c	0.001	Sinalbin	specialized
