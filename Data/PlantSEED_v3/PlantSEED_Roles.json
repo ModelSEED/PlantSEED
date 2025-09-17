@@ -33329,6 +33329,9 @@
             "c": {
                 "Athaliana_TAIR10||AT4G31500": [
                     "GFP"
+                ],
+                "rxn14107": [
+                    "Assumed"
                 ]
             }
         },
@@ -34161,13 +34164,22 @@
             "Athaliana_TAIR10||AT5G05260"
         ],
         "reactions": [
-            "rxn16425"
+            "rxn16425",
+            "rxn16423",
+            "rxn16424"
         ],
         "localization": {
             "c": {
-                "rxn16424": [],
+                "rxn16424": [
+                    "Assumed"
+                ],
                 "rxn22372": [],
-                "rxn16423": []
+                "rxn16423": [
+                    "Assumed"
+                ],
+                "rxn16425": [
+                    "Assumed"
+                ]
             }
         },
         "publications": [
@@ -42160,7 +42172,16 @@
                 "rxn21825": [],
                 "rxn21830": [],
                 "rxn21833": [],
-                "rxn21827": []
+                "rxn21827": [],
+                "rxn24582": [
+                    "Assumed"
+                ],
+                "rxn14068": [
+                    "Assumed"
+                ],
+                "rxn12019": [
+                    "Assumed"
+                ]
             }
         },
         "publications": [

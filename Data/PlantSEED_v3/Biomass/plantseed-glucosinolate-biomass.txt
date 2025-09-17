@@ -4,7 +4,7 @@ All|SP	cpd17403	d	0.001	Homomethionine	specialized
 #Glucosinolates
 # Aliphatic
 All|GS	cpd05338	c	0.001	Sinigrin GSL	specialized # three carbon
-All|GS	cpb22000	c	0.001	Glucomalcommin	specialized
+All|GS	cpd22000	c	0.001	Glucomalcommin	specialized
 
 #Phenolic
 All|GS	cpd28704	c	0.001	Glucotropaeolin	specialized

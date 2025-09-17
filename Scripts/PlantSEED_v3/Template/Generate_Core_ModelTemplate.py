@@ -59,8 +59,12 @@ print("Loading biochemistry "+time_string)
 MSD_git_url = "https://raw.githubusercontent.com/ModelSEED/ModelSEEDDatabase/"
 #MSD_commit = "v1.1.1"
 MSD_commit = "7063bbffde4b40c01550dcb48b89107f28caa2b1" #adding_nad_transporters
+print("Warning: Add MSD as submodule!")
 
 reactions_dict=dict()
+if(os.path.isdir('Biochem_Cache') is False):
+	os.mkdir('Biochem_Cache')
+
 if(os.path.isfile('Biochem_Cache/MS_Rxns.pickle')):
 	with open('Biochem_Cache/MS_Rxns.pickle', 'rb') as rfh:
 		reactions_dict = pickle.load(rfh)
@@ -71,7 +75,7 @@ else:
 		reactions_dict[reaction['id']]=reaction
 
 	# Its important to use binary mode
-	with open('Biochem_Cache/MS_Rxns.pickle', 'ab') as rfh:
+	with open('Biochem_Cache/MS_Rxns.pickle', 'wb') as rfh:
 		pickle.dump(reactions_dict,rfh)
 
 compounds_dict=dict()
@@ -102,7 +106,7 @@ else:
 		compounds_dict[compound['id']]=template_compound_hash
 
 	# Its important to use binary mode
-	with open('Biochem_Cache/MS_Cpds.pickle', 'ab') as cfh:
+	with open('Biochem_Cache/MS_Cpds.pickle', 'wb') as cfh:
 		pickle.dump(compounds_dict,cfh)
 
 time_string = str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %Hh %Mm %Ss'))
