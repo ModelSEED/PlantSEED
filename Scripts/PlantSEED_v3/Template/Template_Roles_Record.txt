@@ -1,6 +1,7 @@
 PS_role_1cc588	(3R)-hydroxypalmitoyl-[acyl carrier protein] dehydratase (EC 4.2.1.-)
 PS_role_783638	(E)-Cinnamoyl-CoA ligase (EC 6.2.1.-)
 PS_role_7d46a6	(E)-beta-Ocimene Synthase (EC 4.2.3.106)
+PS_role_8975d1	(Methylsulfanyl)alkanaldoxime N-monooxygenase (EC 1.14.14.43)
 PS_role_4a721d	1,2-dihydroxy-3-keto-5-methylthiopentene dioxygenase (EC 1.13.11.54)
 PS_role_1deb43	1,4-dihydroxy-2-naphthoate polyprenyltransferase (EC 2.5.1.74)
 PS_role_4e41d3	1,4-dihydroxy-2-naphthoyl-CoA hydrolase (EC 3.1.2.28), plant type
@@ -124,8 +125,10 @@ PS_role_2461bb	Alanine transaminase (EC 2.6.1.2)
 PS_role_3f2b41	Alanine transport
 PS_role_de6ab3	Alcohol dehydrogenase (EC 1.1.1.1)
 PS_role_3ed002	Aldehyde dehydrogenase (EC 1.2.1.3)
+PS_role_726ec8	Aliphatic desulfoglucosinolate sulfotransferase (EC 2.8.2.38)
 PS_role_0aa9aa	Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (hydroxylation) (no EC)
 PS_role_3a7671	Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)
+PS_role_cb78cd	Alkylthiohydroximate C-S lyase (EC 4.4.1.13)
 PS_role_a47232	Alpha-farnesene synthase (EC 4.2.3.46)
 PS_role_f8a867	Amidophosphoribosyltransferase (EC 2.4.2.14)
 PS_role_2b0830	Aminodeoxychorismate lyase (EC 4.1.3.38)
@@ -141,6 +144,7 @@ PS_role_2c0c10	Argininosuccinate lyase (EC 4.3.2.1)
 PS_role_b3efb1	Argininosuccinate synthase (EC 6.3.4.5)
 PS_role_ca2275	Arogenate dehydratase (EC 4.2.1.91)
 PS_role_222c14	Arogenate dehydrogenase (EC 1.3.1.78)
+PS_role_c61b82	Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)
 PS_role_efcc06	Asparagine synthetase [glutamine-hydrolyzing] (EC 6.3.5.4)
 PS_role_5ded6a	Asparagine transport
 PS_role_62a094	Aspartate aminotransferase (EC 2.6.1.1)
@@ -222,7 +226,6 @@ PS_role_98e089	Demethylphylloquinone methyltransferase (EC 2.1.1.329)
 PS_role_41f345	Deoxycytidine monophosphate deaminase (EC 3.5.4.12)
 PS_role_dfd46e	Deoxyuridine 5'-triphosphate nucleotidohydrolase (EC 3.6.1.23)
 PS_role_50e3d0	Dephospho-CoA kinase (EC 2.7.1.24)
-PS_role_726ec8	Desulfoglucosinolate sulfotransferase (EC 2.8.2.-)
 PS_role_8bb862	Dethiobiotin synthetase (EC 6.3.3.3)
 PS_role_949c57	Dhurrinase beta-glucosidase (EC 3.2.1.-)
 PS_role_23146e	Diacylglycerol cholinephosphotransferase (EC 2.7.8.2)
@@ -287,7 +290,6 @@ PS_role_1a2ec2	Fumarate transport
 PS_role_d8ce45	GMP synthase [glutamine-hydrolyzing] (EC 6.3.5.2)
 PS_role_8263dd	GTP cyclohydrolase I (EC 3.5.4.16) type 1
 PS_role_433e3f	GTP cyclohydrolase II (EC 3.5.4.25)
-PS_role_2b7cf0	Gamma-glutamyl peptidase in glucosinolates biosynthesis
 PS_role_3fabe2	Gamma-glutamyl phosphate reductase (EC 1.2.1.41)
 PS_role_2e0855	Geranyl-diphosphate synthase (EC 2.5.1.1)
 PS_role_f142e5	Geranylgeranyl diphosphate reductase (EC 1.3.1.83)
@@ -296,6 +298,7 @@ PS_role_e2539e	Geranyllinalool synthase (EC 4.2.3.144)
 PS_role_cba3de	Gluconokinase (EC 2.7.1.12)
 PS_role_438e0a	Glucose-6-phosphate 1-dehydrogenase (EC 1.1.1.49)
 PS_role_13f3c3	Glucose-6-phosphate isomerase (EC 5.3.1.9)
+PS_role_2b7cf0	Glucosinolate gamma-glutamyl hydrolase (EC 3.4.19.16)
 PS_role_51033c	Glucuronokinase (EC 2.7.1.43)
 PS_role_46d375	Glutamate 5-kinase (EC 2.7.2.11)
 PS_role_e69b86	Glutamate N-acetyltransferase (EC 2.3.1.35)
@@ -310,8 +313,7 @@ PS_role_f73cee	Glutamine synthetase type II, eukaryotic (EC 6.3.1.2)
 PS_role_b04038	Glutamine transport
 PS_role_fe4f8b	Glutamyl-tRNA reductase (EC 1.2.1.70)
 PS_role_2f91cd	Glutamyl-tRNA synthetase (EC 6.1.1.17)
-PS_role_9af9d5	Glutathione S-transferase in Trp, Phe, Tyr-derived glucosinolates biosynthesis, predicted
-PS_role_08a707	Glutathione S-transferase in glucosinolates biosynthesis, predicted
+PS_role_9af9d5	Glutathione S-transferase
 PS_role_b0ae27	Glutathione reductase (EC 1.8.1.7)
 PS_role_206972	Glyceraldehyde 3-phosphate transport
 PS_role_2bad8a	Glycerate transport
@@ -334,10 +336,10 @@ PS_role_cf74b6	Histidine transport
 PS_role_b04198	Histidinol dehydrogenase (EC 1.1.1.23)
 PS_role_194287	Histidinol-phosphatase [alternative form] (EC 3.1.3.15)
 PS_role_2d8f95	Histidinol-phosphate aminotransferase (EC 2.6.1.9)
-PS_role_680bc5	Homo, di, tri, tetra, penta & hexahomomethionine N-hydroxylase (EC 1.14.13.n5)
-PS_role_190a6d	Homo, di, tri, tetra, penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n5)
 PS_role_ff36ae	Homocysteine S-methyltransferase (EC 2.1.1.10)
 PS_role_057b72	Homogentisate solanesyltransferase (EC 2.5.-)
+PS_role_680bc5	Homomethionine N-monooxygenase (EC 1.14.14.42)
+PS_role_e5b2c2	Homomethionine N-monooxygenase, 10C-11C only (EC 1.14.14.42)
 PS_role_3d9a3d	Homoserine dehydrogenase (EC 1.1.1.3)
 PS_role_21308c	Homoserine kinase (EC 2.7.1.39)
 PS_role_e489c2	Hydrogen peroxide transport
@@ -414,8 +416,7 @@ PS_role_a7b687	Mitochondrial pyruvate carrier (TC 2.A.105)
 PS_role_6e20e6	Monooxygenase, catalyses 4-hydroxylation of indolyl-3-methyl glucosinolate (I3M) to 4OH-I3M
 PS_role_c22d1a	N-acetyl-gamma-glutamyl-phosphate reductase (EC 1.2.1.38)
 PS_role_26a70f	N-acetylglutamate synthase (EC 2.3.1.1)
-PS_role_1b2ad6	N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in Trp, Phe, Tyr-derived glucosinolates biosynthesis
-PS_role_e879a3	N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195) in aliphatic glucosinolates biosynthesis
+PS_role_1b2ad6	N-hydroxythioamide S-beta-glucosyltransferase (EC 2.4.1.195)
 PS_role_41ed72	NAD and other nucleotides transport (of mitochondrial carrier family; TC 2.A.29.10.10)
 PS_role_70cef8	NAD kinase (EC 2.7.1.23)
 PS_role_5ed685	NAD synthetase (EC 6.3.1.5)
@@ -485,8 +486,6 @@ PS_role_d7206b	Orotate phosphoribosyltransferase (EC 2.4.2.10)
 PS_role_8ef88d	Orotate transport
 PS_role_768607	Orotidine 5'-phosphate decarboxylase (EC 4.1.1.23)
 PS_role_878ad7	Oxaloacetate transport
-PS_role_c61b82	Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis
-PS_role_8975d1	Oxime metabolizining monooxygenase in aliphatic glucosinolates biosynthesis
 PS_role_bac0c3	Oxygen transport
 PS_role_c00e62	PLP transport
 PS_role_af43ef	Palmitoyl-[acyl carrier protein] thioesterase (EC 3.1.2.-)
@@ -495,9 +494,8 @@ PS_role_42691b	Pantoate--beta-alanine ligase (EC 6.3.2.1)
 PS_role_04277c	Pantothenate kinase type II, eukaryotic (EC 2.7.1.33)
 PS_role_459f31	Para-aminobenzoate synthase, amidotransferase component (EC 2.6.1.85)
 PS_role_bc9739	Para-aminobenzoate synthase, aminase component (EC 2.6.1.85)
-PS_role_e5b2c2	Penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n6)
 PS_role_0b7f7d	Peroxidase (EC 1.11.1.7)
-PS_role_fb7a11	Phenylalanine N-monooxygenase (EC 1.14.13.124)
+PS_role_fb7a11	Phenylalanine N-monooxygenase (EC 1.14.14.40)
 PS_role_b49604	Phenylalanine ammonia-lyase (EC 4.3.1.24)
 PS_role_bc9f5d	Phenylalanine transport
 PS_role_9906ae	Phenylpropanoyltransferase (EC 2.3.1.-)
@@ -621,7 +619,6 @@ PS_role_dd722d	S-Adenosyl-4-methylthio-2-oxobutanoate transport
 PS_role_268e2c	S-Adenosylhomocysteine transport
 PS_role_375d40	S-Adenosylmethionine transport
 PS_role_09b231	S-adenosylmethionine synthetase (EC 2.5.1.6)
-PS_role_cb78cd	S-alkyl-thiohydroximate lyase (EC 4.4.1.-)
 PS_role_f2f905	S-linalool synthase (EC 4.2.3.25)
 PS_role_e4380c	Sedoheptulose-1,7-bisphosphatase (EC 3.1.3.37)
 PS_role_b24e55	Serine acetyltransferase (EC 2.3.1.30)
@@ -687,7 +684,7 @@ PS_role_2e7341	Trans-cinnamate 4-monooxygenase (EC 1.14.13.11)
 PS_role_0bc038	Transaldolase (EC 2.2.1.2)
 PS_role_a90791	Transketolase (EC 2.2.1.1)
 PS_role_03d7c3	Triosephosphate isomerase (EC 5.3.1.1)
-PS_role_4b6628	Tryptophan N-monooxygenase (EC 1.14.13.125)
+PS_role_4b6628	Tryptophan N-monooxygenase (EC 1.14.14.156)
 PS_role_830b5f	Tryptophan synthase alpha chain (EC 4.2.1.20)
 PS_role_a2c730	Tryptophan synthase beta chain (EC 4.2.1.20)
 PS_role_e2c4cd	Tryptophan transport
