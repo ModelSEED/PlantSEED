@@ -1,0 +1,7 @@
+Glutathione synthase (EC 6.3.2.3)	NEW
+Glutathione synthase (EC 6.3.2.3)	ADD	features	Athaliana_TAIR10||AT5G27380.	c:PPDB
+Glutathione synthase (EC 6.3.2.3)	ADD	publications	10.1074/jbc.M407961200
+Glutathione synthase (EC 6.3.2.3)	ADD	publications	10.1016/0014-5793(95)01253-1
+Glutathione synthase (EC 6.3.2.3)	ADD	publications	10.1111/j.1365-313X.2004.02269.x
+Glutathione synthase (EC 6.3.2.3)	ADD	reactions	rxn00351
+Glutathione synthase (EC 6.3.2.3)	ADD	subsystems	Glutathionine_biosynthesis	Other

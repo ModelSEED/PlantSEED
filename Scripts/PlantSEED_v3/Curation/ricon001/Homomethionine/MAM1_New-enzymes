@@ -1,0 +1,2 @@
+reaction	role	feature	publication	subsystem	class	pathway	localization	cofactor	homomers	include
+rxn14004;rxn14183	Methylthioalkylmalate synthase, 5C-6C only (EC 2.3.3.17)	Athaliana_TAIR10||AT5G23010;UniProt||Q9FG67	10.1007/s00425-003-1184-3,10.1104/pp.010416	Homomethionine_biosynthesis_and_methionine_chain_elongation_pathway_for_glucosinolates_in_plants	Amino acids	PWY-1186||PWYQT-4450	c:Athaliana_TAIR10||AT5G23010:PPDB;c:UniProt||Q9FG67:PPDB		1	include	conditional	ricon001;samseaver

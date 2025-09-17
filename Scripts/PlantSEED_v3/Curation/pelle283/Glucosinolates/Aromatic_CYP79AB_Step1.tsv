@@ -1,0 +1,8 @@
+Phenylalanine N-monooxygenase (EC 1.14.13.124)	UPDATE	Phenylalanine N-monooxygenase (EC 1.14.14.40)
+Phenylalanine N-monooxygenase (EC 1.14.14.40)	ADD	features	Athaliana_TAIR10||AT5G05260
+Phenylalanine N-monooxygenase (EC 1.14.14.40)	ADD	publications	10.1074/jbc.275.19.14659
+Tryptophan N-monooxygenase (EC 1.14.13.125)	UPDATE	Tryptophan N-monooxygenase (EC 1.14.14.156)
+Tryptophan N-monooxygenase (EC 1.14.14.156)	ADD	features	Athaliana_TAIR10||AT4G39950
+Tryptophan N-monooxygenase (EC 1.14.14.156)	ADD	features	Athaliana_TAIR10||AT2G22330
+Tryptophan N-monooxygenase (EC 1.14.14.156)	ADD	publications	10.1074/jbc.M001667200
+Tryptophan N-monooxygenase (EC 1.14.14.156)	ADD	publications	10.1073/pnas.0305876101

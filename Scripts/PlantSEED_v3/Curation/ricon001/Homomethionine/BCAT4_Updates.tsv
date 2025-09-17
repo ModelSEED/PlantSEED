@@ -1,0 +1,6 @@
+Athaliana_TAIR10||AT4G05390	Methionine--oxo-acid aminotransferase (EC 2.6.1.88)	Methionine transaminase (EC 2.6.1.88)	10.1105/tpc.105.039339	include
+Methionine transaminase (EC 2.6.1.88)	REMOVE	subsystems	Methionine_and_cysteine_metabolism_in_plants
+Methionine transaminase (EC 2.6.1.88)	REMOVE	reactions	rxn37695
+Methionine transaminase (EC 2.6.1.88)	REMOVE	reactions	rxn00454
+Methionine transaminase (EC 2.6.1.88)	ADD	reactions	rxn05108
+Methionine transaminase (EC 2.6.1.88)	ADD	features	UniProt||Q9LE06	Athaliana_TAIR10||AT3G19710

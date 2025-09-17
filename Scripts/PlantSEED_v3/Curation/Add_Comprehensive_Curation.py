@@ -110,6 +110,8 @@ for protseq_file in glob.glob(search_path):
 # 8: cofactors
 # 9: homomers
 # 10: activate  
+# 11: type (universal|conditional)
+# 12: curator
 
 new_complex_rxns_dict = dict()
 
@@ -128,11 +130,13 @@ for pwy_file in glob.glob(search_path):
 			pub = tmp_lst[3]
 			ss  = tmp_lst[4]
 			cls = tmp_lst[5]
-			pwy = tmp_lst[6]
+			pwys = tmp_lst[6]
 			loc = tmp_lst[7]
 			cof = tmp_lst[8]
 			hom = tmp_lst[9]
 			inc = tmp_lst[10]
+			typ = tmp_lst[11]
+			cur = tmp_lst[12]
 
 			new_role = False
 			if(role not in roles_dict):
@@ -219,6 +223,13 @@ for pwy_file in glob.glob(search_path):
 						if entry not in pubs_dict[role]:
 							roles_list[index]['publications'].append(entry)
 							print("\t\t  new publication:\t" + entry)
+				
+				if(cur != ''):
+					for curator in cur.split(';'):
+						if('curators' not in roles_list[index]):
+							roles_list[index]['curators']=list()
+						if(curator not in roles_list[index]['curators']):
+							roles_list[index]['curators'].append(curator)
 
 			####################################
 			# ADD NEW ROLE
@@ -233,7 +244,8 @@ for pwy_file in glob.glob(search_path):
 							'localization':{},
 							'publications':[],
 							'predictions':{},
-							'sequences':{}}
+							'sequences':{},
+							'type':'universal'}
 
 				####################################
 				# Add function
@@ -247,15 +259,9 @@ for pwy_file in glob.glob(search_path):
 					class_dict[entry]=[]
 
 					# Add pathway
-					if(pwy != ""):
-						# One pathway for all classes
-						if (len(pwy.split('||')) == 1):
+					if(pwys != ""):
+						for pwy in pwys.split('||'):
 							class_dict[entry].append(pwy)
-						# Pathway for each class
-						else:
-							# Check if each pathway defined for each class
-							if(pwy.split('||')[ss.split('||').index(entry)] != ""):
-								class_dict[entry].append(pwy.split('||')[ss.split('||').index(entry)])
 
 				new_role['classes'][cls]=class_dict
 
@@ -316,6 +322,18 @@ for pwy_file in glob.glob(search_path):
 						new_role['include']=True
 					if(inc == 'exclude'):
 						new_role['include']=False
+
+				####################################
+				# type
+				if(typ != ''):
+					new_role['type']=typ
+
+				####################################
+				# curators
+				if(cur != ''):
+					new_role["curators"] = list()
+					for curator in cur.split(';'):
+						new_role['curators'].append(curator)
 
 				####################################
 				# Add predictions

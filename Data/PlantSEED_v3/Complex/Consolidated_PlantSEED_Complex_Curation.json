@@ -766,10 +766,10 @@
             }
         ]
     },
-    "rxn08173_d_A": {
+    "rxn08173_y_A": {
         "id": "A",
         "reaction": "rxn08173",
-        "compartment": "d",
+        "compartment": "y",
         "roles": [
             {
                 "curators": [
@@ -2807,10 +2807,10 @@
             }
         ]
     },
-    "rxn20595_d_A": {
+    "rxn20595_y_A": {
         "id": "A",
         "reaction": "rxn20595",
-        "compartment": "d",
+        "compartment": "y",
         "roles": [
             {
                 "curators": [
@@ -2893,10 +2893,10 @@
             }
         ]
     },
-    "rxn20632_d_A": {
+    "rxn20632_y_A": {
         "id": "A",
         "reaction": "rxn20632",
-        "compartment": "d",
+        "compartment": "y",
         "roles": [
             {
                 "curators": [
@@ -3558,7 +3558,7 @@
                 ]
             },
             {
-                "role": "Probable cytochrome c oxidase subunit 5c",
+                "role": "Putative cytochrome c oxidase subunit 5c",
                 "curators": [
                     "Claudia"
                 ],

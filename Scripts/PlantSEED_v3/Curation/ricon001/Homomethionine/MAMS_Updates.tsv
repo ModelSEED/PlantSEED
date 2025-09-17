@@ -1,0 +1,5 @@
+Athaliana_TAIR10||AT5G23020	Methylthioalkylmalate synthase (EC 2.3.3.-)	Methylthioalkylmalate synthase (EC 2.3.3.17)	10.1104/pp.106.091579	include
+2-isopropylmalate synthase (EC 2.3.3.13)	REMOVE	features	Athaliana_TAIR10||AT5G23010
+Methylthioalkylmalate synthase (EC 2.3.3.17)	REMOVE	features	Athaliana_TAIR10||AT5G23010
+Methylthioalkylmalate synthase (EC 2.3.3.17)	ADD	features	UniProt||Q9FN52	Athaliana_TAIR10||AT5G23020
+Methylthioalkylmalate synthase (EC 2.3.3.17)	REMOVE	subsystems	Biosynthesis_of_benzenic_and_indolic_glucosinolates_in_plants_(core_structure_and_secondary_modifications)

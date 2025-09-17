@@ -1,0 +1,11 @@
+Oxime metabolizining monooxygenase in aliphatic glucosinolates biosynthesis	UPDATE	(Methylsulfanyl)alkanaldoxime N-monooxygenase (EC 1.14.14.43)
+(Methylsulfanyl)alkanaldoxime N-monooxygenase (EC 1.14.14.43)	ADD	features	Athaliana_TAIR10||AT4G13770
+(Methylsulfanyl)alkanaldoxime N-monooxygenase (EC 1.14.14.43)	ADD	publications	10.1104/pp.102.019240
+Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis	UPDATE	Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)
+Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)	ADD	features	Athaliana_TAIR10||AT4G31500
+Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)	ADD	features	Athaliana_TAIR10||AT4G13770
+Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)	ADD	publications	10.1105/tpc.13.1.101
+Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)	ADD	publications	10.1104/pp.102.019240
+Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)	REMOVE	features	Athaliana_TAIR10||AT5G57220
+Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)	REMOVE	features	Athaliana_TAIR10||AT4G37400
+Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)	REMOVE	features	Athaliana_TAIR10||AT4G37430

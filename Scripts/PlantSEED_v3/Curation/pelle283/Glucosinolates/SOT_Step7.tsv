@@ -1,0 +1,10 @@
+Desulfoglucosinolate sulfotransferase (EC 2.8.2.-)	UPDATE	Aliphatic desulfoglucosinolate sulfotransferase (EC 2.8.2.38)
+Aliphatic desulfoglucosinolate sulfotransferase (EC 2.8.2.38)	ADD	features	Athaliana_TAIR10||AT1G18590
+Aliphatic desulfoglucosinolate sulfotransferase (EC 2.8.2.38)	ADD	features	Athaliana_TAIR10||AT1G74090
+Aliphatic desulfoglucosinolate sulfotransferase (EC 2.8.2.38)	ADD	publications	10.1074/jbc.M407681200
+Aliphatic desulfoglucosinolate sulfotransferase (EC 2.8.2.38)	ADD	publications	10.1111/j.1399-3054.2008.01182.x
+Aliphatic desulfoglucosinolate sulfotransferase (EC 2.8.2.38)	REMOVE	features	Athaliana_TAIR10||AT1G74100
+	NEW	Aromatic desulfoglucosinolate sulfotransferase (EC 2.8.2.24)
+Aromatic desulfoglucosinolate sulfotransferase (EC 2.8.2.24)	ADD	features	Athaliana_TAIR10||AT1G74100
+Aromatic desulfoglucosinolate sulfotransferase (EC 2.8.2.24)	ADD	publications	10.1074/jbc.M407681200
+Aromatic desulfoglucosinolate sulfotransferase (EC 2.8.2.24)	ADD	publications	10.1111/j.1399-3054.2008.01182.x

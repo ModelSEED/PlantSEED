@@ -9,7 +9,7 @@ biomass_hash = {'id' : "bio1",
 			   'type' : "defaultGrowth",
 			   'templateBiomassComponents' : []}
 
-compound_type_list = ["other","dna","rna","protein","lipid","cellwall","cofactor","energy"]
+compound_type_list = ["other","dna","rna","protein","lipid","cellwall","cofactor","energy","specialized"]
 for compound_type in compound_type_list:
 	biomass_hash[compound_type]=0
 
@@ -28,7 +28,6 @@ with open("../../../Data/PlantSEED_v3/Biomass/PlantSEED_Biomass.txt") as biomass
 		coefficient = 0.0-float(array[3])
 		if(coefficient > -1e-4 and coefficient < 0):
 			coefficient = -1e-4
-
 		
 		tmpbiocpd_hash = { 'class' : array[5],
 						   'templatecompcompound_ref' : "~/compcompounds/id/"+array[1]+"_"+array[2],
@@ -71,6 +70,8 @@ plantseed_template_obj['compcompounds'].append(cmpcompound_hash)
 biomass_hash['templateBiomassComponents']=sorted(template_biomass_components,
 												 key = lambda bcpd:bcpd['templatecompcompound_ref'])
 plantseed_template_obj['biomasses'].append(biomass_hash)
+
+print("Saving template with biomass")
 
 #Save Template
 with open("PlantSEED_Biomass_Template.json",'w') as ps_tmpl_fh:

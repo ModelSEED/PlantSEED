@@ -1,0 +1,6 @@
+Penta and hexahomomethionine N-hydroxylase (EC 1.14.13.n6)	UPDATE	Homomethionine N-monooxygenase, 10C-11C only (EC 1.14.14.42)
+Homomethionine N-monooxygenase, 10C-11C only (EC 1.14.14.42)	ADD	features	Athaliana_TAIR10||AT1G16400
+Homomethionine N-monooxygenase, 10C-11C only (EC 1.14.14.42)	ADD	publications	10.1046/j.1365-313X.2003.01679.x
+Homo, di, tri, tetra, penta & hexahomomethionine N-hydroxylase (EC 1.14.13.n5)	UPDATE	Homomethionine N-monooxygenase (EC 1.14.14.42)
+Homomethionine N-monooxygenase (EC 1.14.14.42)	ADD	features	Athaliana_TAIR10||AT1G16410
+Homomethionine N-monooxygenase (EC 1.14.14.42)	ADD	publications	10.1046/j.1365-313X.2003.01679.x

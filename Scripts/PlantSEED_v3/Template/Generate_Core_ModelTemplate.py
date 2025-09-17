@@ -4,10 +4,8 @@ import time
 from urllib.request import urlopen
 import pickle
 import copy
-import sys
 import os
 import json
-import string
 
 #bioObj_ref = "/chenry/public/modelsupport/biochemistry/plantdefault.biochem" #PMS reference
 biochem_ref = "48/1/5" #AppDev reference NB: doesn't work in production!
@@ -130,11 +128,15 @@ reactions_cpts=dict()
 roles=dict()
 roles_ids=dict()
 excluded_roles=list()
+excluded_roles_complexes=list()
+complexes=dict()
 for entry in roles_list:
 	if(entry['include'] is False):
 		excluded_roles.append(entry['role'])
 		continue
 
+	if('reactions' not in entry):
+		continue
 	# Skip vacuolar ATP synthase, for pumping protons into vacuole
 	if("rxn08173" in entry["reactions"] and "v" in entry["localization"]):
 		print("Skipping vacuolar ATP synthase")
@@ -159,36 +161,8 @@ for entry in roles_list:
 		roles[entry['role']]=list()
 		
 	for rxn in entry['reactions']:
-		for cpts in entry['localization']:
-			
-			# Accordingly, the compartments should all be sorted
-			# So a compartment index of 0 matches the first position in the compartment list
-			# The order is curated in the PlantSEED database
-
-			reaction_cpt = cpts[0]
-
-			# If its a transporter, need to update the reaction compartment id
-			if(len(cpts)==2):
-
-				# The rule is that it is always the non-cytosolic compartment
-				if('c' in cpts):
-					for cpt in cpts:
-						if(cpt != 'c'):
-							reaction_cpt = cpt
-
-				# With two main exceptions:
-				# 1) whether its an extracellular transporter
-				if('e' in cpts):
-					for cpt in cpts:
-						if(cpt != 'e'):
-							reaction_cpt = cpt
-
-				# 2) whether its an intraorganellar transporter
-				if('j' in cpts):
-					reaction_cpt = 'j'
-				if('y' in cpts):
-					reaction_cpt = 'y'
-
+		for cpts in entry['compartmentalization']:
+			reaction_cpt = entry['compartmentalization'][cpts]['reaction']
 			tmpl_rxn = rxn+"_"+reaction_cpt
 
 			# These are stored for compound stoichiometry
@@ -199,55 +173,28 @@ for entry in roles_list:
 				reactions_roles[tmpl_rxn]=list()
 			if(entry['role'] not in reactions_roles[tmpl_rxn]):
 				reactions_roles[tmpl_rxn].append(entry['role'])
+
+			# Store pre-generated complex identifiers
+			for complex in entry['compartmentalization'][cpts]['kbase_ids']:
+				if(tmpl_rxn not in entry['compartmentalization'][cpts]['kbase_ids'][complex]):
+					continue
+					
+				if(entry['compartmentalization'][cpts]['exclude'] is True):
+					excluded_roles_complexes.append(entry['role'] + ' / ' + complex)
+					continue
+				
+				if(complex not in complexes):
+					complexes[complex]={'reactions':[],'roles':[]}
+
+				if(tmpl_rxn not in complexes[complex]['reactions']):
+					complexes[complex]['reactions'].append(tmpl_rxn)
+
+				if(entry['role'] not in complexes[complex]['roles']):
+					complexes[complex]['roles'].append(entry['role'])
 				
 	for ftr in entry['features']:
 		if(ftr not in roles[entry['role']]):
 			roles[entry['role']].append(ftr)
-
-############################
-## Load Complexes
-############################
-complexes = dict()
-
-# Load Curated Complexes
-with open("../../../Data/PlantSEED_v3/Complex/Consolidated_PlantSEED_Complex_Curation.json") as cur_cpx_fh:
-	curated_complexes = json.load(cur_cpx_fh)
-
-for rxn_cpx_id in sorted(curated_complexes.keys()):
-
-	# Skip marked complexes
-	if("FX" in rxn_cpx_id or "RX" in rxn_cpx_id):
-		continue
-	
-	(reaction,compartment,complex)=rxn_cpx_id.split("_")
-	tmpl_rxn = reaction+"_"+compartment
-
-	if(tmpl_rxn not in complexes):
-		complexes[tmpl_rxn]=dict()
-
-	if(complex not in complexes[tmpl_rxn]):
-		complexes[tmpl_rxn][complex]=list()
-
-	for role_entry in curated_complexes[rxn_cpx_id]['roles']:
-		complexes[tmpl_rxn][complex].append(role_entry['role'])
-
-# Load Rest of Complexes
-for tmpl_rxn in sorted(reactions_roles):
-	if(tmpl_rxn in complexes):
-		continue
-
-	sorted_roles = sorted(reactions_roles[tmpl_rxn])
-	sorted_letters = list(string.ascii_uppercase)
-	for letter_i in string.ascii_uppercase:
-		for letter_j in string.ascii_uppercase:
-			sorted_letters.append(letter_i+letter_j)
-
-	complexes[tmpl_rxn]=dict()
-	for i in range(len(sorted_roles)):
-		complexes[tmpl_rxn][sorted_letters[i]]=[sorted_roles[i]]
-
-time_string = str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %Hh %Mm %Ss'))
-print("Generating template"+time_string)
 
 ############################
 ## Begin Template Generation
@@ -256,7 +203,7 @@ print("Generating template"+time_string)
 #Generate Template Roles
 template_roles=list()
 role_count=1
-template_role_file = open("Template_Roles_Record.tmp",'w')
+template_role_file = open("Template_Roles_Record.txt",'w')
 for role in sorted(roles):
 	role_hash = { 'id':roles_ids[role], 'name':role, 'source':'PlantSEED',
 					'aliases':[], 'features':sorted(roles[role]) }
@@ -267,35 +214,34 @@ for role in sorted(roles):
 #Generate TemplateComplex and TemplateComplexRole
 template_complexes=list()
 template_reactions_complexes=dict()
-complex_count=1
 rca_fh = open("Reaction_Complex_Assignments.txt", 'w');
-for template_reaction in sorted(complexes.keys()):
-	for complex in sorted(complexes[template_reaction].keys()):
-		complex_hash = { 'id' : "Cpx."+str(complex_count),
-						 'name' : "", 'reference' : "",
-						 'source' : "PlantSEED",
-						 'confidence' : 1.0,
-						 'complexroles' : [] }
-		complex_count+=1
+for complex in sorted(complexes.keys()):
+	complex_hash = { 'id' : complex,
+					'name' : "", 'reference' : "",
+					'source' : "PlantSEED",
+					'confidence' : 1.0,
+					'complexroles' : [] }
+	if('roles' not in complexes[complex]):
+		print(complex,complexes[complex])
+	for role in sorted(complexes[complex]['roles']):
+		if(role not in roles_ids):
+			print("Complexed role excluded:",role)
+			continue
 		
-		for role in sorted(complexes[template_reaction][complex]):
-			if(role not in roles_ids):
-				print("Complexed role excluded:",role)
-				continue
-		
-			complex_role_hash = { 'templaterole_ref' : "~/roles/id/"+roles_ids[role],
-								  'optional_role' : 0,
-								  'triggering' : 1 }
+		complex_role_hash = { 'templaterole_ref' : "~/roles/id/"+roles_ids[role],
+							'optional_role' : 0,
+							'triggering' : 1 }
 
-			complex_hash['complexroles'].append(complex_role_hash)
-			rca_fh.write("\t".join([template_reaction,complex_hash['id'],roles_ids[role],role,"|".join(sorted(roles[role]))])+"\n")
+		complex_hash['complexroles'].append(complex_role_hash)
+		rca_fh.write("\t".join(["|".join(complexes[complex]['reactions']),complex,roles_ids[role],role,"|".join(sorted(roles[role]))])+"\n")
 	
-		template_complexes.append(complex_hash)
+	template_complexes.append(complex_hash)
 
-		#Creating lookup for linking reactions to complexes later
+	# Creating lookup for linking reactions to complexes later
+	for template_reaction in complexes[complex]['reactions']:
 		if(template_reaction not in template_reactions_complexes):
 			template_reactions_complexes[template_reaction]=list()
-		template_reactions_complexes[template_reaction].append(complex_hash['id'])
+		template_reactions_complexes[template_reaction].append(complex)
 
 rca_fh.close()
 
@@ -307,6 +253,19 @@ proton_y = {"coefficient": -1.0,
 
 # Generate TemplateReactions
 template_reactions = list()
+
+# NB: I'm using the empty reaction as a default reaction ref as it doesn't really affect anything
+# But I need to double-check how reconstruct_plant_metabolism in plant_fbaImpl.py fetches
+# biochemistry data
+
+default_template_reaction = { 'id':'rxn14003_c', 'name':'',
+							'templatecompartment_ref':"~/compartments/id/c",
+							'reaction_ref':biochem_ref+"/reactions/id/"+"rxn14003", #base_reaction,
+							'type':"universal",
+							'direction':'=',
+							'GapfillDirection':'=',
+							'maxforflux':0.0, 'maxrevflux':0.0,
+							'templateReactionReagents':[], 'templatecomplex_refs':[] }
 
 check_tpl_cpt_dict = dict()
 template_compartments = list()
@@ -328,31 +287,25 @@ for template_reaction in sorted(reactions_roles):
 		excluded_rxns_fh.write("Skipping unbalanced reaction: "+base_reaction+"\n")
 		continue
 
+	template_reaction_hash = copy.deepcopy(default_template_reaction)
+	template_reaction_hash['id']=template_reaction
+	template_reaction_hash['name']=reactions_dict[base_reaction]['name']
+	template_reaction_hash['templatecompartment_ref']="~/compartments/id/"+reaction_cpt
+
 	#determine reaction direction
 	direction = "="
 	if(reactions_dict[base_reaction]['reversibility'] != "?"):
 		direction = reactions_dict[base_reaction]['reversibility']
-
+	
 	if(base_reaction in curated_reactions_dict):
 		direction = curated_reactions_dict[base_reaction]
+	template_reaction_hash['direction']=direction
 
 	gapfilling_direction = "="
 	if(base_reaction in limited_gf_reactions_list):
 		gapfilling_direction = direction
-
-	# NB: I'm using the empty reaction as a default reaction ref as it doesn't really affect anything
-	# But I need to double-check how reconstruct_plant_metabolism in plant_fbaImpl.py fetches
-	# biochemistry data
-
-	template_reaction_hash = { 'id':template_reaction, 'name':reactions_dict[base_reaction]['name'],
-							   'templatecompartment_ref':"~/compartments/id/"+reaction_cpt,
-							   'reaction_ref':biochem_ref+"/reactions/id/"+"rxn14003", #base_reaction,
-							   'type':"universal",
-							   'direction':direction,
-							   'GapfillDirection':gapfilling_direction,
-							   'maxforflux':0.0, 'maxrevflux':0.0,
-							   'templateReactionReagents':[], 'templatecomplex_refs':[] }
-
+	template_reaction_hash['GapfillDirection']=gapfilling_direction
+	
 	# Add reagents
 	for entry in (reactions_dict[base_reaction]['stoichiometry'].split(';')):
 		(coefficient,compound,gen_cpt,index,name)=entry.split(":")
@@ -382,7 +335,7 @@ for template_reaction in sorted(reactions_roles):
 			comp_compound_hash = { 'id':comp_compound,
 								   'charge':compounds_dict[compound]["defaultCharge"], 'maxuptake':0.0,
 								   'templatecompound_ref':"~/compounds/id/"+compound,
-								   'templatecompartment_ref':"~/compartments/id/"+rgt_cpt };
+								   'templatecompartment_ref':"~/compartments/id/"+rgt_cpt }
 
 			template_compcompounds.append(comp_compound_hash)
 
@@ -425,7 +378,7 @@ for template_reaction in sorted(reactions_roles):
 		proton_out['coefficient'] = 4.0
 		template_reaction_hash['templateReactionReagents'].append(proton_out)
 
-		print(template_reaction_hash['id'],json.dumps(template_reaction_hash['templateReactionReagents'],indent=2))
+		# print(template_reaction_hash['id'],json.dumps(template_reaction_hash['templateReactionReagents'],indent=2))
 
 	# Cytochrome b6f pumps two protons and releases two more protons from plastoquinol
 	if(template_reaction_hash['id'] == 'rxn20595_y'):
@@ -436,8 +389,93 @@ for template_reaction in sorted(reactions_roles):
 		proton_out = copy.deepcopy(proton_y)
 		proton_out['coefficient'] = 4.0
 		template_reaction_hash['templateReactionReagents'].append(proton_out)
-		print(template_reaction_hash['id'],json.dumps(template_reaction_hash['templateReactionReagents'],indent=2))
+		# print(template_reaction_hash['id'],json.dumps(template_reaction_hash['templateReactionReagents'],indent=2))
 
+	# Update generic transaminases involved in glucosinolate biosynthesis
+	bcat3_rxns = ['rxn23780','rxn27069','rxn27070','rxn27071','rxn27072','rxn27073']
+	if(template_reaction_hash['id'].split('_')[0] in bcat3_rxns):
+		replace_generic={'cpd22369':'cpd00023','cpd21904':'cpd00024'}
+		for rgt in template_reaction_hash['templateReactionReagents']:
+			for cpd in replace_generic.keys():
+				if(cpd in rgt['templatecompcompound_ref']):
+					rgt['templatecompcompound_ref'] = rgt['templatecompcompound_ref'].replace(cpd,replace_generic[cpd])
+
+		# print(template_reaction_hash['id'],json.dumps(template_reaction_hash['templateReactionReagents'],indent=2))
+
+	# Update usage of NAD in Methylthioalkylmalate dehydrogenase in glucosinolate biosynthesis
+	imdh_rxns = ['rxn14172','rxn14182','rxn13977','rxn14122','rxn14244','rxn13983']
+	if(template_reaction_hash['id'].split('_')[0] in imdh_rxns):
+		(rxn,cpt)=template_reaction_hash['id'].split('_')
+		nad  = {'coefficient': -1.0,
+        		'templatecompcompound_ref': '~/compcompounds/id/cpd00003_'+cpt}
+		nadh = {'coefficient': 1.0,
+        		'templatecompcompound_ref': '~/compcompounds/id/cpd00004_'+cpt}
+		template_reaction_hash['templateReactionReagents'].append(nad)
+		template_reaction_hash['templateReactionReagents'].append(nadh)
+
+		# have to find and remove proton to balance reaction
+		proton_index=0
+		for rgt_index in range(len(template_reaction_hash['templateReactionReagents'])):
+			if('cpd00067_'+cpt in template_reaction_hash['templateReactionReagents'][rgt_index]['templatecompcompound_ref']):
+				proton_index=rgt_index
+				break
+		template_reaction_hash['templateReactionReagents'].pop(proton_index)
+
+	template_reactions.append(template_reaction_hash)
+
+########################################################################
+# This is for transport in aliphatic glucosinolate biosynthesis
+glc_tns = {'cpd17400':'d',
+		   'cpd17407':'d',
+		   'cpd17411':'d',
+		   'cpd17415':'d',
+		   'cpd17419':'d',
+		   'cpd17423':'d',
+		   'cpd00506':'d'} # Glutamylcysteine
+glc_count=1
+for glc_met in glc_tns.keys():
+	
+	template_reaction_hash = copy.deepcopy(default_template_reaction)
+	template_reaction_hash['id']='glucosinolates_'+str(glc_count)
+	print("Glucosinolate transport reaction id: "+template_reaction_hash['id'])
+	template_reaction_hash['name']='Glucosinolate Transport'
+	template_reaction_hash['templatecompartment_ref']="~/compartments/id/"+glc_tns[glc_met]
+
+	# Cytosol
+	comp_compound = glc_met+"_c"
+	if(comp_compound not in check_tpl_cpcpd_dict):
+		check_tpl_cpcpd_dict[comp_compound]=1
+
+		comp_compound_hash = { 'id':comp_compound,
+							'charge':compounds_dict[glc_met]["defaultCharge"], 'maxuptake':0.0,
+							'templatecompound_ref':"~/compounds/id/"+glc_met,
+							'templatecompartment_ref':"~/compartments/id/c" }
+
+		template_compcompounds.append(comp_compound_hash)
+
+	rxn_rgt_hash = { 'templatecompcompound_ref' : "~/compcompounds/id/"+comp_compound,
+					'coefficient' : -1.0 }
+	template_reaction_hash['templateReactionReagents'].append(rxn_rgt_hash)
+
+	# "Other" compartment
+	comp_compound = glc_met+"_"+glc_tns[glc_met]
+	if(comp_compound not in check_tpl_cpcpd_dict):
+		check_tpl_cpcpd_dict[comp_compound]=1
+
+		comp_compound_hash = { 'id':comp_compound,
+							'charge':compounds_dict[glc_met]["defaultCharge"], 'maxuptake':0.0,
+							'templatecompound_ref':"~/compounds/id/"+glc_met,
+							'templatecompartment_ref':"~/compartments/id/"+glc_tns[glc_met] }
+
+		template_compcompounds.append(comp_compound_hash)
+
+	rxn_rgt_hash = { 'templatecompcompound_ref' : "~/compcompounds/id/"+comp_compound,
+					'coefficient' : 1.0 }
+	template_reaction_hash['templateReactionReagents'].append(rxn_rgt_hash)
+
+	# print(template_reaction_hash['id'],json.dumps(template_reaction_hash['templateReactionReagents'],indent=2))
+
+	glc_count+=1
 	template_reactions.append(template_reaction_hash)
 
 #Populate model_template dictionary
