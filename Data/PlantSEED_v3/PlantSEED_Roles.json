@@ -3080,7 +3080,6 @@
             "rxn17469",
             "rxn05345",
             "rxn25647",
-            "rxn25716",
             "rxn05350",
             "rxn05348"
         ],
@@ -3109,7 +3108,6 @@
                         "rxn17469_d",
                         "rxn05345_d",
                         "rxn25647_d",
-                        "rxn25716_d",
                         "rxn05350_d",
                         "rxn05348_d"
                     ]
@@ -3162,14 +3160,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_123cd6": [
-                        "rxn05346_d",
-                        "rxn05343_d",
-                        "rxn17469_d",
-                        "rxn05345_d",
-                        "rxn25647_d",
-                        "rxn25716_d",
-                        "rxn05350_d",
-                        "rxn05348_d"
+                        "rxn25716_d"
                     ]
                 },
                 "exclude": false
@@ -3216,14 +3207,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_123cd6": [
-                        "rxn05346_d",
-                        "rxn05343_d",
-                        "rxn17469_d",
-                        "rxn05345_d",
-                        "rxn25647_d",
-                        "rxn25716_d",
-                        "rxn05350_d",
-                        "rxn05348_d"
+                        "rxn08766_d"
                     ]
                 },
                 "exclude": false
@@ -8040,9 +8024,7 @@
                 "kbase_ids": {
                     "PS_complex_2a9f7d": [
                         "rxn27065_c",
-                        "rxn23786_c",
-                        "rxn23785_c",
-                        "rxn27066_c"
+                        "rxn23786_c"
                     ]
                 },
                 "exclude": false
@@ -8067,16 +8049,8 @@
         "features": [
             "Athaliana_TAIR10||AT4G03070"
         ],
-        "reactions": [
-            "rxn23785",
-            "rxn27066"
-        ],
-        "localization": {
-            "c": {
-                "rxn23785": [],
-                "rxn27066": []
-            }
-        },
+        "reactions": [],
+        "localization": {},
         "publications": [],
         "kbase_id": "PS_role_3a7671",
         "curators": [
@@ -8085,20 +8059,7 @@
         ],
         "type": "conditional",
         "is_transporter": false,
-        "compartmentalization": {
-            "c": {
-                "reaction": "c",
-                "kbase_ids": {
-                    "PS_complex_2a9f7d": [
-                        "rxn27065_c",
-                        "rxn23786_c",
-                        "rxn23785_c",
-                        "rxn27066_c"
-                    ]
-                },
-                "exclude": false
-            }
-        },
+        "compartmentalization": {},
         "abstract_enzyme": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase"
     },
     {
@@ -18240,6 +18201,7 @@
                 "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_37bb0c": [
+                        "rxn41751_c",
                         "rxn27060_c",
                         "rxn27064_c",
                         "rxn27063_c",
@@ -21046,49 +21008,6 @@
             }
         },
         "abstract_enzyme": "Glutaminase"
-    },
-    {
-        "role": "Glutamine amidotransferase chain of NAD synthetase",
-        "include": true,
-        "subsystems": [
-            "Niacin,_NAD_and_NADP_biosynthesis"
-        ],
-        "classes": {
-            "Cofactors": {
-                "Niacin,_NAD_and_NADP_biosynthesis": []
-            }
-        },
-        "features": [
-            "Athaliana_TAIR10||AT1G55090"
-        ],
-        "reactions": [
-            "rxn00189"
-        ],
-        "localization": {
-            "c": {
-                "rxn00189": []
-            }
-        },
-        "publications": [],
-        "kbase_id": "PS_role_363515",
-        "curators": [
-            "SvetaG",
-            "samseaver"
-        ],
-        "type": "universal",
-        "is_transporter": false,
-        "compartmentalization": {
-            "c": {
-                "reaction": "c",
-                "kbase_ids": {
-                    "PS_complex_52adee": [
-                        "rxn00189_c"
-                    ]
-                },
-                "exclude": false
-            }
-        },
-        "abstract_enzyme": "NAD synthetase"
     },
     {
         "role": "Glutamine synthetase type II, eukaryotic (EC 6.3.1.2)",
@@ -29041,7 +28960,7 @@
                 "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_52adee": [
-                        "rxn00189_c"
+                        "rxn00138_c"
                     ]
                 },
                 "exclude": false
@@ -33355,6 +33274,7 @@
                 "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_05c4b8": [
+                        "rxn14107_c",
                         "rxn21795_c",
                         "rxn21793_c",
                         "rxn40669_c"
@@ -34200,7 +34120,6 @@
                 "kbase_ids": {
                     "PS_complex_c4671e": [
                         "rxn16424_c",
-                        "rxn22372_c",
                         "rxn16423_c",
                         "rxn16425_c"
                     ]
