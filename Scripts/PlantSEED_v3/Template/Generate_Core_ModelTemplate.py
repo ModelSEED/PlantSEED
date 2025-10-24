@@ -128,6 +128,7 @@ with open("../../../Data/PlantSEED_v3/PlantSEED_Roles.json") as subsystem_file:
 
 #Collect Compartmentalized Reactions
 reactions_roles=dict()
+reactions_types=dict()
 reactions_cpts=dict()
 roles=dict()
 roles_ids=dict()
@@ -168,6 +169,8 @@ for entry in roles_list:
 		for cpts in entry['compartmentalization']:
 			reaction_cpt = entry['compartmentalization'][cpts]['reaction']
 			tmpl_rxn = rxn+"_"+reaction_cpt
+
+			reactions_types[tmpl_rxn]=entry['type']
 
 			# These are stored for compound stoichiometry
 			# when generating the reagents below
@@ -296,6 +299,9 @@ for template_reaction in sorted(reactions_roles):
 	template_reaction_hash['name']=reactions_dict[base_reaction]['name']
 	template_reaction_hash['templatecompartment_ref']="~/compartments/id/"+reaction_cpt
 
+	#determine reaction type (indicates conservation)
+	template_reaction_hash['type'] = reactions_types[template_reaction]
+	
 	#determine reaction direction
 	direction = "="
 	if(reactions_dict[base_reaction]['reversibility'] != "?"):

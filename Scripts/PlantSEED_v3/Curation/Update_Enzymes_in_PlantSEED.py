@@ -39,7 +39,8 @@ with open(input_file) as updates_file:
 		# It should ideally be followed up with an ADD action
 		if(action == "NEW"):
 			new_list.append(enzyme)
-
+			print("Warning: is this enzyme conserved!",enzyme)
+                        
 		# This action is reserved for adding new data to a field in the functional role
 		# Some fields take a key-value pair to add to a dict,
 		# while others take a single entry to append to a list

@@ -311,7 +311,6 @@ PS_role_be145f	Glutamate-1-semialdehyde aminotransferase (EC 5.4.3.8)
 PS_role_e82ade	Glutamate-cysteine ligase (EC 6.3.2.2)
 PS_role_bb2b8f	Glutamate-glyoxylate aminotransferase (EC 2.6.1.4)
 PS_role_41e45e	Glutaminase (EC 3.5.1.2)
-PS_role_363515	Glutamine amidotransferase chain of NAD synthetase
 PS_role_f73cee	Glutamine synthetase type II, eukaryotic (EC 6.3.1.2)
 PS_role_b04038	Glutamine transport
 PS_role_fe4f8b	Glutamyl-tRNA reductase (EC 1.2.1.70)
