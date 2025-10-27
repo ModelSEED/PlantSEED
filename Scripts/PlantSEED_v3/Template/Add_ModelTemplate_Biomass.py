@@ -13,7 +13,8 @@ compound_type_list = ["other","dna","rna","protein","lipid","cellwall","cofactor
 for compound_type in compound_type_list:
 	biomass_hash[compound_type]=0
 
-template_biomass_components = list()
+biomass_coefficients=dict()
+biomass_class=dict()
 with open("../../../Data/PlantSEED_v3/Biomass/PlantSEED_Biomass.txt") as biomass_fh:
 	for line in biomass_fh.readlines():
 		line=line.strip('\r\n')
@@ -29,14 +30,23 @@ with open("../../../Data/PlantSEED_v3/Biomass/PlantSEED_Biomass.txt") as biomass
 		if(coefficient > -1e-4 and coefficient < 0):
 			coefficient = -1e-4
 		
-		tmpbiocpd_hash = { 'class' : array[5],
-						   'templatecompcompound_ref' : "~/compcompounds/id/"+array[1]+"_"+array[2],
-						   'coefficient_type' : "EXACT",
-						   'coefficient' : coefficient,
-						   'linked_compound_refs' : [],
-						   'link_coefficients' : [] }
-		template_biomass_components.append(tmpbiocpd_hash)
+		compcompound=array[1]+"_"+array[2]
+		biomass_class[compcompound]=array[5]
+		if(compcompound in biomass_coefficients):
+			biomass_coefficients[compcompound]+=coefficient
+		else:
+			biomass_coefficients[compcompound]=coefficient
 
+template_biomass_components = list()
+for cmpcpd in biomass_coefficients:
+	coefficient = biomass_coefficients[cmpcpd]
+	tmpbiocpd_hash = {  'class' : biomass_class[cmpcpd],
+						'templatecompcompound_ref' : "~/compcompounds/id/"+cmpcpd,
+						'coefficient_type' : "EXACT",
+						'coefficient' : coefficient,
+						'linked_compound_refs' : [],
+						'link_coefficients' : [] }
+	template_biomass_components.append(tmpbiocpd_hash)
 
 tmpbiomasscpd_hash = { 'class' : 'other',
 					   'templatecompcompound_ref' : "~/compcompounds/id/cpd11416_c",
@@ -65,7 +75,6 @@ cmpcompound_hash = { 'id' : "cpd11416_c",
 
 plantseed_template_obj['compounds'].append(compound_hash)
 plantseed_template_obj['compcompounds'].append(cmpcompound_hash)
-
 
 biomass_hash['templateBiomassComponents']=sorted(template_biomass_components,
 												 key = lambda bcpd:bcpd['templatecompcompound_ref'])

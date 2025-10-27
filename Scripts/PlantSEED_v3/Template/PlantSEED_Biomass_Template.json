@@ -80796,18 +80796,10 @@
                     "link_coefficients": []
                 },
                 {
-                    "class": "rna",
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00002_c",
-                    "coefficient_type": "EXACT",
-                    "coefficient": -0.027,
-                    "linked_compound_refs": [],
-                    "link_coefficients": []
-                },
-                {
                     "class": "energy",
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00002_c",
                     "coefficient_type": "EXACT",
-                    "coefficient": -30.0,
+                    "coefficient": -30.027,
                     "linked_compound_refs": [],
                     "link_coefficients": []
                 },
