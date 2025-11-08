@@ -7984,7 +7984,7 @@
         "abstract_enzyme": "Aldose 1-epimerase"
     },
     {
-        "role": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (hydroxylation) (no EC)",
+        "role": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)",
         "include": true,
         "subsystems": [
             "Aliphatic glucosinolate biosynthesis"
@@ -7998,7 +7998,8 @@
             }
         },
         "features": [
-            "Athaliana_TAIR10||AT4G03050"
+            "Athaliana_TAIR10||AT4G03050",
+            "Athaliana_TAIR10||AT4G03070"
         ],
         "reactions": [
             "rxn27065",
@@ -8030,36 +8031,6 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase"
-    },
-    {
-        "role": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)",
-        "include": true,
-        "subsystems": [
-            "Aliphatic glucosinolate biosynthesis"
-        ],
-        "classes": {
-            "Specialized metabolism": {
-                "Aliphatic glucosinolate biosynthesis": [
-                    "PWY-1187",
-                    "PWYQT-4471"
-                ]
-            }
-        },
-        "features": [
-            "Athaliana_TAIR10||AT4G03070"
-        ],
-        "reactions": [],
-        "localization": {},
-        "publications": [],
-        "kbase_id": "PS_role_3a7671",
-        "curators": [
-            "SvetaG",
-            "samseaver"
-        ],
-        "type": "conditional",
-        "is_transporter": false,
-        "compartmentalization": {},
         "abstract_enzyme": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase"
     },
     {
