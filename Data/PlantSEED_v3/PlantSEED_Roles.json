@@ -54162,9 +54162,7 @@
                 "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_2e191a": [
-                        "rxn23785_c"
-                    ],
-                    "PS_complex_19fd4e": [
+                        "rxn23785_c",
                         "rxn27066_c"
                     ]
                 },
