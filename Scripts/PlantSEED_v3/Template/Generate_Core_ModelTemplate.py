@@ -1,11 +1,62 @@
 #!/usr/bin/env python
 import datetime
+import httpx
 import time
-from urllib.request import urlopen
 import pickle
 import copy
 import os
+import re
 import json
+
+def fetch_biochemistry_data(url: str, pattern: str, branch: str):
+    
+	# Set the branch via the 'ref' query parameter
+	params = { "ref": branch }
+
+	# Set up headers, including the token for authentication
+	headers = { "Accept": "application/vnd.github.v3+json" }
+
+	# Make the API request
+	with httpx.Client() as client:
+		try:
+			response = client.get(url, headers=headers, params=params)
+			response.raise_for_status() # Raise an exception for bad status codes (4xx or 5xx)
+			directory_contents = response.json()
+		except httpx.HTTPStatusError as e:
+			print(f"Error fetching directory contents: {e}")
+		except httpx.RequestError as e:
+			print(f"An error occurred during the request: {e}")
+
+	compiled_pattern = re.compile(pattern)
+	data_dict=dict()
+	with httpx.Client(headers=headers, follow_redirects=True) as client:
+		for item in directory_contents:
+			# Check if the item is a file AND its name matches the regex pattern
+			if item.get("type") == "file" and compiled_pattern.match(item.get("name", "")):
+				download_url = item["download_url"]
+		
+				try:
+					# The download_url points to the raw file, so no special GitHub headers are needed, 
+					# but the Authorization header might be.
+					response = client.get(download_url)
+					response.raise_for_status()
+                
+					# The content is a raw string (the JSON text)
+					raw_content = response.text
+                
+					# Parse the JSON string into a Python object (dictionary or list)
+					file_data = json.loads(raw_content)
+					for entry in file_data:
+						data_dict[entry['id']]=entry
+
+				except httpx.HTTPStatusError as e:
+					print(f"   - ❌ Failed to download {file_name} (HTTP Error: {e.response.status_code})")
+				except json.JSONDecodeError:
+					print(f"   - ❌ Failed to parse {file_name} as JSON.")
+				except Exception as e:
+					print(f"   - ❌ An unexpected error occurred with {file_name}: {e}")
+				
+	return data_dict
 
 #bioObj_ref = "/chenry/public/modelsupport/biochemistry/plantdefault.biochem" #PMS reference
 biochem_ref = "48/1/5" #AppDev reference NB: doesn't work in production!
@@ -36,7 +87,7 @@ with open("../../../Data/PlantSEED_v3/Restricted_PlantSEED_Gapfilling_MSDv1.1.1.
 		limited_gf_reactions_list.append(line)
 
 # C) Load Asymmetric transport
-# The asymmetric transport is now encoded in the PlantSEED roles file.
+# The asymmetric transport is now encoded in the PlantSEED Biochemistry file.
 # I'm leaving this note as it's an important distinction that may be lost.
 
 # D) Load unbalanced reactions to include
@@ -55,55 +106,55 @@ print("Loading biochemistry "+time_string)
 ############################
 ## Load Biochemistry
 ############################
+msd_base_url = f"https://api.github.com/repos/ModelSEED/ModelSEEDDatabase/contents/Biochemistry"
+msd_branch = "dev" # could be commit?
 
-MSD_git_url = "https://raw.githubusercontent.com/ModelSEED/ModelSEEDDatabase/"
-#MSD_commit = "v1.1.1"
-MSD_commit = "7063bbffde4b40c01550dcb48b89107f28caa2b1" #adding_nad_transporters
 print("Warning: Add MSD as submodule!")
-
-reactions_dict=dict()
 if(os.path.isdir('Biochem_Cache') is False):
 	os.mkdir('Biochem_Cache')
 
+# See if reactions are pickled otherwise fetch them
+reactions_dict = dict()
 if(os.path.isfile('Biochem_Cache/MS_Rxns.pickle')):
 	with open('Biochem_Cache/MS_Rxns.pickle', 'rb') as rfh:
 		reactions_dict = pickle.load(rfh)
-
 else:
-	biochemistry_reactions = json.load(urlopen(MSD_git_url+MSD_commit+"/Biochemistry/reactions.json"))
-	for reaction in biochemistry_reactions:
-		reactions_dict[reaction['id']]=reaction
-
+	reaction_pattern = r"^reaction_.*\.json$"
+	reactions_dict = fetch_biochemistry_data(msd_base_url,reaction_pattern,msd_branch)
+	
 	# Its important to use binary mode
 	with open('Biochem_Cache/MS_Rxns.pickle', 'wb') as rfh:
 		pickle.dump(reactions_dict,rfh)
 
+print("Reactions: ",len(reactions_dict))
+
+# See if compounds are pickled otherwise fetch them
 compounds_dict=dict()
 if(os.path.isfile('Biochem_Cache/MS_Cpds.pickle')):
 	with open('Biochem_Cache/MS_Cpds.pickle', 'rb') as cfh:
 		compounds_dict = pickle.load(cfh)
-
 else:
-	biochemistry_compounds = json.load(urlopen(MSD_git_url+MSD_commit+"/Biochemistry/compounds.json"))
-
-	for compound in biochemistry_compounds:
+	compound_pattern = r"^compound_.*\.json$"
+	compounds_dict = fetch_biochemistry_data(msd_base_url,compound_pattern,msd_branch)
+	print("Compounds: ",len(compounds_dict))
+	for compound in compounds_dict:
+		cpd_obj = compounds_dict[compound]
 
 		# fix default values
 		for key in ["charge","mass","deltag","deltagerr"]:
-			if(compound[key] is None):
-				compound[key] = 0.0
+			if(cpd_obj[key] is None):
+				cpd_obj[key] = 0.0
 
-		if(compound['formula'] is None):
-			compound['formula'] = 'R'
+		if(cpd_obj['formula'] is None):
+			cpd_obj['formula'] = 'R'
 
-		template_compound_hash = { 'id':compound['id'], 'name':compound["name"],
-								   'abbreviation':compound["abbreviation"], 'aliases':[],
-								   'formula':compound["formula"], 'isCofactor':0,
-								   'defaultCharge':float(compound["charge"]), 'mass':float(compound["mass"]),
-								   'deltaG':float(compound["deltag"]), 'deltaGErr':float(compound["deltagerr"]),
-								   'compound_ref':biochem_ref+"/compounds/id/"+compound['id'] }
-
-		compounds_dict[compound['id']]=template_compound_hash
+		template_compound_hash = { 'id':compound, 'name':cpd_obj["name"],
+								   'abbreviation':cpd_obj["abbreviation"], 'aliases':[],
+								   'formula':cpd_obj["formula"], 'isCofactor':0,
+								   'defaultCharge':float(cpd_obj["charge"]), 'mass':float(cpd_obj["mass"]),
+								   'deltaG':float(cpd_obj["deltag"]), 'deltaGErr':float(cpd_obj["deltagerr"]),
+								   'compound_ref':biochem_ref+"/compounds/id/"+cpd_obj['id'] }
+		compounds_dict[compound]=template_compound_hash
 
 	# Its important to use binary mode
 	with open('Biochem_Cache/MS_Cpds.pickle', 'wb') as cfh:
@@ -317,15 +368,15 @@ for template_reaction in sorted(reactions_roles):
 	template_reaction_hash['GapfillDirection']=gapfilling_direction
 	
 	# Add reagents
-	for entry in (reactions_dict[base_reaction]['stoichiometry'].split(';')):
-		(coefficient,compound,gen_cpt,index,name)=entry.split(":")
+	for rgt in (reactions_dict[base_reaction]['stoichiometry']):
+		# (coefficient,compound,gen_cpt,index,name)=entry.split(":")
 		
-		# The generic compartment (gen_cpt) is an indice
+		# The generic compartment is an index
 		# The reaction compartments (reaction_cpts) generally consist of one compartment
-		#    so the indice is 0
+		#    so the index is 0
 		# but in the case of a transporter, the reaction can have multiple compartments
-		#    so the indice may be 0, 1, or even 2 in rare cases
-		rgt_cpt=reactions_cpts[template_reaction][int(gen_cpt)]
+		#    so the index may be 0, 1, or even 2 in rare cases
+		rgt_cpt=reactions_cpts[template_reaction][rgt['compartment']]
 
 		# Check and extend list of template compartments
 		if(rgt_cpt not in check_tpl_cpt_dict):
@@ -333,24 +384,24 @@ for template_reaction in sorted(reactions_roles):
 			template_compartments.append(compartments[rgt_cpt])
 
 		# Check and extend list of template compounds
-		if(compound not in check_tpl_cpd_dict):
-			check_tpl_cpd_dict[compound]=1
-			template_compounds.append(compounds_dict[compound])
+		if(rgt['compound'] not in check_tpl_cpd_dict):
+			check_tpl_cpd_dict[rgt['compound']]=1
+			template_compounds.append(compounds_dict[rgt['compound']])
 
 		# Check and extend list of template compcompounds
-		comp_compound = compound+"_"+rgt_cpt
+		comp_compound = rgt['compound']+"_"+rgt_cpt
 		if(comp_compound not in check_tpl_cpcpd_dict):
 			check_tpl_cpcpd_dict[comp_compound]=1
 
 			comp_compound_hash = { 'id':comp_compound,
-								   'charge':compounds_dict[compound]["defaultCharge"], 'maxuptake':0.0,
-								   'templatecompound_ref':"~/compounds/id/"+compound,
+								   'charge':float(rgt['charge']), 'maxuptake':0.0,
+								   'templatecompound_ref':"~/compounds/id/"+rgt['compound'],
 								   'templatecompartment_ref':"~/compartments/id/"+rgt_cpt }
 
 			template_compcompounds.append(comp_compound_hash)
 
 		rxn_rgt_hash = { 'templatecompcompound_ref' : "~/compcompounds/id/"+comp_compound,
-						 'coefficient' : float(coefficient) }
+						 'coefficient' : float(rgt['coefficient']) }
 		template_reaction_hash['templateReactionReagents'].append(rxn_rgt_hash)
 
 	# Add complexes

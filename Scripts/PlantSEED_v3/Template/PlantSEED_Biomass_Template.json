@@ -657,9 +657,9 @@
             "name": "GSH",
             "abbreviation": "gthrd",
             "aliases": [],
-            "formula": "C10H16N3O6S",
+            "formula": "C10H15N3O6S",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": -2.0,
             "mass": 306.0,
             "deltaG": -68.68,
             "deltaGErr": 1.12,
@@ -1047,9 +1047,9 @@
             "name": "L-Cysteine",
             "abbreviation": "cys-L",
             "aliases": [],
-            "formula": "C3H7NO2S",
+            "formula": "C3H6NO2S",
             "isCofactor": 0,
-            "defaultCharge": 0.0,
+            "defaultCharge": -1.0,
             "mass": 121.0,
             "deltaG": -12.83,
             "deltaGErr": 0.71,
@@ -1983,9 +1983,9 @@
             "name": "Riboflavin",
             "abbreviation": "ribflv",
             "aliases": [],
-            "formula": "C17H19N4O6",
+            "formula": "C17H20N4O6",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 0.0,
             "mass": 376.0,
             "deltaG": 69.09,
             "deltaGErr": 2.23,
@@ -3088,9 +3088,9 @@
             "name": "gamma-Glutamylcysteine",
             "abbreviation": "glucys",
             "aliases": [],
-            "formula": "C8H13N2O5S",
+            "formula": "C8H12N2O5S",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": -2.0,
             "mass": 249.0,
             "deltaG": -64.24,
             "deltaGErr": 0.87,
@@ -3504,9 +3504,9 @@
             "name": "Thiamine phosphate",
             "abbreviation": "thmmp",
             "aliases": [],
-            "formula": "C12H17N4O4PS",
+            "formula": "C12H16N4O4PS",
             "isCofactor": 0,
-            "defaultCharge": 0.0,
+            "defaultCharge": -1.0,
             "mass": 344.0,
             "deltaG": -160.12,
             "deltaGErr": 2.59,
@@ -3816,9 +3816,9 @@
             "name": "Toxopyrimidine",
             "abbreviation": "4ahmmp",
             "aliases": [],
-            "formula": "C6H10N3O",
+            "formula": "C6H9N3O",
             "isCofactor": 0,
-            "defaultCharge": 1.0,
+            "defaultCharge": 0.0,
             "mass": 139.0,
             "deltaG": 108.81,
             "deltaGErr": 1.23,
@@ -4102,9 +4102,9 @@
             "name": "Precorrin 2",
             "abbreviation": "pre2",
             "aliases": [],
-            "formula": "C42H41N4O16",
+            "formula": "C42H40N4O16",
             "isCofactor": 0,
-            "defaultCharge": -7.0,
+            "defaultCharge": -8.0,
             "mass": 856.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -4271,9 +4271,9 @@
             "name": "Phosphoribosyl-ATP",
             "abbreviation": "prbatp",
             "aliases": [],
-            "formula": "C15H20N5O20P4",
+            "formula": "C15H19N5O20P4",
             "isCofactor": 0,
-            "defaultCharge": -5.0,
+            "defaultCharge": -6.0,
             "mass": 715.0,
             "deltaG": -1015.22,
             "deltaGErr": 4.53,
@@ -4934,9 +4934,9 @@
             "name": "6-7-Dimethyl-8--1-D-ribityllumazine",
             "abbreviation": "dmlz",
             "aliases": [],
-            "formula": "C13H17N4O6",
+            "formula": "C13H18N4O6",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 0.0,
             "mass": 326.0,
             "deltaG": 29.4,
             "deltaGErr": 1.55,
@@ -4947,9 +4947,9 @@
             "name": "(R)-4'-Phosphopantothenoyl-L-cysteine",
             "abbreviation": "4ppcys",
             "aliases": [],
-            "formula": "C12H20N2O9PS",
+            "formula": "C12H19N2O9PS",
             "isCofactor": 0,
-            "defaultCharge": -3.0,
+            "defaultCharge": -4.0,
             "mass": 400.0,
             "deltaG": -219.43,
             "deltaGErr": 1.44,
@@ -5064,9 +5064,9 @@
             "name": "4-Amino-5-phosphomethyl-2-methylpyrimidine",
             "abbreviation": "4ampm",
             "aliases": [],
-            "formula": "C6H9N3O4P",
+            "formula": "C6H8N3O4P",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": -2.0,
             "mass": 218.0,
             "deltaG": -102.14,
             "deltaGErr": 1.25,
@@ -5090,9 +5090,9 @@
             "name": "5'-Phosphoribosylformylglycinamidine",
             "abbreviation": "fpram",
             "aliases": [],
-            "formula": "C8H15N3O8P",
+            "formula": "C8H14N3O8P",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": -2.0,
             "mass": 313.0,
             "deltaG": -381.6,
             "deltaGErr": 2.19,
@@ -5207,9 +5207,9 @@
             "name": "2-Amino-4-hydroxy-6-hydroxymethyl-7-8-dihydropteridinediphosphate",
             "abbreviation": "2ahhmd",
             "aliases": [],
-            "formula": "C7H8N5O8P2",
+            "formula": "C7H9N5O8P2",
             "isCofactor": 0,
-            "defaultCharge": -3.0,
+            "defaultCharge": -2.0,
             "mass": 353.0,
             "deltaG": -423.61,
             "deltaGErr": 2.57,
@@ -5259,9 +5259,9 @@
             "name": "7,8-Dihydroneopterin 3'-triphosphate",
             "abbreviation": "ahdt",
             "aliases": [],
-            "formula": "C9H12N5O13P3",
+            "formula": "C9H13N5O13P3",
             "isCofactor": 0,
-            "defaultCharge": -4.0,
+            "defaultCharge": -3.0,
             "mass": 492.0,
             "deltaG": -704.45,
             "deltaGErr": 2.61,
@@ -5545,9 +5545,9 @@
             "name": "Isosalipurpol",
             "abbreviation": "Isosalipurpol",
             "aliases": [],
-            "formula": "C15H11O5",
+            "formula": "C15H12O5",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 0.0,
             "mass": 272.0,
             "deltaG": -96.74,
             "deltaGErr": 2.44,
@@ -5974,9 +5974,9 @@
             "name": "13(1)-Oxo-Mg-protoporphyrin IX 13-monomethyl ester",
             "abbreviation": "13(1)-Oxo-Mg-protoporphyrin IX 13-monomethyl ester",
             "aliases": [],
-            "formula": "C35H31MgN4O5",
+            "formula": "C35H30MgN4O5",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": -2.0,
             "mass": 611.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -6228,6 +6228,19 @@
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
             "compound_ref": "48/1/5/compounds/id/cpd11313"
+        },
+        {
+            "id": "cpd11423",
+            "name": "1,2-Diacyl-sn-glycerol",
+            "abbreviation": "12dgr",
+            "aliases": [],
+            "formula": "C5H6O5R2",
+            "isCofactor": 0,
+            "defaultCharge": 0.0,
+            "mass": 148.0,
+            "deltaG": 10000000.0,
+            "deltaGErr": 10000000.0,
+            "compound_ref": "48/1/5/compounds/id/cpd11423"
         },
         {
             "id": "cpd11464",
@@ -6546,9 +6559,9 @@
             "name": "Flavin",
             "abbreviation": "Flavin",
             "aliases": [],
-            "formula": "C12H8N4O2R",
+            "formula": "C12H9N4O2R",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 0.0,
             "mass": 242.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -6572,7 +6585,7 @@
             "name": "Stearoyl-[acyl-carrier protein]",
             "abbreviation": "cll_430",
             "aliases": [],
-            "formula": "C18H35OS",
+            "formula": "C29H60N3O8PR2S",
             "isCofactor": 0,
             "defaultCharge": 0.0,
             "mass": 300.0,
@@ -6819,9 +6832,9 @@
             "name": "IAOx N-oxide",
             "abbreviation": "Indole-3-acetaldoxime N-oxide",
             "aliases": [],
-            "formula": "C10H9N2O2",
+            "formula": "C10H10N2O2",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 0.0,
             "mass": 0.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -7742,9 +7755,9 @@
             "name": "2-phenylacetonitrile oxide",
             "abbreviation": "2-phenylacetonitrile oxide",
             "aliases": [],
-            "formula": "C8H8NO2",
+            "formula": "C8H9NO2",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 0.0,
             "mass": 133.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -7781,9 +7794,9 @@
             "name": "indole-3-acetonitrile oxide",
             "abbreviation": "indole-3-acetonitrile oxide",
             "aliases": [],
-            "formula": "C10H9N2O2",
+            "formula": "C10H10N2O2",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 0.0,
             "mass": 172.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -7820,9 +7833,9 @@
             "name": "4-methylthiobutanonitrile oxide",
             "abbreviation": "4-methylthiobutanonitrile oxide",
             "aliases": [],
-            "formula": "C5H10NO2S",
+            "formula": "C5H11NO2S",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 0.0,
             "mass": 131.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -7859,9 +7872,9 @@
             "name": "5-methylthiopentanonitrile oxide",
             "abbreviation": "5-methylthiopentanonitrile oxide",
             "aliases": [],
-            "formula": "C6H12NO2S",
+            "formula": "C6H13NO2S",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 0.0,
             "mass": 145.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -7898,9 +7911,9 @@
             "name": "6-methylthiohexanonitrile oxide",
             "abbreviation": "6-methylthiohexanonitrile oxide",
             "aliases": [],
-            "formula": "C7H14NO2S",
+            "formula": "C7H15NO2S",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 0.0,
             "mass": 159.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -7937,9 +7950,9 @@
             "name": "7-methylthioheptanonitrile oxide",
             "abbreviation": "7-methylthioheptanonitrile oxide",
             "aliases": [],
-            "formula": "C8H16NO2S",
+            "formula": "C8H17NO2S",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 0.0,
             "mass": 173.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -7976,9 +7989,9 @@
             "name": "8-methylthiooctanonitrile oxide",
             "abbreviation": "8-methylthiooctanonitrile oxide",
             "aliases": [],
-            "formula": "C9H18NO2S",
+            "formula": "C9H19NO2S",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 0.0,
             "mass": 187.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -8015,9 +8028,9 @@
             "name": "9-methylthiononanonitrile oxide",
             "abbreviation": "9-methylthiononanonitrile oxide",
             "aliases": [],
-            "formula": "C10H20NO2S",
+            "formula": "C10H21NO2S",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 0.0,
             "mass": 201.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -8661,19 +8674,6 @@
             "compound_ref": "48/1/5/compounds/id/cpd26827"
         },
         {
-            "id": "cpd26855",
-            "name": "DIACYLGLYCEROL",
-            "abbreviation": "DIACYLGLYCEROL",
-            "aliases": [],
-            "formula": "C5H6O5R2",
-            "isCofactor": 0,
-            "defaultCharge": 0.0,
-            "mass": 10000000.0,
-            "deltaG": 10000000.0,
-            "deltaGErr": 10000000.0,
-            "compound_ref": "48/1/5/compounds/id/cpd26855"
-        },
-        {
             "id": "cpd26869",
             "name": "DIOH-ISOVALERATE",
             "abbreviation": "DIOH-ISOVALERATE",
@@ -8717,9 +8717,9 @@
             "name": "L-Cysteine-Desulfurases",
             "abbreviation": "L-Cysteine-Desulfurases",
             "aliases": [],
-            "formula": "C3H6NOR2S",
+            "formula": "C3H5NOR2S",
             "isCofactor": 0,
-            "defaultCharge": 1.0,
+            "defaultCharge": 0.0,
             "mass": 10000000.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -8808,9 +8808,9 @@
             "name": "Oxidized-Plastocyanins",
             "abbreviation": "Oxidized-Plastocyanins",
             "aliases": [],
-            "formula": "R",
+            "formula": "CuR8",
             "isCofactor": 0,
-            "defaultCharge": 0.0,
+            "defaultCharge": 2.0,
             "mass": 10000000.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -8847,9 +8847,9 @@
             "name": "Persulfurated-L-cysteine-desulfurases",
             "abbreviation": "Persulfurated-L-cysteine-desulfurases",
             "aliases": [],
-            "formula": "C3H6NOR2S2",
+            "formula": "C3H5NOR2S2",
             "isCofactor": 0,
-            "defaultCharge": 1.0,
+            "defaultCharge": 0.0,
             "mass": 10000000.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -8860,9 +8860,9 @@
             "name": "Plastocyanin-Reduced",
             "abbreviation": "Plastocyanin-Reduced",
             "aliases": [],
-            "formula": "R",
+            "formula": "CuR8",
             "isCofactor": 0,
-            "defaultCharge": -1.0,
+            "defaultCharge": 1.0,
             "mass": 10000000.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -8912,9 +8912,9 @@
             "name": "Red-Thioredoxin",
             "abbreviation": "Red-Thioredoxin",
             "aliases": [],
-            "formula": "C10H15N4O4R4S2",
+            "formula": "C10H14N4O4R4S2",
             "isCofactor": 0,
-            "defaultCharge": 1.0,
+            "defaultCharge": 0.0,
             "mass": 10000000.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -16676,6 +16676,13 @@
             "templatecompartment_ref": "~/compartments/id/c"
         },
         {
+            "id": "cpd11423_c",
+            "charge": 0.0,
+            "maxuptake": 0.0,
+            "templatecompound_ref": "~/compounds/id/cpd11423",
+            "templatecompartment_ref": "~/compartments/id/c"
+        },
+        {
             "id": "cpd11464_d",
             "charge": -2.0,
             "maxuptake": 0.0,
@@ -18398,13 +18405,6 @@
             "templatecompartment_ref": "~/compartments/id/c"
         },
         {
-            "id": "cpd26855_c",
-            "charge": 0.0,
-            "maxuptake": 0.0,
-            "templatecompound_ref": "~/compounds/id/cpd26855",
-            "templatecompartment_ref": "~/compartments/id/c"
-        },
-        {
             "id": "cpd26869_d",
             "charge": -1.0,
             "maxuptake": 0.0,
@@ -19069,10 +19069,6 @@
             "maxrevflux": 0.0,
             "templateReactionReagents": [
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": -1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd02656_d",
                     "coefficient": -2.0
                 },
@@ -19461,11 +19457,11 @@
                     "coefficient": -2.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00005_c",
-                    "coefficient": 1.0
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
+                    "coefficient": -1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00005_c",
                     "coefficient": 1.0
                 },
                 {
@@ -19497,11 +19493,11 @@
                     "coefficient": -2.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00005_d",
-                    "coefficient": 1.0
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
+                    "coefficient": -1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00005_d",
                     "coefficient": 1.0
                 },
                 {
@@ -19533,11 +19529,11 @@
                     "coefficient": -2.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00005_m",
-                    "coefficient": 1.0
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_m",
+                    "coefficient": -1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_m",
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00005_m",
                     "coefficient": 1.0
                 },
                 {
@@ -22852,7 +22848,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 2.0
+                    "coefficient": 1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd02978_c",
@@ -23527,10 +23523,6 @@
                     "coefficient": 1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": 1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00220_d",
                     "coefficient": 1.0
                 }
@@ -23565,6 +23557,10 @@
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00050_c",
                     "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
+                    "coefficient": 1.0
                 }
             ],
             "templatecomplex_refs": [
@@ -23596,6 +23592,10 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00050_d",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
                     "coefficient": 1.0
                 }
             ],
@@ -26452,7 +26452,9 @@
                     "coefficient": 1.0
                 }
             ],
-            "templatecomplex_refs": []
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_1d709c"
+            ]
         },
         {
             "id": "rxn00789_d",
@@ -26471,7 +26473,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": -1.0
+                    "coefficient": -2.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd01775_d",
@@ -28716,7 +28718,9 @@
                     "coefficient": 1.0
                 }
             ],
-            "templatecomplex_refs": []
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_2f2aec"
+            ]
         },
         {
             "id": "rxn01115_c",
@@ -28899,7 +28903,7 @@
             "templateReactionReagents": [
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": -2.0
+                    "coefficient": -3.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00070_c",
@@ -28939,7 +28943,7 @@
             "templateReactionReagents": [
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_n",
-                    "coefficient": -2.0
+                    "coefficient": -3.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00070_n",
@@ -28979,7 +28983,7 @@
             "templateReactionReagents": [
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_r",
-                    "coefficient": -2.0
+                    "coefficient": -3.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00070_r",
@@ -31415,10 +31419,6 @@
                     "coefficient": -1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": -1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00305_c",
                     "coefficient": -1.0
                 },
@@ -31448,10 +31448,6 @@
             "templateReactionReagents": [
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00009_d",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
                     "coefficient": -1.0
                 },
                 {
@@ -33471,6 +33467,10 @@
                     "coefficient": 1.0
                 },
                 {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
+                    "coefficient": 1.0
+                },
+                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00683_c",
                     "coefficient": 1.0
                 }
@@ -33500,6 +33500,10 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00012_m",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_m",
                     "coefficient": 1.0
                 },
                 {
@@ -33937,10 +33941,6 @@
                     "coefficient": 1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00424_c",
                     "coefficient": 1.0
                 }
@@ -34104,10 +34104,6 @@
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
             "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": -1.0
-                },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd02654_d",
                     "coefficient": -1.0
@@ -34278,7 +34274,7 @@
             "templateReactionReagents": [
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": -1.0
+                    "coefficient": -2.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd02666_c",
@@ -34894,7 +34890,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 2.0
+                    "coefficient": 1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd02920_c",
@@ -34930,7 +34926,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_m",
-                    "coefficient": 2.0
+                    "coefficient": 1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd02920_m",
@@ -35023,10 +35019,6 @@
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00150_m",
                     "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_m",
-                    "coefficient": 1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00239_m",
@@ -35306,7 +35298,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 2.0
+                    "coefficient": 1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd03426_c",
@@ -35498,7 +35490,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": 2.0
+                    "coefficient": 1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd01777_d",
@@ -35746,10 +35738,6 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00009_d",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
                     "coefficient": 1.0
                 },
                 {
@@ -36229,10 +36217,6 @@
                     "coefficient": 1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": 1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd02656_d",
                     "coefficient": 1.0
                 }
@@ -36282,7 +36266,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": 1.0
+                    "coefficient": 2.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd02826_d",
@@ -36334,7 +36318,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_m",
-                    "coefficient": 1.0
+                    "coefficient": 2.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd02826_m",
@@ -36358,6 +36342,10 @@
             "templateReactionReagents": [
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00002_d",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
                     "coefficient": -1.0
                 },
                 {
@@ -36578,7 +36566,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 1.0
+                    "coefficient": 2.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd03521_c",
@@ -37093,10 +37081,6 @@
                     "coefficient": -1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": -1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00081_d",
                     "coefficient": -1.0
                 },
@@ -37107,6 +37091,10 @@
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00042_d",
                     "coefficient": 2.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
+                    "coefficient": 1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00193_d",
@@ -37261,6 +37249,10 @@
                     "coefficient": 1.0
                 },
                 {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
+                    "coefficient": 1.0
+                },
+                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd08630_d",
                     "coefficient": 1.0
                 }
@@ -37290,7 +37282,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": -1.0
+                    "coefficient": -2.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd08630_d",
@@ -37878,6 +37870,10 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00019_c",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
                     "coefficient": 1.0
                 },
                 {
@@ -46237,6 +46233,10 @@
                     "coefficient": -1.0
                 },
                 {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
+                    "coefficient": -1.0
+                },
+                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd01880_c",
                     "coefficient": -1.0
                 },
@@ -49781,6 +49781,10 @@
                     "coefficient": 1.0
                 },
                 {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
+                    "coefficient": 1.0
+                },
+                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd28060_c",
                     "coefficient": 1.0
                 }
@@ -50269,6 +50273,10 @@
                     "coefficient": -1.0
                 },
                 {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
+                    "coefficient": 1.0
+                },
+                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00096_c",
                     "coefficient": 1.0
                 },
@@ -50373,6 +50381,10 @@
             "maxrevflux": 0.0,
             "templateReactionReagents": [
                 {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
+                    "coefficient": -1.0
+                },
+                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00084_c",
                     "coefficient": -1.0
                 },
@@ -50404,6 +50416,10 @@
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
             "templateReactionReagents": [
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
+                    "coefficient": -1.0
+                },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00084_d",
                     "coefficient": -1.0
@@ -50457,6 +50473,10 @@
                     "coefficient": 1.0
                 },
                 {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
+                    "coefficient": 1.0
+                },
+                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00084_c",
                     "coefficient": 1.0
                 }
@@ -50497,6 +50517,10 @@
                     "coefficient": 1.0
                 },
                 {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
+                    "coefficient": 1.0
+                },
+                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00084_d",
                     "coefficient": 1.0
                 }
@@ -50534,6 +50558,10 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00029_m",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_m",
                     "coefficient": 1.0
                 },
                 {
@@ -50738,6 +50766,10 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00031_c",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
                     "coefficient": 1.0
                 },
                 {
@@ -51586,7 +51618,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": 1.0
+                    "coefficient": 2.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00204_d",
@@ -51894,7 +51926,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 2.0
+                    "coefficient": 1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd23389_c",
@@ -51934,7 +51966,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 2.0
+                    "coefficient": 1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd23392_c",
@@ -51974,7 +52006,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 2.0
+                    "coefficient": 1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd23395_c",
@@ -52014,7 +52046,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 2.0
+                    "coefficient": 1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd23398_c",
@@ -52054,7 +52086,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 2.0
+                    "coefficient": 1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd23401_c",
@@ -52094,7 +52126,7 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 2.0
+                    "coefficient": 1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd23404_c",
@@ -53545,7 +53577,7 @@
                     "coefficient": -1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd26855_c",
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd11423_c",
                     "coefficient": -1.0
                 },
                 {
@@ -55201,6 +55233,10 @@
             "maxrevflux": 0.0,
             "templateReactionReagents": [
                 {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
+                    "coefficient": -1.0
+                },
+                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00084_d",
                     "coefficient": -1.0
                 },
@@ -55558,7 +55594,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_19fd4e"
+                "~/complexes/id/PS_complex_2e191a"
             ]
         },
         {
@@ -56041,10 +56077,6 @@
                     "coefficient": 1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd27735_c",
                     "coefficient": 1.0
                 }
@@ -56077,10 +56109,6 @@
                     "coefficient": 1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": 1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd27735_d",
                     "coefficient": 1.0
                 }
@@ -56110,10 +56138,6 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00005_m",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_m",
                     "coefficient": 1.0
                 },
                 {
@@ -56222,6 +56246,10 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00014_c",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
                     "coefficient": 1.0
                 },
                 {
@@ -59209,6 +59237,10 @@
                     "coefficient": 1.0
                 },
                 {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
+                    "coefficient": 1.0
+                },
+                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd28060_c",
                     "coefficient": 1.0
                 }
@@ -59242,6 +59274,10 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00038_c",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
                     "coefficient": 1.0
                 },
                 {
@@ -59281,6 +59317,10 @@
                     "coefficient": 1.0
                 },
                 {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
+                    "coefficient": 1.0
+                },
+                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd28060_c",
                     "coefficient": 1.0
                 }
@@ -59314,6 +59354,10 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00062_c",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
                     "coefficient": 1.0
                 },
                 {
@@ -59745,10 +59789,6 @@
                     "coefficient": 1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": 1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd11630_d",
                     "coefficient": 1.0
                 },
@@ -59786,10 +59826,6 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00001_d",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
                     "coefficient": 1.0
                 },
                 {
@@ -59833,10 +59869,6 @@
                     "coefficient": 1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd11630_c",
                     "coefficient": 1.0
                 },
@@ -59877,10 +59909,6 @@
                     "coefficient": 1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": 1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd08695_d",
                     "coefficient": 1.0
                 },
@@ -59918,10 +59946,6 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00001_d",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
                     "coefficient": 1.0
                 },
                 {
@@ -61575,19 +61599,11 @@
         },
         {
             "id": "PS_role_0aa9aa",
-            "name": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (hydroxylation) (no EC)",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": [
-                "Athaliana_TAIR10||AT4G03050"
-            ]
-        },
-        {
-            "id": "PS_role_3a7671",
             "name": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)",
             "source": "PlantSEED",
             "aliases": [],
             "features": [
+                "Athaliana_TAIR10||AT4G03050",
                 "Athaliana_TAIR10||AT4G03070"
             ]
         },
@@ -69199,20 +69215,6 @@
             ]
         },
         {
-            "id": "PS_complex_19fd4e",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_54b04e",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
             "id": "PS_complex_1a3ab1",
             "name": "",
             "reference": "",
@@ -69489,6 +69491,20 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_69dfdc",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_1d709c",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_3a0bb1",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -70561,6 +70577,20 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_be145f",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_2f2aec",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_850f74",
                     "optional_role": 0,
                     "triggering": 1
                 }

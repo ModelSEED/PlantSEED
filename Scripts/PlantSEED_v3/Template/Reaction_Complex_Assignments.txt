@@ -157,7 +157,6 @@ rxn00790_d	PS_complex_19387c	PS_role_f8a867	Amidophosphoribosyltransferase (EC 2
 rxn26477_d	PS_complex_1980fb	PS_role_22b8b8	1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate synthase (EC 1.17.7.1)	Athaliana_TAIR10||AT5G60600
 rxn15116_d|rxn01334_d	PS_complex_19b773	PS_role_78470a	Fructose-bisphosphate aldolase class I (EC 4.1.2.13)	Athaliana_TAIR10||AT2G01140|Athaliana_TAIR10||AT2G21330|Athaliana_TAIR10||AT2G36460|Athaliana_TAIR10||AT3G52930|Athaliana_TAIR10||AT4G26520|Athaliana_TAIR10||AT4G26530|Athaliana_TAIR10||AT4G38970|Athaliana_TAIR10||AT5G03690
 rxn27030_d|rxn27029_d	PS_complex_19cccc	PS_role_eb4442	Thiazole biosynthetic enzyme Thi4	Athaliana_TAIR10||AT5G54770
-rxn27066_c	PS_complex_19fd4e	PS_role_54b04e	Glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)	Athaliana_TAIR10||AT4G03060
 rxn09005_c	PS_complex_1a3ab1	PS_role_f0c5ba	Nitrate transport	
 rxn21324_r|rxn03016_r|rxn23801_r	PS_complex_1a6cbe	PS_role_2a82f1	5-O-(4-coumaroyl)-D-quinate/shikimate 3'-hydroxylase (EC 1.14.13.36)	Athaliana_TAIR10||AT2G40890
 rxn02304_c	PS_complex_1aff78	PS_role_e0f61d	Protoporphyrinogen IX oxidase, aerobic, HemY (EC 1.3.3.4)	Athaliana_TAIR10||AT4G01690|Athaliana_TAIR10||AT5G14220
@@ -191,6 +190,7 @@ rxn15056_m	PS_complex_1c3303	PS_role_7ee2d1	Isocitrate dehydrogenase [NAD] catal
 rxn15056_m	PS_complex_1c3303	PS_role_021c81	Isocitrate dehydrogenase [NAD] regulatory subunit (EC 1.1.1.41)	Athaliana_TAIR10||AT2G17130|Athaliana_TAIR10||AT4G35260|Athaliana_TAIR10||AT4G35650
 rxn08633_x	PS_complex_1c7b87	PS_role_c54864	Glutamate transport	
 rxn00454_c	PS_complex_1d5d26	PS_role_69dfdc	Methionine--glyoxylate aminotransferase (EC 2.6.1.73)	
+rxn00782_d	PS_complex_1d709c	PS_role_3a0bb1	NADPH-dependent glyceraldehyde-3-phosphate dehydrogenase (EC 1.2.1.13)	Athaliana_TAIR10||AT1G12900|Athaliana_TAIR10||AT1G42970|Athaliana_TAIR10||AT3G26650
 rxn09300_d	PS_complex_1daca6	PS_role_2edbbb	Thiamin transport	
 rxn15271_d|rxn01200_d	PS_complex_1e1e41	PS_role_a90791	Transketolase (EC 2.2.1.1)	Athaliana_TAIR10||AT2G45290|Athaliana_TAIR10||AT3G60750
 rxn00527_x|rxn00493_x|rxn00260_x	PS_complex_1e7455	PS_role_62a094	Aspartate aminotransferase (EC 2.6.1.1)	Athaliana_TAIR10||AT1G62800|Athaliana_TAIR10||AT2G22250|Athaliana_TAIR10||AT2G30970|Athaliana_TAIR10||AT4G31990|Athaliana_TAIR10||AT5G11520|Athaliana_TAIR10||AT5G19550
@@ -254,7 +254,7 @@ rxn01257_d	PS_complex_29e037	PS_role_459f31	Para-aminobenzoate synthase, amidotr
 rxn01257_d	PS_complex_29e037	PS_role_bc9739	Para-aminobenzoate synthase, aminase component (EC 2.6.1.85)	Athaliana_TAIR10||AT2G28880
 rxn08749_d	PS_complex_29e4dd	PS_role_8ed1f6	IMP transport	
 rxn20583_d	PS_complex_2a2a7e	PS_role_2eb26c	Phosphoglucomutase (EC 5.4.2.2)	Athaliana_TAIR10||AT1G23190|Athaliana_TAIR10||AT1G70730|Athaliana_TAIR10||AT5G51820
-rxn27065_c|rxn23786_c	PS_complex_2a9f7d	PS_role_0aa9aa	Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (hydroxylation) (no EC)	Athaliana_TAIR10||AT4G03050
+rxn27065_c|rxn23786_c	PS_complex_2a9f7d	PS_role_0aa9aa	Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)	Athaliana_TAIR10||AT4G03050|Athaliana_TAIR10||AT4G03070
 rxn01301_d|rxn01302_d	PS_complex_2aaa9a	PS_role_3d9a3d	Homoserine dehydrogenase (EC 1.1.1.3)	Athaliana_TAIR10||AT1G31230|Athaliana_TAIR10||AT4G19710
 rxn00187_m	PS_complex_2ac02c	PS_role_f73cee	Glutamine synthetase type II, eukaryotic (EC 6.3.1.2)	Athaliana_TAIR10||AT1G48470|Athaliana_TAIR10||AT1G66200|Athaliana_TAIR10||AT3G17820|Athaliana_TAIR10||AT5G16570|Athaliana_TAIR10||AT5G35630|Athaliana_TAIR10||AT5G37600
 rxn25480_m	PS_complex_2af4dc	PS_role_e19364	3-nonaprenyl-4-hydroxy-5-methoxybenzoate carboxy-lyase (EC 4.1.1.-)	
@@ -269,11 +269,12 @@ rxn00686_c	PS_complex_2d2fb9	PS_role_5002aa	Dihydrofolate reductase (EC 1.5.1.3)
 rxn00938_c	PS_complex_2d7b76	PS_role_1e88fb	Nicotinamidase (EC 3.5.1.19) of PncA family, nonfunctional	Athaliana_TAIR10||AT3G16190
 rxn00938_c	PS_complex_2d7b76	PS_role_54877a	Nicotinamidase (EC 3.5.1.19), plant/cyanobacterial family	Athaliana_TAIR10||AT2G22570|Athaliana_TAIR10||AT5G23220|Athaliana_TAIR10||AT5G23230
 rxn00779_c	PS_complex_2ddfe0	PS_role_7bb520	Non-phosphorylating glyceraldehyde-3-phosphate dehydrogenase (NADP) (EC 1.2.1.9)	Athaliana_TAIR10||AT2G24270
-rxn23785_c	PS_complex_2e191a	PS_role_54b04e	Glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)	Athaliana_TAIR10||AT4G03060
+rxn23785_c|rxn27066_c	PS_complex_2e191a	PS_role_54b04e	Glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)	Athaliana_TAIR10||AT4G03060
 rxn00105_c|rxn02155_c	PS_complex_2e774e	PS_role_b81dd7	Nicotinamide-nucleotide adenylyltransferase (EC 2.7.7.1), eukaryotic PNAT family	Athaliana_TAIR10||AT5G55810
 rxn00105_c|rxn02155_c	PS_complex_2e774e	PS_role_29e007	Nicotinate-nucleotide adenylyltransferase (EC 2.7.7.18), eukaryotic PNAT family	Athaliana_TAIR10||AT5G55810
 rxn00178_x	PS_complex_2ed1cd	PS_role_db2b0b	Acetyl-CoA acetyltransferase (EC 2.3.1.9)	Athaliana_TAIR10||AT1G04710|Athaliana_TAIR10||AT2G33150|Athaliana_TAIR10||AT5G47720|Athaliana_TAIR10||AT5G48230|Athaliana_TAIR10||AT5G48880
 rxn01629_d	PS_complex_2f23a8	PS_role_be145f	Glutamate-1-semialdehyde aminotransferase (EC 5.4.3.8)	Athaliana_TAIR10||AT3G48730|Athaliana_TAIR10||AT5G63570
+rxn01111_d	PS_complex_2f2aec	PS_role_850f74	Phosphoribulokinase (EC 2.7.1.19)	Athaliana_TAIR10||AT1G32060
 rxn05465_d	PS_complex_2f6255	PS_role_f793ab	Malonyl CoA-acyl carrier protein transacylase (EC 2.3.1.39)	Athaliana_TAIR10||AT2G30200
 rxn01019_d	PS_complex_2f78e1	PS_role_23fed7	Ornithine carbamoyltransferase (EC 2.1.3.3)	Athaliana_TAIR10||AT1G75330
 rxn05220_x	PS_complex_2f88fa	PS_role_5ded6a	Asparagine transport	
