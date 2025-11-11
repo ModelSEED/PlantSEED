@@ -1,25 +1,17 @@
-Skipping unbalanced reaction: rxn04192
-Skipping unbalanced reaction: rxn19236
-Skipping unbalanced reaction: rxn20520
-Skipping unbalanced reaction: rxn20520
-Skipping unbalanced reaction: rxn20987
-Skipping unbalanced reaction: rxn20987
-Skipping unbalanced reaction: rxn22473
-Skipping unbalanced reaction: rxn22473
-Skipping unbalanced reaction: rxn23774
-Skipping unbalanced reaction: rxn23775
-Skipping unbalanced reaction: rxn23776
-Skipping unbalanced reaction: rxn23786
-Skipping unbalanced reaction: rxn23937
-Skipping unbalanced reaction: rxn23937
-Skipping unbalanced reaction: rxn24147
-Skipping unbalanced reaction: rxn24147
-Skipping unbalanced reaction: rxn24147
-Skipping unbalanced reaction: rxn24246
-Skipping unbalanced reaction: rxn26498
-Skipping unbalanced reaction: rxn26498
-Skipping unbalanced reaction: rxn26528
-Skipping unbalanced reaction: rxn26528
-Skipping unbalanced reaction: rxn27065
-Skipping unbalanced reaction: rxn27067
-Skipping unbalanced reaction: rxn42688
+Skipping unbalanced reaction: rxn04192	MI:H:-2/O:6
+Skipping unbalanced reaction: rxn19236	CPDFORMERROR
+Skipping unbalanced reaction: rxn20520	MI:C:6/H:5/O:1/R:1
+Skipping unbalanced reaction: rxn20520	MI:C:6/H:5/O:1/R:1
+Skipping unbalanced reaction: rxn23774	MI:C:1/H:2/O:1
+Skipping unbalanced reaction: rxn23775	MI:O:1
+Skipping unbalanced reaction: rxn23776	MI:C:1/H:2
+Skipping unbalanced reaction: rxn23786	MI:C:-1/H:-2/S:-1
+Skipping unbalanced reaction: rxn23937	MI:C:1/H:3|CI:2
+Skipping unbalanced reaction: rxn23937	MI:C:1/H:3|CI:2
+Skipping unbalanced reaction: rxn24147	MI:C:-5/H:-7/N:-1/O:-3
+Skipping unbalanced reaction: rxn24147	MI:C:-5/H:-7/N:-1/O:-3
+Skipping unbalanced reaction: rxn24147	MI:C:-5/H:-7/N:-1/O:-3
+Skipping unbalanced reaction: rxn24246	CPDFORMERROR
+Skipping unbalanced reaction: rxn27065	MI:C:-1/H:-2/S:-1
+Skipping unbalanced reaction: rxn27067	CPDFORMERROR
+Skipping unbalanced reaction: rxn42688	CPDFORMERROR

@@ -339,10 +339,15 @@ for template_reaction in sorted(reactions_roles):
 
 	[base_reaction,reaction_cpt]=template_reaction.split('_')
 
+	if(reactions_dict[base_reaction]['is_obsolete'] == 1):
+		print("Obsolete: ",base_reaction,": ",reactions_dict[base_reaction]['definition'])
+
 	# Skip unbalanced reactions
 	if(base_reaction not in excepted_reactions_list and \
-	   (base_reaction not in reactions_dict or 'OK' not in reactions_dict[base_reaction]['status'])):
-		excluded_rxns_fh.write("Skipping unbalanced reaction: "+base_reaction+"\n")
+	   (base_reaction not in reactions_dict or \
+	 	('OK' not in reactions_dict[base_reaction]['status'] and \
+			reactions_dict[base_reaction]['status'].startswith('CI:') is False))):
+		excluded_rxns_fh.write("Skipping unbalanced reaction: "+base_reaction+"\t"+reactions_dict[base_reaction]['status']+"\n")
 		continue
 
 	template_reaction_hash = copy.deepcopy(default_template_reaction)
