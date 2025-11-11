@@ -31375,7 +31375,7 @@
                         "rxn00782_d"
                     ]
                 },
-                "exclude": true
+                "exclude": false
             }
         },
         "abstract_enzyme": "NADPH-dependent glyceraldehyde-3-phosphate dehydrogenase"
@@ -36926,7 +36926,7 @@
                         "rxn01111_d"
                     ]
                 },
-                "exclude": true
+                "exclude": false
             }
         },
         "abstract_enzyme": "Phosphoribulokinase"
