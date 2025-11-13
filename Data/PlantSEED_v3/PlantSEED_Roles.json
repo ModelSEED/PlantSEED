@@ -1263,17 +1263,17 @@
         },
         "features": [],
         "reactions": [
-            "rxn10923"
+            "rxn08096"
         ],
         "localization": {
             "cm": {
-                "rxn10923": []
+                "rxn08096": []
             },
             "cd": {
-                "rxn10923": []
+                "rxn08096": []
             },
             "cx": {
-                "rxn10923": []
+                "rxn08096": []
             }
         },
         "publications": [],
@@ -1289,7 +1289,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_0e7fb3": [
-                        "rxn10923_m"
+                        "rxn08096_m"
                     ]
                 },
                 "exclude": false
@@ -1298,7 +1298,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_a4c948": [
-                        "rxn10923_d"
+                        "rxn08096_d"
                     ]
                 },
                 "exclude": false
@@ -1307,7 +1307,7 @@
                 "reaction": "x",
                 "kbase_ids": {
                     "PS_complex_95a13a": [
-                        "rxn10923_x"
+                        "rxn08096_x"
                     ]
                 },
                 "exclude": false
@@ -1492,7 +1492,7 @@
             "Athaliana_TAIR10||AT1G74040"
         ],
         "reactions": [
-            "rxn27497"
+            "rxn00902"
         ],
         "localization": {
             "d": {
@@ -1525,7 +1525,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_8eb897": [
-                        "rxn27497_d"
+                        "rxn00902_d"
                     ]
                 },
                 "exclude": false
@@ -4332,7 +4332,7 @@
             "Athaliana_TAIR10||AT5G66380"
         ],
         "reactions": [
-            "rxn39242"
+            "rxn09737"
         ],
         "localization": {
             "cv": {
@@ -4352,7 +4352,7 @@
                 ]
             },
             "cm": {
-                "rxn39242": []
+                "rxn09737": []
             }
         },
         "publications": [],
@@ -4368,7 +4368,7 @@
                 "reaction": "v",
                 "kbase_ids": {
                     "PS_complex_359dfe": [
-                        "rxn39242_v"
+                        "rxn09737_v"
                     ]
                 },
                 "exclude": false
@@ -4377,7 +4377,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_e8a0f3": [
-                        "rxn39242_d"
+                        "rxn09737_d"
                     ]
                 },
                 "exclude": false
@@ -4386,7 +4386,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_5b8796": [
-                        "rxn39242_m"
+                        "rxn09737_m"
                     ]
                 },
                 "exclude": false
@@ -4412,7 +4412,7 @@
             "Athaliana_TAIR10||AT5G66380"
         ],
         "reactions": [
-            "rxn39243"
+            "rxn34467"
         ],
         "localization": {
             "cv": {
@@ -4432,7 +4432,7 @@
                 ]
             },
             "cm": {
-                "rxn39243": []
+                "rxn34467": []
             }
         },
         "publications": [],
@@ -4448,7 +4448,7 @@
                 "reaction": "v",
                 "kbase_ids": {
                     "PS_complex_0b177e": [
-                        "rxn39243_v"
+                        "rxn34467_v"
                     ]
                 },
                 "exclude": false
@@ -4457,7 +4457,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_e37f08": [
-                        "rxn39243_d"
+                        "rxn34467_d"
                     ]
                 },
                 "exclude": false
@@ -4466,7 +4466,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_51f3b1": [
-                        "rxn39243_m"
+                        "rxn34467_m"
                     ]
                 },
                 "exclude": false
@@ -4492,7 +4492,7 @@
             "Athaliana_TAIR10||AT5G66380"
         ],
         "reactions": [
-            "rxn39241"
+            "rxn09789"
         ],
         "localization": {
             "cv": {
@@ -4512,7 +4512,7 @@
                 ]
             },
             "cm": {
-                "rxn39241": []
+                "rxn09789": []
             }
         },
         "publications": [],
@@ -4528,7 +4528,7 @@
                 "reaction": "v",
                 "kbase_ids": {
                     "PS_complex_3ebe10": [
-                        "rxn39241_v"
+                        "rxn09789_v"
                     ]
                 },
                 "exclude": false
@@ -4537,7 +4537,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_39aac0": [
-                        "rxn39241_d"
+                        "rxn09789_d"
                     ]
                 },
                 "exclude": false
@@ -4546,7 +4546,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_ca7111": [
-                        "rxn39241_m"
+                        "rxn09789_m"
                     ]
                 },
                 "exclude": false
@@ -5354,15 +5354,15 @@
         },
         "features": [],
         "reactions": [
-            "rxn31160",
-            "rxn31358"
+            "rxn08134",
+            "rxn08134"
         ],
         "localization": {
             "cm": {
-                "rxn31160": []
+                "rxn08134": []
             },
             "cd": {
-                "rxn31358": []
+                "rxn08134": []
             }
         },
         "publications": [],
@@ -5378,8 +5378,8 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_8f245c": [
-                        "rxn31160_m",
-                        "rxn31358_m"
+                        "rxn08134_m",
+                        "rxn08134_m"
                     ]
                 },
                 "exclude": false
@@ -5388,8 +5388,8 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_0c3eb2": [
-                        "rxn31160_d",
-                        "rxn31358_d"
+                        "rxn08134_d",
+                        "rxn08134_d"
                     ]
                 },
                 "exclude": false
@@ -5996,7 +5996,7 @@
         ],
         "reactions": [
             "rxn15021",
-            "rxn19030"
+            "rxn08043"
         ],
         "localization": {
             "d": {
@@ -6051,7 +6051,7 @@
                 "kbase_ids": {
                     "PS_complex_6e64b7": [
                         "rxn15021_d",
-                        "rxn19030_d"
+                        "rxn08043_d"
                     ]
                 },
                 "exclude": false
@@ -6085,7 +6085,7 @@
         ],
         "reactions": [
             "rxn15021",
-            "rxn19030"
+            "rxn08043"
         ],
         "localization": {
             "d": {
@@ -6119,7 +6119,7 @@
                 "kbase_ids": {
                     "PS_complex_6e64b7": [
                         "rxn15021_d",
-                        "rxn19030_d"
+                        "rxn08043_d"
                     ]
                 },
                 "exclude": false
@@ -7014,11 +7014,11 @@
             "Athaliana_TAIR10||AT2G36310"
         ],
         "reactions": [
-            "rxn37585"
+            "rxn15162"
         ],
         "localization": {
             "c": {
-                "rxn37585": []
+                "rxn15162": []
             }
         },
         "publications": [],
@@ -7034,7 +7034,7 @@
                 "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_391aff": [
-                        "rxn37585_c"
+                        "rxn15162_c"
                     ]
                 },
                 "exclude": false
@@ -8426,7 +8426,7 @@
             "Athaliana_TAIR10||AT5G57850"
         ],
         "reactions": [
-            "rxn19071"
+            "rxn03841"
         ],
         "localization": {
             "d": {
@@ -8451,7 +8451,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_160532": [
-                        "rxn19071_d"
+                        "rxn03841_d"
                     ]
                 },
                 "exclude": false
@@ -8530,17 +8530,17 @@
         },
         "features": [],
         "reactions": [
-            "rxn09736"
+            "rxn05466"
         ],
         "localization": {
             "ce": {
-                "rxn09736": []
+                "rxn05466": []
             },
             "cm": {
-                "rxn09736": []
+                "rxn05466": []
             },
             "cd": {
-                "rxn09736": []
+                "rxn05466": []
             }
         },
         "publications": [],
@@ -8556,7 +8556,7 @@
                 "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_f8bb3f": [
-                        "rxn09736_c"
+                        "rxn05466_c"
                     ]
                 },
                 "exclude": false
@@ -8565,7 +8565,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_8919df": [
-                        "rxn09736_m"
+                        "rxn05466_m"
                     ]
                 },
                 "exclude": false
@@ -8574,7 +8574,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_f90509": [
-                        "rxn09736_d"
+                        "rxn05466_d"
                     ]
                 },
                 "exclude": false
@@ -8652,7 +8652,7 @@
             "Athaliana_TAIR10||AT1G24807"
         ],
         "reactions": [
-            "rxn27709"
+            "rxn00727"
         ],
         "localization": {
             "d": {
@@ -8692,7 +8692,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_fcc858": [
-                        "rxn27709_d"
+                        "rxn00727_d"
                     ]
                 },
                 "exclude": false
@@ -8719,7 +8719,7 @@
             "Athaliana_TAIR10||AT2G29690"
         ],
         "reactions": [
-            "rxn27709"
+            "rxn00727"
         ],
         "localization": {
             "d": {
@@ -8752,7 +8752,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_fcc858": [
-                        "rxn27709_d"
+                        "rxn00727_d"
                     ]
                 },
                 "exclude": false
@@ -9150,7 +9150,7 @@
             "Athaliana_TAIR10||AT1G11790"
         ],
         "reactions": [
-            "rxn19253"
+            "rxn00490"
         ],
         "localization": {
             "d": {
@@ -9194,7 +9194,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_deab3b": [
-                        "rxn19253_d"
+                        "rxn00490_d"
                     ]
                 },
                 "exclude": false
@@ -9220,7 +9220,7 @@
             "Athaliana_TAIR10||AT5G34930"
         ],
         "reactions": [
-            "rxn24109"
+            "rxn00526"
         ],
         "localization": {
             "d": {
@@ -9248,7 +9248,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_c0d6b6": [
-                        "rxn24109_d"
+                        "rxn00526_d"
                     ]
                 },
                 "exclude": false
@@ -10554,7 +10554,7 @@
         ],
         "reactions": [
             "rxn01207",
-            "rxn17744",
+            "rxn02269",
             "rxn00899"
         ],
         "localization": {
@@ -10586,7 +10586,7 @@
                 "kbase_ids": {
                     "PS_complex_784211": [
                         "rxn01207_m",
-                        "rxn17744_m",
+                        "rxn02269_m",
                         "rxn00899_m"
                     ]
                 },
@@ -10597,7 +10597,7 @@
                 "kbase_ids": {
                     "PS_complex_0d3c7e": [
                         "rxn01207_d",
-                        "rxn17744_d",
+                        "rxn02269_d",
                         "rxn00899_d"
                     ]
                 },
@@ -10623,7 +10623,7 @@
         ],
         "reactions": [
             "rxn01207",
-            "rxn17744",
+            "rxn02269",
             "rxn00899"
         ],
         "localization": {
@@ -10650,7 +10650,7 @@
                 "kbase_ids": {
                     "PS_complex_784211": [
                         "rxn01207_m",
-                        "rxn17744_m",
+                        "rxn02269_m",
                         "rxn00899_m"
                     ]
                 },
@@ -10683,9 +10683,9 @@
             "UniProt||Q9M401"
         ],
         "reactions": [
-            "rxn19242",
-            "rxn19240",
-            "rxn19241"
+            "rxn00903",
+            "rxn01575",
+            "rxn00806"
         ],
         "localization": {
             "m": {
@@ -10742,9 +10742,9 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_6c9c5e": [
-                        "rxn19242_m",
-                        "rxn19240_m",
-                        "rxn19241_m"
+                        "rxn00903_m",
+                        "rxn01575_m",
+                        "rxn00806_m"
                     ]
                 },
                 "exclude": false
@@ -10753,9 +10753,9 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_2c5c1b": [
-                        "rxn19242_d",
-                        "rxn19240_d",
-                        "rxn19241_d"
+                        "rxn00903_d",
+                        "rxn01575_d",
+                        "rxn00806_d"
                     ]
                 },
                 "exclude": false
@@ -10764,9 +10764,9 @@
                 "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_688d88": [
-                        "rxn19242_c",
-                        "rxn19240_c",
-                        "rxn19241_c"
+                        "rxn00903_c",
+                        "rxn01575_c",
+                        "rxn00806_c"
                     ]
                 },
                 "exclude": false
@@ -12475,7 +12475,7 @@
             "Athaliana_TAIR10||AT3G58740"
         ],
         "reactions": [
-            "rxn19316"
+            "rxn00256"
         ],
         "localization": {
             "m": {
@@ -12530,7 +12530,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_4b22e5": [
-                        "rxn19316_m"
+                        "rxn00256_m"
                     ]
                 },
                 "exclude": false
@@ -12539,7 +12539,7 @@
                 "reaction": "x",
                 "kbase_ids": {
                     "PS_complex_2c4cbe": [
-                        "rxn19316_x"
+                        "rxn00256_x"
                     ]
                 },
                 "exclude": false
@@ -14382,7 +14382,7 @@
             "Athaliana_TAIR10||AT5G62530"
         ],
         "reactions": [
-            "rxn20649"
+            "rxn00503"
         ],
         "localization": {
             "m": {
@@ -14406,7 +14406,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_3b0662": [
-                        "rxn20649_m"
+                        "rxn00503_m"
                     ]
                 },
                 "exclude": false
@@ -14886,11 +14886,11 @@
             "Athaliana_TAIR10||AT3G25585"
         ],
         "reactions": [
-            "rxn24114"
+            "rxn05971"
         ],
         "localization": {
             "c": {
-                "rxn24114": []
+                "rxn05971": []
             }
         },
         "publications": [],
@@ -14906,7 +14906,7 @@
                 "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_964a66": [
-                        "rxn24114_c"
+                        "rxn05971_c"
                     ]
                 },
                 "exclude": false
@@ -15225,7 +15225,7 @@
             "Athaliana_TAIR10||AT5G41480"
         ],
         "reactions": [
-            "rxn19488"
+            "rxn01603"
         ],
         "localization": {
             "m": {
@@ -15249,7 +15249,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_b471f8": [
-                        "rxn19488_m"
+                        "rxn01603_m"
                     ]
                 },
                 "exclude": false
@@ -15358,7 +15358,7 @@
         ],
         "reactions": [
             "rxn01207",
-            "rxn17744",
+            "rxn02269",
             "rxn00899"
         ],
         "localization": {
@@ -15384,7 +15384,7 @@
                 "kbase_ids": {
                     "PS_complex_784211": [
                         "rxn01207_m",
-                        "rxn17744_m",
+                        "rxn02269_m",
                         "rxn00899_m"
                     ]
                 },
@@ -15471,7 +15471,7 @@
         ],
         "reactions": [
             "rxn01207",
-            "rxn17744",
+            "rxn02269",
             "rxn00899"
         ],
         "localization": {
@@ -15509,7 +15509,7 @@
                 "kbase_ids": {
                     "PS_complex_784211": [
                         "rxn01207_m",
-                        "rxn17744_m",
+                        "rxn02269_m",
                         "rxn00899_m"
                     ]
                 },
@@ -16296,7 +16296,7 @@
         ],
         "reactions": [
             "rxn19544",
-            "rxn19545"
+            "rxn03437"
         ],
         "localization": {
             "d": {
@@ -16321,7 +16321,7 @@
                 "kbase_ids": {
                     "PS_complex_26010b": [
                         "rxn19544_d",
-                        "rxn19545_d"
+                        "rxn03437_d"
                     ]
                 },
                 "exclude": false
@@ -16345,17 +16345,17 @@
         },
         "features": [],
         "reactions": [
-            "rxn31168"
+            "rxn09771"
         ],
         "localization": {
             "cm": {
-                "rxn31168": []
+                "rxn09771": []
             },
             "cd": {
-                "rxn31168": []
+                "rxn09771": []
             },
             "cx": {
-                "rxn31168": []
+                "rxn09771": []
             }
         },
         "publications": [],
@@ -16371,7 +16371,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_e18c1e": [
-                        "rxn31168_m"
+                        "rxn09771_m"
                     ]
                 },
                 "exclude": false
@@ -16380,7 +16380,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_3c753b": [
-                        "rxn31168_d"
+                        "rxn09771_d"
                     ]
                 },
                 "exclude": false
@@ -16389,7 +16389,7 @@
                 "reaction": "x",
                 "kbase_ids": {
                     "PS_complex_bfb03e": [
-                        "rxn31168_x"
+                        "rxn09771_x"
                     ]
                 },
                 "exclude": false
@@ -19044,17 +19044,17 @@
         },
         "features": [],
         "reactions": [
-            "rxn11013"
+            "rxn08544"
         ],
         "localization": {
             "cm": {
-                "rxn11013": []
+                "rxn08544": []
             },
             "cd": {
-                "rxn11013": []
+                "rxn08544": []
             },
             "cx": {
-                "rxn11013": []
+                "rxn08544": []
             }
         },
         "publications": [],
@@ -19070,7 +19070,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_b038b7": [
-                        "rxn11013_m"
+                        "rxn08544_m"
                     ]
                 },
                 "exclude": false
@@ -19079,7 +19079,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_405525": [
-                        "rxn11013_d"
+                        "rxn08544_d"
                     ]
                 },
                 "exclude": false
@@ -19088,7 +19088,7 @@
                 "reaction": "x",
                 "kbase_ids": {
                     "PS_complex_eb8d23": [
-                        "rxn11013_x"
+                        "rxn08544_x"
                     ]
                 },
                 "exclude": false
@@ -20766,7 +20766,7 @@
             "Athaliana_TAIR10||AT2G22250"
         ],
         "reactions": [
-            "rxn28083"
+            "rxn05036"
         ],
         "localization": {
             "d": {
@@ -20789,7 +20789,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_9a203d": [
-                        "rxn28083_d"
+                        "rxn05036_d"
                     ]
                 },
                 "exclude": false
@@ -21095,17 +21095,17 @@
         },
         "features": [],
         "reactions": [
-            "rxn29086"
+            "rxn08625"
         ],
         "localization": {
             "cm": {
-                "rxn29086": []
+                "rxn08625": []
             },
             "cd": {
-                "rxn29086": []
+                "rxn08625": []
             },
             "cx": {
-                "rxn29086": []
+                "rxn08625": []
             }
         },
         "publications": [],
@@ -21121,7 +21121,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_4d3c58": [
-                        "rxn29086_m"
+                        "rxn08625_m"
                     ]
                 },
                 "exclude": false
@@ -21130,7 +21130,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_5955c1": [
-                        "rxn29086_d"
+                        "rxn08625_d"
                     ]
                 },
                 "exclude": false
@@ -21139,7 +21139,7 @@
                 "reaction": "x",
                 "kbase_ids": {
                     "PS_complex_e66650": [
-                        "rxn29086_x"
+                        "rxn08625_x"
                     ]
                 },
                 "exclude": false
@@ -21497,17 +21497,17 @@
         },
         "features": [],
         "reactions": [
-            "rxn32435"
+            "rxn08645"
         ],
         "localization": {
             "cm": {
-                "rxn32435": []
+                "rxn08645": []
             },
             "cd": {
-                "rxn32435": []
+                "rxn08645": []
             },
             "cx": {
-                "rxn32435": []
+                "rxn08645": []
             }
         },
         "publications": [],
@@ -21523,7 +21523,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_422036": [
-                        "rxn32435_m"
+                        "rxn08645_m"
                     ]
                 },
                 "exclude": false
@@ -21532,7 +21532,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_e2838f": [
-                        "rxn32435_d"
+                        "rxn08645_d"
                     ]
                 },
                 "exclude": false
@@ -21541,7 +21541,7 @@
                 "reaction": "x",
                 "kbase_ids": {
                     "PS_complex_4b6fce": [
-                        "rxn32435_x"
+                        "rxn08645_x"
                     ]
                 },
                 "exclude": false
@@ -22210,17 +22210,17 @@
         },
         "features": [],
         "reactions": [
-            "rxn12426"
+            "rxn08653"
         ],
         "localization": {
             "cm": {
-                "rxn12426": []
+                "rxn08653": []
             },
             "cd": {
-                "rxn12426": []
+                "rxn08653": []
             },
             "cx": {
-                "rxn12426": []
+                "rxn08653": []
             }
         },
         "publications": [],
@@ -22236,7 +22236,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_5b3bb7": [
-                        "rxn12426_m"
+                        "rxn08653_m"
                     ]
                 },
                 "exclude": false
@@ -22245,7 +22245,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_31c431": [
-                        "rxn12426_d"
+                        "rxn08653_d"
                     ]
                 },
                 "exclude": false
@@ -22254,7 +22254,7 @@
                 "reaction": "x",
                 "kbase_ids": {
                     "PS_complex_55d3b1": [
-                        "rxn12426_x"
+                        "rxn08653_x"
                     ]
                 },
                 "exclude": false
@@ -22817,7 +22817,7 @@
             "Athaliana_TAIR10||AT4G39120"
         ],
         "reactions": [
-            "rxn27927"
+            "rxn02160"
         ],
         "localization": {
             "d": {
@@ -22841,7 +22841,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_320655": [
-                        "rxn27927_d"
+                        "rxn02160_d"
                     ]
                 },
                 "exclude": false
@@ -23252,7 +23252,7 @@
             "Athaliana_TAIR10||AT2G17265"
         ],
         "reactions": [
-            "rxn19905"
+            "rxn01300"
         ],
         "localization": {
             "d": {
@@ -23276,7 +23276,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_d48b09": [
-                        "rxn19905_d"
+                        "rxn01300_d"
                     ]
                 },
                 "exclude": false
@@ -24037,11 +24037,11 @@
         },
         "features": [],
         "reactions": [
-            "rxn28615"
+            "rxn01682"
         ],
         "localization": {
             "d": {
-                "rxn28615": []
+                "rxn01682": []
             }
         },
         "publications": [],
@@ -24057,7 +24057,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_a36c0f": [
-                        "rxn28615_d"
+                        "rxn01682_d"
                     ]
                 },
                 "exclude": false
@@ -25007,7 +25007,7 @@
             "Athaliana_TAIR10||AT3G58610"
         ],
         "reactions": [
-            "rxn19029",
+            "rxn08764",
             "rxn19027"
         ],
         "localization": {
@@ -25031,7 +25031,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_15e85b": [
-                        "rxn19029_d",
+                        "rxn08764_d",
                         "rxn19027_d"
                     ]
                 },
@@ -25425,11 +25425,11 @@
             "Athaliana_TAIR10||AT1G01220"
         ],
         "reactions": [
-            "rxn19739"
+            "rxn02262"
         ],
         "localization": {
             "c": {
-                "rxn19739": []
+                "rxn02262": []
             }
         },
         "publications": [],
@@ -25445,7 +25445,7 @@
                 "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_02cfb9": [
-                        "rxn19739_c"
+                        "rxn02262_c"
                     ]
                 },
                 "exclude": false
@@ -26828,17 +26828,17 @@
         },
         "features": [],
         "reactions": [
-            "rxn10967"
+            "rxn08868"
         ],
         "localization": {
             "cm": {
-                "rxn10967": []
+                "rxn08868": []
             },
             "cd": {
-                "rxn10967": []
+                "rxn08868": []
             },
             "cx": {
-                "rxn10967": []
+                "rxn08868": []
             }
         },
         "publications": [],
@@ -26854,7 +26854,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_6958c6": [
-                        "rxn10967_m"
+                        "rxn08868_m"
                     ]
                 },
                 "exclude": false
@@ -26863,7 +26863,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_ad3c30": [
-                        "rxn10967_d"
+                        "rxn08868_d"
                     ]
                 },
                 "exclude": false
@@ -26872,7 +26872,7 @@
                 "reaction": "x",
                 "kbase_ids": {
                     "PS_complex_0978ac": [
-                        "rxn10967_x"
+                        "rxn08868_x"
                     ]
                 },
                 "exclude": false
@@ -28281,7 +28281,7 @@
             "Athaliana_TAIR10||AT5G20090"
         ],
         "reactions": [
-            "rxn09717"
+            "rxn05469"
         ],
         "localization": {
             "cm": {
@@ -28306,7 +28306,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_c3180b": [
-                        "rxn09717_m"
+                        "rxn05469_m"
                     ]
                 },
                 "exclude": false
@@ -32372,7 +32372,7 @@
         ],
         "reactions": [
             "rxn17803",
-            "rxn28487"
+            "rxn25660"
         ],
         "localization": {
             "d": {
@@ -32402,7 +32402,7 @@
                 "kbase_ids": {
                     "PS_complex_367432": [
                         "rxn17803_d",
-                        "rxn28487_d"
+                        "rxn25660_d"
                     ]
                 },
                 "exclude": false
@@ -32844,7 +32844,7 @@
             "Athaliana_TAIR10||AT5G46180"
         ],
         "reactions": [
-            "rxn20496"
+            "rxn00467"
         ],
         "localization": {
             "m": {
@@ -32867,7 +32867,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_3c01af": [
-                        "rxn20496_m"
+                        "rxn00467_m"
                     ]
                 },
                 "exclude": false
@@ -34556,11 +34556,11 @@
             "Athaliana_TAIR10||AT3G15820"
         ],
         "reactions": [
-            "rxn14003"
+            "rxn11291"
         ],
         "localization": {
             "c": {
-                "rxn14003": []
+                "rxn11291": []
             }
         },
         "publications": [],
@@ -34576,7 +34576,7 @@
                 "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_9f5898": [
-                        "rxn14003_c"
+                        "rxn11291_c"
                     ]
                 },
                 "exclude": false
@@ -36564,7 +36564,7 @@
             "Athaliana_TAIR10||AT1G07780"
         ],
         "reactions": [
-            "rxn28082"
+            "rxn02508"
         ],
         "localization": {
             "d": {
@@ -36598,7 +36598,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_753960": [
-                        "rxn28082_d"
+                        "rxn02508_d"
                     ]
                 },
                 "exclude": false
@@ -40828,17 +40828,17 @@
         },
         "features": [],
         "reactions": [
-            "rxn10929"
+            "rxn09218"
         ],
         "localization": {
             "cm": {
-                "rxn10929": []
+                "rxn09218": []
             },
             "cd": {
-                "rxn10929": []
+                "rxn09218": []
             },
             "cx": {
-                "rxn10929": []
+                "rxn09218": []
             }
         },
         "publications": [],
@@ -40854,7 +40854,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_e6b144": [
-                        "rxn10929_m"
+                        "rxn09218_m"
                     ]
                 },
                 "exclude": false
@@ -40863,7 +40863,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_3ae437": [
-                        "rxn10929_d"
+                        "rxn09218_d"
                     ]
                 },
                 "exclude": false
@@ -40872,7 +40872,7 @@
                 "reaction": "x",
                 "kbase_ids": {
                     "PS_complex_e85c5d": [
-                        "rxn10929_x"
+                        "rxn09218_x"
                     ]
                 },
                 "exclude": false
@@ -43070,9 +43070,9 @@
             "rxn03892",
             "rxn05287",
             "rxn14012",
-            "rxn37610",
+            "rxn05028",
             "rxn01486",
-            "rxn31768",
+            "rxn12008",
             "rxn03891"
         ],
         "localization": {
@@ -43123,9 +43123,9 @@
                         "rxn03892_d",
                         "rxn05287_d",
                         "rxn14012_d",
-                        "rxn37610_d",
+                        "rxn05028_d",
                         "rxn01486_d",
-                        "rxn31768_d",
+                        "rxn12008_d",
                         "rxn03891_d"
                     ]
                 },
@@ -43138,9 +43138,9 @@
                         "rxn03892_m",
                         "rxn05287_m",
                         "rxn14012_m",
-                        "rxn37610_m",
+                        "rxn05028_m",
                         "rxn01486_m",
-                        "rxn31768_m",
+                        "rxn12008_m",
                         "rxn03891_m"
                     ]
                 },
@@ -43153,9 +43153,9 @@
                         "rxn03892_r",
                         "rxn05287_r",
                         "rxn14012_r",
-                        "rxn37610_r",
+                        "rxn05028_r",
                         "rxn01486_r",
-                        "rxn31768_r",
+                        "rxn12008_r",
                         "rxn03891_r"
                     ]
                 },
@@ -44709,17 +44709,17 @@
         },
         "features": [],
         "reactions": [
-            "rxn10952"
+            "rxn09271"
         ],
         "localization": {
             "cm": {
-                "rxn10952": []
+                "rxn09271": []
             },
             "cd": {
-                "rxn10952": []
+                "rxn09271": []
             },
             "cx": {
-                "rxn10952": []
+                "rxn09271": []
             }
         },
         "publications": [],
@@ -44735,7 +44735,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_c7fae5": [
-                        "rxn10952_m"
+                        "rxn09271_m"
                     ]
                 },
                 "exclude": false
@@ -44744,7 +44744,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_7382b9": [
-                        "rxn10952_d"
+                        "rxn09271_d"
                     ]
                 },
                 "exclude": false
@@ -44753,7 +44753,7 @@
                 "reaction": "x",
                 "kbase_ids": {
                     "PS_complex_aa37fc": [
-                        "rxn10952_x"
+                        "rxn09271_x"
                     ]
                 },
                 "exclude": false
@@ -45280,7 +45280,7 @@
             "Athaliana_TAIR10||AT4G14680"
         ],
         "reactions": [
-            "rxn27259"
+            "rxn00379"
         ],
         "localization": {
             "d": {
@@ -45307,7 +45307,7 @@
                 ]
             },
             "c": {
-                "rxn27259": []
+                "rxn00379": []
             }
         },
         "publications": [],
@@ -45323,7 +45323,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_eee276": [
-                        "rxn27259_d"
+                        "rxn00379_d"
                     ]
                 },
                 "exclude": false
@@ -45332,7 +45332,7 @@
                 "reaction": "n",
                 "kbase_ids": {
                     "PS_complex_fb558b": [
-                        "rxn27259_n"
+                        "rxn00379_n"
                     ]
                 },
                 "exclude": false
@@ -45341,7 +45341,7 @@
                 "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_f3a922": [
-                        "rxn27259_c"
+                        "rxn00379_c"
                     ]
                 },
                 "exclude": false
@@ -46857,7 +46857,7 @@
             "Athaliana_TAIR10||AT3G54640"
         ],
         "reactions": [
-            "rxn28615"
+            "rxn01682"
         ],
         "localization": {
             "d": {
@@ -46881,7 +46881,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_a36c0f": [
-                        "rxn28615_d"
+                        "rxn01682_d"
                     ]
                 },
                 "exclude": false
@@ -46908,7 +46908,7 @@
             "Athaliana_TAIR10||AT4G27070"
         ],
         "reactions": [
-            "rxn26013"
+            "rxn00474"
         ],
         "localization": {
             "d": {
@@ -46937,7 +46937,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_958df9": [
-                        "rxn26013_d"
+                        "rxn00474_d"
                     ]
                 },
                 "exclude": false
@@ -47600,11 +47600,11 @@
             "Athaliana_TAIR10||AT1G12780"
         ],
         "reactions": [
-            "rxn37863"
+            "rxn00214"
         ],
         "localization": {
             "c": {
-                "rxn37863": []
+                "rxn00214": []
             }
         },
         "publications": [],
@@ -47620,7 +47620,7 @@
                 "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_0f551f": [
-                        "rxn37863_c"
+                        "rxn00214_c"
                     ]
                 },
                 "exclude": false
@@ -50337,17 +50337,17 @@
         },
         "features": [],
         "reactions": [
-            "rxn30639"
+            "rxn12788"
         ],
         "localization": {
             "cm": {
-                "rxn30639": []
+                "rxn12788": []
             },
             "cd": {
-                "rxn30639": []
+                "rxn12788": []
             },
             "cx": {
-                "rxn30639": []
+                "rxn12788": []
             }
         },
         "publications": [],
@@ -50363,7 +50363,7 @@
                 "reaction": "m",
                 "kbase_ids": {
                     "PS_complex_424ef5": [
-                        "rxn30639_m"
+                        "rxn12788_m"
                     ]
                 },
                 "exclude": false
@@ -50372,7 +50372,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_0cc6da": [
-                        "rxn30639_d"
+                        "rxn12788_d"
                     ]
                 },
                 "exclude": false
@@ -50381,7 +50381,7 @@
                 "reaction": "x",
                 "kbase_ids": {
                     "PS_complex_27e082": [
-                        "rxn30639_x"
+                        "rxn12788_x"
                     ]
                 },
                 "exclude": false
@@ -52209,7 +52209,7 @@
             "Athaliana_TAIR10||AT4G16740"
         ],
         "reactions": [
-            "rxn28404"
+            "rxn14294"
         ],
         "localization": {
             "d": {
@@ -52237,7 +52237,7 @@
                 "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_34672c": [
-                        "rxn28404_d"
+                        "rxn14294_d"
                     ]
                 },
                 "exclude": false
@@ -52246,7 +52246,7 @@
                 "reaction": "c",
                 "kbase_ids": {
                     "PS_complex_4d383f": [
-                        "rxn28404_c"
+                        "rxn14294_c"
                     ]
                 },
                 "exclude": false

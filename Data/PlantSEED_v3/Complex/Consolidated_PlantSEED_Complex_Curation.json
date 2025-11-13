@@ -960,7 +960,7 @@
     },
     "rxn17744_d_RX": {
         "id": "RX",
-        "reaction": "rxn17744",
+        "reaction": "rxn02269",
         "compartment": "d",
         "roles": [
             {
@@ -976,7 +976,7 @@
     },
     "rxn17744_m_A": {
         "id": "A",
-        "reaction": "rxn17744",
+        "reaction": "rxn02269",
         "compartment": "m",
         "roles": [
             {
@@ -1022,7 +1022,7 @@
     },
     "rxn19030_d_A": {
         "id": "A",
-        "reaction": "rxn19030",
+        "reaction": "rxn08043",
         "compartment": "d",
         "roles": [
             {
@@ -1106,7 +1106,7 @@
     },
     "rxn27709_d_A": {
         "id": "A",
-        "reaction": "rxn27709",
+        "reaction": "rxn00727",
         "compartment": "d",
         "roles": [
             {
@@ -3273,7 +3273,7 @@
     },
     "rxn26013_d_A": {
         "id": "A",
-        "reaction": "rxn26013",
+        "reaction": "rxn00474",
         "compartment": "d",
         "roles": [
             {
@@ -3479,7 +3479,7 @@
     },
     "rxn28615_d_A": {
         "id": "A",
-        "reaction": "rxn28615",
+        "reaction": "rxn01682",
         "compartment": "d",
         "roles": [
             {
