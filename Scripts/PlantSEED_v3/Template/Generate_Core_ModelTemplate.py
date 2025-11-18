@@ -230,12 +230,12 @@ for entry in roles_list:
 	roles_types[role]=entry['type']
 
 ########################################################
-## Load PlantSEED Complexes and Biochemistry
+## Load PlantSEED Complexes
 ########################################################
 
 #Load Core Subsystems
 #Load PlantSEED Subsystems, Roles, Reactions
-with open("../../../Data/PlantSEED_v3/PlantSEED_Biochemistry.json") as biochem_file:
+with open("../../../Data/PlantSEED_v3/PlantSEED_Complexes.json") as biochem_file:
 	complex_list = json.load(biochem_file)
 
 complexes=dict()

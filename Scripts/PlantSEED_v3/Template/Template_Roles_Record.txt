@@ -220,7 +220,6 @@ PS_role_5349d8	Cytochrome c oxidase, subunit IV (EC 1.9.3.1)
 PS_role_a707a2	D-3-phosphoglycerate dehydrogenase (EC 1.1.1.95)
 PS_role_56998d	D-glycerate 3-kinase (EC 2.7.1.31), plant type
 PS_role_8898b4	D-serine dehydratase (EC 4.3.1.18)
-PS_role_6739a4	Delta-1-pyrroline-5-carboxylate dehydrogenase (EC 1.5.1.12)
 PS_role_98e089	Demethylphylloquinone methyltransferase (EC 2.1.1.329)
 PS_role_41f345	Deoxycytidine monophosphate deaminase (EC 3.5.4.12)
 PS_role_dfd46e	Deoxyuridine 5'-triphosphate nucleotidohydrolase (EC 3.6.1.23)
@@ -288,7 +287,6 @@ PS_role_1a2ec2	Fumarate transport
 PS_role_d8ce45	GMP synthase [glutamine-hydrolyzing] (EC 6.3.5.2)
 PS_role_8263dd	GTP cyclohydrolase I (EC 3.5.4.16) type 1
 PS_role_433e3f	GTP cyclohydrolase II (EC 3.5.4.25)
-PS_role_3fabe2	Gamma-glutamyl phosphate reductase (EC 1.2.1.41)
 PS_role_2e0855	Geranyl-diphosphate synthase (EC 2.5.1.1)
 PS_role_f142e5	Geranylgeranyl diphosphate reductase (EC 1.3.1.83)
 PS_role_36a47a	Geranylgeranyl pyrophosphate synthetase (EC 2.5.1.29)
@@ -305,6 +303,7 @@ PS_role_d71e8d	Glutamate synthase [NADH] (EC 1.4.1.14)
 PS_role_c54864	Glutamate transport
 PS_role_8fcd53	Glutamate--prephenate aminotransferase (EC 2.6.1.79)
 PS_role_be145f	Glutamate-1-semialdehyde aminotransferase (EC 5.4.3.8)
+PS_role_3fabe2	Glutamate-5-semialdehyde dehydrogenase (EC 1.2.1.41)
 PS_role_e82ade	Glutamate-cysteine ligase (EC 6.3.2.2)
 PS_role_bb2b8f	Glutamate-glyoxylate aminotransferase (EC 2.6.1.4)
 PS_role_41e45e	Glutaminase (EC 3.5.1.2)
@@ -378,6 +377,7 @@ PS_role_adf80b	L-3-cyanoalanine synthase (EC 4.4.1.9)
 PS_role_0bfc65	L-Serine decarboxylase (EC 4.1.1.-)
 PS_role_571095	L-alanine:glyoxylate aminotransferase (EC 2.6.1.44)
 PS_role_90a295	L-aspartate oxidase (EC 1.4.3.16)
+PS_role_6739a4	L-glutamate gamma-semialdehyde dehydrogenase (EC 1.2.1.88)
 PS_role_85e536	L-lactate dehydrogenase (EC 1.1.1.27)
 PS_role_8bc45a	L-threonine aldolase (EC 4.1.2.5)
 PS_role_fcc5de	Lauryl-[acyl-carrier protein] hydrolase (EC 3.1.2.21)
@@ -573,6 +573,7 @@ PS_role_0c088f	Porphobilinogen synthase (EC 4.2.1.24)
 PS_role_712fb7	Potassium transport
 PS_role_5b11f3	Precorrin-2 oxidase (EC 1.3.1.76)
 PS_role_7d78b2	Prephenate dehydratase (EC 4.2.1.51)
+PS_role_69514c	Proline dehydrogenase (EC 1.5.5.2)
 PS_role_66525b	Proline transport
 PS_role_804a15	Protein CP12, regulation of Calvin cycle via association/dissociation of PRK/CP12/GAPDH complex
 PS_role_46049b	Proton transport

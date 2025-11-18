@@ -3851,6 +3851,19 @@
             "compound_ref": "48/1/5/compounds/id/cpd00978"
         },
         {
+            "id": "cpd00982",
+            "name": "FADH2",
+            "abbreviation": "fadh2",
+            "aliases": [],
+            "formula": "C27H33N9O15P2",
+            "isCofactor": 0,
+            "defaultCharge": -2.0,
+            "mass": 785.0,
+            "deltaG": -218.1,
+            "deltaGErr": 2.22,
+            "compound_ref": "48/1/5/compounds/id/cpd00982"
+        },
+        {
             "id": "cpd01059",
             "name": "Ferulate",
             "abbreviation": "frlt",
@@ -4473,19 +4486,6 @@
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
             "compound_ref": "48/1/5/compounds/id/cpd02083"
-        },
-        {
-            "id": "cpd02097",
-            "name": "L-Glutamyl 5-phosphate",
-            "abbreviation": "glu5p",
-            "aliases": [],
-            "formula": "C5H8NO7P",
-            "isCofactor": 0,
-            "defaultCharge": -2.0,
-            "mass": 226.0,
-            "deltaG": -289.97,
-            "deltaGErr": 0.45,
-            "compound_ref": "48/1/5/compounds/id/cpd02097"
         },
         {
             "id": "cpd02120",
@@ -9718,6 +9718,13 @@
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
+            "id": "cpd00015_m",
+            "charge": -2.0,
+            "maxuptake": 0.0,
+            "templatecompound_ref": "~/compounds/id/cpd00015",
+            "templatecompartment_ref": "~/compartments/id/m"
+        },
+        {
             "id": "cpd00016_c",
             "charge": -2.0,
             "maxuptake": 0.0,
@@ -14688,6 +14695,13 @@
             "templatecompartment_ref": "~/compartments/id/x"
         },
         {
+            "id": "cpd00982_m",
+            "charge": -2.0,
+            "maxuptake": 0.0,
+            "templatecompound_ref": "~/compounds/id/cpd00982",
+            "templatecompartment_ref": "~/compartments/id/m"
+        },
+        {
             "id": "cpd01059_c",
             "charge": -1.0,
             "maxuptake": 0.0,
@@ -15210,20 +15224,6 @@
             "charge": -4.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd02083",
-            "templatecompartment_ref": "~/compartments/id/d"
-        },
-        {
-            "id": "cpd02097_c",
-            "charge": -2.0,
-            "maxuptake": 0.0,
-            "templatecompound_ref": "~/compounds/id/cpd02097",
-            "templatecompartment_ref": "~/compartments/id/c"
-        },
-        {
-            "id": "cpd02097_d",
-            "charge": -2.0,
-            "maxuptake": 0.0,
-            "templatecompound_ref": "~/compounds/id/cpd02097",
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
@@ -21165,70 +21165,6 @@
             ]
         },
         {
-            "id": "rxn00179_c",
-            "name": "ATP:L-glutamate 5-phosphotransferase",
-            "templatecompartment_ref": "~/compartments/id/c",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "=",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00002_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00008_c",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd02097_c",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_029952"
-            ]
-        },
-        {
-            "id": "rxn00179_d",
-            "name": "ATP:L-glutamate 5-phosphotransferase",
-            "templatecompartment_ref": "~/compartments/id/d",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "=",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00002_d",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_d",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00008_d",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd02097_d",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_029952"
-            ]
-        },
-        {
             "id": "rxn00184_c",
             "name": "L-Glutamate:NADP+ oxidoreductase (deaminating)",
             "templatecompartment_ref": "~/compartments/id/c",
@@ -24939,7 +24875,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_67f919"
+                "~/complexes/id/PS_complex_216765"
             ]
         },
         {
@@ -27989,78 +27925,6 @@
             ]
         },
         {
-            "id": "rxn00929_c",
-            "name": "L-Proline:NAD+ 5-oxidoreductase",
-            "templatecompartment_ref": "~/compartments/id/c",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "=",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00129_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_c",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 2.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd02431_c",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_2b54c3"
-            ]
-        },
-        {
-            "id": "rxn00929_d",
-            "name": "L-Proline:NAD+ 5-oxidoreductase",
-            "templatecompartment_ref": "~/compartments/id/d",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "=",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00129_d",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_d",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": 2.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd02431_d",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_2b54c3"
-            ]
-        },
-        {
             "id": "rxn00931_c",
             "name": "L-Proline:NADP+ 5-oxidoreductase",
             "templatecompartment_ref": "~/compartments/id/c",
@@ -28093,7 +27957,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_2b54c3"
+                "~/complexes/id/PS_complex_235833"
             ]
         },
         {
@@ -28129,7 +27993,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_2b54c3"
+                "~/complexes/id/PS_complex_235833"
             ]
         },
         {
@@ -34997,86 +34861,6 @@
             ],
             "templatecomplex_refs": [
                 "~/complexes/id/PS_complex_066f30"
-            ]
-        },
-        {
-            "id": "rxn02373_c",
-            "name": "L-glutamate-5-semialdehyde:NADP+ 5-oxidoreductase (phosphorylating)",
-            "templatecompartment_ref": "~/compartments/id/c",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "<",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00006_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00009_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00858_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00005_c",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd02097_c",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_6f9aad"
-            ]
-        },
-        {
-            "id": "rxn02373_d",
-            "name": "L-glutamate-5-semialdehyde:NADP+ 5-oxidoreductase (phosphorylating)",
-            "templatecompartment_ref": "~/compartments/id/d",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "<",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00006_d",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00009_d",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00858_d",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00005_d",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd02097_d",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_6f9aad"
             ]
         },
         {
@@ -43870,6 +43654,42 @@
             ]
         },
         {
+            "id": "rxn09188_m",
+            "name": "Proline dehydrogenase",
+            "templatecompartment_ref": "~/compartments/id/m",
+            "reaction_ref": "48/1/5/reactions/id/rxn14003",
+            "type": "universal",
+            "direction": "=",
+            "GapfillDirection": "=",
+            "maxforflux": 0.0,
+            "maxrevflux": 0.0,
+            "templateReactionReagents": [
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00015_m",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00129_m",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_m",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00982_m",
+                    "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd02431_m",
+                    "coefficient": 1.0
+                }
+            ],
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_82fb57"
+            ]
+        },
+        {
             "id": "rxn09193_d",
             "name": "L-proline transport via diffusion (extracellular to periplasm)",
             "templatecompartment_ref": "~/compartments/id/d",
@@ -52460,7 +52280,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_029952"
+                "~/complexes/id/PS_complex_b98914"
             ]
         },
         {
@@ -52508,7 +52328,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_029952"
+                "~/complexes/id/PS_complex_b98914"
             ]
         },
         {
@@ -62433,15 +62253,6 @@
             ]
         },
         {
-            "id": "PS_role_6739a4",
-            "name": "Delta-1-pyrroline-5-carboxylate dehydrogenase (EC 1.5.1.12)",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": [
-                "Athaliana_TAIR10||AT5G62530"
-            ]
-        },
-        {
             "id": "PS_role_98e089",
             "name": "Demethylphylloquinone methyltransferase (EC 2.1.1.329)",
             "source": "PlantSEED",
@@ -63079,16 +62890,6 @@
             ]
         },
         {
-            "id": "PS_role_3fabe2",
-            "name": "Gamma-glutamyl phosphate reductase (EC 1.2.1.41)",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": [
-                "Athaliana_TAIR10||AT2G39800",
-                "Athaliana_TAIR10||AT3G55610"
-            ]
-        },
-        {
             "id": "PS_role_2e0855",
             "name": "Geranyl-diphosphate synthase (EC 2.5.1.1)",
             "source": "PlantSEED",
@@ -63255,6 +63056,18 @@
             "features": [
                 "Athaliana_TAIR10||AT3G48730",
                 "Athaliana_TAIR10||AT5G63570"
+            ]
+        },
+        {
+            "id": "PS_role_3fabe2",
+            "name": "Glutamate-5-semialdehyde dehydrogenase (EC 1.2.1.41)",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": [
+                "Athaliana_TAIR10||AT2G39800",
+                "Athaliana_TAIR10||AT3G55610",
+                "UniProt||P54887",
+                "UniProt||P54888"
             ]
         },
         {
@@ -63936,6 +63749,15 @@
             "aliases": [],
             "features": [
                 "Athaliana_TAIR10||AT5G14760"
+            ]
+        },
+        {
+            "id": "PS_role_6739a4",
+            "name": "L-glutamate gamma-semialdehyde dehydrogenase (EC 1.2.1.88)",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": [
+                "Athaliana_TAIR10||AT5G62530"
             ]
         },
         {
@@ -65807,6 +65629,18 @@
             ]
         },
         {
+            "id": "PS_role_69514c",
+            "name": "Proline dehydrogenase (EC 1.5.5.2)",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": [
+                "Athaliana_TAIR10||AT3G30775",
+                "Athaliana_TAIR10||AT5G38710",
+                "UniProt||P92983",
+                "UniProt||Q6NKX1"
+            ]
+        },
+        {
             "id": "PS_role_66525b",
             "name": "Proline transport",
             "source": "PlantSEED",
@@ -66016,7 +65850,8 @@
             "source": "PlantSEED",
             "aliases": [],
             "features": [
-                "Athaliana_TAIR10||AT5G14800"
+                "Athaliana_TAIR10||AT5G14800",
+                "UniProt||P54904"
             ]
         },
         {
@@ -67408,20 +67243,6 @@
             ]
         },
         {
-            "id": "PS_complex_029952",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_46d375",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
             "id": "PS_complex_032922",
             "name": "",
             "reference": "",
@@ -68442,6 +68263,20 @@
             ]
         },
         {
+            "id": "PS_complex_216765",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_6739a4",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
             "id": "PS_complex_22ff10",
             "name": "",
             "reference": "",
@@ -68458,6 +68293,20 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_a2a334",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_235833",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_7208c7",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -68808,20 +68657,6 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_e185b2",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
-            "id": "PS_complex_2b54c3",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_7208c7",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -71547,20 +71382,6 @@
             ]
         },
         {
-            "id": "PS_complex_67f919",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_6739a4",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
             "id": "PS_complex_6805b2",
             "name": "",
             "reference": "",
@@ -71792,20 +71613,6 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_f142e5",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
-            "id": "PS_complex_6f9aad",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_3fabe2",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -72461,6 +72268,20 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_21308c",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_82fb57",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_69514c",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -74054,6 +73875,25 @@
                 },
                 {
                     "templaterole_ref": "~/roles/id/PS_role_4f8462",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_b98914",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_46d375",
+                    "optional_role": 0,
+                    "triggering": 1
+                },
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_3fabe2",
                     "optional_role": 0,
                     "triggering": 1
                 }

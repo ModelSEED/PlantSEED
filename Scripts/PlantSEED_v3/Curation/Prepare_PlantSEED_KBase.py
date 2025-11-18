@@ -25,8 +25,8 @@ enzymes_roles = dict()
 for entry in roles_list:
 
 	if('abstract_enzyme' not in entry or 'role' not in entry or 'reactions' not in entry or 'localization' not in entry):
-		# print("Warning, missing abstract_enzyme, role, reactions, or compartments for role: "+entry['role'])
-		# print("\tCannot create unique KBase Complex ID")
+		print("Warning, missing abstract_enzyme, role, reactions, or compartments for role: "+entry['role'])
+		print("\tCannot create unique KBase Complex ID")
 		pass
 
 	if('abstract_enzyme' not in entry):
@@ -34,7 +34,8 @@ for entry in roles_list:
 	else:
 		if(entry['abstract_enzyme'] == entry['role']):
 			if('transport' not in entry['abstract_enzyme'] and 'Spontaneous' not in entry['role']):
-				print("Warning, abstract_enzyme is the same as role: "+entry['role'])
+				# print("Warning, abstract_enzyme is the same as role: "+entry['role'])
+				pass
 			
 		roles_enzymes[entry['role']] = entry['abstract_enzyme']
 		if(entry['abstract_enzyme'] not in enzymes_roles):
@@ -79,9 +80,6 @@ for entry in roles_list:
 updated_roles = False
 for entry in roles_list:
 
-	if(entry['role'] != "(E)-beta-Ocimene Synthase (EC 4.2.3.106)"):
-		continue
-
 	if('kbase_id' not in entry):
 
 		# check if all fields available to form unique role id
@@ -93,7 +91,6 @@ for entry in roles_list:
 		else:
 			# string with unique info for each role
 			# first reaction and subsystem included to differentiate spontaneous rxns
-			# print(entry['role'],entry['reactions'],entry['subsystems'])
 			role_str = entry['role'] + entry['reactions'][0] + entry['subsystems'][0]
 
 			# create unique (truncated) hash ID from str and store in list
@@ -106,10 +103,10 @@ for entry in roles_list:
 			role_ID_list.append(entry_id)
 
 			entry['kbase_id'] = entry_id
-			print('New ID:\t' + entry_id + '\t' + entry['role'])
 			updated_roles=True
 			pass
 
+	"""
 	if('compartmentalization' not in entry):
 		entry['compartmentalization'] = dict()
 
@@ -148,16 +145,15 @@ for entry in roles_list:
 
 			# string with unique info for each complex
 			cpx_str = " / ".join(sorted_enzymes) + " / " + " / ".join(sorted_roles) + " / " + " / ".join(sorted_reactions)
-			print(cpt,rxn,cpx_str)
 			
 			# generate unique hash of complex string
 			entry_id = 'PS_complex_' + hashlib.sha256(cpx_str.encode('utf-8')).hexdigest()[:6]
 			while(entry_id in complex_ID_dict):
 				if(tmpl_rxn in complex_ID_dict[entry_id]):
-					print("PS1: ",entry_id,complex_ID_dict[entry_id],tmpl_rxn)
+					# print("PS1: ",entry_id,complex_ID_dict[entry_id],tmpl_rxn)
 					break
-				print("PS2: ",entry_id,complex_ID_dict[entry_id],tmpl_rxn)
-				print("Breaking")
+				# print("PS2: ",entry_id,complex_ID_dict[entry_id],tmpl_rxn)
+				# print("Breaking")
 				entry_id = 'PS_complex_' + hashlib.sha256(entry_id.encode('utf-8')).hexdigest()[:6]
 
 			if(entry_id not in complex_ID_dict):
@@ -173,8 +169,8 @@ for entry in roles_list:
 
 		# print(cpx_dict)
 		entry['compartmentalization'][cpt]=cpx_dict
-
-updated_roles=False
+"""
+# updated_roles=False
 if(updated_roles is True):
 	with open(os.path.join(database_relative_path, "PlantSEED_Roles.json"),'w') as new_subsystem_file:
 		json.dump(roles_list,new_subsystem_file,indent=4)

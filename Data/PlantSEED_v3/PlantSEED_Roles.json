@@ -14327,14 +14327,16 @@
         "abstract_enzyme": "D-serine dehydratase"
     },
     {
-        "role": "Delta-1-pyrroline-5-carboxylate dehydrogenase (EC 1.5.1.12)",
+        "role": "L-glutamate gamma-semialdehyde dehydrogenase (EC 1.2.1.88)",
         "include": true,
         "subsystems": [
-            "Glutamine,_glutamate,_aspartate,_asparagine_metabolism"
+            "Glutamine,_glutamate,_aspartate,_asparagine_metabolism",
+            "Proline_metabolism"
         ],
         "classes": {
             "Amino acids": {
-                "Glutamine,_glutamate,_aspartate,_asparagine_metabolism": []
+                "Glutamine,_glutamate,_aspartate,_asparagine_metabolism": [],
+                "Proline_metabolism": []
             }
         },
         "features": [
@@ -14371,7 +14373,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Delta-1-pyrroline-5-carboxylate dehydrogenase"
+        "abstract_enzyme": "L-glutamate gamma-semialdehyde dehydrogenase"
     },
     {
         "role": "Delta-8-sphingolipid desaturase (EC 1.14.19.4)",
@@ -19672,7 +19674,7 @@
         "abstract_enzyme": "Gamma-glutamyl peptidase in glucosinolates biosynthesis"
     },
     {
-        "role": "Gamma-glutamyl phosphate reductase (EC 1.2.1.41)",
+        "role": "Glutamate-5-semialdehyde dehydrogenase (EC 1.2.1.41)",
         "include": true,
         "subsystems": [
             "Proline_metabolism"
@@ -19687,10 +19689,12 @@
         },
         "features": [
             "Athaliana_TAIR10||AT2G39800",
-            "Athaliana_TAIR10||AT3G55610"
+            "Athaliana_TAIR10||AT3G55610",
+            "UniProt||P54887",
+            "UniProt||P54888"
         ],
         "reactions": [
-            "rxn02373"
+            "rxn20617"
         ],
         "localization": {
             "c": {
@@ -19746,7 +19750,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Gamma-glutamyl phosphate reductase"
+        "abstract_enzyme": "Pyrroline-5-carboxylate synthetase"
     },
     {
         "role": "Geranyl-diphosphate synthase (EC 2.5.1.1)",
@@ -20482,7 +20486,6 @@
             "Athaliana_TAIR10||AT3G55610"
         ],
         "reactions": [
-            "rxn00179",
             "rxn20617"
         ],
         "localization": {
@@ -20541,7 +20544,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Glutamate 5-kinase"
+        "abstract_enzyme": "Pyrroline-5-carboxylate synthetase"
     },
     {
         "role": "Glutamate N-acetyltransferase (EC 2.3.1.35)",
@@ -40304,10 +40307,10 @@
             }
         },
         "features": [
-            "Athaliana_TAIR10||AT5G14800"
+            "Athaliana_TAIR10||AT5G14800",
+            "UniProt||P54904"
         ],
         "reactions": [
-            "rxn00929",
             "rxn00931"
         ],
         "localization": {
@@ -40322,7 +40325,9 @@
                 ]
             }
         },
-        "publications": [],
+        "publications": [
+            "10.1104/pp.99.4.1642"
+        ],
         "kbase_id": "PS_role_7208c7",
         "curators": [
             "SvetaG",
@@ -54166,5 +54171,45 @@
                 "exclude": false
             }
         }
+    },
+    {
+        "role": "Proline dehydrogenase (EC 1.5.5.2)",
+        "features": [
+            "Athaliana_TAIR10||AT3G30775",
+            "Athaliana_TAIR10||AT5G38710",
+            "UniProt||P92983",
+            "UniProt||Q6NKX1"
+        ],
+        "reactions": [
+            "rxn09188"
+        ],
+        "subsystems": [
+            "Proline_metabolism"
+        ],
+        "curators": [
+            "samseaver"
+        ],
+        "localization": {
+            "m": {
+                "Athaliana_TAIR10||AT3G30775": [
+                    "PPDB"
+                ],
+                "Athaliana_TAIR10||AT5G38710": [
+                    "Literature"
+                ]
+            }
+        },
+        "publications": [
+            "10.1186/1471-2229-10-70"
+        ],
+        "classes": {
+            "Amino acids": {
+                "Proline_metabolism": []
+            }
+        },
+        "include": true,
+        "abstract_enzyme": "Proline dehydrogenase",
+        "type": "universal",
+        "kbase_id": "PS_role_69514c"
     }
 ]

@@ -4361,10 +4361,10 @@
         }
     },
     {
-        "kbase_id": "PS_complex_67f919",
-        "enzyme": "Delta-1-pyrroline-5-carboxylate dehydrogenase",
+        "kbase_id": "PS_complex_216765",
+        "enzyme": "L-glutamate gamma-semialdehyde dehydrogenase",
         "roles": [
-            "Delta-1-pyrroline-5-carboxylate dehydrogenase (EC 1.5.1.12)"
+            "L-glutamate gamma-semialdehyde dehydrogenase (EC 1.2.1.88)"
         ],
         "compartments_reactions": {
             "m": {
@@ -6080,22 +6080,23 @@
         }
     },
     {
-        "kbase_id": "PS_complex_6f9aad",
-        "enzyme": "Gamma-glutamyl phosphate reductase",
+        "kbase_id": "PS_complex_b98914",
+        "enzyme": "Pyrroline-5-carboxylate synthetase",
         "roles": [
-            "Gamma-glutamyl phosphate reductase (EC 1.2.1.41)"
+            "Glutamate 5-kinase (EC 2.7.2.11)",
+            "Glutamate-5-semialdehyde dehydrogenase (EC 1.2.1.41)"
         ],
         "compartments_reactions": {
             "c": {
                 "reactions": [
-                    "rxn02373"
+                    "rxn20617"
                 ],
                 "reagents": "c",
                 "exclude": false
             },
             "d": {
                 "reactions": [
-                    "rxn02373"
+                    "rxn20617"
                 ],
                 "reagents": "d",
                 "exclude": false
@@ -6323,31 +6324,6 @@
                     "rxn15209"
                 ],
                 "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
-        "kbase_id": "PS_complex_029952",
-        "enzyme": "Glutamate 5-kinase",
-        "roles": [
-            "Glutamate 5-kinase (EC 2.7.2.11)"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn00179",
-                    "rxn20617"
-                ],
-                "reagents": "c",
-                "exclude": false
-            },
-            "d": {
-                "reactions": [
-                    "rxn00179",
-                    "rxn20617"
-                ],
-                "reagents": "d",
                 "exclude": false
             }
         }
@@ -11942,7 +11918,7 @@
         }
     },
     {
-        "kbase_id": "PS_complex_2b54c3",
+        "kbase_id": "PS_complex_235833",
         "enzyme": "Pyrroline-5-carboxylate reductase",
         "roles": [
             "Pyrroline-5-carboxylate reductase (EC 1.5.1.2)"
@@ -11950,7 +11926,6 @@
         "compartments_reactions": {
             "d": {
                 "reactions": [
-                    "rxn00929",
                     "rxn00931"
                 ],
                 "reagents": "d",
@@ -11958,7 +11933,6 @@
             },
             "c": {
                 "reactions": [
-                    "rxn00929",
                     "rxn00931"
                 ],
                 "reagents": "c",
@@ -15689,6 +15663,22 @@
                     "rxn43940"
                 ],
                 "reagents": "c",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_82fb57",
+        "enzyme": "Proline dehydrogenase",
+        "roles": [
+            "Proline dehydrogenase (EC 1.5.5.2)"
+        ],
+        "compartments_reactions": {
+            "m": {
+                "reactions": [
+                    "rxn09188"
+                ],
+                "reagents": "m",
                 "exclude": false
             }
         }

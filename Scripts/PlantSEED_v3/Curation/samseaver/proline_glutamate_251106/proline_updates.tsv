@@ -1,0 +1,30 @@
+Gamma-glutamyl phosphate reductase (EC 1.2.1.41)	UPDATE	Glutamate-5-semialdehyde dehydrogenase (EC 1.2.1.41)
+Glutamate-5-semialdehyde dehydrogenase (EC 1.2.1.41)	ADD	reactions	rxn20617
+Glutamate-5-semialdehyde dehydrogenase (EC 1.2.1.41)	REMOVE	reactions	rxn02373
+Glutamate-5-semialdehyde dehydrogenase (EC 1.2.1.41)	ADD	publications	10.1073/pnas.89.19.9354
+Glutamate-5-semialdehyde dehydrogenase (EC 1.2.1.41)	ADD	publications	10.1016/0014-5793(95)00935-3
+Glutamate-5-semialdehyde dehydrogenase (EC 1.2.1.41)	ADD	features	UniProt||P54887
+Glutamate-5-semialdehyde dehydrogenase (EC 1.2.1.41)	ADD	features	UniProt||P54888
+Glutamate-5-semialdehyde dehydrogenase (EC 1.2.1.41)	CHANGE	abstract_enzyme	Pyrroline-5-carboxylate synthetase
+Glutamate 5-kinase (EC 2.7.2.11)	REMOVE	reactions	rxn00179
+Glutamate 5-kinase (EC 2.7.2.11)	ADD	publications	10.1073/pnas.89.19.9354
+Glutamate 5-kinase (EC 2.7.2.11)	ADD	publications	10.1016/0014-5793(95)00935-3
+Glutamate 5-kinase (EC 2.7.2.11)	CHANGE	abstract_enzyme	Pyrroline-5-carboxylate synthetase
+Pyrroline-5-carboxylate reductase (EC 1.5.1.2)	REMOVE	reactions	rxn00929
+Pyrroline-5-carboxylate reductase (EC 1.5.1.2)	ADD	features	UniProt||P54904
+Pyrroline-5-carboxylate reductase (EC 1.5.1.2)	ADD	publications	10.1104/pp.99.4.1642
+Proline dehydrogenase (EC 1.5.5.2)	NEW
+Proline dehydrogenase (EC 1.5.5.2)	ADD	reactions	rxn09188
+Proline dehydrogenase (EC 1.5.5.2)	ADD	features	Athaliana_TAIR10||AT3G30775	m:PPDB
+Proline dehydrogenase (EC 1.5.5.2)	ADD	features	Athaliana_TAIR10||AT5G38710	m:Literature
+Proline dehydrogenase (EC 1.5.5.2)	ADD	features	UniProt||P92983
+Proline dehydrogenase (EC 1.5.5.2)	ADD	features	UniProt||Q6NKX1
+Proline dehydrogenase (EC 1.5.5.2)	ADD	publications	10.1186/1471-2229-10-70
+Proline dehydrogenase (EC 1.5.5.2)	CHANGE	abstract_enzyme	Proline dehydrogenase
+Proline dehydrogenase (EC 1.5.5.2)	ADD	subsystems	Proline_metabolism	Amino acids
+Proline dehydrogenase (EC 1.5.5.2)	ASSIGN	type	universal
+Delta-1-pyrroline-5-carboxylate dehydrogenase (EC 1.5.1.12)	UPDATE	L-glutamate gamma-semialdehyde dehydrogenase (EC 1.2.1.88)
+L-glutamate gamma-semialdehyde dehydrogenase (EC 1.2.1.88)	ADD	reactions	rxn00503
+L-glutamate gamma-semialdehyde dehydrogenase (EC 1.2.1.88)	REMOVE	reactions	rxn20649
+L-glutamate gamma-semialdehyde dehydrogenase (EC 1.2.1.88)	CHANGE	abstract_enzyme	L-glutamate gamma-semialdehyde dehydrogenase
+L-glutamate gamma-semialdehyde dehydrogenase (EC 1.2.1.88)	ADD	subsystems	Proline_metabolism	Amino acids

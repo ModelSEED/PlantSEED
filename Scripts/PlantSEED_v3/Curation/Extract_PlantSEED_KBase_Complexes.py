@@ -42,17 +42,18 @@ for entry in roles_list:
 				if(cpt not in ged[enz][rle]['rxns'][rxn]):
 					ged[enz][rle]['rxns'][rxn].append([cpt,lcz])
 				
-				rxn_cpt = rxn+"_"+cpt
-				for kbase_id in entry['compartmentalization'][lcz]['kbase_ids']:
-					if(rxn_cpt not in entry['compartmentalization'][lcz]['kbase_ids'][kbase_id]):
-						print("WARNING: ",enz,rle,entry['compartmentalization'],rxn_cpt)
-						pass
-				
 				# capture reactions that shouldn't be in model
 				if(exc is True):
+					rxn_cpt = rxn+"_"+cpt
 					reject = enz+"|"+rxn_cpt
 					if(reject not in exc_list):
 						exc_list.append(reject)
+
+	if('compartmentalization' not in entry):
+		for cpt in entry['localization']:
+			for rxn in ged[enz][rle]['rxns']:
+				if(cpt not in ged[enz][rle]['rxns'][rxn]):
+					ged[enz][rle]['rxns'][rxn].append([cpt,cpt])
 
 # checked to see if roles cross enzymes
 # We're good

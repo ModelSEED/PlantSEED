@@ -14,6 +14,8 @@ rem_dict=dict()
 replace_dict=dict()
 new_list=list()
 key_dict=dict()
+change_dict=dict()
+assign_dict=dict()
 with open(input_file) as updates_file:
 	for line in updates_file.readlines():
 		line=line.strip('\r\n')
@@ -22,7 +24,7 @@ with open(input_file) as updates_file:
 			continue
 
 		tmp_lst=line.split('\t')
-		print(tmp_lst)
+		# print(tmp_lst)
 
 		enzyme = tmp_lst[0]
 		action = tmp_lst[1].upper()
@@ -80,6 +82,23 @@ with open(input_file) as updates_file:
 				key_dict[enzyme][field]=dict()
 			key_dict[enzyme][field][entry]=new_entry
 
+		# This action is if the value is a simple string. 
+		# At the moment this is only for abstract_enzyme and include
+		if(action == "CHANGE"):
+			field = tmp_lst[2]
+			entry = tmp_lst[3]
+			if(enzyme not in change_dict):
+				change_dict[enzyme]=dict()
+			change_dict[enzyme][field]=entry
+
+		# This is for the single value variables like include and type
+		if(action == "ASSIGN"):
+			field = tmp_lst[2]
+			entry = tmp_lst[3]
+			if(enzyme not in assign_dict):
+				assign_dict[enzyme]=dict()
+			assign_dict[enzyme][field]=entry
+
 script_directory = os.path.dirname(os.path.abspath(sys.argv[0]))
 database_relative_path = os.path.join(script_directory, "../../../", "Data/PlantSEED_v3/")
 with open(os.path.join(database_relative_path, "PlantSEED_Roles.json")) as subsystem_file:
@@ -99,7 +118,8 @@ default_role_dict = {'role':None,
 					 'localization':dict(),
 					 'publications':list(),
 					 'classes':dict(),
-					 'include':True}
+					 'include':True,
+					 'abstract_enzyme':''}
 
 for new in new_list:
 	new_role = copy.deepcopy(default_role_dict)
@@ -120,7 +140,7 @@ for entry in roles_list:
 	# Iterate through entries to add to role
 	if(entry['role'] in add_dict):
 		for field in add_dict[entry['role']]:
-			if(field not in entry['role']):
+			if(field not in entry):
 				entry[field]=list()
 
 			for input in add_dict[entry['role']][field]:
@@ -130,18 +150,21 @@ for entry in roles_list:
 					entry[field].append(input)
 
 				# Update localization if feature
-				if(field == 'features' and add_dict[entry['role']][field][input]!=1):
-					(cpt,code) = add_dict[entry['role']][field][input].split(':')
-					if(cpt in entry['localization']):
-						entry['localization'][cpt][input]=[code]
+				if(field == 'features'):
+					if(add_dict[entry['role']][field][input]==1):
+						print("Warning, no localization data added for feature: ",input)
 					else:
-						entry['localization'][cpt]={input:[code]}
+						(cpt,code) = add_dict[entry['role']][field][input].split(':')
+						if(cpt in entry['localization']):
+							entry['localization'][cpt][input]=[code]
+						else:
+							entry['localization'][cpt]={input:[code]}
 
 				# Update classes
 				if(field == 'subsystems'):
 					sys_cls = add_dict[entry['role']][field][input]
-					print(sys_cls)
-					print(entry)
+					if(sys_cls == "1"):
+						print("Warning: class not included as extra field for subsystem: ",input)
 					if('classes' not in entry):
 						entry['classes'] = dict()
 					if(sys_cls not in entry['classes']):
@@ -161,6 +184,11 @@ for entry in roles_list:
 							entry['localization'][cpt]=dict()
 						entry['localization'][cpt][input]=["Assumed"]
 
+		updated_role=True
+
+	if(entry['role'] in assign_dict):
+		for field in assign_dict[entry['role']]:
+			entry[field]=assign_dict[entry['role']][field]
 		updated_role=True
 
 	if(entry['role'] in key_dict):
@@ -210,6 +238,12 @@ for entry in roles_list:
 
 					for cpt in delete_cpts:
 						del(entry['localization'][cpt])
+
+		updated_role=True
+
+	if(entry['role'] in change_dict):
+		for field in change_dict[entry['role']]:
+			entry[field]=change_dict[entry['role']][field]
 
 		updated_role=True
 
