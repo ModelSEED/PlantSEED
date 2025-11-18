@@ -195,8 +195,6 @@ PS_role_dd5c0f	Coproporphyrinogen III oxidase, aerobic (EC 1.3.3.3)
 PS_role_cb3e2e	Cyanoalanine nitrilase (EC 3.5.5.4)
 PS_role_969a13	Cyanogenic beta-glucosidase dhurrinase 2 (EC 3.2.1.-)
 PS_role_4730ff	Cystathionine beta-lyase (EC 4.4.1.8)
-PS_role_bf7b4d	Cystathionine gamma-synthase (EC 2.5.1.48)
-PS_role_0710dc	Cystathionine gamma-synthase, O-phospho-L-homoserine dependent (EC 2.5.1.-)
 PS_role_814ea2	Cysteine desulfurase (EC 2.8.1.7), IscS subfamily
 PS_role_73a1b3	Cysteine desulfurase (EC 2.8.1.7), SufS subfamily
 PS_role_b1bcc1	Cysteine synthase (EC 2.5.1.47)
@@ -466,7 +464,6 @@ PS_role_a2a334	NMN nucleosidase (EC 3.2.2.14)
 PS_role_6c5bb2	NMN phosphatase (EC 3.1.3.5)
 PS_role_e91ddd	NUDIX hydrolase, NAD diphosphatase (EC 3.6.1.22)
 PS_role_681a1b	Naphthoate synthase (EC 4.1.3.36)
-PS_role_1e88fb	Nicotinamidase (EC 3.5.1.19) of PncA family, nonfunctional
 PS_role_54877a	Nicotinamidase (EC 3.5.1.19), plant/cyanobacterial family
 PS_role_b81dd7	Nicotinamide-nucleotide adenylyltransferase (EC 2.7.7.1), eukaryotic PNAT family
 PS_role_484869	Nicotinate N-methyltransferase (EC 2.1.1.7)
@@ -564,6 +561,7 @@ PS_role_a1c0a6	Photosystem II protein PsbTn
 PS_role_0f7696	Photosystem II protein PsbV, cytochrome c550
 PS_role_c949c5	Photosystem II protein PsbW
 PS_role_99d4ce	Photosystem II protein PsbZ
+PS_role_0710dc	Plant cystathionine gamma-synthase (EC 2.5.1.160)
 PS_role_70a382	Plastidial ATP synthase alpha chain (EC 3.6.3.14)
 PS_role_51b403	Plastidial ATP synthase beta chain (EC 3.6.3.14)
 PS_role_e5bd7d	Plastidial ATP synthase delta chain
@@ -636,7 +634,12 @@ PS_role_67da61	Sirohydrochlorin ferrochelatase (EC 4.99.1.4)
 PS_role_9adb48	Solanesyl diphosphate synthase (EC 2.5.1.85)
 PS_role_a21670	Solanesyl-PP transport
 PS_role_3c14be	Soluble pyridine nucleotide transhydrogenase (EC 1.6.1.1)
-PS_role_b129ec	Spontaneous Reaction
+PS_role_2e0bfe	Spontaneous Reaction||rxn01208
+PS_role_ed6b6e	Spontaneous Reaction||rxn02374
+PS_role_630e35	Spontaneous Reaction||rxn22371
+PS_role_1656b1	Spontaneous Reaction||rxn24246
+PS_role_a7a2ef	Spontaneous Reaction||rxn31240
+PS_role_b129ec	Spontaneous Reaction||rxn42688
 PS_role_50aba3	Stearoyl-[acyl carrier protein] thioesterase (EC 3.1.2.-)
 PS_role_7bb52e	Stearoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.-)
 PS_role_717701	Succinate dehydrogenase (ubiquinone) cytochrome b560 subunit SDH3/SDHC

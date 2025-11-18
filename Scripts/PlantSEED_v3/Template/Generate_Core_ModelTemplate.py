@@ -178,24 +178,30 @@ with open("../../../Data/PlantSEED_v3/PlantSEED_Roles.json") as subsystem_file:
 	roles_list = json.load(subsystem_file)
 
 #Collect Compartmentalized Reactions
-reactions_roles=dict()
-reactions_types=dict()
-reactions_cpts=dict()
 roles=dict()
 roles_ids=dict()
+roles_types=dict()
 excluded_roles=list()
-excluded_roles_complexes=list()
-complexes=dict()
+# features, include, type, role id are collected in roles file
 for entry in roles_list:
+	role = entry['role']
+	if(role.lower() == 'spontaneous reaction'):
+		# a Spontaneous role entry always has a single spontaneous reaction
+		# but as there's no enzyme, we need to distinguish 
+		# between each one here
+		role = role+"||"+entry['reactions'][0]
+
 	if(entry['include'] is False):
-		excluded_roles.append(entry['role'])
+		excluded_roles.append(role)
 		continue
 
 	if('reactions' not in entry):
 		continue
+
 	# Skip vacuolar ATP synthase, for pumping protons into vacuole
 	if("rxn08173" in entry["reactions"] and "v" in entry["localization"]):
 		print("Skipping vacuolar ATP synthase")
+		excluded_roles.append(role)
 		continue
 
 	# Skip ubiquinol oxidase for now
@@ -205,54 +211,92 @@ for entry in roles_list:
 	# without translocating protons and producing ATP, which causes problems with FBA
 	if("rxn12494" in entry["reactions"]):
 		print("Skipping alternative ubiquinol oxidase")
+		excluded_roles.append(role)
 		continue
 
 	if('kbase_id' in entry and entry['kbase_id'].startswith('PS_role_')):
-		roles_ids[entry['role']]=entry['kbase_id']
+		roles_ids[role]=entry['kbase_id']
 	else:
-		print("Included role does not have KBase ID:",entry['role'])
+		print("Included role does not have KBase ID:",role)
 		continue
 	
-	if(entry['role'] not in roles):
-		roles[entry['role']]=list()
-		
-	for rxn in entry['reactions']:
-		for cpts in entry['compartmentalization']:
-			reaction_cpt = entry['compartmentalization'][cpts]['reaction']
-			tmpl_rxn = rxn+"_"+reaction_cpt
+	if(role not in roles):
+		roles[role]=list()
 
-			reactions_types[tmpl_rxn]=entry['type']
-
-			# These are stored for compound stoichiometry
-			# when generating the reagents below
-			reactions_cpts[tmpl_rxn]=cpts
-
-			if(tmpl_rxn not in reactions_roles):
-				reactions_roles[tmpl_rxn]=list()
-			if(entry['role'] not in reactions_roles[tmpl_rxn]):
-				reactions_roles[tmpl_rxn].append(entry['role'])
-
-			# Store pre-generated complex identifiers
-			for complex in entry['compartmentalization'][cpts]['kbase_ids']:
-				if(tmpl_rxn not in entry['compartmentalization'][cpts]['kbase_ids'][complex]):
-					continue
-					
-				if(entry['compartmentalization'][cpts]['exclude'] is True):
-					excluded_roles_complexes.append(entry['role'] + ' / ' + complex)
-					continue
-				
-				if(complex not in complexes):
-					complexes[complex]={'reactions':[],'roles':[]}
-
-				if(tmpl_rxn not in complexes[complex]['reactions']):
-					complexes[complex]['reactions'].append(tmpl_rxn)
-
-				if(entry['role'] not in complexes[complex]['roles']):
-					complexes[complex]['roles'].append(entry['role'])
-				
 	for ftr in entry['features']:
-		if(ftr not in roles[entry['role']]):
-			roles[entry['role']].append(ftr)
+		if(ftr not in roles[role]):
+			roles[role].append(ftr)
+
+	roles_types[role]=entry['type']
+
+########################################################
+## Load PlantSEED Complexes and Biochemistry
+########################################################
+
+#Load Core Subsystems
+#Load PlantSEED Subsystems, Roles, Reactions
+with open("../../../Data/PlantSEED_v3/PlantSEED_Biochemistry.json") as biochem_file:
+	complex_list = json.load(biochem_file)
+
+complexes=dict()
+excluded_roles_complexes=list()
+
+reactions_roles=dict()
+reactions_types=dict()
+reactions_cpts=dict()
+
+for complex in complex_list:
+	complex_id = complex['kbase_id']
+
+	to_include = list()
+	for role in complex['roles']:
+		if(role in excluded_roles):
+			to_include.append(False)
+		else:
+			to_include.append(True)
+
+	if(len(to_include)==1 and to_include[0] is False):
+		excluded_roles_complexes.append(' / '.join(complex['roles'])+' / '+complex_id)
+		continue
+
+	if(complex_id not in complexes):
+		complexes[complex_id]={'reactions':[],'roles':complex['roles']}
+
+	for cpt_id in complex['compartments_reactions']:
+		cpt = complex['compartments_reactions'][cpt_id]
+		if(cpt['exclude'] is True):
+			excluded_roles_complexes.append(' / '.join(complex['roles'])+' / '+complex_id+' / '+cpt_id)
+			continue
+
+		for rxn in cpt['reactions']:
+			tmpl_rxn = rxn+"_"+cpt_id
+
+			# These are stored for indexing compound stoichiometry
+			# when generating the reagents below
+			reactions_cpts[tmpl_rxn]=cpt['reagents']
+
+			for role in complex['roles']:
+				if(role.lower() == 'spontaneous reaction'):
+					# a Spontaneous role entry always has a single spontaneous reaction
+					# but as there's no enzyme, we need to distinguish 
+					# between each one here
+					role = complex['enzyme']
+
+				# for excluded roles in a complex that contains included roles
+				if(role in excluded_roles):
+					continue
+
+				if(tmpl_rxn not in reactions_roles):
+					reactions_roles[tmpl_rxn]=list()
+				if(role not in reactions_roles[tmpl_rxn]):
+					reactions_roles[tmpl_rxn].append(role)
+
+				if(tmpl_rxn in reactions_types and reactions_types[tmpl_rxn] != roles_types[role]):
+					print("AH: ",roles_types[role])
+				reactions_types[tmpl_rxn]=roles_types[role]
+
+			if(tmpl_rxn not in complexes[complex_id]['reactions']):
+					complexes[complex_id]['reactions'].append(tmpl_rxn)
 
 ############################
 ## Begin Template Generation
