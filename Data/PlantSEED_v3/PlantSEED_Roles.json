@@ -3115,7 +3115,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "3-oxoacyl-[acyl-carrier-protein] synthase"
+        "abstract_enzyme": "3-oxoacyl-[acyl-carrier-protein] synthase, KASI"
     },
     {
         "role": "3-oxoacyl-[acyl-carrier-protein] synthase, KASII (EC 2.3.1.179)",
@@ -3166,7 +3166,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "3-oxoacyl-[acyl-carrier-protein] synthase"
+        "abstract_enzyme": "3-oxoacyl-[acyl-carrier-protein] synthase, KASII"
     },
     {
         "role": "3-oxoacyl-[acyl-carrier-protein] synthase, KASIII (EC 2.3.1.180)",
@@ -3213,7 +3213,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "3-oxoacyl-[acyl-carrier-protein] synthase"
+        "abstract_enzyme": "3-oxoacyl-[acyl-carrier-protein] synthase, KASIII"
     },
     {
         "role": "4-alpha-glucanotransferase (amylomaltase) (EC 2.4.1.25)",
@@ -6317,7 +6317,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Acetyl-CoA carboxylase"
+        "abstract_enzyme": "Acetyl-CoA carboxylase, ht"
     },
     {
         "role": "Acetyl-coenzyme A carboxyl transferase beta chain (EC 6.4.1.2)",
@@ -6365,7 +6365,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Acetyl-CoA carboxylase"
+        "abstract_enzyme": "Acetyl-CoA carboxylase, ht"
     },
     {
         "role": "Acetyl-coenzyme A carboxyl transferase domain of homomeric ACCase (EC 6.4.1.2)",
@@ -6427,7 +6427,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Acetyl-CoA carboxylase"
+        "abstract_enzyme": "Acetyl-CoA carboxylase, hm"
     },
     {
         "role": "Acetyl-coenzyme A synthetase (EC 6.2.1.1)",
@@ -10214,7 +10214,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Acetyl-CoA carboxylase"
+        "abstract_enzyme": "Acetyl-CoA carboxylase, hm"
     },
     {
         "role": "Biotin carboxyl carrier protein of acetyl-CoA carboxylase",
@@ -10276,7 +10276,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Acetyl-CoA carboxylase"
+        "abstract_enzyme": "Acetyl-CoA carboxylase, ht"
     },
     {
         "role": "Biotin carboxylase domain of homomeric ACCase (EC 6.3.4.14)",
@@ -10338,7 +10338,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Acetyl-CoA carboxylase"
+        "abstract_enzyme": "Acetyl-CoA carboxylase, hm"
     },
     {
         "role": "Biotin carboxylase of acetyl-CoA carboxylase (EC 6.3.4.14)",
@@ -10396,7 +10396,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Acetyl-CoA carboxylase"
+        "abstract_enzyme": "Acetyl-CoA carboxylase, ht"
     },
     {
         "role": "Biotin synthase (EC 2.8.1.6)",
@@ -13082,48 +13082,7 @@
         "abstract_enzyme": "Cystathionine beta-lyase"
     },
     {
-        "role": "Cystathionine gamma-synthase (EC 2.5.1.48)",
-        "include": true,
-        "subsystems": [
-            "Methionine_and_cysteine_metabolism"
-        ],
-        "classes": {
-            "Amino acids": {
-                "Methionine_and_cysteine_metabolism": []
-            }
-        },
-        "features": [],
-        "reactions": [
-            "rxn02302"
-        ],
-        "localization": {
-            "c": {
-                "rxn02302": []
-            }
-        },
-        "publications": [],
-        "kbase_id": "PS_role_bf7b4d",
-        "curators": [
-            "SvetaG",
-            "samseaver"
-        ],
-        "type": "universal",
-        "is_transporter": false,
-        "compartmentalization": {
-            "c": {
-                "reaction": "c",
-                "kbase_ids": {
-                    "PS_complex_efc6c0": [
-                        "rxn02302_c"
-                    ]
-                },
-                "exclude": false
-            }
-        },
-        "abstract_enzyme": "Cystathionine gamma-synthase"
-    },
-    {
-        "role": "Cystathionine gamma-synthase, O-phospho-L-homoserine dependent (EC 2.5.1.-)",
+        "role": "Plant cystathionine gamma-synthase (EC 2.5.1.160)",
         "include": true,
         "subsystems": [
             "Methionine_and_cysteine_metabolism"
@@ -13250,7 +13209,7 @@
                 "exclude": true
             }
         },
-        "abstract_enzyme": "Cysteine desulfurase"
+        "abstract_enzyme": "Cysteine desulfurase, IscS subfamily"
     },
     {
         "role": "Cysteine desulfurase (EC 2.8.1.7), SufS subfamily",
@@ -13299,7 +13258,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Cysteine desulfurase"
+        "abstract_enzyme": "Cysteine desulfurase, SufS subfamily"
     },
     {
         "role": "Cysteine synthase (EC 2.5.1.47)",
@@ -19325,7 +19284,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "GTP cyclohydrolase"
+        "abstract_enzyme": "GTP cyclohydrolase I"
     },
     {
         "role": "GTP cyclohydrolase II (EC 3.5.4.25)",
@@ -19383,7 +19342,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "GTP cyclohydrolase"
+        "abstract_enzyme": "GTP cyclohydrolase II"
     },
     {
         "role": "Galactokinase (EC 2.7.1.6)",
@@ -31576,7 +31535,7 @@
     },
     {
         "role": "Nicotinamidase (EC 3.5.1.19) of PncA family, nonfunctional",
-        "include": true,
+        "include": false,
         "subsystems": [
             "Niacin,_NAD_and_NADP_biosynthesis"
         ],
@@ -34585,7 +34544,7 @@
         "abstract_enzyme": "Phosphatidylcholine:diacylglycerol cholinephosphotransferase"
     },
     {
-        "role": "Phosphatidylglycerophosphatase A (EC 3.1.3.27)",
+        "role": "Phosphatidylglycerophosphatase (EC 3.1.3.27)",
         "include": false,
         "subsystems": [
             "Phosphatidylglycerol_biosynthesis",
@@ -34615,56 +34574,6 @@
         },
         "publications": [],
         "kbase_id": "PS_role_786eb7",
-        "curators": [
-            "SvetaG",
-            "samseaver"
-        ],
-        "type": "universal",
-        "is_transporter": false,
-        "compartmentalization": {
-            "c": {
-                "reaction": "c",
-                "kbase_ids": {
-                    "PS_complex_0c79bc": [
-                        "rxn20527_c"
-                    ]
-                },
-                "exclude": false
-            }
-        },
-        "abstract_enzyme": "Phosphatidylglycerophosphatase"
-    },
-    {
-        "role": "Phosphatidylglycerophosphatase B (EC 3.1.3.27)",
-        "include": false,
-        "subsystems": [
-            "Phosphatidylglycerol_biosynthesis",
-            "Cardiolipin_biosynthesis",
-            "CDP-diacylglycerol_biosynthesis"
-        ],
-        "classes": {
-            "Lipids": {
-                "Phosphatidylglycerol_biosynthesis": [
-                    "PWY4FS-7",
-                    "PWY4FS-8"
-                ],
-                "Cardiolipin_biosynthesis": [
-                    "PWY-5269"
-                ],
-                "CDP-diacylglycerol_biosynthesis": []
-            }
-        },
-        "features": [],
-        "reactions": [
-            "rxn20527"
-        ],
-        "localization": {
-            "c": {
-                "rxn20527": []
-            }
-        },
-        "publications": [],
-        "kbase_id": "PS_role_b34f66",
         "curators": [
             "SvetaG",
             "samseaver"
@@ -54003,7 +53912,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Methylthioalkylmalate synthase"
+        "abstract_enzyme": "Methylthioalkylmalate synthase, 5C-6C"
     },
     {
         "role": "Aromatic desulfoglucosinolate sulfotransferase (EC 2.8.2.24)",
