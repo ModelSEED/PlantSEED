@@ -1,0 +1,94 @@
+{
+    "id": "PlantAutotrophicMedia",
+    "isDefined": 1,
+    "isMinimal": 0,
+    "mediacompounds": [
+        {
+            "compound_ref": "489/14/14/compounds/id/cpd00013",
+            "concentration": 0.001,
+            "id": "cpd00013",
+            "maxFlux": 1000,
+            "minFlux": -1000
+        },
+        {
+            "compound_ref": "489/14/14/compounds/id/cpd00048",
+            "concentration": 0.001,
+            "id": "cpd00048",
+            "maxFlux": 1000,
+            "minFlux": -1000
+        },
+        {
+            "compound_ref": "489/14/14/compounds/id/cpd00067",
+            "concentration": 0.001,
+            "id": "cpd00067",
+            "maxFlux": 1000,
+            "minFlux": -1000
+        },
+        {
+            "compound_ref": "489/14/14/compounds/id/cpd11632",
+            "concentration": 0.001,
+            "id": "cpd11632",
+            "maxFlux": 1000,
+            "minFlux": -1000
+        },
+        {
+            "compound_ref": "489/14/14/compounds/id/cpd00254",
+            "concentration": 0.001,
+            "id": "cpd00254",
+            "maxFlux": 1000,
+            "minFlux": -1000
+        },
+        {
+            "compound_ref": "489/14/14/compounds/id/cpd00011",
+            "concentration": 0.001,
+            "id": "cpd00011",
+            "maxFlux": 1000,
+            "minFlux": -1000
+        },
+        {
+            "compound_ref": "489/14/14/compounds/id/cpd00007",
+            "concentration": 0.001,
+            "id": "cpd00007",
+            "maxFlux": 1000,
+            "minFlux": -1000
+        },
+        {
+            "compound_ref": "489/14/14/compounds/id/cpd00009",
+            "concentration": 0.001,
+            "id": "cpd00009",
+            "maxFlux": 1000,
+            "minFlux": -1000
+        },
+        {
+            "compound_ref": "489/14/14/compounds/id/cpd00001",
+            "concentration": 0.001,
+            "id": "cpd00001",
+            "maxFlux": 1000,
+            "minFlux": -1000
+        },
+        {
+            "compound_ref": "489/14/14/compounds/id/cpd00099",
+            "concentration": 0.001,
+            "id": "cpd00099",
+            "maxFlux": 1000,
+            "minFlux": -1000
+        },
+        {
+            "compound_ref": "489/14/14/compounds/id/cpd00205",
+            "concentration": 0.001,
+            "id": "cpd00205",
+            "maxFlux": 1000,
+            "minFlux": -1000
+        },
+        {
+            "compound_ref": "489/14/14/compounds/id/cpd10515",
+            "concentration": 0.001,
+            "id": "cpd10515",
+            "maxFlux": 1000,
+            "minFlux": -1000
+        }
+    ],
+    "name": "PlantAutotrophicMedia",
+    "source_id": "PlantSEED",
+    "type": "unspecified"
+}
