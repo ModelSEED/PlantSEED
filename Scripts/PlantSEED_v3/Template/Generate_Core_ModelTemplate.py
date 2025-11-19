@@ -271,7 +271,7 @@ for complex in complex_list:
 		for rxn in cpt['reactions']:
 			if('direction' in complex):
 				curated_reactions_dict[rxn]=complex['direction']
-				
+
 			tmpl_rxn = rxn+"_"+cpt_id
 
 			# These are stored for indexing compound stoichiometry
@@ -508,6 +508,15 @@ for template_reaction in sorted(reactions_roles):
 	bcat3_rxns = ['rxn23780','rxn27069','rxn27070','rxn27071','rxn27072','rxn27073']
 	if(template_reaction_hash['id'].split('_')[0] in bcat3_rxns):
 		replace_generic={'cpd22369':'cpd00023','cpd21904':'cpd00024'}
+		for rgt in template_reaction_hash['templateReactionReagents']:
+			for cpd in replace_generic.keys():
+				if(cpd in rgt['templatecompcompound_ref']):
+					rgt['templatecompcompound_ref'] = rgt['templatecompcompound_ref'].replace(cpd,replace_generic[cpd])
+
+	# Update generic hemoproteins involved in glucosinolate biosynthesis to flavins
+	monooxygenase_rxns = ['rxn53279']
+	if(template_reaction_hash['id'].split('_')[0] in monooxygenase_rxns):
+		replace_generic={'cpd42231':'cpd21035','cpd42232':'cpd11630'}
 		for rgt in template_reaction_hash['templateReactionReagents']:
 			for cpd in replace_generic.keys():
 				if(cpd in rgt['templatecompcompound_ref']):
