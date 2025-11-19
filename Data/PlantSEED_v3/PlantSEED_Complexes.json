@@ -4374,7 +4374,8 @@
                 "reagents": "m",
                 "exclude": false
             }
-        }
+        },
+        "direction": ">"
     },
     {
         "kbase_id": "PS_complex_11d33b",
@@ -6101,7 +6102,8 @@
                 "reagents": "d",
                 "exclude": false
             }
-        }
+        },
+        "direction": ">"
     },
     {
         "kbase_id": "PS_complex_726b83",
@@ -11938,7 +11940,8 @@
                 "reagents": "c",
                 "exclude": false
             }
-        }
+        },
+        "direction": "<"
     },
     {
         "kbase_id": "PS_complex_e26ee4",
@@ -15681,6 +15684,7 @@
                 "reagents": "m",
                 "exclude": false
             }
-        }
+        },
+        "direction": ">"
     }
 ]

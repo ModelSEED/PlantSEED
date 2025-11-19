@@ -269,6 +269,9 @@ for complex in complex_list:
 			continue
 
 		for rxn in cpt['reactions']:
+			if('direction' in complex):
+				curated_reactions_dict[rxn]=complex['direction']
+				
 			tmpl_rxn = rxn+"_"+cpt_id
 
 			# These are stored for indexing compound stoichiometry
