@@ -548,6 +548,7 @@ for template_reaction in sorted(reactions_roles):
 ########################################################################
 # This is for transport in aliphatic glucosinolate biosynthesis
 glc_tns = {'cpd17400':'d',
+		   'cpd17403':'d',
 		   'cpd17407':'d',
 		   'cpd17411':'d',
 		   'cpd17415':'d',
