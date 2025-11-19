@@ -1,0 +1,13 @@
+{
+  "domain": "Eukaryota",
+  "id": "Athaliana_TAIR10",
+  "md5": "b6611ff00b63eb97c42c2960cacda317",
+  "molecule_type": "SingleLetterAlphabet",
+  "scientific_name": "Arabidopsis thaliana",
+  "source": "Phytosome",
+  "source_id": "TAIR10",
+  "taxonomy": "cellular organisms; Eukaryota; Viridiplantae; Streptophyta; Streptophytina; Embryophyta; Tracheophyta; Euphyllophyta; Spermatophyta; Magnoliopsida; Mesangiospermae; eudicotyledons; Gunneridae; Pentapetalae; rosids; malvids; Brassicales; Brassicaceae; Camelineae; Arabidopsis",
+  "features": [],
+  "mrnas": [],
+  "cdss": []
+}
