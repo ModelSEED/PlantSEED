@@ -7,74 +7,18 @@ database_relative_path = os.path.join(script_directory, "../../../", "Data/Plant
 with open(os.path.join(database_relative_path, "PlantSEED_Roles.json")) as subsystem_file:
 	roles_list = json.load(subsystem_file)
 
+print("+"*30)
+print("++ Checking KBase Role IDs")
 role_ID_list = list()
-complex_ID_dict = dict()
 
-reactions_roles = dict()
-roles_reactions = dict()
-roles_enzymes = dict()
-enzymes_roles = dict()
-# string with unique info for each role
-# first reaction and subsystem included to differentiate spontaneous rxns
-# str = entry['role'] + entry['reactions'][0] + entry['subsystems'][0]
-
-# string with unique info for each complex
-# str = entry['abstract_enzyme'] + " / " + entry['role'] + " / " + reaction + "_" + entry['compartmentalization'][cpts]['reaction']
-
-# Collect all enzymes/reactions/roles and kbase identifiers first
+# Collect all role identifiers first
 for entry in roles_list:
-
-	if('abstract_enzyme' not in entry or 'role' not in entry or 'reactions' not in entry or 'localization' not in entry):
-		print("Warning, missing abstract_enzyme, role, reactions, or compartments for role: "+entry['role'])
-		print("\tCannot create unique KBase Complex ID")
-		pass
-
-	if('abstract_enzyme' not in entry):
-		print("Warning, missing abstract_enzyme for role: "+entry['role'])
-	else:
-		if(entry['abstract_enzyme'] == entry['role']):
-			if('transport' not in entry['abstract_enzyme'] and 'Spontaneous' not in entry['role']):
-				# print("Warning, abstract_enzyme is the same as role: "+entry['role'])
-				pass
-			
-		roles_enzymes[entry['role']] = entry['abstract_enzyme']
-		if(entry['abstract_enzyme'] not in enzymes_roles):
-			enzymes_roles[entry['abstract_enzyme']]=list()
-		if(entry['role'] not in enzymes_roles[entry['abstract_enzyme']]):
-			enzymes_roles[entry['abstract_enzyme']].append(entry['role'])
 	
 	if('kbase_id' in entry):
 		if(entry['kbase_id'] in role_ID_list):
 			print("Warning, duplicate kbase_id: "+entry['kbase_id'] + " for role: "+entry['role'])
 		else:
 			role_ID_list.append(entry['kbase_id'])
-
-	if('compartmentalization' in entry):
-		for cpt in entry['compartmentalization']:
-			cpx_dict = entry['compartmentalization'][cpt]
-		
-			if('kbase_ids' in cpx_dict):
-					for kbase_id in cpx_dict['kbase_ids']:
-						if(kbase_id not in complex_ID_dict):
-							complex_ID_dict[kbase_id]=list()
-						for rxn_cpt in cpx_dict['kbase_ids'][kbase_id]:
-							if(rxn_cpt not in complex_ID_dict[kbase_id]):
-								complex_ID_dict[kbase_id].append(rxn_cpt)
-
-	if('reactions' in entry and 'localization' in entry):
-		for cpt in entry['localization']:
-			for rxn in entry['reactions']:
-				tmpl_rxn = rxn+"_"+cpt
-
-				if(entry['role'] not in roles_reactions):
-					roles_reactions[entry['role']]=list()
-				if(tmpl_rxn not in roles_reactions[entry['role']]):
-					roles_reactions[entry['role']].append(tmpl_rxn)
-
-				if(tmpl_rxn not in reactions_roles):
-					reactions_roles[tmpl_rxn]=list()
-				if(entry['role'] not in reactions_roles[tmpl_rxn]):
-					reactions_roles[tmpl_rxn].append(entry['role'])
 
 # Go back through database
 updated_roles = False
@@ -106,71 +50,131 @@ for entry in roles_list:
 			updated_roles=True
 			pass
 
-	"""
-	if('compartmentalization' not in entry):
-		entry['compartmentalization'] = dict()
+print("+"*30)
 
-	for cpt in entry['localization']:
 
-		if(cpt in entry['compartmentalization']):
-			cpx_dict = entry['compartmentalization'][cpt]
+print("+"*30)
+print("++ Checking KBase Complex IDs")
+
+with open(os.path.join(database_relative_path, "PlantSEED_Complexes.json")) as subsystem_file:
+	complexes_list = json.load(subsystem_file)
+
+# Collect all complex identifiers first
+update_complexes=False
+complex_ID_list = list()
+current_enzyme_dict = dict()
+for entry in complexes_list:
+
+	update_complex=False	
+	if('kbase_id' in entry):
+		if(entry['kbase_id'] in complex_ID_list):
+			print("Warning, duplicate kbase_id: "+entry['kbase_id'] + " for enzyme: "+entry['enzyme'])
 		else:
-			cpx_dict = {'reaction':cpt,'kbase_ids':{},'exclude':False}
-		
+			complex_ID_list.append(entry['kbase_id'])
+
+		enz = entry['enzyme']
+		if(enz not in current_enzyme_dict):
+			current_enzyme_dict[enz]={'rles':[],'rxns':[]}
+
+		roles = sorted(entry['roles'])
+		for role in roles:
+			if(role not in current_enzyme_dict[enz]):
+				current_enzyme_dict[enz]['rles'].append(role)
+
+		rxns_cpts = list()
+		for cpt_id in entry['compartments_reactions']:
+			cpt = entry['compartments_reactions'][cpt_id]
+			for rxn in cpt['reactions']:
+				rxn_cpt = rxn+'_'+cpt_id
+				if(rxn_cpt not in current_enzyme_dict[enz]['rxns']):
+					current_enzyme_dict[enz]['rxns'].append(rxn_cpt)
+				if(rxn_cpt not in rxns_cpts):
+					rxns_cpts.append(rxn_cpt)
+
+		rxns_cpts = sorted(rxns_cpts)
+		cpx_str = " / ".join([enz,"|".join(roles),"|".join(rxns_cpts)])
+		kbase_id = 'PS_complex_' + hashlib.sha256(cpx_str.encode('utf-8')).hexdigest()[:6]
+		if(kbase_id != entry['kbase_id']):
+			print("Updating kbase_id for: ",cpx_str)
+			entry['kbase_id']=kbase_id
+			update_complex = True
+	
+	if(update_complex is True):
+		update_complexes = True
+
+# Go back through roles database and for any enzyme/role/reaction combination that doesn't have a complex id
+# and create a new complex for them
+new_enzyme_dict = dict()
+for entry in roles_list:
+	if('abstract_enzyme' not in entry):
+		print("Warning: entry with role: "+entry['role']+" doesn't have an enzyme name")
+		continue
+
+	enz = entry['abstract_enzyme']
+
+	# special case of Spontaneous Reaction
+	if(enz.lower() == 'spontaneous reaction'):
+		# the entry always has a single spontaneous reaction
+		# but as there's no enzyme, we need to distinguish 
+		# between each one here
+		enz = enz+"||"+entry['reactions'][0]
+
+	if enz in current_enzyme_dict:
+		if(entry['role'] not in current_enzyme_dict[enz]['rles']):
+			print("Warning: role name has changed for ",enz)
 		for rxn in entry['reactions']:
-			tmpl_rxn = rxn+"_"+cpt
+			for lcz in entry['localization']:
+				rxn_cpt = rxn+'_'+lcz
+				if(len(lcz) == 1 and rxn_cpt not in current_enzyme_dict[enz]['rxns']):
+					print("Warning: reaction has changed for ",enz,current_enzyme_dict[enz]['rxns'],rxn_cpt)
+				if(len(lcz)==2):
+					fd_rxn=False
+					for subcpt in lcz:
+						if(rxn+"_"+subcpt in current_enzyme_dict[enz]['rxns']):
+							fd_rxn=True
+					if(fd_rxn is False):
+						print("Warning: reaction has changed for ",enz,current_enzyme_dict[enz]['rxns'],rxn_cpt)
+	else:
+		print("New enzyme!")
+		# here, I'm assuming that the first time you encounter a new enzyme name
+		# is the first time you encounter the roles and reactions that should be
+		# associated with the enzyme, so any successive entries should be added here
+		if(enz not in new_enzyme_dict):
+			new_enzyme_dict[enz]={'rles':[],'rxns':[],'cpts':[]}
+		if(entry['role'] not in new_enzyme_dict[enz]['rles']):
+			new_enzyme_dict[enz]['rles'].append(entry['role'])
+		for rxn in entry['reactions']:
+			for lcz in entry['localization']:
+				rxn_cpt = rxn+"_"+lcz
+				if(rxn_cpt not in new_enzyme_dict[enz]['rxns']):
+					new_enzyme_dict[enz]['rxns'].append(rxn_cpt)
+				if(lcz not in new_enzyme_dict[enz]['cpts']):
+					new_enzyme_dict[enz]['cpts'][lcz]={'reactions':[],"reagents":lcz,"exclude":False}
+				if(rxn not in new_enzyme_dict[enz]['cpts'][lcz]['reactions']):
+					new_enzyme_dict[enz]['cpts'][lcz]['reactions'].append(rxn)
 
-			if(tmpl_rxn not in reactions_roles):
-				print("Warning: template_reaction not found: "+tmpl_rxn)
-				continue
+# re-build complexes to insert into PlantSEED_Complexes and generate a new id
+for enz in new_enzyme_dict:
+	rxns = sorted(new_enzyme_dict[enz]['rxns'])
+	rles = sorted(new_enzyme_dict[enz]['rles'])
+	cpx_str = " / ".join([enz,"|".join(rles),"|".join(rxns)])
+	kbase_id = 'PS_complex_' + hashlib.sha256(cpx_str.encode('utf-8')).hexdigest()[:6]
+	while entry_id in complex_ID_list:
+		entry_id = 'PS_role_' + hashlib.sha256(entry_id.encode('utf-8')).hexdigest()[:6]
 
-			enzymes = list()
-			for role in reactions_roles[tmpl_rxn]:
-				if(role not in roles_enzymes):
-					print("Warning: role not found: "+role)
+	complex = {'kbase_id':entry_id,
+			   'enzyme':enz,
+			   'roles':rles,
+			   'compartments_reactions':new_enzyme_dict['cpts']}
+	complexes_list.append(complex)
+	update_complexes=True
 
-				if(roles_enzymes[role] not in enzymes):
-					enzymes.append(roles_enzymes[role])
+print("+"*30)
 
-			tmpl_rxns = list()
-			for enzyme in enzymes:
-				for role in enzymes_roles[enzyme]:
-					for rxn in roles_reactions[role]:
-						if(rxn not in tmpl_rxns):
-							tmpl_rxns.append(rxn)
-
-			sorted_enzymes = sorted(enzymes)
-			sorted_roles = sorted(reactions_roles[tmpl_rxn])
-			sorted_reactions = sorted(tmpl_rxns)
-
-			# string with unique info for each complex
-			cpx_str = " / ".join(sorted_enzymes) + " / " + " / ".join(sorted_roles) + " / " + " / ".join(sorted_reactions)
-			
-			# generate unique hash of complex string
-			entry_id = 'PS_complex_' + hashlib.sha256(cpx_str.encode('utf-8')).hexdigest()[:6]
-			while(entry_id in complex_ID_dict):
-				if(tmpl_rxn in complex_ID_dict[entry_id]):
-					# print("PS1: ",entry_id,complex_ID_dict[entry_id],tmpl_rxn)
-					break
-				# print("PS2: ",entry_id,complex_ID_dict[entry_id],tmpl_rxn)
-				# print("Breaking")
-				entry_id = 'PS_complex_' + hashlib.sha256(entry_id.encode('utf-8')).hexdigest()[:6]
-
-			if(entry_id not in complex_ID_dict):
-				complex_ID_dict[entry_id] = [tmpl_rxn]
-
-			if(entry_id not in cpx_dict['kbase_ids']):
-				cpx_dict['kbase_ids'][entry_id]=list()
-				updated_roles=True
-
-			if(tmpl_rxn not in cpx_dict['kbase_ids'][entry_id]):
-				cpx_dict['kbase_ids'][entry_id].append(tmpl_rxn)
-				updated_roles=True
-
-		# print(cpx_dict)
-		entry['compartmentalization'][cpt]=cpx_dict
-"""
-# updated_roles=False
 if(updated_roles is True):
 	with open(os.path.join(database_relative_path, "PlantSEED_Roles.json"),'w') as new_subsystem_file:
 		json.dump(roles_list,new_subsystem_file,indent=4)
+
+if(update_complexes is True):
+	with open(os.path.join(database_relative_path, "PlantSEED_Complexes.json"),'w') as new_complex_file:
+		json.dump(complexes_list,new_complex_file,indent=4)
