@@ -5,3 +5,4 @@ Proline dehydrogenase (EC 1.5.5.2)	ASSIGN	direction	>
 L-glutamate gamma-semialdehyde dehydrogenase (EC 1.2.1.88)	ASSIGN	direction	>
 Proline dehydrogenase (EC 1.5.5.2)	UPDATE	stoichiometry	cpd00015	0
 Proline dehydrogenase (EC 1.5.5.2)	UPDATE	stoichiometry	cpd00982	0
+Proline dehydrogenase (EC 1.5.5.2)	UPDATE	stoichiometry	cpd00067	3
