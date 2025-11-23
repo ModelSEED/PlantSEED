@@ -3,5 +3,5 @@ Glutamate 5-kinase (EC 2.7.2.11)	ASSIGN	direction	>
 Pyrroline-5-carboxylate reductase (EC 1.5.1.2)	ASSIGN	direction	<
 Proline dehydrogenase (EC 1.5.5.2)	ASSIGN	direction	>
 L-glutamate gamma-semialdehyde dehydrogenase (EC 1.2.1.88)	ASSIGN	direction	>
-Proline dehydrogenase (EC 1.5.5.2)	UPDATE	reagent	cpd00015	0
-Proline dehydrogenase (EC 1.5.5.2)	UPDATE	reagent	cpd00982	0
+Proline dehydrogenase (EC 1.5.5.2)	UPDATE	stoichiometry	cpd00015	0
+Proline dehydrogenase (EC 1.5.5.2)	UPDATE	stoichiometry	cpd00982	0

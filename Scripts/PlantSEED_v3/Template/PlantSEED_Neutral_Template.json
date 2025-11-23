@@ -3851,19 +3851,6 @@
             "compound_ref": "48/1/5/compounds/id/cpd00978"
         },
         {
-            "id": "cpd00982",
-            "name": "FADH2",
-            "abbreviation": "fadh2",
-            "aliases": [],
-            "formula": "C27H33N9O15P2",
-            "isCofactor": 0,
-            "defaultCharge": -2.0,
-            "mass": 785.0,
-            "deltaG": -218.1,
-            "deltaGErr": 2.22,
-            "compound_ref": "48/1/5/compounds/id/cpd00982"
-        },
-        {
             "id": "cpd01059",
             "name": "Ferulate",
             "abbreviation": "frlt",
@@ -9705,13 +9692,6 @@
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
-            "id": "cpd00015_m",
-            "charge": -2.0,
-            "maxuptake": 0.0,
-            "templatecompound_ref": "~/compounds/id/cpd00015",
-            "templatecompartment_ref": "~/compartments/id/m"
-        },
-        {
             "id": "cpd00016_c",
             "charge": -2.0,
             "maxuptake": 0.0,
@@ -14680,13 +14660,6 @@
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00978",
             "templatecompartment_ref": "~/compartments/id/x"
-        },
-        {
-            "id": "cpd00982_m",
-            "charge": -2.0,
-            "maxuptake": 0.0,
-            "templatecompound_ref": "~/compounds/id/cpd00982",
-            "templatecompartment_ref": "~/compartments/id/m"
         },
         {
             "id": "cpd01059_c",
@@ -43645,19 +43618,11 @@
             "maxrevflux": 0.0,
             "templateReactionReagents": [
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00015_m",
-                    "coefficient": -1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00129_m",
                     "coefficient": -1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00067_m",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00982_m",
                     "coefficient": 1.0
                 },
                 {
@@ -59975,6 +59940,28 @@
             "maxrevflux": 0.0,
             "templateReactionReagents": [
                 {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd17403_c",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd17403_d",
+                    "coefficient": 1.0
+                }
+            ],
+            "templatecomplex_refs": []
+        },
+        {
+            "id": "glucosinolates_3",
+            "name": "Glucosinolate Transport",
+            "templatecompartment_ref": "~/compartments/id/d",
+            "reaction_ref": "48/1/5/reactions/id/rxn14003",
+            "type": "universal",
+            "direction": "=",
+            "GapfillDirection": "=",
+            "maxforflux": 0.0,
+            "maxrevflux": 0.0,
+            "templateReactionReagents": [
+                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd17407_c",
                     "coefficient": -1.0
                 },
@@ -59986,7 +59973,7 @@
             "templatecomplex_refs": []
         },
         {
-            "id": "glucosinolates_3",
+            "id": "glucosinolates_4",
             "name": "Glucosinolate Transport",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
@@ -60008,7 +59995,7 @@
             "templatecomplex_refs": []
         },
         {
-            "id": "glucosinolates_4",
+            "id": "glucosinolates_5",
             "name": "Glucosinolate Transport",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
@@ -60030,7 +60017,7 @@
             "templatecomplex_refs": []
         },
         {
-            "id": "glucosinolates_5",
+            "id": "glucosinolates_6",
             "name": "Glucosinolate Transport",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
@@ -60052,7 +60039,7 @@
             "templatecomplex_refs": []
         },
         {
-            "id": "glucosinolates_6",
+            "id": "glucosinolates_7",
             "name": "Glucosinolate Transport",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
@@ -60074,7 +60061,7 @@
             "templatecomplex_refs": []
         },
         {
-            "id": "glucosinolates_7",
+            "id": "glucosinolates_8",
             "name": "Glucosinolate Transport",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",

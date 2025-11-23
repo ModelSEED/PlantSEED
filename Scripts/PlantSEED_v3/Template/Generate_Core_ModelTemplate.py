@@ -244,6 +244,7 @@ excluded_roles_complexes=list()
 reactions_roles=dict()
 reactions_types=dict()
 reactions_cpts=dict()
+reactions_stoich=dict()
 
 for complex in complex_list:
 	complex_id = complex['kbase_id']
@@ -277,6 +278,10 @@ for complex in complex_list:
 			# These are stored for indexing compound stoichiometry
 			# when generating the reagents below
 			reactions_cpts[tmpl_rxn]=cpt['reagents']
+
+			# For changing/removing/adding compounds
+			if('stoichiometry' in complex):
+				reactions_stoich[tmpl_rxn]=complex['stoichiometry']
 
 			for role in complex['roles']:
 				if(role.lower() == 'spontaneous reaction'):
@@ -418,11 +423,20 @@ for template_reaction in sorted(reactions_roles):
 	if(base_reaction in limited_gf_reactions_list):
 		gapfilling_direction = direction
 	template_reaction_hash['GapfillDirection']=gapfilling_direction
-	
+
 	# Add reagents
 	for rgt in (reactions_dict[base_reaction]['stoichiometry']):
 		# (coefficient,compound,gen_cpt,index,name)=entry.split(":")
-		
+
+		# Update the stoichiometry first of all
+		if(template_reaction in reactions_stoich):
+			if(rgt['compound'] in reactions_stoich[template_reaction]):
+				rgt['coefficient'] = float(reactions_stoich[template_reaction][rgt['compound']])
+
+		# if new stoichiometry is zero, then this means to remove the reagent
+		if(rgt['coefficient'] == 0):
+			continue
+
 		# The generic compartment is an index
 		# The reaction compartments (reaction_cpts) generally consist of one compartment
 		#    so the index is 0
