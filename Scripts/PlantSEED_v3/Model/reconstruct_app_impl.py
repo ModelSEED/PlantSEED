@@ -123,6 +123,11 @@ class ReconstructAppImpl:
 							'modelreactions' : [], 'modelcompounds' : [], 'modelcompartments' : [], 'biomasses' : [],
 							'gapgens' : [], 'gapfillings' : [] }
 		
+		# collect compound names
+		cpd_nms = dict()
+		for template_cpd in self.template_obj['compounds']:
+			cpd_nms[template_cpd['id']]=template_cpd['name']
+
 		conditional_spontaneous_reactions = list()
 		for template_rxn in self.template_obj['reactions']:
 			if(template_rxn['type'] == 'gapfilling'):
@@ -330,6 +335,7 @@ class ReconstructAppImpl:
 				if(new_mdlcpd_id not in mdlcpds_dict):
 					new_mdlcpd_dict = copy.deepcopy(default_mdlcpd_dict)
 					new_mdlcpd_dict['id']=new_mdlcpd_id
+					new_mdlcpd_dict['name']=cpd_nms[new_mdlcpd_id.split('_')[0]]
 					new_mdlcpd_dict['compound_ref']='~/template/compounds/id/'+template_rgt_cpd
 					new_mdlcpd_dict['modelcompartment_ref']='~/modelcompartments/id/'+new_mdlcpt_id
 					mdlcpds_dict[new_mdlcpd_id]=new_mdlcpd_dict
