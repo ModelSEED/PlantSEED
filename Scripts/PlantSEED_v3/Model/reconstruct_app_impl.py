@@ -58,8 +58,7 @@ class ReconstructAppImpl:
 
 					function = function_cpt_list.pop(0)
 					# This regex is very old. As I have control over the annotation
-					# of plant genomes, I only use the forward slash to separate
-					# roles
+					# of plant genomes, I only use the forward slash to separate roles
 					# roles = re.split("\s*;\s+|\s+[\@\/]\s+", function)
 					roles = re.split("\\s+/\\s+",function)
 					for role in roles:
@@ -93,7 +92,7 @@ class ReconstructAppImpl:
 								role_cpt_ftr_dict[role_id][abbrev_cpt]=dict()
 
 							role_cpt_ftr_dict[role_id][abbrev_cpt][feature['id']]=1
-				
+					
 		# Default dictionaries for objects needed for a model reaction
 		default_mdlcpt_dict = { 'id': 'u0', 'label': 'unknown',
 								'pH': 7, 'potential': 0, 'compartmentIndex': 0,
@@ -157,9 +156,10 @@ class ReconstructAppImpl:
 
 				for cpxrole in complex_dict[cpx_id]['complexroles']:
 					role_id = cpxrole['templaterole_ref'].split('/')[-1]
-
+					# print("Testing "+roles_dict[role_id]['name']+" for reaction "+template_rxn['id'])
 					if(role_id in role_cpt_ftr_dict):
 						for role_cpt in role_cpt_ftr_dict[role_id]:
+					
 							role_cpt_present=False
 							if(template_rxn_cpt == role_cpt and cpxrole['triggering'] == 1):
 								complex_present=True
@@ -194,6 +194,8 @@ class ReconstructAppImpl:
 						new_subunit_dict['triggering'] = cpxrole['triggering']
 						new_subunit_dict['optionalSubunit'] = cpxrole['optional_role']
 						new_subunit_dict['role'] = roles_dict[role_id]['name']
+
+						# print("Role "+roles_dict[role_id]['name']+" not in genome but reaction "+template_rxn['id']+" is universal")
 
 						# Un-necessary, but explicitly stated
 						new_subunit_dict['feature_refs']=[]
@@ -264,20 +266,26 @@ class ReconstructAppImpl:
 				# So we collect them here before ignoring other conditional reactions
 				if(has_features is False):
 
+					skipping_roles = list()
+					skipping_features = list()
 					for cpx_ref in template_rxn['templatecomplex_refs']:
-						cpx_id = cpx_ref.split('/')[-1]
-
 						for cpxrole in complex_dict[cpx_id]['complexroles']:
 							role_id = cpxrole['templaterole_ref'].split('/')[-1]
-						
-							if(roles_dict[role_id]['name'] == 'Spontaneous Reaction'):
+
+							if('spontaneous reaction' in roles_dict[role_id]['name'].lower()):
 								is_conditional_spontaneous = True
+
+							if(roles_dict[role_id]['name'] not in skipping_roles):
+								skipping_roles.append(roles_dict[role_id]['name'])
+							for ftr in roles_dict[role_id]['features']:
+								if(ftr not in skipping_features):
+									skipping_features.append(ftr)
 
 					if(log_rxn is not None and log_rxn in template_rxn['id']):
 						print(proteins_list)
 
 					if(is_conditional_spontaneous is False):
-						# print("Skipping",template_rxn['id'])
+						print("Skipping conditional reaction because curated features are not in genome",template_rxn['id'],skipping_roles,skipping_features)
 						continue
 
 			if(log_rxn is not None and log_rxn in template_rxn['id']):
@@ -417,7 +425,7 @@ class ReconstructAppImpl:
 							print("Missing mdlcpd: ",mdlcpd_id)
 							pass
 
-					print("Adding ",mdlrxn['id'])
+					print("Adding conditional spontaneous reaction",mdlrxn['id'])
 					new_model_obj['modelreactions'].append(mdlrxn)
 
 		return new_model_obj

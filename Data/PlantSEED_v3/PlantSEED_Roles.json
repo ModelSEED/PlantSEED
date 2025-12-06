@@ -1857,12 +1857,6 @@
                     "AraCyc",
                     "GFP"
                 ]
-            },
-            "c": {
-                "rxn27071": [],
-                "rxn27073": [],
-                "rxn27072": [],
-                "rxn27070": []
             }
         },
         "publications": [
@@ -18032,64 +18026,6 @@
         "abstract_enzyme": "Ferulate-5-hydroxylase"
     },
     {
-        "role": "Flavanone-3-hydroxylase (EC 1.14.13.21)",
-        "include": true,
-        "subsystems": [
-            "Lignin_biosynthesis"
-        ],
-        "classes": {
-            "Cell wall": {
-                "Lignin_biosynthesis": []
-            }
-        },
-        "features": [
-            "Athaliana_TAIR10||AT3G25180"
-        ],
-        "reactions": [
-            "rxn24348",
-            "rxn01765"
-        ],
-        "localization": {
-            "c": {
-                "rxn24348": []
-            },
-            "r": {
-                "rxn01765": []
-            }
-        },
-        "publications": [],
-        "kbase_id": "PS_role_5aa27a",
-        "curators": [
-            "SvetaG",
-            "samseaver"
-        ],
-        "type": "universal",
-        "is_transporter": false,
-        "compartmentalization": {
-            "c": {
-                "reaction": "c",
-                "kbase_ids": {
-                    "PS_complex_4dd7b4": [
-                        "rxn24348_c",
-                        "rxn01765_c"
-                    ]
-                },
-                "exclude": false
-            },
-            "r": {
-                "reaction": "r",
-                "kbase_ids": {
-                    "PS_complex_05c0dc": [
-                        "rxn24348_r",
-                        "rxn01765_r"
-                    ]
-                },
-                "exclude": false
-            }
-        },
-        "abstract_enzyme": "Flavanone-3-hydroxylase"
-    },
-    {
         "role": "Aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)",
         "include": true,
         "subsystems": [
@@ -18146,62 +18082,6 @@
             }
         },
         "abstract_enzyme": "Flavin-containing glucosinolate S-oxygenase"
-    },
-    {
-        "role": "Flavonoid 3'-hydroxylase (EC 1.14.13.21)",
-        "include": true,
-        "subsystems": [
-            "Lignin_biosynthesis"
-        ],
-        "classes": {
-            "Cell wall": {
-                "Lignin_biosynthesis": []
-            }
-        },
-        "features": [],
-        "reactions": [
-            "rxn24348",
-            "rxn01765"
-        ],
-        "localization": {
-            "c": {
-                "rxn24348": []
-            },
-            "r": {
-                "rxn01765": []
-            }
-        },
-        "publications": [],
-        "kbase_id": "PS_role_924f97",
-        "curators": [
-            "SvetaG",
-            "samseaver"
-        ],
-        "type": "universal",
-        "is_transporter": false,
-        "compartmentalization": {
-            "c": {
-                "reaction": "c",
-                "kbase_ids": {
-                    "PS_complex_4dd7b4": [
-                        "rxn24348_c",
-                        "rxn01765_c"
-                    ]
-                },
-                "exclude": false
-            },
-            "r": {
-                "reaction": "r",
-                "kbase_ids": {
-                    "PS_complex_05c0dc": [
-                        "rxn24348_r",
-                        "rxn01765_r"
-                    ]
-                },
-                "exclude": false
-            }
-        },
-        "abstract_enzyme": "Flavonoid 3'-hydroxylase"
     },
     {
         "role": "Flavonoid 3'-monooxygenase (EC 1.14.13.21)",
@@ -27584,14 +27464,6 @@
                 "UniProt||Q9FMT1": [
                     "PPDB"
                 ]
-            },
-            "c": {
-                "rxn14122": [],
-                "rxn14244": [],
-                "rxn14182": [],
-                "rxn13983": [],
-                "rxn14172": [],
-                "rxn13977": []
             }
         },
         "publications": [
@@ -27675,14 +27547,6 @@
                 "UniProt||Q94AR8": [
                     "PPDB"
                 ]
-            },
-            "c": {
-                "rxn14059": [],
-                "rxn14156": [],
-                "rxn14278": [],
-                "rxn13995": [],
-                "rxn14248": [],
-                "rxn13975": []
             }
         },
         "publications": [
@@ -43384,12 +43248,6 @@
                 "rxn02374": []
             },
             "m": {
-                "rxn02374": []
-            },
-            "x": {
-                "rxn02374": []
-            },
-            "v": {
                 "rxn02374": []
             }
         },

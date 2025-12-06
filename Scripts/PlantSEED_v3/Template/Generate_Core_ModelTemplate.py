@@ -253,12 +253,17 @@ for complex in complex_list:
 	for role in complex['roles']:
 		if(role in excluded_roles):
 			to_include.append(False)
+		elif(role.lower() == 'spontaneous reaction' and complex['enzyme'] in excluded_roles):
+			to_include.append(False)
 		else:
 			to_include.append(True)
 
 	if(len(to_include)==1 and to_include[0] is False):
 		excluded_roles_complexes.append(' / '.join(complex['roles'])+' / '+complex_id)
 		continue
+
+	if(complex['roles'][0].lower()=='spontaneous reaction'):
+		complex['roles']=[complex['enzyme']]
 
 	if(complex_id not in complexes):
 		complexes[complex_id]={'reactions':[],'roles':complex['roles']}
@@ -332,7 +337,7 @@ for complex in sorted(complexes.keys()):
 					'confidence' : 1.0,
 					'complexroles' : [] }
 	if('roles' not in complexes[complex]):
-		print(complex,complexes[complex])
+		print("Missing Roles",complex,complexes[complex])
 	for role in sorted(complexes[complex]['roles']):
 		if(role not in roles_ids):
 			print("Complexed role excluded:",role)

@@ -619,18 +619,6 @@
                 ],
                 "reagents": "d",
                 "exclude": false
-            },
-            "c": {
-                "reactions": [
-                    "rxn27071",
-                    "rxn27073",
-                    "rxn27069",
-                    "rxn27072",
-                    "rxn27070",
-                    "rxn23780"
-                ],
-                "reagents": "c",
-                "exclude": false
             }
         }
     },
@@ -5514,31 +5502,6 @@
         }
     },
     {
-        "kbase_id": "PS_complex_5599e3",
-        "enzyme": "Flavanone-3-hydroxylase",
-        "roles": [
-            "Flavanone-3-hydroxylase (EC 1.14.13.21)"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn24348",
-                    "rxn01765"
-                ],
-                "reagents": "c",
-                "exclude": false
-            },
-            "r": {
-                "reactions": [
-                    "rxn24348",
-                    "rxn01765"
-                ],
-                "reagents": "r",
-                "exclude": false
-            }
-        }
-    },
-    {
         "kbase_id": "PS_complex_ed48c3",
         "enzyme": "Flavin-containing glucosinolate S-oxygenase",
         "roles": [
@@ -5550,31 +5513,6 @@
                     "rxn41751"
                 ],
                 "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
-        "kbase_id": "PS_complex_ad48ca",
-        "enzyme": "Flavonoid 3'-hydroxylase",
-        "roles": [
-            "Flavonoid 3'-hydroxylase (EC 1.14.13.21)"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn24348",
-                    "rxn01765"
-                ],
-                "reagents": "c",
-                "exclude": false
-            },
-            "r": {
-                "reactions": [
-                    "rxn24348",
-                    "rxn01765"
-                ],
-                "reagents": "r",
                 "exclude": false
             }
         }
@@ -8715,18 +8653,6 @@
                 ],
                 "reagents": "d",
                 "exclude": false
-            },
-            "c": {
-                "reactions": [
-                    "rxn14122",
-                    "rxn14244",
-                    "rxn14182",
-                    "rxn13983",
-                    "rxn14172",
-                    "rxn13977"
-                ],
-                "reagents": "c",
-                "exclude": false
             }
         }
     },
@@ -8748,18 +8674,6 @@
                     "rxn13975"
                 ],
                 "reagents": "d",
-                "exclude": false
-            },
-            "c": {
-                "reactions": [
-                    "rxn14059",
-                    "rxn14156",
-                    "rxn14278",
-                    "rxn13995",
-                    "rxn14248",
-                    "rxn13975"
-                ],
-                "reagents": "c",
                 "exclude": false
             }
         }
@@ -12847,20 +12761,6 @@
                     "rxn02374"
                 ],
                 "reagents": "m",
-                "exclude": false
-            },
-            "x": {
-                "reactions": [
-                    "rxn02374"
-                ],
-                "reagents": "x",
-                "exclude": false
-            },
-            "v": {
-                "reactions": [
-                    "rxn02374"
-                ],
-                "reagents": "v",
                 "exclude": false
             }
         }
