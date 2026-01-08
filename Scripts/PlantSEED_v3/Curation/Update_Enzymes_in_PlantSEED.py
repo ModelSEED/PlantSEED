@@ -225,8 +225,10 @@ for entry in roles_list:
 		for field in rem_dict[entry['role']]:
 			for input in rem_dict[entry['role']][field]:
 				# Check to see if it is there and remove it
-				if(input in entry[field]):
+				if isinstance(entry[field], list):
 					entry[field].remove(input)
+				elif isinstance(entry[field], dict):
+					del entry[field][input]
 
 				if(field == 'features'):
 					delete_cpts=list()

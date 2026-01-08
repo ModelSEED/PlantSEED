@@ -27638,14 +27638,6 @@
                 "UniProt||Q9LYT7": [
                     "PPDB"
                 ]
-            },
-            "c": {
-                "rxn14059": [],
-                "rxn14156": [],
-                "rxn14278": [],
-                "rxn13995": [],
-                "rxn14248": [],
-                "rxn13975": []
             }
         },
         "publications": [
@@ -27658,7 +27650,8 @@
             "SvetaG",
             "samseaver",
             "tjcontant",
-            "riocon001"
+            "riocon001",
+            "ricon001"
         ],
         "type": "conditional",
         "is_transporter": false,
@@ -53741,7 +53734,7 @@
             "rxn14183"
         ],
         "localization": {
-            "c": {
+            "d": {
                 "Athaliana_TAIR10||AT5G23010": [
                     "PPDB"
                 ],
@@ -53764,12 +53757,12 @@
         "kbase_id": "PS_role_5eb183",
         "is_transporter": false,
         "compartmentalization": {
-            "c": {
-                "reaction": "c",
+            "d": {
+                "reaction": "d",
                 "kbase_ids": {
                     "PS_complex_385487": [
-                        "rxn14004_c",
-                        "rxn14183_c"
+                        "rxn14004_d",
+                        "rxn14183_d"
                     ]
                 },
                 "exclude": false
