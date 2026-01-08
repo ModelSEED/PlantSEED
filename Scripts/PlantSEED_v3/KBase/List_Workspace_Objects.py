@@ -13,9 +13,14 @@ WSClient = Workspace(url = Workspace_URL, token = Token)
 print('WS Client instantiated: Version '+WSClient.ver())
 
 Workspace = 'Phytozome_Genomes'
+Workspace = 'Photosynthetic_FBA_Tutorial'
+Workspace = 'NewKBaseModelTemplates'
+Workspace = 'Full_Plant_Reconstructions'
 
-
-Result_List = WSClient.list_objects({'workspaces':[Workspace],'type':'KBaseGenomes.Genome'})
+Result_List = WSClient.list_objects({'workspaces':[Workspace]}) #,'type':'KBaseGenomes.Genome'})
 
 for result in Result_List:
-	print('\t'.join(result[1:4]))
+	row = []
+	for entry in result:
+		row.append(str(entry))
+	print('\t'.join(row))
