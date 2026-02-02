@@ -14691,7 +14691,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Desulfoglucosinolate sulfotransferase"
+        "abstract_enzyme": "Aliphatic desulfoglucosinolate sulfotransferase"
     },
     {
         "role": "Dethiobiotin synthetase (EC 6.3.3.3)",
@@ -18081,7 +18081,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Flavin-containing glucosinolate S-oxygenase"
+        "abstract_enzyme": "Aliphatic glucosinolate S-oxygenase"
     },
     {
         "role": "Flavonoid 3'-monooxygenase (EC 1.14.13.21)",
@@ -19551,7 +19551,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Gamma-glutamyl peptidase in glucosinolates biosynthesis"
+        "abstract_enzyme": "Glucosinolate gamma-glutamyl hydrolase"
     },
     {
         "role": "Glutamate-5-semialdehyde dehydrogenase (EC 1.2.1.41)",
@@ -33139,7 +33139,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "Oxime metabolizining monooxygenase in aliphatic glucosinolates biosynthesis"
+        "abstract_enzyme": "(Methylsulfanyl)alkanaldoxime N-monooxygenase"
     },
     {
         "role": "Oxygen transport",
@@ -41878,7 +41878,7 @@
                 "exclude": false
             }
         },
-        "abstract_enzyme": "S-alkyl-thiohydroximate lyase"
+        "abstract_enzyme": "Alkylthiohydroximate C-S lyase"
     },
     {
         "role": "Sedoheptulose-1,7-bisphosphatase (EC 3.1.3.37)",
