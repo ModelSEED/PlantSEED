@@ -1,0 +1,70 @@
+name: Process Curation Form
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  append-to-tsv:
+    # Only run this if the issue has the 'curation' label assigned by our form
+    if: contains(github.event.issue.labels.*.name, 'curation')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Needed to push commits
+      issues: write    # Needed to close the issue/add comments
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Parse Issue and Append to TSV
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          python3 -c '
+          import os, re, sys
+
+          body = os.environ["ISSUE_BODY"]
+
+          # Helper function to extract text below a Markdown header
+          def get_field(header):
+              match = re.search(r"### " + header + r"\n+(.*?)\n+(?:###|$)", body, re.DOTALL)
+              return match.group(1).strip() if match else None
+
+          # Map the exact headers from your Issue Form
+          entity = get_field("Entity Name / Pathway")
+          action = get_field("Action")
+          data_type = get_field("Data Type")
+          value = get_field("Value")
+
+          if not all([entity, action, data_type, value]):
+              print("Error: Could not parse all required fields from the issue.")
+              sys.exit(1)
+
+          # Define target file
+          target_dir = "Curation/seaver/"
+          target_file = f"{target_dir}/test.tsv"
+
+          # Ensure the directory exists
+          os.makedirs(target_dir, exist_ok=True)
+
+          # Append the parsed values as a tab-separated row
+          with open(target_file, "a") as f:
+              f.write(f"{entity}\t{action}\t{data_type}\t{value}\n")
+          '
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          git add Curation/seaver/test.tsv
+          git commit -m "curation: add data from issue #${{ github.event.issue.number }}"
+          git push
+
+      - name: Comment and Close Issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --body "✅ Successfully parsed and added to `test.tsv`. Closing issue."
+          gh issue close ${{ github.event.issue.number }} --reason "completed"

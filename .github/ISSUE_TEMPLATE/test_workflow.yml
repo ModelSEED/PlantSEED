@@ -1,0 +1,41 @@
+name: Curation Update
+description: Add or update features and publications
+title: "[Curation] "
+labels: ["curation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to automatically append a new row to a `test.tsv` file.
+  - type: input
+    id: entity
+    attributes:
+      label: Entity Name / Pathway
+      description: e.g., Glucosinolate gamma-glutamyl hydrolase (EC 3.4.19.16)
+    validations:
+      required: true
+  - type: dropdown
+    id: action
+    attributes:
+      label: Action
+      options:
+        - ADD
+        - UPDATE
+    validations:
+      required: true
+  - type: dropdown
+    id: data_type
+    attributes:
+      label: Data Type
+      options:
+        - features
+        - publications
+    validations:
+      required: true
+  - type: input
+    id: value
+    attributes:
+      label: Value
+      description: e.g., Athaliana_TAIR10||AT4G30530 or 10.1038/nchembio.185
+    validations:
+      required: true
