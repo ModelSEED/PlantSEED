@@ -16999,13 +16999,6 @@
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
-            "id": "cpd17401_c",
-            "charge": -1.0,
-            "maxuptake": 0.0,
-            "templatecompound_ref": "~/compounds/id/cpd17401",
-            "templatecompartment_ref": "~/compartments/id/c"
-        },
-        {
             "id": "cpd17401_d",
             "charge": -1.0,
             "maxuptake": 0.0,
@@ -17032,13 +17025,6 @@
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd17403",
             "templatecompartment_ref": "~/compartments/id/d"
-        },
-        {
-            "id": "cpd17404_c",
-            "charge": -2.0,
-            "maxuptake": 0.0,
-            "templatecompound_ref": "~/compounds/id/cpd17404",
-            "templatecompartment_ref": "~/compartments/id/c"
         },
         {
             "id": "cpd17404_d",
@@ -34714,7 +34700,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_ea1b3b"
+                "~/complexes/id/PS_complex_91eafc"
             ]
         },
         {
@@ -34746,7 +34732,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_ea1b3b"
+                "~/complexes/id/PS_complex_91eafc"
             ]
         },
         {
@@ -34778,7 +34764,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_ea1b3b"
+                "~/complexes/id/PS_complex_91eafc"
             ]
         },
         {
@@ -46673,7 +46659,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_13b9bd"
+                "~/complexes/id/PS_complex_a9758f"
             ]
         },
         {
@@ -46709,7 +46695,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_28f991"
+                "~/complexes/id/PS_complex_76f95b"
             ]
         },
         {
@@ -46745,7 +46731,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_28f991"
+                "~/complexes/id/PS_complex_76f95b"
             ]
         },
         {
@@ -46865,47 +46851,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_13b9bd"
-            ]
-        },
-        {
-            "id": "rxn14004_c",
-            "name": "acetyl-CoA:4-methylthio-2-oxobutanoate C-acetyltransferase (thioester-hydrolysing, carboxymethyl-forming)",
-            "templatecompartment_ref": "~/compartments/id/c",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "conditional",
-            "direction": ">",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00001_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00022_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00869_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00010_c",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd17400_c",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_a20c32"
+                "~/complexes/id/PS_complex_a9758f"
             ]
         },
         {
@@ -46945,6 +46891,7 @@
                 }
             ],
             "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_867095",
                 "~/complexes/id/PS_complex_f3229b"
             ]
         },
@@ -47077,7 +47024,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_13b9bd"
+                "~/complexes/id/PS_complex_a9758f"
             ]
         },
         {
@@ -47345,7 +47292,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_28f991"
+                "~/complexes/id/PS_complex_76f95b"
             ]
         },
         {
@@ -47441,7 +47388,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_13b9bd"
+                "~/complexes/id/PS_complex_a9758f"
             ]
         },
         {
@@ -47526,7 +47473,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_28f991"
+                "~/complexes/id/PS_complex_76f95b"
             ]
         },
         {
@@ -47562,47 +47509,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_28f991"
-            ]
-        },
-        {
-            "id": "rxn14183_c",
-            "name": "acetyl-CoA:5-methylthio-2-oxopentanoate C-acetyltransferase (thioester-hydrolysing, carboxymethyl-forming)",
-            "templatecompartment_ref": "~/compartments/id/c",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "conditional",
-            "direction": ">",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00001_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00022_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd17401_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00010_c",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_c",
-                    "coefficient": 1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd17404_c",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_a20c32"
+                "~/complexes/id/PS_complex_76f95b"
             ]
         },
         {
@@ -47642,6 +47549,7 @@
                 }
             ],
             "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_867095",
                 "~/complexes/id/PS_complex_f3229b"
             ]
         },
@@ -47767,7 +47675,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_28f991"
+                "~/complexes/id/PS_complex_76f95b"
             ]
         },
         {
@@ -47791,7 +47699,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_13b9bd"
+                "~/complexes/id/PS_complex_a9758f"
             ]
         },
         {
@@ -47851,7 +47759,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_13b9bd"
+                "~/complexes/id/PS_complex_a9758f"
             ]
         },
         {
@@ -53423,7 +53331,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_10a989"
+                "~/complexes/id/PS_complex_e65be5"
             ]
         },
         {
@@ -55967,7 +55875,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_10a989"
+                "~/complexes/id/PS_complex_e65be5"
             ]
         },
         {
@@ -55999,7 +55907,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_10a989"
+                "~/complexes/id/PS_complex_e65be5"
             ]
         },
         {
@@ -56031,7 +55939,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_10a989"
+                "~/complexes/id/PS_complex_e65be5"
             ]
         },
         {
@@ -56063,7 +55971,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_10a989"
+                "~/complexes/id/PS_complex_e65be5"
             ]
         },
         {
@@ -56095,7 +56003,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_10a989"
+                "~/complexes/id/PS_complex_e65be5"
             ]
         },
         {
@@ -59167,6 +59075,28 @@
             "maxrevflux": 0.0,
             "templateReactionReagents": [
                 {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00869_c",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00869_d",
+                    "coefficient": 1.0
+                }
+            ],
+            "templatecomplex_refs": []
+        },
+        {
+            "id": "glucosinolates_2",
+            "name": "Glucosinolate Transport",
+            "templatecompartment_ref": "~/compartments/id/d",
+            "reaction_ref": "48/1/5/reactions/id/rxn14003",
+            "type": "universal",
+            "direction": "=",
+            "GapfillDirection": "=",
+            "maxforflux": 0.0,
+            "maxrevflux": 0.0,
+            "templateReactionReagents": [
+                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd17400_c",
                     "coefficient": -1.0
                 },
@@ -59178,7 +59108,7 @@
             "templatecomplex_refs": []
         },
         {
-            "id": "glucosinolates_2",
+            "id": "glucosinolates_3",
             "name": "Glucosinolate Transport",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
@@ -59200,7 +59130,7 @@
             "templatecomplex_refs": []
         },
         {
-            "id": "glucosinolates_3",
+            "id": "glucosinolates_4",
             "name": "Glucosinolate Transport",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
@@ -59222,7 +59152,7 @@
             "templatecomplex_refs": []
         },
         {
-            "id": "glucosinolates_4",
+            "id": "glucosinolates_5",
             "name": "Glucosinolate Transport",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
@@ -59244,7 +59174,7 @@
             "templatecomplex_refs": []
         },
         {
-            "id": "glucosinolates_5",
+            "id": "glucosinolates_6",
             "name": "Glucosinolate Transport",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
@@ -59266,7 +59196,7 @@
             "templatecomplex_refs": []
         },
         {
-            "id": "glucosinolates_6",
+            "id": "glucosinolates_7",
             "name": "Glucosinolate Transport",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
@@ -59288,7 +59218,7 @@
             "templatecomplex_refs": []
         },
         {
-            "id": "glucosinolates_7",
+            "id": "glucosinolates_8",
             "name": "Glucosinolate Transport",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
@@ -59310,7 +59240,7 @@
             "templatecomplex_refs": []
         },
         {
-            "id": "glucosinolates_8",
+            "id": "glucosinolates_9",
             "name": "Glucosinolate Transport",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
@@ -67010,20 +66940,6 @@
             ]
         },
         {
-            "id": "PS_complex_10a989",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_e9c8c3",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
             "id": "PS_complex_10b6b9",
             "name": "",
             "reference": "",
@@ -67088,25 +67004,6 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_fcbd92",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
-            "id": "PS_complex_13b9bd",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_419d65",
-                    "optional_role": 0,
-                    "triggering": 1
-                },
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_b63608",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -67757,20 +67654,6 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_d9aeb8",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
-            "id": "PS_complex_28f991",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_bae054",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -71023,6 +70906,20 @@
             ]
         },
         {
+            "id": "PS_complex_76f95b",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_bae054",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
             "id": "PS_complex_781421",
             "name": "",
             "reference": "",
@@ -71623,6 +71520,20 @@
             ]
         },
         {
+            "id": "PS_complex_867095",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_5eb183",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
             "id": "PS_complex_87fa78",
             "name": "",
             "reference": "",
@@ -71949,6 +71860,20 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_717dad",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_91eafc",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_ed6b6e",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -72465,20 +72390,6 @@
             ]
         },
         {
-            "id": "PS_complex_a20c32",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_5eb183",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
             "id": "PS_complex_a53ab7",
             "name": "",
             "reference": "",
@@ -72557,6 +72468,25 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_d0bd24",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_a9758f",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_419d65",
+                    "optional_role": 0,
+                    "triggering": 1
+                },
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_b63608",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -74580,6 +74510,20 @@
             ]
         },
         {
+            "id": "PS_complex_e65be5",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_e9c8c3",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
             "id": "PS_complex_e688c1",
             "name": "",
             "reference": "",
@@ -74673,20 +74617,6 @@
                 },
                 {
                     "templaterole_ref": "~/roles/id/PS_role_cbdf61",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
-            "id": "PS_complex_ea1b3b",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_ed6b6e",
                     "optional_role": 0,
                     "triggering": 1
                 }
