@@ -1,6 +1,10 @@
 import json
 import re,os
 from copy import deepcopy
+from urllib.request import urlopen
+
+PS_url = 'https://raw.githubusercontent.com/ModelSEED/PlantSEED/'
+PS_tag = 'dev'
 
 # These should be retrieved from the Template data
 template_compartment_mapping={'c':'cytosol', 'g':'golgi', 'w':'cellwall',
@@ -119,9 +123,12 @@ class FetchPlantSEEDImpl:
 		return(features_data)
 	
 	def fetch_roles(self):
-		roles_file_path = os.path.join('..','..','..','Data','PlantSEED_v3','PlantSEED_Roles.json')
-		with open(roles_file_path) as fh:
-			return json.load(fh)
+		
+		# roles_file_path = os.path.join('..','..','..','Data','PlantSEED_v3','PlantSEED_Roles.json')
+		# with open(roles_file_path) as fh:
+		# 	return json.load(fh)
+
+		return json.load(urlopen(PS_url+PS_tag+'/Data/PlantSEED_v3/PlantSEED_Roles.json'))
 
 	def __init__(self):
 		pass
