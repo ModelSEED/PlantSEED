@@ -602,7 +602,7 @@
         }
     },
     {
-        "kbase_id": "PS_complex_10a989",
+        "kbase_id": "PS_complex_e65be5",
         "enzyme": "2-oxo-5-methylthiopentanoate transaminase",
         "roles": [
             "2-oxo-5-methylthiopentanoate transaminase (EC 2.6.1.-)"
@@ -8636,7 +8636,7 @@
         }
     },
     {
-        "kbase_id": "PS_complex_28f991",
+        "kbase_id": "PS_complex_76f95b",
         "enzyme": "Methylthioalkylmalate dehydrogenase",
         "roles": [
             "Methylthioalkylmalate dehydrogenase (EC 1.1.1.-)"
@@ -8657,7 +8657,7 @@
         }
     },
     {
-        "kbase_id": "PS_complex_13b9bd",
+        "kbase_id": "PS_complex_a9758f",
         "enzyme": "Methylthioalkylmalate dehydratase",
         "roles": [
             "Methylthioalkylmalate dehydratase large subunit (EC 4.2.1.170)",
@@ -12736,7 +12736,7 @@
         }
     },
     {
-        "kbase_id": "PS_complex_ea1b3b",
+        "kbase_id": "PS_complex_91eafc",
         "enzyme": "Spontaneous Reaction||rxn02374",
         "roles": [
             "Spontaneous Reaction"
@@ -15473,18 +15473,18 @@
         }
     },
     {
-        "kbase_id": "PS_complex_a20c32",
+        "kbase_id": "PS_complex_867095",
         "enzyme": "Methylthioalkylmalate synthase, 5C-6C",
         "roles": [
             "Methylthioalkylmalate synthase, 5C-6C only (EC 2.3.3.17)"
         ],
         "compartments_reactions": {
-            "c": {
+            "d": {
                 "reactions": [
                     "rxn14004",
                     "rxn14183"
                 ],
-                "reagents": "c",
+                "reagents": "d",
                 "exclude": false
             }
         }
