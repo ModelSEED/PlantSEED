@@ -36,17 +36,30 @@ def fuzzy_match(term, choices):
     return [c for c in choices if t in c.lower()]
 
 def fetch_enzyme_dat():
-    if not os.path.exists(ENZYME_DAT_CACHE):
+    if not os.path.exists(ENZYME_DAT_CACHE) or os.path.getsize(ENZYME_DAT_CACHE) == 0:
         print("Downloading enzyme.dat from Expasy...")
         try:
-            urllib.request.urlretrieve(ENZYME_DAT_URL, ENZYME_DAT_CACHE)
+            import ssl
+            ctx = ssl.create_default_context()
+            ctx.check_hostname = False
+            ctx.verify_mode = ssl.CERT_NONE
+            req = urllib.request.Request(ENZYME_DAT_URL, headers={'User-Agent': 'Mozilla/5.0'})
+            with urllib.request.urlopen(req, context=ctx) as response, open(ENZYME_DAT_CACHE, 'wb') as out_file:
+                out_file.write(response.read())
             print("Done.")
         except Exception as e:
             print(f"Warning: could not download enzyme.dat ({e})")
+            if os.path.exists(ENZYME_DAT_CACHE):
+                os.remove(ENZYME_DAT_CACHE)
             return []
     entries = []
-    with open(ENZYME_DAT_CACHE, encoding="latin-1") as f:
-        lines = f.read()
+    try:
+        with open(ENZYME_DAT_CACHE, encoding="latin-1") as f:
+            lines = f.read()
+    except Exception as e:
+        print(f"Error reading {ENZYME_DAT_CACHE}: {e}")
+        return []
+        
     for block in lines.split("\n//\n"):
         ec_id = ""
         de_lines = []
@@ -55,13 +68,16 @@ def fetch_enzyme_dat():
                 ec_id = line[5:].strip()
             elif line.startswith("DE   "):
                 de_lines.append(line[5:].strip())
-            elif line.startswith("DE   "):
-                de_lines.append(line.strip())
         if ec_id and de_lines:
             de_full = " ".join(de_lines)
             de_full = de_full[0].upper() + de_full[1:] if de_full else de_full
             de_full = de_full.rstrip(".")
             entries.append(f"{de_full} (EC {ec_id})")
+            
+    if not entries:
+        if os.path.exists(ENZYME_DAT_CACHE):
+            os.remove(ENZYME_DAT_CACHE)
+            
     return entries
 
 def select_existing_role(roles):
