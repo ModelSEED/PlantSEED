@@ -80,7 +80,82 @@ def fetch_enzyme_dat():
             
     return entries
 
+def select_enzyme_combined(roles, ec_entries):
+    """Select enzyme with combined PlantSEED and Expasy search in two-column format"""
+    print("\n" + "="*70)
+    print("ENZYME SEARCH (PlantSEED | Expasy)")
+    print("="*70)
+    
+    while True:
+        partial = input("Type enzyme name (at least 5 letters): ").strip()
+        if len(partial) < 5:
+            print("Please enter at least 5 letters for search.")
+            continue
+            
+        # Find matches in both databases
+        plantseed_matches = fuzzy_match(partial, roles)
+        expasy_matches = fuzzy_match(partial, ec_entries) if ec_entries else []
+        
+        if not plantseed_matches and not expasy_matches:
+            retry = input("No matches found in either database. Try again? (y/n): ").strip().lower()
+            if retry != "y":
+                return None
+            continue
+            
+        # Display results in two-column format
+        print(f"\n{'PlantSEED Enzymes':<35} | {'Expasy Enzymes':<35}")
+        print("-"*70)
+        
+        max_rows = max(len(plantseed_matches), len(expasy_matches))
+        for i in range(max_rows):
+            # PlantSEED column (numbered)
+            if i < len(plantseed_matches):
+                plantseed_entry = f"{i+1}. {plantseed_matches[i]}"
+            else:
+                plantseed_entry = ""
+                
+            # Expasy column (lettered)
+            if i < len(expasy_matches):
+                expasy_entry = f"{chr(97+i)}. {expasy_matches[i]}"  # a, b, c, ...
+            else:
+                expasy_entry = ""
+                
+            print(f"{plantseed_entry:<35} | {expasy_entry:<35}")
+        
+        print("-"*70)
+        
+        # Get user selection
+        selection = input("\nSelect enzyme (number for PlantSEED, letter for Expasy, or 'r' to retry): ").strip().lower()
+        
+        if selection == 'r':
+            continue
+            
+        # Check if it's a number (PlantSEED selection)
+        if selection.isdigit():
+            idx = int(selection) - 1
+            if 0 <= idx < len(plantseed_matches):
+                selected = plantseed_matches[idx]
+                print(f"Selected PlantSEED enzyme: {selected}")
+                return selected, False  # False indicates not new
+            else:
+                print("Invalid number selection.")
+                
+        # Check if it's a single letter (Expasy selection)
+        elif len(selection) == 1 and selection.isalpha():
+            idx = ord(selection) - 97  # Convert 'a' to 0, 'b' to 1, etc.
+            if 0 <= idx < len(expasy_matches):
+                selected = expasy_matches[idx]
+                print(f"Selected Expasy enzyme: {selected}")
+                print("WARNING: This enzyme is not in PlantSEED and will create a new entry.")
+                return selected, True   # True indicates it's new
+            else:
+                print("Invalid letter selection.")
+                
+        else:
+            print("Please enter a number (for PlantSEED) or letter (for Expasy).")
+
 def select_existing_role(roles):
+    """Legacy function for backward compatibility"""
     while True:
         partial = input("Type enzyme name (partial OK): ").strip()
         matches = fuzzy_match(partial, roles)
@@ -103,6 +178,7 @@ def select_existing_role(roles):
             pass
 
 def select_new_enzyme(ec_entries):
+    """Legacy function for backward compatibility"""
     print("\nSearching Enzyme Commission database for new enzyme...")
     while True:
         partial = input("Type enzyme name or EC number (partial OK): ").strip()
@@ -153,30 +229,23 @@ def main():
     # Create user directory
     os.makedirs(user_dir, exist_ok=True)
 
-    # Entity
-    mode = input("New enzyme (from EC database) or existing (from PlantSEED Roles)? (n/e): ").strip().lower()
-    if mode in ("e", "existing"):
-        entity = select_existing_role(roles)
-        if entity is None:
-            entity = input("Enter enzyme name manually: ").strip()
-    elif mode in ("n", "new"):
-        if ec_entries:
-            entity = select_new_enzyme(ec_entries)
-        else:
-            print("EC database not available.")
-            entity = input("Enter new enzyme name: ").strip()
-    else:
-        entity = input("Enter enzyme name: ").strip()
+    # Entity - NEW COMBINED SEARCH
+    result = select_enzyme_combined(roles, ec_entries)
+    if result is None:
+        print("No enzyme selected. Exiting.")
+        sys.exit(1)
+        
+    entity, is_new_enzyme = result
 
     # Action
-    action = prompt_required("Action (ADD/UPDATE): ").upper()
-    while action not in ("ADD", "UPDATE"):
-        action = input("Enter ADD or UPDATE: ").upper().strip()
+    action = prompt_required("Action (ADD/UPDATE/NEW/REMOVE/RELOCATE/CHANGE/ASSIGN): ").upper()
+    while action not in ("ADD", "UPDATE", "NEW", "REMOVE", "RELOCATE", "CHANGE", "ASSIGN"):
+        action = input("Enter ADD, UPDATE, NEW, REMOVE, RELOCATE, CHANGE, or ASSIGN: ").upper().strip()
 
     # Data type
-    data_type = prompt_required("Data Type (features/publications): ").lower()
-    while data_type not in ("features", "publications"):
-        data_type = input("Enter features or publications: ").lower().strip()
+    data_type = prompt_required("Data Type (features/publications/reactions/subsystems/curators/localization/classes/include/abstract_enzyme): ").lower()
+    while data_type not in ("features", "publications", "reactions", "subsystems", "curators", "localization", "classes", "include", "abstract_enzyme"):
+        data_type = input("Enter features, publications, reactions, subsystems, curators, localization, classes, include, or abstract_enzyme: ").lower().strip()
 
     # Values
     print("Enter value(s), one per line. Blank line to finish:")
