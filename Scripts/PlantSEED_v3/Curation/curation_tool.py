@@ -27,6 +27,10 @@ def get_git_username():
     except (subprocess.CalledProcessError, FileNotFoundError):
         return input("Could not detect git username. Enter your name: ").strip()
 
+def sanitize_username(name):
+    """Convert display name to directory name: lowercase, no spaces/special chars."""
+    return re.sub(r'[^a-z0-9]', '', name.lower())
+
 def load_roles():
     with open(os.path.normpath(ROLES_FILE)) as f:
         return [r["role"] for r in json.load(f)]
@@ -83,7 +87,7 @@ def fetch_enzyme_dat():
 def select_enzyme_combined(roles, ec_entries):
     """Select enzyme with combined PlantSEED and Expasy search in two-column format"""
     print("\n" + "="*70)
-    print("ENZYME SEARCH (PlantSEED | Expasy)")
+    print("ENZYME SEARCH (PlantSEED + Expasy)")
     print("="*70)
     
     while True:
@@ -102,27 +106,20 @@ def select_enzyme_combined(roles, ec_entries):
                 return None
             continue
             
-        # Display results in two-column format
-        print(f"\n{'PlantSEED Enzymes':<35} | {'Expasy Enzymes':<35}")
-        print("-"*70)
+        # Display PlantSEED results
+        print("\nPlantSEED Enzymes:")
+        print("-"*50)
+        for i, match in enumerate(plantseed_matches):
+            print(f"{i+1} | {match}")
         
-        max_rows = max(len(plantseed_matches), len(expasy_matches))
-        for i in range(max_rows):
-            # PlantSEED column (numbered)
-            if i < len(plantseed_matches):
-                plantseed_entry = f"{i+1}. {plantseed_matches[i]}"
-            else:
-                plantseed_entry = ""
-                
-            # Expasy column (lettered)
-            if i < len(expasy_matches):
-                expasy_entry = f"{chr(97+i)}. {expasy_matches[i]}"  # a, b, c, ...
-            else:
-                expasy_entry = ""
-                
-            print(f"{plantseed_entry:<35} | {expasy_entry:<35}")
+        # Display Expasy results
+        if expasy_matches:
+            print("\nExpasy Enzymes:")
+            print("-"*50)
+            for i, match in enumerate(expasy_matches):
+                print(f"{chr(97+i)} | {match}")
         
-        print("-"*70)
+        print("-"*50)
         
         # Get user selection
         selection = input("\nSelect enzyme (number for PlantSEED, letter for Expasy, or 'r' to retry): ").strip().lower()
@@ -145,9 +142,15 @@ def select_enzyme_combined(roles, ec_entries):
             idx = ord(selection) - 97  # Convert 'a' to 0, 'b' to 1, etc.
             if 0 <= idx < len(expasy_matches):
                 selected = expasy_matches[idx]
+                # Check if this enzyme already exists in PlantSEED
+                already_in_plantseed = selected in plantseed_matches
                 print(f"Selected Expasy enzyme: {selected}")
-                print("WARNING: This enzyme is not in PlantSEED and will create a new entry.")
-                return selected, True   # True indicates it's new
+                if already_in_plantseed:
+                    print("(This enzyme is already in PlantSEED.)")
+                    return selected, False
+                else:
+                    print("WARNING: This enzyme is not in PlantSEED and will create a new entry.")
+                    return selected, True   # True indicates it's new
             else:
                 print("Invalid letter selection.")
                 
@@ -231,7 +234,7 @@ def get_target_file(username):
 def handle_add(entity):
     field = prompt_required("Enter field (features/publications/reactions/subsystems/curators/localization/classes): ").lower()
     lines = []
-    multi_col = (field in ("features", "reactions"))
+    multi_col = (field in ("features", "reactions", "subsystems"))
     if multi_col:
         print(f"Enter {field} value(s), one per line. Blank line to finish.")
         print(f"Format: <value> or <key>\\t<extra>")
@@ -288,10 +291,19 @@ def main():
         print(f"Loaded {len(ec_entries)} entries from Enzyme Commission database")
     print()
 
-    # Detect git username
-    username = get_git_username()
-    user_dir = os.path.join(CURATORS_DIR, username)
-    print(f"Detected user: {username}")
+    # Detect git username and resolve to existing directory if present
+    display_name = get_git_username()
+    dir_name = sanitize_username(display_name)
+    if not dir_name:
+        dir_name = "user"
+    # Check for existing directory (case-insensitive)
+    if os.path.isdir(CURATORS_DIR):
+        for d in os.listdir(CURATORS_DIR):
+            if os.path.isdir(os.path.join(CURATORS_DIR, d)) and d.lower() == dir_name:
+                dir_name = d
+                break
+    user_dir = os.path.join(CURATORS_DIR, dir_name)
+    print(f"Detected user: {display_name}")
     print(f"Target directory: {user_dir}")
     print()
 
@@ -342,7 +354,7 @@ def main():
         sys.exit(1)
 
     # Target file
-    target_file = get_target_file(username)
+    target_file = get_target_file(dir_name)
 
     # Output
     rel_path = os.path.relpath(target_file, os.path.join(BASE_DIR, "..", "..", ".."))
@@ -351,6 +363,12 @@ def main():
     for line in lines:
         print(line)
     print("=" * 60)
+
+    # Write to file
+    with open(target_file, "a") as f:
+        for line in lines:
+            f.write(line + "\n")
+    print(f"Appended {len(lines)} row(s) to {target_file}")
 
 if __name__ == "__main__":
     main()

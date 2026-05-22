@@ -5,3 +5,5 @@
 .vshistory
 .history
 *.pickle
+__pycache__/
+*.pyc
