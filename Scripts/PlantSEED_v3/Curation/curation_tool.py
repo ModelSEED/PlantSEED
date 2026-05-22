@@ -211,6 +211,73 @@ def prompt_required(prompt_text):
         if val:
             return val
 
+def get_target_file(username):
+    default_filename = input("Enter a filename for this curation (e.g. Updates.tsv): ").strip()
+    if not default_filename:
+        default_filename = "Updates.tsv"
+    if not default_filename.endswith(".tsv"):
+        default_filename += ".tsv"
+    target_file = os.path.join(CURATORS_DIR, username, default_filename)
+    if os.path.exists(target_file):
+        overwrite = input(f"File {target_file} already exists. Append to it? (y/n): ").strip().lower()
+        if overwrite != "y":
+            new_name = input("Enter a different filename: ").strip()
+            if new_name:
+                if not new_name.endswith(".tsv"):
+                    new_name += ".tsv"
+                target_file = os.path.join(CURATORS_DIR, username, new_name)
+    return target_file
+
+def handle_add(entity):
+    field = prompt_required("Enter field (features/publications/reactions/subsystems/curators/localization/classes): ").lower()
+    lines = []
+    if field == "features":
+        print("Enter feature(s), one per line. Blank line to finish.")
+        print("Format: <key>\\t<localization>  (e.g. UniProt||Q9FMT1\\tAthaliana_TAIR10||AT5G14200)")
+        while True:
+            v = input().strip()
+            if not v:
+                break
+            parts = v.split("\t")
+            key = parts[0]
+            loc = parts[1] if len(parts) > 1 else prompt_required("  Enter feature localization: ")
+            lines.append(f"{entity}\tADD\t{field}\t{key}\t{loc}")
+    else:
+        print("Enter entry value(s), one per line. Blank line to finish:")
+        while True:
+            v = input().strip()
+            if not v:
+                break
+            lines.append(f"{entity}\tADD\t{field}\t{v}")
+    return lines
+
+def handle_remove(entity):
+    field = prompt_required("Enter field (features/publications/reactions/subsystems/curators/localization/classes): ").lower()
+    print("Enter entry value(s) to remove, one per line. Blank line to finish:")
+    lines = []
+    while True:
+        v = input().strip()
+        if not v:
+            break
+        lines.append(f"{entity}\tREMOVE\t{field}\t{v}")
+    return lines
+
+def handle_relocate(entity):
+    field = prompt_required("Enter field (localization/compartmentalization): ").lower()
+    old_entry = prompt_required("Enter old entry value: ")
+    new_entry = prompt_required("Enter new entry value: ")
+    return [f"{entity}\tRELOCATE\t{field}\t{old_entry}\t{new_entry}"]
+
+def handle_change(entity):
+    field = prompt_required("Enter field (abstract_enzyme/include): ").lower()
+    value = prompt_required("Enter new value: ")
+    return [f"{entity}\tCHANGE\t{field}\t{value}"]
+
+def handle_assign(entity):
+    field = prompt_required("Enter field (include/type): ").lower()
+    value = prompt_required("Enter value: ")
+    return [f"{entity}\tASSIGN\t{field}\t{value}"]
+
 def main():
     roles = load_roles()
     ec_entries = fetch_enzyme_dat()
@@ -237,51 +304,49 @@ def main():
         
     entity, is_new_enzyme = result
 
+    if is_new_enzyme:
+        print("This enzyme will be created as a new entry in PlantSEED.")
+
     # Action
-    action = prompt_required("Action (ADD/UPDATE/NEW/REMOVE/RELOCATE/CHANGE/ASSIGN): ").upper()
-    while action not in ("ADD", "UPDATE", "NEW", "REMOVE", "RELOCATE", "CHANGE", "ASSIGN"):
-        action = input("Enter ADD, UPDATE, NEW, REMOVE, RELOCATE, CHANGE, or ASSIGN: ").upper().strip()
+    action = prompt_required("Action (UPDATE/NEW/ADD/REMOVE/RELOCATE/CHANGE/ASSIGN): ").upper()
+    while action not in ("UPDATE", "NEW", "ADD", "REMOVE", "RELOCATE", "CHANGE", "ASSIGN"):
+        action = input("Enter UPDATE, NEW, ADD, REMOVE, RELOCATE, CHANGE, or ASSIGN: ").upper().strip()
 
-    # Data type
-    data_type = prompt_required("Data Type (features/publications/reactions/subsystems/curators/localization/classes/include/abstract_enzyme): ").lower()
-    while data_type not in ("features", "publications", "reactions", "subsystems", "curators", "localization", "classes", "include", "abstract_enzyme"):
-        data_type = input("Enter features, publications, reactions, subsystems, curators, localization, classes, include, or abstract_enzyme: ").lower().strip()
+    # Handle each action with correct TSV format
+    if action == "UPDATE":
+        new_name = prompt_required("Enter new enzyme name: ")
+        lines = [f"{entity}\tUPDATE\t{new_name}"]
 
-    # Values
-    print("Enter value(s), one per line. Blank line to finish:")
-    values = []
-    while True:
-        v = input().strip()
-        if not v:
-            break
-        values.append(v)
-    if not values:
-        print("At least one value is required.")
+    elif action == "NEW":
+        lines = [f"{entity}\tNEW"]
+
+    elif action == "ADD":
+        lines = handle_add(entity)
+
+    elif action == "REMOVE":
+        lines = handle_remove(entity)
+
+    elif action == "RELOCATE":
+        lines = handle_relocate(entity)
+
+    elif action == "CHANGE":
+        lines = handle_change(entity)
+
+    elif action == "ASSIGN":
+        lines = handle_assign(entity)
+
+    if not lines:
+        print("No rows generated.")
         sys.exit(1)
 
     # Target file
-    default_filename = input("Enter a filename for this curation (e.g. Updates.tsv): ").strip()
-    if not default_filename:
-        default_filename = "Updates.tsv"
-    if not default_filename.endswith(".tsv"):
-        default_filename += ".tsv"
-    target_file = os.path.join(user_dir, default_filename)
-
-    if os.path.exists(target_file):
-        overwrite = input(f"File {target_file} already exists. Append to it? (y/n): ").strip().lower()
-        if overwrite != "y":
-            new_name = input("Enter a different filename: ").strip()
-            if new_name:
-                if not new_name.endswith(".tsv"):
-                    new_name += ".tsv"
-                target_file = os.path.join(user_dir, new_name)
+    target_file = get_target_file(username)
 
     # Output
     rel_path = os.path.relpath(target_file, os.path.join(BASE_DIR, "..", "..", ".."))
     print("\n" + "=" * 60)
-    print(f"{len(values)} TSV row(s) to append to {rel_path}:")
-    for v in values:
-        line = f"{entity}\t{action}\t{data_type}\t{v}"
+    print(f"{len(lines)} TSV row(s) to append to {rel_path}:")
+    for line in lines:
         print(line)
     print("=" * 60)
 
