@@ -231,17 +231,19 @@ def get_target_file(username):
 def handle_add(entity):
     field = prompt_required("Enter field (features/publications/reactions/subsystems/curators/localization/classes): ").lower()
     lines = []
-    if field == "features":
-        print("Enter feature(s), one per line. Blank line to finish.")
-        print("Format: <key>\\t<localization>  (e.g. UniProt||Q9FMT1\\tAthaliana_TAIR10||AT5G14200)")
+    multi_col = (field in ("features", "reactions"))
+    if multi_col:
+        print(f"Enter {field} value(s), one per line. Blank line to finish.")
+        print(f"Format: <value> or <key>\\t<extra>")
         while True:
             v = input().strip()
             if not v:
                 break
             parts = v.split("\t")
-            key = parts[0]
-            loc = parts[1] if len(parts) > 1 else prompt_required("  Enter feature localization: ")
-            lines.append(f"{entity}\tADD\t{field}\t{key}\t{loc}")
+            if len(parts) > 1:
+                lines.append(f"{entity}\tADD\t{field}\t{parts[0]}\t{parts[1]}")
+            else:
+                lines.append(f"{entity}\tADD\t{field}\t{parts[0]}")
     else:
         print("Enter entry value(s), one per line. Blank line to finish:")
         while True:
