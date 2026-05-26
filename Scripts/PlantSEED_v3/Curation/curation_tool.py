@@ -210,20 +210,30 @@ def handle_remove(entity):
     return lines
 
 def handle_relocate(entity):
-    field = prompt_required("Enter field (localization/compartmentalization): ").lower()
+    options = ["localization", "compartmentalization"]
+    field = numbered_select("Select field:", options)
     old_entry = prompt_required("Enter old entry value: ")
     new_entry = prompt_required("Enter new entry value: ")
     return [f"{entity}\tRELOCATE\t{field}\t{old_entry}\t{new_entry}"]
 
 def handle_change(entity):
-    field = prompt_required("Enter field (abstract_enzyme/include): ").lower()
+    options = ["abstract_enzyme", "include"]
+    field = numbered_select("Select field:", options)
     value = prompt_required("Enter new value: ")
     return [f"{entity}\tCHANGE\t{field}\t{value}"]
 
 def handle_assign(entity):
-    field = prompt_required("Enter field (include/type): ").lower()
+    options = ["include", "type"]
+    field = numbered_select("Select field:", options)
     value = prompt_required("Enter value: ")
     return [f"{entity}\tASSIGN\t{field}\t{value}"]
+
+def select_action(is_new_enzyme):
+    if is_new_enzyme:
+        print("New enzyme detected. Action automatically set to NEW.")
+        return "NEW"
+    options = ["UPDATE", "ADD", "REMOVE", "RELOCATE", "CHANGE", "ASSIGN"]
+    return numbered_select("Select action:", options)
 
 def main():
     roles = load_roles()
@@ -233,42 +243,35 @@ def main():
         print(f"Loaded {len(ec_entries)} entries from Enzyme Commission database")
     print()
 
-    # Detect git username and resolve to existing directory if present
     display_name = get_git_username()
     dir_name = sanitize_username(display_name)
     if not dir_name:
         dir_name = "user"
-    # Check for existing directory (case-insensitive)
     if os.path.isdir(CURATORS_DIR):
         for d in os.listdir(CURATORS_DIR):
-            if os.path.isdir(os.path.join(CURATORS_DIR, d)) and d.lower() == dir_name:
+            d_path = os.path.join(CURATORS_DIR, d)
+            if os.path.isdir(d_path) and d.lower() == dir_name and d.lower() != "curators":
                 dir_name = d
                 break
     user_dir = os.path.join(CURATORS_DIR, dir_name)
     print(f"Detected user: {display_name}")
     print(f"Target directory: {user_dir}")
     print()
-
-    # Create user directory
     os.makedirs(user_dir, exist_ok=True)
 
-    # Entity - NEW COMBINED SEARCH
+    target_file = get_target_file(dir_name)
+    print()
+
     result = select_enzyme_combined(roles, ec_entries)
     if result is None:
         print("No enzyme selected. Exiting.")
         sys.exit(1)
-        
+
     entity, is_new_enzyme = result
+    print()
 
-    if is_new_enzyme:
-        print("This enzyme will be created as a new entry in PlantSEED.")
+    action = select_action(is_new_enzyme)
 
-    # Action
-    action = prompt_required("Action (UPDATE/NEW/ADD/REMOVE/RELOCATE/CHANGE/ASSIGN): ").upper()
-    while action not in ("UPDATE", "NEW", "ADD", "REMOVE", "RELOCATE", "CHANGE", "ASSIGN"):
-        action = input("Enter UPDATE, NEW, ADD, REMOVE, RELOCATE, CHANGE, or ASSIGN: ").upper().strip()
-
-    # Handle each action with correct TSV format
     if action == "UPDATE":
         new_name = prompt_required("Enter new enzyme name: ")
         lines = [f"{entity}\tUPDATE\t{new_name}"]
@@ -295,10 +298,6 @@ def main():
         print("No rows generated.")
         sys.exit(1)
 
-    # Target file
-    target_file = get_target_file(dir_name)
-
-    # Output
     rel_path = os.path.relpath(target_file, os.path.join(BASE_DIR, "..", "..", ".."))
     print("\n" + "=" * 60)
     print(f"{len(lines)} TSV row(s) to append to {rel_path}:")
@@ -306,7 +305,6 @@ def main():
         print(line)
     print("=" * 60)
 
-    # Write to file
     with open(target_file, "a") as f:
         for line in lines:
             f.write(line + "\n")
