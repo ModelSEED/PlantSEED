@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-"""
-Interactive curation tool for PlantSEED.
-Detects git username, auto-creates user folder, fuzzy-matches
-enzymes from Roles.json or enzyme.dat, and outputs TSV rows.
-"""
 
 import json
 import os
@@ -28,7 +23,6 @@ def get_git_username():
         return input("Could not detect git username. Enter your name: ").strip()
 
 def sanitize_username(name):
-    """Convert display name to directory name: lowercase, no spaces/special chars."""
     return re.sub(r'[^a-z0-9]', '', name.lower())
 
 def load_roles():
@@ -63,7 +57,6 @@ def fetch_enzyme_dat():
     except Exception as e:
         print(f"Error reading {ENZYME_DAT_CACHE}: {e}")
         return []
-        
     for block in lines.split("\n//\n"):
         ec_id = ""
         de_lines = []
@@ -77,72 +70,71 @@ def fetch_enzyme_dat():
             de_full = de_full[0].upper() + de_full[1:] if de_full else de_full
             de_full = de_full.rstrip(".")
             entries.append(f"{de_full} (EC {ec_id})")
-            
     if not entries:
         if os.path.exists(ENZYME_DAT_CACHE):
             os.remove(ENZYME_DAT_CACHE)
-            
     return entries
 
+def numbered_select(prompt_text, options):
+    print()
+    for i, opt in enumerate(options, 1):
+        print(f"  {i}. {opt}")
+    while True:
+        try:
+            idx = int(input(f"{prompt_text} ").strip()) - 1
+            if 0 <= idx < len(options):
+                return options[idx]
+            print(f"Enter a number between 1 and {len(options)}.")
+        except ValueError:
+            print(f"Enter a number between 1 and {len(options)}.")
+
 def select_enzyme_combined(roles, ec_entries):
-    """Select enzyme with combined PlantSEED and Expasy search in two-column format"""
     print("\n" + "="*70)
     print("ENZYME SEARCH (PlantSEED + Expasy)")
     print("="*70)
-    
     while True:
         partial = input("Type enzyme name (at least 5 letters): ").strip()
         if len(partial) < 5:
             print("Please enter at least 5 letters for search.")
             continue
-            
-        # Find matches in both databases
         plantseed_matches = fuzzy_match(partial, roles)
         expasy_matches = fuzzy_match(partial, ec_entries) if ec_entries else []
-        
         if not plantseed_matches and not expasy_matches:
-            retry = input("No matches found in either database. Try again? (y/n): ").strip().lower()
-            if retry != "y":
-                return None
+            retry = input("No matches found. (r)etry, (n)ovel enzyme: ").strip().lower()
+            if retry == 'n':
+                name = input("Enter full name for the new enzyme: ").strip()
+                if name:
+                    return name, True
             continue
-            
-        # Display PlantSEED results
         print("\nPlantSEED Enzymes:")
         print("-"*50)
         for i, match in enumerate(plantseed_matches):
             print(f"{i+1} | {match}")
-        
-        # Display Expasy results
         if expasy_matches:
             print("\nExpasy Enzymes:")
             print("-"*50)
             for i, match in enumerate(expasy_matches):
                 print(f"{chr(97+i)} | {match}")
-        
         print("-"*50)
-        
-        # Get user selection
-        selection = input("\nSelect enzyme (number for PlantSEED, letter for Expasy, or 'r' to retry): ").strip().lower()
-        
+        selection = input("Select enzyme (number/letter, (r)etry, (n)ovel enzyme): ").strip().lower()
         if selection == 'r':
             continue
-            
-        # Check if it's a number (PlantSEED selection)
+        if selection == 'n':
+            name = input("Enter full name for the new enzyme: ").strip()
+            if name:
+                return name, True
+            continue
         if selection.isdigit():
             idx = int(selection) - 1
             if 0 <= idx < len(plantseed_matches):
                 selected = plantseed_matches[idx]
                 print(f"Selected PlantSEED enzyme: {selected}")
-                return selected, False  # False indicates not new
-            else:
-                print("Invalid number selection.")
-                
-        # Check if it's a single letter (Expasy selection)
+                return selected, False
+            print("Invalid number selection.")
         elif len(selection) == 1 and selection.isalpha():
-            idx = ord(selection) - 97  # Convert 'a' to 0, 'b' to 1, etc.
+            idx = ord(selection) - 97
             if 0 <= idx < len(expasy_matches):
                 selected = expasy_matches[idx]
-                # Check if this enzyme already exists in PlantSEED
                 already_in_plantseed = selected in plantseed_matches
                 print(f"Selected Expasy enzyme: {selected}")
                 if already_in_plantseed:
@@ -150,63 +142,10 @@ def select_enzyme_combined(roles, ec_entries):
                     return selected, False
                 else:
                     print("WARNING: This enzyme is not in PlantSEED and will create a new entry.")
-                    return selected, True   # True indicates it's new
-            else:
-                print("Invalid letter selection.")
-                
+                    return selected, True
+            print("Invalid letter selection.")
         else:
-            print("Please enter a number (for PlantSEED) or letter (for Expasy).")
-
-def select_existing_role(roles):
-    """Legacy function for backward compatibility"""
-    while True:
-        partial = input("Type enzyme name (partial OK): ").strip()
-        matches = fuzzy_match(partial, roles)
-        if not matches:
-            retry = input("No matches found. Try again? (y/n): ").strip().lower()
-            if retry != "y":
-                return None
-            continue
-        if len(matches) == 1:
-            print(f"Selected: {matches[0]}")
-            return matches[0]
-        print(f"{len(matches)} matches:")
-        for i, m in enumerate(matches, 1):
-            print(f"  {i}. {m}")
-        try:
-            idx = int(input("Enter number to select (0 to retry): "))
-            if 1 <= idx <= len(matches):
-                return matches[idx - 1]
-        except ValueError:
-            pass
-
-def select_new_enzyme(ec_entries):
-    """Legacy function for backward compatibility"""
-    print("\nSearching Enzyme Commission database for new enzyme...")
-    while True:
-        partial = input("Type enzyme name or EC number (partial OK): ").strip()
-        matches = fuzzy_match(partial, ec_entries)
-        if not matches:
-            retry = input("No matches in EC database. Use a custom name? (y/n): ").strip().lower()
-            if retry == "y":
-                return input("Enter custom enzyme name: ").strip()
-            continue
-        if len(matches) == 1:
-            print(f"Selected: {matches[0]}")
-            return matches[0]
-        print(f"{len(matches)} matches:")
-        for i, m in enumerate(matches[:50], 1):
-            print(f"  {i}. {m}")
-        if len(matches) > 50:
-            print(f"  ... and {len(matches) - 50} more (refine your search)")
-        try:
-            idx = int(input("Enter number to select (0 to retry, -1 for custom): "))
-            if idx == -1:
-                return input("Enter custom enzyme name: ").strip()
-            if 1 <= idx <= len(matches):
-                return matches[idx - 1]
-        except ValueError:
-            pass
+            print("Please enter a number, letter, or 'n' for a novel enzyme.")
 
 def prompt_required(prompt_text):
     while True:
@@ -215,26 +154,28 @@ def prompt_required(prompt_text):
             return val
 
 def get_target_file(username):
-    default_filename = input("Enter a filename for this curation (e.g. Updates.tsv): ").strip()
-    if not default_filename:
-        default_filename = "Updates.tsv"
-    if not default_filename.endswith(".tsv"):
-        default_filename += ".tsv"
-    target_file = os.path.join(CURATORS_DIR, username, default_filename)
-    if os.path.exists(target_file):
-        overwrite = input(f"File {target_file} already exists. Append to it? (y/n): ").strip().lower()
-        if overwrite != "y":
-            new_name = input("Enter a different filename: ").strip()
-            if new_name:
-                if not new_name.endswith(".tsv"):
-                    new_name += ".tsv"
-                target_file = os.path.join(CURATORS_DIR, username, new_name)
-    return target_file
+    while True:
+        default_filename = input("Enter a filename for this curation (e.g. Updates.tsv): ").strip()
+        if not default_filename:
+            default_filename = "Updates.tsv"
+        if not default_filename.endswith(".tsv"):
+            default_filename += ".tsv"
+        target_file = os.path.join(CURATORS_DIR, username, default_filename)
+        full_path = os.path.abspath(target_file)
+        print(f"Target file: {full_path}")
+        if os.path.exists(target_file):
+            overwrite = input("File already exists. Append to it? (y/n): ").strip().lower()
+            if overwrite == 'y':
+                return target_file
+            print("Enter a different filename.")
+        else:
+            return target_file
 
 def handle_add(entity):
-    field = prompt_required("Enter field (features/publications/reactions/subsystems/curators/localization/classes): ").lower()
+    options = ["features", "publications", "reactions", "subsystems", "localization", "classes"]
+    field = numbered_select("Select field:", options)
     lines = []
-    multi_col = (field in ("features", "reactions", "subsystems"))
+    multi_col = field in ("features", "reactions", "subsystems")
     if multi_col:
         print(f"Enter {field} value(s), one per line. Blank line to finish.")
         print(f"Format: <value> or <key>\\t<extra>")
@@ -257,7 +198,8 @@ def handle_add(entity):
     return lines
 
 def handle_remove(entity):
-    field = prompt_required("Enter field (features/publications/reactions/subsystems/curators/localization/classes): ").lower()
+    options = ["features", "publications", "reactions", "subsystems", "localization", "classes"]
+    field = numbered_select("Select field:", options)
     print("Enter entry value(s) to remove, one per line. Blank line to finish:")
     lines = []
     while True:
