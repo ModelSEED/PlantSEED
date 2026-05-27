@@ -7,12 +7,14 @@ import subprocess
 import sys
 import urllib.request
 import tempfile
+import yaml
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROLES_FILE = os.path.join(BASE_DIR, "..", "..", "..", "Data", "PlantSEED_v3", "PlantSEED_Roles.json")
 ENZYME_DAT_URL = "https://ftp.expasy.org/databases/enzyme/enzyme.dat"
 ENZYME_DAT_CACHE = os.path.join(tempfile.gettempdir(), "plantseed_enzyme.dat")
 CURATORS_DIR = os.path.join(BASE_DIR, "Curators")
+SCHEMA_FILE = os.path.join(BASE_DIR, "PlantSEED_Schema.yaml")
 
 def get_git_username():
     try:
@@ -28,6 +30,26 @@ def sanitize_username(name):
 def load_roles():
     with open(os.path.normpath(ROLES_FILE)) as f:
         return [r["role"] for r in json.load(f)]
+
+def load_full_roles():
+    with open(os.path.normpath(ROLES_FILE)) as f:
+        return json.load(f)
+
+TYPE_MAP = {'str': str, 'bool': bool, 'list': list, 'dict': dict, 'int': int}
+
+def load_schema():
+    if not os.path.exists(SCHEMA_FILE):
+        return None
+    with open(SCHEMA_FILE) as f:
+        raw = yaml.safe_load(f)
+    schema = {}
+    for key, rules in raw.items():
+        schema[key] = {
+            'type': TYPE_MAP.get(rules.get('type'), str),
+            'default': rules.get('default'),
+            'required': rules.get('required', False)
+        }
+    return schema
 
 def fuzzy_match(term, choices):
     t = term.lower()
@@ -235,10 +257,44 @@ def select_action(is_new_enzyme):
     options = ["UPDATE", "ADD", "REMOVE", "RELOCATE", "CHANGE", "ASSIGN"]
     return numbered_select("Select action:", options)
 
+def check_required_fields(entity_name, full_roles, schema):
+    if schema is None:
+        return
+    entry = None
+    for r in full_roles:
+        if r.get("role") == entity_name:
+            entry = r
+            break
+    if entry is None:
+        return
+    warnings = []
+    for field, rules in schema.items():
+        if not rules['required']:
+            continue
+        if field in ("role", "include", "type", "is_transporter"):
+            continue
+        actual = entry.get(field)
+        default = rules['default']
+        if isinstance(default, (list, dict)) and actual == default:
+            warnings.append(f"  - '{field}' is empty")
+        elif isinstance(default, str) and actual == default == '':
+            warnings.append(f"  - '{field}' is empty")
+    if warnings:
+        print()
+        print("NOTE: This enzyme has some required fields that are empty or need attention:")
+        for w in warnings:
+            print(w)
+        print("You can use the ADD action to populate these fields later.")
+        input("Press Enter to skip and continue...")
+
 def main():
     roles = load_roles()
+    full_roles = load_full_roles()
+    schema = load_schema()
     ec_entries = fetch_enzyme_dat()
     print(f"Loaded {len(roles)} roles from Roles.json")
+    if schema:
+        print("Loaded PlantSEED schema for field validation")
     if ec_entries:
         print(f"Loaded {len(ec_entries)} entries from Enzyme Commission database")
     print()
@@ -271,6 +327,9 @@ def main():
 
     entity, is_new_enzyme = result
     print()
+
+    if not is_new_enzyme:
+        check_required_fields(entity, full_roles, schema)
 
     action = select_action(is_new_enzyme)
 
