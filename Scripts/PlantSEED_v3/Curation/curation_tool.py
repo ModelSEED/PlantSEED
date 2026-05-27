@@ -255,7 +255,9 @@ def main():
                 break
     user_dir = os.path.join(CURATORS_DIR, dir_name)
     print(f"Detected user: {display_name}")
-    print(f"Target directory: {user_dir}")
+    print(f"GitHub username: {dir_name}")
+    print(f"Your files will be saved in: {user_dir}")
+    print(f"(This folder is created from your GitHub username so your work stays separate from other curators.)")
     print()
     os.makedirs(user_dir, exist_ok=True)
 
