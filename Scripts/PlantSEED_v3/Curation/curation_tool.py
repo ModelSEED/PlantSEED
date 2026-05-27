@@ -193,7 +193,7 @@ def get_target_file(username):
         else:
             return target_file
 
-def handle_add(entity):
+def handle_add(entity, full_roles):
     options = ["features", "publications", "reactions", "subsystems", "localization", "classes"]
     field = numbered_select("Select field:", options)
     lines = []
@@ -206,6 +206,34 @@ def handle_add(entity):
             if not v:
                 break
             parts = v.split("\t")
+            value = parts[0]
+            if field == "reactions":
+                matches = find_exact_match(full_roles, "reactions", value)
+                if matches:
+                    display = matches[:5]
+                    rest = len(matches) - 5
+                    msg = f"  Note: '{value}' is already used by: {', '.join(display)}"
+                    if rest > 0:
+                        msg += f" (+{rest} more)"
+                    print(msg)
+            elif field == "publications":
+                matches = find_exact_match(full_roles, "publications", value)
+                if matches:
+                    display = matches[:5]
+                    rest = len(matches) - 5
+                    msg = f"  Note: '{value}' is already used by: {', '.join(display)}"
+                    if rest > 0:
+                        msg += f" (+{rest} more)"
+                    print(msg)
+            elif field == "features":
+                matches = find_substring_match(full_roles, "features", value)
+                if matches:
+                    display = matches[:5]
+                    rest = len(matches) - 5
+                    msg = f"  Note: '{value}' matches features in: {', '.join(display)}"
+                    if rest > 0:
+                        msg += f" (+{rest} more)"
+                    print(msg)
             if len(parts) > 1:
                 lines.append(f"{entity}\tADD\t{field}\t{parts[0]}\t{parts[1]}")
             else:
@@ -287,6 +315,26 @@ def check_required_fields(entity_name, full_roles, schema):
         print("You can use the ADD action to populate these fields later.")
         input("Press Enter to skip and continue...")
 
+def find_exact_match(full_roles, field, value):
+    matches = []
+    for entry in full_roles:
+        items = entry.get(field, [])
+        if isinstance(items, list) and value in items:
+            matches.append(entry["role"])
+    return matches
+
+def find_substring_match(full_roles, field, substring):
+    matches = []
+    t = substring.lower()
+    for entry in full_roles:
+        items = entry.get(field, [])
+        if isinstance(items, list):
+            for item in items:
+                if t in item.lower():
+                    matches.append(entry["role"])
+                    break
+    return matches
+
 def main():
     roles = load_roles()
     full_roles = load_full_roles()
@@ -341,7 +389,7 @@ def main():
         lines = [f"{entity}\tNEW"]
 
     elif action == "ADD":
-        lines = handle_add(entity)
+        lines = handle_add(entity, full_roles)
 
     elif action == "REMOVE":
         lines = handle_remove(entity)
