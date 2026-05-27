@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import builtins
 import json
 import os
 import re
@@ -8,6 +9,16 @@ import sys
 import urllib.request
 import tempfile
 import yaml
+
+EXIT_SHORTCUT = "!!"
+_original_input = builtins.input
+def _input(prompt=""):
+    val = _original_input(prompt)
+    if val.strip() == EXIT_SHORTCUT:
+        print("\nExiting script.")
+        sys.exit(0)
+    return val
+builtins.input = _input
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROLES_FILE = os.path.join(BASE_DIR, "..", "..", "..", "Data", "PlantSEED_v3", "PlantSEED_Roles.json")
