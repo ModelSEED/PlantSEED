@@ -289,12 +289,32 @@ def handle_assign(entity):
     value = prompt_required("Enter value: ")
     return [f"{entity}\tASSIGN\t{field}\t{value}"]
 
+ACTION_OPTIONS = ["ADD", "ASSIGN", "CHANGE", "RELOCATE", "REMOVE", "UPDATE"]
+ACTION_DESCRIPTIONS = {
+    "ADD": "features, publications, reactions, subsystems, localization, classes",
+    "ASSIGN": "include, type",
+    "CHANGE": "abstract_enzyme, include",
+    "RELOCATE": "localization, compartmentalization",
+    "REMOVE": "features, publications, reactions, subsystems, localization, classes",
+    "UPDATE": "rename enzyme",
+}
+
 def select_action(is_new_enzyme):
     if is_new_enzyme:
         print("New enzyme detected. Action automatically set to NEW.")
         return "NEW"
-    options = ["UPDATE", "ADD", "REMOVE", "RELOCATE", "CHANGE", "ASSIGN"]
-    return numbered_select("Select action:", options)
+    print()
+    for i, opt in enumerate(ACTION_OPTIONS, 1):
+        desc = ACTION_DESCRIPTIONS[opt]
+        print(f"  {i}. {opt:9s} ({desc})")
+    while True:
+        try:
+            idx = int(input("Select action: ").strip()) - 1
+            if 0 <= idx < len(ACTION_OPTIONS):
+                return ACTION_OPTIONS[idx]
+            print(f"Enter a number between 1 and {len(ACTION_OPTIONS)}.")
+        except ValueError:
+            print(f"Enter a number between 1 and {len(ACTION_OPTIONS)}.")
 
 def check_required_fields(entity_name, full_roles, schema):
     if schema is None:
