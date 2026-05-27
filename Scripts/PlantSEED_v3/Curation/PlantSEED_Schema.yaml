@@ -1,0 +1,72 @@
+role:
+  type: str
+  default: ''
+  required: true
+include:
+  type: bool
+  default: true
+  required: true
+subsystems:
+  type: list
+  default: []
+  required: true
+classes:
+  type: dict
+  default: {}
+  required: true
+features:
+  type: list
+  default: []
+  required: true
+reactions:
+  type: list
+  default: []
+  required: true
+localization:
+  type: dict
+  default: {}
+  required: true
+type:
+  type: str
+  default: universal
+  required: true
+is_transporter:
+  type: bool
+  default: false
+  required: true
+abstract_enzyme:
+  type: str
+  default: ''
+  required: true
+curators:
+  type: list
+  default: []
+  required: true
+publications:
+  type: list
+  default: []
+  required: false
+kbase_id:
+  type: str
+  default: ''
+  required: false
+compartmentalization:
+  type: dict
+  default: {}
+  required: false
+cofactors:
+  type: list
+  default: []
+  required: false
+predictions:
+  type: dict
+  default: []
+  required: false
+sequences:
+  type: dict
+  default: []
+  required: false
+homomers:
+  type: int
+  default: 1
+  required: false
