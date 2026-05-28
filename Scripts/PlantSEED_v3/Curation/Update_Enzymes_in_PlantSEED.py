@@ -253,13 +253,13 @@ for entry in roles_list:
 		if('curators' not in entry):
 			entry['curators']=list()
 
-		# Curators must be using their github username as the curation folder and this will be unique
-		# So I can extract it from the path and add it as their curator name
+		# Curators must be using their github username as the immediate parent folder
+		# of the TSV (e.g. .../Curation/Curators/<github_username>/<file>.tsv).
+		# Using basename(input_directory) is robust to extra path levels above it.
 
 		input_directory = os.path.dirname(os.path.abspath(input_file))
-		tmp_dirs = input_directory.split('/')
-		curator = tmp_dirs[tmp_dirs.index('Curation')+1]
-		
+		curator = os.path.basename(input_directory)
+
 		if(curator not in entry['curators']):
 			entry['curators'].append(curator)
 	

@@ -27,6 +27,11 @@ ENZYME_DAT_CACHE = os.path.join(tempfile.gettempdir(), "plantseed_enzyme.dat")
 CURATORS_DIR = os.path.join(BASE_DIR, "Curators")
 SCHEMA_FILE = os.path.join(BASE_DIR, "PlantSEED_Schema.yaml")
 
+# Fields that are populated automatically (by Update_Enzymes_in_PlantSEED.py
+# or by the user's interactive selection) and should not trigger an "empty"
+# warning to the user during schema validation.
+AUTO_POPULATED_FIELDS = {"role", "include", "type", "is_transporter", "curators"}
+
 def get_git_username():
     try:
         return subprocess.run(
@@ -38,6 +43,13 @@ def get_git_username():
 def sanitize_username(name):
     return re.sub(r'[^a-z0-9]', '', name.lower())
 
+def sanitize_filename(name):
+    # Strip any path components, keep only basename, and drop characters that
+    # could traverse directories or break TSV parsing.
+    name = os.path.basename(name)
+    name = re.sub(r'[^A-Za-z0-9._-]', '_', name)
+    return name
+
 def load_roles():
     with open(os.path.normpath(ROLES_FILE)) as f:
         return [r["role"] for r in json.load(f)]
@@ -46,7 +58,7 @@ def load_full_roles():
     with open(os.path.normpath(ROLES_FILE)) as f:
         return json.load(f)
 
-TYPE_MAP = {'str': str, 'bool': bool, 'list': list, 'dict': dict, 'int': int}
+TYPE_MAP = {'str': str, 'bool': bool, 'list': list, 'dict': dict, 'int': int, 'float': float}
 
 def load_schema():
     if not os.path.exists(SCHEMA_FILE):
@@ -121,6 +133,8 @@ def numbered_select(prompt_text, options):
         except ValueError:
             print(f"Enter a number between 1 and {len(options)}.")
 
+EXPASY_DISPLAY_LIMIT = 26  # one letter a..z; keep selection unambiguous
+
 def select_enzyme_combined(roles, ec_entries):
     print("\n" + "="*70)
     print("ENZYME SEARCH (PlantSEED + Expasy)")
@@ -131,7 +145,8 @@ def select_enzyme_combined(roles, ec_entries):
             print("Please enter at least 5 letters for search.")
             continue
         plantseed_matches = fuzzy_match(partial, roles)
-        expasy_matches = fuzzy_match(partial, ec_entries) if ec_entries else []
+        expasy_all = fuzzy_match(partial, ec_entries) if ec_entries else []
+        expasy_matches = expasy_all[:EXPASY_DISPLAY_LIMIT]
         if not plantseed_matches and not expasy_matches:
             retry = input("No matches found. (r)etry, (n)ovel enzyme: ").strip().lower()
             if retry == 'n':
@@ -148,6 +163,8 @@ def select_enzyme_combined(roles, ec_entries):
             print("-"*50)
             for i, match in enumerate(expasy_matches):
                 print(f"{chr(97+i)} | {match}")
+            if len(expasy_all) > EXPASY_DISPLAY_LIMIT:
+                print(f"... and {len(expasy_all) - EXPASY_DISPLAY_LIMIT} more Expasy matches (refine your search to see them).")
         print("-"*50)
         selection = input("Select enzyme (number/letter, (r)etry, (n)ovel enzyme): ").strip().lower()
         if selection == 'r':
@@ -178,7 +195,7 @@ def select_enzyme_combined(roles, ec_entries):
                     return selected, True
             print("Invalid letter selection.")
         else:
-            print("Please enter a number, letter, or 'n' for a novel enzyme.")
+            print("Please enter a number, letter, 'r' to retry, or 'n' for a novel enzyme.")
 
 def prompt_required(prompt_text):
     while True:
@@ -188,83 +205,103 @@ def prompt_required(prompt_text):
 
 def get_target_file(username):
     while True:
-        default_filename = input("Enter a filename for this curation (e.g. Updates.tsv): ").strip()
-        if not default_filename:
-            default_filename = "Updates.tsv"
-        if not default_filename.endswith(".tsv"):
-            default_filename += ".tsv"
-        target_file = os.path.join(CURATORS_DIR, username, default_filename)
+        raw = input("Enter a filename for this curation (default: Updates.tsv): ").strip()
+        if not raw:
+            raw = "Updates.tsv"
+        clean = sanitize_filename(raw)
+        if not clean:
+            print("Filename cannot be empty after sanitization.")
+            continue
+        if not clean.endswith(".tsv"):
+            clean += ".tsv"
+        target_file = os.path.join(CURATORS_DIR, username, clean)
         full_path = os.path.abspath(target_file)
         print(f"Target file: {full_path}")
         if os.path.exists(target_file):
-            overwrite = input("File already exists. Append to it? (y/n): ").strip().lower()
-            if overwrite == 'y':
+            print("This file already exists. New rows will be APPENDED to the end.")
+            confirm = input("Continue with this file? (y to append / n to choose a different filename): ").strip().lower()
+            if confirm == 'y':
                 return target_file
             print("Enter a different filename.")
         else:
-            return target_file
+            confirm = input("This file does not exist yet and will be created. Confirm? (y/n): ").strip().lower()
+            if confirm == 'y':
+                return target_file
+            print("Enter a different filename.")
+
+# Per-field guidance for the "extra" column on multi-column ADD entries.
+# Mirrors the parsing in Update_Enzymes_in_PlantSEED.py.
+MULTI_COL_FIELDS = {
+    "features": {
+        "primary_label": "feature ID (e.g. Athaliana_TAIR10||AT3G30775)",
+        "extra_label": "compartment:locus_code (e.g. c:1) - REQUIRED so localization can be filled in",
+        "extra_required": True,
+    },
+    "reactions": {
+        "primary_label": "reaction ID (e.g. rxn00001)",
+        "extra_label": "compartment letter (e.g. c, p, d) - leave blank if no compartment data",
+        "extra_required": False,
+    },
+    "subsystems": {
+        "primary_label": "subsystem name (e.g. Methionine_and_cysteine_metabolism)",
+        "extra_label": "class name (e.g. Amino acids) - REQUIRED so classes can be filled in",
+        "extra_required": True,
+    },
+}
+
+def _print_cross_ref(value, matches, label):
+    if not matches:
+        return
+    display = matches[:5]
+    rest = len(matches) - 5
+    msg = f"  Note: '{value}' {label}: {', '.join(display)}"
+    if rest > 0:
+        msg += f" (+{rest} more)"
+    print(msg)
 
 def handle_add(entity, full_roles):
     options = ["features", "publications", "reactions", "subsystems", "localization", "classes"]
     field = numbered_select("Select field:", options)
     lines = []
-    multi_col = field in ("features", "reactions", "subsystems")
-    if multi_col:
-        print(f"Enter {field} value(s), one per line. Blank line to finish.")
-        print(f"Format: <value> or <key>\\t<extra>")
+    if field in MULTI_COL_FIELDS:
+        cfg = MULTI_COL_FIELDS[field]
+        print(f"\nAdding {field}. Enter a blank value when prompted for the primary {field[:-1]} to finish.")
         while True:
-            v = input().strip()
-            if not v:
+            value = input(f"Enter {cfg['primary_label']}: ").strip()
+            if not value:
                 break
-            parts = v.split("\t")
-            value = parts[0]
             if field == "reactions":
-                matches = find_exact_match(full_roles, "reactions", value)
-                if matches:
-                    display = matches[:5]
-                    rest = len(matches) - 5
-                    msg = f"  Note: '{value}' is already used by: {', '.join(display)}"
-                    if rest > 0:
-                        msg += f" (+{rest} more)"
-                    print(msg)
-            elif field == "publications":
-                matches = find_exact_match(full_roles, "publications", value)
-                if matches:
-                    display = matches[:5]
-                    rest = len(matches) - 5
-                    msg = f"  Note: '{value}' is already used by: {', '.join(display)}"
-                    if rest > 0:
-                        msg += f" (+{rest} more)"
-                    print(msg)
+                matches = find_exact_match(full_roles, "reactions", value, exclude=entity)
+                _print_cross_ref(value, matches, "is already used by other role(s)")
             elif field == "features":
-                matches = find_substring_match(full_roles, "features", value)
-                if matches:
-                    display = matches[:5]
-                    rest = len(matches) - 5
-                    msg = f"  Note: '{value}' matches features in: {', '.join(display)}"
-                    if rest > 0:
-                        msg += f" (+{rest} more)"
-                    print(msg)
-            if len(parts) > 1:
-                lines.append(f"{entity}\tADD\t{field}\t{parts[0]}\t{parts[1]}")
+                matches = find_substring_match(full_roles, "features", value, exclude=entity)
+                _print_cross_ref(value, matches, "matches features in other role(s)")
+            extra = input(f"Enter {cfg['extra_label']}: ").strip()
+            if not extra and cfg["extra_required"]:
+                print(f"  Warning: no {field} extra given; the Update script may not be able to populate dependent fields.")
+            if extra:
+                lines.append(f"{entity}\tADD\t{field}\t{value}\t{extra}")
             else:
-                lines.append(f"{entity}\tADD\t{field}\t{parts[0]}")
+                lines.append(f"{entity}\tADD\t{field}\t{value}")
     else:
-        print("Enter entry value(s), one per line. Blank line to finish:")
+        print(f"\nAdding {field}. Enter values one per line. Blank line to finish.")
         while True:
-            v = input().strip()
+            v = input(f"Enter {field[:-1] if field.endswith('s') else field} value: ").strip()
             if not v:
                 break
+            if field == "publications":
+                matches = find_exact_match(full_roles, "publications", v, exclude=entity)
+                _print_cross_ref(v, matches, "is already cited by other role(s)")
             lines.append(f"{entity}\tADD\t{field}\t{v}")
     return lines
 
 def handle_remove(entity):
     options = ["features", "publications", "reactions", "subsystems", "localization", "classes"]
     field = numbered_select("Select field:", options)
-    print("Enter entry value(s) to remove, one per line. Blank line to finish:")
+    print(f"\nRemoving {field}. Enter values one per line. Blank line to finish.")
     lines = []
     while True:
-        v = input().strip()
+        v = input(f"Enter {field[:-1] if field.endswith('s') else field} value to remove: ").strip()
         if not v:
             break
         lines.append(f"{entity}\tREMOVE\t{field}\t{v}")
@@ -330,10 +367,11 @@ def check_required_fields(entity_name, full_roles, schema):
     for field, rules in schema.items():
         if not rules['required']:
             continue
-        if field in ("role", "include", "type", "is_transporter"):
+        if field in AUTO_POPULATED_FIELDS:
             continue
         actual = entry.get(field)
         default = rules['default']
+        # An empty container or empty string == default means "no entries yet".
         if isinstance(default, (list, dict)) and actual == default:
             warnings.append(f"  - '{field}' is empty")
         elif isinstance(default, str) and actual == default == '':
@@ -346,25 +384,65 @@ def check_required_fields(entity_name, full_roles, schema):
         print("You can use the ADD action to populate these fields later.")
         input("Press Enter to skip and continue...")
 
-def find_exact_match(full_roles, field, value):
+def find_exact_match(full_roles, field, value, exclude=None):
     matches = []
     for entry in full_roles:
+        role = entry.get("role")
+        if role == exclude:
+            continue
         items = entry.get(field, [])
         if isinstance(items, list) and value in items:
-            matches.append(entry["role"])
+            matches.append(role)
     return matches
 
-def find_substring_match(full_roles, field, substring):
+def find_substring_match(full_roles, field, substring, exclude=None):
     matches = []
     t = substring.lower()
     for entry in full_roles:
+        role = entry.get("role")
+        if role == exclude:
+            continue
         items = entry.get(field, [])
         if isinstance(items, list):
             for item in items:
                 if t in item.lower():
-                    matches.append(entry["role"])
+                    matches.append(role)
                     break
     return matches
+
+ACTION_DISPATCH = {
+    "ADD": lambda entity, full_roles: handle_add(entity, full_roles),
+    "REMOVE": lambda entity, full_roles: handle_remove(entity),
+    "RELOCATE": lambda entity, full_roles: handle_relocate(entity),
+    "CHANGE": lambda entity, full_roles: handle_change(entity),
+    "ASSIGN": lambda entity, full_roles: handle_assign(entity),
+}
+
+def run_action(action, entity, full_roles):
+    if action == "UPDATE":
+        new_name = prompt_required("Enter new enzyme name: ")
+        return [f"{entity}\tUPDATE\t{new_name}"]
+    if action == "NEW":
+        return [f"{entity}\tNEW"]
+    handler = ACTION_DISPATCH.get(action)
+    if handler is None:
+        return []
+    return handler(entity, full_roles)
+
+def append_rows(target_file, lines):
+    if not lines:
+        return 0
+    rel_path = os.path.relpath(target_file, os.path.join(BASE_DIR, "..", "..", ".."))
+    print("\n" + "=" * 60)
+    print(f"{len(lines)} TSV row(s) to append to {rel_path}:")
+    for line in lines:
+        print(line)
+    print("=" * 60)
+    with open(target_file, "a") as f:
+        for line in lines:
+            f.write(line + "\n")
+    print(f"Appended {len(lines)} row(s) to {target_file}")
+    return len(lines)
 
 def main():
     roles = load_roles()
@@ -376,6 +454,8 @@ def main():
         print("Loaded PlantSEED schema for field validation")
     if ec_entries:
         print(f"Loaded {len(ec_entries)} entries from Enzyme Commission database")
+    print()
+    print(f"Tip: type '{EXIT_SHORTCUT}' at any prompt to exit cleanly.")
     print()
 
     display_name = get_git_username()
@@ -399,56 +479,36 @@ def main():
     target_file = get_target_file(dir_name)
     print()
 
-    result = select_enzyme_combined(roles, ec_entries)
-    if result is None:
-        print("No enzyme selected. Exiting.")
+    total_actions = 0
+    while True:
+        result = select_enzyme_combined(roles, ec_entries)
+        if result is None:
+            print("No enzyme selected.")
+            break
+
+        entity, is_new_enzyme = result
+        print()
+
+        if not is_new_enzyme:
+            check_required_fields(entity, full_roles, schema)
+
+        action = select_action(is_new_enzyme)
+        lines = run_action(action, entity, full_roles)
+
+        if lines:
+            append_rows(target_file, lines)
+            total_actions += 1
+        else:
+            print("No rows generated for this action.")
+
+        again = input("\nWould you like to record another action? (y/n): ").strip().lower()
+        if again != 'y':
+            break
+
+    if total_actions == 0:
+        print("No actions recorded.")
         sys.exit(1)
-
-    entity, is_new_enzyme = result
-    print()
-
-    if not is_new_enzyme:
-        check_required_fields(entity, full_roles, schema)
-
-    action = select_action(is_new_enzyme)
-
-    if action == "UPDATE":
-        new_name = prompt_required("Enter new enzyme name: ")
-        lines = [f"{entity}\tUPDATE\t{new_name}"]
-
-    elif action == "NEW":
-        lines = [f"{entity}\tNEW"]
-
-    elif action == "ADD":
-        lines = handle_add(entity, full_roles)
-
-    elif action == "REMOVE":
-        lines = handle_remove(entity)
-
-    elif action == "RELOCATE":
-        lines = handle_relocate(entity)
-
-    elif action == "CHANGE":
-        lines = handle_change(entity)
-
-    elif action == "ASSIGN":
-        lines = handle_assign(entity)
-
-    if not lines:
-        print("No rows generated.")
-        sys.exit(1)
-
-    rel_path = os.path.relpath(target_file, os.path.join(BASE_DIR, "..", "..", ".."))
-    print("\n" + "=" * 60)
-    print(f"{len(lines)} TSV row(s) to append to {rel_path}:")
-    for line in lines:
-        print(line)
-    print("=" * 60)
-
-    with open(target_file, "a") as f:
-        for line in lines:
-            f.write(line + "\n")
-    print(f"Appended {len(lines)} row(s) to {target_file}")
+    print(f"\nDone. Recorded {total_actions} action(s) into {target_file}")
 
 if __name__ == "__main__":
     main()
