@@ -25,6 +25,7 @@ ROLES_FILE = os.path.join(BASE_DIR, "..", "..", "..", "Data", "PlantSEED_v3", "P
 ENZYME_DAT_URL = "https://ftp.expasy.org/databases/enzyme/enzyme.dat"
 ENZYME_DAT_CACHE = os.path.join(tempfile.gettempdir(), "plantseed_enzyme.dat")
 CURATORS_DIR = os.path.join(BASE_DIR, "Curators")
+CURATOR_REGISTRY = os.path.join(CURATORS_DIR, "curator_registry.json")
 SCHEMA_FILE = os.path.join(BASE_DIR, "PlantSEED_Schema.yaml")
 
 # Fields that are populated automatically (by Update_Enzymes_in_PlantSEED.py
@@ -42,6 +43,86 @@ def get_git_username():
 
 def sanitize_username(name):
     return re.sub(r'[^a-z0-9]', '', name.lower())
+
+def get_git_email():
+    try:
+        return subprocess.run(
+            ["git", "config", "user.email"], capture_output=True, text=True, check=True, timeout=5
+        ).stdout.strip()
+    except (subprocess.CalledProcessError, FileNotFoundError, TimeoutError):
+        return None
+
+def get_gh_username_gh():
+    try:
+        result = subprocess.run(
+            ["gh", "api", "user", "--jq", ".login"],
+            capture_output=True, text=True, timeout=5
+        )
+        val = result.stdout.strip() if result.returncode == 0 and result.stdout.strip() else None
+        return val.lower() if val else None
+    except (FileNotFoundError, TimeoutError):
+        return None
+
+def get_gh_username_from_remote():
+    try:
+        result = subprocess.run(
+            ["git", "remote", "get-url", "origin"],
+            capture_output=True, text=True, timeout=5
+        )
+        if result.returncode == 0:
+            url = result.stdout.strip()
+            m = re.search(r'(?:git@github\.com:|https?://github\.com/)([^/@]+)/', url)
+            if m:
+                return m.group(1).lower()
+    except (FileNotFoundError, TimeoutError):
+        pass
+    return None
+
+def load_curator_registry():
+    if os.path.exists(CURATOR_REGISTRY):
+        with open(CURATOR_REGISTRY) as f:
+            return json.load(f)
+    return {}
+
+def save_curator_registry(registry):
+    os.makedirs(CURATORS_DIR, exist_ok=True)
+    with open(CURATOR_REGISTRY, "w") as f:
+        json.dump(registry, f, indent=2)
+
+def resolve_github_username(display_name):
+    email = get_git_email()
+    registry = load_curator_registry()
+
+    if email:
+        for gh_user, info in registry.items():
+            if info.get("github_email") == email:
+                return gh_user
+
+    gh_user = get_gh_username_gh()
+    if gh_user:
+        if gh_user not in registry:
+            registry[gh_user] = {"display_name": display_name, "github_email": email or ""}
+            save_curator_registry(registry)
+        return gh_user
+
+    gh_user = get_gh_username_from_remote()
+    if gh_user:
+        if gh_user not in registry:
+            registry[gh_user] = {"display_name": display_name, "github_email": email or ""}
+            save_curator_registry(registry)
+        return gh_user
+
+    default_guess = sanitize_username(display_name)
+    print(f"\nCould not auto-detect GitHub username.")
+    gh_user = input(f"Enter your GitHub username [{default_guess}]: ").strip().lower()
+    if not gh_user:
+        gh_user = default_guess
+
+    if gh_user not in registry:
+        registry[gh_user] = {"display_name": display_name, "github_email": email or ""}
+        save_curator_registry(registry)
+
+    return gh_user
 
 def sanitize_filename(name):
     # Strip any path components, keep only basename, and drop characters that
@@ -459,15 +540,17 @@ def main():
     print()
 
     display_name = get_git_username()
-    dir_name = sanitize_username(display_name)
+    dir_name = resolve_github_username(display_name)
     if not dir_name:
         dir_name = "user"
+
     if os.path.isdir(CURATORS_DIR):
         for d in os.listdir(CURATORS_DIR):
             d_path = os.path.join(CURATORS_DIR, d)
-            if os.path.isdir(d_path) and d.lower() == dir_name and d.lower() != "curators":
+            if os.path.isdir(d_path) and d.lower() == dir_name.lower() and d.lower() != "curators":
                 dir_name = d
                 break
+
     user_dir = os.path.join(CURATORS_DIR, dir_name)
     print(f"Detected user: {display_name}")
     print(f"GitHub username: {dir_name}")
