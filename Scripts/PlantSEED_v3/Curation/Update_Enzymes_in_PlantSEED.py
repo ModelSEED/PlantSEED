@@ -2,6 +2,25 @@
 import os, sys, json, copy, hashlib
 import yaml
 
+class Issues:
+	"""Collects warnings and errors so they can be summarised at the end of the run."""
+
+	def __init__(self):
+		self.warnings = []
+		self.errors = []
+
+	def warn(self, msg):
+		self.warnings.append(msg)
+		print(f"[WARN] {msg}")
+
+	def error(self, msg):
+		self.errors.append(msg)
+		print(f"[ERROR] {msg}")
+
+	def summary(self):
+		print(f"\nCompleted with {len(self.warnings)} warning(s) and {len(self.errors)} error(s).")
+
+
 # Schema type names mirror Validate_Plantseed_Schema.py — keep the two in sync.
 TYPE_MAP = {
 	'str': str,
@@ -12,9 +31,23 @@ TYPE_MAP = {
 	'float': float,
 }
 
+# Minimum column count (including the enzyme and action columns) for each action.
+ACTION_MIN_COLS = {
+	'UPDATE':   3,  # enzyme  UPDATE  new_name
+	'NEW':      2,  # enzyme  NEW
+	'ADD':      4,  # enzyme  ADD     field  entry  [extra]
+	'REMOVE':   4,  # enzyme  REMOVE  field  entry
+	'RELOCATE': 5,  # enzyme  RELOCATE  field  old  new
+	'CHANGE':   4,  # enzyme  CHANGE  field  value
+	'ASSIGN':   4,  # enzyme  ASSIGN  field  value
+}
 
-def parse_tsv(path):
-	"""Read a curation TSV and bucket each line by action."""
+
+def parse_tsv(path, schema=None, issues=None):
+	"""Read a curation TSV and bucket each line by action.
+
+	Reports problems (unknown actions, malformed lines, unknown field names) to `issues`
+	when supplied. Non-restrictive: bad lines are skipped, good lines still parsed."""
 	actions = {
 		'replace': dict(),   # UPDATE: rename old role -> new role
 		'new':     list(),   # NEW: empty role to add
@@ -25,19 +58,38 @@ def parse_tsv(path):
 		'assign':  dict(),   # ASSIGN: set a scalar field
 	}
 
+	def _check_field(field, lineno):
+		if schema is not None and field not in schema and issues is not None:
+			issues.warn(f"line {lineno}: field '{field}' is not in the schema — proceeding anyway")
+
 	with open(path) as updates_file:
-		for line in updates_file.readlines():
+		for lineno, line in enumerate(updates_file.readlines(), start=1):
 			line = line.strip('\r\n')
 
-			if line.startswith('#'):
+			if line.startswith('#') or not line.strip():
 				continue
 
 			tmp_lst = line.split('\t')
 			if len(tmp_lst) < 2:
+				if issues is not None:
+					issues.warn(f"line {lineno}: fewer than 2 columns — skipped")
 				continue
 
 			enzyme = tmp_lst[0]
 			action = tmp_lst[1].upper()
+
+			if action not in ACTION_MIN_COLS:
+				if issues is not None:
+					issues.warn(f"line {lineno}: unknown action '{tmp_lst[1]}' (known: {sorted(ACTION_MIN_COLS)}) — skipped")
+				continue
+
+			if len(tmp_lst) < ACTION_MIN_COLS[action]:
+				if issues is not None:
+					issues.warn(
+						f"line {lineno}: action {action} requires at least {ACTION_MIN_COLS[action]} columns, "
+						f"got {len(tmp_lst)} — skipped"
+					)
+				continue
 
 			# UPDATE: change the role name. Creates a new entry, removes the old.
 			if action == "UPDATE":
@@ -46,15 +98,16 @@ def parse_tsv(path):
 
 			# NEW: add a brand-new (empty-defaults) role.
 			# Should be followed by ADD lines to populate it.
-			if action == "NEW":
+			elif action == "NEW":
 				actions['new'].append(enzyme)
 				print("Warning: is this enzyme conserved!", enzyme)
 
 			# ADD: append to a list field, or key into a dict field.
 			# Some fields take a key-value pair; others take a single entry.
-			if action == "ADD":
+			elif action == "ADD":
 				field = tmp_lst[2]
 				entry = tmp_lst[3]
+				_check_field(field, lineno)
 				if enzyme not in actions['add']:
 					actions['add'][enzyme] = dict()
 				if field not in actions['add'][enzyme]:
@@ -66,9 +119,10 @@ def parse_tsv(path):
 					actions['add'][enzyme][field][entry_key] = entry_value
 
 			# REMOVE: drop an entry from a field.
-			if action == "REMOVE":
+			elif action == "REMOVE":
 				field = tmp_lst[2]
 				entry = tmp_lst[3]
+				_check_field(field, lineno)
 				if enzyme not in actions['rem']:
 					actions['rem'][enzyme] = dict()
 				if field not in actions['rem'][enzyme]:
@@ -77,10 +131,11 @@ def parse_tsv(path):
 
 			# RELOCATE: rekey a dict entry (e.g. move a feature between compartments).
 			# Cascades to compartmentalization where applicable.
-			if action == "RELOCATE":
+			elif action == "RELOCATE":
 				field = tmp_lst[2]
 				entry = tmp_lst[3]
 				new_entry = tmp_lst[4]
+				_check_field(field, lineno)
 				if enzyme not in actions['key']:
 					actions['key'][enzyme] = dict()
 				if field not in actions['key'][enzyme]:
@@ -88,17 +143,19 @@ def parse_tsv(path):
 				actions['key'][enzyme][field][entry] = new_entry
 
 			# CHANGE: set a scalar field (abstract_enzyme, include, ...).
-			if action == "CHANGE":
+			elif action == "CHANGE":
 				field = tmp_lst[2]
 				entry = tmp_lst[3]
+				_check_field(field, lineno)
 				if enzyme not in actions['change']:
 					actions['change'][enzyme] = dict()
 				actions['change'][enzyme][field] = entry
 
 			# ASSIGN: set a scalar field (include, type, ...).
-			if action == "ASSIGN":
+			elif action == "ASSIGN":
 				field = tmp_lst[2]
 				entry = tmp_lst[3]
+				_check_field(field, lineno)
 				if enzyme not in actions['assign']:
 					actions['assign'][enzyme] = dict()
 				actions['assign'][enzyme][field] = entry
@@ -138,13 +195,18 @@ def default_role_from_schema(schema):
 	return {k: copy.deepcopy(rules['default']) for k, rules in schema.items() if rules['required']}
 
 
-def seed_new_entries(roles_list, new_list, schema):
-	"""Append default-shaped entries for each NEW role; abort on collision (existing behaviour)."""
+def seed_new_entries(roles_list, new_list, schema, issues=None):
+	"""Append default-shaped entries for each NEW role. Reports all collisions
+	together before aborting (vs. the original single-collision sys.exit)."""
 	existing = {entry['role'] for entry in roles_list}
-	for new in new_list:
-		if new in existing:
-			print("Warning, New Role already present: " + new)
-			sys.exit()
+	collisions = [new for new in new_list if new in existing]
+	if collisions:
+		for c in collisions:
+			if issues is not None:
+				issues.error(f"NEW role already present in database: '{c}'")
+			else:
+				print(f"Warning, New Role already present: {c}")
+		sys.exit(1)
 
 	for new in new_list:
 		new_role = default_role_from_schema(schema)
@@ -406,28 +468,49 @@ def write_db(path, roles_list):
 
 
 def main():
-	if len(sys.argv) < 2 or not os.path.isfile(sys.argv[1]):
-		print("Takes one argument, the path to and including roles file")
-		sys.exit()
+	issues = Issues()
+
+	if len(sys.argv) < 2:
+		print("Error: missing argument.")
+		print("Usage: Update_Enzymes_in_PlantSEED.py <path-to-updates.tsv>")
+		sys.exit(1)
 
 	input_file = sys.argv[1]
+	if not os.path.isfile(input_file):
+		print(f"Error: input file does not exist: {input_file}")
+		print("Check the path and try again.")
+		sys.exit(1)
+
 	script_directory = os.path.dirname(os.path.abspath(sys.argv[0]))
 	database_relative_path = os.path.join(script_directory, "../../../", "Data/PlantSEED_v3/")
 	roles_path = os.path.join(database_relative_path, "PlantSEED_Roles.json")
 	schema_path = os.path.join(script_directory, "PlantSEED_Schema.yaml")
 
-	actions = parse_tsv(input_file)
 	schema = load_schema(schema_path)
+	actions = parse_tsv(input_file, schema=schema, issues=issues)
 
 	with open(roles_path) as f:
 		roles_list = json.load(f)
 
-	seed_new_entries(roles_list, actions['new'], schema)
+	# Warn if any action targets a role name that doesn't exist in the database.
+	# UPDATE/ADD/REMOVE/RELOCATE/CHANGE/ASSIGN all key off an existing role name.
+	known_roles = {entry['role'] for entry in roles_list}
+	bucket_to_action = {'replace': 'UPDATE', 'add': 'ADD', 'rem': 'REMOVE',
+	                    'key': 'RELOCATE', 'change': 'CHANGE', 'assign': 'ASSIGN'}
+	for bucket, action_name in bucket_to_action.items():
+		for role_name in actions[bucket]:
+			if role_name not in known_roles:
+				issues.warn(
+					f"role '{role_name}' not found in database — its {action_name} action(s) will be ignored"
+				)
+
+	seed_new_entries(roles_list, actions['new'], schema, issues=issues)
 	# Newly-seeded roles are also "touched" — include them so they get validated and hashed.
 	touched, rename_map = apply_actions(roles_list, actions, input_file)
 	touched.update(actions['new'])
 
 	if not touched:
+		issues.summary()
 		return
 
 	# Reverse rename map so we can look up "what was this role called before?"
@@ -448,6 +531,7 @@ def main():
 		assign_kbase_id(entry, existing_ids, renamed_from=renamed_from)
 
 	write_db(roles_path, roles_list)
+	issues.summary()
 
 
 if __name__ == "__main__":
