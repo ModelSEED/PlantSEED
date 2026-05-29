@@ -494,7 +494,9 @@ def main():
 
 	# Warn if any action targets a role name that doesn't exist in the database.
 	# UPDATE/ADD/REMOVE/RELOCATE/CHANGE/ASSIGN all key off an existing role name.
-	known_roles = {entry['role'] for entry in roles_list}
+	# Include NEW roles too — they'll exist after seed_new_entries, so ADDs that
+	# follow a NEW in the same TSV are valid.
+	known_roles = {entry['role'] for entry in roles_list} | set(actions['new'])
 	bucket_to_action = {'replace': 'UPDATE', 'add': 'ADD', 'rem': 'REMOVE',
 	                    'key': 'RELOCATE', 'change': 'CHANGE', 'assign': 'ASSIGN'}
 	for bucket, action_name in bucket_to_action.items():

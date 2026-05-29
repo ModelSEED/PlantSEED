@@ -1,0 +1,48 @@
+# Example curation TSV for Update_Enzymes_in_PlantSEED.py
+# Demonstrates every action and dummy-populates every schema field that
+# this script can write. Lines starting with '#' are ignored. Columns
+# MUST be separated by TAB characters, not spaces.
+#
+# Action reference (columns 2+):
+#   NEW       (no extra cols)                         create an empty role with schema defaults
+#   UPDATE    new_name                                rename the role (recomputes kbase_id)
+#   ADD       field  entry  [extra]                   append entry to a list/dict field
+#   REMOVE    field  entry                            drop entry from a list/dict field
+#   RELOCATE  field  old_key  new_key                 rekey a dict entry
+#   CHANGE    field  value                            set a scalar field
+#   ASSIGN    field  value                            set a scalar field (string-valued)
+
+# ---- 1. Create the role. NEW seeds all required schema fields with their defaults
+# ----    and derives abstract_enzyme from the part of the name before " (EC".
+Example dummy enzyme (EC 9.9.9.99)	NEW
+
+# ---- 2. Populate `subsystems`. The 5th column is the parent CLASS name; the
+# ----    script cascades both into the `classes` field as classes{class}{subsystem}=[].
+Example dummy enzyme (EC 9.9.9.99)	ADD	subsystems	Example_subsystem_in_plants	Cofactors
+
+# ---- 3. Populate `features`. The 5th column is "compartment:source-code" and
+# ----    cascades into `localization` as localization{compartment}{feature}=[code].
+Example dummy enzyme (EC 9.9.9.99)	ADD	features	Athaliana_TAIR10||AT9G99999	c:PPDB
+
+# ---- 4. Populate `reactions`. The 5th column is a compartment id and cascades
+# ----    into `localization` as localization{compartment}{reaction}=["Assumed"].
+Example dummy enzyme (EC 9.9.9.99)	ADD	reactions	rxn99999	c
+
+# ---- 5. Optional list-fields with no cascade.
+Example dummy enzyme (EC 9.9.9.99)	ADD	publications	10.9999/example.doi.0001
+Example dummy enzyme (EC 9.9.9.99)	ADD	cofactors	cpd00009
+
+# ---- 6. Scalar fields. ASSIGN/CHANGE always store the value as a string, so
+# ----    fields that need bool/int values (include, is_transporter, homomers)
+# ----    are best left at their schema defaults (true, false, 1) seeded by NEW.
+Example dummy enzyme (EC 9.9.9.99)	ASSIGN	type	conditional
+Example dummy enzyme (EC 9.9.9.99)	CHANGE	abstract_enzyme	Example dummy enzyme
+
+# Fields filled automatically (no row needed):
+#   role               <- column 1 of the NEW row
+#   abstract_enzyme    <- derived from the role name by NEW (overridden by row above)
+#   classes            <- cascaded from subsystems ADD (row 2)
+#   localization       <- cascaded from features + reactions ADDs (rows 3-4)
+#   curators           <- inferred from the path: Curators/<github-username>/...
+#   kbase_id           <- hashed from role + reactions[0] + subsystems[0]
+#   include, is_transporter, homomers  <- schema defaults seeded by NEW
