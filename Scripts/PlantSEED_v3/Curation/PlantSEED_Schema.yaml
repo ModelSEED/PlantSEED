@@ -50,10 +50,6 @@ kbase_id:
   type: str
   default: ''
   required: false
-compartmentalization:
-  type: dict
-  default: {}
-  required: false
 cofactors:
   type: list
   default: []
