@@ -72,7 +72,13 @@ def parse_tsv(path, schema=None, issues=None):
 			tmp_lst = line.split('\t')
 			if len(tmp_lst) < 2:
 				if issues is not None:
-					issues.warn(f"line {lineno}: fewer than 2 columns — skipped")
+					# A non-empty line that splits to one column almost always means the
+					# user separated columns with spaces instead of TABs (a common issue
+					# when editors auto-convert tabs to spaces).
+					hint = ""
+					if len(line.split()) > 1:
+						hint = " — columns must be TAB-separated; this line looks space-separated"
+					issues.warn(f"line {lineno}: fewer than 2 columns{hint} — skipped")
 				continue
 
 			enzyme = tmp_lst[0]
@@ -195,9 +201,13 @@ def default_role_from_schema(schema):
 	return {k: copy.deepcopy(rules['default']) for k, rules in schema.items() if rules['required']}
 
 
-def seed_new_entries(roles_list, new_list, schema, issues=None):
+def seed_new_entries(roles_list, new_list, schema, actions=None, issues=None):
 	"""Append default-shaped entries for each NEW role. Reports all collisions
-	together before aborting (vs. the original single-collision sys.exit)."""
+	together before aborting (vs. the original single-collision sys.exit).
+
+	abstract_enzyme is required; if the TSV doesn't set it explicitly via
+	ASSIGN/CHANGE, default it to the role name with any " (EC ...)" suffix
+	stripped, and warn the curator that this default was used."""
 	existing = {entry['role'] for entry in roles_list}
 	collisions = [new for new in new_list if new in existing]
 	if collisions:
@@ -212,10 +222,22 @@ def seed_new_entries(roles_list, new_list, schema, issues=None):
 		new_role = default_role_from_schema(schema)
 		new_role['role'] = new
 		new_role['abstract_enzyme'] = new.split(' (EC')[0]
+
+		explicit_abstract = actions is not None and (
+			'abstract_enzyme' in actions.get('change', {}).get(new, {})
+			or 'abstract_enzyme' in actions.get('assign', {}).get(new, {})
+		)
+		if not explicit_abstract and issues is not None:
+			issues.warn(
+				f"NEW role '{new}': abstract_enzyme not provided — "
+				f"defaulting to '{new_role['abstract_enzyme']}' (role name with EC stripped). "
+				f"Set it explicitly with an ASSIGN row if a different value is wanted."
+			)
+
 		roles_list.append(new_role)
 
 
-def apply_actions(roles_list, actions, input_file):
+def apply_actions(roles_list, actions, input_file, issues=None):
 	"""Apply parsed actions to roles_list in place.
 	Returns (touched_role_names, rename_map old->new)."""
 	replace_dict = actions['replace']
@@ -249,27 +271,43 @@ def apply_actions(roles_list, actions, input_file):
 					if input_value not in entry[field]:
 						entry[field].append(input_value)
 
-					# Feature → localization cascade.
+					# Feature → localization cascade. Localization col is OPTIONAL —
+					# omit silently if not given. If given, it MUST be "compartment:code".
 					if field == 'features':
-						if add_dict[entry['role']][field][input_value] == 1:
-							print("Warning, no localization data added for feature: ", input_value)
+						raw = add_dict[entry['role']][field][input_value]
+						if raw == 1:
+							pass  # no localization provided — optional, skip cascade
+						elif ':' not in raw:
+							msg = (
+								f"feature '{input_value}' for role '{entry['role']}': "
+								f"localization value '{raw}' is missing a ':' separator "
+								f"(expected 'compartment:source-code', e.g. 'c:PPDB') — "
+								f"feature added but no localization recorded"
+							)
+							if issues is not None:
+								issues.warn(msg)
+							else:
+								print(f"[WARN] {msg}")
 						else:
-							(cpt, code) = add_dict[entry['role']][field][input_value].split(':')
+							(cpt, code) = raw.split(':', 1)
 							if cpt in entry['localization']:
 								entry['localization'][cpt][input_value] = [code]
 							else:
 								entry['localization'][cpt] = {input_value: [code]}
 
-					# Subsystem → classes cascade.
+					# Subsystem → classes cascade. Class col is OPTIONAL — silent skip
+					# when not given. (The sentinel for "no class" is the int 1 set by
+					# parse_tsv; the original `== "1"` string comparison was a bug.)
 					if field == 'subsystems':
 						sys_cls = add_dict[entry['role']][field][input_value]
-						if sys_cls == "1":
-							print("Warning: class not included as extra field for subsystem: ", input_value)
-						if 'classes' not in entry:
-							entry['classes'] = dict()
-						if sys_cls not in entry['classes']:
-							entry['classes'][sys_cls] = dict()
-						entry['classes'][sys_cls][input_value] = []
+						if sys_cls == 1:
+							pass  # no class provided — optional, skip cascade
+						else:
+							if 'classes' not in entry:
+								entry['classes'] = dict()
+							if sys_cls not in entry['classes']:
+								entry['classes'][sys_cls] = dict()
+							entry['classes'][sys_cls][input_value] = []
 
 					# Reaction → localization cascade (assumed compartment).
 					if field == 'reactions':
@@ -506,9 +544,9 @@ def main():
 					f"role '{role_name}' not found in database — its {action_name} action(s) will be ignored"
 				)
 
-	seed_new_entries(roles_list, actions['new'], schema, issues=issues)
+	seed_new_entries(roles_list, actions['new'], schema, actions=actions, issues=issues)
 	# Newly-seeded roles are also "touched" — include them so they get validated and hashed.
-	touched, rename_map = apply_actions(roles_list, actions, input_file)
+	touched, rename_map = apply_actions(roles_list, actions, input_file, issues=issues)
 	touched.update(actions['new'])
 
 	if not touched:
