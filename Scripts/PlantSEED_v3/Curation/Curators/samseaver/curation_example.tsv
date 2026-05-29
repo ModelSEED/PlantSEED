@@ -30,7 +30,6 @@ Example dummy enzyme (EC 9.9.9.99)	ADD	reactions	rxn99999	c
 
 # ---- 5. Optional list-fields with no cascade.
 Example dummy enzyme (EC 9.9.9.99)	ADD	publications	10.9999/example.doi.0001
-Example dummy enzyme (EC 9.9.9.99)	ADD	cofactors	cpd00009
 
 # ---- 6. Scalar fields. ASSIGN/CHANGE always store the value as a string, so
 # ----    fields that need bool/int values (include, is_transporter, homomers)
