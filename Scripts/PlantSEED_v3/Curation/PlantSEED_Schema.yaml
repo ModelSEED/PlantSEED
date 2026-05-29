@@ -60,11 +60,11 @@ cofactors:
   required: false
 predictions:
   type: dict
-  default: {}
+  default: []
   required: false
 sequences:
   type: dict
-  default: {}
+  default: []
   required: false
 homomers:
   type: int
