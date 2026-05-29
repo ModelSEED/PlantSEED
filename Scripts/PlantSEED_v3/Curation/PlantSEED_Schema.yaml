@@ -14,6 +14,8 @@ classes:
   type: dict
   default: {}
   required: true
+  depends_on:
+    inner_keys_from: [subsystems]
 features:
   type: list
   default: []
@@ -26,6 +28,8 @@ localization:
   type: dict
   default: {}
   required: true
+  depends_on:
+    inner_keys_from: [features, reactions]
 type:
   type: str
   default: universal
@@ -54,6 +58,8 @@ compartmentalization:
   type: dict
   default: {}
   required: false
+  depends_on:
+    keys_from: [reactions]
 cofactors:
   type: list
   default: []
