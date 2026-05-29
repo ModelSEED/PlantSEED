@@ -89,39 +89,36 @@ def save_curator_registry(registry):
     with open(CURATOR_REGISTRY, "w") as f:
         json.dump(registry, f, indent=2)
 
-def resolve_github_username(display_name):
+def _detect_github_username(display_name):
+    """Try the registry, then `gh`, then the git remote. Return (username, source)."""
     email = get_git_email()
     registry = load_curator_registry()
-
     if email:
         for gh_user, info in registry.items():
             if info.get("github_email") == email:
-                return gh_user
-
+                return gh_user, "saved registry"
     gh_user = get_gh_username_gh()
     if gh_user:
-        if gh_user not in registry:
-            registry[gh_user] = {"display_name": display_name, "github_email": email or ""}
-            save_curator_registry(registry)
-        return gh_user
-
+        return gh_user, "gh CLI"
     gh_user = get_gh_username_from_remote()
     if gh_user:
-        if gh_user not in registry:
-            registry[gh_user] = {"display_name": display_name, "github_email": email or ""}
-            save_curator_registry(registry)
-        return gh_user
+        return gh_user, "git remote"
+    return sanitize_username(display_name) or "user", "git user.name fallback"
 
-    default_guess = sanitize_username(display_name)
-    print(f"\nCould not auto-detect GitHub username.")
-    gh_user = input(f"Enter your GitHub username [{default_guess}]: ").strip().lower()
-    if not gh_user:
-        gh_user = default_guess
 
+def resolve_github_username(display_name):
+    """Resolve and confirm the GitHub username. Always shows the curator what was
+    detected and lets them override (Sam's request: option to enter explicitly)."""
+    email = get_git_email()
+    detected, source = _detect_github_username(display_name)
+    print(f"\nDetected GitHub username: {detected}  (source: {source})")
+    entered = input(f"Press Enter to accept, or type a different GitHub username: ").strip().lower()
+    gh_user = entered or detected
+    gh_user = sanitize_username(gh_user) or "user"
+    registry = load_curator_registry()
     if gh_user not in registry:
         registry[gh_user] = {"display_name": display_name, "github_email": email or ""}
         save_curator_registry(registry)
-
     return gh_user
 
 def sanitize_filename(name):
@@ -215,45 +212,87 @@ def numbered_select(prompt_text, options):
             print(f"Enter a number between 1 and {len(options)}.")
 
 EXPASY_DISPLAY_LIMIT = 26  # one letter a..z; keep selection unambiguous
+FEATURE_DISPLAY_LIMIT = 9  # one digit 1..9 after the PlantSEED block; keep unambiguous
 
-def select_enzyme_combined(roles, ec_entries):
+def search_roles_by_feature(partial, full_roles):
+    """Sam's request: find roles whose feature lists contain the partial as a
+    substring. Returns a list of unique role names (preserving first-match order)."""
+    p = partial.lower()
+    seen = set()
+    out = []
+    for entry in full_roles:
+        role = entry.get("role")
+        feats = entry.get("features", []) or []
+        if not isinstance(feats, list):
+            continue
+        for f in feats:
+            if p in str(f).lower():
+                if role not in seen:
+                    seen.add(role)
+                    out.append((role, str(f)))
+                break
+    return out
+
+def select_enzyme_combined(roles, ec_entries, full_roles):
     print("\n" + "="*70)
-    print("ENZYME SEARCH (PlantSEED + Expasy)")
+    print("ENZYME SEARCH  (PlantSEED name + Expasy + by-feature substring)")
     print("="*70)
+    print("Tip: type a gene id (e.g. AT3G30775) to find roles that already carry it.")
     while True:
-        partial = input("Type enzyme name (at least 5 letters): ").strip()
-        if len(partial) < 5:
-            print("Please enter at least 5 letters for search.")
+        partial = input("Type 3+ chars (enzyme name OR gene/feature substring): ").strip()
+        if len(partial) < 3:
+            print("Please enter at least 3 characters.")
             continue
         plantseed_matches = fuzzy_match(partial, roles)
         expasy_all = fuzzy_match(partial, ec_entries) if ec_entries else []
         expasy_matches = expasy_all[:EXPASY_DISPLAY_LIMIT]
-        if not plantseed_matches and not expasy_matches:
-            retry = input("No matches found. (r)etry, (n)ovel enzyme: ").strip().lower()
+        feature_all = search_roles_by_feature(partial, full_roles)
+        # Drop roles already in plantseed_matches (the by-name hits) to avoid duplication.
+        feature_matches = [(r, f) for r, f in feature_all if r not in plantseed_matches][:FEATURE_DISPLAY_LIMIT]
+
+        if not plantseed_matches and not expasy_matches and not feature_matches:
+            retry = input("No matches. (r)etry, (n)ovel enzyme: ").strip().lower()
             if retry == 'n':
                 name = input("Enter full name for the new enzyme: ").strip()
                 if name:
                     return name, True
             continue
-        print("\nPlantSEED Enzymes:")
-        print("-"*50)
-        for i, match in enumerate(plantseed_matches):
-            print(f"{i+1} | {match}")
+        if plantseed_matches:
+            print("\nPlantSEED enzymes (by name):")
+            print("-"*60)
+            for i, match in enumerate(plantseed_matches):
+                print(f"  {i+1:>2} | {match}")
         if expasy_matches:
-            print("\nExpasy Enzymes:")
-            print("-"*50)
+            print("\nExpasy enzymes:")
+            print("-"*60)
             for i, match in enumerate(expasy_matches):
-                print(f"{chr(97+i)} | {match}")
+                print(f"  {chr(97+i):>2} | {match}")
             if len(expasy_all) > EXPASY_DISPLAY_LIMIT:
-                print(f"... and {len(expasy_all) - EXPASY_DISPLAY_LIMIT} more Expasy matches (refine your search to see them).")
-        print("-"*50)
-        selection = input("Select enzyme (number/letter, (r)etry, (n)ovel enzyme): ").strip().lower()
+                print(f"     +{len(expasy_all) - EXPASY_DISPLAY_LIMIT} more Expasy matches (refine to see).")
+        if feature_matches:
+            print("\nRoles carrying a feature matching your query:")
+            print("-"*60)
+            for i, (role, feat) in enumerate(feature_matches):
+                print(f"  f{i+1} | {role}")
+                print(f"       └── feature: {feat}")
+            if len(feature_all) > FEATURE_DISPLAY_LIMIT:
+                print(f"     +{len(feature_all) - FEATURE_DISPLAY_LIMIT} more by-feature matches (refine to see).")
+        print("-"*60)
+        selection = input("Select (#, letter, f# for by-feature, (r)etry, (n)ovel): ").strip().lower()
         if selection == 'r':
             continue
         if selection == 'n':
             name = input("Enter full name for the new enzyme: ").strip()
             if name:
                 return name, True
+            continue
+        if selection.startswith('f') and selection[1:].isdigit():
+            idx = int(selection[1:]) - 1
+            if 0 <= idx < len(feature_matches):
+                selected = feature_matches[idx][0]
+                print(f"Selected (by-feature): {selected}")
+                return selected, False
+            print("Invalid by-feature selection.")
             continue
         if selection.isdigit():
             idx = int(selection) - 1
@@ -271,12 +310,11 @@ def select_enzyme_combined(roles, ec_entries):
                 if already_in_plantseed:
                     print("(This enzyme is already in PlantSEED.)")
                     return selected, False
-                else:
-                    print("WARNING: This enzyme is not in PlantSEED and will create a new entry.")
-                    return selected, True
+                print("WARNING: not in PlantSEED — will create a new entry.")
+                return selected, True
             print("Invalid letter selection.")
         else:
-            print("Please enter a number, letter, 'r' to retry, or 'n' for a novel enzyme.")
+            print("Use a number (PlantSEED), letter (Expasy), f# (by-feature), r, or n.")
 
 def prompt_required(prompt_text):
     while True:
@@ -310,17 +348,47 @@ def get_target_file(username):
                 return target_file
             print("Enter a different filename.")
 
+# ModelSEED plant compartment IDs (from ModelSEEDTemplates Plant/Compartments.tsv,
+# minus the trailing "0"). Letters skipped: h, o, p, q.
+COMPARTMENTS = [
+    ("a", "Carboxysome"),         ("b", "Plasma Membrane"),
+    ("c", "Cytosol"),             ("d", "Stroma"),
+    ("e", "Extracellular"),       ("f", "ER Membrane"),
+    ("g", "Golgi"),               ("i", "Mitochondria outer membrane"),
+    ("j", "Mitochondria intermembrane"), ("k", "Mitochondria inner membrane"),
+    ("l", "Lysosome"),            ("m", "Mitochondria"),
+    ("n", "Nucleus"),             ("r", "Endoplasmic Reticulum"),
+    ("s", "Plastidial outer membrane"), ("t", "Plastidial intermembrane"),
+    ("u", "Plastidial inner membrane"), ("v", "Vacuole"),
+    ("w", "Cell Wall"),           ("x", "Peroxisome"),
+    ("y", "Thylakoid"),           ("z", "Thylakoid Lumen"),
+]
+COMPARTMENT_IDS = {c for c, _ in COMPARTMENTS}
+DEFAULT_COMPARTMENT = "c"   # used when a curator skips the localization extra
+
+def print_compartments():
+    print("\n  Compartments:")
+    cols = 2
+    pairs = [f"{cid}={name}" for cid, name in COMPARTMENTS]
+    width = max(len(p) for p in pairs) + 4
+    for i in range(0, len(pairs), cols):
+        print("    " + "".join(p.ljust(width) for p in pairs[i:i+cols]))
+    print()
+
 # Per-field guidance for the "extra" column on multi-column ADD entries.
 # Mirrors the parsing in Update_Enzymes_in_PlantSEED.py.
+# NOTE per Sam Seaver: localization extras for features/reactions are OPTIONAL.
+# When omitted, Update_Enzymes_in_PlantSEED.py defaults the compartment to 'c'
+# (cytosol) with source 'Assumed'. The curator is warned at prompt time.
 MULTI_COL_FIELDS = {
     "features": {
         "primary_label": "feature ID (e.g. Athaliana_TAIR10||AT3G30775)",
-        "extra_label": "compartment:locus_code (e.g. c:1) - REQUIRED so localization can be filled in",
-        "extra_required": True,
+        "extra_label": "compartment:source (e.g. c:PPDB) - OPTIONAL; blank assumes c:Assumed",
+        "extra_required": False,
     },
     "reactions": {
         "primary_label": "reaction ID (e.g. rxn00001)",
-        "extra_label": "compartment letter (e.g. c, p, d) - leave blank if no compartment data",
+        "extra_label": "compartment letter (e.g. c, p, d) - OPTIONAL; blank assumes c",
         "extra_required": False,
     },
     "subsystems": {
@@ -346,6 +414,10 @@ def handle_add(entity, full_roles):
     lines = []
     if field in MULTI_COL_FIELDS:
         cfg = MULTI_COL_FIELDS[field]
+        # For features/reactions, show the compartment legend once so curators
+        # know what compartment letters mean before they fill in the extra column.
+        if field in ("features", "reactions"):
+            print_compartments()
         print(f"\nAdding {field}. Enter a blank value when prompted for the primary {field[:-1]} to finish.")
         while True:
             value = input(f"Enter {cfg['primary_label']}: ").strip()
@@ -358,8 +430,25 @@ def handle_add(entity, full_roles):
                 matches = find_substring_match(full_roles, "features", value, exclude=entity)
                 _print_cross_ref(value, matches, "matches features in other role(s)")
             extra = input(f"Enter {cfg['extra_label']}: ").strip()
-            if not extra and cfg["extra_required"]:
+            # Per Sam: localization is OPTIONAL for features/reactions; warn the curator
+            # that the Update script will assume compartment 'c' when left blank.
+            if not extra and field in ("features", "reactions"):
+                print(f"  Note: no localization given for '{value}' — "
+                      f"compartment will be assumed '{DEFAULT_COMPARTMENT}' (cytosol) "
+                      f"by Update_Enzymes_in_PlantSEED.py.")
+            elif not extra and cfg["extra_required"]:
                 print(f"  Warning: no {field} extra given; the Update script may not be able to populate dependent fields.")
+            # Light syntactic validation for features extras so c0:PPDB or 'cytosol:PPDB'
+            # don't sneak through. Compartments are single letters.
+            if extra and field == "features":
+                if ":" not in extra:
+                    print(f"  Warning: '{extra}' has no ':' — expected 'compartment:source' (e.g. c:PPDB).")
+                else:
+                    cpt = extra.split(":", 1)[0]
+                    if cpt not in COMPARTMENT_IDS:
+                        print(f"  Warning: compartment '{cpt}' is not a known ModelSEED plant compartment letter.")
+            if extra and field == "reactions" and extra not in COMPARTMENT_IDS:
+                print(f"  Warning: '{extra}' is not a known compartment letter — see the legend above.")
             if extra:
                 lines.append(f"{entity}\tADD\t{field}\t{value}\t{extra}")
             else:
@@ -563,30 +652,44 @@ def main():
     print()
 
     total_actions = 0
+    # Outer loop: each iteration picks an enzyme. Inner loop: keep doing actions
+    # on that same enzyme (Sam's request — don't make the curator re-search every
+    # time) until they explicitly say to switch or quit.
     while True:
-        result = select_enzyme_combined(roles, ec_entries)
+        result = select_enzyme_combined(roles, ec_entries, full_roles)
         if result is None:
             print("No enzyme selected.")
             break
-
         entity, is_new_enzyme = result
         print()
-
         if not is_new_enzyme:
             check_required_fields(entity, full_roles, schema)
 
-        action = select_action(is_new_enzyme)
-        lines = run_action(action, entity, full_roles)
-
-        if lines:
-            append_rows(target_file, lines)
-            total_actions += 1
-        else:
-            print("No rows generated for this action.")
-
-        again = input("\nWould you like to record another action? (y/n): ").strip().lower()
-        if again != 'y':
-            break
+        while True:
+            print(f"\n--- Working on enzyme: {entity} ---")
+            action = select_action(is_new_enzyme)
+            lines = run_action(action, entity, full_roles)
+            if lines:
+                append_rows(target_file, lines)
+                total_actions += 1
+            else:
+                print("No rows generated for this action.")
+            # After the first action on a NEW enzyme, treat further actions as
+            # acting on an existing record (so NEW isn't offered again).
+            is_new_enzyme = False
+            next_step = numbered_select("What next?", [
+                f"Another action on '{entity[:50] + ('...' if len(entity) > 50 else '')}'",
+                "Switch to a different enzyme",
+                "Done — exit",
+            ])
+            if next_step.startswith("Switch"):
+                break
+            if next_step.startswith("Done"):
+                if total_actions == 0:
+                    print("No actions recorded.")
+                    sys.exit(1)
+                print(f"\nDone. Recorded {total_actions} action(s) into {target_file}")
+                return
 
     if total_actions == 0:
         print("No actions recorded.")

@@ -271,12 +271,27 @@ def apply_actions(roles_list, actions, input_file, issues=None):
 					if input_value not in entry[field]:
 						entry[field].append(input_value)
 
-					# Feature → localization cascade. Localization col is OPTIONAL —
-					# omit silently if not given. If given, it MUST be "compartment:code".
+					# Feature → localization cascade.
+					# Per Sam Seaver: localization is OPTIONAL. When omitted (raw == 1)
+					# default to compartment 'c' (cytosol) with source 'Assumed' and warn
+					# so the curator knows the assumption was made.
 					if field == 'features':
 						raw = add_dict[entry['role']][field][input_value]
 						if raw == 1:
-							pass  # no localization provided — optional, skip cascade
+							cpt, code = 'c', 'Assumed'
+							msg = (
+								f"feature '{input_value}' on role '{entry['role']}': "
+								f"no localization given — defaulted to compartment '{cpt}' "
+								f"(cytosol) with source '{code}'"
+							)
+							if issues is not None:
+								issues.warn(msg)
+							else:
+								print(f"[WARN] {msg}")
+							if cpt in entry['localization']:
+								entry['localization'][cpt][input_value] = [code]
+							else:
+								entry['localization'][cpt] = {input_value: [code]}
 						elif ':' not in raw:
 							msg = (
 								f"feature '{input_value}' for role '{entry['role']}': "
@@ -309,11 +324,23 @@ def apply_actions(roles_list, actions, input_file, issues=None):
 								entry['classes'][sys_cls] = dict()
 							entry['classes'][sys_cls][input_value] = []
 
-					# Reaction → localization cascade (assumed compartment).
+					# Reaction → localization cascade.
+					# Per Sam Seaver: when the curator omits the compartment column we
+					# default to 'c' (cytosol) and warn rather than skipping silently.
 					if field == 'reactions':
-						if add_dict[entry['role']][field][input_value] == 1:
-							continue
-						cpt = add_dict[entry['role']][field][input_value]
+						v = add_dict[entry['role']][field][input_value]
+						if v == 1:
+							cpt = 'c'
+							msg = (
+								f"reaction '{input_value}' on role '{entry['role']}': "
+								f"no compartment given — defaulted to '{cpt}' (cytosol)"
+							)
+							if issues is not None:
+								issues.warn(msg)
+							else:
+								print(f"[WARN] {msg}")
+						else:
+							cpt = v
 						if 'localization' not in entry:
 							entry['localization'] = dict()
 						if cpt not in entry['localization']:
