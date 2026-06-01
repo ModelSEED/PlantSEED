@@ -33,14 +33,20 @@ TYPE_MAP = {
 
 # Minimum column count (including the enzyme and action columns) for each action.
 ACTION_MIN_COLS = {
-	'UPDATE':   3,  # enzyme  UPDATE  new_name
+	'UPDATE':   3,  # enzyme  UPDATE   new_name
 	'NEW':      2,  # enzyme  NEW
-	'ADD':      4,  # enzyme  ADD     field  entry  [extra]
-	'REMOVE':   4,  # enzyme  REMOVE  field  entry
-	'RELOCATE': 5,  # enzyme  RELOCATE  field  old  new
-	'CHANGE':   4,  # enzyme  CHANGE  field  value
-	'ASSIGN':   4,  # enzyme  ASSIGN  field  value
+	'ADD':      4,  # enzyme  ADD      field  entry  [extra]
+	'REMOVE':   4,  # enzyme  REMOVE   field  entry
+	'RELOCATE': 5,  # enzyme  RELOCATE field  old   new
+	'REASSIGN': 4,  # enzyme  REASSIGN field  value
+	'ASSIGN':   4,  # DEPRECATED alias of REASSIGN
+	'CHANGE':   4,  # DEPRECATED alias of REASSIGN
 }
+
+# Old action names that are now aliased onto REASSIGN. Curators using these
+# still get the expected behaviour; a single end-of-parse warning per name
+# tells them to switch.
+DEPRECATED_REASSIGN_ALIASES = ('ASSIGN', 'CHANGE')
 
 
 def parse_tsv(path, schema=None, issues=None):
@@ -49,14 +55,14 @@ def parse_tsv(path, schema=None, issues=None):
 	Reports problems (unknown actions, malformed lines, unknown field names) to `issues`
 	when supplied. Non-restrictive: bad lines are skipped, good lines still parsed."""
 	actions = {
-		'replace': dict(),   # UPDATE: rename old role -> new role
-		'new':     list(),   # NEW: empty role to add
-		'add':     dict(),   # ADD: append to list/dict fields
-		'rem':     dict(),   # REMOVE: drop from list/dict fields
-		'key':     dict(),   # RELOCATE: rekey a dict entry
-		'change':  dict(),   # CHANGE: set a scalar field
-		'assign':  dict(),   # ASSIGN: set a scalar field
+		'replace':  dict(),   # UPDATE: rename old role -> new role
+		'new':      list(),   # NEW: empty role to add
+		'add':      dict(),   # ADD: append to list/dict fields
+		'rem':      dict(),   # REMOVE: drop from list/dict fields
+		'key':      dict(),   # RELOCATE: rekey a dict entry
+		'reassign': dict(),   # REASSIGN (and the deprecated ASSIGN/CHANGE aliases): set a scalar field
 	}
+	deprecated_alias_counts = {name: 0 for name in DEPRECATED_REASSIGN_ALIASES}
 
 	def _check_field(field, lineno):
 		if schema is not None and field not in schema and issues is not None:
@@ -148,23 +154,28 @@ def parse_tsv(path, schema=None, issues=None):
 					actions['key'][enzyme][field] = dict()
 				actions['key'][enzyme][field][entry] = new_entry
 
-			# CHANGE: set a scalar field (abstract_enzyme, include, ...).
-			elif action == "CHANGE":
+			# REASSIGN: set a scalar field (abstract_enzyme, type, ...).
+			# ASSIGN and CHANGE are deprecated aliases — they route to the same
+			# bucket so existing TSVs keep working.
+			elif action in ("REASSIGN",) + DEPRECATED_REASSIGN_ALIASES:
 				field = tmp_lst[2]
 				entry = tmp_lst[3]
 				_check_field(field, lineno)
-				if enzyme not in actions['change']:
-					actions['change'][enzyme] = dict()
-				actions['change'][enzyme][field] = entry
+				if enzyme not in actions['reassign']:
+					actions['reassign'][enzyme] = dict()
+				actions['reassign'][enzyme][field] = entry
+				if action in DEPRECATED_REASSIGN_ALIASES:
+					deprecated_alias_counts[action] += 1
 
-			# ASSIGN: set a scalar field (include, type, ...).
-			elif action == "ASSIGN":
-				field = tmp_lst[2]
-				entry = tmp_lst[3]
-				_check_field(field, lineno)
-				if enzyme not in actions['assign']:
-					actions['assign'][enzyme] = dict()
-				actions['assign'][enzyme][field] = entry
+	# Single end-of-parse warning per deprecated alias actually used.
+	if issues is not None:
+		for old_name in DEPRECATED_REASSIGN_ALIASES:
+			count = deprecated_alias_counts[old_name]
+			if count:
+				issues.warn(
+					f"action '{old_name}' is deprecated — please use 'REASSIGN' instead "
+					f"({count} occurrence(s) in this file; behaviour is unchanged)"
+				)
 
 	return actions
 
@@ -206,8 +217,9 @@ def seed_new_entries(roles_list, new_list, schema, actions=None, issues=None):
 	together before aborting (vs. the original single-collision sys.exit).
 
 	abstract_enzyme is required; if the TSV doesn't set it explicitly via
-	ASSIGN/CHANGE, default it to the role name with any " (EC ...)" suffix
-	stripped, and warn the curator that this default was used."""
+	REASSIGN (or its deprecated ASSIGN/CHANGE aliases), default it to the
+	role name with any " (EC ...)" suffix stripped, and warn the curator
+	that this default was used."""
 	existing = {entry['role'] for entry in roles_list}
 	collisions = [new for new in new_list if new in existing]
 	if collisions:
@@ -224,14 +236,13 @@ def seed_new_entries(roles_list, new_list, schema, actions=None, issues=None):
 		new_role['abstract_enzyme'] = new.split(' (EC')[0]
 
 		explicit_abstract = actions is not None and (
-			'abstract_enzyme' in actions.get('change', {}).get(new, {})
-			or 'abstract_enzyme' in actions.get('assign', {}).get(new, {})
+			'abstract_enzyme' in actions.get('reassign', {}).get(new, {})
 		)
 		if not explicit_abstract and issues is not None:
 			issues.warn(
 				f"NEW role '{new}': abstract_enzyme not provided — "
 				f"defaulting to '{new_role['abstract_enzyme']}' (role name with EC stripped). "
-				f"Set it explicitly with an ASSIGN row if a different value is wanted."
+				f"Set it explicitly with a REASSIGN row if a different value is wanted."
 			)
 
 		roles_list.append(new_role)
@@ -240,12 +251,11 @@ def seed_new_entries(roles_list, new_list, schema, actions=None, issues=None):
 def apply_actions(roles_list, actions, input_file, issues=None):
 	"""Apply parsed actions to roles_list in place.
 	Returns (touched_role_names, rename_map old->new)."""
-	replace_dict = actions['replace']
-	add_dict     = actions['add']
-	rem_dict     = actions['rem']
-	key_dict     = actions['key']
-	change_dict  = actions['change']
-	assign_dict  = actions['assign']
+	replace_dict  = actions['replace']
+	add_dict      = actions['add']
+	rem_dict      = actions['rem']
+	key_dict      = actions['key']
+	reassign_dict = actions['reassign']
 
 	touched = set()
 	rename_map = dict()
@@ -322,9 +332,9 @@ def apply_actions(roles_list, actions, input_file, issues=None):
 
 			updated_role = True
 
-		if entry['role'] in assign_dict:
-			for field in assign_dict[entry['role']]:
-				entry[field] = assign_dict[entry['role']][field]
+		if entry['role'] in reassign_dict:
+			for field in reassign_dict[entry['role']]:
+				entry[field] = reassign_dict[entry['role']][field]
 			updated_role = True
 
 		# RELOCATE: rekey within a dict field; cascade into compartmentalization.
@@ -376,11 +386,6 @@ def apply_actions(roles_list, actions, input_file, issues=None):
 						for cpt in delete_cpts:
 							del entry['localization'][cpt]
 
-			updated_role = True
-
-		if entry['role'] in change_dict:
-			for field in change_dict[entry['role']]:
-				entry[field] = change_dict[entry['role']][field]
 			updated_role = True
 
 		if updated_role:
@@ -531,12 +536,12 @@ def main():
 		roles_list = json.load(f)
 
 	# Warn if any action targets a role name that doesn't exist in the database.
-	# UPDATE/ADD/REMOVE/RELOCATE/CHANGE/ASSIGN all key off an existing role name.
+	# UPDATE/ADD/REMOVE/RELOCATE/REASSIGN all key off an existing role name.
 	# Include NEW roles too — they'll exist after seed_new_entries, so ADDs that
 	# follow a NEW in the same TSV are valid.
 	known_roles = {entry['role'] for entry in roles_list} | set(actions['new'])
 	bucket_to_action = {'replace': 'UPDATE', 'add': 'ADD', 'rem': 'REMOVE',
-	                    'key': 'RELOCATE', 'change': 'CHANGE', 'assign': 'ASSIGN'}
+	                    'key': 'RELOCATE', 'reassign': 'REASSIGN'}
 	for bucket, action_name in bucket_to_action.items():
 		for role_name in actions[bucket]:
 			if role_name not in known_roles:
