@@ -107,7 +107,18 @@ print("Loading biochemistry "+time_string)
 ## Load Biochemistry
 ############################
 msd_base_url = f"https://api.github.com/repos/ModelSEED/ModelSEEDDatabase/contents/Biochemistry"
-msd_branch = "dev" # could be commit?
+# Pinned to a specific commit on ModelSEEDDatabase/dev so the generated
+# template stays reproducible while Sam works on reversibility upstream.
+# This is the commit immediately BEFORE 6a3813875f (2026-05-29 "Run
+# Estimate_Reaction_Reversibility.py to refresh stored reversibility"),
+# so reaction directions match what they were prior to that refresh.
+# Bump this when ready to pick up newer biochemistry; setting it back to
+# "dev" tracks the moving branch tip (and re-introduces unpinned drift).
+MSD_PINNED_COMMIT = "465b7116c18ba99af83ee38589a30c32e69510f6"  # 2026-05-06
+msd_branch = MSD_PINNED_COMMIT
+print(f"WARNING: ModelSEED biochemistry pinned to {MSD_PINNED_COMMIT[:10]} "
+      f"(2026-05-06) — NOT the dev branch tip. Update MSD_PINNED_COMMIT "
+      f"in Generate_Core_ModelTemplate.py to refresh.")
 
 print("Warning: Add MSD as submodule!")
 if(os.path.isdir('Biochem_Cache') is False):
