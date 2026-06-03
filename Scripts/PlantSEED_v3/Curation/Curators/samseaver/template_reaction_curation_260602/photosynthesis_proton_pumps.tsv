@@ -10,10 +10,11 @@
 # Schema:  enzyme \t action \t field \t value \t [extra_1] \t [extra_2]
 #
 # Actions used here:
-#   ASSIGN direction <dir>          - sets the reaction direction (existing)
-#   UPDATE stoichiometry cpd coeff  - upserts an existing reagent's coefficient (existing)
-#   ADD    reagent cpd coeff [cpt]  - PROPOSED: appends a brand-new reagent;
-#                                     blank cpt = reaction's home compartment
+#   REASSIGN direction <dir>          - sets the reaction direction (existing
+#                                       — canonical verb; supersedes ASSIGN/CHANGE)
+#   UPDATE stoichiometry cpd coeff    - upserts an existing reagent's coefficient (existing)
+#   ADD      reagent cpd coeff [cpt]  - PROPOSED: appends a brand-new reagent;
+#                                       blank cpt = reaction's home compartment
 #
 # rxn20632_y is owned by two complexes (Photosystem II + Cytochrome b559); the
 # proton-pump additions should be applied wherever the reaction lands, so the

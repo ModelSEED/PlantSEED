@@ -9,13 +9,14 @@
 #   ADD       field  entry  [extra]                 append entry to a list/dict field
 #   REMOVE    field  entry                          drop entry from a list/dict field
 #   RELOCATE  field  old_key  new_key               rekey a dict entry
-#   ASSIGN    field  value                          set a scalar field (string-valued)
-#   CHANGE    field  value                          alias of ASSIGN — both do the same thing
-#                                                   (kept for backward compatibility)
+#   REASSIGN  field  value                          set a scalar field (string-valued)
+# The legacy actions ASSIGN and CHANGE are deprecated aliases of REASSIGN —
+# they still work for backward compatibility, but the script emits a single
+# deprecation warning per file when it sees them. New TSVs should use REASSIGN.
 
 # ---- 1. Create the role. NEW seeds all required schema fields with their defaults
 # ----    and derives `abstract_enzyme` from the part of the name before " (EC".
-# ----    Because no explicit `abstract_enzyme` ASSIGN row is given below, the
+# ----    Because no explicit `abstract_enzyme` REASSIGN row is given below, the
 # ----    script will warn that this default was used.
 Example dummy enzyme (EC 9.9.9.99)	NEW
 
@@ -44,11 +45,11 @@ Example dummy enzyme (EC 9.9.9.99)	ADD	reactions	rxn99999	c
 # ---- 5. Optional list-fields with no cascade.
 Example dummy enzyme (EC 9.9.9.99)	ADD	publications	10.9999/example.doi.0001
 
-# ---- 6. Scalar fields via ASSIGN (or its alias CHANGE). The value is stored
-# ----    as a string, so fields that need bool/int values (include,
-# ----    is_transporter, homomers) are best left at their schema defaults
-# ----    (true, false, 1) seeded by NEW.
-Example dummy enzyme (EC 9.9.9.99)	ASSIGN	type	conditional
+# ---- 6. Scalar fields via REASSIGN. The value is stored as a string, so
+# ----    fields that need bool/int values (include, is_transporter, homomers)
+# ----    are best left at their schema defaults (true, false, 1) seeded by
+# ----    NEW. The old ASSIGN and CHANGE actions are aliases of REASSIGN.
+Example dummy enzyme (EC 9.9.9.99)	REASSIGN	type	conditional
 
 # Fields filled automatically (no row needed):
 #   role               <- column 1 of the NEW row

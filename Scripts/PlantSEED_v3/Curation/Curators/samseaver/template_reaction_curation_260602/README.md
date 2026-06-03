@@ -27,12 +27,12 @@ with `#` are comments, blank lines ignored.
 
 | Action | Field | Columns 4+ | Existing? | Effect |
 |---|---|---|---|---|
-| `ASSIGN` | `direction` | `<dir>` (`>`, `<`, `=`) | yes | Set the catalysed reaction's direction. Lands in `complex.direction`. |
-| `ASSIGN` | `name` | `"display name"` | proposed | Set a human-readable name on a `NEW` reaction. Lands in `complex.template_only.name`. |
+| `REASSIGN` | `direction` | `<dir>` (`>`, `<`, `=`) | yes | Set the catalysed reaction's direction. Lands in `complex.direction`. Canonical verb — supersedes the deprecated `ASSIGN`/`CHANGE` aliases which still parse but emit a warning. |
+| `REASSIGN` | `name` | `"display name"` | proposed | Set a human-readable name on a `NEW` reaction. Lands in `complex.template_only.name`. |
 | `UPDATE` | `stoichiometry` | `<cpd> <coeff>` | yes (matches `proline_chemistry.tsv`) | Upsert into `complex.stoichiometry[<cpd>] = <coeff>`. Coefficient `0` removes the reagent at apply time. |
 | `ADD` | `reagent` | `<cpd> <coeff> [<cpt>]` | proposed | Append a brand-new reagent. Lands in a new `complex.reagent_additions` list (see below). Blank `<cpt>` = reaction's home compartment; cross-compartment reagents (e.g. lumen protons sourced from the stroma) require an explicit compartment. |
 | `REPLACE` | `compound` | `<old_cpd> <new_cpd>` | proposed | Substitute one compound for another wherever it appears in the catalysed reaction(s). Coefficients and compartments are preserved. Lands in a new `complex.compound_replacements` dict. |
-| `NEW` | `reaction` | `<synthetic_id> <home_cpt>` | proposed | Declare a brand-new template-only reaction with no underlying MS biochemistry. Lands in a new complex entry with `template_only: {...}`. Subsequent `ADD reagent` and `ASSIGN name` rows populate it. |
+| `NEW` | `reaction` | `<synthetic_id> <home_cpt>` | proposed | Declare a brand-new template-only reaction with no underlying MS biochemistry. Lands in a new complex entry with `template_only: {...}`. Subsequent `ADD reagent` and `REASSIGN name` rows populate it. |
 
 `UPDATE stoichiometry` does not have to be a NEW action — Sam's
 `proline_chemistry.tsv` already used that exact shape, so the new actions
@@ -41,7 +41,7 @@ the apply pipeline needs to understand.
 
 ## How each row lands in `PlantSEED_Complexes.json`
 
-### 1. `ASSIGN direction <dir>` — already supported
+### 1. `REASSIGN direction <dir>` — already supported (was `ASSIGN`, now canonical)
 
 Existing example near the bottom of the file (Proline dehydrogenase):
 

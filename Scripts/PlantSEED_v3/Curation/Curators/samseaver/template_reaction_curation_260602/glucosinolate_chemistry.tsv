@@ -10,7 +10,8 @@
 # Schema:  enzyme \t action \t field \t value \t [extra_1] \t [extra_2]
 #
 # Actions used here:
-#   ASSIGN direction <dir>             - sets the reaction direction (existing)
+#   REASSIGN direction <dir>           - sets the reaction direction (existing;
+#                                        canonical verb supersedes ASSIGN/CHANGE)
 #   UPDATE stoichiometry cpd coeff     - upserts coefficient; 0 to remove (existing)
 #   ADD    reagent cpd coeff [cpt]     - PROPOSED: append a brand-new reagent
 #   REPLACE compound  old_cpd new_cpd  - PROPOSED: substitute one compound for

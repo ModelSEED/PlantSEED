@@ -95,16 +95,36 @@ def test_relocate_localization_key(tmp_db, schema):
     assert role["localization"]["n"]["Athaliana_TAIR10||AT1G00010"] == ["PPDB"]
 
 
-def test_assign_bool_coerces_to_python_bool(tmp_db, schema):
-    tsv = "Alpha enzyme (EC 1.1.1.1)\tASSIGN\tinclude\tfalse\n"
+def test_reassign_bool_coerces_to_python_bool(tmp_db, schema):
+    tsv = "Alpha enzyme (EC 1.1.1.1)\tREASSIGN\tinclude\tfalse\n"
     A.run_apply(tsv, "tester", schema)
     roles = _reload_roles()
     role = _find(roles, "Alpha enzyme (EC 1.1.1.1)")
     assert role["include"] is False
 
 
-def test_dry_run_does_not_write(tmp_db, schema):
+def test_deprecated_assign_alias_still_applies(tmp_db, schema):
+    """Existing curator TSVs using ASSIGN keep working unchanged."""
     tsv = "Alpha enzyme (EC 1.1.1.1)\tASSIGN\tinclude\tfalse\n"
+    result = A.run_apply(tsv, "tester", schema)
+    roles = _reload_roles()
+    role = _find(roles, "Alpha enzyme (EC 1.1.1.1)")
+    assert role["include"] is False
+    assert any("'ASSIGN' is deprecated" in w for w in result["warnings"])
+
+
+def test_deprecated_change_alias_still_applies(tmp_db, schema):
+    """Existing curator TSVs using CHANGE keep working unchanged."""
+    tsv = "Alpha enzyme (EC 1.1.1.1)\tCHANGE\tabstract_enzyme\tAlpha2\n"
+    result = A.run_apply(tsv, "tester", schema)
+    roles = _reload_roles()
+    role = _find(roles, "Alpha enzyme (EC 1.1.1.1)")
+    assert role["abstract_enzyme"] == "Alpha2"
+    assert any("'CHANGE' is deprecated" in w for w in result["warnings"])
+
+
+def test_dry_run_does_not_write(tmp_db, schema):
+    tsv = "Alpha enzyme (EC 1.1.1.1)\tREASSIGN\tinclude\tfalse\n"
     A.run_apply(tsv, "tester", schema, dry_run=True)
     roles = _reload_roles()
     role = _find(roles, "Alpha enzyme (EC 1.1.1.1)")
@@ -118,7 +138,7 @@ def test_action_on_unknown_role_warns_skip(tmp_db, schema):
 
 
 def test_role_diffs_reported(tmp_db, schema):
-    tsv = "Alpha enzyme (EC 1.1.1.1)\tASSIGN\ttype\tconditional\n"
+    tsv = "Alpha enzyme (EC 1.1.1.1)\tREASSIGN\ttype\tconditional\n"
     result = A.run_apply(tsv, "tester", schema)
     assert len(result["role_diffs"]) == 1
     diff = result["role_diffs"][0]
@@ -128,7 +148,7 @@ def test_role_diffs_reported(tmp_db, schema):
 
 
 def test_preview_does_not_mutate_store(tmp_db, schema, store):
-    rows = ["Alpha enzyme (EC 1.1.1.1)\tASSIGN\ttype\tconditional"]
+    rows = ["Alpha enzyme (EC 1.1.1.1)\tREASSIGN\ttype\tconditional"]
     result = A.preview_for_enzyme(
         "Alpha enzyme (EC 1.1.1.1)", rows, schema, store
     )

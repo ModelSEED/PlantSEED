@@ -42,6 +42,7 @@ from .constants import (
     COMPARTMENTS,
     DEFAULT_COMPARTMENT,
     DEFAULT_LOC_SOURCE,
+    DEPRECATED_REASSIGN_ALIASES,
     EXIT_SHORTCUT,
     MULTI_COL_FIELDS,
     SCALAR_TYPES,
@@ -99,8 +100,8 @@ __all__ = [
     # constants
     "ACTION_DESCRIPTIONS", "ACTION_FIELDS", "ACTION_MIN_COLS", "ACTION_OPTIONS",
     "AUTO_POPULATED_FIELDS", "COMPARTMENT_IDS", "COMPARTMENTS",
-    "DEFAULT_COMPARTMENT", "DEFAULT_LOC_SOURCE", "EXIT_SHORTCUT",
-    "MULTI_COL_FIELDS", "SCALAR_TYPES",
+    "DEFAULT_COMPARTMENT", "DEFAULT_LOC_SOURCE", "DEPRECATED_REASSIGN_ALIASES",
+    "EXIT_SHORTCUT", "MULTI_COL_FIELDS", "SCALAR_TYPES",
     # curator_files
     "append_curator_file", "curator_dir_path", "delete_curator_file",
     "list_all_curators", "list_curator_files", "parse_tsv_to_rows",

@@ -76,21 +76,21 @@ def test_cli_add_features_produces_expected_tsv(tmp_db, store):
     )
 
 
-def test_cli_assign_bool_coerces(tmp_db, store):
+def test_cli_reassign_bool_coerces(tmp_db, store):
     answers = [
         USER,              # override GH username
         "include_off",     # filename
         "y",
         "Alpha",           # search
         "1",               # pick Alpha
-        "2",               # ASSIGN (CLI_ACTION_MENU index 2)
-        "1",               # field include
+        "2",               # REASSIGN (CLI_ACTION_MENU index 2)
+        "2",               # field include  (REASSIGN fields: abstract_enzyme, include, type, subcomplex_of)
         "no",              # value
         "3",               # Done
     ]
     _run_cli(answers, store)
     tsv_path = os.path.join(tmp_db["curators"], USER, "include_off.tsv")
-    assert open(tsv_path).read() == "Alpha enzyme (EC 1.1.1.1)\tASSIGN\tinclude\tFalse\n"
+    assert open(tsv_path).read() == "Alpha enzyme (EC 1.1.1.1)\tREASSIGN\tinclude\tFalse\n"
 
 
 def test_cli_new_enzyme_and_add_subsystem(tmp_db, store):

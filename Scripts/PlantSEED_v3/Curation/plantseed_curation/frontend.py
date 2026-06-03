@@ -368,9 +368,10 @@ button.btn.link:hover { text-decoration: underline; }
 .tag.REMOVE  { color: var(--bad);  border-color: var(--bad);  background: var(--bad-bg); }
 .tag.UPDATE  { color: var(--accent); border-color: var(--accent); background: var(--accent-bg); }
 .tag.NEW     { color: var(--new);  border-color: var(--new);  background: var(--new-bg); }
-.tag.CHANGE  { color: var(--accent); border-color: var(--accent); background: var(--accent-bg); }
-.tag.ASSIGN  { color: var(--accent); border-color: var(--accent); background: var(--accent-bg); }
-.tag.RELOCATE{ color: var(--warn); border-color: var(--warn); background: var(--warn-bg); }
+.tag.REASSIGN { color: var(--accent); border-color: var(--accent); background: var(--accent-bg); }
+.tag.CHANGE   { color: var(--accent); border-color: var(--accent); background: var(--accent-bg); }
+.tag.ASSIGN   { color: var(--accent); border-color: var(--accent); background: var(--accent-bg); }
+.tag.RELOCATE { color: var(--warn); border-color: var(--warn); background: var(--warn-bg); }
 
 /* ============================================================================
  * Search results
@@ -1497,7 +1498,7 @@ function renderActionBody() {
       <div class="field-error" data-err="new_name"></div>`;
     bindAutoPreview(); return;
   }
-  if (action === "CHANGE" || action === "ASSIGN") {
+  if (action === "REASSIGN" || action === "CHANGE" || action === "ASSIGN") {
     body.innerHTML = `<label>Field</label>
       <select id="payload-field">${meta.fields.map(f => `<option>${f}</option>`).join("")}</select>
       <div class="field-error" data-err="field"></div>
@@ -1615,7 +1616,7 @@ function gatherPayload() {
   if (action === "NEW") return {};
   if (action === "UPDATE") return { new_name: $("#payload-new_name")?.value || "" };
   const field = $("#payload-field")?.value;
-  if (action === "CHANGE" || action === "ASSIGN") return { field, value: $("#payload-value")?.value || "" };
+  if (action === "REASSIGN" || action === "CHANGE" || action === "ASSIGN") return { field, value: $("#payload-value")?.value || "" };
   if (action === "RELOCATE") return { field, old: $("#payload-old")?.value || "", new: $("#payload-new")?.value || "" };
   if (action === "ADD" || action === "REMOVE") {
     const entries = $$("#payload-entries .entry-row").map(div => {

@@ -15,7 +15,9 @@
 # Actions used here:
 #   NEW reaction <synthetic_id> <home_cpt>      - PROPOSED: declare a new
 #                                                  template-only reaction
-#   ASSIGN name "Display name"                  - PROPOSED: human-readable name
+#   REASSIGN name "Display name"                - PROPOSED: human-readable name
+#                                                  (canonical verb; supersedes
+#                                                  the deprecated ASSIGN/CHANGE)
 #   ADD    reagent cpd coeff <cpt>              - same as elsewhere, but here
 #                                                  compartment is REQUIRED
 #                                                  (no base reaction to inherit)
@@ -26,46 +28,46 @@
 # create a matching template-only complex entry (see README).
 
 Glucosinolate Transport (cpd00869)	NEW	reaction	glucosinolates_1	d
-Glucosinolate Transport (cpd00869)	ASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd00869)	REASSIGN	name	Glucosinolate Transport
 Glucosinolate Transport (cpd00869)	ADD	reagent	cpd00869	-1.0	c
 Glucosinolate Transport (cpd00869)	ADD	reagent	cpd00869	1.0	d
 
 Glucosinolate Transport (cpd17400)	NEW	reaction	glucosinolates_2	d
-Glucosinolate Transport (cpd17400)	ASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17400)	REASSIGN	name	Glucosinolate Transport
 Glucosinolate Transport (cpd17400)	ADD	reagent	cpd17400	-1.0	c
 Glucosinolate Transport (cpd17400)	ADD	reagent	cpd17400	1.0	d
 
 Glucosinolate Transport (cpd17403)	NEW	reaction	glucosinolates_3	d
-Glucosinolate Transport (cpd17403)	ASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17403)	REASSIGN	name	Glucosinolate Transport
 Glucosinolate Transport (cpd17403)	ADD	reagent	cpd17403	-1.0	c
 Glucosinolate Transport (cpd17403)	ADD	reagent	cpd17403	1.0	d
 
 Glucosinolate Transport (cpd17407)	NEW	reaction	glucosinolates_4	d
-Glucosinolate Transport (cpd17407)	ASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17407)	REASSIGN	name	Glucosinolate Transport
 Glucosinolate Transport (cpd17407)	ADD	reagent	cpd17407	-1.0	c
 Glucosinolate Transport (cpd17407)	ADD	reagent	cpd17407	1.0	d
 
 Glucosinolate Transport (cpd17411)	NEW	reaction	glucosinolates_5	d
-Glucosinolate Transport (cpd17411)	ASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17411)	REASSIGN	name	Glucosinolate Transport
 Glucosinolate Transport (cpd17411)	ADD	reagent	cpd17411	-1.0	c
 Glucosinolate Transport (cpd17411)	ADD	reagent	cpd17411	1.0	d
 
 Glucosinolate Transport (cpd17415)	NEW	reaction	glucosinolates_6	d
-Glucosinolate Transport (cpd17415)	ASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17415)	REASSIGN	name	Glucosinolate Transport
 Glucosinolate Transport (cpd17415)	ADD	reagent	cpd17415	-1.0	c
 Glucosinolate Transport (cpd17415)	ADD	reagent	cpd17415	1.0	d
 
 Glucosinolate Transport (cpd17419)	NEW	reaction	glucosinolates_7	d
-Glucosinolate Transport (cpd17419)	ASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17419)	REASSIGN	name	Glucosinolate Transport
 Glucosinolate Transport (cpd17419)	ADD	reagent	cpd17419	-1.0	c
 Glucosinolate Transport (cpd17419)	ADD	reagent	cpd17419	1.0	d
 
 Glucosinolate Transport (cpd17423)	NEW	reaction	glucosinolates_8	d
-Glucosinolate Transport (cpd17423)	ASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17423)	REASSIGN	name	Glucosinolate Transport
 Glucosinolate Transport (cpd17423)	ADD	reagent	cpd17423	-1.0	c
 Glucosinolate Transport (cpd17423)	ADD	reagent	cpd17423	1.0	d
 
 Glucosinolate Transport (cpd00506)	NEW	reaction	glucosinolates_9	d
-Glucosinolate Transport (cpd00506)	ASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd00506)	REASSIGN	name	Glucosinolate Transport
 Glucosinolate Transport (cpd00506)	ADD	reagent	cpd00506	-1.0	c
 Glucosinolate Transport (cpd00506)	ADD	reagent	cpd00506	1.0	d

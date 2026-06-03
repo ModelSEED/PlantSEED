@@ -63,7 +63,7 @@ def test_validate_endpoint_flags_missing_extra(http_client):
 
 def test_apply_dry_run_then_real(http_client):
     tsv = (
-        "Alpha enzyme (EC 1.1.1.1)\tASSIGN\ttype\tconditional\n"
+        "Alpha enzyme (EC 1.1.1.1)\tREASSIGN\ttype\tconditional\n"
     )
     code, dry = http_client("POST", "/api/apply",
                             {"user": "tester", "tsv": tsv, "dry_run": True})
@@ -87,10 +87,10 @@ def test_file_create_save_append_delete_round_trip(http_client):
     # append rows
     http_client("POST", "/api/file/append",
                 {"user": "vibhav", "name": "via_api.tsv",
-                 "rows": ["E\tNEW", "E\tASSIGN\ttype\tconditional"]})
+                 "rows": ["E\tNEW", "E\tREASSIGN\ttype\tconditional"]})
     # read back
     code, body = http_client("GET", "/api/file?user=vibhav&name=via_api.tsv")
-    assert body["content"].endswith("E\tASSIGN\ttype\tconditional\n")
+    assert body["content"].endswith("E\tREASSIGN\ttype\tconditional\n")
     # list
     code, body = http_client("GET", "/api/files?user=vibhav")
     names = [f["name"] for f in body["files"]]
@@ -111,7 +111,7 @@ def test_action_meta_lists_compartments(http_client):
 def test_preview_endpoint_shows_before_after(http_client):
     code, body = http_client("POST", "/api/preview", {
         "enzyme": "Alpha enzyme (EC 1.1.1.1)",
-        "rows": ["Alpha enzyme (EC 1.1.1.1)\tASSIGN\ttype\tconditional"],
+        "rows": ["Alpha enzyme (EC 1.1.1.1)\tREASSIGN\ttype\tconditional"],
     })
     assert body["before"]["type"] == "universal"
     assert body["after"]["type"] == "conditional"

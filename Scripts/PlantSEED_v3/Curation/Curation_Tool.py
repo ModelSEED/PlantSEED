@@ -46,7 +46,7 @@ from plantseed_curation.store import DataStore
 
 # Action vocabulary surfaced in the menu. NEW is added implicitly when the
 # curator picks a novel enzyme name.
-CLI_ACTION_MENU = ["ADD", "ASSIGN", "CHANGE", "RELOCATE", "REMOVE", "UPDATE"]
+CLI_ACTION_MENU = ["ADD", "REASSIGN", "RELOCATE", "REMOVE", "UPDATE"]
 
 EXPASY_DISPLAY_LIMIT = 26   # one letter a..z; keeps selection unambiguous
 FEATURE_DISPLAY_LIMIT = 9   # one digit 1..9 after the PlantSEED block
@@ -331,7 +331,7 @@ def collect_payload(console, store, entity, action):
         new = console.prompt_required("Enter new entry value: ")
         return {"field": field, "old": old, "new": new}
 
-    if action in ("CHANGE", "ASSIGN"):
+    if action == "REASSIGN":
         value = console.prompt_required("Enter new value: ")
         return {"field": field, "value": value}
 

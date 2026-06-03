@@ -79,20 +79,38 @@ def test_validate_add_already_present_warns(store):
     assert any("already on this role" in w for w in warns)
 
 
-def test_validate_assign_bool_rejects_garbage(store):
+def test_validate_reassign_bool_rejects_garbage(store):
     errs, _ = A.validate_payload(
-        "ASSIGN", "Alpha enzyme (EC 1.1.1.1)",
+        "REASSIGN", "Alpha enzyme (EC 1.1.1.1)",
         {"field": "include", "value": "maybe"}, store,
     )
     assert any("must be a boolean" in e["message"] for e in errs)
 
 
-def test_validate_change_field_not_in_action_fields_rejected(store):
+def test_validate_reassign_field_not_in_action_fields_rejected(store):
     errs, _ = A.validate_payload(
-        "CHANGE", "Alpha enzyme (EC 1.1.1.1)",
+        "REASSIGN", "Alpha enzyme (EC 1.1.1.1)",
         {"field": "features", "value": "x"}, store,
     )
     assert any("is not valid" in e["message"] for e in errs)
+
+
+def test_validate_deprecated_assign_alias_routes_and_warns(store):
+    errs, warns = A.validate_payload(
+        "ASSIGN", "Alpha enzyme (EC 1.1.1.1)",
+        {"field": "type", "value": "conditional"}, store,
+    )
+    assert errs == []
+    assert any("'ASSIGN' is deprecated" in w for w in warns)
+
+
+def test_validate_deprecated_change_alias_routes_and_warns(store):
+    errs, warns = A.validate_payload(
+        "CHANGE", "Alpha enzyme (EC 1.1.1.1)",
+        {"field": "abstract_enzyme", "value": "Alpha"}, store,
+    )
+    assert errs == []
+    assert any("'CHANGE' is deprecated" in w for w in warns)
 
 
 def test_validate_relocate_same_keys_error(store):
@@ -125,13 +143,23 @@ def test_build_add_features_with_and_without_extra(store):
     ]
 
 
-def test_build_assign_bool_coerces_value(store):
+def test_build_reassign_bool_coerces_value(store):
     rows, errs, _ = A.build_tsv_rows(
-        "ASSIGN", "Alpha enzyme (EC 1.1.1.1)",
+        "REASSIGN", "Alpha enzyme (EC 1.1.1.1)",
         {"field": "include", "value": "no"}, store,
     )
     assert errs == []
-    assert rows == ["Alpha enzyme (EC 1.1.1.1)\tASSIGN\tinclude\tFalse"]
+    assert rows == ["Alpha enzyme (EC 1.1.1.1)\tREASSIGN\tinclude\tFalse"]
+
+
+def test_build_canonicalises_deprecated_alias_to_reassign(store):
+    """Old verbs sent in by old code still produce canonical REASSIGN rows."""
+    rows, errs, _ = A.build_tsv_rows(
+        "ASSIGN", "Alpha enzyme (EC 1.1.1.1)",
+        {"field": "type", "value": "conditional"}, store,
+    )
+    assert errs == []
+    assert rows == ["Alpha enzyme (EC 1.1.1.1)\tREASSIGN\ttype\tconditional"]
 
 
 def test_build_relocate(store):
@@ -156,7 +184,7 @@ def test_build_update_renames(store):
 
 def test_build_returns_no_rows_when_validation_fails(store):
     rows, errs, _ = A.build_tsv_rows(
-        "ASSIGN", "Alpha enzyme (EC 1.1.1.1)",
+        "REASSIGN", "Alpha enzyme (EC 1.1.1.1)",
         {"field": "include", "value": "maybe"}, store,
     )
     assert rows == []
@@ -203,6 +231,32 @@ def test_parse_warns_when_field_not_in_schema(tmp_db):
     A.parse_tsv_text("E\tADD\tnonsense_field\tX\n",
                      schema=load_schema(), issues=issues)
     assert any("not in the schema" in w for w in issues.warnings)
+
+
+def test_parse_routes_deprecated_aliases_into_reassign_bucket():
+    """ASSIGN and CHANGE rows land in the same reassign bucket as REASSIGN."""
+    out = A.parse_tsv_text(
+        "E\tASSIGN\ttype\tconditional\n"
+        "F\tCHANGE\tabstract_enzyme\tFoo\n"
+        "G\tREASSIGN\tinclude\tTrue\n"
+    )
+    assert out["reassign"]["E"]["type"] == "conditional"
+    assert out["reassign"]["F"]["abstract_enzyme"] == "Foo"
+    assert out["reassign"]["G"]["include"] == "True"
+
+
+def test_parse_emits_one_warning_per_deprecated_alias_with_count():
+    issues = IssueCollector()
+    A.parse_tsv_text(
+        "E\tASSIGN\ttype\tconditional\n"
+        "F\tASSIGN\tinclude\tFalse\n"
+        "G\tCHANGE\tabstract_enzyme\tFoo\n",
+        issues=issues,
+    )
+    assign_warns = [w for w in issues.warnings if "'ASSIGN' is deprecated" in w]
+    change_warns = [w for w in issues.warnings if "'CHANGE' is deprecated" in w]
+    assert len(assign_warns) == 1 and "2 occurrence" in assign_warns[0]
+    assert len(change_warns) == 1 and "1 occurrence" in change_warns[0]
 
 
 # ---------- ADD ignores cascade-only fields ---------------------------------

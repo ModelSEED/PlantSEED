@@ -21,11 +21,22 @@ from .constants import (
     COMPARTMENT_IDS,
     DEFAULT_COMPARTMENT,
     DEFAULT_LOC_SOURCE,
+    DEPRECATED_REASSIGN_ALIASES,
     MULTI_COL_FIELDS,
     SCALAR_TYPES,
     TYPE_MAP,
     coerce_bool_str,
 )
+
+
+def _canonical_action(action):
+    """Map deprecated verbs onto their canonical replacements. Keeps
+    validate_payload / build_tsv_rows callers happy whether they pass
+    REASSIGN, ASSIGN, or CHANGE."""
+    a = (action or "").upper()
+    if a in DEPRECATED_REASSIGN_ALIASES:
+        return "REASSIGN"
+    return a
 from .identity import atomic_write
 from .schema import (
     IssueCollector,
@@ -44,9 +55,17 @@ def validate_payload(action, enzyme, payload, store):
     errors, warnings = [], []
     if not enzyme or not enzyme.strip():
         return [{"field": "enzyme", "message": "Enzyme name is required"}], warnings
-    action = action.upper()
+    raw_action = action.upper()
+    # Canonicalise deprecated verbs so the rest of validate_payload only has
+    # to know about REASSIGN. Warn the caller so the curator sees the deprecation.
+    action = _canonical_action(raw_action)
+    if raw_action in DEPRECATED_REASSIGN_ALIASES:
+        warnings.append(
+            f"action '{raw_action}' is deprecated — use 'REASSIGN' instead "
+            f"(behaviour is unchanged)"
+        )
     if action not in ACTION_OPTIONS:
-        return [{"field": "action", "message": f"Unknown action '{action}'"}], warnings
+        return [{"field": "action", "message": f"Unknown action '{raw_action}'"}], warnings
 
     if action == "NEW":
         if enzyme in store.role_index:
@@ -152,7 +171,7 @@ def validate_payload(action, enzyme, payload, store):
                 warnings.append(f"RELOCATE {field}: '{old}' is not currently a key in this role")
         return errors, warnings
 
-    if action in ("CHANGE", "ASSIGN"):
+    if action == "REASSIGN":
         value = (payload.get("value") or "").strip()
         if not value:
             return [{"field": "value", "message": "Value is required"}], warnings
@@ -172,7 +191,9 @@ def build_tsv_rows(action, enzyme, payload, store):
     if errors_struct:
         return [], errors_struct, warnings
     rows = []
-    action = action.upper()
+    # Always emit the canonical verb (REASSIGN) regardless of the alias
+    # the caller used; deprecation warning is surfaced via validate_payload.
+    action = _canonical_action(action)
     if action == "NEW":
         rows.append(f"{enzyme}\tNEW")
     elif action == "UPDATE":
@@ -194,14 +215,14 @@ def build_tsv_rows(action, enzyme, payload, store):
     elif action == "RELOCATE":
         field = payload["field"]
         rows.append(f"{enzyme}\tRELOCATE\t{field}\t{payload['old'].strip()}\t{payload['new'].strip()}")
-    elif action in ("CHANGE", "ASSIGN"):
+    elif action == "REASSIGN":
         field = payload["field"]
         value = (payload["value"] or "").strip()
         if SCALAR_TYPES.get(field) == "bool":
             coerced = coerce_bool_str(value)
             if coerced is not None:
                 value = coerced
-        rows.append(f"{enzyme}\t{action}\t{field}\t{value}")
+        rows.append(f"{enzyme}\tREASSIGN\t{field}\t{value}")
     return rows, [], warnings
 
 
@@ -210,9 +231,12 @@ def build_tsv_rows(action, enzyme, payload, store):
 # ----------------------------------------------------------------------------
 def parse_tsv_text(text, schema=None, issues=None):
     """Bucket TSV lines by action. Non-restrictive: bad lines are warned
-    and skipped, good lines are parsed."""
+    and skipped, good lines are parsed. ASSIGN/CHANGE are accepted as
+    deprecated aliases of REASSIGN; a single end-of-parse warning per
+    alias actually used is emitted so curators see a clear nudge."""
     actions = {"replace": {}, "new": [], "add": {}, "rem": {}, "key": {},
-               "change": {}, "assign": {}}
+               "reassign": {}}
+    deprecated_alias_counts = {name: 0 for name in DEPRECATED_REASSIGN_ALIASES}
 
     def _check_field(field, lineno):
         if schema is not None and field not in schema and issues is not None:
@@ -261,14 +285,21 @@ def parse_tsv_text(text, schema=None, issues=None):
             field, entry, new_entry = tmp_lst[2], tmp_lst[3], tmp_lst[4]
             _check_field(field, lineno)
             actions["key"].setdefault(enzyme, {}).setdefault(field, {})[entry] = new_entry
-        elif action == "CHANGE":
+        elif action == "REASSIGN" or action in DEPRECATED_REASSIGN_ALIASES:
             field, entry = tmp_lst[2], tmp_lst[3]
             _check_field(field, lineno)
-            actions["change"].setdefault(enzyme, {})[field] = entry
-        elif action == "ASSIGN":
-            field, entry = tmp_lst[2], tmp_lst[3]
-            _check_field(field, lineno)
-            actions["assign"].setdefault(enzyme, {})[field] = entry
+            actions["reassign"].setdefault(enzyme, {})[field] = entry
+            if action in DEPRECATED_REASSIGN_ALIASES:
+                deprecated_alias_counts[action] += 1
+
+    if issues is not None:
+        for old_name in DEPRECATED_REASSIGN_ALIASES:
+            count = deprecated_alias_counts[old_name]
+            if count:
+                issues.warn(
+                    f"action '{old_name}' is deprecated — please use 'REASSIGN' instead "
+                    f"({count} occurrence(s) in this file; behaviour is unchanged)"
+                )
     return actions
 
 
@@ -288,8 +319,7 @@ def seed_new_entries(roles_list, new_list, schema, actions=None, issues=None):
         new_role["role"] = new
         new_role["abstract_enzyme"] = new.split(" (EC")[0]
         explicit_abstract = actions is not None and (
-            "abstract_enzyme" in actions.get("change", {}).get(new, {})
-            or "abstract_enzyme" in actions.get("assign", {}).get(new, {})
+            "abstract_enzyme" in actions.get("reassign", {}).get(new, {})
         )
         if not explicit_abstract and issues is not None:
             issues.warn(
@@ -313,12 +343,11 @@ def _empty_for_field(field, schema):
 def apply_actions(roles_list, actions, curator, issues=None, schema=None):
     """Apply parsed actions to roles_list in place.
     Returns (touched_role_names, rename_map old->new)."""
-    replace_dict = actions["replace"]
-    add_dict     = actions["add"]
-    rem_dict     = actions["rem"]
-    key_dict     = actions["key"]
-    change_dict  = actions["change"]
-    assign_dict  = actions["assign"]
+    replace_dict  = actions["replace"]
+    add_dict      = actions["add"]
+    rem_dict      = actions["rem"]
+    key_dict      = actions["key"]
+    reassign_dict = actions["reassign"]
     touched, rename_map = set(), {}
 
     def coerce_value(field, val):
@@ -397,8 +426,8 @@ def apply_actions(roles_list, actions, curator, issues=None, schema=None):
                         ]
             updated_role = True
 
-        if entry["role"] in assign_dict:
-            for field, val in assign_dict[entry["role"]].items():
+        if entry["role"] in reassign_dict:
+            for field, val in reassign_dict[entry["role"]].items():
                 entry[field] = coerce_value(field, val)
             updated_role = True
 
@@ -444,11 +473,6 @@ def apply_actions(roles_list, actions, curator, issues=None, schema=None):
                                 delete_cpts.append(cpt)
                         for cpt in delete_cpts:
                             del entry["localization"][cpt]
-            updated_role = True
-
-        if entry["role"] in change_dict:
-            for field, val in change_dict[entry["role"]].items():
-                entry[field] = coerce_value(field, val)
             updated_role = True
 
         if updated_role:
@@ -501,7 +525,7 @@ def assign_kbase_id(entry, existing_ids, renamed_from=None, issues=None):
 
 def _known_roles_for_actions(actions):
     roles = set()
-    for bucket in ("replace", "add", "rem", "key", "change", "assign"):
+    for bucket in ("replace", "add", "rem", "key", "reassign"):
         roles.update(actions[bucket].keys())
     roles.update(actions["new"])
     roles.update(actions["replace"].keys())
@@ -529,7 +553,7 @@ def run_apply(tsv_text, curator, schema, dry_run=False, store=None, roles_path=N
 
     known_roles = {entry["role"] for entry in roles_list} | set(actions["new"])
     bucket_to_action = {"replace": "UPDATE", "add": "ADD", "rem": "REMOVE",
-                        "key": "RELOCATE", "change": "CHANGE", "assign": "ASSIGN"}
+                        "key": "RELOCATE", "reassign": "REASSIGN"}
     for bucket, action_name in bucket_to_action.items():
         for role_name in actions[bucket]:
             if role_name not in known_roles:

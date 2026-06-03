@@ -32,24 +32,34 @@ DEFAULT_LOC_SOURCE = "Assumed"
 
 
 # Curator-facing action vocabulary.
-ACTION_OPTIONS = ["ADD", "ASSIGN", "CHANGE", "RELOCATE", "REMOVE", "UPDATE", "NEW"]
+#
+# REASSIGN supersedes ASSIGN and CHANGE (ModelSEED/PlantSEED commit
+# b79bd7c, 2026-06-01). The two old verbs were doing the exact same thing
+# (`entry[field] = value`) and only differed in execution order; they are
+# now deprecated aliases that route into the same `reassign` bucket so
+# existing curator TSVs keep working. Curators get a single end-of-parse
+# warning per old name when one is encountered.
+ACTION_OPTIONS = ["ADD", "REASSIGN", "RELOCATE", "REMOVE", "UPDATE", "NEW"]
 ACTION_DESCRIPTIONS = {
     "ADD":      "Append entries to a list/dict field. For features/reactions, the extra column is optional — compartment defaults to 'c' (cytosol) with source 'Assumed'.",
-    "ASSIGN":   "Set a scalar field (include, type).",
-    "CHANGE":   "Set a scalar field (abstract_enzyme, include).",
+    "REASSIGN": "Set a scalar field (e.g. include, type, abstract_enzyme, subcomplex_of). Supersedes the deprecated ASSIGN and CHANGE verbs.",
     "RELOCATE": "Rekey an entry inside a dict field (localization, compartmentalization).",
     "REMOVE":   "Drop entries from a list/dict field.",
     "UPDATE":   "Rename an enzyme. Triggers a kbase_id rehash.",
     "NEW":      "Create a brand-new enzyme entry with schema defaults.",
 }
 
+# Old action names that are now aliased onto REASSIGN. parse_tsv_text accepts
+# them, routes into the `reassign` bucket, and issues one end-of-parse
+# warning per alias actually used in a file.
+DEPRECATED_REASSIGN_ALIASES = ("ASSIGN", "CHANGE")
+
 # Bug fix #2: localization/classes removed from ADD — they are cascade-only
 # (populated automatically from features/subsystems ADDs). Letting a curator
 # ADD them directly would mis-initialize the dict-typed field as a list.
 ACTION_FIELDS = {
     "ADD":      ["features", "publications", "reactions", "subsystems"],
-    "ASSIGN":   ["include", "type", "subcomplex_of"],
-    "CHANGE":   ["abstract_enzyme", "include"],
+    "REASSIGN": ["abstract_enzyme", "include", "type", "subcomplex_of"],
     "RELOCATE": ["localization", "compartmentalization"],
     "REMOVE":   ["features", "publications", "reactions", "subsystems", "localization", "classes"],
 }
@@ -86,9 +96,12 @@ SCALAR_TYPES = {
 }
 
 # Per-action minimum column count for a TSV line to parse (action included).
+# ASSIGN and CHANGE are kept here as deprecated aliases so the parser still
+# recognises them; they route into the same `reassign` bucket via
+# DEPRECATED_REASSIGN_ALIASES.
 ACTION_MIN_COLS = {
     "UPDATE": 3, "NEW": 2, "ADD": 4, "REMOVE": 4,
-    "RELOCATE": 5, "CHANGE": 4, "ASSIGN": 4,
+    "RELOCATE": 5, "REASSIGN": 4, "ASSIGN": 4, "CHANGE": 4,
 }
 
 TYPE_MAP = {"str": str, "bool": bool, "list": list, "dict": dict, "int": int, "float": float}
