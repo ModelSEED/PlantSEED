@@ -1,0 +1,73 @@
+# Glucosinolate-biosynthesis transport reactions
+# Source: Generate_Core_ModelTemplate.py lines 568-622 (hard-coded; lifted here)
+#
+# Nine BRAND-NEW reactions that aren't in the ModelSEED biochemistry; they
+# transport a single compound from cytosol (c) -> stroma (d). The original
+# code synthesises each at template-generation time with synthetic IDs
+# glucosinolates_1 .. glucosinolates_9.
+#
+# These don't fit the "modify an existing role/complex" pattern because there
+# is no role and no underlying MS reaction. To make them curator-managed we
+# need a NEW action that defines a brand-new template-only reaction.
+#
+# Schema:  enzyme \t action \t field \t value \t [extra_1] \t [extra_2]
+#
+# Actions used here:
+#   NEW reaction <synthetic_id> <home_cpt>      - PROPOSED: declare a new
+#                                                  template-only reaction
+#   REASSIGN name "Display name"                - PROPOSED: human-readable name
+#                                                  (canonical verb; supersedes
+#                                                  the deprecated ASSIGN/CHANGE)
+#   ADD    reagent cpd coeff <cpt>              - same as elsewhere, but here
+#                                                  compartment is REQUIRED
+#                                                  (no base reaction to inherit)
+#
+# Each block of three lines below defines one transport reaction. The "enzyme"
+# column carries a synthetic role name "Glucosinolate Transport (<cpd>)" so
+# the rows have a stable key for future re-curation; the apply pipeline will
+# create a matching template-only complex entry (see README).
+
+Glucosinolate Transport (cpd00869)	NEW	reaction	glucosinolates_1	d
+Glucosinolate Transport (cpd00869)	REASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd00869)	ADD	reagent	cpd00869	-1.0	c
+Glucosinolate Transport (cpd00869)	ADD	reagent	cpd00869	1.0	d
+
+Glucosinolate Transport (cpd17400)	NEW	reaction	glucosinolates_2	d
+Glucosinolate Transport (cpd17400)	REASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17400)	ADD	reagent	cpd17400	-1.0	c
+Glucosinolate Transport (cpd17400)	ADD	reagent	cpd17400	1.0	d
+
+Glucosinolate Transport (cpd17403)	NEW	reaction	glucosinolates_3	d
+Glucosinolate Transport (cpd17403)	REASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17403)	ADD	reagent	cpd17403	-1.0	c
+Glucosinolate Transport (cpd17403)	ADD	reagent	cpd17403	1.0	d
+
+Glucosinolate Transport (cpd17407)	NEW	reaction	glucosinolates_4	d
+Glucosinolate Transport (cpd17407)	REASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17407)	ADD	reagent	cpd17407	-1.0	c
+Glucosinolate Transport (cpd17407)	ADD	reagent	cpd17407	1.0	d
+
+Glucosinolate Transport (cpd17411)	NEW	reaction	glucosinolates_5	d
+Glucosinolate Transport (cpd17411)	REASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17411)	ADD	reagent	cpd17411	-1.0	c
+Glucosinolate Transport (cpd17411)	ADD	reagent	cpd17411	1.0	d
+
+Glucosinolate Transport (cpd17415)	NEW	reaction	glucosinolates_6	d
+Glucosinolate Transport (cpd17415)	REASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17415)	ADD	reagent	cpd17415	-1.0	c
+Glucosinolate Transport (cpd17415)	ADD	reagent	cpd17415	1.0	d
+
+Glucosinolate Transport (cpd17419)	NEW	reaction	glucosinolates_7	d
+Glucosinolate Transport (cpd17419)	REASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17419)	ADD	reagent	cpd17419	-1.0	c
+Glucosinolate Transport (cpd17419)	ADD	reagent	cpd17419	1.0	d
+
+Glucosinolate Transport (cpd17423)	NEW	reaction	glucosinolates_8	d
+Glucosinolate Transport (cpd17423)	REASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd17423)	ADD	reagent	cpd17423	-1.0	c
+Glucosinolate Transport (cpd17423)	ADD	reagent	cpd17423	1.0	d
+
+Glucosinolate Transport (cpd00506)	NEW	reaction	glucosinolates_9	d
+Glucosinolate Transport (cpd00506)	REASSIGN	name	Glucosinolate Transport
+Glucosinolate Transport (cpd00506)	ADD	reagent	cpd00506	-1.0	c
+Glucosinolate Transport (cpd00506)	ADD	reagent	cpd00506	1.0	d

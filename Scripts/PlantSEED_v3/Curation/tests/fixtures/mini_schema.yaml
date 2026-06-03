@@ -50,23 +50,3 @@ kbase_id:
   type: str
   default: ''
   required: false
-cofactors:
-  type: list
-  default: []
-  required: false
-predictions:
-  type: dict
-  default: {}
-  required: false
-sequences:
-  type: dict
-  default: {}
-  required: false
-homomers:
-  type: int
-  default: 1
-  required: false
-subcomplex_of:
-  type: str
-  default: ''
-  required: false

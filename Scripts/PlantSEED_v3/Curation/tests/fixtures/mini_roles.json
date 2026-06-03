@@ -1,0 +1,52 @@
+[
+    {
+        "role": "Alpha enzyme (EC 1.1.1.1)",
+        "include": true,
+        "subsystems": ["Alpha_subsystem"],
+        "classes": {"Carbohydrates": {"Alpha_subsystem": []}},
+        "features": ["Athaliana_TAIR10||AT1G00010"],
+        "reactions": ["rxn00001"],
+        "localization": {
+            "c": {"Athaliana_TAIR10||AT1G00010": ["PPDB"], "rxn00001": []}
+        },
+        "publications": ["10.0001/alpha"],
+        "kbase_id": "PS_role_alpha1",
+        "curators": ["alice"],
+        "type": "universal",
+        "is_transporter": false,
+        "abstract_enzyme": "Alpha enzyme"
+    },
+    {
+        "role": "Beta enzyme (EC 2.2.2.2)",
+        "include": true,
+        "subsystems": ["Beta_subsystem"],
+        "classes": {"Amino acids": {"Beta_subsystem": []}},
+        "features": ["Athaliana_TAIR10||AT2G00020", "Athaliana_TAIR10||AT2G00021"],
+        "reactions": ["rxn00002"],
+        "localization": {
+            "d": {"Athaliana_TAIR10||AT2G00020": ["PPDB"]},
+            "c": {"rxn00002": []}
+        },
+        "publications": [],
+        "kbase_id": "PS_role_beta22",
+        "curators": ["bob"],
+        "type": "conditional",
+        "is_transporter": false,
+        "abstract_enzyme": "Beta enzyme"
+    },
+    {
+        "role": "Gamma transporter (EC 3.3.3.3)",
+        "include": true,
+        "subsystems": ["Gamma_transport"],
+        "classes": {"Transport": {"Gamma_transport": []}},
+        "features": [],
+        "reactions": ["rxn00003"],
+        "localization": {"b": {"rxn00003": []}},
+        "publications": [],
+        "kbase_id": "PS_role_gamma3",
+        "curators": [],
+        "type": "universal",
+        "is_transporter": true,
+        "abstract_enzyme": "Gamma transporter"
+    }
+]

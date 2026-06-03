@@ -6291,7 +6291,8 @@
         ],
         "type": "universal",
         "is_transporter": false,
-        "abstract_enzyme": "Aminomethyltransferase"
+        "abstract_enzyme": "Aminomethyltransferase",
+        "subcomplex_of": "PS_complex_32252b"
     },
     {
         "role": "Ammonia transport",
@@ -9827,7 +9828,8 @@
         ],
         "type": "universal",
         "is_transporter": true,
-        "abstract_enzyme": "Cytochrome b559"
+        "abstract_enzyme": "Cytochrome b559",
+        "subcomplex_of": "PS_complex_385743"
     },
     {
         "role": "Cytochrome b559 beta chain PsbF",
@@ -9873,7 +9875,8 @@
         ],
         "type": "universal",
         "is_transporter": true,
-        "abstract_enzyme": "Cytochrome b559"
+        "abstract_enzyme": "Cytochrome b559",
+        "subcomplex_of": "PS_complex_385743"
     },
     {
         "role": "Cytochrome b6-f complex PetC, Rieske iron-sulfur protein (EC 7.1.1.6)",

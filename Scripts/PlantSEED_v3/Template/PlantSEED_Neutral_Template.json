@@ -6546,9 +6546,9 @@
             "name": "Stearoyl-[acyl-carrier protein]",
             "abbreviation": "cll_430",
             "aliases": [],
-            "formula": "C29H60N3O8PR2S",
+            "formula": "C29H55N2O8PRS",
             "isCofactor": 0,
-            "defaultCharge": 0.0,
+            "defaultCharge": -2.0,
             "mass": 300.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -27588,8 +27588,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_32252b",
-                "~/complexes/id/PS_complex_5bd6c2"
+                "~/complexes/id/PS_complex_32252b"
             ]
         },
         {
@@ -51650,8 +51649,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_385743",
-                "~/complexes/id/PS_complex_743fd8"
+                "~/complexes/id/PS_complex_385743"
             ]
         },
         {
@@ -68229,6 +68227,11 @@
             "confidence": 1.0,
             "complexroles": [
                 {
+                    "templaterole_ref": "~/roles/id/PS_role_60f31d",
+                    "optional_role": 0,
+                    "triggering": 1
+                },
+                {
                     "templaterole_ref": "~/roles/id/PS_role_10397f",
                     "optional_role": 0,
                     "triggering": 1
@@ -68397,6 +68400,16 @@
             "source": "PlantSEED",
             "confidence": 1.0,
             "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_659711",
+                    "optional_role": 0,
+                    "triggering": 1
+                },
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_89ce59",
+                    "optional_role": 0,
+                    "triggering": 1
+                },
                 {
                     "templaterole_ref": "~/roles/id/PS_role_f54e19",
                     "optional_role": 0,

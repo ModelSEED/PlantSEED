@@ -168,6 +168,7 @@ rxn13726_j	PS_complex_31ee1e	PS_role_c449ff	NADH dehydrogenase [ubiquinone] iron
 rxn13726_j	PS_complex_31ee1e	PS_role_c6088b	NADH dehydrogenase [ubiquinone] iron-sulfur protein 7 (EC 1.6.5.3) (EC 1.6.99.3)	Athaliana_TAIR10||AT5G11770
 rxn13726_j	PS_complex_31ee1e	PS_role_a6ca40	NADH dehydrogenase [ubiquinone] iron-sulfur protein 8 (EC 1.6.5.3) (EC 1.6.99.3)	Athaliana_TAIR10||AT1G16700|Athaliana_TAIR10||AT1G79010|Athaliana_TAIR10||ATCG01090
 rxn27266_d	PS_complex_320838	PS_role_9fe2d6	Ferredoxin--sulfite reductase (EC 1.8.7.1)	Athaliana_TAIR10||AT5G04590
+rxn00908_m	PS_complex_32252b	PS_role_60f31d	Aminomethyltransferase (glycine cleavage system T protein) (EC 2.1.2.10)	Athaliana_TAIR10||AT1G11860
 rxn00908_m	PS_complex_32252b	PS_role_10397f	Dihydrolipoamide dehydrogenase of glycine cleavage system, L protein (EC 1.8.1.4)	Athaliana_TAIR10||AT1G48030|Athaliana_TAIR10||AT3G17240
 rxn00908_m	PS_complex_32252b	PS_role_2b2b81	Glycine cleavage system H protein	Athaliana_TAIR10||AT1G32470|Athaliana_TAIR10||AT2G35120|Athaliana_TAIR10||AT2G35370
 rxn00908_m	PS_complex_32252b	PS_role_fa51ea	Glycine dehydrogenase [decarboxylating] (glycine cleavage system P protein) (EC 1.4.4.2)	Athaliana_TAIR10||AT2G26080|Athaliana_TAIR10||AT4G33010
@@ -182,6 +183,8 @@ rxn00102_d|rxn00102_c	PS_complex_35b15b	PS_role_6b9d36	Carbonic anhydrase (EC 4.
 rxn02251_d|rxn00018_d	PS_complex_35e1b3	PS_role_bbc230	Ribulose bisphosphate carboxylase large chain (EC 4.1.1.39)	Athaliana_TAIR10||ATCG00490
 rxn02251_d|rxn00018_d	PS_complex_35e1b3	PS_role_58cc6b	Ribulose bisphosphate carboxylase small chain (EC 4.1.1.39)	Athaliana_TAIR10||AT1G67090|Athaliana_TAIR10||AT5G38410|Athaliana_TAIR10||AT5G38420|Athaliana_TAIR10||AT5G38430
 rxn08155_d|rxn08155_m|rxn08155_x	PS_complex_3847f9	PS_role_ca800d	Arginine transport	
+rxn20632_y	PS_complex_385743	PS_role_659711	Cytochrome b559 alpha chain PsbE	Athaliana_TAIR10||ATCG00580
+rxn20632_y	PS_complex_385743	PS_role_89ce59	Cytochrome b559 beta chain PsbF	Athaliana_TAIR10||ATCG00570
 rxn20632_y	PS_complex_385743	PS_role_f54e19	Photosystem II 12 kDa extrinsic protein (PsbU)	
 rxn20632_y	PS_complex_385743	PS_role_0c7024	Photosystem II CP43 protein PsbC	Athaliana_TAIR10||ATCG00280
 rxn20632_y	PS_complex_385743	PS_role_c0421a	Photosystem II CP47 protein PsbB	Athaliana_TAIR10||ATCG00680
