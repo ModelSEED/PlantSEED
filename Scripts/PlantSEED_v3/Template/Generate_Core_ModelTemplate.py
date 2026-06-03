@@ -238,6 +238,52 @@ for entry in roles_list:
 with open("../../../Data/PlantSEED_v3/PlantSEED_Complexes.json") as biochem_file:
 	complex_list = json.load(biochem_file)
 
+############################################################
+## Subcomplex absorption
+## ---------------------
+## A role may carry an optional `subcomplex_of: <parent_complex_kbase_id>`
+## flag indicating that it (and the complex it belongs to) is structurally
+## a sub-assembly of a larger parent complex (e.g. Cytochrome b559's PsbE/PsbF
+## are subunits of Photosystem II; the glycine cleavage T-protein is a
+## subunit of the Glycine cleavage system). For any such role we want the
+## ModelTemplate's GPR to AND-extend the parent's complexroles rather than
+## offering the carve-out as an independent OR-joined complex.
+##
+## Per Sam Seaver 2026-06-02: do NOT let `subcomplex_of` influence complex-id
+## generation; the carve-out complex keeps its own kbase_id and source entry.
+## Only the template-generation output is collapsed.
+##
+## A complex is treated as a carve-out only when ALL of its roles point at
+## the SAME parent; mixed `subcomplex_of` targets within one complex are
+## warned and left alone.
+############################################################
+
+roles_by_name = {entry['role']: entry for entry in roles_list}
+subcomplex_parent = {}        # carve_out_complex_id -> parent_complex_id
+subcomplex_extra_roles = {}   # parent_complex_id -> [role names to inject]
+for complex in complex_list:
+	parents = set()
+	for role_name in complex.get('roles', []) or []:
+		entry = roles_by_name.get(role_name)
+		if entry and entry.get('subcomplex_of'):
+			parents.add(entry['subcomplex_of'])
+	if len(parents) == 1:
+		parent_id = next(iter(parents))
+		subcomplex_parent[complex['kbase_id']] = parent_id
+		subcomplex_extra_roles.setdefault(parent_id, [])
+		for role_name in complex['roles']:
+			if role_name not in subcomplex_extra_roles[parent_id]:
+				subcomplex_extra_roles[parent_id].append(role_name)
+	elif len(parents) > 1:
+		print(f"WARN: complex {complex['kbase_id']} ({complex.get('enzyme')}) has roles with conflicting "
+		      f"subcomplex_of targets {sorted(parents)} — leaving as standalone GPR")
+
+if subcomplex_parent:
+	print(f"Subcomplex absorption: {len(subcomplex_parent)} carve-out complex(es) will be "
+	      f"AND-extended into their parents:")
+	for carve, parent in sorted(subcomplex_parent.items()):
+		print(f"  {carve} -> {parent}  (roles: {subcomplex_extra_roles[parent]})")
+
 complexes=dict()
 excluded_roles_complexes=list()
 
@@ -311,6 +357,24 @@ for complex in complex_list:
 			if(tmpl_rxn not in complexes[complex_id]['reactions']):
 					complexes[complex_id]['reactions'].append(tmpl_rxn)
 
+# Inject carve-out roles into their parent complex's role list so that the
+# parent's complexroles AND-includes them. The carve-out complex's own
+# entry still exists in `complexes`; it will be filtered out of any
+# reaction's templatecomplex_refs where the parent is also present (below).
+for parent_id, extra_roles in subcomplex_extra_roles.items():
+	if parent_id not in complexes:
+		print(f"WARN: subcomplex parent {parent_id} not found in complexes — "
+		      f"carve-out roles {extra_roles} cannot be merged")
+		continue
+	for r in extra_roles:
+		if r not in complexes[parent_id]['roles']:
+			complexes[parent_id]['roles'].append(r)
+			# Also extend the per-reaction role list for every reaction the parent owns.
+			for tmpl_rxn in complexes[parent_id]['reactions']:
+				reactions_roles.setdefault(tmpl_rxn, [])
+				if r not in reactions_roles[tmpl_rxn]:
+					reactions_roles[tmpl_rxn].append(r)
+
 ############################
 ## Begin Template Generation
 ############################
@@ -357,6 +421,18 @@ for complex in sorted(complexes.keys()):
 		if(template_reaction not in template_reactions_complexes):
 			template_reactions_complexes[template_reaction]=list()
 		template_reactions_complexes[template_reaction].append(complex)
+
+# Drop carve-out complexes from any reaction whose parent is also a complex
+# for that reaction. The carve-out is then linked only to reactions the parent
+# does NOT share (if any), preserving its independent GPR where it stands alone.
+for tmpl_rxn, cpx_list in template_reactions_complexes.items():
+	present = set(cpx_list)
+	filtered = []
+	for c in cpx_list:
+		if c in subcomplex_parent and subcomplex_parent[c] in present:
+			continue
+		filtered.append(c)
+	template_reactions_complexes[tmpl_rxn] = filtered
 
 rca_fh.close()
 

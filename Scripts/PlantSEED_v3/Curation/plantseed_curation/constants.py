@@ -48,7 +48,7 @@ ACTION_DESCRIPTIONS = {
 # ADD them directly would mis-initialize the dict-typed field as a list.
 ACTION_FIELDS = {
     "ADD":      ["features", "publications", "reactions", "subsystems"],
-    "ASSIGN":   ["include", "type"],
+    "ASSIGN":   ["include", "type", "subcomplex_of"],
     "CHANGE":   ["abstract_enzyme", "include"],
     "RELOCATE": ["localization", "compartmentalization"],
     "REMOVE":   ["features", "publications", "reactions", "subsystems", "localization", "classes"],
@@ -82,6 +82,7 @@ SCALAR_TYPES = {
     "is_transporter":  "bool",
     "type":            "str",
     "abstract_enzyme": "str",
+    "subcomplex_of":   "str",
 }
 
 # Per-action minimum column count for a TSV line to parse (action included).
