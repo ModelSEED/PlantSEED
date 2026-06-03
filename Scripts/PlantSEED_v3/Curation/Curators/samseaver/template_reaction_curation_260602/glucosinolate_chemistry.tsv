@@ -1,0 +1,42 @@
+# Glucosinolate-biosynthesis chemistry curation
+# Source: Generate_Core_ModelTemplate.py lines 527-563 (hard-coded; lifted here)
+#
+# Three change blocks:
+#   3) BCAT3 transaminase generic compounds replaced with specific 2-oxoglutarate / glutamate
+#   4) Monooxygenase generic hemoproteins replaced with flavins (FAD/FADH2 pair)
+#   5) Methylthioalkylmalate dehydrogenase (IMDH) NAD usage: add NAD+/NADH pair,
+#      remove the H+ that the base reaction carried for charge balance.
+#
+# Schema:  enzyme \t action \t field \t value \t [extra_1] \t [extra_2]
+#
+# Actions used here:
+#   ASSIGN direction <dir>             - sets the reaction direction (existing)
+#   UPDATE stoichiometry cpd coeff     - upserts coefficient; 0 to remove (existing)
+#   ADD    reagent cpd coeff [cpt]     - PROPOSED: append a brand-new reagent
+#   REPLACE compound  old_cpd new_cpd  - PROPOSED: substitute one compound for
+#                                        another wherever it appears in the
+#                                        reaction (preserves coefficients + compartments)
+#
+# ---- Block 3: BCAT3 transaminases (rxn23780, rxn27069-73) — swap two generics
+# These changes apply to every base reaction the role catalyses, so one row per
+# (compound replacement) is enough; the apply pipeline iterates the role's
+# reactions and substitutes in each.
+2-oxo-5-methylthiopentanoate transaminase (EC 2.6.1.-)	REPLACE	compound	cpd22369	cpd00023
+2-oxo-5-methylthiopentanoate transaminase (EC 2.6.1.-)	REPLACE	compound	cpd21904	cpd00024
+
+# ---- Block 4: Monooxygenase (rxn53279) — swap two generic hemoproteins for flavins
+# Placeholder anchor pending role/complex assignment as part of the next
+# glucosinolate-biosynthesis iteration. Replace the column-1 name with the
+# real EC role once rxn53279 is added to PlantSEED_Roles.json /
+# PlantSEED_Complexes.json.
+Glucosinolate monooxygenase (rxn53279, TODO assign role)	REPLACE	compound	cpd42231	cpd21035
+Glucosinolate monooxygenase (rxn53279, TODO assign role)	REPLACE	compound	cpd42232	cpd11630
+
+# ---- Block 5: Methylthioalkylmalate dehydrogenase / IMDH
+# Reactions: rxn14172, rxn14182, rxn13977, rxn14122, rxn14244, rxn13983
+# Each: add NAD+ (-1) and NADH (+1) in the reaction's own compartment, and
+# remove the proton that the base reaction carries.
+# Coefficient and compartment apply to every reaction the role catalyses.
+Methylthioalkylmalate dehydrogenase (EC 1.1.1.-)	ADD	reagent	cpd00003	-1.0
+Methylthioalkylmalate dehydrogenase (EC 1.1.1.-)	ADD	reagent	cpd00004	1.0
+Methylthioalkylmalate dehydrogenase (EC 1.1.1.-)	UPDATE	stoichiometry	cpd00067	0

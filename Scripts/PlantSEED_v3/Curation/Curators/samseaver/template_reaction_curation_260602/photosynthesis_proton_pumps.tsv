@@ -1,0 +1,30 @@
+# Photosynthesis proton-pump stoichiometry
+# Source: Generate_Core_ModelTemplate.py lines 505-524 (hard-coded; lifted here)
+#
+# Adds the proton motive force across the thylakoid membrane (compartment 'y')
+# from the stroma (compartment 'd') for PS II and Cytochrome b6f.
+# These additions are at the COMPLEX level because the same template reaction
+# (rxn20632_y or rxn20595_y) may be referenced by multiple complexes, but the
+# proton flux is a property of the catalysed reaction itself.
+#
+# Schema:  enzyme \t action \t field \t value \t [extra_1] \t [extra_2]
+#
+# Actions used here:
+#   ASSIGN direction <dir>          - sets the reaction direction (existing)
+#   UPDATE stoichiometry cpd coeff  - upserts an existing reagent's coefficient (existing)
+#   ADD    reagent cpd coeff [cpt]  - PROPOSED: appends a brand-new reagent;
+#                                     blank cpt = reaction's home compartment
+#
+# rxn20632_y is owned by two complexes (Photosystem II + Cytochrome b559); the
+# proton-pump additions should be applied wherever the reaction lands, so the
+# Generate script needs to merge ADD-reagent records across all complexes that
+# own a shared base reaction.
+
+# ---- Block 1: Photosystem II (rxn20632_y) — pump 4 H+ from stroma to lumen
+Photosystem II protein D1 PsbA	ADD	reagent	cpd00067	-4.0	d
+Photosystem II protein D1 PsbA	ADD	reagent	cpd00067	4.0	y
+
+# ---- Block 2: Cytochrome b6-f (rxn20595_y) — 2 H+ pumped in from stroma,
+# 4 H+ released into lumen (2 pumped + 2 from plastoquinol oxidation)
+Cytochrome b6-f complex PetA, apocytochrome f (EC 7.1.1.6)	UPDATE	stoichiometry	cpd00067	-2.0	d
+Cytochrome b6-f complex PetA, apocytochrome f (EC 7.1.1.6)	ADD	reagent	cpd00067	4.0	y
