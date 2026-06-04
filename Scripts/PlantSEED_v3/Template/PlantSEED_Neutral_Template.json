@@ -6546,9 +6546,9 @@
             "name": "Stearoyl-[acyl-carrier protein]",
             "abbreviation": "cll_430",
             "aliases": [],
-            "formula": "C29H60N3O8PR2S",
+            "formula": "C29H55N2O8PRS",
             "isCofactor": 0,
-            "defaultCharge": 0.0,
+            "defaultCharge": -2.0,
             "mass": 300.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -20318,7 +20318,7 @@
             "templatecompartment_ref": "~/compartments/id/c",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -20386,7 +20386,7 @@
             "templatecompartment_ref": "~/compartments/id/c",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -20570,7 +20570,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -20862,7 +20862,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -21006,7 +21006,7 @@
             "templatecompartment_ref": "~/compartments/id/c",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -21050,7 +21050,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -21094,7 +21094,7 @@
             "templatecompartment_ref": "~/compartments/id/m",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -23796,7 +23796,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -25030,7 +25030,7 @@
             "templatecompartment_ref": "~/compartments/id/c",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -25075,7 +25075,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -27926,7 +27926,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -27970,7 +27970,7 @@
             "templatecompartment_ref": "~/compartments/id/r",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -28014,7 +28014,7 @@
             "templatecompartment_ref": "~/compartments/id/x",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -29238,7 +29238,7 @@
             "templatecompartment_ref": "~/compartments/id/c",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -30562,7 +30562,7 @@
             "templatecompartment_ref": "~/compartments/id/c",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -31693,7 +31693,7 @@
             "templatecompartment_ref": "~/compartments/id/c",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -32045,7 +32045,7 @@
             "templatecompartment_ref": "~/compartments/id/c",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -34093,7 +34093,7 @@
             "templatecompartment_ref": "~/compartments/id/m",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -34304,7 +34304,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -34457,7 +34457,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": "=",
+            "direction": ">",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -34625,7 +34625,7 @@
             "templatecompartment_ref": "~/compartments/id/c",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -40406,7 +40406,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -40450,7 +40450,7 @@
             "templatecompartment_ref": "~/compartments/id/r",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -40494,7 +40494,7 @@
             "templatecompartment_ref": "~/compartments/id/x",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -43995,7 +43995,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -44039,7 +44039,7 @@
             "templatecompartment_ref": "~/compartments/id/r",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -44083,7 +44083,7 @@
             "templatecompartment_ref": "~/compartments/id/x",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -44127,7 +44127,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -44171,7 +44171,7 @@
             "templatecompartment_ref": "~/compartments/id/r",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -44215,7 +44215,7 @@
             "templatecompartment_ref": "~/compartments/id/x",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -44259,7 +44259,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -44303,7 +44303,7 @@
             "templatecompartment_ref": "~/compartments/id/r",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -44347,7 +44347,7 @@
             "templatecompartment_ref": "~/compartments/id/x",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -45743,7 +45743,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -45891,7 +45891,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_1374b1"
+                "~/complexes/id/PS_complex_3ee0b3"
             ]
         },
         {
@@ -45936,7 +45936,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -45980,7 +45980,7 @@
             "templatecompartment_ref": "~/compartments/id/r",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -46024,7 +46024,7 @@
             "templatecompartment_ref": "~/compartments/id/x",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -47044,7 +47044,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_1374b1"
+                "~/complexes/id/PS_complex_3ee0b3"
             ]
         },
         {
@@ -47308,7 +47308,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -48015,7 +48015,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -50404,7 +50404,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -50448,7 +50448,7 @@
             "templatecompartment_ref": "~/compartments/id/r",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -50492,7 +50492,7 @@
             "templatecompartment_ref": "~/compartments/id/x",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -52039,7 +52039,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_82bdcd"
+                "~/complexes/id/PS_complex_2a49f5"
             ]
         },
         {
@@ -52079,7 +52079,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_82bdcd"
+                "~/complexes/id/PS_complex_2a49f5"
             ]
         },
         {
@@ -52119,7 +52119,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_82bdcd"
+                "~/complexes/id/PS_complex_2a49f5"
             ]
         },
         {
@@ -52159,7 +52159,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_82bdcd"
+                "~/complexes/id/PS_complex_2a49f5"
             ]
         },
         {
@@ -52199,7 +52199,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_82bdcd"
+                "~/complexes/id/PS_complex_2a49f5"
             ]
         },
         {
@@ -52239,7 +52239,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_82bdcd"
+                "~/complexes/id/PS_complex_2a49f5"
             ]
         },
         {
@@ -52559,7 +52559,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52591,7 +52591,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52623,7 +52623,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52655,7 +52655,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52687,7 +52687,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52719,7 +52719,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52751,7 +52751,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52783,7 +52783,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -54319,7 +54319,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_1374b1"
+                "~/complexes/id/PS_complex_3ee0b3"
             ]
         },
         {
@@ -55104,7 +55104,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -55148,7 +55148,7 @@
             "templatecompartment_ref": "~/compartments/id/r",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -55192,7 +55192,7 @@
             "templatecompartment_ref": "~/compartments/id/x",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -55679,7 +55679,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -55715,7 +55715,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -55751,7 +55751,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -55787,7 +55787,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -57624,7 +57624,7 @@
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -57668,7 +57668,7 @@
             "templatecompartment_ref": "~/compartments/id/r",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -57712,7 +57712,7 @@
             "templatecompartment_ref": "~/compartments/id/x",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
-            "direction": ">",
+            "direction": "=",
             "GapfillDirection": "=",
             "maxforflux": 0.0,
             "maxrevflux": 0.0,
@@ -58475,7 +58475,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_ed48c3"
+                "~/complexes/id/PS_complex_12c851"
             ]
         },
         {
@@ -66962,14 +66962,14 @@
             ]
         },
         {
-            "id": "PS_complex_1374b1",
+            "id": "PS_complex_12c851",
             "name": "",
             "reference": "",
             "source": "PlantSEED",
             "confidence": 1.0,
             "complexroles": [
                 {
-                    "templaterole_ref": "~/roles/id/PS_role_cb78cd",
+                    "templaterole_ref": "~/roles/id/PS_role_c902af",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -67676,6 +67676,20 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_28c1a1",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_2a49f5",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_8975d1",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -68860,6 +68874,20 @@
             ]
         },
         {
+            "id": "PS_complex_3ee0b3",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_cb78cd",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
             "id": "PS_complex_3f2638",
             "name": "",
             "reference": "",
@@ -69715,20 +69743,6 @@
             ]
         },
         {
-            "id": "PS_complex_5831c7",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_726ec8",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
             "id": "PS_complex_583fda",
             "name": "",
             "reference": "",
@@ -70331,6 +70345,20 @@
             ]
         },
         {
+            "id": "PS_complex_660e96",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_2b7cf0",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
             "id": "PS_complex_66310b",
             "name": "",
             "reference": "",
@@ -70501,6 +70529,20 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_d0acaa",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_69ea3e",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_726ec8",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -71301,20 +71343,6 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_7a5f1b",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
-            "id": "PS_complex_82bdcd",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_8975d1",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -73325,6 +73353,14 @@
             ]
         },
         {
+            "id": "PS_complex_c1a4a3",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": []
+        },
+        {
             "id": "PS_complex_c2bdc1",
             "name": "",
             "reference": "",
@@ -74720,20 +74756,6 @@
             ]
         },
         {
-            "id": "PS_complex_ed48c3",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_c902af",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
             "id": "PS_complex_ee017c",
             "name": "",
             "reference": "",
@@ -75064,20 +75086,6 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_373c38",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
-            "id": "PS_complex_f80bf6",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_2b7cf0",
                     "optional_role": 0,
                     "triggering": 1
                 }
