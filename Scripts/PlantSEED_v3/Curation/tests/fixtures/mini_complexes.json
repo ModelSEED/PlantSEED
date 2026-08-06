@@ -1,0 +1,10 @@
+[
+    {
+        "kbase_id": "PS_complex_alpha1",
+        "enzyme": "Alpha enzyme",
+        "roles": ["Alpha enzyme (EC 1.1.1.1)"],
+        "compartments_reactions": {
+            "c": {"reactions": ["rxn00001"], "reagents": "c", "exclude": false}
+        }
+    }
+]

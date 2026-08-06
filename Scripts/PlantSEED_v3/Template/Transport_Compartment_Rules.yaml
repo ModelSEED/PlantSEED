@@ -1,0 +1,49 @@
+# Transport compartment translation rules
+# =========================================
+#
+# Roles in PlantSEED_Roles.json can have a `localization` keyed by either:
+#   - a single-letter compartment code (a reaction that happens entirely in
+#     one compartment), e.g. `c`, `d`, `m`, `x`, `v`
+#   - a two-letter code (a transporter that spans two compartments), e.g.
+#     `cd` (cytosol <-> plastid), `mj` (mitochondrial matrix <-> intermembrane)
+#
+# The metabolic model itself only uses single-letter compartments. So when
+# the complex generator (Prepare_PlantSEED_KBase.py) and the template
+# generator (Generate_Core_ModelTemplate.py / Add_ModelTemplate_Gapfilling.py)
+# project a transporter reaction into the model, the 2-letter code must be
+# collapsed to a single letter. The rules below define that collapse.
+#
+# How the rules are applied
+# -------------------------
+# - One-letter localization codes pass through unchanged.
+# - For a two-letter code, the rules below apply IN ORDER. Each rule that
+#   matches overrides the previous result. The first letter of the code is
+#   the default if no rule matches.
+# - `if_contains: X` matches when the single letter X appears anywhere in
+#   the two-letter code.
+# - `result: other` picks the letter in the pair that is NOT X.
+# - `result: <single-letter>` picks that letter exactly.
+#
+# Editing this file
+# -----------------
+# - Edits propagate to any script that loads this file. As of now that's
+#   only Prepare_PlantSEED_KBase.py. Generate_Core_ModelTemplate.py and
+#   Add_ModelTemplate_Gapfilling.py both still carry hard-coded copies of
+#   these rules (the gapfilling script is incomplete - missing the `y`
+#   exception) and should be migrated here in a follow-up.
+# - Adding a new exception is just a new entry in the `rules:` list. Put
+#   the most specific exceptions LAST so they override the general rules.
+
+rules:
+  - if_contains: c
+    result: other
+    note: "Non-cytosolic wins by default - cytosol/organelle transporters live in the organelle."
+  - if_contains: e
+    result: other
+    note: "Extracellular transporters resolve to the non-extracellular side."
+  - if_contains: j
+    result: j
+    note: "Mitochondrial intermembrane space (j) wins over the mitochondrial matrix (m)."
+  - if_contains: y
+    result: y
+    note: "Thylakoid lumen (y) wins over plastid stroma (d)."

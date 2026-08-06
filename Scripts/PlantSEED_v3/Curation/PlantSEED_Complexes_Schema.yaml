@@ -1,0 +1,24 @@
+enzyme:
+  type: str
+  default: ''
+  required: true
+roles:
+  type: list
+  default: []
+  required: true
+compartments_reactions:
+  type: dict
+  default: {}
+  required: true
+kbase_id:
+  type: str
+  default: ''
+  required: false
+direction:
+  type: str
+  default: '='
+  required: false
+stoichiometry:
+  type: dict
+  default: {}
+  required: false

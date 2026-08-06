@@ -21,23 +21,27 @@ sys.path.insert(0, CURATION_ROOT)
 
 FIXTURES = os.path.join(HERE, "fixtures")
 MINI_ROLES = os.path.join(FIXTURES, "mini_roles.json")
+MINI_COMPLEXES = os.path.join(FIXTURES, "mini_complexes.json")
 MINI_SCHEMA = os.path.join(FIXTURES, "mini_schema.yaml")
 
 
 def _seed_tmp_db(tmp_root):
-    """Copy fixture files into a tmp tree and return the four path strings."""
+    """Copy fixture files into a tmp tree and return the path dict."""
     roles = os.path.join(tmp_root, "PlantSEED_Roles.json")
+    complexes = os.path.join(tmp_root, "PlantSEED_Complexes.json")
     schema = os.path.join(tmp_root, "PlantSEED_Schema.yaml")
     curators = os.path.join(tmp_root, "Curators")
     os.makedirs(curators, exist_ok=True)
     shutil.copy(MINI_ROLES, roles)
+    shutil.copy(MINI_COMPLEXES, complexes)
     shutil.copy(MINI_SCHEMA, schema)
     return {
-        "base":     tmp_root,
-        "roles":    roles,
-        "schema":   schema,
-        "curators": curators,
-        "registry": os.path.join(curators, "curator_registry.json"),
+        "base":      tmp_root,
+        "roles":     roles,
+        "complexes": complexes,
+        "schema":    schema,
+        "curators":  curators,
+        "registry":  os.path.join(curators, "curator_registry.json"),
     }
 
 
@@ -47,6 +51,7 @@ def tmp_db(tmp_path, monkeypatch):
     paths_dict = _seed_tmp_db(str(tmp_path))
     monkeypatch.setenv("PLANTSEED_BASE_DIR",         paths_dict["base"])
     monkeypatch.setenv("PLANTSEED_ROLES_FILE",       paths_dict["roles"])
+    monkeypatch.setenv("PLANTSEED_COMPLEXES_FILE",   paths_dict["complexes"])
     monkeypatch.setenv("PLANTSEED_SCHEMA_FILE",      paths_dict["schema"])
     monkeypatch.setenv("PLANTSEED_CURATORS_DIR",     paths_dict["curators"])
     monkeypatch.setenv("PLANTSEED_CURATOR_REGISTRY", paths_dict["registry"])

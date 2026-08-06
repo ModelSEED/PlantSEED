@@ -4453,29 +4453,6 @@
         }
     },
     {
-        "kbase_id": "PS_complex_5831c7",
-        "enzyme": "Desulfoglucosinolate sulfotransferase",
-        "roles": [
-            "Aliphatic desulfoglucosinolate sulfotransferase (EC 2.8.2.38)"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn27056",
-                    "rxn14133",
-                    "rxn02300",
-                    "rxn14362",
-                    "rxn27057",
-                    "rxn11704",
-                    "rxn27059",
-                    "rxn27058"
-                ],
-                "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
         "kbase_id": "PS_complex_efcd53",
         "enzyme": "Dethiobiotin synthetase",
         "roles": [
@@ -5502,22 +5479,6 @@
         }
     },
     {
-        "kbase_id": "PS_complex_ed48c3",
-        "enzyme": "Flavin-containing glucosinolate S-oxygenase",
-        "roles": [
-            "Aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn41751"
-                ],
-                "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
         "kbase_id": "PS_complex_2f6edb",
         "enzyme": "Flavonoid 3'-monooxygenase",
         "roles": [
@@ -5989,29 +5950,6 @@
             "c": {
                 "reactions": [
                     "rxn01455"
-                ],
-                "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
-        "kbase_id": "PS_complex_f80bf6",
-        "enzyme": "Gamma-glutamyl peptidase in glucosinolates biosynthesis",
-        "roles": [
-            "Glucosinolate gamma-glutamyl hydrolase (EC 3.4.19.16)"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn21822",
-                    "rxn21819",
-                    "rxn21818",
-                    "rxn21821",
-                    "rxn21817",
-                    "rxn21824",
-                    "rxn21820",
-                    "rxn21823"
                 ],
                 "reagents": "c",
                 "exclude": false
@@ -10027,27 +9965,6 @@
         }
     },
     {
-        "kbase_id": "PS_complex_82bdcd",
-        "enzyme": "Oxime metabolizining monooxygenase in aliphatic glucosinolates biosynthesis",
-        "roles": [
-            "(Methylsulfanyl)alkanaldoxime N-monooxygenase (EC 1.14.14.43)"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn21796",
-                    "rxn21804",
-                    "rxn21802",
-                    "rxn21798",
-                    "rxn21806",
-                    "rxn21800"
-                ],
-                "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
         "kbase_id": "PS_complex_cfcb38",
         "enzyme": "Oxygen transport",
         "roles": [
@@ -12259,24 +12176,6 @@
                     "rxn00126"
                 ],
                 "reagents": "n",
-                "exclude": false
-            }
-        }
-    },
-    {
-        "kbase_id": "PS_complex_1374b1",
-        "enzyme": "S-alkyl-thiohydroximate lyase",
-        "roles": [
-            "Alkylthiohydroximate C-S lyase (EC 4.4.1.13)"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn24582",
-                    "rxn14068",
-                    "rxn12019"
-                ],
-                "reagents": "c",
                 "exclude": false
             }
         }
@@ -15590,6 +15489,115 @@
             "cpd00015": "0",
             "cpd00982": "0",
             "cpd00067": "3"
+        }
+    },
+    {
+        "kbase_id": "PS_complex_2a49f5",
+        "enzyme": "(Methylsulfanyl)alkanaldoxime N-monooxygenase",
+        "roles": [
+            "(Methylsulfanyl)alkanaldoxime N-monooxygenase (EC 1.14.14.43)"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn21796",
+                    "rxn21798",
+                    "rxn21800",
+                    "rxn21802",
+                    "rxn21804",
+                    "rxn21806"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_69ea3e",
+        "enzyme": "Aliphatic desulfoglucosinolate sulfotransferase",
+        "roles": [
+            "Aliphatic desulfoglucosinolate sulfotransferase (EC 2.8.2.38)"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn02300",
+                    "rxn11704",
+                    "rxn14133",
+                    "rxn14362",
+                    "rxn27056",
+                    "rxn27057",
+                    "rxn27058",
+                    "rxn27059"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_12c851",
+        "enzyme": "Aliphatic glucosinolate S-oxygenase",
+        "roles": [
+            "Aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn41751"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_3ee0b3",
+        "enzyme": "Alkylthiohydroximate C-S lyase",
+        "roles": [
+            "Alkylthiohydroximate C-S lyase (EC 4.4.1.13)"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn12019",
+                    "rxn14068",
+                    "rxn24582"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_c1a4a3",
+        "enzyme": "Aromatic desulfoglucosinolate sulfotransferase",
+        "roles": [
+            "Aromatic desulfoglucosinolate sulfotransferase (EC 2.8.2.24)"
+        ],
+        "compartments_reactions": {}
+    },
+    {
+        "kbase_id": "PS_complex_660e96",
+        "enzyme": "Glucosinolate gamma-glutamyl hydrolase",
+        "roles": [
+            "Glucosinolate gamma-glutamyl hydrolase (EC 3.4.19.16)"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn21817",
+                    "rxn21818",
+                    "rxn21819",
+                    "rxn21820",
+                    "rxn21821",
+                    "rxn21822",
+                    "rxn21823",
+                    "rxn21824"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
         }
     }
 ]
