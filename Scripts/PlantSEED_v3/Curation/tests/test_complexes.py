@@ -231,6 +231,53 @@ def test_derive_new_complexes_2letter_localization_uses_second_letter_key():
     assert cr["v"]["reactions"] == ["rxnT"]
 
 
+# ---------- _lcz_to_cpt_id transport-rule cases ------------------------------
+@pytest.mark.parametrize("lcz, expected", [
+    # 1-letter codes pass through
+    ("c", "c"), ("d", "d"), ("m", "m"), ("x", "x"), ("v", "v"),
+    # 2-letter cases from Transport_Compartment_Rules.yaml
+    ("cv", "v"),  # non-cytosolic wins
+    ("cd", "d"),
+    ("cm", "m"),
+    ("cx", "x"),
+    ("ce", "c"),  # non-extracellular wins (rule 2 overrides rule 1)
+    ("de", "d"),  # non-extracellular wins
+    ("dy", "y"),  # thylakoid lumen wins over plastid stroma
+    ("mj", "j"),  # intermembrane wins over matrix
+])
+def test_lcz_to_cpt_id_matches_transport_rules_yaml(lcz, expected):
+    assert A._lcz_to_cpt_id(lcz) == expected
+
+
+def test_lcz_to_cpt_id_falls_back_to_first_letter_for_unknown_pair():
+    """A 2-letter code with no rule triggers uses the first letter."""
+    assert A._lcz_to_cpt_id("ab") == "a"
+
+
+def test_transport_rules_stay_in_sync_with_yaml():
+    """If Transport_Compartment_Rules.yaml is edited, the hardcoded
+    _TRANSPORT_RULES tuple in actions.py must be edited too. This test
+    fails when they drift."""
+    import os
+    import yaml
+    # actions.py lives at Scripts/PlantSEED_v3/Curation/plantseed_curation/actions.py.
+    # The yaml lives at   Scripts/PlantSEED_v3/Template/Transport_Compartment_Rules.yaml.
+    # So: two `..` back to PlantSEED_v3, then into Template/.
+    yaml_path = os.path.normpath(os.path.join(
+        os.path.dirname(A.__file__), "..", "..",
+        "Template", "Transport_Compartment_Rules.yaml",
+    ))
+    if not os.path.isfile(yaml_path):
+        pytest.skip(f"yaml source-of-truth not present at {yaml_path}")
+    with open(yaml_path) as f:
+        data = yaml.safe_load(f)
+    yaml_rules = [(r["if_contains"], r["result"]) for r in data["rules"]]
+    assert list(A._TRANSPORT_RULES) == yaml_rules, (
+        f"_TRANSPORT_RULES ({A._TRANSPORT_RULES}) drifted from "
+        f"Transport_Compartment_Rules.yaml ({yaml_rules}). Edit both."
+    )
+
+
 def test_derive_new_complexes_merges_multiple_roles_for_same_enzyme():
     roles = [
         _role("R1", "Enz", ["rxn1"], ["c"]),

@@ -624,12 +624,42 @@ def _abstract_enzyme_key(role_entry):
     return enz
 
 
+# Transport compartment translation rules mirroring
+# Scripts/PlantSEED_v3/Template/Transport_Compartment_Rules.yaml (canonical
+# source; the two must stay in sync). Rules apply IN ORDER; each matching
+# rule overrides the previous result. The first letter of the pair is the
+# default if no rule matches. Semantics:
+#   ('if_contains', 'other') — pick the letter that is NOT if_contains
+#   ('if_contains', <literal>) — pick <literal>
+_TRANSPORT_RULES = (
+    ("c", "other"),  # non-cytosolic wins        (cv->v, cd->d, cm->m, cx->x, ce->c-via-later-rules...)
+    ("e", "other"),  # non-extracellular wins    (ce->c, de->d)
+    ("j", "j"),      # mitochondrial intermembrane wins over matrix  (mj->j)
+    ("y", "y"),      # thylakoid lumen wins over plastid stroma      (dy->y)
+)
+
+
 def _lcz_to_cpt_id(lcz):
     """Map a role's localization key to the single-letter compartment id used
-    inside a complex's compartments_reactions dict. Transport (2-letter) keys
-    collapse to their second letter, e.g. 'cv' -> 'v'. Matches the convention
-    used by every hand-authored complex in the current database."""
-    return lcz[-1] if len(lcz) > 1 else lcz
+    inside a complex's compartments_reactions dict.
+
+    1-letter codes pass through unchanged. For 2-letter transporter codes,
+    apply _TRANSPORT_RULES in order — this handles cases like `ce` -> `c`
+    (extracellular loses) that a naive `lcz[-1]` picks the wrong way.
+    """
+    if len(lcz) != 2:
+        return lcz
+    result = lcz[0]
+    for marker, target in _TRANSPORT_RULES:
+        if marker not in lcz:
+            continue
+        if target == "other":
+            for c in lcz:
+                if c != marker:
+                    result = c
+        else:
+            result = target
+    return result
 
 
 def derive_new_complexes(roles_list, enzyme_index, existing_ids, issues=None):
