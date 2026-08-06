@@ -686,6 +686,34 @@ def derive_new_complexes(roles_list, enzyme_index, existing_ids, issues=None):
     return new_complexes
 
 
+def validate_subcomplex_pointers(roles_list, complex_ids, issues=None):
+    """Walk `roles_list` and warn (via `issues`) for every role whose
+    `subcomplex_of` value is non-empty AND does not appear in `complex_ids`.
+
+    Runs AFTER all complex kbase_ids are settled (existing verified + new
+    derived) so a role that legitimately points at a freshly-minted parent
+    doesn't produce a false-positive warning.
+
+    Returns the list of (role_name, bad_pointer) tuples the caller may want
+    to surface separately from the issue stream.
+    """
+    complex_ids = set(complex_ids)
+    bad = []
+    for role in roles_list:
+        target = role.get("subcomplex_of")
+        if not target:
+            continue
+        if target not in complex_ids:
+            bad.append((role.get("role", "<unnamed>"), target))
+            if issues is not None:
+                issues.warn(
+                    f"role '{role.get('role', '<unnamed>')}' has "
+                    f"subcomplex_of={target!r} pointing at a complex "
+                    f"kbase_id not present in PlantSEED_Complexes.json"
+                )
+    return bad
+
+
 def _known_roles_for_actions(actions):
     roles = set()
     for bucket in ("replace", "add", "rem", "key", "reassign"):

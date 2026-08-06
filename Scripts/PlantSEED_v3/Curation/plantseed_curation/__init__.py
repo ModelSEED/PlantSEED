@@ -35,6 +35,7 @@ from .actions import (
     run_apply,
     seed_new_entries,
     validate_payload,
+    validate_subcomplex_pointers,
 )
 from .cli_io import Console, ExitRequested
 from .constants import (
@@ -101,7 +102,8 @@ __all__ = [
     "apply_actions", "assign_complex_kbase_id", "assign_kbase_id",
     "build_tsv_rows", "complex_kbase_id", "derive_new_complexes",
     "enzyme_index_from_complexes", "enzyme_rxn_cpts", "parse_tsv_text",
-    "preview_for_enzyme", "run_apply", "seed_new_entries", "validate_payload",
+    "preview_for_enzyme", "run_apply", "seed_new_entries",
+    "validate_payload", "validate_subcomplex_pointers",
     # cli_io
     "Console", "ExitRequested",
     # constants

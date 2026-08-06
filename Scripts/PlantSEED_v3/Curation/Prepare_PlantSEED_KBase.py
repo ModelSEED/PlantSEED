@@ -25,6 +25,7 @@ from plantseed_curation import (
     derive_new_complexes,
     enzyme_index_from_complexes,
     paths,
+    validate_subcomplex_pointers,
 )
 from plantseed_curation.schema import IssueCollector
 
@@ -54,9 +55,10 @@ def prepare_roles(roles_list, issues):
 
 def prepare_complexes(complexes_list, roles_list, issues):
     """Verify every existing complex's id and derive a new complex entry for
-    each role whose abstract_enzyme isn't yet represented. Returns True if
-    the complexes list was modified (existing id updated OR new entry
-    appended)."""
+    each role whose abstract_enzyme isn't yet represented. Also validate that
+    every role's `subcomplex_of` (if set) points at a complex kbase_id we
+    actually have on hand. Returns True if the complexes list was modified
+    (existing id updated OR new entry appended)."""
     existing_ids = {c["kbase_id"] for c in complexes_list if "kbase_id" in c}
     changed = False
     for entry in complexes_list:
@@ -69,6 +71,10 @@ def prepare_complexes(complexes_list, roles_list, issues):
     if new_entries:
         complexes_list.extend(new_entries)
         changed = True
+    # Validate AFTER new complexes are minted so a role legitimately pointing
+    # at a fresh parent doesn't warn.
+    all_complex_ids = {c["kbase_id"] for c in complexes_list if "kbase_id" in c}
+    validate_subcomplex_pointers(roles_list, all_complex_ids, issues=issues)
     return changed
 
 

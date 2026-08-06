@@ -251,6 +251,65 @@ def test_derive_new_complexes_kbase_id_matches_pure_hash():
     assert new[0]["kbase_id"] == expected
 
 
+# ---------- validate_subcomplex_pointers -------------------------------------
+def test_validate_subcomplex_pointers_empty_target_is_ok():
+    """Roles with no subcomplex_of (or an empty string) never warn."""
+    roles = [
+        {"role": "R1"},                       # field absent
+        {"role": "R2", "subcomplex_of": ""},  # field empty
+    ]
+    issues = IssueCollector()
+    bad = A.validate_subcomplex_pointers(roles, set(), issues=issues)
+    assert bad == []
+    assert issues.warnings == []
+
+
+def test_validate_subcomplex_pointers_present_target_is_ok():
+    roles = [{"role": "R1", "subcomplex_of": "PS_complex_parent"}]
+    issues = IssueCollector()
+    bad = A.validate_subcomplex_pointers(roles, {"PS_complex_parent"}, issues=issues)
+    assert bad == []
+    assert issues.warnings == []
+
+
+def test_validate_subcomplex_pointers_missing_target_warns():
+    roles = [
+        {"role": "R1", "subcomplex_of": "PS_complex_ghost"},
+        {"role": "R2", "subcomplex_of": "PS_complex_also_missing"},
+    ]
+    issues = IssueCollector()
+    bad = A.validate_subcomplex_pointers(roles, {"PS_complex_parent"}, issues=issues)
+    assert bad == [
+        ("R1", "PS_complex_ghost"),
+        ("R2", "PS_complex_also_missing"),
+    ]
+    assert len(issues.warnings) == 2
+    assert any("PS_complex_ghost" in w for w in issues.warnings)
+
+
+def test_validate_subcomplex_pointers_accepts_freshly_derived_parent():
+    """The validation must run AFTER derive_new_complexes so a role pointing
+    at a parent that was just minted this run doesn't warn."""
+    roles = [
+        _role("Parent role", "ParentEnz", ["rxn1"], ["c"]),
+        {"role":            "Child role",
+         "subcomplex_of":   None,  # placeholder, filled in below
+         "abstract_enzyme": "ChildEnz",
+         "reactions":       ["rxn2"],
+         "subsystems":      ["S"],
+         "localization":    {"c": {}}},
+    ]
+    existing_ids = set()
+    new = A.derive_new_complexes(roles, {}, existing_ids)
+    parent_id = next(c["kbase_id"] for c in new if c["enzyme"] == "ParentEnz")
+    roles[1]["subcomplex_of"] = parent_id  # now legitimately points at the fresh parent
+    all_ids = {c["kbase_id"] for c in new}
+    issues = IssueCollector()
+    bad = A.validate_subcomplex_pointers(roles, all_ids, issues=issues)
+    assert bad == []
+    assert issues.warnings == []
+
+
 # ---------- integration: paths + full driver bits ----------------------------
 def test_complexes_file_env_override(tmp_db):
     """PLANTSEED_COMPLEXES_FILE gets picked up by the paths module and points
