@@ -23,8 +23,13 @@ from . import (
 # `from plantseed_curation import build_tsv_rows, ranked_search`.
 from .actions import (
     apply_actions,
+    assign_complex_kbase_id,
     assign_kbase_id,
     build_tsv_rows,
+    complex_kbase_id,
+    derive_new_complexes,
+    enzyme_index_from_complexes,
+    enzyme_rxn_cpts,
     parse_tsv_text,
     preview_for_enzyme,
     run_apply,
@@ -93,7 +98,9 @@ __all__ = [
     "actions", "cli_io", "constants", "curator_files", "expasy",
     "identity", "paths", "schema", "search", "store",
     # actions
-    "apply_actions", "assign_kbase_id", "build_tsv_rows", "parse_tsv_text",
+    "apply_actions", "assign_complex_kbase_id", "assign_kbase_id",
+    "build_tsv_rows", "complex_kbase_id", "derive_new_complexes",
+    "enzyme_index_from_complexes", "enzyme_rxn_cpts", "parse_tsv_text",
     "preview_for_enzyme", "run_apply", "seed_new_entries", "validate_payload",
     # cli_io
     "Console", "ExitRequested",

@@ -523,6 +523,169 @@ def assign_kbase_id(entry, existing_ids, renamed_from=None, issues=None):
     return True
 
 
+# ----------------------------------------------------------------------------
+# Complex kbase_id assignment + derivation of new complexes from roles
+# ----------------------------------------------------------------------------
+def complex_kbase_id(enzyme, roles, rxn_cpts):
+    """PS_complex_<sha256[:6]> from enzyme name + sorted roles + sorted rxn+'_'+cpt_id keys.
+
+    Note: like `assign_kbase_id`, the hash is order-sensitive on `roles` and
+    `rxn_cpts`. Callers must sort before hashing (this helper does not sort
+    for you) so callers can be explicit about the ordering contract.
+    """
+    key = " / ".join([enzyme, "|".join(roles), "|".join(rxn_cpts)])
+    return "PS_complex_" + hashlib.sha256(key.encode("utf-8")).hexdigest()[:6]
+
+
+def enzyme_rxn_cpts(complex_entry):
+    """Return the sorted list of `rxn+'_'+cpt_id` strings used for hashing this
+    complex entry. Iterates `compartments_reactions[cpt_id].reactions` and
+    joins each reaction id to its (single-letter) compartment key."""
+    seen = []
+    for cpt_id, cpt in complex_entry.get("compartments_reactions", {}).items():
+        for rxn in cpt.get("reactions", []):
+            key = f"{rxn}_{cpt_id}"
+            if key not in seen:
+                seen.append(key)
+    return sorted(seen)
+
+
+def assign_complex_kbase_id(entry, existing_ids, issues=None):
+    """Compute the canonical PS_complex_* id for a complex entry and set it on
+    the entry. `existing_ids` is a mutable set kept in sync as we assign IDs.
+
+    Returns True if the entry's kbase_id changed (or was set for the first
+    time), False otherwise.
+    """
+    enzyme = entry.get("enzyme")
+    if not enzyme:
+        if issues is not None:
+            issues.warn("complex entry missing 'enzyme' — cannot mint kbase_id")
+        return False
+    roles = sorted(entry.get("roles", []))
+    rxn_cpts = enzyme_rxn_cpts(entry)
+    old_id = entry.get("kbase_id")
+    new_id = complex_kbase_id(enzyme, roles, rxn_cpts)
+    pool = set(existing_ids)
+    if old_id in pool:
+        pool.discard(old_id)
+    while new_id in pool:
+        new_id = "PS_complex_" + hashlib.sha256(new_id.encode("utf-8")).hexdigest()[:6]
+    if new_id == old_id:
+        return False
+    entry["kbase_id"] = new_id
+    if old_id:
+        existing_ids.discard(old_id)
+    existing_ids.add(new_id)
+    if issues is not None and old_id:
+        issues.log(
+            f"complex kbase_id changed for enzyme '{enzyme}' (was {old_id}, now {new_id})"
+        )
+    return True
+
+
+def enzyme_index_from_complexes(complexes_list, issues=None):
+    """Build `{enzyme: {'roles': [...], 'rxn_cpts': [...]}}` lookup from an
+    existing complexes list. Warns via `issues` on duplicate kbase_ids."""
+    index = {}
+    seen_ids = set()
+    for entry in complexes_list:
+        kid = entry.get("kbase_id")
+        if kid:
+            if kid in seen_ids and issues is not None:
+                issues.warn(
+                    f"duplicate complex kbase_id: {kid} for enzyme: {entry.get('enzyme')}"
+                )
+            seen_ids.add(kid)
+        enz = entry.get("enzyme")
+        if not enz:
+            continue
+        bucket = index.setdefault(enz, {"roles": [], "rxn_cpts": []})
+        for role in entry.get("roles", []):
+            if role not in bucket["roles"]:
+                bucket["roles"].append(role)
+        for rxn_cpt in enzyme_rxn_cpts(entry):
+            if rxn_cpt not in bucket["rxn_cpts"]:
+                bucket["rxn_cpts"].append(rxn_cpt)
+    return index
+
+
+def _abstract_enzyme_key(role_entry):
+    """Return the abstract enzyme name for grouping, applying the
+    spontaneous-reaction disambiguation. Returns None if the role has no
+    abstract_enzyme set."""
+    enz = role_entry.get("abstract_enzyme")
+    if not enz:
+        return None
+    if enz.strip().lower() == "spontaneous reaction":
+        rxns = role_entry.get("reactions", [])
+        if rxns:
+            enz = f"{enz}||{rxns[0]}"
+    return enz
+
+
+def _lcz_to_cpt_id(lcz):
+    """Map a role's localization key to the single-letter compartment id used
+    inside a complex's compartments_reactions dict. Transport (2-letter) keys
+    collapse to their second letter, e.g. 'cv' -> 'v'. Matches the convention
+    used by every hand-authored complex in the current database."""
+    return lcz[-1] if len(lcz) > 1 else lcz
+
+
+def derive_new_complexes(roles_list, enzyme_index, existing_ids, issues=None):
+    """For every role whose `abstract_enzyme` (with spontaneous-reaction
+    disambiguation) is NOT already in `enzyme_index`, build a new complex
+    entry with a fresh PS_complex_* kbase_id.
+
+    Returns the list of new complex dicts (each ready to append to
+    PlantSEED_Complexes.json). `existing_ids` is mutated as new ids are
+    minted so duplicates are avoided across successive calls.
+
+    Roles missing `reactions` or `localization` are skipped (they cannot
+    contribute a well-formed complex).
+    """
+    per_enzyme = {}  # enzyme -> {'roles': [], 'rxn_cpts': [], 'cpts': {}}
+    for role in roles_list:
+        enz = _abstract_enzyme_key(role)
+        if not enz or enz in enzyme_index:
+            continue
+        if not role.get("reactions") or not role.get("localization"):
+            continue
+        bucket = per_enzyme.setdefault(enz, {"roles": [], "rxn_cpts": [], "cpts": {}})
+        if role["role"] not in bucket["roles"]:
+            bucket["roles"].append(role["role"])
+        for rxn in role["reactions"]:
+            for lcz in role["localization"]:
+                cpt_id = _lcz_to_cpt_id(lcz)
+                rxn_cpt = f"{rxn}_{cpt_id}"
+                if rxn_cpt not in bucket["rxn_cpts"]:
+                    bucket["rxn_cpts"].append(rxn_cpt)
+                cpt_bucket = bucket["cpts"].setdefault(
+                    cpt_id,
+                    {"reactions": [], "reagents": lcz, "exclude": False},
+                )
+                if rxn not in cpt_bucket["reactions"]:
+                    cpt_bucket["reactions"].append(rxn)
+    new_complexes = []
+    for enz, bucket in per_enzyme.items():
+        roles = sorted(bucket["roles"])
+        rxn_cpts = sorted(bucket["rxn_cpts"])
+        kid = complex_kbase_id(enz, roles, rxn_cpts)
+        pool = set(existing_ids)
+        while kid in pool:
+            kid = "PS_complex_" + hashlib.sha256(kid.encode("utf-8")).hexdigest()[:6]
+        existing_ids.add(kid)
+        new_complexes.append({
+            "kbase_id": kid,
+            "enzyme": enz,
+            "roles": roles,
+            "compartments_reactions": bucket["cpts"],
+        })
+        if issues is not None:
+            issues.log(f"new complex minted for enzyme '{enz}' as {kid}")
+    return new_complexes
+
+
 def _known_roles_for_actions(actions):
     roles = set()
     for bucket in ("replace", "add", "rem", "key", "reassign"):
