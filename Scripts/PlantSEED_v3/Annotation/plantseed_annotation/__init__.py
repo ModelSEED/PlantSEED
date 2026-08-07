@@ -1,22 +1,59 @@
 """plantseed_annotation — shared library for the plant genome annotator.
 
-Mirrors the layout of the plantseed_curation package next door:
-  - paths.py       — PLANTSEED_ANNOT_* env-var overrides for every file path
-  - config.py      — tier presets (kbase / poplar / local) that pin CPU/RAM/refdata
-  - reference.py   — locate + verify the versioned refdata bundle
-  - refbuild/      — offline scripts that (re)build a bundle from PlantSEED_Roles.json
-  - algorithms/    — pluggable annotation algorithms
-  - dispatch.py    — pick algorithm(s) for a run based on tier + role phylum
-  - genome_io.py   — KBase Genome  <->  standalone JSON adapters
-  - emit.py        — write both `role # compartment` strings AND PS_role_* ids
-  - cli.py         — `plantseed-annotate --genome ... --tier {kbase,poplar,local}`
+Public API (Phase 1a): the standalone annotator that consumes a user's
+OrthoFinder results directory + PlantSEED_Roles.json and produces an
+annotated genome JSON in the shape reconstruct_app_impl.py consumes.
 
-Consumers (KBase SDK App, poplar celery worker, local Docker) all pip-install
-this package and go through the public API re-exported below; no algorithm
-code is duplicated in any wrapper.
-
-Approved plan: ~/.claude/plans/ok-entirely-new-and-functional-tulip.md
+    from plantseed_annotation import (
+        build_curated_features, annotate_species, write_annotated_genome,
+    )
 """
 
-# Public API surface — filled in as each phase lands.
-__all__ = []
+from . import config, genome_io, paths
+from .algorithms import orthofinder_io, propagate, psi, psi_refined
+
+from .algorithms.propagate import (
+    COMPARTMENT_MAPPING,
+    build_curated_features,
+    curated_features_by_source_species,
+    function_for_ortholog,
+)
+from .algorithms.psi_refined import (
+    annotate_query_gene,
+    annotate_species,
+)
+from .algorithms.psi import (
+    compute_psi_for_msa,
+    ensure_psi_cache,
+    load_psi_for_ogs,
+)
+from .algorithms.orthofinder_io import (
+    load_orthogroups,
+    load_orthologues,
+    orthologues_path,
+    read_msa,
+    species_from_orthogroups,
+    species_gene_to_og_index,
+)
+from .genome_io import (
+    build_annotated_genome,
+    write_annotated_genome,
+)
+
+__all__ = [
+    # subpackages
+    "config", "genome_io", "paths",
+    "orthofinder_io", "propagate", "psi", "psi_refined",
+    # propagate
+    "COMPARTMENT_MAPPING", "build_curated_features",
+    "curated_features_by_source_species", "function_for_ortholog",
+    # psi_refined
+    "annotate_query_gene", "annotate_species",
+    # psi
+    "compute_psi_for_msa", "ensure_psi_cache", "load_psi_for_ogs",
+    # orthofinder_io
+    "load_orthogroups", "load_orthologues", "orthologues_path",
+    "read_msa", "species_from_orthogroups", "species_gene_to_og_index",
+    # genome_io
+    "build_annotated_genome", "write_annotated_genome",
+]

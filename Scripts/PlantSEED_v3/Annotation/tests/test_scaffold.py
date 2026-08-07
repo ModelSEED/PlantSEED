@@ -12,14 +12,20 @@ import pytest
 
 
 def test_package_imports_cleanly():
-    """A totally empty scaffold at least imports and exposes the public
-    modules under __init__."""
+    """Every module in the package tree imports without side effects."""
     import plantseed_annotation
     for sub in ("paths", "config", "reference", "dispatch", "genome_io",
                 "emit", "cli"):
         assert hasattr(plantseed_annotation, sub) or __import__(
             f"plantseed_annotation.{sub}", fromlist=[sub]
         )
+
+
+def test_public_api_exports_are_all_importable():
+    """Every name in __all__ actually resolves."""
+    import plantseed_annotation as psa
+    for name in psa.__all__:
+        assert hasattr(psa, name), f"__all__ names {name!r} but attribute is missing"
 
 
 def test_algorithms_and_refbuild_import():
