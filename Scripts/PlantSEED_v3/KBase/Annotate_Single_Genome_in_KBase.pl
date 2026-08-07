@@ -17,7 +17,10 @@ my %Template_Compartment_Mapping=('c' => 'cytosol', 'g' => 'golgi', 'w' => 'cell
                                   'd' => 'plastid', 'cd' => 'plastid',
                                   'm' => 'mitochondria','cm' => 'mitochondria',
                                   'mj' => 'mitointer',
-                                  'x' => 'peroxisome');
+                                  'x' => 'peroxisome', 'cx' => 'peroxisome',
+                                  'e' => 'extracellular', 'ce' => 'extracellular',
+                                  'de' => 'plastid',
+                                  'dy' => 'thylakoid', 'y' => 'thylakoid');
 
 # Here, these values are rather arbitrary, but are based on examining
 # how many of the metabolic functions are propagated between Arabidopsis
