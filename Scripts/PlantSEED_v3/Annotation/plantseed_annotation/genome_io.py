@@ -1,16 +1,52 @@
-"""Genome format adapters.
+"""Serialize an annotated genome in the shape
+`Scripts/PlantSEED_v3/Model/reconstruct_app_impl.py` consumes.
 
-Two shapes the annotator has to accept and emit:
+The reconstructor reads:
 
-  - KBase `KBaseGenomes.Genome` object (dict-of-dicts JSON with features,
-    mrnas, cdss arrays and protein_translation on each). What the SDK App
-    wrapper hands in and the reconstructor consumes.
+    {
+      "id": "...",
+      "features": [
+        {"id": "geneA", "functions": ["role1 / role2 # cytosol"]},
+        {"id": "geneB", "functions": ["role3 # plastid"]},
+        ...
+      ]
+    }
 
-  - Standalone protein FASTA (what poplar celery gets from a website upload
-    or a local user runs from a checkout).
-
-genome_io.load() returns a normalized {feature_id: protein_seq} dict;
-genome_io.write_annotations() writes annotations back into the source
-shape (feature['functions'] arrays for KBase Genome; a `.functions.tsv`
-sidecar for standalone FASTA).
+so this module writes exactly that. Unannotated features are omitted by
+default (reconstruct skips them anyway); use `include_unannotated=True` to
+include them with `["Unannotated"]`.
 """
+
+import json
+
+
+def build_annotated_genome(genome_id, annotations, include_unannotated=False):
+    """Turn annotate_species()'s output into a reconstructor-compatible dict.
+
+    `annotations` — {query_gene: annotate_query_gene() result}. Only entries
+    with status == 'ANNOTATED' and a non-None function contribute a
+    feature; the rest are skipped (or emitted as Unannotated if opted-in).
+    """
+    features = []
+    for gene, ann in sorted(annotations.items()):
+        fn = ann.get("function")
+        if ann.get("status") == "ANNOTATED" and fn:
+            features.append({"id": gene, "functions": [fn]})
+        elif include_unannotated:
+            features.append({"id": gene, "functions": ["Unannotated"]})
+    return {"id": genome_id, "features": features}
+
+
+def write_annotated_genome(path, genome_id, annotations,
+                            include_unannotated=False, metadata=None):
+    """Write the annotated genome JSON to `path`.
+
+    `metadata` — optional dict merged into the top level under 'metadata';
+    lets callers record OF results dir, phylum, threshold, timestamp, etc.
+    """
+    obj = build_annotated_genome(genome_id, annotations, include_unannotated)
+    if metadata:
+        obj["metadata"] = metadata
+    with open(path, "w") as fh:
+        json.dump(obj, fh, indent=2, sort_keys=True)
+    return obj
