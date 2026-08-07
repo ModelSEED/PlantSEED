@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "plantseed_annotation refdata bundle manifest",
+  "description": "Manifest for a versioned refdata bundle under <BUNDLE_ROOT>/<version>/. Written by refbuild/stamp_version.py; consumed by plantseed_annotation.reference at annotation time.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "bundle_version",
+    "created_utc",
+    "sources",
+    "tool_versions",
+    "contents",
+    "totals",
+    "curated_non_arabidopsis"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1,
+      "description": "Version of THIS manifest schema. Bumped when the manifest structure changes."
+    },
+
+    "bundle_version": {
+      "type": "string",
+      "pattern": "^v\\d+(\\.\\d+)?$",
+      "description": "Human-readable version tag (v1, v2, v2.1, ...). Monotonic. Advances on any input change: new curator PR, new Phytozome release, new tool major version.",
+      "examples": ["v1", "v2", "v2.1"]
+    },
+
+    "created_utc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp when refbuild/stamp_version.py finalized this bundle."
+    },
+
+    "sources": {
+      "type": "object",
+      "required": ["roles_json_sha", "complexes_json_sha", "phytozome_release", "shoot_db_build_id"],
+      "properties": {
+        "roles_json_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{7,40}$",
+          "description": "git SHA of Data/PlantSEED_v3/PlantSEED_Roles.json at bundle build time. This is the single most important pin: any curator PR that touches roles changes this SHA and forces a bundle rebuild."
+        },
+        "complexes_json_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{7,40}$",
+          "description": "git SHA of Data/PlantSEED_v3/PlantSEED_Complexes.json at bundle build time."
+        },
+        "phytozome_release": {
+          "type": "string",
+          "description": "Phytozome release identifier used for the baseline OrthoFinder run (e.g., 'V12', 'V13').",
+          "examples": ["V12", "V13"]
+        },
+        "shoot_db_build_id": {
+          "type": "string",
+          "description": "SHOOT database build identifier — hash of the OrthoFinder results directory + SHOOT tool version. Changes when the SHOOT db was regenerated even if roles didn't change."
+        },
+        "curation_repo_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Upstream repo the roles/complexes files were sourced from. Almost always github.com/ModelSEED/PlantSEED but recorded for provenance."
+        }
+      }
+    },
+
+    "tool_versions": {
+      "type": "object",
+      "description": "Versions of every external tool involved in building the bundle. Used by verify() to warn on version drift between build-time and run-time environments.",
+      "properties": {
+        "orthofinder": { "type": "string" },
+        "diamond": { "type": "string" },
+        "mafft": { "type": "string" },
+        "fasttree": { "type": "string" },
+        "shoot": { "type": "string" },
+        "epa_ng": { "type": "string" },
+        "gappa": { "type": "string" },
+        "plantseed_annotation": { "type": "string", "description": "This package's version at bundle build time." }
+      }
+    },
+
+    "contents": {
+      "type": "object",
+      "description": "Per-file SHA-256 for every artifact inside the bundle directory. reference.verify() diffs on-disk hashes against these.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["sha256", "bytes"],
+        "properties": {
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "bytes":  { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+
+    "totals": {
+      "type": "object",
+      "required": ["bytes_total", "og_count", "protein_count"],
+      "properties": {
+        "bytes_total": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total on-disk bytes. Compared to config.get(tier).refdata_gb_max at load time; over-cap loads fail on the KBase tier."
+        },
+        "og_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of orthogroups in orthofinder_families_enriched/. Pruning kept only PlantSEED-adjacent OGs + close neighbors."
+        },
+        "protein_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total protein sequences across all OGs (Arabidopsis + curated non-Arabidopsis + reference-species neighbors)."
+        }
+      }
+    },
+
+    "curated_non_arabidopsis": {
+      "type": "array",
+      "description": "Every non-Arabidopsis PlantSEED-curated protein that was SHOOT-placed into the enriched families this run. Recorded here so the manifest itself documents which specialized pathways the bundle covers.",
+      "items": {
+        "type": "object",
+        "required": ["source", "id", "og", "sha256"],
+        "properties": {
+          "source": { "type": "string", "description": "e.g., 'UniProt', 'Phytozome:Sbicolor_v3.1.1'" },
+          "id":     { "type": "string", "description": "Source-native id (UniProt accession, Phytozome locus, etc.)" },
+          "og":     { "type": "string", "description": "OrthoFinder OG id it was placed into (e.g., 'OG0001234')" },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$", "description": "SHA-256 of the placed sequence (for incremental rebuild cache)" },
+          "pathway_role": { "type": "string", "description": "The abstract_enzyme / role from PlantSEED_Roles.json this protein backs" }
+        }
+      }
+    },
+
+    "delta_vs_previous": {
+      "type": "object",
+      "description": "Optional. Difference from the previous bundle version — populated by refbuild/stamp_version when a previous bundle is available on the same host.",
+      "properties": {
+        "previous_version":   { "type": "string" },
+        "proteins_added":     { "type": "integer" },
+        "proteins_dropped":   { "type": "integer" },
+        "proteins_resequenced": { "type": "integer" },
+        "ogs_added":          { "type": "integer" },
+        "ogs_dropped":        { "type": "integer" },
+        "role_kbase_ids_changed": { "type": "integer" }
+      }
+    }
+  }
+}
