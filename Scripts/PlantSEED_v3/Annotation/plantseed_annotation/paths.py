@@ -48,13 +48,37 @@ COMPLEXES_FILE = _env(
     "PLANTSEED_ANNOT_COMPLEXES_FILE",
     os.path.join(_REPO_ROOT, "Data", "PlantSEED_v3", "PlantSEED_Complexes.json"),
 )
+COMPARTMENTS_FILE = _env(
+    "PLANTSEED_ANNOT_COMPARTMENTS_FILE",
+    os.path.join(
+        _REPO_ROOT, "Data", "PlantSEED_v3", "Compartments",
+        "PlantSEED_Compartments.json",
+    ),
+)
+SPECIES_PHYLA_FILE = _env(
+    "PLANTSEED_ANNOT_SPECIES_PHYLA_FILE",
+    os.path.join(
+        _REPO_ROOT, "Scripts", "PlantSEED_v3", "KBase",
+        "Species_Phyla.txt",
+    ),
+)
+
+# Per-phylum PSI thresholds from Scripts/PlantSEED_v3/KBase/Annotate_Single_Genome_in_KBase.pl.
+# CLI --phylum-threshold overrides for a single run; env override for a whole
+# session / test suite.
+PHYLUM_THRESHOLDS_DEFAULT = {
+    "Eudicot": 0.60,
+    "Monocot": 0.55,
+    "Basal":   0.30,
+}
 
 
 def refresh_from_env():
     """Re-read paths from the environment. Tests call this after setting
     PLANTSEED_ANNOT_* env vars in a fixture so the module-level constants
     reflect the new values."""
-    global BUNDLE_ROOT, BUNDLE_VERSION, BUNDLE_DIR, ROLES_FILE, COMPLEXES_FILE
+    global BUNDLE_ROOT, BUNDLE_VERSION, BUNDLE_DIR
+    global ROLES_FILE, COMPLEXES_FILE, COMPARTMENTS_FILE, SPECIES_PHYLA_FILE
     BUNDLE_ROOT = _env("PLANTSEED_ANNOT_BUNDLE_ROOT", "/kb/data/plantseed_annotation")
     BUNDLE_VERSION = _env("PLANTSEED_ANNOT_BUNDLE_VERSION", "latest")
     BUNDLE_DIR = _env(
@@ -68,4 +92,18 @@ def refresh_from_env():
     COMPLEXES_FILE = _env(
         "PLANTSEED_ANNOT_COMPLEXES_FILE",
         os.path.join(_REPO_ROOT, "Data", "PlantSEED_v3", "PlantSEED_Complexes.json"),
+    )
+    COMPARTMENTS_FILE = _env(
+        "PLANTSEED_ANNOT_COMPARTMENTS_FILE",
+        os.path.join(
+            _REPO_ROOT, "Data", "PlantSEED_v3", "Compartments",
+            "PlantSEED_Compartments.json",
+        ),
+    )
+    SPECIES_PHYLA_FILE = _env(
+        "PLANTSEED_ANNOT_SPECIES_PHYLA_FILE",
+        os.path.join(
+            _REPO_ROOT, "Scripts", "PlantSEED_v3", "KBase",
+            "Species_Phyla.txt",
+        ),
     )
