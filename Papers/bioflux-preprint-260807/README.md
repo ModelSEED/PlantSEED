@@ -35,14 +35,16 @@ via:
 ```bash
 export PYTHONPATH=Scripts/PlantSEED_v3/Annotation
 
-# Annotation
-for spp in Sbicolor_v3.1.1:Monocot Ptrichocarpa_v4.1:Eudicot Athaliana_TAIR10:Eudicot; do
-    species=${spp%%:*}; phylum=${spp##*:}
+# Annotation — phylum auto-detected from Scripts/PlantSEED_v3/KBase/Species_Phyla.txt
+# (Athaliana_TAIR10, Ptrichocarpa_v4.1 → Eudicot; Sbicolor_v3.1.1 → Monocot).
+# Pass --phylum {Eudicot,Monocot,Basal} explicitly only for species not in
+# that table, or use --threshold to override the per-phylum PSI floor.
+for spp in Sbicolor_v3.1.1 Ptrichocarpa_v4.1 Athaliana_TAIR10; do
     python -m plantseed_annotation.cli \
         --orthofinder-results /path/to/OrthoFinder/Results_dir \
-        --query-species $species --phylum $phylum \
+        --query-species $spp \
         --psi-cache-dir ./psi_cache --workers 16 \
-        --out ${species}_annotated_genome.json
+        --out ${spp}_annotated_genome.json
 done
 
 # Reconstruction
