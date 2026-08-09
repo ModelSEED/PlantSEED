@@ -23,7 +23,6 @@ of this v2.5-era work.
 | `Ptrichocarpa_v4.1_model.json`             | Populus reconstruction (1181 reactions, 1293 compounds, 810 reactions with GPRs). |
 | `provenance.json`                          | Git SHAs (repo, roles JSON, complexes JSON, template) + OrthoFinder results dir + annotator flags. |
 | `summary_stats.tsv`                        | Per-genome one-row summary (annotated features, reaction counts, GPR coverage, per-status counts, per-pair-tag counts). |
-| `qpsi_comparison_260806.md`                | Detailed comparison of the new Sorghum reconstruction against the qpsi-260406 reconstruction used earlier in the BioFlux pipeline. Includes the 40-reaction GPR divergence table and analysis. |
 
 ## How the annotated genomes + models were produced
 
