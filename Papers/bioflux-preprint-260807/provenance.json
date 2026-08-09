@@ -1,0 +1,68 @@
+{
+  "run_utc": "2026-08-06",
+  "plantseed_repo": "ModelSEED/PlantSEED",
+  "plantseed_branch_at_run": "plantseed-annotation-scaffold-260806",
+  "plantseed_head_sha": "2d9fa24c1a82ef53b099ba6f9e5b826a03f16355",
+  "plantseed_head_short": "2d9fa24",
+  "plantseed_roles_json_sha": "add5726af0faa53ecee0af8db0073bd5b41e7979",
+  "plantseed_complexes_json_sha": "283de73646bdb03167a535682f4fb04ffbd50b8d",
+  "template_sha": "0a83b90c5c1ea6dc487556de0f7f7c528d719c09",
+  "orthofinder_results": "/scratch1/seaver/OrthoFinder_Reference/OrthoFinder/Results_May26",
+  "annotator_flags": {
+    "admit_paralogs": true,
+    "fallback_baseline": 0.5,
+    "threshold_semantics": "phylum-threshold applies to PA* candidates only; O (OF-called orthologs) accepted regardless of PSI"
+  },
+  "phylum_thresholds": {
+    "Eudicot": 0.6,
+    "Monocot": 0.55,
+    "Basal": 0.3
+  },
+  "per_genome": {
+    "Athaliana_TAIR10": {
+      "phylum": "Eudicot",
+      "psi_threshold": null,
+      "ref_species": "Athaliana_TAIR10",
+      "n_annotated_features": 1480,
+      "n_curated_ref_features": 1480,
+      "status_counts": {
+        "ANNOTATED": 1480
+      },
+      "pair_stats": null
+    },
+    "Sbicolor_v3.1.1": {
+      "phylum": "Monocot",
+      "psi_threshold": 0.55,
+      "ref_species": "Athaliana_TAIR10",
+      "n_annotated_features": 1489,
+      "n_curated_ref_features": 1480,
+      "status_counts": {
+        "AMB_HIT": 18,
+        "ANNOTATED": 1489,
+        "NO_ORTHOLOG": 127
+      },
+      "pair_stats": {
+        "O": 4247,
+        "PAH": 26,
+        "PAM": 361
+      }
+    },
+    "Ptrichocarpa_v4.1": {
+      "phylum": "Eudicot",
+      "psi_threshold": 0.6,
+      "ref_species": "Athaliana_TAIR10",
+      "n_annotated_features": 1766,
+      "n_curated_ref_features": 1480,
+      "status_counts": {
+        "AMB_HIT": 15,
+        "ANNOTATED": 1766,
+        "NO_ORTHOLOG": 221
+      },
+      "pair_stats": {
+        "O": 3632,
+        "PAH": 32,
+        "PAM": 452
+      }
+    }
+  }
+}
