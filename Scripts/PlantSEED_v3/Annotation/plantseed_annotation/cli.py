@@ -2,7 +2,7 @@
 
 Runs the standalone annotator against an OrthoFinder results directory
 plus PlantSEED_Roles.json, producing an annotated genome JSON in the
-shape reconstruct_app_impl.py consumes.
+shape plantseed_model/reconstruct.py consumes.
 
 Usage:
 

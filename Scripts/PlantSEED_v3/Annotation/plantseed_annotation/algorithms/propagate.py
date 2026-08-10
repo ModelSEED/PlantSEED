@@ -6,7 +6,7 @@ Ported from
 into a standalone library callable that consumes the on-dev
 `Data/PlantSEED_v3/PlantSEED_Roles.json` and produces the SAME
 `role [ / role]* [# compartment]*` string contract that
-`Scripts/PlantSEED_v3/Model/reconstruct_app_impl.py` and
+`plantseed_model.reconstruct` and
 `plant_fba.reconstruct_plant_metabolism` both consume today.
 """
 

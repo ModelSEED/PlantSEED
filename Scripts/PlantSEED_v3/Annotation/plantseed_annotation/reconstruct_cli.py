@@ -1,5 +1,5 @@
 """`plantseed-reconstruct` — thin CLI wrapper around
-`Scripts/PlantSEED_v3/Model/reconstruct_app_impl.py::ReconstructAppImpl`.
+`plantseed_model.reconstruct.ReconstructAppImpl`.
 
 Consumes:
   - an annotated genome JSON (as produced by plantseed-annotate)
@@ -7,14 +7,13 @@ Consumes:
   - a compartments JSON (default: Data/PlantSEED_v3/Compartments/PlantSEED_Compartments.json)
 
 Produces an FBAModel-shaped JSON matching what
-`reconstruct_app_impl.py::main` writes today (KBase-native format).
+`plantseed_model.reconstruct.main` writes today (KBase-native format).
 
 The wrapper is thin: argparse + a call into ReconstructAppImpl. All
-algorithm changes should land in reconstruct_app_impl.py itself.
+algorithm changes should land in plantseed_model/reconstruct.py itself.
 """
 
 import argparse
-import importlib.util
 import json
 import os
 import sys
@@ -23,19 +22,21 @@ from . import paths
 
 
 def _load_reconstruct_impl():
-    """Import ReconstructAppImpl from Scripts/PlantSEED_v3/Model/reconstruct_app_impl.py
-    (which isn't packaged, so we load it by path)."""
-    here = os.path.dirname(os.path.abspath(__file__))
-    repo_root = os.path.normpath(os.path.join(here, "..", "..", "..", ".."))
-    impl_path = os.path.join(
-        repo_root, "Scripts", "PlantSEED_v3", "Model", "reconstruct_app_impl.py",
-    )
-    if not os.path.isfile(impl_path):
-        sys.exit(f"ERROR: reconstruct_app_impl.py not found at {impl_path}")
-    spec = importlib.util.spec_from_file_location("reconstruct_app_impl", impl_path)
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    return mod.ReconstructAppImpl
+    """Return ReconstructAppImpl.
+
+    Now a plain import: the engine is packaged as `plantseed_model.reconstruct`.
+    Kept as a function so callers and tests keep the same seam, and so the failure
+    mode stays a clear message rather than an ImportError traceback when someone
+    runs from a source tree without installing.
+    """
+    try:
+        from plantseed_model import ReconstructAppImpl
+    except ImportError as exc:
+        sys.exit(
+            "ERROR: could not import plantseed_model. Install the distribution "
+            f"(`pip install .` from the PlantSEED repo root) — {exc}"
+        )
+    return ReconstructAppImpl
 
 
 def _default_template_path():

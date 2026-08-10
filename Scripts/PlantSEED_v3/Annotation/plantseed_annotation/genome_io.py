@@ -1,5 +1,5 @@
 """Serialize an annotated genome in the shape
-`Scripts/PlantSEED_v3/Model/reconstruct_app_impl.py` consumes.
+`plantseed_model.reconstruct` consumes.
 
 The reconstructor reads:
 

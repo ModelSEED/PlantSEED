@@ -2,7 +2,7 @@
 
 Public API (Phase 1a): the standalone annotator that consumes a user's
 OrthoFinder results directory + PlantSEED_Roles.json and produces an
-annotated genome JSON in the shape reconstruct_app_impl.py consumes.
+annotated genome JSON in the shape plantseed_model/reconstruct.py consumes.
 
     from plantseed_annotation import (
         build_curated_features, annotate_species, write_annotated_genome,
