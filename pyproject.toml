@@ -73,6 +73,7 @@ include = [
 
 [tool.pytest.ini_options]
 testpaths = [
+    "Scripts/PlantSEED_v3/Core/tests",
     "Scripts/PlantSEED_v3/Annotation/tests",
     "Scripts/PlantSEED_v3/Curation/tests",
 ]
