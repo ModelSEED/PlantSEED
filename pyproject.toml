@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plantseed"
+description = "PlantSEED v3 — plant genome functional annotation, metabolic reconstruction, and curation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Sam Seaver", email = "samseaver@gmail.com" }]
+keywords = ["metabolic-model", "genome-annotation", "plant", "ModelSEED", "PlantSEED"]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dynamic = ["version"]
+
+# The core is deliberately pure stdlib. Anything heavier belongs in an extra
+# and may only be imported by code that the corresponding extra installs.
+dependencies = []
+
+[project.optional-dependencies]
+# plantseed_curation.schema uses PyYAML to load PlantSEED_Schema.yaml.
+curate = ["PyYAML>=6"]
+# cobrapy is the in-memory model type for FBA/FVA; the neutral MetabolicModel
+# type does not require it.
+model = ["cobra>=0.29"]
+# Only omics/stats.py::mahalanobis_outliers needs these. Percentile ranks are stdlib.
+stats = ["numpy>=1.24", "scipy>=1.10"]
+# Pinned to a commit, not a PyPI release: PyPI 0.4.2 (2025-03) lags dev
+# substantially. Callers must pass annotate_with_rast=False (the True default
+# makes an outbound network call, which breaks both reproducibility and the
+# CTS no-runtime-downloads rule) and must not call helpers.get_template or
+# helpers.get_classifier, which write into site-packages.
+# NOTE: pinned to upstream ModelSEED/ModelSEEDpy@dev. cshenry/ModelSEEDpy@main
+# (b758b44217bca756a5e07a70e986fbdfe73dd1b6) is what modelseed-api uses and
+# carries MSFBA + MSBiochem.get(path=); switch if adapter interop needs it.
+msd = [
+    "modelseedpy @ git+https://github.com/ModelSEED/ModelSEEDpy@062714b28dff24b864b1dc2e2bb89aa2fd6b8298",
+]
+all = ["plantseed[curate,model,stats,msd]"]
+dev = ["pytest>=8", "pytest-cov"]
+
+[project.urls]
+Homepage = "https://github.com/ModelSEED/PlantSEED"
+Repository = "https://github.com/ModelSEED/PlantSEED"
+
+[project.scripts]
+plantseed-annotate = "plantseed_annotation.cli:main"
+plantseed-reconstruct = "plantseed_annotation.reconstruct_cli:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "plantseed_core.__about__.__version__" }
+
+# Multiple roots so that no source file has to move. Each entry is an existing
+# directory that contains one importable package.
+[tool.setuptools.packages.find]
+where = [
+    "Scripts/PlantSEED_v3/Core",
+    "Scripts/PlantSEED_v3/Annotation",
+    "Scripts/PlantSEED_v3/Curation",
+    "Scripts/PlantSEED_v3/Model",
+]
+include = [
+    "plantseed_core*",
+    "plantseed_annotation*",
+    "plantseed_curation*",
+    "plantseed_model*",
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "Scripts/PlantSEED_v3/Annotation/tests",
+    "Scripts/PlantSEED_v3/Curation/tests",
+]

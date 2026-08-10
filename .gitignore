@@ -7,3 +7,10 @@
 *.pickle
 __pycache__/
 *.pyc
+
+# Python packaging build artifacts
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.recall/
