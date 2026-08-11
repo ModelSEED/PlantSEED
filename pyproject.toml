@@ -40,6 +40,11 @@ curate = ["PyYAML>=6"]
 model = ["cobra>=0.29,<0.32"]
 # Only omics/stats.py::mahalanobis_outliers needs these. Percentile ranks are stdlib.
 stats = ["numpy>=1.24", "scipy>=1.10"]
+# ModelSEEDpy — the Python modeling library (gapfilling, ATP correction, FBA
+# packages). Named `modelseed`, not `msd`: in this ecosystem MSD means
+# ModelSEEDDatabase, the biochemistry repo, which is a separate ~80 MB data
+# dependency we will vendor rather than pip-install. Do not conflate them.
+#
 # cshenry/ModelSEEDpy, not ModelSEED/ModelSEEDpy and not PyPI.
 #
 # The fork is the de-facto build: it is what ModelSEED/modelseed-api installs
@@ -75,13 +80,13 @@ stats = ["numpy>=1.24", "scipy>=1.10"]
 # neither — so the container-level fix is to install modelseedpy with
 # --no-deps. Left honest here rather than papered over; revisit if the fork
 # relaxes the pin.
-msd = [
+modelseed = [
     "modelseedpy @ git+https://github.com/cshenry/ModelSEEDpy@b758b44217bca756a5e07a70e986fbdfe73dd1b6",
     # modelseedpy requires cobra unbounded; carry the same cap as [model] so
-    # installing [msd] alone cannot pull the broken 0.32.0.
+    # installing [modelseed] alone cannot pull the broken 0.32.0.
     "cobra>=0.29,<0.32",
 ]
-all = ["plantseed[curate,model,stats,msd]"]
+all = ["plantseed[curate,model,stats,modelseed]"]
 dev = ["pytest>=8", "pytest-cov"]
 
 [project.urls]
