@@ -14,3 +14,6 @@ dist/
 *.egg-info/
 .pytest_cache/
 .recall/
+
+# fetched external dependencies (see deps/README.md)
+deps/src/

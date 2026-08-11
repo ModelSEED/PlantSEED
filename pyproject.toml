@@ -40,54 +40,22 @@ curate = ["PyYAML>=6"]
 model = ["cobra>=0.29,<0.32"]
 # Only omics/stats.py::mahalanobis_outliers needs these. Percentile ranks are stdlib.
 stats = ["numpy>=1.24", "scipy>=1.10"]
-# ModelSEEDpy — the Python modeling library (gapfilling, ATP correction, FBA
-# packages). Named `modelseed`, not `msd`: in this ecosystem MSD means
-# ModelSEEDDatabase, the biochemistry repo, which is a separate ~80 MB data
-# dependency we will vendor rather than pip-install. Do not conflate them.
-#
-# cshenry/ModelSEEDpy, not ModelSEED/ModelSEEDpy and not PyPI.
-#
-# The fork is the de-facto build: it is what ModelSEED/modelseed-api installs
-# (Dockerfile.standalone: `git clone --branch main
-# https://github.com/cshenry/ModelSEEDpy.git`), so it is what actually builds
-# models for modelseed.org, and it is also what KB-ModelSEEDReconstruction
-# installs on the KBase side. It is ~117 commits ahead of upstream `dev` and
-# carries MSFBA, msminimalmedia, and a much larger msexpression. PyPI 0.4.2
-# (2025-03) lags both by well over a year.
-#
-# Pinned to a SHA where both of those track branch HEAD unpinned — their own
-# docs/STANDALONE.md concedes the gap: "the image always reflects HEAD of those
-# repos at the time the image was built. For reproducible builds against
-# pinned commits, pin the --branch <ref> ... to specific commit SHAs." Since a
-# published paper depends on our numbers, we pin. Bump deliberately.
-#
-# Two usage constraints, both load-bearing for containers:
-#   * pass annotate_with_rast=False — the True default makes an outbound call
-#     to an ANL service, which breaks reproducibility and violates CTS's
-#     no-runtime-downloads rule
-#   * never call helpers.get_template / helpers.get_classifier at runtime; they
-#     write into site-packages. modelseed-api handles this by warming the
-#     classifier at image build time, which is the pattern to copy.
-#
-# KNOWN LIMITATION — this extra does not install on Python 3.12. The fork pins
-# `scikit-learn==1.2.0` (a comment there says "version lock for pickle ML
-# models"), and 1.2.0 cannot build on 3.12 because it needs distutils, removed
-# from the stdlib in 3.12. Verified: fails on 3.12, installs on 3.10 and 3.11.
-# modelseed-api works around it by force-reinstalling numpy and scikit-learn
-# *after* the editable install (Dockerfile.standalone), and
-# KB-ModelSEEDReconstruction by using pip's legacy resolver. Only
-# modelseedpy/ml and helpers.get_classifier need sklearn at all, and we use
-# neither — so the container-level fix is to install modelseedpy with
-# --no-deps. Left honest here rather than papered over; revisit if the fork
-# relaxes the pin.
-modelseed = [
-    "modelseedpy @ git+https://github.com/cshenry/ModelSEEDpy@b758b44217bca756a5e07a70e986fbdfe73dd1b6",
-    # modelseedpy requires cobra unbounded; carry the same cap as [model] so
-    # installing [modelseed] alone cannot pull the broken 0.32.0.
-    "cobra>=0.29,<0.32",
-]
-all = ["plantseed[curate,model,stats,modelseed]"]
+all = ["plantseed[curate,model,stats]"]
 dev = ["pytest>=8", "pytest-cov"]
+
+# NOT DECLARED HERE, ON PURPOSE — cobrakbase, modelseedpy, and the ModelSEED
+# biochemistry database are pinned by commit in deps/external.json and fetched
+# with `python deps/fetch.py`.
+#
+# Two reasons. First, all three are developed far ahead of their PyPI
+# registrations — cobrakbase is at 0.3.0 from 2022, ModelSEEDpy at 0.4.2 from
+# 2025 — so a PyPI version constraint would freeze us on code that predates
+# what modelseed.org actually runs. Second, the alternative of a direct
+# reference (`pkg @ git+https://...`) makes the entire distribution
+# un-publishable to PyPI, which would cost us `pip install plantseed`.
+#
+# Only adapters and container builds need them; the science core does not, and
+# Core/tests/test_core_isolation.py enforces that.
 
 [project.urls]
 Homepage = "https://github.com/ModelSEED/PlantSEED"

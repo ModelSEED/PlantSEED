@@ -1,0 +1,99 @@
+{
+  "_comment": [
+    "Sources tracked by COMMIT, not by PyPI release. See deps/README.md for why.",
+    "This file is the single source of truth for all three. Nothing here belongs",
+    "in pyproject.toml: a direct-reference (git+) dependency makes the whole",
+    "distribution un-publishable to PyPI, and these move far faster than their",
+    "PyPI registrations. Fetch them with `python deps/fetch.py`.",
+    "Bump `commit` deliberately, never automatically. Record why in `pinned_because`."
+  ],
+  "schema_version": 1,
+  "dependencies": {
+    "cobrakbase": {
+      "kind": "python-package",
+      "repo": "https://github.com/Fxe/cobrakbase",
+      "branch": "master",
+      "commit": "e7bbd3c37b96d44ac49b7b16dfa6fc08d355d4a7",
+      "install": "pip-editable",
+      "pypi": "cobrakbase 0.3.0 (2022-12) — over three years behind the repo",
+      "pinned_because": [
+        "Fxe/cobrakbase@master is what ModelSEED/modelseed-api installs, so it is",
+        "what backs modelseed.org. cshenry/cobrakbase is a fork 141 commits behind",
+        "Fxe and is used only by KB-ModelSEEDReconstruction; do not use it.",
+        "Note Fxe's DEFAULT branch is `cobra-model`, not `master` — modelseed-api",
+        "explicitly selects master, so we match that rather than the default.",
+        "ADAPTER-ONLY. cobrakbase/__init__.py unconditionally constructs KBaseAPI",
+        "and vendors a 364 KB workspace client, so it must never be imported by",
+        "the science core. Enforced by Core/tests/test_core_isolation.py."
+      ]
+    },
+    "modelseedpy": {
+      "kind": "python-package",
+      "repo": "https://github.com/cshenry/ModelSEEDpy",
+      "branch": "main",
+      "commit": "b758b44217bca756a5e07a70e986fbdfe73dd1b6",
+      "install": "pip-editable-no-deps",
+      "pypi": "ModelSEEDpy 0.4.2 (2025-03) — lags the fork by well over a year",
+      "pinned_because": [
+        "cshenry/ModelSEEDpy is the de-facto build: modelseed-api clones it",
+        "(--branch main) and so does KB-ModelSEEDReconstruction. It is ~117",
+        "commits ahead of ModelSEED/ModelSEEDpy@dev and carries MSFBA,",
+        "msminimalmedia and a much larger msexpression.",
+        "install is no-deps ON PURPOSE: the fork pins scikit-learn==1.2.0, which",
+        "cannot build on Python 3.12 (needs distutils, removed in 3.12). Only",
+        "modelseedpy/ml and helpers.get_classifier need sklearn and we use",
+        "neither. modelseed-api works around the same pin by force-reinstalling",
+        "numpy+scikit-learn afterwards; KB-ModelSEEDReconstruction uses pip's",
+        "legacy resolver.",
+        "Usage constraints: always pass annotate_with_rast=False (the True",
+        "default makes an outbound ANL call — breaks reproducibility and CTS's",
+        "no-runtime-downloads rule), and never call helpers.get_template or",
+        "helpers.get_classifier at runtime (they write into site-packages)."
+      ]
+    },
+    "biochemistry": {
+      "kind": "data",
+      "repo": "https://github.com/ModelSEED/ModelSEEDDatabase",
+      "branch": "dev",
+      "commit": "465b7116c18ba99af83ee38589a30c32e69510f6",
+      "commit_date": "2026-05-06",
+      "install": "sparse-checkout",
+      "paths": [
+        "/Biochemistry/reaction_*.json",
+        "/Biochemistry/compound_*.json"
+      ],
+      "pinned_because": [
+        "This is the ModelSEED biochemistry DATABASE — not ModelSEEDpy. Both are",
+        "needed and they are different things.",
+        "The commit is the one already chosen in Generate_Core_ModelTemplate.py",
+        "(MSD_PINNED_COMMIT): immediately BEFORE 6a3813875f, the 2026-05-29",
+        "reversibility refresh, so reaction directions match what the published",
+        "templates were generated against. That script is the reason this pin",
+        "exists; this file is now where it lives.",
+        "LAYOUT WARNING — dev and master are structurally different branches.",
+        "dev (this pin, and its tip) stores biochemistry as 111 sharded JSON",
+        "files, Biochemistry/reaction_NN.json and compound_NN.json, and has no",
+        "Templates/ directory and no reactions.tsv or compounds.tsv at all.",
+        "master has the classic single reactions.tsv + compounds.tsv plus",
+        "Templates/. PlantSEED reads the sharded dev form — see the",
+        "reaction_.*\\.json / compound_.*\\.json patterns in",
+        "Generate_Core_ModelTemplate.py — so dev is correct for us. But",
+        "ModelSEEDpy's own biochem loader expects master's TSVs, so anything",
+        "going through modelseedpy will need the master layout instead. Do not",
+        "assume one checkout serves both.",
+        "SIZE, measured not estimated: the full repo is 1.32 GB; these two",
+        "patterns yield 111 files / 189 MB (reaction_*.json 142 MB over 61",
+        "files, compound_*.json 48 MB over 50), plus ~18 MB of .git. That is",
+        "considerably more than master's TSV form and it matters for container",
+        "size — consider a build-time conversion to a compact cache (PlantSEED",
+        "already pickles these into Biochem_Cache/MS_Rxns.pickle and",
+        "MS_Cpds.pickle) rather than shipping the JSON.",
+        "Sparse checkout is --no-cone: cone mode understands directory prefixes",
+        "only and silently ignores file-level patterns, pulling whole",
+        "directories instead (394 MB, and still missing the files we asked for).",
+        "modelseed-api tracks the moving dev tip rather than pinning, so",
+        "modelseed.org and our templates can disagree on reaction directionality."
+      ]
+    }
+  }
+}
