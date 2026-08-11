@@ -28,16 +28,14 @@ curate = ["PyYAML>=6"]
 # cobrapy is the in-memory model type for FBA/FVA; the neutral MetabolicModel
 # type does not require it.
 #
-# Capped below 0.32: cobra 0.32.0 is broken on import unless its optional
-# `chrr` extra is installed. cobra/sampling/hopsy.py evaluates
-# `hopsy.UniformCoordinateHitAndRunProposal` as an annotation default at
-# class-definition time, but hopsy is only declared under `extra == "chrr"`,
-# so a plain `pip install cobra` yields `NameError: name 'hopsy' is not
-# defined` on `import cobra`. Verified against 0.32.0 on 3.10, 3.11 and 3.12.
-# `cobra[chrr]>=0.32` also works but drags in a native C++ sampler we do not
-# use — the cap is the cheaper fix for container size. Lift it once upstream
-# guards that import.
-model = ["cobra>=0.29,<0.32"]
+# 0.32.0 is excluded, not the whole 0.32 line. That single release is broken on
+# import unless its optional `chrr` extra is installed: cobra/sampling/hopsy.py
+# evaluates `hopsy.UniformCoordinateHitAndRunProposal` as an annotation default
+# at class-definition time, while hopsy is only declared under
+# `extra == "chrr"`, so a plain install yields `NameError: name 'hopsy' is not
+# defined` on `import cobra`. Verified broken on 3.10, 3.11 and 3.12.
+# Upstream fixed it in 0.32.1 (released 2026-08-11); verified clean.
+model = ["cobra>=0.29,!=0.32.0"]
 # Only omics/stats.py::mahalanobis_outliers needs these. Percentile ranks are stdlib.
 stats = ["numpy>=1.24", "scipy>=1.10"]
 all = ["plantseed[curate,model,stats]"]
