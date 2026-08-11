@@ -33,15 +33,23 @@ jobs:
       # Installing from a clean checkout is itself the test: until this repo
       # had a pyproject.toml, nothing here was importable except by PYTHONPATH,
       # which blocked every delivery path.
+      # [model] is included so cobrapy is exercised on both interpreters. It
+      # earns its place: cobra 0.32.0 is broken on import without its optional
+      # `chrr` extra, and an unbounded `cobra>=0.29` walked straight into it.
+      # [msd] is deliberately excluded — modelseedpy's scikit-learn==1.2.0 pin
+      # cannot build on 3.12; see the note in pyproject.toml.
       - name: Install
         run: |
           python -m pip install --upgrade pip
-          pip install ".[curate,dev]"
+          pip install ".[curate,model,dev]"
 
       - name: Console scripts resolve
         run: |
           plantseed-annotate --help > /dev/null
           plantseed-reconstruct --help > /dev/null
+
+      - name: Optional extras import
+        run: python -c "import cobra; print('cobra', cobra.__version__)"
 
       # The whole suite, which includes the architectural gates:
       #   Core/tests/test_core_isolation.py  — no platform imports in the core,

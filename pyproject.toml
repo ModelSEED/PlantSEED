@@ -27,19 +27,59 @@ dependencies = []
 curate = ["PyYAML>=6"]
 # cobrapy is the in-memory model type for FBA/FVA; the neutral MetabolicModel
 # type does not require it.
-model = ["cobra>=0.29"]
+#
+# Capped below 0.32: cobra 0.32.0 is broken on import unless its optional
+# `chrr` extra is installed. cobra/sampling/hopsy.py evaluates
+# `hopsy.UniformCoordinateHitAndRunProposal` as an annotation default at
+# class-definition time, but hopsy is only declared under `extra == "chrr"`,
+# so a plain `pip install cobra` yields `NameError: name 'hopsy' is not
+# defined` on `import cobra`. Verified against 0.32.0 on 3.10, 3.11 and 3.12.
+# `cobra[chrr]>=0.32` also works but drags in a native C++ sampler we do not
+# use — the cap is the cheaper fix for container size. Lift it once upstream
+# guards that import.
+model = ["cobra>=0.29,<0.32"]
 # Only omics/stats.py::mahalanobis_outliers needs these. Percentile ranks are stdlib.
 stats = ["numpy>=1.24", "scipy>=1.10"]
-# Pinned to a commit, not a PyPI release: PyPI 0.4.2 (2025-03) lags dev
-# substantially. Callers must pass annotate_with_rast=False (the True default
-# makes an outbound network call, which breaks both reproducibility and the
-# CTS no-runtime-downloads rule) and must not call helpers.get_template or
-# helpers.get_classifier, which write into site-packages.
-# NOTE: pinned to upstream ModelSEED/ModelSEEDpy@dev. cshenry/ModelSEEDpy@main
-# (b758b44217bca756a5e07a70e986fbdfe73dd1b6) is what modelseed-api uses and
-# carries MSFBA + MSBiochem.get(path=); switch if adapter interop needs it.
+# cshenry/ModelSEEDpy, not ModelSEED/ModelSEEDpy and not PyPI.
+#
+# The fork is the de-facto build: it is what ModelSEED/modelseed-api installs
+# (Dockerfile.standalone: `git clone --branch main
+# https://github.com/cshenry/ModelSEEDpy.git`), so it is what actually builds
+# models for modelseed.org, and it is also what KB-ModelSEEDReconstruction
+# installs on the KBase side. It is ~117 commits ahead of upstream `dev` and
+# carries MSFBA, msminimalmedia, and a much larger msexpression. PyPI 0.4.2
+# (2025-03) lags both by well over a year.
+#
+# Pinned to a SHA where both of those track branch HEAD unpinned — their own
+# docs/STANDALONE.md concedes the gap: "the image always reflects HEAD of those
+# repos at the time the image was built. For reproducible builds against
+# pinned commits, pin the --branch <ref> ... to specific commit SHAs." Since a
+# published paper depends on our numbers, we pin. Bump deliberately.
+#
+# Two usage constraints, both load-bearing for containers:
+#   * pass annotate_with_rast=False — the True default makes an outbound call
+#     to an ANL service, which breaks reproducibility and violates CTS's
+#     no-runtime-downloads rule
+#   * never call helpers.get_template / helpers.get_classifier at runtime; they
+#     write into site-packages. modelseed-api handles this by warming the
+#     classifier at image build time, which is the pattern to copy.
+#
+# KNOWN LIMITATION — this extra does not install on Python 3.12. The fork pins
+# `scikit-learn==1.2.0` (a comment there says "version lock for pickle ML
+# models"), and 1.2.0 cannot build on 3.12 because it needs distutils, removed
+# from the stdlib in 3.12. Verified: fails on 3.12, installs on 3.10 and 3.11.
+# modelseed-api works around it by force-reinstalling numpy and scikit-learn
+# *after* the editable install (Dockerfile.standalone), and
+# KB-ModelSEEDReconstruction by using pip's legacy resolver. Only
+# modelseedpy/ml and helpers.get_classifier need sklearn at all, and we use
+# neither — so the container-level fix is to install modelseedpy with
+# --no-deps. Left honest here rather than papered over; revisit if the fork
+# relaxes the pin.
 msd = [
-    "modelseedpy @ git+https://github.com/ModelSEED/ModelSEEDpy@062714b28dff24b864b1dc2e2bb89aa2fd6b8298",
+    "modelseedpy @ git+https://github.com/cshenry/ModelSEEDpy@b758b44217bca756a5e07a70e986fbdfe73dd1b6",
+    # modelseedpy requires cobra unbounded; carry the same cap as [model] so
+    # installing [msd] alone cannot pull the broken 0.32.0.
+    "cobra>=0.29,<0.32",
 ]
 all = ["plantseed[curate,model,stats,msd]"]
 dev = ["pytest>=8", "pytest-cov"]
