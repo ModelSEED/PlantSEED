@@ -102,6 +102,10 @@ def main(argv=None):
 
     ReconstructAppImpl = _load_reconstruct_impl()
     recon = ReconstructAppImpl()
+    # --quiet previously silenced only this wrapper; the engine printed to
+    # stdout regardless. Progress now goes to stderr and honours the flag, so
+    # stdout carries nothing but what a caller is meant to parse.
+    recon.quiet = args.quiet
     recon._set_objects({"genome": genome_obj, "template": template_obj})
 
     input_params = {"id": model_id, "name": model_id, "cpts": compartments}

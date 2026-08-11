@@ -1,8 +1,27 @@
 import copy
 import json
 import os,re
+import sys
 
 class ReconstructAppImpl:
+	#: Suppress progress output entirely. Progress goes to stderr either way —
+	#: stdout is reserved for machine-readable output, because every delivery
+	#: surface parses it: koros ingests `plantseed capabilities --json`, the
+	#: modelseed-api job scripts read a JSON job record, and a CTS container's
+	#: stdout is captured as a log artifact. A stray print() on stdout corrupts
+	#: all three, and does so silently.
+	quiet = False
+
+	#: Where progress goes. Swappable so a caller can capture it — a KBase app
+	#: routing progress into a KBaseReport, or a test asserting on it — without
+	#: touching this class.
+	log_stream = None
+
+	def _log(self, *args):
+		if self.quiet:
+			return
+		print(*args, file=self.log_stream or sys.stderr)
+
 	@staticmethod
 	def _convert_search_role(role):
 
@@ -84,7 +103,7 @@ class ReconstructAppImpl:
 						for cpt in function_cpt_list:
 							abbrev_cpt=cpt
 							if(cpt not in abbrev_cpt_dict):
-								print("No compartmental abbreviation found for "+cpt)
+								self._log("No compartmental abbreviation found for "+cpt)
 							else:
 								abbrev_cpt = abbrev_cpt_dict[cpt]
 
@@ -133,7 +152,7 @@ class ReconstructAppImpl:
 				continue
 
 			if(log_rxn is not None and log_rxn in template_rxn['id']):
-				print(template_rxn)
+				self._log(template_rxn)
 
 			template_rxn_cpt = template_rxn['templatecompartment_ref'].split('/')[-1]
 
@@ -175,7 +194,7 @@ class ReconstructAppImpl:
 									new_subunit_dict['note'] = 'Features characterized and annotated'
 								else:
 									#This never happens as of Fall 2019
-									print("Warning: "+roles_dict[role_id]['name']+" is apparently uncharacterized!")
+									self._log("Warning: "+roles_dict[role_id]['name']+" is apparently uncharacterized!")
 									new_subunit_dict['note'] = 'Features uncharacterized but annotated'
 									pass
 
@@ -282,15 +301,15 @@ class ReconstructAppImpl:
 									skipping_features.append(ftr)
 
 					if(log_rxn is not None and log_rxn in template_rxn['id']):
-						print(proteins_list)
+						self._log(proteins_list)
 
 					if(is_conditional_spontaneous is False):
-						print("Skipping conditional reaction because curated features are not in genome",template_rxn['id'],skipping_roles,skipping_features)
+						self._log("Skipping conditional reaction because curated features are not in genome",template_rxn['id'],skipping_roles,skipping_features)
 						continue
 
 			if(log_rxn is not None and log_rxn in template_rxn['id']):
-				print("Adding")
-				print(template_rxn['type'],proteins_list)
+				self._log("Adding")
+				self._log(template_rxn['type'],proteins_list)
 
 			# If the check passes, then, here, we instantiate the actual reaction that goes into the model
 			new_mdlrxn_id = template_rxn['id']+'0'
@@ -354,7 +373,7 @@ class ReconstructAppImpl:
 				new_mdlrxn_dict['modelReactionReagents'].append(new_rgt_dict)
 
 			if(log_rxn is not None and log_rxn in template_rxn['id']):
-				print(new_mdlrxn_dict)
+				self._log(new_mdlrxn_dict)
 
 			if(is_conditional_spontaneous is False):
 				new_model_obj['modelreactions'].append(new_mdlrxn_dict)
@@ -395,7 +414,7 @@ class ReconstructAppImpl:
 				new_biocpd_dict = copy.deepcopy(default_biocpd_dict)
 				mdlcpd_id = template_cpd['templatecompcompound_ref'].split('/')[-1]+'0'
 				if(mdlcpd_id not in mdlcpds_dict):
-					print("Template biomass cpd not found in model:",template_cpd)
+					self._log("Template biomass cpd not found in model:",template_cpd)
 					continue
 				new_biocpd_dict['modelcompound_ref'] = '~/modelcompounds/id/'+mdlcpd_id
 				new_biocpd_dict['coefficient'] = template_cpd['coefficient']
@@ -422,10 +441,10 @@ class ReconstructAppImpl:
 					for mdlcpd in mdlrxn['modelReactionReagents']:
 						mdlcpd_id = mdlcpd['modelcompound_ref'].split('/')[-1]
 						if(mdlcpd_id not in mdlcpds_dict):
-							print("Missing mdlcpd: ",mdlcpd_id)
+							self._log("Missing mdlcpd: ",mdlcpd_id)
 							pass
 
-					print("Adding conditional spontaneous reaction",mdlrxn['id'])
+					self._log("Adding conditional spontaneous reaction",mdlrxn['id'])
 					new_model_obj['modelreactions'].append(mdlrxn)
 
 		return new_model_obj
