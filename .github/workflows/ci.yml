@@ -1,0 +1,111 @@
+name: CI
+
+on:
+  push:
+    branches: [dev, main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: py${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Floor and current. The floor is what pyproject declares. Note the
+        # KBase SDK base image ships Python 3.8.4 and was last rebuilt in 2022,
+        # which is why the v3 plan moves the apps onto a slim base rather than
+        # capping the core at 3.8.
+        python-version: ["3.10", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # Installing from a clean checkout is itself the test: until this repo
+      # had a pyproject.toml, nothing here was importable except by PYTHONPATH,
+      # which blocked every delivery path.
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install ".[curate,dev]"
+
+      - name: Console scripts resolve
+        run: |
+          plantseed-annotate --help > /dev/null
+          plantseed-reconstruct --help > /dev/null
+
+      # The whole suite, which includes the architectural gates:
+      #   Core/tests/test_core_isolation.py  — no platform imports in the core,
+      #       and plantseed_core stays pure stdlib (ast-based, so a docstring
+      #       naming a forbidden module does not trip it)
+      #   Core/tests/test_strings.py         — no new reserved delimiters in
+      #       curated role names
+      #   Model/tests/test_golden_reconstruction.py — the three published
+      #       preprint models still reproduce exactly
+      - name: Test suite
+        run: pytest -q
+
+  core-is-standalone:
+    # Separate job with no extras installed at all: proves the core imports and
+    # reconstructs with zero third-party packages present. This is the property
+    # every container relies on, and it is invisible in the matrix above
+    # because that installs [curate].
+    name: core with no extras
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install with no extras
+        run: |
+          python -m pip install --upgrade pip
+          pip install .
+
+      - name: Nothing third-party came along
+        run: |
+          python - <<'PY'
+          import importlib.metadata as md
+          allowed = {"plantseed", "pip", "setuptools", "wheel"}
+          present = {d.metadata["Name"] for d in md.distributions()}
+          extra = sorted(present - allowed)
+          assert not extra, f"unexpected dependencies pulled in: {extra}"
+          print("clean:", sorted(present))
+          PY
+
+      - name: Core reconstructs with no extras present
+        run: |
+          python - <<'PY'
+          import json
+          from plantseed_model import ReconstructAppImpl
+
+          def load(p):
+              with open(p) as fh:
+                  return json.load(fh)
+
+          recon = ReconstructAppImpl()
+          recon._set_objects({
+              "genome": load("Papers/bioflux-preprint-260807/Athaliana_TAIR10_annotated_genome.json"),
+              "template": load("Scripts/PlantSEED_v3/Template/PlantSEED_Biomass_Template.json"),
+          })
+          model = recon.reconstruct_metabolism({
+              "id": "ci", "name": "ci",
+              "cpts": load("Data/PlantSEED_v3/Compartments/PlantSEED_Compartments.json"),
+          })
+          published = load("Papers/bioflux-preprint-260807/Athaliana_TAIR10_model.json")
+          got = {r["id"] for r in model["modelreactions"]}
+          want = {r["id"] for r in published["modelreactions"]}
+          assert got == want, f"+{len(got - want)} / -{len(want - got)} reactions"
+          print(f"reproduced {len(got)} reactions with no third-party packages installed")
+          PY

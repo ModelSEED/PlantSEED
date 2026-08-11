@@ -11,6 +11,8 @@ import hashlib
 import json
 import os
 
+from plantseed_core.strings import find_reserved
+
 from . import paths
 from .constants import (
     ACTION_FIELDS,
@@ -37,6 +39,40 @@ def _canonical_action(action):
     if a in DEPRECATED_REASSIGN_ALIASES:
         return "REASSIGN"
     return a
+
+
+#: Suggested replacements, so the error tells a curator what to type instead of
+#: only what not to. Keyed by the reserved delimiter.
+_DELIMITER_FIX = {
+    "; ": "use a comma, or drop the space after the semicolon",
+    " / ": "use 'and', or a comma",
+    " # ": "use a plain '#' with no surrounding spaces, or drop it",
+}
+
+
+def _check_reserved_delimiters(field, text):
+    """Return error dicts if `text` carries a delimiter that would corrupt the
+    downstream function string.
+
+    A role name travels to the reconstructor inside a single delimited string —
+    `role1 / role2 # cytosol # plastid` — and onward into KBase, whose
+    GenomeInterface splits legacy function fields on the literal "; ". A role
+    containing any of those separators does not raise anywhere downstream; it
+    silently splits into fragments that match no template role, and the
+    reaction associations disappear. Catching it here, at the moment a curator
+    types it, is the only place the feedback is cheap.
+    """
+    out = []
+    for delim, why in find_reserved(text or ""):
+        fix = _DELIMITER_FIX.get(delim, "choose different wording")
+        out.append({
+            "field": field,
+            "message": (
+                f"contains the reserved sequence {delim!r} ({why}). This would "
+                f"silently corrupt the annotation downstream — {fix}."
+            ),
+        })
+    return out
 from .identity import atomic_write
 from .schema import (
     IssueCollector,
@@ -68,6 +104,7 @@ def validate_payload(action, enzyme, payload, store):
         return [{"field": "action", "message": f"Unknown action '{raw_action}'"}], warnings
 
     if action == "NEW":
+        errors.extend(_check_reserved_delimiters("enzyme", enzyme))
         if enzyme in store.role_index:
             errors.append({"field": "enzyme",
                 "message": f"'{enzyme}' already exists — choose UPDATE or pick a different name"})
@@ -75,8 +112,11 @@ def validate_payload(action, enzyme, payload, store):
 
     if action == "UPDATE":
         new_name = (payload.get("new_name") or "").strip()
+        delimiter_errors = _check_reserved_delimiters("new_name", new_name)
         if not new_name:
             errors.append({"field": "new_name", "message": "New enzyme name is required"})
+        elif delimiter_errors:
+            errors.extend(delimiter_errors)
         elif new_name == enzyme:
             warnings.append("UPDATE: new name is identical to current name")
         elif new_name in store.role_index:
