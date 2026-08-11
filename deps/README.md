@@ -56,15 +56,42 @@ automate it. Two of these pins have consequences beyond "newer is better":
   `scikit-learn==1.2.0`, which cannot build on Python 3.12. We use neither
   `modelseedpy/ml` nor `get_classifier`, so nothing needs sklearn.
 
-## Two traps worth knowing
+## Decision: dev branch, sharded JSON, not ModelSEEDpy's loader
 
-**ModelSEEDDatabase `dev` and `master` are structurally different branches.**
-`dev` — which we pin, and which `modelseed-api` also uses — stores biochemistry
-as 111 sharded JSON files (`Biochemistry/reaction_NN.json`,
-`compound_NN.json`), with no `Templates/` directory and no `reactions.tsv` or
-`compounds.tsv` at all. `master` has the classic single TSVs plus `Templates/`.
-PlantSEED reads the sharded form; ModelSEEDpy's own loader expects the TSVs. One
-checkout does not serve both.
+`dev` and `master` are structurally different branches. `dev` — which we pin,
+and which `modelseed-api` also uses — stores biochemistry as **111 sharded JSON
+files** (`Biochemistry/reaction_NN.json`, `compound_NN.json`), with no
+`Templates/` directory and no `reactions.tsv` or `compounds.tsv` at all.
+`master` has the classic single TSVs plus `Templates/`.
+
+ModelSEEDpy's loader (`modelseedpy.biochem.from_local` / `from_github`) expects
+the master TSVs. Rather than carry both layouts, **PlantSEED reads the sharded
+JSON directly and bypasses that loader entirely** —
+`Generate_Core_ModelTemplate.py` already does exactly this, matching
+`reaction_.*\.json` and `compound_.*\.json`. The JSON is also the richer
+source; the TSVs are a flattened projection of it.
+
+So: one sparse checkout of `dev` serves everything, and nothing in PlantSEED
+should call `modelseedpy.biochem.from_local`, `from_local2` or `from_github`.
+
+## Why not a git submodule
+
+The `Warning: Add MSD as submodule!` note in `Generate_Core_ModelTemplate.py` is
+now resolved, and deliberately not that way:
+
+- The repo is **1.32 GB** and we need a 189 MB sparse subset. Submodules do
+  support sparse checkout, but only with per-clone configuration that every
+  consumer has to repeat.
+- **Most users of this repository never need it.** Curators working on
+  `PlantSEED_Roles.json` would pay the cost for nothing; a submodule is
+  repo-wide, the fetch script is opt-in.
+- It would only cover *one* of the three dependencies. `cobrakbase` and
+  `modelseedpy` are Python packages that need installing, not just checking out,
+  so they'd need a second mechanism anyway. One manifest covers all three.
+- Containers want a pinned fetch plus a build-time conversion, not a nested
+  git tree.
+
+## One trap worth knowing
 
 **`git sparse-checkout` cone mode silently ignores file patterns.** Cone mode
 understands directory prefixes only, so asking for individual files gets you

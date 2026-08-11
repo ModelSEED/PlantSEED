@@ -120,7 +120,11 @@ print(f"WARNING: ModelSEED biochemistry pinned to {MSD_PINNED_COMMIT[:10]} "
       f"(2026-05-06) — NOT the dev branch tip. Update MSD_PINNED_COMMIT "
       f"in Generate_Core_ModelTemplate.py to refresh.")
 
-print("Warning: Add MSD as submodule!")
+# (was: "Warning: Add MSD as submodule!" — resolved, and deliberately NOT as a
+# submodule. The biochemistry source and its pinned commit now live in
+# deps/external.json; fetch with `python deps/fetch.py biochemistry`. A
+# submodule was rejected because the repo is 1.32 GB, only a sparse subset is
+# needed, and most users of this repo — curators especially — never need it.)
 if(os.path.isdir('Biochem_Cache') is False):
 	os.mkdir('Biochem_Cache')
 

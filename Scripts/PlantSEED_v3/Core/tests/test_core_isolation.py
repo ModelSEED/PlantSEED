@@ -33,6 +33,11 @@ FORBIDDEN_IMPORTS = {
     "biokbase": "KBase runtime shim, present only inside the SDK base image",
     "solara": "the KIND*AI app shell is a delivery concern, not a science one",
     "pyspark": "lakehouse publication belongs to the adapter layer",
+    "modelseedpy": (
+        "not a declared dependency — pinned by commit in deps/external.json and "
+        "fetched, because it is developed far ahead of PyPI. Importing it here "
+        "would break `pip install plantseed`. Adapter-only."
+    ),
 }
 
 #: Environment variables that only exist inside a specific platform's runtime.
@@ -143,6 +148,34 @@ def test_no_platform_environment_variables(pkg, path):
         f"{os.path.relpath(path, _CORE_ROOT)} reads "
         + ", ".join(f"{v} ({FORBIDDEN_ENV[v]})" for v in sorted(bad))
         + ". The core must not infer which platform it is running on."
+    )
+
+
+@pytest.mark.parametrize("pkg,path", CORE_FILES,
+                         ids=[f"{p}:{os.path.basename(f)}" for p, f in CORE_FILES])
+def test_does_not_use_modelseedpys_biochemistry_loader(pkg, path):
+    """PlantSEED reads ModelSEEDDatabase's sharded JSON directly.
+
+    ModelSEEDDatabase `dev` — the branch we pin, and the one modelseed-api uses
+    — stores biochemistry as 111 sharded JSON files and has no reactions.tsv or
+    compounds.tsv at all. ModelSEEDpy's loader expects those TSVs, i.e. the
+    `master` layout. Rather than carry two layouts, we read the JSON directly
+    and never call that loader. See deps/README.md.
+    """
+    with open(path) as fh:
+        tree = ast.parse(fh.read(), filename=path)
+    banned = {"from_local", "from_local2", "from_github"}
+    hits = {
+        node.func.attr
+        for node in ast.walk(tree)
+        if isinstance(node, ast.Call)
+        and isinstance(node.func, ast.Attribute)
+        and node.func.attr in banned
+    }
+    assert not hits, (
+        f"{os.path.relpath(path, _CORE_ROOT)} calls {sorted(hits)} — "
+        "ModelSEEDpy's biochemistry loader expects the master-branch TSVs. "
+        "Read the sharded dev JSON directly instead."
     )
 
 
