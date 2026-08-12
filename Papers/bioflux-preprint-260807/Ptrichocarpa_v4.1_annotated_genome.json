@@ -458,6 +458,12 @@
     },
     {
       "functions": [
+        "Alanine transaminase (EC 2.6.1.2) # cytosol # plastid # mitochondria"
+      ],
+      "id": "Potri.001G162800"
+    },
+    {
+      "functions": [
         "Aldehyde dehydrogenase (EC 1.2.1.3) # cytosol"
       ],
       "id": "Potri.001G167100"
@@ -578,7 +584,7 @@
     },
     {
       "functions": [
-        "5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase / Serine hydroxymethyltransferase (EC 2.1.2.1) # cytosol"
+        "5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase / Serine hydroxymethyltransferase (EC 2.1.2.1) # cytosol # plastid"
       ],
       "id": "Potri.001G212000"
     },
@@ -1772,6 +1778,12 @@
     },
     {
       "functions": [
+        "S-adenosylmethionine synthetase (EC 2.5.1.6) # cytosol # nucleus"
+      ],
+      "id": "Potri.002G189200"
+    },
+    {
+      "functions": [
         "Aldehyde dehydrogenase (EC 1.2.1.3) # cytosol"
       ],
       "id": "Potri.002G189900"
@@ -2048,7 +2060,7 @@
     },
     {
       "functions": [
-        "Phospholipase D (EC 3.1.4.4)"
+        "Phospholipase D (EC 3.1.4.4) # mitochondria"
       ],
       "id": "Potri.003G032800"
     },
@@ -3314,7 +3326,7 @@
     },
     {
       "functions": [
-        "Phosphatidylinositol 4-kinase beta (EC 2.7.1.67)"
+        "Phosphatidylinositol 4-kinase beta (EC 2.7.1.67) # cytosol # cellwall"
       ],
       "id": "Potri.005G059000"
     },
@@ -5000,7 +5012,7 @@
     },
     {
       "functions": [
-        "Phosphatidylinositol 4-kinase beta (EC 2.7.1.67)"
+        "Phosphatidylinositol 4-kinase beta (EC 2.7.1.67) # cytosol # cellwall"
       ],
       "id": "Potri.007G109000"
     },
@@ -5333,6 +5345,12 @@
         "Omega-3 fatty acid desaturase (EC 1.14.19.-) # plastid"
       ],
       "id": "Potri.008G069600"
+    },
+    {
+      "functions": [
+        "Phosphoglycolate phosphatase (EC 3.1.3.18) # cytosol # plastid # nucleus"
+      ],
+      "id": "Potri.008G077400"
     },
     {
       "functions": [
@@ -6062,7 +6080,7 @@
     },
     {
       "functions": [
-        "Alcohol dehydrogenase (EC 1.1.1.1) / Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)"
+        "Alcohol dehydrogenase (EC 1.1.1.1) / Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195) # cytosol # cellwall"
       ],
       "id": "Potri.009G095800"
     },
@@ -6857,6 +6875,12 @@
         "Putative acyl-ACP desaturase, Stearoyl-ACP desaturase (EC 1.14.19.2) # plastid"
       ],
       "id": "Potri.010G179400"
+    },
+    {
+      "functions": [
+        "Phosphoglycolate phosphatase (EC 3.1.3.18) # cytosol # plastid # nucleus"
+      ],
+      "id": "Potri.010G180400"
     },
     {
       "functions": [
@@ -8120,6 +8144,12 @@
     },
     {
       "functions": [
+        "Cysteine synthase (EC 2.5.1.47) # plastid # mitochondria"
+      ],
+      "id": "Potri.013G127800"
+    },
+    {
+      "functions": [
         "Callose synthase (EC 2.4.1.34) # cellwall"
       ],
       "id": "Potri.013G131300"
@@ -8222,7 +8252,7 @@
     },
     {
       "functions": [
-        "Tryptophan N-monooxygenase (EC 1.14.14.156)"
+        "Tryptophan N-monooxygenase (EC 1.14.14.156) # cytosol"
       ],
       "id": "Potri.013G157200"
     },
@@ -8480,7 +8510,7 @@
     },
     {
       "functions": [
-        "Fatty acid omega-hydroxylase (EC 1.14.13.-)"
+        "Fatty acid omega-hydroxylase (EC 1.14.13.-) # endoplasm"
       ],
       "id": "Potri.014G085800"
     },
@@ -8549,6 +8579,12 @@
         "Protoporphyrinogen IX oxidase, aerobic, HemY (EC 1.3.3.4) # plastid"
       ],
       "id": "Potri.014G111600"
+    },
+    {
+      "functions": [
+        "S-adenosylmethionine synthetase (EC 2.5.1.6) # cytosol # nucleus"
+      ],
+      "id": "Potri.014G114700"
     },
     {
       "functions": [
@@ -10601,9 +10637,9 @@
   "metadata": {
     "admit_paralogs": true,
     "annotator": "plantseed_annotation",
-    "annotator_run_utc": "2026-08-06T22:05:15Z",
+    "annotator_run_utc": "2026-08-12T17:14:43Z",
     "fallback_baseline": 0.5,
-    "n_annotated_features": 1766,
+    "n_annotated_features": 1772,
     "n_curated_ref_features": 1480,
     "orthofinder_results": "/scratch1/seaver/OrthoFinder_Reference/OrthoFinder/Results_May26",
     "pair_stats": {
@@ -10612,14 +10648,15 @@
       "PAM": 452
     },
     "phylum": "Eudicot",
-    "psi_cache_dir": "/scratch/seaver/tmp/plantseed-annot-v3/psi_cache_shared",
+    "psi_cache_dir": "/scratch/seaver/tmp/plantseed-annot-v4/psi_cache_shared",
     "psi_threshold": 0.6,
     "query_species": "Ptrichocarpa_v4.1",
     "ref_species": "Athaliana_TAIR10",
     "roles_file": "/scratch/seaver/Claude_Projects/plantseed-v3/PlantSEED/Data/PlantSEED_v3/PlantSEED_Roles.json",
     "status_counts": {
-      "AMB_HIT": 15,
-      "ANNOTATED": 1766,
+      "AMB_HIT": 9,
+      "ANNOTATED": 1772,
+      "MERGED_COMPARTMENTS": 124,
       "NO_ORTHOLOG": 221
     }
   }

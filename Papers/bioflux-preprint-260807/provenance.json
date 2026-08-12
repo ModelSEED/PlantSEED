@@ -1,9 +1,9 @@
 {
-  "run_utc": "2026-08-06",
+  "run_utc": "2026-08-12",
   "plantseed_repo": "ModelSEED/PlantSEED",
-  "plantseed_branch_at_run": "plantseed-annotation-scaffold-260806",
-  "plantseed_head_sha": "2d9fa24c1a82ef53b099ba6f9e5b826a03f16355",
-  "plantseed_head_short": "2d9fa24",
+  "plantseed_branch_at_run": "dev",
+  "plantseed_head_sha": "d29f7d56a6f9393124bf713179b9a12537a107bd",
+  "plantseed_head_short": "d29f7d5",
   "plantseed_roles_json_sha": "add5726af0faa53ecee0af8db0073bd5b41e7979",
   "plantseed_complexes_json_sha": "283de73646bdb03167a535682f4fb04ffbd50b8d",
   "template_sha": "0a83b90c5c1ea6dc487556de0f7f7c528d719c09",
@@ -11,7 +11,8 @@
   "annotator_flags": {
     "admit_paralogs": true,
     "fallback_baseline": 0.5,
-    "threshold_semantics": "phylum-threshold applies to PA* candidates only; O (OF-called orthologs) accepted regardless of PSI"
+    "threshold_semantics": "phylum-threshold applies to PA* candidates only; O (OF-called orthologs) accepted regardless of PSI",
+    "tie_break": "role-set merge (FIX_AMBHIT_ROLE_UNION_260812): identical/nested role sets merge with unioned compartments; disjoint sets remain AMB_HIT"
   },
   "phylum_thresholds": {
     "Eudicot": 0.6,
@@ -34,11 +35,12 @@
       "phylum": "Monocot",
       "psi_threshold": 0.55,
       "ref_species": "Athaliana_TAIR10",
-      "n_annotated_features": 1489,
+      "n_annotated_features": 1497,
       "n_curated_ref_features": 1480,
       "status_counts": {
-        "AMB_HIT": 18,
-        "ANNOTATED": 1489,
+        "AMB_HIT": 10,
+        "ANNOTATED": 1497,
+        "MERGED_COMPARTMENTS": 169,
         "NO_ORTHOLOG": 127
       },
       "pair_stats": {
@@ -51,11 +53,12 @@
       "phylum": "Eudicot",
       "psi_threshold": 0.6,
       "ref_species": "Athaliana_TAIR10",
-      "n_annotated_features": 1766,
+      "n_annotated_features": 1772,
       "n_curated_ref_features": 1480,
       "status_counts": {
-        "AMB_HIT": 15,
-        "ANNOTATED": 1766,
+        "AMB_HIT": 9,
+        "ANNOTATED": 1772,
+        "MERGED_COMPARTMENTS": 124,
         "NO_ORTHOLOG": 221
       },
       "pair_stats": {

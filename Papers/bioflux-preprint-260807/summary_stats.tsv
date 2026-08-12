@@ -1,4 +1,4 @@
-species	phylum	psi_threshold	annotated_features	n_curated_ref_features	ambiguous_hits	no_ortholog	of_orthologs_kept	paralogs_above_mean	paralogs_above_half	model_reactions	model_compounds	biomass_reactions	compartments	reactions_with_gpr	pct_reactions_with_gpr
-Athaliana_TAIR10	Eudicot	—	1480	1480	0	0	0	0	0	1218	1313	1	12	877	72.0%
-Sbicolor_v3.1.1	Monocot	0.55	1489	1480	18	127	4247	361	26	1171	1283	1	12	782	66.8%
-Ptrichocarpa_v4.1	Eudicot	0.6	1766	1480	15	221	3632	452	32	1181	1293	1	12	810	68.6%
+species	phylum	psi_threshold	annotated_features	n_curated_ref_features	ambiguous_hits	merged_compartments	no_ortholog	of_orthologs_kept	paralogs_above_mean	paralogs_above_half	model_reactions	model_compounds	biomass_reactions	compartments	reactions_with_gpr	pct_reactions_with_gpr
+Athaliana_TAIR10	Eudicot	—	1480	1480	0	0	0	0	0	0	1218	1313	1	12	877	72.0%
+Sbicolor_v3.1.1	Monocot	0.55	1497	1480	10	169	127	4247	361	26	1171	1283	1	12	800	68.3%
+Ptrichocarpa_v4.1	Eudicot	0.6	1772	1480	9	124	221	3632	452	32	1181	1293	1	12	822	69.6%
