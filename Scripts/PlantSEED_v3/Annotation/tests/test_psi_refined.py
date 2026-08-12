@@ -7,11 +7,24 @@ from plantseed_annotation.algorithms import psi_refined as pr
 
 
 CURATED = {
-    "AT1": {"function": "Alpha (EC 1.1.1.1) # cytosol"},
-    "AT2": {"function": "Beta (EC 2.2.2.2) # plastid"},
-    "AT3": {"function": "Alpha (EC 1.1.1.1) # cytosol"},   # same fn as AT1
-    "AT4": {"function": "Alpha (EC 1.1.1.1) # cytosol # plastid"},  # substring-superset of AT1
-    "AT_UNANN": {"function": "Unannotated"},
+    "AT1": {"function":     "Alpha (EC 1.1.1.1) # cytosol",
+            "roles":        ["Alpha (EC 1.1.1.1)"],
+            "compartments": ["c"]},
+    "AT2": {"function":     "Beta (EC 2.2.2.2) # plastid",
+            "roles":        ["Beta (EC 2.2.2.2)"],
+            "compartments": ["d"]},
+    # AT3: same role/compartment as AT1 (identical role sets → merge cleanly)
+    "AT3": {"function":     "Alpha (EC 1.1.1.1) # cytosol",
+            "roles":        ["Alpha (EC 1.1.1.1)"],
+            "compartments": ["c"]},
+    # AT4: same role as AT1 but extra compartment (identical role sets →
+    # merge with unioned compartments per FIX_AMBHIT_ROLE_UNION_260812)
+    "AT4": {"function":     "Alpha (EC 1.1.1.1) # cytosol # plastid",
+            "roles":        ["Alpha (EC 1.1.1.1)"],
+            "compartments": ["c", "d"]},
+    # AT_UNANN represents a ref gene that isn't in the curated set —
+    # function is empty, so annotate_query_gene's curated_top filter drops it.
+    "AT_UNANN": {"function": ""},
 }
 
 
@@ -53,17 +66,23 @@ def test_annotate_unique_top_ref():
 
 
 def test_tie_break_same_function_arbitrary_pick():
-    """Two refs tied at top PSI with the same function → pick either
-    (deterministically the alphabetical first, per the port)."""
+    """Two refs tied at top PSI with the same role set → merge cleanly.
+    top_ortholog names the alphabetically-first of the merged set;
+    merged_from lists both."""
     r = pr.annotate_query_gene(
         "Q1", ["AT1", "AT3"], _psi_of({"AT1": 0.80, "AT3": 0.80}),
         threshold=0.60, curated_features_for_ref=CURATED, ref_species="Athaliana_TAIR10",
     )
     assert r["status"] == "ANNOTATED"
     assert r["function"] == "Alpha (EC 1.1.1.1) # cytosol"
+    assert r["top_ortholog"] == ("Athaliana_TAIR10", "AT1")
+    assert r["merged_from"] == ["AT1", "AT3"]
 
 
 def test_tie_break_unannotated_vs_annotated_picks_annotated():
+    """AT_UNANN represents an uncurated ref (function=''), which
+    curated_top filters out before merge. Only AT1 remains → ANNOTATED.
+    No merge, so merged_from is None."""
     r = pr.annotate_query_gene(
         "Q1", ["AT_UNANN", "AT1"], _psi_of({"AT_UNANN": 0.80, "AT1": 0.80}),
         threshold=0.60, curated_features_for_ref=CURATED, ref_species="Athaliana_TAIR10",
@@ -71,16 +90,21 @@ def test_tie_break_unannotated_vs_annotated_picks_annotated():
     assert r["status"] == "ANNOTATED"
     assert r["top_ortholog"] == ("Athaliana_TAIR10", "AT1")
     assert r["function"] == "Alpha (EC 1.1.1.1) # cytosol"
+    assert r["merged_from"] is None
 
 
-def test_tie_break_substring_variant_picks_either():
-    """AT1's function is a substring of AT4's (compartmentalization variant);
-    the ported rule picks one arbitrarily rather than ambiguating."""
+def test_tie_break_same_role_different_compartments_merges_with_union():
+    """AT1 (roles=[Alpha], compartments=[c]) and AT4 (roles=[Alpha],
+    compartments=[c, d]) have identical role sets but differ on compartments.
+    Under FIX_AMBHIT_ROLE_UNION_260812 they merge; compartments are the
+    union so the propagated function keeps both."""
     r = pr.annotate_query_gene(
         "Q1", ["AT1", "AT4"], _psi_of({"AT1": 0.80, "AT4": 0.80}),
         threshold=0.60, curated_features_for_ref=CURATED, ref_species="Athaliana_TAIR10",
     )
     assert r["status"] == "ANNOTATED"
+    assert r["function"] == "Alpha (EC 1.1.1.1) # cytosol # plastid"
+    assert r["merged_from"] == ["AT1", "AT4"]
 
 
 def test_tie_break_two_distinct_functions_ambiguous():
@@ -95,9 +119,12 @@ def test_tie_break_two_distinct_functions_ambiguous():
 
 
 def test_tie_break_three_distinct_functions_ambiguous():
-    """More than two distinct functions → always ambiguous."""
+    """More than two distinct role sets that are neither identical nor
+    nested → still AMB_HIT after the merge-based tie-break."""
     curated = dict(CURATED)
-    curated["AT5"] = {"function": "Gamma"}
+    curated["AT5"] = {"function":     "Gamma (EC 3.3.3.3)",
+                      "roles":        ["Gamma (EC 3.3.3.3)"],
+                      "compartments": ["c"]}
     r = pr.annotate_query_gene(
         "Q1", ["AT1", "AT2", "AT5"],
         _psi_of({"AT1": 0.80, "AT2": 0.80, "AT5": 0.80}),
