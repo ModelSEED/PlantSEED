@@ -39,6 +39,7 @@ The tie-break rules are lifted verbatim from
 from collections import Counter, defaultdict
 
 from . import orthofinder_io as _oio
+from . import propagate as _propagate
 
 
 UNANNOTATED_LT_THRESHOLD = "Unannotated 1: LESS_THAN_THRESHOLD"
@@ -180,38 +181,35 @@ def annotate_query_gene(query_gene, ref_orthologs, psi_lookup_fn, threshold,
 
     top_refs = [ref for ref, p in psi_by_ref.items() if p == top_psi]
 
-    # Same three-rule tie-break as kb_orthofinderImpl.propagate_annotation:
-    functions = {}
-    for ref in top_refs:
-        fn = curated_features_for_ref.get(ref, {}).get("function") or "Unannotated"
-        functions.setdefault(fn, []).append(ref)
-
-    if len(functions) == 1:
-        top_ref = top_refs[0]
-    elif len(functions) == 2 and "Unannotated" in functions:
-        annotated_fn = [fn for fn in functions if fn != "Unannotated"][0]
-        top_ref = functions[annotated_fn][0]
-    elif len(functions) == 2:
-        fns_sorted = sorted(functions.keys())
-        if fns_sorted[0] in fns_sorted[1] or fns_sorted[1] in fns_sorted[0]:
-            top_ref = top_refs[0]
-        else:
-            return {"top_ortholog": None, "function": None, "psi": top_psi,
-                    "status": "AMB_HIT"}
-    else:
-        return {"top_ortholog": None, "function": None, "psi": top_psi,
-                "status": "AMB_HIT"}
-
-    fn = curated_features_for_ref.get(top_ref, {}).get("function")
-    if not fn:
+    # Tie-break. Replaces the composed-string comparison ported from
+    # kb_orthofinderImpl.propagate_annotation, which rejected same-enzyme hits
+    # that differed only in compartment. See FIX_AMBHIT_ROLE_UNION_260812.md.
+    curated_top = [r for r in top_refs
+                   if curated_features_for_ref.get(r, {}).get("function")]
+    if not curated_top:
         return {"top_ortholog": None, "function": None, "psi": top_psi,
                 "status": "NO_ORTHOLOG"}
+
+    if len(curated_top) == 1:
+        top_ref = curated_top[0]
+        fn = curated_features_for_ref[top_ref]["function"]
+        merged_from = None
+    else:
+        entries = [curated_features_for_ref[r] for r in curated_top]
+        merged = _propagate.merge_functions(entries)
+        if merged is None:
+            return {"top_ortholog": None, "function": None, "psi": top_psi,
+                    "status": "AMB_HIT"}
+        top_ref = sorted(curated_top)[0]
+        fn = merged[0]
+        merged_from = sorted(curated_top)
 
     return {
         "top_ortholog": (ref_species, top_ref),
         "function":     fn,
         "psi":          top_psi,
         "status":       "ANNOTATED",
+        "merged_from":  merged_from,
     }
 
 
@@ -353,5 +351,9 @@ def annotate_species(query_species, ref_species, orthologues_dict,
         )
         annotations[q_gene] = result
         stats[result["status"]] += 1
+        # Sub-count of ANNOTATED: how many ANNOTATED calls came from
+        # merging tied same-enzyme hits (FIX_AMBHIT_ROLE_UNION_260812).
+        if result.get("merged_from"):
+            stats["MERGED_COMPARTMENTS"] += 1
 
     return annotations, stats, pair_stats
