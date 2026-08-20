@@ -10,6 +10,8 @@ Present:
 
   strings   the `role1 / role2 # cpt1 # cpt2` function-string contract, and the
             guards that keep reserved delimiters out of curated role names
+  runtime   the writable-root contract — output and scratch only, because every
+            platform mounts reference data read-only
   errors    the exception hierarchy
 
 Landing over Phase 0-1: types, serde + JSON Schemas, registry (@capability and
@@ -18,7 +20,7 @@ provenance, data.
 """
 
 from .__about__ import DATA_VERSION, __version__
-from . import errors, strings
+from . import errors, runtime, strings
 from .errors import (
     CapabilityError,
     DataVersionError,
@@ -41,6 +43,7 @@ __all__ = [
     "DATA_VERSION",
     # modules
     "errors",
+    "runtime",
     "strings",
     # errors
     "PlantSEEDError",
