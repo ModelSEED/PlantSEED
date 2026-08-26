@@ -8,20 +8,87 @@ PSI for a pair of aligned sequences (X, Y) is:
     id_y     = n_match / len(Y without gaps)
     psi      = (id_x + id_y) / 2
 
-Cached per-OG under `<OF_RESULTS>/Pairwise_Sequence_Identity/<OG>.txt` so a
-user who runs the annotator repeatedly against the same OF results only pays
-the PSI cost once. File format matches the Processing_v2 script:
+Cached per-OG as `<cache_dir>/<OG>.txt` so a user who runs the annotator
+repeatedly against the same OF results only pays the PSI cost once. File
+format matches the Processing_v2 script and is location-independent:
     OG_id \\t gene1:id1 \\t gene2:id2 \\t psi
+
+The cache used to default to `<OF_RESULTS>/Pairwise_Sequence_Identity/`, which
+is a subdirectory of this module's own input. On poplar that is ordinary
+writable disk; on KBase and CTS it is the refdata mount, bound read-only, so
+the `makedirs` fails in exactly the two places that are hardest to re-run. See
+`cache_search_path` for what replaced it — one writable directory, several
+readable ones.
 """
 
+import getpass
+import hashlib
 import itertools
 import multiprocessing as mp
 import os
+import re
+
+from plantseed_core import runtime
 
 from . import orthofinder_io
 
 
 PSI_CACHE_DIRNAME = "Pairwise_Sequence_Identity"
+
+
+def _run_fingerprint(results_dir):
+    """A name that identifies one OrthoFinder run's cache, and no other.
+
+    Living inside `results_dir` scoped the cache to its run for free. A shared
+    scratch root gives that up: OrthoFinder numbers orthogroups from OG0000000
+    in every run, so an unscoped `<scratch>/Pairwise_Sequence_Identity` would
+    hand one run's PSI values to another run's identically-named OGs — wrong
+    answers, silently, with a warm cache. The user goes into the digest too,
+    because `gettempdir()` is shared on a login node.
+    """
+    resolved = os.path.realpath(results_dir)
+    try:
+        user = getpass.getuser()
+    except Exception:                       # no passwd entry: some containers
+        user = str(getattr(os, "getuid", lambda: "nouser")())
+    digest = hashlib.sha1(f"{user}\0{resolved}".encode()).hexdigest()[:8]
+    base = os.path.basename(resolved.rstrip(os.sep)) or "results"
+    return f"{re.sub(r'[^A-Za-z0-9._-]', '_', base)[:40]}-{digest}"
+
+
+def cache_search_path(results_dir, cache_dir=None):
+    """Return `(write_dir, read_dirs)` for one OrthoFinder run's PSI cache.
+
+    `write_dir` is the only directory this module creates or writes into:
+    `cache_dir` when the caller names one, otherwise a per-run subdirectory of
+    `plantseed_core.runtime.scratch_dir()`. It never defaults inside
+    `results_dir`, and the choice does not depend on whether `results_dir`
+    happens to be writable — probing would make the behaviour differ between
+    poplar and a container, which is the failure mode being removed.
+
+    `read_dirs` is the ordered search path for an already-computed file:
+    `write_dir` first, then `<results_dir>/Pairwise_Sequence_Identity/` if it
+    exists. That second tier is consulted, never created. It covers the caches
+    already sitting beside OrthoFinder results on poplar — which stay valid,
+    since the file format carries no path — and it is the intended production
+    shape, where refdata ships PSI computed once at image-build time and
+    mounted read-only.
+
+    Pure: safe to call more than once per run.
+    """
+    legacy = os.path.join(results_dir, PSI_CACHE_DIRNAME)
+    if cache_dir:
+        write_dir = os.fspath(cache_dir)
+    else:
+        write_dir = os.fspath(runtime.scratch_dir(
+            os.path.join(PSI_CACHE_DIRNAME, _run_fingerprint(results_dir)),
+            create=False,
+        ))
+    read_dirs = [write_dir]
+    if (os.path.isdir(legacy)
+            and os.path.realpath(legacy) != os.path.realpath(write_dir)):
+        read_dirs.append(legacy)
+    return write_dir, tuple(read_dirs)
 
 
 def _fmt(x):
@@ -94,18 +161,23 @@ def ensure_psi_cache(results_dir, cache_dir=None, ogs=None,
                     n_workers=None, log=print):
     """Compute PSI for every OG MSA in `results_dir` that isn't already cached.
 
-    Cache defaults to `<results_dir>/Pairwise_Sequence_Identity/`. Pass
-    `cache_dir` to place it elsewhere (useful when results_dir is read-only,
-    e.g., NFS-mounted refdata).
+    Writes to `cache_dir` if given, otherwise to a per-run scratch directory;
+    reads from that plus any prebuilt cache beside the OrthoFinder results.
+    See `cache_search_path`, which decides both and which callers should use
+    to get the read path for `load_psi_for_ogs`.
 
     `ogs` — optional set of og_ids to restrict to (skip work on the ~90 % of
     OGs that don't touch PlantSEED-curated genes).
 
-    Returns (cache_dir, {og_id: n_pairs_computed_or_cached}).
+    Returns (write_dir, {og_id: n_pairs_computed_or_cached}).
     """
-    cache_dir = cache_dir or os.path.join(results_dir, PSI_CACHE_DIRNAME)
+    cache_dir, read_dirs = cache_search_path(results_dir, cache_dir)
     os.makedirs(cache_dir, exist_ok=True)
-    already = {n[:-len(".txt")] for n in os.listdir(cache_dir) if n.endswith(".txt")}
+    already = set()
+    for d in read_dirs:
+        if os.path.isdir(d):
+            already |= {n[:-len(".txt")] for n in os.listdir(d)
+                        if n.endswith(".txt")}
 
     todo = []
     kept_from_cache = {}
@@ -119,7 +191,13 @@ def ensure_psi_cache(results_dir, cache_dir=None, ogs=None,
         todo.append((og_id, msa_path, cache_path))
 
     log(f"PSI: {len(kept_from_cache)} cached, {len(todo)} to compute "
-        f"(cache dir: {cache_dir})")
+        f"(writing to {cache_dir})")
+    for d in read_dirs[1:]:
+        log(f"PSI: also reading prebuilt cache at {d}")
+    scratch_root = os.fspath(runtime.scratch_dir(create=False))
+    if runtime.SCRATCH_ENV not in os.environ and cache_dir.startswith(scratch_root):
+        log(f"PSI: this cache is under the system temp dir and is not durable "
+            f"— set {runtime.SCRATCH_ENV} or --psi-cache-dir to keep it")
     if not todo:
         return cache_dir, {og: 0 for og in kept_from_cache}
 
@@ -140,15 +218,22 @@ def ensure_psi_cache(results_dir, cache_dir=None, ogs=None,
     return cache_dir, result
 
 
-def load_psi_for_ogs(cache_dir, og_ids):
+def load_psi_for_ogs(cache_dirs, og_ids):
     """Load PSI rows for every OG in `og_ids`.
 
-    Returns `{og_id: {(g1, g2): psi}}` with (g1, g2) sorted so lookup is
-    order-independent."""
+    `cache_dirs` is a single directory or an ordered search path of them, as
+    returned by `cache_search_path`; for each OG the first directory holding
+    its file wins. Returns `{og_id: {(g1, g2): psi}}` with (g1, g2) sorted so
+    lookup is order-independent."""
+    if isinstance(cache_dirs, (str, bytes, os.PathLike)):
+        cache_dirs = (cache_dirs,)
     out = {}
     for og_id in og_ids:
-        cache_path = os.path.join(cache_dir, og_id + ".txt")
-        if not os.path.isfile(cache_path):
+        for d in cache_dirs:
+            cache_path = os.path.join(d, og_id + ".txt")
+            if os.path.isfile(cache_path):
+                break
+        else:
             continue
         pair_psi = {}
         for (g1, g2, _id1, _id2, psi) in read_cache_file(cache_path):

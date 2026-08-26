@@ -67,8 +67,9 @@ class TestTheRule:
         assert "permitted" in msg and runtime.SCRATCH_ENV in msg
 
     def test_the_refdata_case_this_exists_for(self, dirs, monkeypatch):
-        """psi.ensure_psi_cache defaults its cache inside results_dir, which on
-        KBase and CTS is the read-only refdata mount."""
+        """psi.ensure_psi_cache used to default its cache inside results_dir,
+        which on KBase and CTS is the read-only refdata mount. It now routes
+        through scratch_dir(); this pins the distinction that made it wrong."""
         refdata = dirs["in"] / "OrthoFinder_Results"
         assert not runtime.is_writable_path(refdata / "Pairwise_Sequence_Identity")
         assert runtime.is_writable_path(runtime.scratch_dir("Pairwise_Sequence_Identity"))

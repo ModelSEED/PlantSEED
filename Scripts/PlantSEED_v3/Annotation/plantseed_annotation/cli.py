@@ -130,7 +130,9 @@ def _build_argparser():
     ap.add_argument("--species-phyla-file",
         help="Alternate Species_Phyla.txt path (default: %s)." % paths.SPECIES_PHYLA_FILE)
     ap.add_argument("--psi-cache-dir",
-        help="Where to cache per-OG PSI matrices. Default: <orthofinder-results>/Pairwise_Sequence_Identity/.")
+        help="Where to cache per-OG PSI matrices. Default: a per-run subdirectory of "
+             "$PLANTSEED_SCRATCH_DIR (or the system temp dir). Any existing "
+             "<orthofinder-results>/Pairwise_Sequence_Identity/ is still read, never written.")
     ap.add_argument("--workers", type=int,
         help="Number of processes for PSI computation. Default: cpu_count - 1.")
     ap.add_argument("--out", default="annotated_genome.json",
@@ -252,7 +254,10 @@ def main(argv=None):
         results_dir, cache_dir=args.psi_cache_dir,
         ogs=curated_ogs, n_workers=args.workers, log=log,
     )
-    psi_by_og = psi.load_psi_for_ogs(cache_dir, curated_ogs)
+    # Read from the full search path, not just where we wrote: a prebuilt
+    # cache beside the OrthoFinder results is legitimate and is not copied.
+    _write_dir, psi_dirs = psi.cache_search_path(results_dir, args.psi_cache_dir)
+    psi_by_og = psi.load_psi_for_ogs(psi_dirs, curated_ogs)
     log(f"[psi] loaded PSI for {len(psi_by_og)} OGs")
 
     # --- 6. Annotate ----------------------------------------------------------
@@ -283,6 +288,7 @@ def main(argv=None):
         "orthofinder_results": results_dir,
         "roles_file":    roles_path,
         "psi_cache_dir": cache_dir,
+        "psi_cache_read_dirs": list(psi_dirs),
         "status_counts": dict(stats),
         "pair_stats":    dict(pair_stats),
         "n_annotated_features": n_annotated,

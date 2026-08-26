@@ -23,6 +23,7 @@ from .algorithms.psi_refined import (
     annotate_species,
 )
 from .algorithms.psi import (
+    cache_search_path,
     compute_psi_for_msa,
     ensure_psi_cache,
     load_psi_for_ogs,
@@ -50,7 +51,8 @@ __all__ = [
     # psi_refined
     "annotate_query_gene", "annotate_species",
     # psi
-    "compute_psi_for_msa", "ensure_psi_cache", "load_psi_for_ogs",
+    "cache_search_path", "compute_psi_for_msa", "ensure_psi_cache",
+    "load_psi_for_ogs",
     # orthofinder_io
     "load_orthogroups", "load_orthologues", "orthologues_path",
     "read_msa", "species_from_orthogroups", "species_gene_to_og_index",
