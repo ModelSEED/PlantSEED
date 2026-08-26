@@ -83,3 +83,37 @@ class TestNoPlatformInference:
             monkeypatch.delenv(v, raising=False)
         assert runtime.writable_roots()
         assert runtime.input_root() == Path.cwd().resolve()
+
+
+class TestStrictMode:
+    """`enforce_writable` is the form writers actually call: silent on a
+    workstation, hard failure once an adapter has declared the mounts."""
+
+    def test_off_until_the_platform_declares_itself(self, monkeypatch):
+        monkeypatch.delenv(runtime.OUTPUT_ENV, raising=False)
+        assert not runtime.strict_mode()
+
+    def test_on_once_output_is_declared(self, dirs):
+        assert runtime.strict_mode()
+
+    def test_unconfigured_allows_an_arbitrary_destination(self, tmp_path, monkeypatch):
+        """`--out /scratch/seaver/model.json` on poplar is not an error, and a
+        gate that called it one would be turned off within a day."""
+        monkeypatch.delenv(runtime.OUTPUT_ENV, raising=False)
+        target = tmp_path / "anywhere" / "model.json"
+        assert runtime.enforce_writable(target) == target.resolve()
+
+    def test_configured_refuses_a_destination_outside_the_roots(self, dirs):
+        with pytest.raises(PermissionError):
+            runtime.enforce_writable(dirs["in"] / "model.json")
+
+    def test_configured_still_allows_the_roots(self, dirs):
+        for p in (dirs["out"] / "model.json", dirs["scratch"] / "og.txt"):
+            assert runtime.enforce_writable(p) == p.resolve()
+
+    def test_scratch_stays_writable_when_only_output_is_declared(self, tmp_path, monkeypatch):
+        """An adapter that sets OUTPUT_ENV alone must not lock the temp dir —
+        that is where the PSI cache lands."""
+        monkeypatch.setenv(runtime.OUTPUT_ENV, str(tmp_path / "out"))
+        monkeypatch.delenv(runtime.SCRATCH_ENV, raising=False)
+        assert runtime.enforce_writable(runtime.scratch_dir("psi", create=False))

@@ -32,6 +32,8 @@ import json
 import os
 import sys
 
+from plantseed_core import runtime
+
 from . import paths
 from .algorithms import orthofinder_io, propagate, psi, psi_refined
 from .genome_io import write_annotated_genome
@@ -154,6 +156,14 @@ def main(argv=None):
     def log(msg):
         if not args.quiet:
             print(msg, file=sys.stderr, flush=True)
+
+    # Check the destination before doing the work, not after: a reconstruction
+    # or a PSI sweep that dies on the final open() has burned the whole run.
+    # No-op unless an adapter has declared the mounts.
+    try:
+        runtime.enforce_writable(args.out)
+    except PermissionError as exc:
+        sys.exit(f"ERROR: {exc}")
 
     # --- 1. Resolve inputs ----------------------------------------------------
     results_dir = os.path.abspath(args.orthofinder_results)

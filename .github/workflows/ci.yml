@@ -60,8 +60,82 @@ jobs:
       #       curated role names
       #   Model/tests/test_golden_reconstruction.py — the three published
       #       preprint models still reproduce exactly
+      #   Core/tests/test_readonly_mounts.py — the shipped entry points run
+      #       with their inputs chmod'd read-only and the mounts declared
       - name: Test suite
         run: pytest -q
+
+  readonly-mounts:
+    # KBase binds refdata at /data with mode "ro" and CTS builds its refdata
+    # mount with writable=False, so a write into an input directory is a crash
+    # on both platforms and a silent success everywhere else. The matrix job
+    # above cannot see that: every directory it owns is writable.
+    #
+    # Core/tests/test_readonly_mounts.py locks its own synthetic inputs, which
+    # covers the code it calls. This job widens that to the whole suite against
+    # the repository's real data directories, so a write from a test that never
+    # thought about mounts fails here rather than during a CTS image review.
+    name: read-only refdata
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install ".[curate,model,dev]"
+
+      # Data/ is the biochemistry and compartments the reconstructor reads,
+      # Papers/ the golden preprint genomes and models, Template/ the model
+      # templates. All three are refdata in every deployed shape.
+      - name: Lock the inputs
+        run: chmod -R a-w Data Papers Scripts/PlantSEED_v3/Template
+
+      - name: Test suite against read-only inputs
+        run: pytest -q
+
+      # chmod is a weak instrument on its own: a permissive umask, a root
+      # container, or a filesystem that ignores mode bits can all let a write
+      # through. Comparing the tree catches it either way.
+      - name: Inputs are unchanged
+        run: |
+          git status --porcelain -- Data Papers Scripts/PlantSEED_v3/Template \
+            | tee /tmp/dirty
+          test ! -s /tmp/dirty
+
+      # The console script, not just main() — an entry point that only works
+      # when called in-process is not an entry point.
+      - name: Console script writes only to the declared output mount
+        env:
+          PLANTSEED_OUTPUT_DIR: ${{ runner.temp }}/output
+          PLANTSEED_SCRATCH_DIR: ${{ runner.temp }}/scratch
+        run: |
+          mkdir -p "$PLANTSEED_OUTPUT_DIR" "$PLANTSEED_SCRATCH_DIR"
+          plantseed-reconstruct \
+            --genome Papers/bioflux-preprint-260807/Athaliana_TAIR10_annotated_genome.json \
+            --template Scripts/PlantSEED_v3/Template/PlantSEED_Biomass_Template.json \
+            --compartments Data/PlantSEED_v3/Compartments/PlantSEED_Compartments.json \
+            --model-id ci_readonly --out "$PLANTSEED_OUTPUT_DIR/model.json"
+          python -c "import json,os,sys; m=json.load(open(os.environ['PLANTSEED_OUTPUT_DIR']+'/model.json')); n=len(m['modelreactions']); print('reactions:', n); sys.exit(0 if n > 1000 else 1)"
+
+      - name: A destination outside the mounts is refused
+        env:
+          PLANTSEED_OUTPUT_DIR: ${{ runner.temp }}/output
+        run: |
+          if plantseed-reconstruct \
+               --genome Papers/bioflux-preprint-260807/Athaliana_TAIR10_annotated_genome.json \
+               --out /tmp/escaped.json --quiet 2>/tmp/err; then
+            echo "expected a refusal, got exit 0"; exit 1
+          fi
+          grep -q "refusing to write outside" /tmp/err
+
+      - name: Unlock so the runner can clean up
+        if: always()
+        run: chmod -R u+w Data Papers Scripts/PlantSEED_v3/Template
 
   core-is-standalone:
     # Separate job with no extras installed at all: proves the core imports and

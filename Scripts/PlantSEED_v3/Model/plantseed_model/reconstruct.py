@@ -3,6 +3,8 @@ import json
 import os,re
 import sys
 
+from plantseed_core import runtime
+
 class ReconstructAppImpl:
 	#: Suppress progress output entirely. Progress goes to stderr either way —
 	#: stdout is reserved for machine-readable output, because every delivery
@@ -499,7 +501,9 @@ def main():
 		# if(' ' in mdlcpd['formula']):
 		# 	print(mdlcpd['id'],mdlcpd['formula'])
 			
-	output_path=os.path.join(obj_name+'.json')
+	# output_root() is the cwd unless an adapter has said otherwise, so this
+	# is unchanged locally and lands in the collected directory under CTS.
+	output_path=os.path.join(runtime.output_root(),obj_name+'.json')
 	with open(output_path,'w') as mofh:
 		mofh.write(json.dumps(metabolism_obj, indent=4, sort_keys=True))
 

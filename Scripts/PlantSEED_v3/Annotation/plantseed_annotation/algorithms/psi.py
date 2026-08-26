@@ -128,6 +128,7 @@ def write_cache_file(cache_path, og_id, rows):
 
         <og_id>\\t<g1>:<id1>\\t<g2>:<id2>\\t<psi>\\n
     """
+    cache_path = runtime.enforce_writable(cache_path)
     with open(cache_path, "w") as fh:
         for (g1, g2, id1, id2, psi) in rows:
             fh.write("\t".join([og_id, f"{g1}:{_fmt(id1)}",

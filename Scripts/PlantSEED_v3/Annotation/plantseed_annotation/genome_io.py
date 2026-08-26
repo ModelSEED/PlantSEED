@@ -19,6 +19,8 @@ include them with `["Unannotated"]`.
 
 import json
 
+from plantseed_core import runtime
+
 
 def build_annotated_genome(genome_id, annotations, include_unannotated=False):
     """Turn annotate_species()'s output into a reconstructor-compatible dict.
@@ -44,6 +46,7 @@ def write_annotated_genome(path, genome_id, annotations,
     `metadata` — optional dict merged into the top level under 'metadata';
     lets callers record OF results dir, phylum, threshold, timestamp, etc.
     """
+    path = runtime.enforce_writable(path)
     obj = build_annotated_genome(genome_id, annotations, include_unannotated)
     if metadata:
         obj["metadata"] = metadata

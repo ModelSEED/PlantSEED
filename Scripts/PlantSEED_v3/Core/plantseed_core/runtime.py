@@ -20,6 +20,12 @@ Two writable roots, no others:
 Reading is unrestricted; `input_root()` is provided for symmetry and is never
 writable. Everything is env-driven with plain defaults, so the core never
 infers which platform it is on — an adapter sets the variables, the core obeys.
+
+Writers call `enforce_writable()` on a caller-supplied destination. It is a
+no-op until an adapter declares the mounts, because the alternative refuses
+`--out /scratch/seaver/model.json` on a workstation, where the roots default
+to the cwd and the temp dir and nothing has gone wrong. Silent locally, hard
+failure wherever the platform is declared — which is where the rule exists.
 """
 
 from __future__ import annotations
@@ -31,7 +37,7 @@ from pathlib import Path
 __all__ = [
     "INPUT_ENV", "OUTPUT_ENV", "SCRATCH_ENV",
     "input_root", "output_root", "scratch_dir", "writable_roots",
-    "is_writable_path", "assert_writable",
+    "is_writable_path", "assert_writable", "strict_mode", "enforce_writable",
 ]
 
 INPUT_ENV = "PLANTSEED_INPUT_DIR"
@@ -83,6 +89,28 @@ def writable_roots() -> tuple[Path, ...]:
 def is_writable_path(path) -> bool:
     p = _resolved(path)
     return any(p == r or r in p.parents for r in writable_roots())
+
+
+def strict_mode() -> bool:
+    """True once a platform adapter has declared where output goes.
+
+    `OUTPUT_ENV` is the signal: the core cannot tell a container from a login
+    node, and must not try, so it takes the adapter setting that variable as
+    the statement that the mount layout is now real and enforceable.
+    """
+    return bool(os.environ.get(OUTPUT_ENV))
+
+
+def enforce_writable(path) -> Path:
+    """`assert_writable` where the platform is declared; a no-op where it isn't.
+
+    Call this — not `assert_writable` — at the top of any function that writes
+    to a destination it was handed. The unconditional form would break ordinary
+    CLI use, where `--out` is an arbitrary path and the default roots are the
+    cwd and the temp dir. Under KBase or CTS the adapter sets `OUTPUT_ENV` and
+    the same call becomes a hard stop before the file is opened.
+    """
+    return assert_writable(path) if strict_mode() else _resolved(path)
 
 
 def assert_writable(path) -> Path:

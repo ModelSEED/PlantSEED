@@ -18,6 +18,8 @@ import json
 import os
 import sys
 
+from plantseed_core import runtime
+
 from . import paths
 
 
@@ -78,6 +80,14 @@ def main(argv=None):
     def log(msg):
         if not args.quiet:
             print(msg, file=sys.stderr, flush=True)
+
+    # Check the destination before doing the work, not after: a reconstruction
+    # or a PSI sweep that dies on the final open() has burned the whole run.
+    # No-op unless an adapter has declared the mounts.
+    try:
+        runtime.enforce_writable(args.out)
+    except PermissionError as exc:
+        sys.exit(f"ERROR: {exc}")
 
     genome_path       = os.path.abspath(args.genome)
     template_path     = os.path.abspath(args.template or _default_template_path())
