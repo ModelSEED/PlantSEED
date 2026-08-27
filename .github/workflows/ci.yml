@@ -42,7 +42,7 @@ jobs:
       - name: Install
         run: |
           python -m pip install --upgrade pip
-          pip install ".[curate,model,dev]"
+          pip install ".[curate,model,mcp,dev]"
 
       - name: Console scripts resolve
         run: |
@@ -62,8 +62,19 @@ jobs:
       #       preprint models still reproduce exactly
       #   Core/tests/test_readonly_mounts.py — the shipped entry points run
       #       with their inputs chmod'd read-only and the mounts declared
+      #   Delivery/tests/test_schema_parity.py — the MCP tool signatures still
+      #       match the capability declarations they restate
+      #   Delivery/tests/test_descriptor.py — for-agents.md and SKILL.md still
+      #       quote the declared when/guarantee verbatim
       - name: Test suite
         run: pytest -q
+
+      # The suite already checks this; surfacing it as its own step makes the
+      # fix obvious from the job name rather than from a parametrised test id.
+      - name: Agent-facing docs are current
+        run: |
+          python -m plantseed_delivery.descriptor \
+            || { echo "::error::run 'python -m plantseed_delivery.descriptor --write' and commit"; exit 1; }
 
   readonly-mounts:
     # KBase binds refdata at /data with mode "ro" and CTS builds its refdata
@@ -87,7 +98,7 @@ jobs:
       - name: Install
         run: |
           python -m pip install --upgrade pip
-          pip install ".[curate,model,dev]"
+          pip install ".[curate,model,mcp,dev]"
 
       # Data/ is the biochemistry and compartments the reconstructor reads,
       # Papers/ the golden preprint genomes and models, Template/ the model
@@ -136,6 +147,61 @@ jobs:
       - name: Unlock so the runner can clean up
         if: always()
         run: chmod -R u+w Data Papers Scripts/PlantSEED_v3/Template
+
+  container:
+    # The image is a deliverable, not a build artifact: it runs the MCP service
+    # on poplar and it is what CTS would review. Three of the bugs this
+    # Dockerfile went through were invisible until an image actually ran — a
+    # data path that only resolves inside a source tree, an SDK API that moved
+    # between major versions, and mkdtemp's 0700 hiding outputs from whoever
+    # collects them. None of the three could have failed in the matrix job.
+    name: image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: docker build -f Scripts/PlantSEED_v3/Delivery/Dockerfile -t plantseed:ci .
+
+      # [CTS 2] [CTS 3] [CTS 4] [CTS 8] — the checklist items that are
+      # properties of the image rather than of a run.
+      - name: Image satisfies the CTS shape rules
+        run: |
+          set -euo pipefail
+          test "$(docker image inspect plantseed:ci --format '{{.Os}}')" = linux
+          test -n "$(docker image inspect plantseed:ci --format '{{.Config.Entrypoint}}')"
+          test "$(docker run --rm plantseed:ci id -u)" = 10001
+          docker run --rm plantseed:ci bash -c 'test -x /bin/bash'
+
+      - name: Tools resolve without a client
+        run: docker run --rm plantseed:ci mcp --list-tools | grep -qx reconstruct
+
+      # [CTS 5] [CTS 6] in their strong form: read-only root filesystem,
+      # read-only input mount, only /output and a tmpfs writable. Anything that
+      # writes elsewhere fails here rather than at image review.
+      - name: Reconstructs with everything but /output read-only
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/out" && chmod 777 "$RUNNER_TEMP/out"
+          docker run --rm --read-only --tmpfs /tmp:rw,size=128m,mode=1777 \
+            -v "$PWD/Papers/bioflux-preprint-260807:/input:ro" \
+            -v "$RUNNER_TEMP/out:/output" \
+            plantseed:ci reconstruct \
+              --genome /input/Athaliana_TAIR10_annotated_genome.json \
+              --out /output/model.json --quiet
+          python -c "import json,sys; m=json.load(open('$RUNNER_TEMP/out/model.json')); n=len(m['modelreactions']); print('reactions:', n); sys.exit(0 if n==1218 else 1)"
+
+      - name: A destination outside the mounts is refused
+        run: |
+          set -euo pipefail
+          if docker run --rm --read-only --tmpfs /tmp:rw,size=128m,mode=1777 \
+               -v "$PWD/Papers/bioflux-preprint-260807:/input:ro" \
+               plantseed:ci reconstruct \
+                 --genome /input/Athaliana_TAIR10_annotated_genome.json \
+                 --out /input/sneaky.json --quiet 2>/tmp/err; then
+            echo "expected a refusal, got exit 0"; exit 1
+          fi
+          grep -q "refusing to write outside" /tmp/err
 
   core-is-standalone:
     # Separate job with no extras installed at all: proves the core imports and
