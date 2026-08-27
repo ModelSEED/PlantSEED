@@ -41,6 +41,20 @@ RECONSTRUCT_OUTPUTS = (
         "genome and a curated template. Deterministic, needs no network and no "
         "reference data — the template and compartments ship with the package."
     ),
+    when=(
+        "Before hand-building a plant metabolic model from an annotated genome, "
+        "or re-deriving PlantSEED role-to-reaction mappings from the raw data "
+        "files. Also reach for it to re-run an existing model against a newer "
+        "curation release, since the run is deterministic and diffable."
+    ),
+    guarantee=(
+        "Curated subcellular compartments (a plant model is wrong without "
+        "plastid / mitochondrion / peroxisome placement, and a generic "
+        "gene-to-reaction mapping does not carry it), stable PS_role_* "
+        "identities so two models can be diffed across curation versions, the "
+        "conditional-spontaneous-reaction path the KBase copy of this algorithm "
+        "lacks, and bit-identical output for the same inputs."
+    ),
     params=RECONSTRUCT_PARAMS,
     outputs=RECONSTRUCT_OUTPUTS,
     # Measured, not guessed: the three preprint genomes each reconstruct in

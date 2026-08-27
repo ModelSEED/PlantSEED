@@ -47,6 +47,7 @@ __all__ = [
     "all_capabilities",
     "export_manifest",
     "clear",
+    "SELF_DESCRIPTION",
 ]
 
 #: Capability and parameter names. Deliberately narrower than Python
@@ -55,6 +56,24 @@ __all__ = [
 NAME_RE = re.compile(r"^[a-z][a-z0-9_]*$")
 
 PARAM_TYPES = ("str", "int", "float", "bool", "enum", "file", "dir")
+
+#: Repo-relative path to the owner-authored, agent-facing description of what
+#: PlantSEED is for. Emitted as the manifest's `self_description.source`.
+SELF_DESCRIPTION = "Scripts/PlantSEED_v3/for-agents.md"
+
+#: PARAM_TYPES -> JSON Schema primitive, for `Capability.input_schema`. `file`
+#: and `dir` are strings because every platform passes a path; what differs --
+#: a workspace ref on KBase, a mount-relative name on CTS -- is the caller's
+#: business, not the schema's. `enum` is absent: it emits `{"enum": choices}`
+#: with no `type`, so non-string choices stay valid.
+_JSON_TYPES = {
+    "str": "string",
+    "int": "integer",
+    "float": "number",
+    "bool": "boolean",
+    "file": "string",
+    "dir": "string",
+}
 
 
 def _check_name(name: str, what: str) -> str:
@@ -170,12 +189,24 @@ class Resources:
 
 @dataclass(frozen=True, slots=True)
 class Capability:
+    """A declared unit of work, described once and emitted many ways.
+
+    `when` and `guarantee` are the agent-facing depth. They are declared here,
+    beside the code they describe, because every harness that renders them
+    requires the *owner* to author them — KIND*AI's capability contract makes
+    this an invariant and forbids the harness from writing its own version.
+    An empty `when` is legal but means the roster line says only what the tool
+    is, never when to prefer it over hand-rolling the primitive.
+    """
+
     name: str
     summary: str
     params: tuple[Param | FileParam, ...] = ()
     outputs: tuple[Artifact, ...] = ()
     resources: Resources = field(default_factory=Resources)
     image: str | None = None
+    when: str = ""
+    guarantee: str = ""
     func: Callable[..., Any] | None = None
 
     def param(self, name: str) -> Param | FileParam:
@@ -188,14 +219,62 @@ class Capability:
     def file_params(self) -> tuple[FileParam, ...]:
         return tuple(p for p in self.params if isinstance(p, FileParam))
 
+    def input_schema(self) -> dict:
+        """The parameters as a JSON Schema object.
+
+        An MCP tool takes a JSON Schema `inputSchema`, KING's MCP explorer
+        builds its form from one, and anything validating a call without
+        importing the implementation needs one. Emitting it here means the
+        mapping from `PARAM_TYPES` exists once; a consumer that re-derived it
+        would be a second source of truth for the same declaration.
+
+        `additionalProperties` is false on purpose — a mistyped parameter name
+        should be a rejected call, not a silently ignored one.
+        """
+        props: dict = {}
+        required: list[str] = []
+        for p in self.params:
+            if isinstance(p, FileParam):
+                schema = {"type": "string"}
+                if p.multiple:
+                    schema = {"type": "array", "items": schema}
+            elif p.type == "enum":
+                schema = {"enum": list(p.choices)}
+            else:
+                schema = {"type": _JSON_TYPES[p.type]}
+
+            desc = " ".join(x for x in (p.help, f"Format: {p.fmt}."
+                                        if getattr(p, "fmt", "") else "") if x)
+            if desc:
+                schema["description"] = desc
+            if getattr(p, "default", None) is not None:
+                schema["default"] = p.default
+
+            props[p.name] = schema
+            if p.required:
+                required.append(p.name)
+
+        out = {"type": "object", "properties": props,
+               "additionalProperties": False}
+        if required:
+            out["required"] = required
+        return out
+
     def to_dict(self) -> dict:
         """The wire form. `func` is dropped — a generator must never need to
-        import the implementation to build a spec."""
+        import the implementation to build a spec.
+
+        `input_schema` is derived from `params` rather than declared, and is
+        carried here so a consumer gets it without reimplementing the mapping.
+        """
         return {
             "name": self.name,
             "summary": self.summary,
+            "when": self.when,
+            "guarantee": self.guarantee,
             "image": self.image,
             "params": [asdict(p) for p in self.params],
+            "input_schema": self.input_schema(),
             "outputs": [asdict(a) for a in self.outputs],
             "resources": asdict(self.resources),
         }
@@ -212,6 +291,8 @@ def capability(
     outputs: Sequence[Artifact] = (),
     resources: Resources | None = None,
     image: str | None = None,
+    when: str = "",
+    guarantee: str = "",
 ):
     """Register the decorated function as a capability.
 
@@ -250,6 +331,8 @@ def capability(
             outputs=tuple(outputs),
             resources=resources or Resources(),
             image=image,
+            when=" ".join(when.split()),
+            guarantee=" ".join(guarantee.split()),
             func=func,
         )
         func.__plantseed_capability__ = name  # type: ignore[attr-defined]
@@ -339,6 +422,10 @@ def export_manifest() -> dict:
         "schema_version": 1,
         "plantseed_version": __version__,
         "data_version": DATA_VERSION,
+        # A pointer, not the prose. The consuming harness injects the owner's
+        # own agent-facing document; duplicating it into every manifest would
+        # give it two places to rot.
+        "self_description": {"source": SELF_DESCRIPTION},
         "capabilities": [c.to_dict() for c in all_capabilities()],
     }
 

@@ -59,8 +59,12 @@ def tmp_db(tmp_path, monkeypatch):
     from plantseed_curation import paths as p
     p.refresh_from_env()
     yield paths_dict
-    # monkeypatch unsets the env vars on teardown; do one more refresh so
-    # other tests don't see stale values.
+    # Undo the env FIRST, then refresh. monkeypatch is set up before this
+    # fixture and so is torn down after it: refreshing here without undo()
+    # re-reads the still-patched env and leaves paths.ROLES_FILE pointing at a
+    # tmp_path that is about to be deleted. Any later test that reads the real
+    # role file then reads nothing -- which is how this was found.
+    monkeypatch.undo()
     p.refresh_from_env()
 
 

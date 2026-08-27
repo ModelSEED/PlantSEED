@@ -38,8 +38,19 @@ curate = ["PyYAML>=6"]
 model = ["cobra>=0.29,!=0.32.0"]
 # Only omics/stats.py::mahalanobis_outliers needs these. Percentile ranks are stdlib.
 stats = ["numpy>=1.24", "scipy>=1.10"]
-all = ["plantseed[curate,model,stats]"]
-dev = ["pytest>=8", "pytest-cov"]
+# The MCP server (plantseed_delivery.mcp_server). Only that one module imports
+# it, so the rest of the delivery package stays importable and testable on a
+# base install. The 2.x line renamed FastMCP to MCPServer; the server handles
+# both, so the floor is the older name's last release rather than 2.0.
+mcp = ["mcp>=1.9"]
+# `curate` is not optional for the server: its curation lookups read
+# PlantSEED_Schema.yaml through plantseed_curation, which needs PyYAML.
+server = ["plantseed[curate,mcp]"]
+all = ["plantseed[curate,model,stats,mcp]"]
+# jsonschema is dev-only: it checks that Capability.input_schema() emits a
+# valid schema. Nothing at runtime validates against it -- the MCP client and
+# KING's explorer do that on their side.
+dev = ["pytest>=8", "pytest-cov", "jsonschema>=4"]
 
 # NOT DECLARED HERE, ON PURPOSE — cobrakbase, modelseedpy, and the ModelSEED
 # biochemistry database are pinned by commit in deps/external.json and fetched
@@ -63,6 +74,7 @@ Repository = "https://github.com/ModelSEED/PlantSEED"
 plantseed = "plantseed_core.cli:main"
 plantseed-annotate = "plantseed_annotation.cli:main"
 plantseed-reconstruct = "plantseed_annotation.reconstruct_cli:main"
+plantseed-mcp = "plantseed_delivery.mcp_server:main"
 
 # Capability declarations are discovered through this group, so the delivery
 # repo — or a third party — can add one without editing this package.
@@ -80,12 +92,14 @@ where = [
     "Scripts/PlantSEED_v3/Annotation",
     "Scripts/PlantSEED_v3/Curation",
     "Scripts/PlantSEED_v3/Model",
+    "Scripts/PlantSEED_v3/Delivery",
 ]
 include = [
     "plantseed_core*",
     "plantseed_annotation*",
     "plantseed_curation*",
     "plantseed_model*",
+    "plantseed_delivery*",
 ]
 
 [tool.pytest.ini_options]
@@ -94,4 +108,5 @@ testpaths = [
     "Scripts/PlantSEED_v3/Annotation/tests",
     "Scripts/PlantSEED_v3/Curation/tests",
     "Scripts/PlantSEED_v3/Model/tests",
+    "Scripts/PlantSEED_v3/Delivery/tests",
 ]

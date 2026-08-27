@@ -219,3 +219,92 @@ class TestClearIsReversible:
             registry._REGISTRY.clear()
             registry._REGISTRY.update(saved)
             registry._LOADED = True
+
+
+class TestInputSchema:
+    """`input_schema()` is what MCP tool signatures and KING's explorer form
+    are built from. The mapping exists once here; a consumer re-deriving it
+    would be a second source of truth for the same declaration."""
+
+    def test_scalars_map_to_json_types(self, clean_registry):
+        cap = _register(clean_registry, params=[
+            Param("s", type="str"), Param("i", type="int"),
+            Param("f", type="float"), Param("b", type="bool"),
+        ])
+        props = cap.input_schema()["properties"]
+        assert [props[k]["type"] for k in ("s", "i", "f", "b")] == [
+            "string", "integer", "number", "boolean"]
+
+    def test_every_param_type_is_covered(self, clean_registry):
+        """A new PARAM_TYPES entry must not silently emit a broken schema."""
+        for t in registry.PARAM_TYPES:
+            if t == "file":
+                p = FileParam("x")
+            elif t == "enum":
+                p = Param("x", type="enum", choices=("a", "b"))
+            else:
+                p = Param("x", type=t)
+            schema = _register(clean_registry, name=f"c_{t}",
+                               params=[p]).input_schema()["properties"]["x"]
+            assert "type" in schema or "enum" in schema, t
+
+    def test_enum_emits_choices_and_no_type(self, clean_registry):
+        """Choices need not be strings, so pinning a `type` would be wrong."""
+        cap = _register(clean_registry, params=[
+            Param("mode", type="enum", choices=("fast", "thorough"))])
+        assert cap.input_schema()["properties"]["mode"] == {
+            "enum": ["fast", "thorough"]}
+
+    def test_files_are_strings_and_multiple_is_an_array(self, clean_registry):
+        cap = _register(clean_registry, params=[
+            FileParam("one"), FileParam("many", multiple=True)])
+        props = cap.input_schema()["properties"]
+        assert props["one"]["type"] == "string"
+        assert props["many"] == {"type": "array", "items": {"type": "string"}}
+
+    def test_required_lists_only_required_params(self, clean_registry):
+        cap = _register(clean_registry, params=[
+            FileParam("needed", required=True), Param("opt", default="x")])
+        assert cap.input_schema()["required"] == ["needed"]
+
+    def test_required_is_absent_when_nothing_is(self, clean_registry):
+        """An empty `required: []` is legal JSON Schema but noisy; omit it."""
+        assert "required" not in _register(clean_registry).input_schema()
+
+    def test_help_and_fmt_become_the_description(self, clean_registry):
+        cap = _register(clean_registry, params=[
+            FileParam("genome", fmt="plantseed_annotated_genome_json",
+                      help="The genome.")])
+        desc = cap.input_schema()["properties"]["genome"]["description"]
+        assert "The genome." in desc and "plantseed_annotated_genome_json" in desc
+
+    def test_defaults_pass_through(self, clean_registry):
+        cap = _register(clean_registry, params=[Param("n", type="int", default=4)])
+        assert cap.input_schema()["properties"]["n"]["default"] == 4
+
+    def test_unknown_parameters_are_rejected(self, clean_registry):
+        """A mistyped parameter name should fail the call, not be ignored."""
+        assert _register(clean_registry).input_schema()["additionalProperties"] is False
+
+    def test_the_wire_form_carries_it(self, clean_registry):
+        """So a consumer gets the schema without reimplementing the mapping."""
+        cap = _register(clean_registry, params=[FileParam("g", required=True)])
+        assert cap.to_dict()["input_schema"] == cap.input_schema()
+
+    def test_the_real_reconstruct_schema_is_usable(self):
+        """Against the shipped declaration, not a fixture."""
+        schema = registry.get("reconstruct").input_schema()
+        assert schema["required"] == ["genome"]
+        assert set(schema["properties"]) == {
+            "genome", "template", "compartments", "model_id"}
+
+    def test_it_validates_as_json_schema(self):
+        """Skipped unless jsonschema is installed — it is not a dependency."""
+        js = pytest.importorskip("jsonschema")
+        schema = registry.get("reconstruct").input_schema()
+        js.Draft202012Validator.check_schema(schema)
+        js.validate({"genome": "g.json"}, schema)
+        with pytest.raises(js.ValidationError):
+            js.validate({"genome": "g.json", "typo": 1}, schema)
+        with pytest.raises(js.ValidationError):
+            js.validate({}, schema)

@@ -10,10 +10,17 @@ KBase, and CTS's no-runtime-downloads rule becomes unsatisfiable.
 That is easy to violate by accident and expensive to unpick later, so it is a
 test rather than a code-review convention.
 
-Scope is the four packages that actually ship in the wheel. Sibling scripts in
+Scope is the packages that actually ship in the wheel. Sibling scripts in
 the same directories (Test-Model-FBA.py, Curation_Tool.py,
 annotate-arabidopsis-genome.py) are local tooling, are not packaged, and may
 import whatever they like — Test-Model-FBA.py imports cobrakbase today.
+
+`plantseed_delivery` is in scope even though it is an adapter, because it ships
+in the same wheel: an adapter may know a platform's *shape* — the MCP server
+encodes CTS and KIND*AI constraints in its docstrings — but importing that
+platform's code here would put it in every container. The `mcp` SDK is not
+forbidden; it is a protocol library, declared under the optional `[mcp]` extra
+and imported by exactly one module.
 
 Implemented with ast rather than grep so that prose in a docstring naming a
 forbidden module does not trip it. This docstring is the proof.
@@ -56,6 +63,7 @@ PACKAGES = {
     "plantseed_annotation": os.path.join(_CORE_ROOT, "Annotation", "plantseed_annotation"),
     "plantseed_curation": os.path.join(_CORE_ROOT, "Curation", "plantseed_curation"),
     "plantseed_model": os.path.join(_CORE_ROOT, "Model", "plantseed_model"),
+    "plantseed_delivery": os.path.join(_CORE_ROOT, "Delivery", "plantseed_delivery"),
 }
 
 
