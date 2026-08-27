@@ -3,12 +3,17 @@
 Two things differ from a one-shot container, and both are here rather than in
 the tool definitions so the MCP layer stays thin.
 
-**Where output goes.** `runtime.output_root()` reads process-global env, which
-is exactly right for a CTS job — one process, one output mount — and wrong for
-a server handling concurrent calls. Each call gets its own directory under
-`runtime.scratch_dir("mcp")` and passes the path explicitly; the writers
-already take their destination as a parameter and are already gated by
+**Where output goes.** A CTS job is one process with one output mount, so
+`runtime.output_root()` alone is enough there. A server is not: concurrent
+calls would collide on a single directory. Each call therefore gets its own
+subdirectory *of* the output root, and passes the path explicitly — the
+writers already take their destination as a parameter and are already gated by
 `runtime.enforce_writable`, so nothing global is mutated.
+
+Under the output root rather than scratch, because the caller asked for an
+artifact and an artifact is not transient: mount `/output` and the model is
+readable from outside the container. The cost is that results accumulate —
+the operator prunes, the server does not.
 
 **What comes back.** Not the artifact. An Athaliana model is 1218 reactions and
 1313 compounds; inlining that as a tool result would spend the session's entire
@@ -35,8 +40,19 @@ __all__ = ["reconstruct", "INVOKERS", "call"]
 
 
 def _fresh_output_dir() -> str:
-    """A private, writable directory for one call."""
-    return tempfile.mkdtemp(prefix="run-", dir=str(runtime.scratch_dir("mcp")))
+    """A writable directory for one call, under the output root.
+
+    `mkdtemp` creates 0700, which is right for a secret temp directory and
+    wrong for an artifact directory that exists to be read from outside. Two
+    readers need to traverse it: whoever mounted /output, and CTS itself,
+    which collects results by running `find <mount> -type f` — a 0700 subtree
+    is simply invisible to that, so the job would report no outputs.
+    """
+    parent = runtime.output_root() / "mcp"
+    parent.mkdir(parents=True, exist_ok=True)
+    out = tempfile.mkdtemp(prefix="run-", dir=str(parent))
+    os.chmod(out, 0o755)
+    return out
 
 
 def _artifact_path(capability: str, key: str, out_dir: str) -> str:

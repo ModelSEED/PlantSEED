@@ -42,12 +42,16 @@ def _load_reconstruct_impl():
 
 
 def _default_template_path():
-    here = os.path.dirname(os.path.abspath(__file__))
-    repo_root = os.path.normpath(os.path.join(here, "..", "..", "..", ".."))
-    return os.path.join(
-        repo_root, "Scripts", "PlantSEED_v3", "Template",
-        "PlantSEED_Biomass_Template.json",
-    )
+    """The packaged template.
+
+    Delegates to `paths` so this one location is env-overridable like every
+    other data path in the package. It was not, and that made it the single
+    thing that could not be relocated: installed as a wheel — in a container,
+    or from PyPI — the source-tree-relative path it used to compute does not
+    exist, so `plantseed-reconstruct` without `--template` could only run from
+    a checkout.
+    """
+    return paths.TEMPLATE_FILE
 
 
 def _build_argparser():

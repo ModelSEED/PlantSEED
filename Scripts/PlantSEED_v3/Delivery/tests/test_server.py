@@ -76,11 +76,14 @@ class TestReconstruct:
         assert os.path.isfile(out["model_path"])
         assert len(out["sha256"]) == 64
 
-    def test_output_lands_in_scratch_not_beside_the_input(self, server):
+    def test_output_lands_in_the_output_root_not_beside_the_input(self, server):
+        """Under the output root so a mounted /output exposes the model, and
+        inside the writable roots so strict mode permits the write at all."""
         from plantseed_core import runtime
 
         out = _call(server, "reconstruct", {"genome": GENOME})
         assert runtime.is_writable_path(out["model_path"])
+        assert out["model_path"].startswith(str(runtime.output_root()))
         assert os.path.dirname(GENOME) not in out["model_path"]
 
     def test_concurrent_calls_do_not_share_an_output_path(self, server):
@@ -101,3 +104,40 @@ class TestCli:
         healthcheck can run."""
         assert mcp_server.main(["--list-tools"]) == 0
         assert "reconstruct" in capsys.readouterr().out
+
+
+class TestTransportWiring:
+    """Where the bind address goes moved between mcp 1.x and 2.x, and getting
+    it wrong fails only when a socket is actually opened — after the image has
+    built and the container has started. These bind the call against the
+    installed SDK's real signature instead."""
+
+    def test_the_chosen_call_matches_the_installed_sdk(self, server):
+        import inspect
+
+        fields = getattr(type(server.settings), "model_fields", {})
+        if "host" in fields:                       # mcp 1.x
+            inspect.signature(server.run).bind(transport="streamable-http")
+        else:                                      # mcp >= 2
+            inspect.signature(server.run_streamable_http_async).bind(
+                host="127.0.0.1", port=8931)
+
+    def test_settings_are_not_assigned_when_the_sdk_has_no_such_field(self, server):
+        """The actual bug: pydantic raises on an unknown field, so assigning
+        `settings.host` blindly takes the server down at startup."""
+        fields = getattr(type(server.settings), "model_fields", {})
+        if "host" not in fields:
+            with pytest.raises(ValueError):
+                server.settings.host = "127.0.0.1"
+
+
+@pytest.mark.skipif(not HAVE_GENOME, reason="preprint genome not present")
+def test_artifacts_are_readable_from_outside_the_container(server):
+    """mkdtemp defaults to 0700. CTS collects outputs with `find <mount>` and a
+    bind-mounted /output is read by a different uid; either way a 0700 subtree
+    means the artifact is there and unreachable."""
+    import stat
+
+    out = _call(server, "reconstruct", {"genome": GENOME})
+    mode = os.stat(os.path.dirname(out["model_path"])).st_mode
+    assert mode & stat.S_IROTH and mode & stat.S_IXOTH, oct(mode)

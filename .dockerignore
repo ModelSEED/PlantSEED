@@ -1,0 +1,29 @@
+# The build context is the repo root, because the package data lives outside
+# Scripts/. Everything the image does not need is excluded here rather than
+# shipped and then deleted — a COPY'd file stays in the layer even if a later
+# RUN removes it, which matters for both image size and the malware review.
+
+.git
+.github
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.recall
+*.egg-info
+build
+dist
+.venv
+
+# Large trees no lane reads: published-paper artifacts, genome sequence, the
+# workshop material, and the archived data versions.
+Papers
+Genomes
+Workshops
+Data/PlantSEED_v1
+Data/PlantSEED_v2
+
+# Curator scratch space. Personal working files, not inputs.
+Scripts/PlantSEED_v3/Curation/Curators
+
+# Archived data versions no lane reads.
+Data/PlantSEED_v2.5

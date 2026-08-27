@@ -29,7 +29,25 @@ from plantseed_core import registry
 
 from . import invoke, manifest, queries
 
-__all__ = ["build_server", "main"]
+__all__ = ["build_server", "serve", "main"]
+
+
+def serve(server, transport: str, host: str, port: int) -> None:
+    """Run `server`, coping with where the SDK keeps the bind address.
+
+    mcp 1.x carries `host`/`port` as fields on `server.settings` and its
+    `run()` takes neither; mcp 2.x removed those fields and takes them as
+    `run()` keyword arguments. Passing 2.x's form to 1.x raises TypeError, and
+    setting 1.x's fields on 2.x raises ValueError from pydantic — which is how
+    this was found, after the container had already built and started.
+    """
+    fields = getattr(type(server.settings), "model_fields", {})
+    if "host" in fields:                       # mcp 1.x
+        server.settings.host = host
+        server.settings.port = port
+        server.run(transport=transport)
+    else:                                      # mcp >= 2
+        server.run(transport=transport, host=host, port=port)
 
 
 def build_server() -> "_Server":
@@ -119,13 +137,13 @@ def main(argv=None) -> int:
             print(name)
         return 0
 
-    if args.transport != "stdio":
-        server.settings.host = args.host
-        server.settings.port = args.port
-        print(f"[plantseed-mcp] {args.transport} on {args.host}:{args.port}",
-              file=sys.stderr, flush=True)
+    if args.transport == "stdio":
+        server.run(transport="stdio")
+        return 0
 
-    server.run(transport=args.transport)
+    print(f"[plantseed-mcp] {args.transport} on {args.host}:{args.port}",
+          file=sys.stderr, flush=True)
+    serve(server, args.transport, args.host, args.port)
     return 0
 
 

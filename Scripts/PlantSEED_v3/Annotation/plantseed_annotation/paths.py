@@ -55,6 +55,13 @@ COMPARTMENTS_FILE = _env(
         "PlantSEED_Compartments.json",
     ),
 )
+TEMPLATE_FILE = _env(
+    "PLANTSEED_ANNOT_TEMPLATE_FILE",
+    os.path.join(
+        _REPO_ROOT, "Scripts", "PlantSEED_v3", "Template",
+        "PlantSEED_Biomass_Template.json",
+    ),
+)
 SPECIES_PHYLA_FILE = _env(
     "PLANTSEED_ANNOT_SPECIES_PHYLA_FILE",
     os.path.join(
@@ -79,6 +86,7 @@ def refresh_from_env():
     reflect the new values."""
     global BUNDLE_ROOT, BUNDLE_VERSION, BUNDLE_DIR
     global ROLES_FILE, COMPLEXES_FILE, COMPARTMENTS_FILE, SPECIES_PHYLA_FILE
+    global TEMPLATE_FILE
     BUNDLE_ROOT = _env("PLANTSEED_ANNOT_BUNDLE_ROOT", "/kb/data/plantseed_annotation")
     BUNDLE_VERSION = _env("PLANTSEED_ANNOT_BUNDLE_VERSION", "latest")
     BUNDLE_DIR = _env(
@@ -92,6 +100,13 @@ def refresh_from_env():
     COMPLEXES_FILE = _env(
         "PLANTSEED_ANNOT_COMPLEXES_FILE",
         os.path.join(_REPO_ROOT, "Data", "PlantSEED_v3", "PlantSEED_Complexes.json"),
+    )
+    TEMPLATE_FILE = _env(
+        "PLANTSEED_ANNOT_TEMPLATE_FILE",
+        os.path.join(
+            _REPO_ROOT, "Scripts", "PlantSEED_v3", "Template",
+            "PlantSEED_Biomass_Template.json",
+        ),
     )
     COMPARTMENTS_FILE = _env(
         "PLANTSEED_ANNOT_COMPARTMENTS_FILE",

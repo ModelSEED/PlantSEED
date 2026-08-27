@@ -34,8 +34,18 @@ def clean_query_cache():
 
 
 @pytest.fixture(autouse=True)
-def scratch_in_tmp(tmp_path, monkeypatch):
-    """Keep per-call output directories out of the real temp dir."""
+def declared_mounts(tmp_path, monkeypatch):
+    """Declare both roots for every test.
+
+    OUTPUT_ENV is not optional here. Per-call artifacts land under the output
+    root, which defaults to the cwd — so without this the suite writes model
+    JSON into whatever directory pytest was started from. It did, once.
+
+    Setting OUTPUT_ENV also turns runtime.strict_mode() on, which is the state
+    the container runs in, so the tests exercise the enforced path rather than
+    the permissive one.
+    """
     from plantseed_core import runtime
 
+    monkeypatch.setenv(runtime.OUTPUT_ENV, str(tmp_path / "output"))
     monkeypatch.setenv(runtime.SCRATCH_ENV, str(tmp_path / "scratch"))
