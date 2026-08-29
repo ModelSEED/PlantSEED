@@ -13126,7 +13126,9 @@
                     "modelReactionProteinSubunits": [
                         {
                             "feature_refs": [
-                                "~/genome/features/id/Potri.006G123200"
+                                "~/genome/features/id/Potri.002G189200",
+                                "~/genome/features/id/Potri.006G123200",
+                                "~/genome/features/id/Potri.014G114700"
                             ],
                             "note": "Features characterized and annotated",
                             "optionalSubunit": 0,
@@ -13179,7 +13181,18 @@
             "modelReactionProteins": [
                 {
                     "complex_ref": "~/template/complexes/id/PS_complex_9638b2",
-                    "modelReactionProteinSubunits": [],
+                    "modelReactionProteinSubunits": [
+                        {
+                            "feature_refs": [
+                                "~/genome/features/id/Potri.002G189200",
+                                "~/genome/features/id/Potri.014G114700"
+                            ],
+                            "note": "Features characterized and annotated",
+                            "optionalSubunit": 0,
+                            "role": "S-adenosylmethionine synthetase (EC 2.5.1.6)",
+                            "triggering": 1
+                        }
+                    ],
                     "note": "universal"
                 }
             ],
@@ -14501,7 +14514,17 @@
             "modelReactionProteins": [
                 {
                     "complex_ref": "~/template/complexes/id/PS_complex_34ccee",
-                    "modelReactionProteinSubunits": [],
+                    "modelReactionProteinSubunits": [
+                        {
+                            "feature_refs": [
+                                "~/genome/features/id/Potri.001G162800"
+                            ],
+                            "note": "Features characterized and annotated",
+                            "optionalSubunit": 0,
+                            "role": "Alanine transaminase (EC 2.6.1.2)",
+                            "triggering": 1
+                        }
+                    ],
                     "note": "universal"
                 }
             ],
@@ -14538,6 +14561,7 @@
                     "modelReactionProteinSubunits": [
                         {
                             "feature_refs": [
+                                "~/genome/features/id/Potri.001G162800",
                                 "~/genome/features/id/Potri.008G187400",
                                 "~/genome/features/id/Potri.010G045100"
                             ],
@@ -14583,6 +14607,7 @@
                     "modelReactionProteinSubunits": [
                         {
                             "feature_refs": [
+                                "~/genome/features/id/Potri.001G162800",
                                 "~/genome/features/id/Potri.003G072600"
                             ],
                             "note": "Features characterized and annotated",
@@ -20787,6 +20812,7 @@
                     "modelReactionProteinSubunits": [
                         {
                             "feature_refs": [
+                                "~/genome/features/id/Potri.001G212000",
                                 "~/genome/features/id/Potri.002G090200",
                                 "~/genome/features/id/Potri.005G170800",
                                 "~/genome/features/id/Potri.006G232300",
@@ -24312,7 +24338,18 @@
             "modelReactionProteins": [
                 {
                     "complex_ref": "~/template/complexes/id/PS_complex_3b812e",
-                    "modelReactionProteinSubunits": [],
+                    "modelReactionProteinSubunits": [
+                        {
+                            "feature_refs": [
+                                "~/genome/features/id/Potri.008G077400",
+                                "~/genome/features/id/Potri.010G180400"
+                            ],
+                            "note": "Features characterized and annotated",
+                            "optionalSubunit": 0,
+                            "role": "Phosphoglycolate phosphatase (EC 3.1.3.18)",
+                            "triggering": 1
+                        }
+                    ],
                     "note": "universal"
                 }
             ],
@@ -24349,6 +24386,8 @@
                     "modelReactionProteinSubunits": [
                         {
                             "feature_refs": [
+                                "~/genome/features/id/Potri.008G077400",
+                                "~/genome/features/id/Potri.010G180400",
                                 "~/genome/features/id/Potri.016G004200"
                             ],
                             "note": "Features characterized and annotated",
@@ -24390,7 +24429,18 @@
             "modelReactionProteins": [
                 {
                     "complex_ref": "~/template/complexes/id/PS_complex_3b812e",
-                    "modelReactionProteinSubunits": [],
+                    "modelReactionProteinSubunits": [
+                        {
+                            "feature_refs": [
+                                "~/genome/features/id/Potri.008G077400",
+                                "~/genome/features/id/Potri.010G180400"
+                            ],
+                            "note": "Features characterized and annotated",
+                            "optionalSubunit": 0,
+                            "role": "Phosphoglycolate phosphatase (EC 3.1.3.18)",
+                            "triggering": 1
+                        }
+                    ],
                     "note": "universal"
                 }
             ],
@@ -30123,6 +30173,7 @@
                     "modelReactionProteinSubunits": [
                         {
                             "feature_refs": [
+                                "~/genome/features/id/Potri.001G212000",
                                 "~/genome/features/id/Potri.002G090200",
                                 "~/genome/features/id/Potri.005G170800",
                                 "~/genome/features/id/Potri.006G232300",
@@ -31522,7 +31573,17 @@
             "modelReactionProteins": [
                 {
                     "complex_ref": "~/template/complexes/id/PS_complex_27dc53",
-                    "modelReactionProteinSubunits": [],
+                    "modelReactionProteinSubunits": [
+                        {
+                            "feature_refs": [
+                                "~/genome/features/id/Potri.009G095800"
+                            ],
+                            "note": "Features characterized and annotated",
+                            "optionalSubunit": 0,
+                            "role": "Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)",
+                            "triggering": 1
+                        }
+                    ],
                     "note": "universal"
                 }
             ],
@@ -34327,7 +34388,17 @@
             "modelReactionProteins": [
                 {
                     "complex_ref": "~/template/complexes/id/PS_complex_27dc53",
-                    "modelReactionProteinSubunits": [],
+                    "modelReactionProteinSubunits": [
+                        {
+                            "feature_refs": [
+                                "~/genome/features/id/Potri.009G095800"
+                            ],
+                            "note": "Features characterized and annotated",
+                            "optionalSubunit": 0,
+                            "role": "Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)",
+                            "triggering": 1
+                        }
+                    ],
                     "note": "universal"
                 }
             ],
@@ -34569,7 +34640,17 @@
             "modelReactionProteins": [
                 {
                     "complex_ref": "~/template/complexes/id/PS_complex_27dc53",
-                    "modelReactionProteinSubunits": [],
+                    "modelReactionProteinSubunits": [
+                        {
+                            "feature_refs": [
+                                "~/genome/features/id/Potri.009G095800"
+                            ],
+                            "note": "Features characterized and annotated",
+                            "optionalSubunit": 0,
+                            "role": "Cinnamyl alcohol dehydrogenase/reductase (EC 1.1.1.195)",
+                            "triggering": 1
+                        }
+                    ],
                     "note": "universal"
                 }
             ],
@@ -52722,8 +52803,7 @@
                         {
                             "feature_refs": [
                                 "~/genome/features/id/Potri.004G185300",
-                                "~/genome/features/id/Potri.009G145400",
-                                "~/genome/features/id/Potri.014G085800"
+                                "~/genome/features/id/Potri.009G145400"
                             ],
                             "note": "Features characterized and annotated",
                             "optionalSubunit": 0,
@@ -52776,7 +52856,17 @@
             "modelReactionProteins": [
                 {
                     "complex_ref": "~/template/complexes/id/PS_complex_f7651b",
-                    "modelReactionProteinSubunits": [],
+                    "modelReactionProteinSubunits": [
+                        {
+                            "feature_refs": [
+                                "~/genome/features/id/Potri.014G085800"
+                            ],
+                            "note": "Features characterized and annotated",
+                            "optionalSubunit": 0,
+                            "role": "Fatty acid omega-hydroxylase (EC 1.14.13.-)",
+                            "triggering": 1
+                        }
+                    ],
                     "note": "universal"
                 }
             ],
@@ -52826,8 +52916,7 @@
                         {
                             "feature_refs": [
                                 "~/genome/features/id/Potri.004G185300",
-                                "~/genome/features/id/Potri.009G145400",
-                                "~/genome/features/id/Potri.014G085800"
+                                "~/genome/features/id/Potri.009G145400"
                             ],
                             "note": "Features characterized and annotated",
                             "optionalSubunit": 0,
@@ -52880,7 +52969,17 @@
             "modelReactionProteins": [
                 {
                     "complex_ref": "~/template/complexes/id/PS_complex_f7651b",
-                    "modelReactionProteinSubunits": [],
+                    "modelReactionProteinSubunits": [
+                        {
+                            "feature_refs": [
+                                "~/genome/features/id/Potri.014G085800"
+                            ],
+                            "note": "Features characterized and annotated",
+                            "optionalSubunit": 0,
+                            "role": "Fatty acid omega-hydroxylase (EC 1.14.13.-)",
+                            "triggering": 1
+                        }
+                    ],
                     "note": "universal"
                 }
             ],
@@ -52930,8 +53029,7 @@
                         {
                             "feature_refs": [
                                 "~/genome/features/id/Potri.004G185300",
-                                "~/genome/features/id/Potri.009G145400",
-                                "~/genome/features/id/Potri.014G085800"
+                                "~/genome/features/id/Potri.009G145400"
                             ],
                             "note": "Features characterized and annotated",
                             "optionalSubunit": 0,
@@ -52984,7 +53082,17 @@
             "modelReactionProteins": [
                 {
                     "complex_ref": "~/template/complexes/id/PS_complex_f7651b",
-                    "modelReactionProteinSubunits": [],
+                    "modelReactionProteinSubunits": [
+                        {
+                            "feature_refs": [
+                                "~/genome/features/id/Potri.014G085800"
+                            ],
+                            "note": "Features characterized and annotated",
+                            "optionalSubunit": 0,
+                            "role": "Fatty acid omega-hydroxylase (EC 1.14.13.-)",
+                            "triggering": 1
+                        }
+                    ],
                     "note": "universal"
                 }
             ],
@@ -54263,6 +54371,7 @@
                         {
                             "feature_refs": [
                                 "~/genome/features/id/Potri.002G160800",
+                                "~/genome/features/id/Potri.013G127800",
                                 "~/genome/features/id/Potri.014G086300"
                             ],
                             "note": "Features characterized and annotated",
@@ -54325,6 +54434,7 @@
                         {
                             "feature_refs": [
                                 "~/genome/features/id/Potri.002G160800",
+                                "~/genome/features/id/Potri.013G127800",
                                 "~/genome/features/id/Potri.014G086300"
                             ],
                             "note": "Features characterized and annotated",
@@ -55065,7 +55175,6 @@
                             "feature_refs": [
                                 "~/genome/features/id/Potri.001G112100",
                                 "~/genome/features/id/Potri.001G193000",
-                                "~/genome/features/id/Potri.003G032800",
                                 "~/genome/features/id/Potri.003G037700",
                                 "~/genome/features/id/Potri.005G105600",
                                 "~/genome/features/id/Potri.007G060300",
@@ -55154,7 +55263,17 @@
             "modelReactionProteins": [
                 {
                     "complex_ref": "~/template/complexes/id/PS_complex_2fe4da",
-                    "modelReactionProteinSubunits": [],
+                    "modelReactionProteinSubunits": [
+                        {
+                            "feature_refs": [
+                                "~/genome/features/id/Potri.003G032800"
+                            ],
+                            "note": "Features characterized and annotated",
+                            "optionalSubunit": 0,
+                            "role": "Phospholipase D (EC 3.1.4.4)",
+                            "triggering": 1
+                        }
+                    ],
                     "note": "universal"
                 }
             ],
@@ -55928,8 +56047,7 @@
                         {
                             "feature_refs": [
                                 "~/genome/features/id/Potri.004G185300",
-                                "~/genome/features/id/Potri.009G145400",
-                                "~/genome/features/id/Potri.014G085800"
+                                "~/genome/features/id/Potri.009G145400"
                             ],
                             "note": "Features characterized and annotated",
                             "optionalSubunit": 0,
@@ -55978,7 +56096,17 @@
             "modelReactionProteins": [
                 {
                     "complex_ref": "~/template/complexes/id/PS_complex_f7651b",
-                    "modelReactionProteinSubunits": [],
+                    "modelReactionProteinSubunits": [
+                        {
+                            "feature_refs": [
+                                "~/genome/features/id/Potri.014G085800"
+                            ],
+                            "note": "Features characterized and annotated",
+                            "optionalSubunit": 0,
+                            "role": "Fatty acid omega-hydroxylase (EC 1.14.13.-)",
+                            "triggering": 1
+                        }
+                    ],
                     "note": "universal"
                 }
             ],

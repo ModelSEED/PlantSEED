@@ -17,10 +17,10 @@ of this v2.5-era work.
 |---|---|
 | `Athaliana_TAIR10_annotated_genome.json`   | Round-trip validation: every curated Athaliana feature emitted as an annotation of itself (1480 features). |
 | `Athaliana_TAIR10_model.json`              | Full-genome reconstruction (1218 reactions, 1313 compounds, 1 biomass, 877 reactions with GPRs). |
-| `Sbicolor_v3.1.1_annotated_genome.json`    | Annotator output for *Sorghum bicolor* v3.1.1: 1489 genes annotated via PSI-refined orthology to Athaliana. |
-| `Sbicolor_v3.1.1_model.json`               | Sorghum reconstruction (1171 reactions, 1283 compounds, 782 reactions with GPRs). |
-| `Ptrichocarpa_v4.1_annotated_genome.json`  | Annotator output for *Populus trichocarpa* v4.1: 1766 genes annotated. |
-| `Ptrichocarpa_v4.1_model.json`             | Populus reconstruction (1181 reactions, 1293 compounds, 810 reactions with GPRs). |
+| `Sbicolor_v3.1.1_annotated_genome.json`    | Annotator output for *Sorghum bicolor* v3.1.1: 1497 genes annotated via PSI-refined orthology to Athaliana. |
+| `Sbicolor_v3.1.1_model.json`               | Sorghum reconstruction (1171 reactions, 1283 compounds, 800 reactions with GPRs). |
+| `Ptrichocarpa_v4.1_annotated_genome.json`  | Annotator output for *Populus trichocarpa* v4.1: 1772 genes annotated. |
+| `Ptrichocarpa_v4.1_model.json`             | Populus reconstruction (1181 reactions, 1293 compounds, 822 reactions with GPRs). |
 | `provenance.json`                          | Git SHAs (repo, roles JSON, complexes JSON, template) + OrthoFinder results dir + annotator flags. |
 | `summary_stats.tsv`                        | Per-genome one-row summary (annotated features, reaction counts, GPR coverage, per-status counts, per-pair-tag counts). |
 

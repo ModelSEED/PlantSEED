@@ -114,7 +114,15 @@ def build_curated_features(roles_data=None, include_uncurated=False):
 def _compose_function_string(sorted_roles, sorted_compartments):
     """`role1 / role2 # cpt-name1 # cpt-name2` — matches
     fetch_plantseed_impl.fetch_features's output. Unknown compartment
-    keys are dropped silently after a stderr warning."""
+    keys are dropped silently after a stderr warning.
+
+    Compartment NAMES are de-duped in append order because COMPARTMENT_MAPPING
+    is many-to-one (`d` and `cd` both map to `plastid`, `m`/`cm` to
+    `mitochondria`, `x`/`cx` to `peroxisome`, …). Direct callers pass in
+    keys from a single feature and won't ever hit a duplicate today, but
+    merge_functions() unions compartment lists across tied ortholog hits,
+    where duplicates ARE reachable.
+    """
     import sys
     role_str = " / ".join(sorted_roles)
     if not sorted_compartments:
@@ -124,10 +132,49 @@ def _compose_function_string(sorted_roles, sorted_compartments):
         if cpt not in COMPARTMENT_MAPPING:
             print(f"WARNING: no compartment mapping for {cpt!r}", file=sys.stderr)
             continue
-        mapped.append(COMPARTMENT_MAPPING[cpt])
+        name = COMPARTMENT_MAPPING[cpt]
+        if name not in mapped:
+            mapped.append(name)
     if not mapped:
         return role_str
     return role_str + " # " + " # ".join(mapped)
+
+
+def merge_functions(feature_entries):
+    """Merge curated-feature entries whose genes tied at the same PSI.
+
+    Returns `(function_string, roles, compartments)` when the entries
+    describe the same enzyme, or None when their role sets genuinely
+    conflict.
+
+    Two rules, both conservative:
+      * identical role sets  -> merge, roles unchanged
+      * nested role sets     -> merge on the INTERSECTION of the roles, so a
+                                tie can never introduce a role (and therefore
+                                a reaction) that only one candidate carried
+
+    Compartments are always the UNION across the merged entries: a gene that
+    is an equally good ortholog of a plastidial and a cytosolic copy of the
+    same enzyme is evidence for both localisations, not for neither.
+
+    Replaces the composed-string tie-break in psi_refined.annotate_query_gene
+    that was porting kb_orthofinderImpl.propagate_annotation's substring
+    comparison. See FIX_AMBHIT_ROLE_UNION_260812.md.
+    """
+    role_sets = [frozenset(e.get("roles") or ()) for e in feature_entries]
+    if not role_sets or not all(role_sets):
+        return None
+
+    shared = frozenset.intersection(*role_sets)
+    if len(set(role_sets)) != 1:
+        # Nested case only: some entry must contribute exactly the shared roles.
+        if not shared or not any(rs == shared for rs in role_sets):
+            return None
+
+    roles = sorted(shared)
+    compartments = sorted({c for e in feature_entries
+                           for c in (e.get("compartments") or ())})
+    return _compose_function_string(roles, compartments), roles, compartments
 
 
 def function_for_ortholog(top_ortholog, curated_features):

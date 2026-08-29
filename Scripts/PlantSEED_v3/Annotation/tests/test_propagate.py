@@ -145,3 +145,126 @@ def test_function_for_ortholog_hit_and_miss():
         ("Athaliana_TAIR10", "AT1"), curated) == "Alpha # cytosol"
     assert propagate.function_for_ortholog(
         ("Athaliana_TAIR10", "MISSING"), curated) is None
+
+
+# --- merge_functions (FIX_AMBHIT_ROLE_UNION_260812) --------------------------
+def _e(roles, cpts):
+    """Compact factory for a curated-feature-entry shape merge_functions expects."""
+    return {"roles": list(roles), "compartments": list(cpts)}
+
+
+def test_merge_functions_identical_role_sets_union_compartments():
+    """Two entries with identical role sets merge cleanly. Compartments are
+    the union so a cytosolic and a plastidial copy of the same enzyme
+    together document both localisations."""
+    merged = propagate.merge_functions([
+        _e(["Alpha (EC 1.1.1.1)"], ["c"]),
+        _e(["Alpha (EC 1.1.1.1)"], ["d"]),
+    ])
+    assert merged is not None
+    fn, roles, cpts = merged
+    assert roles == ["Alpha (EC 1.1.1.1)"]
+    assert cpts == ["c", "d"]                # sorted union
+    assert fn == "Alpha (EC 1.1.1.1) # cytosol # plastid"
+
+
+def test_merge_functions_identical_role_sets_and_compartments_are_idempotent():
+    """Two identical entries collapse to that entry (compartments un-duplicated)."""
+    e = _e(["R1"], ["c"])
+    merged = propagate.merge_functions([e, e])
+    assert merged is not None
+    fn, roles, cpts = merged
+    assert roles == ["R1"]
+    assert cpts == ["c"]
+    assert fn == "R1 # cytosol"
+
+
+def test_merge_functions_nested_role_sets_merges_on_intersection():
+    """Nested case: one entry's roles are exactly the shared roles. Merge
+    keeps only the intersection so the tie can't introduce a role (and
+    therefore a reaction) that only one candidate carried."""
+    merged = propagate.merge_functions([
+        _e(["BCAA aminotransferase"], ["d"]),
+        _e(["BCAA aminotransferase", "MAM (EC 2.6.1.-)"], ["d"]),
+    ])
+    assert merged is not None
+    fn, roles, cpts = merged
+    assert roles == ["BCAA aminotransferase"]   # intersection only
+    assert "MAM" not in fn
+
+
+def test_merge_functions_conflicting_role_sets_returns_none():
+    """Two entries with disjoint role sets have no meaningful shared enzyme;
+    the caller must fall back to AMB_HIT."""
+    merged = propagate.merge_functions([
+        _e(["Alpha (EC 1.1.1.1)"], ["c"]),
+        _e(["Beta (EC 2.2.2.2)"],  ["d"]),
+    ])
+    assert merged is None
+
+
+def test_merge_functions_overlapping_but_neither_nested_returns_none():
+    """Neither {A, B} is a superset of the other (they overlap on A);
+    intersection isn't equal to any entry's role set, so bail out."""
+    merged = propagate.merge_functions([
+        _e(["A", "B"], ["c"]),
+        _e(["A", "C"], ["c"]),
+    ])
+    assert merged is None
+
+
+def test_merge_functions_empty_role_set_returns_none():
+    """Entry with no roles (rare — usually uncurated) can't participate."""
+    merged = propagate.merge_functions([
+        _e([], ["c"]),
+        _e(["R1"], ["c"]),
+    ])
+    assert merged is None
+    merged = propagate.merge_functions([])
+    assert merged is None
+
+
+def test_merge_functions_three_way_identical_role_sets():
+    """Three entries all with the same role set — merges, compartments unioned."""
+    merged = propagate.merge_functions([
+        _e(["Alpha (EC 1.1.1.1)"], ["c"]),
+        _e(["Alpha (EC 1.1.1.1)"], ["d"]),
+        _e(["Alpha (EC 1.1.1.1)"], ["m"]),
+    ])
+    assert merged is not None
+    fn, roles, cpts = merged
+    assert roles == ["Alpha (EC 1.1.1.1)"]
+    assert cpts == ["c", "d", "m"]
+
+
+def test_merge_functions_three_way_nested_requires_intersection_to_be_a_role_set():
+    """Rule 2 admits nested only when one entry IS the intersection.
+    {A} + {A, B} + {A, C}: intersection = {A}, but no entry equals {A}."""
+    merged = propagate.merge_functions([
+        _e(["A", "B"], ["c"]),
+        _e(["A", "C"], ["c"]),
+    ])
+    assert merged is None
+
+    # Add a plain {A} entry — now the intersection {A} matches an entry.
+    merged = propagate.merge_functions([
+        _e(["A", "B"], ["c"]),
+        _e(["A", "C"], ["c"]),
+        _e(["A"],      ["c"]),
+    ])
+    assert merged is not None
+    fn, roles, _ = merged
+    assert roles == ["A"]
+
+
+# --- compartment-name dedupe in _compose_function_string ---------------------
+def test_compose_function_string_dedupes_compartment_names():
+    """COMPARTMENT_MAPPING is many-to-one — e.g. `d` and `cd` both -> `plastid`.
+    _compose_function_string dedupes so a merge_functions union doesn't
+    produce `# plastid # plastid`."""
+    # `d` and `cd` both map to `plastid`; result should contain plastid once.
+    out = propagate._compose_function_string(["R1"], ["cd", "d"])
+    assert out == "R1 # plastid"
+    # `m` and `cm` both map to `mitochondria`; `c` maps to `cytosol`.
+    out = propagate._compose_function_string(["R1"], ["c", "cm", "m"])
+    assert out == "R1 # cytosol # mitochondria"
