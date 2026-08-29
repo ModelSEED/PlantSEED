@@ -323,7 +323,7 @@ def api_expasy_refresh(_r, _q, _b):
     with STORE.lock:
         STORE.ec_status = "idle"
         STORE.ec_entries = []
-    STORE.start_load_expasy()
+    STORE.start_load_expasy(download=True)
     return {"status": "refreshing"}
 
 
@@ -442,7 +442,7 @@ def make_server(host="127.0.0.1", port=8765, load_expasy=True):
     STORE.load_roles()
     STORE.load_schema()
     if load_expasy:
-        STORE.start_load_expasy()
+        STORE.start_load_expasy(download=True)
     actual_port = find_free_port(host, port)
     server = ThreadedServer((host, actual_port), Handler)
     # When called with port=0 the OS picks for us; report what it picked.

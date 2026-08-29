@@ -91,16 +91,25 @@ class DataStore:
                 "curators":   self.facet_curators,
             }
 
-    def start_load_expasy(self):
+    def start_load_expasy(self, download=False):
+        """Load the ExPASy list in the background.
+
+        `download` defaults off, matching `expasy.fetch_enzyme_dat`: a packaged
+        consumer gets whatever is cached and a clear error otherwise, and only
+        an interactive tool asks for the network. Without this the method was a
+        public way to make any process that holds a DataStore fetch 9 MB from
+        ftp.expasy.org.
+        """
         with self.lock:
             if self.ec_status in ("loading", "loaded"):
                 return
             self.ec_status = "loading"
-        threading.Thread(target=self._load_expasy_thread, daemon=True).start()
+        threading.Thread(target=self._load_expasy_thread, args=(download,),
+                         daemon=True).start()
 
-    def _load_expasy_thread(self):
+    def _load_expasy_thread(self, download=False):
         try:
-            entries = fetch_enzyme_dat()
+            entries = fetch_enzyme_dat(download=download)
             with self.lock:
                 self.ec_entries = entries
                 self.ec_status = "loaded" if entries else "error"

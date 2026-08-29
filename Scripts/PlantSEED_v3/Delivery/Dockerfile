@@ -51,15 +51,30 @@ ENV PLANTSEED_ROLES_FILE=${DATA_DIR}/PlantSEED_v3/PlantSEED_Roles.json \
     PLANTSEED_ANNOT_COMPARTMENTS_FILE=${DATA_DIR}/PlantSEED_v3/Compartments/PlantSEED_Compartments.json \
     PLANTSEED_ANNOT_TEMPLATE_FILE=${DATA_DIR}/Template/PlantSEED_Biomass_Template.json
 
-# --- the package -------------------------------------------------------------
+# --- dependencies, pinned by hash --------------------------------------------
+# [CTS 9] Two builds a month apart resolved different versions of 29 packages,
+# so the image was only accidentally the one that had been tested. The lock
+# fixes versions AND digests: pip refuses an artifact whose hash does not
+# match, so a re-uploaded or substituted wheel fails the build.
+#
+# Its own layer, and copied before the source, so editing code does not
+# reinstall the dependency closure.
+#
 # [curate] is not optional here: the curation lookups read PlantSEED_Schema.yaml
 # through plantseed_curation, which needs PyYAML. [model] is deliberately out —
 # reconstruction is pure stdlib, which the core-is-standalone CI job proves, and
 # cobrapy would add tens of megabytes for nothing either lane runs.
 WORKDIR /src
+COPY Scripts/PlantSEED_v3/Delivery/requirements.txt ./
+RUN pip install --no-cache-dir --no-compile --require-hashes -r requirements.txt
+
+# --- the package -------------------------------------------------------------
+# --no-deps: everything is already installed at a pinned version, and without
+# it pip would re-resolve the extras and could pull something the lock does not
+# cover -- which would defeat the point of the layer above.
 COPY pyproject.toml README.md ./
 COPY Scripts/PlantSEED_v3 ./Scripts/PlantSEED_v3
-RUN pip install --no-cache-dir --no-compile ".[curate,mcp]" \
+RUN pip install --no-cache-dir --no-compile --no-deps ".[curate,mcp]" \
  && rm -rf /src /root/.cache
 
 # --- where it may write -------------------------------------------------------
@@ -115,6 +130,8 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=20s --retries=3 \
 # which pulls enzyme.dat from ftp.expasy.org, and no reachable code path calls
 # it — plantseed_delivery.queries says so explicitly and a test pins it.
 #
-# What is NOT yet true is a byte-reproducible BUILD: pip resolves dependencies
-# at build time with no lock file, so two builds a month apart can differ. Pin
-# with a hash-pinned requirements file before submitting this for approval.
+# Dependencies are hash-pinned in Delivery/requirements.txt, so the third-party
+# closure is fixed and verified. Two things are still not pinned, and an
+# approval submission should say so rather than claim more than is true: the
+# base image is a mutable tag (pin python:3.12-slim-bookworm@sha256:... to fix
+# it), and pip itself comes from whatever the base ships.

@@ -101,3 +101,66 @@ class TestCli:
     def test_king_is_opt_in(self, capsys):
         assert manifest.main(["--url", URL, "--king"]) == 0
         assert json.loads(capsys.readouterr().out)["type"] == "mcp"
+
+
+class TestRequirementsLock:
+    """The container installs from Delivery/requirements.txt with
+    --require-hashes, so a dependency added to pyproject.toml and not compiled
+    into the lock is missing from the image. It fails at import time inside a
+    container, which is the worst place to find it."""
+
+    @staticmethod
+    def _lock_names():
+        import os
+        import re
+
+        here = os.path.dirname(os.path.abspath(__file__))
+        path = os.path.join(os.path.dirname(here), "requirements.txt")
+        names = set()
+        for line in open(path):
+            m = re.match(r"^([A-Za-z0-9][A-Za-z0-9._-]*)==", line)
+            if m:
+                names.add(m.group(1).lower().replace("_", "-"))
+        return names
+
+    @staticmethod
+    def _declared(extras):
+        import os
+        import re
+        import tomllib
+
+        here = os.path.dirname(os.path.abspath(__file__))
+        root = os.path.normpath(os.path.join(here, "..", "..", "..", ".."))
+        with open(os.path.join(root, "pyproject.toml"), "rb") as fh:
+            data = tomllib.load(fh)
+        out = set()
+        for extra in extras:
+            for spec in data["project"]["optional-dependencies"][extra]:
+                name = re.split(r"[<>=!\[;\s]", spec, 1)[0].strip().lower()
+                if name and name != "plantseed":
+                    out.add(name.replace("_", "-"))
+        return out
+
+    def test_the_lock_is_not_empty(self):
+        assert len(self._lock_names()) > 10
+
+    def test_every_declared_dependency_is_pinned(self):
+        missing = self._declared(("curate", "mcp")) - self._lock_names()
+        assert not missing, (
+            f"declared in pyproject but absent from requirements.txt: "
+            f"{sorted(missing)} — recompile the lock (see its header)")
+
+    def test_every_pin_carries_a_hash(self):
+        """A version without a digest still allows a substituted artifact."""
+        import os
+
+        here = os.path.dirname(os.path.abspath(__file__))
+        text = open(os.path.join(os.path.dirname(here),
+                                 "requirements.txt")).read()
+        blocks = [b for b in text.split("\n") if "==" in b and not b.startswith("#")]
+        assert blocks
+        assert text.count("--hash=sha256:") >= len(blocks)
+
+    def test_the_model_extra_is_not_in_the_image(self):
+        """cobrapy is tens of megabytes and neither lane runs it."""
+        assert "cobra" not in self._lock_names()
