@@ -203,6 +203,36 @@ jobs:
           fi
           grep -q "refusing to write outside" /tmp/err
 
+      # The default CMD binds 0.0.0.0. On a host with a public address and no
+      # firewall that must not start without a credential, and "we'll remember"
+      # is not a control — so the image has to refuse on its own.
+      - name: Refuses to serve a public bind with no credential
+        run: |
+          set -euo pipefail
+          if docker run --rm plantseed:ci 2>/tmp/bind; then
+            echo "expected the server to refuse, got exit 0"; exit 1
+          fi
+          grep -q "refusing to bind" /tmp/bind
+
+      - name: With a token set, an unauthenticated request is 401
+        run: |
+          set -euo pipefail
+          docker run -d --name ps-ci --read-only \
+            --tmpfs /tmp:rw,size=128m,mode=1777 \
+            -e PLANTSEED_MCP_TOKEN=ci-token \
+            -p 127.0.0.1:8931:8931 plantseed:ci
+          for _ in $(seq 30); do
+            curl -sS -o /dev/null -m 2 http://127.0.0.1:8931/mcp && break || sleep 1
+          done
+          test "$(curl -sS -o /dev/null -w '%{http_code}' http://127.0.0.1:8931/mcp)" = 401
+          test "$(curl -sS -o /dev/null -w '%{http_code}' \
+            -H 'Authorization: Bearer wrong' http://127.0.0.1:8931/mcp)" = 401
+          # The right token gets past the gate — 401 is the only status the
+          # middleware produces, so anything else means it was reached.
+          test "$(curl -sS -o /dev/null -w '%{http_code}' \
+            -H 'Authorization: Bearer ci-token' http://127.0.0.1:8931/mcp)" != 401
+          docker rm -f ps-ci
+
   core-is-standalone:
     # Separate job with no extras installed at all: proves the core imports and
     # reconstructs with zero third-party packages present. This is the property

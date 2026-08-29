@@ -134,8 +134,30 @@ INVOKERS = {"reconstruct": reconstruct}
 
 
 def call(capability: str, **kwargs) -> dict:
+    """Run a capability, returning a result or an error — never raising.
+
+    The catch-all is here rather than inside each invoker so the guarantee
+    holds for every capability including ones added later. It is load-bearing:
+    an exception that escapes a tool reaches the model as
+    "Error executing tool <name>" and nothing else, which tells it neither what
+    went wrong nor whether retrying could help.
+    """
     invoker = INVOKERS.get(capability)
     if invoker is None:
         return {"error": f"capability {capability!r} is declared but has no "
                          "MCP invoker yet"}
-    return invoker(**kwargs)
+    try:
+        return invoker(**kwargs)
+    except OSError as exc:
+        # Overwhelmingly the one operational mistake: the image run without a
+        # writable /output, so the whole rootfs is read-only. Say which
+        # directory and how to fix it, rather than surfacing errno 30.
+        return {
+            "error": f"{capability} could not write its output: {exc}",
+            "output_root": str(runtime.output_root(create=False)),
+            "hint": "that directory is not writable — mount it read-write "
+                    f"(-v <host dir>:{runtime.output_root(create=False)}) or "
+                    f"set {runtime.OUTPUT_ENV} somewhere that is",
+        }
+    except Exception as exc:                     # never take the server down
+        return {"error": f"{capability} failed: {type(exc).__name__}: {exc}"}

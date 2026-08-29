@@ -27,27 +27,34 @@ except ModuleNotFoundError:                # mcp 1.x, which is what KIND*AI ship
 
 from plantseed_core import registry
 
-from . import invoke, manifest, queries
+from . import auth, invoke, manifest, queries
 
 __all__ = ["build_server", "serve", "main"]
 
 
 def serve(server, transport: str, host: str, port: int) -> None:
-    """Run `server`, coping with where the SDK keeps the bind address.
+    """Run `server` over an HTTP transport, behind the bearer-token gate.
 
-    mcp 1.x carries `host`/`port` as fields on `server.settings` and its
-    `run()` takes neither; mcp 2.x removed those fields and takes them as
-    `run()` keyword arguments. Passing 2.x's form to 1.x raises TypeError, and
-    setting 1.x's fields on 2.x raises ValueError from pydantic — which is how
-    this was found, after the container had already built and started.
+    `check_bind` first, before a socket exists: a non-loopback bind with no
+    token configured is refused rather than started.
+
+    The app is built and handed to uvicorn here instead of calling the SDK's
+    own `run(transport="streamable-http")`, because that path gives no seam to
+    wrap the ASGI app in — and the credential check has to sit outside the MCP
+    protocol, at the HTTP layer, so an unauthenticated caller never reaches a
+    session at all.
     """
-    fields = getattr(type(server.settings), "model_fields", {})
-    if "host" in fields:                       # mcp 1.x
-        server.settings.host = host
-        server.settings.port = port
-        server.run(transport=transport)
-    else:                                      # mcp >= 2
-        server.run(transport=transport, host=host, port=port)
+    import uvicorn
+
+    auth.check_bind(host)
+
+    build = getattr(server, f"{transport.replace('-', '_')}_app", None)
+    if build is None:                          # older SDK without the seam
+        raise RuntimeError(
+            f"this mcp SDK exposes no ASGI app for {transport!r}; the "
+            "credential check cannot be installed, so refusing to serve")
+    app = auth.BearerAuth(build(), auth.token())
+    uvicorn.run(app, host=host, port=port, log_level="info")
 
 
 def build_server() -> "_Server":
@@ -141,9 +148,14 @@ def main(argv=None) -> int:
         server.run(transport="stdio")
         return 0
 
-    print(f"[plantseed-mcp] {args.transport} on {args.host}:{args.port}",
+    gated = "token required" if auth.token() else "NO TOKEN (loopback only)"
+    print(f"[plantseed-mcp] {args.transport} on {args.host}:{args.port} — {gated}",
           file=sys.stderr, flush=True)
-    serve(server, args.transport, args.host, args.port)
+    try:
+        serve(server, args.transport, args.host, args.port)
+    except RuntimeError as exc:
+        print(f"ERROR: {exc}", file=sys.stderr)
+        return 2
     return 0
 
 

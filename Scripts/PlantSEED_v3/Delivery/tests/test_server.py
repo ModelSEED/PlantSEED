@@ -141,3 +141,38 @@ def test_artifacts_are_readable_from_outside_the_container(server):
     out = _call(server, "reconstruct", {"genome": GENOME})
     mode = os.stat(os.path.dirname(out["model_path"])).st_mode
     assert mode & stat.S_IROTH and mode & stat.S_IXOTH, oct(mode)
+
+
+@pytest.mark.skipif(not HAVE_GENOME, reason="preprint genome not present")
+class TestFailingSoft:
+    """A tool that raises reaches the model as "Error executing tool
+    reconstruct" and nothing more — no cause, no hint, no way to tell a
+    transient fault from a misconfiguration. Found by running the image
+    without a writable /output, which is the obvious thing to get wrong."""
+
+    def test_an_unwritable_output_root_is_an_error_result(self, server,
+                                                          tmp_path, monkeypatch):
+        from plantseed_core import runtime
+
+        locked = tmp_path / "locked"
+        locked.mkdir()
+        monkeypatch.setenv(runtime.OUTPUT_ENV, str(locked))
+        os.chmod(locked, 0o555)
+        try:
+            out = _call(server, "reconstruct", {"genome": GENOME})
+        finally:
+            os.chmod(locked, 0o755)
+
+        assert "error" in out
+        assert str(locked) in out["output_root"]
+        assert runtime.OUTPUT_ENV in out["hint"]
+
+    def test_an_unexpected_failure_names_its_type(self, server, monkeypatch):
+        from plantseed_delivery import invoke
+
+        def boom(**kwargs):
+            raise ValueError("something specific")
+
+        monkeypatch.setitem(invoke.INVOKERS, "reconstruct", boom)
+        out = _call(server, "reconstruct", {"genome": GENOME})
+        assert "ValueError" in out["error"] and "something specific" in out["error"]

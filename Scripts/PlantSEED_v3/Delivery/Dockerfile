@@ -92,6 +92,16 @@ ENTRYPOINT ["/usr/local/bin/plantseed-entrypoint"]
 # The MCP service is the default lane; CTS overrides argv with a subcommand.
 # 0.0.0.0 is the container's own namespace — what is actually reachable is
 # decided by the port publish, not here.
+#
+# This CMD therefore requires PLANTSEED_MCP_TOKEN: binding anything but
+# loopback without a credential is refused (plantseed_delivery.auth), so the
+# container exits 2 rather than starting open. Run it with
+# `-e PLANTSEED_MCP_TOKEN=$(openssl rand -hex 32)`.
+#
+# Known conservative case: publishing with `-p 127.0.0.1:8931:8931` is safe,
+# but the server sees 0.0.0.0 inside the namespace and cannot know that, so it
+# still asks for a token. Set one anyway — cheaper than an escape hatch that
+# ends up being the default.
 CMD ["mcp", "--transport", "streamable-http", "--host", "0.0.0.0", "--port", "8931"]
 EXPOSE 8931
 
