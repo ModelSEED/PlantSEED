@@ -1,14 +1,16 @@
-"""Turn the OrthoFinder results directory into a SHOOT database.
+"""Build a SHOOT database from the baseline OrthoFinder run.
 
-Wraps SHOOT's own tools:
-    python create_shoot_db.py RESULTS_DIRECTORY full
-    python bifurcating_trees.py RESULTS_DIRECTORY   # for EPA-ng compat
+**Deferred to the end of the refactor.** Together with
+`enrich_with_curated_proteins` this is what turns a v0 bundle into v1; see
+`refbuild/__init__.py` for why that moved after the annotator rather than
+before it.
 
-Output: `<BUNDLE_DIR>/shoot_db/`, ready for `shoot INPUT_FASTA SHOOT_DB`
-(consumed by enrich_with_curated_proteins).
+Not blocked on anything but sequencing: SHOOT is GPL-3 and the KBase apps are
+MIT, but everything involved is open source and the two are kept apart simply
+by invoking SHOOT as a subprocess rather than importing it -- which is also
+how kb_orthofinder already treats OrthoFinder.
 
-SHOOT deps: ete3, sklearn, biopython, DIAMOND, MAFFT, EPA-ng + gappa
-(or IQ-TREE as substitute). See github.com/davidemms/SHOOT.
-
-Filled in at Phase 1.
+When it lands: `create_shoot_db.py ... full`, then `bifurcating_trees.py` for
+EPA-ng compatibility. Records its build id in the manifest's
+`sources.shoot_db_build_id`, which is empty in a v0 bundle.
 """
