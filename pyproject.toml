@@ -75,6 +75,7 @@ plantseed = "plantseed_core.cli:main"
 plantseed-annotate = "plantseed_annotation.cli:main"
 plantseed-reconstruct = "plantseed_annotation.reconstruct_cli:main"
 plantseed-mcp = "plantseed_delivery.mcp_server:main"
+plantseed-refbuild = "plantseed_annotation.refbuild.cli:main"
 
 # Capability declarations are discovered through this group, so the delivery
 # repo — or a third party — can add one without editing this package.
