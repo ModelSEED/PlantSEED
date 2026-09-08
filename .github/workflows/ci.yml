@@ -69,6 +69,15 @@ jobs:
       - name: Test suite
         run: pytest -q
 
+      # The v2.5 reproduction gate. It SKIPS here and is expected to: it needs
+      # the OrthoFinder run named in provenance.json, which is 2.5 GB on
+      # poplar and not in the repo. Wired in anyway so the marker cannot rot,
+      # and so it starts enforcing the day that run is reachable from CI.
+      # Until then the gate is run on poplar before merging:
+      #     pytest -m slow
+      - name: v2.5 reproduction gate (skips without the reference run)
+        run: pytest -q -m slow -rs
+
       # The suite already checks this; surfacing it as its own step makes the
       # fix obvious from the job name rather than from a parametrised test id.
       - name: Agent-facing docs are current

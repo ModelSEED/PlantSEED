@@ -104,6 +104,11 @@ include = [
 ]
 
 [tool.pytest.ini_options]
+# `slow` is the v2.5 reproduction gate: it annotates three genomes against the
+# real OrthoFinder run, which costs ~30s of PSI. Excluded from a bare `pytest`
+# so the ordinary suite stays under 15s; CI runs it explicitly.
+markers = ["slow: needs the reference OrthoFinder run and ~30s of compute"]
+addopts = "-m 'not slow'"
 testpaths = [
     "Scripts/PlantSEED_v3/Core/tests",
     "Scripts/PlantSEED_v3/Annotation/tests",
