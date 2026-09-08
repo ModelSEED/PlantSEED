@@ -23,7 +23,8 @@ import sys
 
 from .. import paths
 from ..algorithms import orthofinder_io
-from . import build_curation, build_psi_matrices, bundle, prune, stamp_version
+from . import (build_curation, build_psi_matrices, bundle, prepare_proteomes,
+               prune, stamp_version)
 
 __all__ = ["build", "main"]
 
@@ -83,6 +84,19 @@ def main(argv=None) -> int:
                    help="pin created_utc for a byte-reproducible build")
     b.add_argument("--quiet", action="store_true")
 
+    p = sub.add_parser(
+        "prepare",
+        help="rewrite Phytozome proteome headers as <species>||<transcript>")
+    p.add_argument("--proteomes", required=True,
+                   help="directory of Phytozome .fa files")
+    p.add_argument("--out-dir", required=True,
+                   help="where to write the prefixed copies; run OrthoFinder "
+                        "on THIS directory, with -X")
+    p.add_argument("--primary-only", action="store_true",
+                   help="keep only the longest transcript per locus. Off by "
+                        "default: it changes what OrthoFinder clusters.")
+    p.add_argument("--quiet", action="store_true")
+
     v = sub.add_parser("verify", help="check a bundle against its manifest")
     v.add_argument("--bundle-dir", default=None)
     v.add_argument("--tier", default=None, choices=("kbase", "poplar", "local"))
@@ -102,6 +116,13 @@ def main(argv=None) -> int:
                        os.path.abspath(args.bundle_dir), args.version,
                        n_workers=args.workers, species=args.species, log=log)
         print(result["manifest"]["content_id"])
+        return 0
+
+    if args.cmd == "prepare":
+        result = prepare_proteomes.prepare(
+            os.path.abspath(args.proteomes), os.path.abspath(args.out_dir),
+            primary_only=args.primary_only, log=log)
+        print(result["dest_dir"])
         return 0
 
     from .. import reference
