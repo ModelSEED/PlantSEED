@@ -57,33 +57,55 @@ def normalise_species(name):
     return SPECIES_ALIASES.get(base, base)
 
 
-def _strip_species_prefix(gene_id, species):
-    """OF cell entries in this repo carry a redundant '<species>||' prefix
-    (Sam's fasta headers were built that way; see Print_JSON_Genome_to_FASTA.pl).
-    Strip it so callers can compare against curated ids that don't carry the
-    prefix. Genes without the prefix pass through unchanged."""
-    prefix = species + "||"
-    return gene_id[len(prefix):] if gene_id.startswith(prefix) else gene_id
+SEPARATOR = "||"
+
+#: Species prefixes were being stripped here, and that was a real defect: two
+#: assemblies of one organism share gene ids by construction, so
+#: `Sbicolor_v3.1.1||Sobic.001G012200.1.p` and
+#: `Sbicolor_v5.1||Sobic.001G012200.1.p` collapsed to one key and silently
+#: overwrote each other. In the 23-species reference that hit 680 of 758
+#: curated orthogroups. Genome-scale ids are only unique WITHIN a proteome, so
+#: the species is part of the identity, not decoration.
+#:
+#: Ids therefore keep their prefix throughout, and anything that needs the bare
+#: gene asks for it explicitly via `gene_of` or `transcript_to_gene`.
 
 
-def _strip_species_prefix_any(gene_id):
-    """Strip whatever '<anything>||' prefix is present (for MSA headers,
-    where the species varies per row)."""
-    return gene_id.split("||", 1)[1] if "||" in gene_id else gene_id
+def split_id(gene_id):
+    """`'Sbicolor_v3.1.1||Sobic.001G012200.1.p'` -> `(species, gene)`.
+
+    Species is `""` for an unprefixed id, so callers can treat both uniformly
+    — the 2021 reference and a hand-made fixture may not carry one.
+    """
+    species, sep, gene = gene_id.partition(SEPARATOR)
+    return (species, gene) if sep else ("", gene_id)
+
+
+def species_of(gene_id):
+    return split_id(gene_id)[0]
+
+
+def gene_of(gene_id):
+    """The identifier without its species prefix. Use only where the species
+    is already known from context — never as a dictionary key."""
+    return split_id(gene_id)[1]
 
 
 def transcript_to_gene(tid):
-    """Collapse a transcript-level id back to its gene-level id by stripping
-    a trailing '.<digits>' suffix.
+    """Collapse a transcript id to its gene id, dropping any species prefix.
 
-        'AT1G01050.1'       -> 'AT1G01050'
-        'Sobic.001G234700.1' -> 'Sobic.001G234700'
-        'Potri.001G067600.1' -> 'Potri.001G067600'
-        'AT1G01050'         -> 'AT1G01050'         (no change)
-        'Sobic.001G234700'  -> 'Sobic.001G234700'  (no change; last segment isn't digits)
+        'Athaliana_TAIR10||AT1G01050.1' -> 'AT1G01050'
+        'AT1G01050.1'                   -> 'AT1G01050'
+        'Sobic.001G234700.1.p'          -> 'Sobic.001G234700'
+        'Sobic.001G234700'              -> unchanged (last segment isn't digits)
 
-    Used to match transcript-level OF ids against gene-level curated ids in
-    PlantSEED_Roles.json."""
+    Used to match transcript-level OrthoFinder ids against the gene-level ids
+    in PlantSEED_Roles.json, which are keyed by species separately — so the
+    prefix has to come off here even though it stays on everywhere else.
+    """
+    tid = gene_of(tid)
+    if tid.endswith(".p"):                 # Phytozome protein suffix
+        tid = tid[:-2]
     if "." not in tid:
         return tid
     left, right = tid.rsplit(".", 1)
@@ -165,8 +187,8 @@ def alignments_ids_dir(results_dir):
 def load_orthogroups(orthogroups_tsv):
     """Parse Orthogroups.tsv → {og_id: {species: [gene_id, ...]}}.
 
-    Cell entries have their redundant '<species>||' prefix stripped so
-    callers can compare directly against curated gene ids.
+    Cell entries keep their `<species>||` prefix; use `transcript_to_gene`
+    where a bare gene id is wanted.
     Species with no gene in an OG get an empty list. Splits on ', ' the way
     OrthoFinder writes multi-gene cells.
     """
@@ -183,11 +205,8 @@ def load_orthogroups(orthogroups_tsv):
             entry = {}
             for i, spp in enumerate(species):
                 cell = row[i + 1] if i + 1 < len(row) else ""
-                genes = [g for g in cell.split(", ") if g] if cell else []
-                # `_any` rather than the species-specific strip: the prefix in
-                # the file is the pre-normalisation species name, which no
-                # longer equals `spp`.
-                entry[spp] = [_strip_species_prefix_any(g) for g in genes]
+                # Full ids, prefix intact -- see the note beside `split_id`.
+                entry[spp] = [g for g in cell.split(", ") if g] if cell else []
             ogs[og_id] = entry
     return ogs, species
 
@@ -227,8 +246,8 @@ def load_orthologues(orthologues_tsv):
 
     Each row: og_id \\t genes-in-A (', '-joined) \\t genes-in-B (', '-joined).
     Species names are taken from the header line (column 1 = species A,
-    column 2 = species B); the '<species>||' prefix is stripped from every
-    gene id at parse time so callers see clean ids.
+    column 2 = species B). Gene ids keep their `<species>||` prefix, so they
+    match the PSI matrix keys and cannot collide across assemblies.
 
     Returns two dicts, both keyed by gene id:
       {a_gene: {'og': og_id, 'orthologs': [b_gene, ...]}}
@@ -245,10 +264,8 @@ def load_orthologues(orthologues_tsv):
             if len(row) < 3:
                 continue
             og_id = row[0]
-            a_genes = [_strip_species_prefix(g, spp_a)
-                       for g in row[1].split(", ") if g]
-            b_genes = [_strip_species_prefix(g, spp_b)
-                       for g in row[2].split(", ") if g]
+            a_genes = [g for g in row[1].split(", ") if g]
+            b_genes = [g for g in row[2].split(", ") if g]
             for a in a_genes:
                 bucket = a_to_b.setdefault(a, {"og": og_id, "orthologs": []})
                 for b in b_genes:
@@ -282,15 +299,16 @@ def list_alignments(results_dir):
 def read_msa(fasta_file):
     """Parse a FASTA (MSA-style) into {gene_id: aligned_sequence}.
 
-    Strips the redundant '<species>||' prefix from each header so lookups
-    line up with Orthogroups.tsv / Orthologues/* / PSI cache."""
+    Keys are the FULL `<species>||<gene>` header. Stripping the species here
+    is what let two assemblies of one organism overwrite each other in the PSI
+    matrix; the prefix is part of the identity."""
     sequences = {}
     with open(fasta_file) as fh:
         faiter = (x[1] for x in itertools.groupby(fh, lambda line: line[0] == ">"))
         for header in faiter:
             hdr = next(header)[1:].strip().split(None, 1)[0]
             seq = "".join(s.strip() for s in next(faiter))
-            sequences[_strip_species_prefix_any(hdr)] = seq.upper()
+            sequences[hdr] = seq.upper()
     return sequences
 
 

@@ -101,12 +101,13 @@ def test_load_orthogroups_strips_species_prefix(tmp_path):
     )
     ogs, _ = oio.load_orthogroups(str(tsv))
     entry = ogs["OG0000001"]
-    assert entry["Athaliana_TAIR10"] == ["AT1G01050.1", "AT1G01050.2"]
-    assert entry["Sbicolor_v3.1.1"] == ["Sobic.001G000100.1"]
+    assert entry["Athaliana_TAIR10"] == [
+        "Athaliana_TAIR10||AT1G01050.1", "Athaliana_TAIR10||AT1G01050.2"]
+    assert entry["Sbicolor_v3.1.1"] == ["Sbicolor_v3.1.1||Sobic.001G000100.1"]
 
 
-def test_load_orthologues_strips_species_prefix(tmp_path):
-    """Same-shape prefix stripping applies to Orthologues/*__v__*.tsv."""
+def test_load_orthologues_keeps_species_prefix(tmp_path):
+    """Ids must stay prefixed so they match the PSI matrix keys."""
     tsv = tmp_path / "Sbicolor_v3.1.1__v__Athaliana_TAIR10.tsv"
     tsv.write_text(
         "Orthogroup\tSbicolor_v3.1.1\tAthaliana_TAIR10\n"
@@ -114,15 +115,15 @@ def test_load_orthologues_strips_species_prefix(tmp_path):
         "Athaliana_TAIR10||AT1G01050.1, Athaliana_TAIR10||AT1G01050.2\n"
     )
     q_to_r, r_to_q = oio.load_orthologues(str(tsv))
-    assert set(q_to_r) == {"Sobic.001G000100.1"}
-    assert set(q_to_r["Sobic.001G000100.1"]["orthologs"]) == {
-        "AT1G01050.1", "AT1G01050.2"}
-    assert set(r_to_q) == {"AT1G01050.1", "AT1G01050.2"}
+    assert set(q_to_r) == {"Sbicolor_v3.1.1||Sobic.001G000100.1"}
+    assert set(q_to_r["Sbicolor_v3.1.1||Sobic.001G000100.1"]["orthologs"]) == {
+        "Athaliana_TAIR10||AT1G01050.1", "Athaliana_TAIR10||AT1G01050.2"}
+    assert set(r_to_q) == {"Athaliana_TAIR10||AT1G01050.1",
+                           "Athaliana_TAIR10||AT1G01050.2"}
 
 
-def test_read_msa_strips_any_species_prefix(tmp_path):
-    """MSA headers vary per-row so the reader strips '<anything>||' before
-    the gene id (unlike load_orthogroups, which uses the column header)."""
+def test_read_msa_keeps_the_species_prefix(tmp_path):
+    """Unprefixed ids still pass through, for the 2021 reference and fixtures."""
     fasta = tmp_path / "OG.fa"
     fasta.write_text(
         ">Athaliana_TAIR10||AT1G01050.1\nMKK\n"
@@ -130,10 +131,48 @@ def test_read_msa_strips_any_species_prefix(tmp_path):
         ">bare_gene\nMKK\n"
     )
     seqs = oio.read_msa(str(fasta))
-    assert set(seqs) == {"AT1G01050.1", "Sobic.001G000100.1", "bare_gene"}
+    assert set(seqs) == {"Athaliana_TAIR10||AT1G01050.1",
+                         "Sbicolor_v3.1.1||Sobic.001G000100.1", "bare_gene"}
+
+
+def test_two_assemblies_of_one_organism_do_not_collide(tmp_path):
+    """The defect this convention exists to prevent.
+
+    Genome-scale gene ids are unique only WITHIN a proteome, so two assemblies
+    of one organism share them by construction. Stripping the species made
+    `Sbicolor_v3.1.1||Sobic.001G012200.1.p` and
+    `Sbicolor_v5.1||Sobic.001G012200.1.p` the same key -- one silently
+    overwrote the other, in 680 of 758 curated orthogroups of the 23-species
+    reference, so every PSI value involving that gene was a coin flip between
+    two different proteins.
+    """
+    fasta = tmp_path / "OG.fa"
+    fasta.write_text(
+        ">Sbicolor_v3.1.1||Sobic.001G012200.1.p\nMKKAA\n"
+        ">Sbicolor_v5.1||Sobic.001G012200.1.p\nMKKWW\n"
+    )
+    seqs = oio.read_msa(str(fasta))
+    assert len(seqs) == 2, "one assembly overwrote the other"
+    assert seqs["Sbicolor_v3.1.1||Sobic.001G012200.1.p"] == "MKKAA"
+    assert seqs["Sbicolor_v5.1||Sobic.001G012200.1.p"] == "MKKWW"
+
+
+@pytest.mark.parametrize("gid, species, gene", [
+    ("Athaliana_TAIR10||AT1G01050.1", "Athaliana_TAIR10", "AT1G01050.1"),
+    ("Smoellendorffii_v1.0||98083",   "Smoellendorffii_v1.0", "98083"),
+    ("bare_gene",                     "", "bare_gene"),
+])
+def test_split_id(gid, species, gene):
+    assert oio.split_id(gid) == (species, gene)
+    assert oio.species_of(gid) == species
+    assert oio.gene_of(gid) == gene
 
 
 @pytest.mark.parametrize("tid, gene", [
+    # A prefixed id must still reduce to the bare gene: the curation is keyed
+    # by species separately, so the prefix comes off at this one boundary.
+    ("Athaliana_TAIR10||AT1G01050.1", "AT1G01050"),
+    ("Sbicolor_v3.1.1||Sobic.001G234700.1.p", "Sobic.001G234700"),
     ("AT1G01050.1",        "AT1G01050"),
     ("AT1G01050.2",        "AT1G01050"),
     ("Sobic.001G234700.1", "Sobic.001G234700"),
