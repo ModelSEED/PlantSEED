@@ -219,3 +219,61 @@ def test_explicit_cache_dir_still_wins(tmp_path):
     )
     assert cache_dir == str(mine)
     assert os.path.isfile(mine / "OG0000001.txt")
+
+
+# --- degenerate alignment rows ------------------------------------------------
+
+class TestDegenerateMembers:
+    """An aligner should never emit a row with no residues. muscle 5.3 does:
+    73 such rows in one 2,952-sequence orthogroup of the 2026 rebuild, for
+    input proteins that are ordinary in the source FASTA. mafft produced none
+    in 800 sampled alignments of the 2021 run.
+
+    It matters because the failure is silent. PSI divides by ungapped length,
+    so an all-gap row used to score 0.00 against everything -- an assertion of
+    zero identity, not an admission of missing data -- and a real gene then
+    cannot clear any threshold."""
+
+    def test_an_all_gap_row_is_detected(self):
+        assert psi.degenerate_members(
+            {"a": "MKKA", "gone": "----", "b": "MKKW"}) == {"gone"}
+
+    def test_a_mostly_gapped_row_is_not(self):
+        """Only zero residues counts. Sparse alignment is normal."""
+        assert psi.degenerate_members({"a": "M---", "b": "MKKA"}) == set()
+
+    def test_an_empty_string_is_not_reported(self):
+        """A missing sequence is a different fault, and read_msa not returning
+        one is its own bug; do not fold the two together."""
+        assert psi.degenerate_members({"a": ""}) == set()
+
+    def test_degenerate_members_are_omitted_from_the_matrix(self):
+        rows = psi.compute_psi_for_msa({"a": "MKKA", "gone": "----", "b": "MKKA"})
+        named = {g for r in rows for g in r[:2]}
+        assert named == {"a", "b"}
+
+    def test_the_old_behaviour_is_still_reachable(self):
+        """It emitted 0.00 for every pair involving the row. Kept so the
+        difference can be demonstrated, not because anyone should want it."""
+        rows = psi.compute_psi_for_msa({"a": "MKKA", "gone": "----"},
+                                       skip_degenerate=False)
+        assert rows and all(r[4] == 0.0 for r in rows)
+
+    def test_an_alignment_of_only_degenerate_rows_yields_nothing(self):
+        assert psi.compute_psi_for_msa({"x": "----", "y": "----"}) == []
+
+    def test_the_cache_build_warns_rather_than_swallowing_it(self, tmp_path):
+        """Silence here is what makes the corruption dangerous, so the build
+        has to say so."""
+        of = tmp_path / "Results"
+        (of / "MultipleSequenceAlignments").mkdir(parents=True)
+        (of / "MultipleSequenceAlignments" / "OG0000001.fa").write_text(
+            ">a\nMKKAA\n>gone\n-----\n>b\nMKKAA\n")
+        messages = []
+        psi.ensure_psi_cache(str(of), n_workers=1, log=messages.append)
+        warning = [m for m in messages if "all-gap" in m]
+        assert warning, messages
+        assert "OG0000001" in warning[0] and "1 all-gap" in warning[0]
+
+    def test_a_clean_alignment_produces_no_warning(self):
+        assert not psi.degenerate_members({"a": "MK", "b": "MW"})

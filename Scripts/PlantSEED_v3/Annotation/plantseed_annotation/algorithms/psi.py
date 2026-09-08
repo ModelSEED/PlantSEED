@@ -95,11 +95,39 @@ def _fmt(x):
     return f"{x:.2f}"
 
 
-def compute_psi_for_msa(sequences):
+def degenerate_members(sequences):
+    """Members of an alignment with no residues at all — every column a gap.
+
+    An aligner should not produce these, and mafft does not: 800 sampled
+    alignments of the 2021 reference contain none. muscle 5.3 does, including
+    73 rows in one 2,952-sequence orthogroup, for input proteins that are
+    perfectly ordinary in the source FASTA.
+
+    They matter because the failure is silent rather than loud. PSI divides by
+    the ungapped length, so such a row scores 0.00 against every partner --
+    which is not "unknown", it is an assertion that two proteins share no
+    identity. A real gene then cannot clear any threshold and quietly becomes
+    unannotatable.
+    """
+    return {g for g, seq in sequences.items()
+            if seq and len(seq) == seq.count("-")}
+
+
+def compute_psi_for_msa(sequences, skip_degenerate=True):
     """Compute PSI for every pair in `sequences` (a {gene_id: aligned_seq} dict).
 
     Returns a list of tuples (gene1, gene2, id1, id2, psi) with the standard
-    sort order used by the cache (gene1 < gene2)."""
+    sort order used by the cache (gene1 < gene2).
+
+    `skip_degenerate` omits all-gap members entirely rather than emitting 0.00
+    for them. Absence is honest; a fabricated 0% identity is not, and it is
+    indistinguishable downstream from a genuine non-match. Pass False to
+    reproduce the older behaviour.
+    """
+    if skip_degenerate:
+        bad = degenerate_members(sequences)
+        if bad:
+            sequences = {g: s for g, s in sequences.items() if g not in bad}
     features = sorted(sequences.keys())
     out = []
     for i in range(len(features) - 1):
@@ -153,9 +181,10 @@ def read_cache_file(cache_path):
 def _worker(args):
     og_id, msa_path, cache_path = args
     sequences = orthofinder_io.read_msa(msa_path)
+    dropped = len(degenerate_members(sequences))
     rows = compute_psi_for_msa(sequences)
     write_cache_file(cache_path, og_id, rows)
-    return og_id, len(rows)
+    return og_id, len(rows), dropped
 
 
 def ensure_psi_cache(results_dir, cache_dir=None, ogs=None,
@@ -205,15 +234,28 @@ def ensure_psi_cache(results_dir, cache_dir=None, ogs=None,
     n_workers = n_workers or max(1, (os.cpu_count() or 2) - 1)
     log(f"PSI: computing with {n_workers} workers")
 
-    computed = {}
+    computed, degenerate = {}, {}
     if n_workers == 1:
         for args in todo:
-            og_id, n = _worker(args)
+            og_id, n, dropped = _worker(args)
             computed[og_id] = n
+            if dropped:
+                degenerate[og_id] = dropped
     else:
         with mp.Pool(n_workers) as pool:
-            for og_id, n in pool.imap_unordered(_worker, todo, chunksize=32):
+            for og_id, n, dropped in pool.imap_unordered(_worker, todo,
+                                                          chunksize=32):
                 computed[og_id] = n
+                if dropped:
+                    degenerate[og_id] = dropped
+    if degenerate:
+        # Loud, because the alternative is a bundle that looks complete and
+        # scores real proteins at zero identity.
+        worst = sorted(degenerate.items(), key=lambda kv: -kv[1])[:3]
+        log(f"PSI: WARNING {sum(degenerate.values())} all-gap members dropped "
+            f"across {len(degenerate)} orthogroups (worst: "
+            + ", ".join(f"{og} x{n}" for og, n in worst)
+            + "). The aligner produced rows with no residues; check it.")
     result = {og: 0 for og in kept_from_cache}
     result.update(computed)
     return cache_dir, result
