@@ -286,3 +286,111 @@ class TestManifest:
         manifest = _build(of_run, tmp_path / "bundle")["manifest"]
         assert manifest["curated_non_arabidopsis"] == []
         assert manifest["sources"]["shoot_db_build_id"] == ""
+
+
+class TestSpeciesNormalisation:
+    """Phytozome names a proteome `<taxon>_<internal id>_<version>.protein`;
+    the curation names the same thing `<taxon>_<version>`. Without this the
+    2025 reference run matches no curated gene at all and the bundle comes out
+    empty — which it did."""
+
+    @pytest.mark.parametrize("raw,expected", [
+        ("Sbicolor_454_v3.1.1.protein", "Sbicolor_v3.1.1"),
+        ("Ptrichocarpa_533_v4.1.protein", "Ptrichocarpa_v4.1"),
+        ("Zmays_493_RefGen_V4.protein", "Zmays_RefGen_V4"),
+        # Strain names carry digits, so the proteome id is the LAST _<n>_.
+        ("CreinhardtiiCC_4532_707_v6.1.protein", "CreinhardtiiCC_4532_v6.1"),
+        ("Brapassp_trilocularisR500_795_v2.1.protein", "Brapassp_trilocularisR500_v2.1"),
+        # No proteome id at all: leave it alone.
+        ("Tarvense_NCBI_Proteins", "Tarvense_NCBI_Proteins"),
+    ])
+    def test_the_proteome_id_is_dropped(self, raw, expected):
+        from plantseed_annotation.algorithms import orthofinder_io as io
+
+        assert io.normalise_species(raw) == expected
+
+    def test_araport11_is_aliased_to_tair10(self):
+        """Araport11's only added gene models are non-coding RNAs, so for the
+        protein-coding loci the curation covers they are interchangeable."""
+        from plantseed_annotation.algorithms import orthofinder_io as io
+
+        assert io.normalise_species("Athaliana_447_Araport11.protein") == "Athaliana_TAIR10"
+
+    def test_it_is_idempotent(self):
+        """The 2021 run's fastas were pre-normalised by hand, so both reference
+        vintages have to land in one vocabulary."""
+        from plantseed_annotation.algorithms import orthofinder_io as io
+
+        for name in ("Sbicolor_v3.1.1", "Athaliana_TAIR10", "Tarvense_NCBI_Proteins"):
+            assert io.normalise_species(name) == name
+
+    def test_fasta_suffixes_are_handled(self):
+        """SpeciesIDs.txt lists filenames; a `.fa` left on the end silently
+        becomes part of the species name."""
+        from plantseed_annotation.algorithms import orthofinder_io as io
+
+        assert io.normalise_species("Sbicolor_454_v3.1.1.protein.fa") == "Sbicolor_v3.1.1"
+
+
+class TestInternalIds:
+    """OrthoFinder joins species and gene with `_` and rewrites `.` as `_`, so
+    `Smoellendorffii_91_v1_0_protein_123858` has no parse — that genome's gene
+    ids are bare integers. Its own `<speciesIdx>_<seqIdx>` does."""
+
+    def test_sequence_ids_resolve_to_species_and_gene(self, tmp_path):
+        from plantseed_annotation.algorithms import orthofinder_io as io
+
+        wd = tmp_path / "WorkingDirectory"
+        wd.mkdir()
+        (wd / "SpeciesIDs.txt").write_text(
+            "0: Athaliana_447_Araport11.protein.fa\n"
+            "15: Smoellendorffii_91_v1.0.protein.fa\n")
+        (wd / "SequenceIDs.txt").write_text(
+            "0_0: ATCG00500.1 pacid=37375748 locus=ATCG00500\n"
+            "15_14262: 123858 pacid=1 locus=123858\n")
+
+        seq = io.load_sequence_ids(str(tmp_path))
+        assert seq["0_0"] == ("Athaliana_TAIR10", "ATCG00500.1")
+        # The case the concatenated form cannot express.
+        assert seq["15_14262"] == ("Smoellendorffii_v1.0", "123858")
+
+    def test_a_run_without_the_id_files_is_empty_not_an_error(self, tmp_path):
+        from plantseed_annotation.algorithms import orthofinder_io as io
+
+        assert io.load_sequence_ids(str(tmp_path)) == {}
+        assert io.alignments_ids_dir(str(tmp_path)) is None
+
+
+class TestPrebuiltPsiIsAdopted:
+    """A bundle is rsynced to KBase and mounted where the OrthoFinder run does
+    not exist, so referencing PSI it does not contain is not self-contained.
+    The build did exactly that once — psi_matrices/ came out empty because a
+    prebuilt cache beside the run counted as a hit."""
+
+    def test_prebuilt_matrices_are_copied_into_the_bundle(self, of_run, tmp_path):
+        from plantseed_annotation.algorithms import psi
+
+        prebuilt = os.path.join(of_run, psi.PSI_CACHE_DIRNAME)
+        os.makedirs(prebuilt)
+        psi.write_cache_file(os.path.join(prebuilt, "OG0000001.txt"),
+                             "OG0000001", [("a", "b", 0.5, 0.5, 0.5)])
+
+        dest = tmp_path / "bundle"
+        result = _build(of_run, dest)
+        assert result["psi"]["og_adopted"] >= 1
+        assert (dest / bundle.PSI_DIR / "OG0000001.txt").is_file()
+
+    def test_the_bundle_verifies_without_the_source_run(self, of_run, tmp_path):
+        """The property that matters: nothing outside the bundle is needed."""
+        from plantseed_annotation.algorithms import psi
+        from plantseed_annotation import reference
+
+        prebuilt = os.path.join(of_run, psi.PSI_CACHE_DIRNAME)
+        os.makedirs(prebuilt)
+        psi.write_cache_file(os.path.join(prebuilt, "OG0000001.txt"),
+                             "OG0000001", [("a", "b", 0.5, 0.5, 0.5)])
+        dest = tmp_path / "bundle"
+        _build(of_run, dest)
+        shutil.rmtree(of_run)
+        ok, issues = reference.verify(str(dest))
+        assert ok, issues

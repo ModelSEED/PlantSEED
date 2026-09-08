@@ -16,6 +16,45 @@ We only touch the first three at annotation time. Gene trees are used later
 
 import itertools
 import os
+import re
+
+#: Phytozome names a proteome `<taxon>_<internal id>_<version>.protein`, and
+#: the curation names the same thing `<taxon>_<version>`. The id is Phytozome's
+#: bookkeeping, not part of the assembly's identity.
+_PHYTOZOME_PROTEOME_ID = re.compile(r"^(.*)_\d+_(.+)$")
+
+#: Equivalences that the naming rule cannot derive, each needing a reason.
+#:
+#: Araport11 is a re-annotation of the same TAIR10 assembly whose only added
+#: gene models are non-coding RNAs, so for protein-coding loci — all the
+#: curation has — the two are interchangeable.
+SPECIES_ALIASES = {
+    "Athaliana_Araport11": "Athaliana_TAIR10",
+}
+
+
+def normalise_species(name):
+    """A Phytozome proteome filename as the curation names the species.
+
+        'Sbicolor_454_v3.1.1.protein'        -> 'Sbicolor_v3.1.1'
+        'CreinhardtiiCC_4532_707_v6.1.protein' -> 'CreinhardtiiCC_4532_v6.1'
+        'Athaliana_447_Araport11.protein'    -> 'Athaliana_TAIR10'   (alias)
+        'Tarvense_NCBI_Proteins'             -> unchanged (no proteome id)
+
+    The regex is greedy on the left so the *last* `_<digits>_` is taken as the
+    proteome id: strain names carry digits too, and splitting on the first one
+    turns CreinhardtiiCC_4532 into CreinhardtiiCC.
+
+    Idempotent, so it is safe to apply to names that are already normalised —
+    which the 2021 reference run's are, because its input fastas were
+    pre-prefixed by hand.
+    """
+    base = name
+    for suffix in (".fa", ".fasta", ".faa", ".protein"):
+        if base.endswith(suffix):
+            base = base[: -len(suffix)]
+    base = _PHYTOZOME_PROTEOME_ID.sub(r"\1_\2", base)
+    return SPECIES_ALIASES.get(base, base)
 
 
 def _strip_species_prefix(gene_id, species):
@@ -51,6 +90,77 @@ def transcript_to_gene(tid):
     return left if right.isdigit() else tid
 
 
+# --- the internal id space ---------------------------------------------------
+# OrthoFinder numbers every sequence `<speciesIdx>_<seqIdx>` and keeps the map
+# in SpeciesIDs.txt / SequenceIDs.txt. Prefer those ids to any concatenated
+# header: OrthoFinder writes species-prefixed headers by joining with `_` and
+# rewriting `.` as `_`, which is ambiguous and, for a genome whose gene ids are
+# bare integers, unrecoverable —
+#
+#     >Smoellendorffii_91_v1_0_protein_123858
+#
+# has no parse. `15_14262` does, it is what OrthoFinder itself clusters on, and
+# it survives Newick, which matters once trees are in the pipeline.
+
+
+def species_ids_path(results_dir):
+    for candidate in (os.path.join(results_dir, "WorkingDirectory"), results_dir):
+        p = os.path.join(candidate, "SpeciesIDs.txt")
+        if os.path.isfile(p):
+            return p
+    return None
+
+
+def load_species_ids(results_dir):
+    """`{species index: normalised species name}` from SpeciesIDs.txt."""
+    path = species_ids_path(results_dir)
+    if path is None:
+        return {}
+    out = {}
+    with open(path) as fh:
+        for line in fh:
+            if ":" not in line:
+                continue
+            idx, name = line.split(":", 1)
+            out[idx.strip()] = normalise_species(name.strip())
+    return out
+
+
+def load_sequence_ids(results_dir, species=None):
+    """`{internal id: (species, gene_id)}` from SequenceIDs.txt.
+
+    The gene id is the first whitespace-delimited token of the original FASTA
+    header — Phytozome puts `pacid=`, `locus=` and friends after it.
+
+    `species` — an optional pre-loaded map from `load_species_ids`, so callers
+    reading both do not parse SpeciesIDs.txt twice.
+    """
+    path = species_ids_path(results_dir)
+    if path is None:
+        return {}
+    species = load_species_ids(results_dir) if species is None else species
+    out = {}
+    with open(os.path.join(os.path.dirname(path), "SequenceIDs.txt")) as fh:
+        for line in fh:
+            if ":" not in line:
+                continue
+            internal, header = line.split(":", 1)
+            internal = internal.strip()
+            gene = header.strip().split(None, 1)[0] if header.strip() else ""
+            sp_idx = internal.split("_", 1)[0]
+            out[internal] = (species.get(sp_idx, sp_idx), gene)
+    return out
+
+
+def alignments_ids_dir(results_dir):
+    """The alignments in OrthoFinder's id space, or None.
+
+    Same alignments as MultipleSequenceAlignments/, unambiguous headers.
+    """
+    p = os.path.join(results_dir, "WorkingDirectory", "Alignments_ids")
+    return p if os.path.isdir(p) else None
+
+
 # --- Orthogroups.tsv ---------------------------------------------------------
 def load_orthogroups(orthogroups_tsv):
     """Parse Orthogroups.tsv → {og_id: {species: [gene_id, ...]}}.
@@ -63,7 +173,10 @@ def load_orthogroups(orthogroups_tsv):
     ogs = {}
     with open(orthogroups_tsv) as fh:
         header = fh.readline().rstrip("\n").split("\t")
-        species = header[1:]
+        # Normalised, so the curation's species keys match whichever reference
+        # run this is. The 2021 run's names are already in that form and
+        # normalise_species is idempotent, so both runs land in one vocabulary.
+        species = [normalise_species(s) for s in header[1:]]
         for line in fh:
             row = line.rstrip("\n").split("\t")
             og_id = row[0]
@@ -71,7 +184,10 @@ def load_orthogroups(orthogroups_tsv):
             for i, spp in enumerate(species):
                 cell = row[i + 1] if i + 1 < len(row) else ""
                 genes = [g for g in cell.split(", ") if g] if cell else []
-                entry[spp] = [_strip_species_prefix(g, spp) for g in genes]
+                # `_any` rather than the species-specific strip: the prefix in
+                # the file is the pre-normalisation species name, which no
+                # longer equals `spp`.
+                entry[spp] = [_strip_species_prefix_any(g) for g in genes]
             ogs[og_id] = entry
     return ogs, species
 
