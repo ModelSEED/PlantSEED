@@ -231,13 +231,59 @@ def species_gene_to_og_index(ogs):
 
 
 # --- Orthologues/<A>__v__<B>.tsv ---------------------------------------------
+def _match_normalised(names, wanted):
+    """The member of `names` that normalises to `wanted`, or None."""
+    for name in names:
+        if normalise_species(name) == wanted:
+            return name
+    return None
+
+
 def orthologues_path(results_dir, spp_a, spp_b):
     """Return the path to `Orthologues/Orthologues_<A>/<A>__v__<B>.tsv`, or
-    None if the file doesn't exist."""
-    candidate = os.path.join(
+    None if the file doesn't exist.
+
+    `spp_a`/`spp_b` arrive normalised, because that is the only vocabulary the
+    rest of the annotator has: `load_orthogroups` normalises the
+    Orthogroups.tsv header. But OrthoFinder names these directories after the
+    *input proteome filenames*, which on a Phytozome run still carry the
+    proteome id — `Orthologues_Ptrichocarpa_533_v4.1.protein`, not
+    `Orthologues_Ptrichocarpa_v4.1` — so a literal join finds nothing.
+
+    This went unnoticed because the 2021 reference run's fastas were
+    pre-prefixed by hand, making normalisation a no-op there and the two
+    vocabularies coincide. Every Phytozome-named run has been unreadable.
+
+    The literal join stays as the fast path; only when it misses do we
+    normalise what is on disk to find the match.
+    """
+    exact = os.path.join(
         results_dir, "Orthologues", f"Orthologues_{spp_a}",
         f"{spp_a}__v__{spp_b}.tsv",
     )
+    if os.path.isfile(exact):
+        return exact
+
+    base = os.path.join(results_dir, "Orthologues")
+    if not os.path.isdir(base):
+        return None
+    prefix = "Orthologues_"
+    raw_a = _match_normalised(
+        (d[len(prefix):] for d in os.listdir(base)
+         if d.startswith(prefix) and os.path.isdir(os.path.join(base, d))),
+        spp_a,
+    )
+    if raw_a is None:
+        return None
+
+    spp_dir = os.path.join(base, prefix + raw_a)
+    stems = (f[: -len(".tsv")] for f in os.listdir(spp_dir) if f.endswith(".tsv"))
+    raw_b = _match_normalised(
+        (s.split("__v__", 1)[1] for s in stems if "__v__" in s), spp_b)
+    if raw_b is None:
+        return None
+
+    candidate = os.path.join(spp_dir, f"{raw_a}__v__{raw_b}.tsv")
     return candidate if os.path.isfile(candidate) else None
 
 

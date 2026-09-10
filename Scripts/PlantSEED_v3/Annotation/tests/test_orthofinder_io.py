@@ -68,6 +68,43 @@ def test_orthologues_path_present_and_absent(tiny_of_results):
     assert absent is None
 
 
+@pytest.fixture
+def phytozome_of_results(tmp_path):
+    """A run whose Orthologues/ carry raw Phytozome proteome filenames.
+
+    This is what OrthoFinder writes for any run fed Phytozome fastas, and it
+    is the shape the annotator could not read: the rest of the code speaks
+    normalised names, these directories do not.
+    """
+    root = tmp_path / "Results_Phyto"
+    raw_a, raw_b = "Sbicolor_454_v3.1.1.protein", "Athaliana_447_Araport11.protein"
+    d = root / "Orthologues" / f"Orthologues_{raw_a}"
+    d.mkdir(parents=True)
+    (d / f"{raw_a}__v__{raw_b}.tsv").write_text(
+        f"Orthogroup\t{raw_a}\t{raw_b}\n"
+        "OG0000001\tSbicolor_v3.1.1||Sobic.001G000100\t"
+        "Athaliana_TAIR10||AT1G01050\n"
+    )
+    return str(root)
+
+
+def test_orthologues_path_resolves_phytozome_names(phytozome_of_results):
+    """Normalised in, raw on disk — the two vocabularies have to meet here."""
+    path = oio.orthologues_path(
+        phytozome_of_results, "Sbicolor_v3.1.1", "Athaliana_TAIR10")
+    assert path is not None, "normalised names failed to resolve to raw dirs"
+    assert path.endswith(
+        "Sbicolor_454_v3.1.1.protein__v__Athaliana_447_Araport11.protein.tsv")
+
+
+def test_orthologues_path_still_none_for_absent_pair(phytozome_of_results):
+    """Resolution must not invent a path for a pair that was never written."""
+    assert oio.orthologues_path(
+        phytozome_of_results, "Athaliana_TAIR10", "Sbicolor_v3.1.1") is None
+    assert oio.orthologues_path(
+        phytozome_of_results, "Sbicolor_v3.1.1", "Zmays_RefGen_V4") is None
+
+
 def test_load_orthologues_symmetric(tiny_of_results):
     path = oio.orthologues_path(
         tiny_of_results, "Sbicolor_v3.1.1", "Athaliana_TAIR10",
