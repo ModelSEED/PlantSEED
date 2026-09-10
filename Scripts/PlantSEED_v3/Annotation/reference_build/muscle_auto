@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+# muscle_auto — dispatch MUSCLE v5 by orthogroup size.
+#
+# PPP (-align) is both faster and more accurate below a few hundred sequences;
+# above that it costs 1.4-3.7x the time and grows quadratically in memory, so
+# super5 takes over. OrthoFinder's config takes one fixed command string and
+# cannot branch, hence this wrapper.
+#
+# Usage (from config_orthofinder_user.json): muscle_auto INPUT OUTPUT
+#
+#   MUSCLE_AUTO_THRESHOLD  sequence count at/below which PPP is used (default 500)
+#   MUSCLE_AUTO_THREADS    -threads passed to muscle. SET THIS TO 1 for a whole-
+#                          run rebuild. muscle scales sublinearly, so on a fixed
+#                          core budget many 1-thread processes beat few fat ones.
+#                          Measured on 96 seqs / 336 cores, throughput as
+#                          (cores/threads)/latency:
+#                            1 thread  85.1s -> 3.95 alignments/s   <- best
+#                            8 threads 16.4s -> 2.55/s
+#                            default   3.0s  -> 0.34/s  (11.8x worse)
+#                          Output is byte-identical at every thread count.
+#                          Unset leaves muscle's default (grabs every core).
+#   MUSCLE_BIN             muscle executable (default: first on PATH)
+#   MUSCLE_AUTO_LOG        append "<og>\t<nseqs>\t<algorithm>" here, so which
+#                          orthogroup got which algorithm is recorded
+set -u
+
+IN=${1:?usage: muscle_auto INPUT OUTPUT}
+OUT=${2:?usage: muscle_auto INPUT OUTPUT}
+
+THRESH=${MUSCLE_AUTO_THRESHOLD:-500}
+MUSCLE=${MUSCLE_BIN:-muscle}
+
+n=$(grep -c '^>' "$IN" 2>/dev/null || echo 0)
+
+if [ "$n" -le "$THRESH" ]; then algo=align; else algo=super5; fi
+
+if [ -n "${MUSCLE_AUTO_THREADS:-}" ]; then
+    run() { "$MUSCLE" "-$1" "$IN" -output "$OUT" -threads "$MUSCLE_AUTO_THREADS"; }
+else
+    run() { "$MUSCLE" "-$1" "$IN" -output "$OUT"; }
+fi
+
+if ! run "$algo"; then
+    # PPP is the only mode that can plausibly fail here (memory, on a group that
+    # squeaked under the threshold). Falling back keeps the run alive and is
+    # recorded, rather than leaving a silent hole in the reference.
+    if [ "$algo" = align ]; then
+        algo=super5-fallback
+        run super5 || exit 1
+    else
+        exit 1
+    fi
+fi
+
+[ -s "$OUT" ] || exit 1
+
+if [ -n "${MUSCLE_AUTO_LOG:-}" ]; then
+    printf '%s\t%s\t%s\n' "$(basename "$IN" .fa)" "$n" "$algo" >> "$MUSCLE_AUTO_LOG"
+fi
+exit 0

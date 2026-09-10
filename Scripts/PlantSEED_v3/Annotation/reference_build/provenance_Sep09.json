@@ -1,0 +1,38 @@
+{
+  "bundle": {
+    "built_by": "plantseed-refbuild build --version v0 --workers 32",
+    "content_id": "557fcac8b746",
+    "n_files": 1520,
+    "size_mb": 1655
+  },
+  "command": "orthofinder.py -b <WorkingDirectory> -t 80 -a 16 -M msa -A muscle_auto -T iqtree2_1t -X -I 1.5 -z",
+  "environment": {
+    "MUSCLE_AUTO_THREADS": 1,
+    "MUSCLE_AUTO_THRESHOLD": 200,
+    "conda_env": "/scratch/seaver/micromamba/envs/orthofinder",
+    "muscle": "muscle 5.3.linux64 []"
+  },
+  "input_dir": "/scratch1/seaver/PlantSEED_OF_Rebuild_2609",
+  "n_species": 23,
+  "orthofinder_results": "/scratch1/seaver/PlantSEED_OF_Rebuild_2609/OrthoFinder/Results_Sep09/WorkingDirectory/OrthoFinder/Results_Sep09",
+  "orthofinder_version": "3.0.1b1",
+  "outcome": {
+    "gene_trees": 28134,
+    "gene_trees_sep07": 28125,
+    "iqtree_refusals_all_gap": 0,
+    "iqtree_refusals_all_gap_sep07": 9,
+    "muscle_failure_detail": "OG0041473 -- two Chlamydomonas proteins of 23,898 aa, past muscle's ~21k limit. Both -align and super5 refuse; left unaligned by design rather than substituting another aligner. Its MSA file is 0 bytes.",
+    "muscle_failures": 1,
+    "orthogroups": 56253
+  },
+  "run_utc": "2026-09-09",
+  "supersedes": "Results_Sep07 (same inputs, same 56,253 orthogroups)",
+  "wall_clock": "08:48:36 -> 14:06:54 (5h18m), resumed from the cached 529-way mmseqs search",
+  "why_each_flag": {
+    "-A muscle_auto": "PPP (-align) at <=200 sequences, super5 above. super5 clusters greedily and exiled fragment proteins into private low-occupancy columns, which -z alone does not fix. 514 of 110,579 orthogroups took the super5 path.",
+    "-I 1.5": "MCL inflation. The code default is 1.2 (the README's '1.5' is wrong), which would give ~40.9k orthogroups.",
+    "-T iqtree2_1t": "-nt 1; IQ-TREE scales sublinearly so 1 thread/process maximises throughput.",
+    "-X": "Do not add species names to sequence IDs; required for the <species>||<transcript> scheme to round-trip.",
+    "-z": "Do not trim MSAs. OrthoFinder trims for tree-inference speed, but PlantSEED reuses the same MSAs for PSI, where dropping columns removes non-matching positions from the denominator and inflates identity. Measured: 27.9% of curated Arabidopsis transcripts lost residues; 27.6% of curated PSI pairs were inflated."
+  }
+}
