@@ -1,0 +1,21 @@
+Aliphatic desulfoglucosinolate sulfotransferase (EC 2.8.2.38)	REMOVE	reactions	rxn11704
+Aliphatic desulfoglucosinolate sulfotransferase (EC 2.8.2.38)	REMOVE	reactions	rxn02300
+Aromatic desulfoglucosinolate sulfotransferase (EC 2.8.2.24)	ADD	reactions	rxn11704	c
+Aromatic desulfoglucosinolate sulfotransferase (EC 2.8.2.24)	ADD	reactions	rxn02300	c
+Glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)	UPDATE	Alkenyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)
+Alkenyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)	REASSIGN	abstract_enzyme	Alkenyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase
+Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)	UPDATE	Hydroxyalkyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)
+Hydroxyalkyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)	REASSIGN	abstract_enzyme	Hydroxyalkyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase
+Monooxygenase, catalyses 4-hydroxylation of indolyl-3-methyl glucosinolate (I3M) to 4OH-I3M	UPDATE	Indole glucosinolate C4-hydroxylase
+Indole glucosinolate C4-hydroxylase	REASSIGN	abstract_enzyme	Indole glucosinolate C4-hydroxylase
+Cytochrome 9450	UPDATE	Indole glucosinolate N-hydroxylase
+Indole glucosinolate N-hydroxylase	REASSIGN	abstract_enzyme	Indole glucosinolate N-hydroxylase
+Indole glucosinolate methyltransferase	UPDATE	4-hydroxyindole glucosinolate O-methyltransferase
+4-hydroxyindole glucosinolate O-methyltransferase	REASSIGN	abstract_enzyme	4-hydroxyindole glucosinolate O-methyltransferase
+4-hydroxyindole glucosinolate O-methyltransferase	REMOVE	reactions	rxn48396
+4-hydroxyindole glucosinolate O-methyltransferase	REMOVE	features	Athaliana_TAIR10||AT1G76790
+N-hydroxyindole glucosinolate O-methyltransferase	NEW
+N-hydroxyindole glucosinolate O-methyltransferase	REASSIGN	type	conditional
+N-hydroxyindole glucosinolate O-methyltransferase	REASSIGN	abstract_enzyme	N-hydroxyindole glucosinolate O-methyltransferase
+N-hydroxyindole glucosinolate O-methyltransferase	ADD	reactions	rxn48396	c
+N-hydroxyindole glucosinolate O-methyltransferase	ADD	features	Athaliana_TAIR10||AT1G76790	c:AraCyc

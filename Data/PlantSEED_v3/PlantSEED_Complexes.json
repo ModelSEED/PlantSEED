@@ -741,10 +741,10 @@
         }
     },
     {
-        "kbase_id": "PS_complex_71e9c0",
+        "kbase_id": "PS_complex_ec825e",
         "enzyme": "3-butenylglucosinolate 2-hydroxylase",
         "roles": [
-            "3-butenylglucosinolate 2-hydroxylase (no EC)"
+            "3-butenylglucosinolate 2-hydroxylase"
         ],
         "compartments_reactions": {
             "c": {
@@ -2481,23 +2481,6 @@
         }
     },
     {
-        "kbase_id": "PS_complex_0b80a8",
-        "enzyme": "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase",
-        "roles": [
-            "Aliphatic glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn27065",
-                    "rxn23786"
-                ],
-                "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
         "kbase_id": "PS_complex_b30ee3",
         "enzyme": "Alpha,alpha-trehalose-phosphate synthase",
         "roles": [
@@ -3068,24 +3051,6 @@
         }
     },
     {
-        "kbase_id": "PS_complex_9ca572",
-        "enzyme": "Benzoylated glucosinolates modification, unresolved step",
-        "roles": [
-            "Benzoylated glucosinolates modification, unresolved step"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn21838",
-                    "rxn21837",
-                    "rxn23787"
-                ],
-                "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
         "kbase_id": "PS_complex_f83ee0",
         "enzyme": "Beta-amylase",
         "roles": [
@@ -3413,22 +3378,6 @@
             "c": {
                 "reactions": [
                     "rxn00412"
-                ],
-                "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
-        "kbase_id": "PS_complex_883bf4",
-        "enzyme": "CYP81F4 monooxygenase",
-        "roles": [
-            "CYP81F4 monooxygenase"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn23774"
                 ],
                 "reagents": "c",
                 "exclude": false
@@ -6460,6 +6409,12 @@
                 "reagents": "c",
                 "exclude": false
             }
+        },
+        "reaction_stoichiometry": {
+            "rxn21810": {
+                "cpd23386@c": "0",
+                "cpd17395@c": "-1"
+            }
         }
     },
     {
@@ -7306,24 +7261,6 @@
             "c": {
                 "reactions": [
                     "rxn23706"
-                ],
-                "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
-        "kbase_id": "PS_complex_5001b7",
-        "enzyme": "Indole glucosinolate methyltransferase",
-        "roles": [
-            "Indole glucosinolate methyltransferase"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn23776",
-                    "rxn48396",
-                    "rxn42934"
                 ],
                 "reagents": "c",
                 "exclude": false
@@ -8253,22 +8190,6 @@
         }
     },
     {
-        "kbase_id": "PS_complex_d62897",
-        "enzyme": "Malate dehydrogenase (NADP+)",
-        "roles": [
-            "Malate dehydrogenase (NADP+) (EC 1.1.1.82)"
-        ],
-        "compartments_reactions": {
-            "d": {
-                "reactions": [
-                    "rxn00249"
-                ],
-                "reagents": "d",
-                "exclude": false
-            }
-        }
-    },
-    {
         "kbase_id": "PS_complex_598100",
         "enzyme": "Malate synthase",
         "roles": [
@@ -8538,36 +8459,6 @@
         }
     },
     {
-        "kbase_id": "PS_complex_74ff29",
-        "enzyme": "Methylenetetrahydrofolate dehydrogenase (NADP+)",
-        "roles": [
-            "Methylenetetrahydrofolate dehydrogenase (NADP+) (EC 1.5.1.5)"
-        ],
-        "compartments_reactions": {
-            "d": {
-                "reactions": [
-                    "rxn00907"
-                ],
-                "reagents": "d",
-                "exclude": false
-            },
-            "c": {
-                "reactions": [
-                    "rxn00907"
-                ],
-                "reagents": "c",
-                "exclude": false
-            },
-            "m": {
-                "reactions": [
-                    "rxn00907"
-                ],
-                "reagents": "m",
-                "exclude": false
-            }
-        }
-    },
-    {
         "kbase_id": "PS_complex_76f95b",
         "enzyme": "Methylthioalkylmalate dehydrogenase",
         "roles": [
@@ -8808,22 +8699,6 @@
                     "rxn24447"
                 ],
                 "reagents": "r",
-                "exclude": false
-            }
-        }
-    },
-    {
-        "kbase_id": "PS_complex_5fb90c",
-        "enzyme": "Monooxygenase, catalyses 4-hydroxylation of indolyl-3-methyl glucosinolate (I3M) to 4OH-I3M",
-        "roles": [
-            "Monooxygenase, catalyses 4-hydroxylation of indolyl-3-methyl glucosinolate (I3M) to 4OH-I3M"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn23775"
-                ],
-                "reagents": "c",
                 "exclude": false
             }
         }
@@ -9478,22 +9353,6 @@
         }
     },
     {
-        "kbase_id": "PS_complex_5689d2",
-        "enzyme": "Non-phosphorylating glyceraldehyde-3-phosphate dehydrogenase (NADP)",
-        "roles": [
-            "Non-phosphorylating glyceraldehyde-3-phosphate dehydrogenase (NADP) (EC 1.2.1.9)"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn00779"
-                ],
-                "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
         "kbase_id": "PS_complex_b8fab5",
         "enzyme": "Nucleoside diphosphate kinase",
         "roles": [
@@ -9948,7 +9807,7 @@
         }
     },
     {
-        "kbase_id": "PS_complex_677d82",
+        "kbase_id": "PS_complex_6b08ec",
         "enzyme": "Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis",
         "roles": [
             "Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)"
@@ -9956,10 +9815,17 @@
         "compartments_reactions": {
             "c": {
                 "reactions": [
-                    "rxn14107"
+                    "rxn14107",
+                    "rxn21793"
                 ],
                 "reagents": "c",
                 "exclude": false
+            }
+        },
+        "reaction_stoichiometry": {
+            "rxn21793": {
+                "cpd14796@c": "0",
+                "cpd20962@c": "-1"
             }
         }
     },
@@ -12398,24 +12264,6 @@
             "c": {
                 "reactions": [
                     "rxn01714"
-                ],
-                "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
-        "kbase_id": "PS_complex_181c8a",
-        "enzyme": "Sinapoylated glucosinolates modification",
-        "roles": [
-            "Sinapoylated glucosinolates modification, unresolved step"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn21839",
-                    "rxn21840",
-                    "rxn21835"
                 ],
                 "reagents": "c",
                 "exclude": false
@@ -15208,22 +15056,6 @@
         }
     },
     {
-        "kbase_id": "PS_complex_241828",
-        "enzyme": "Cytochrome 9450",
-        "roles": [
-            "Cytochrome 9450"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn45715"
-                ],
-                "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
         "kbase_id": "PS_complex_bab966",
         "enzyme": "-_-beta_caryophyllene synthase",
         "roles": [
@@ -15424,23 +15256,6 @@
         }
     },
     {
-        "kbase_id": "PS_complex_b93227",
-        "enzyme": "Glucosinolate 2-oxoglutarate-dependent dioxygenase",
-        "roles": [
-            "Glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn23785",
-                    "rxn27066"
-                ],
-                "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
         "kbase_id": "PS_complex_07769b",
         "enzyme": "3'(2'),5'-bisphosphate nucleotidase",
         "roles": [
@@ -15457,7 +15272,7 @@
         }
     },
     {
-        "kbase_id": "PS_complex_ab30da",
+        "kbase_id": "PS_complex_e08560",
         "enzyme": "cysteinylglycine-S-conjugate dipeptidase",
         "roles": [
             "cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)"
@@ -15465,7 +15280,14 @@
         "compartments_reactions": {
             "c": {
                 "reactions": [
-                    "rxn43940"
+                    "rxn43940",
+                    "rxn41037",
+                    "rxn46896",
+                    "rxn44540",
+                    "rxn47990",
+                    "rxn47415",
+                    "rxn41115",
+                    "rxn42261"
                 ],
                 "reagents": "c",
                 "exclude": false
@@ -15516,7 +15338,7 @@
         }
     },
     {
-        "kbase_id": "PS_complex_69ea3e",
+        "kbase_id": "PS_complex_eb4f31",
         "enzyme": "Aliphatic desulfoglucosinolate sulfotransferase",
         "roles": [
             "Aliphatic desulfoglucosinolate sulfotransferase (EC 2.8.2.38)"
@@ -15524,8 +15346,6 @@
         "compartments_reactions": {
             "c": {
                 "reactions": [
-                    "rxn02300",
-                    "rxn11704",
                     "rxn14133",
                     "rxn14362",
                     "rxn27056",
@@ -15539,7 +15359,7 @@
         }
     },
     {
-        "kbase_id": "PS_complex_12c851",
+        "kbase_id": "PS_complex_0a81af",
         "enzyme": "Aliphatic glucosinolate S-oxygenase",
         "roles": [
             "Aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)"
@@ -15547,7 +15367,12 @@
         "compartments_reactions": {
             "c": {
                 "reactions": [
-                    "rxn41751"
+                    "rxn41751",
+                    "rxn45613",
+                    "rxn46901",
+                    "rxn41495",
+                    "rxn42226",
+                    "rxn44557"
                 ],
                 "reagents": "c",
                 "exclude": false
@@ -15555,7 +15380,7 @@
         }
     },
     {
-        "kbase_id": "PS_complex_3ee0b3",
+        "kbase_id": "PS_complex_60da86",
         "enzyme": "Alkylthiohydroximate C-S lyase",
         "roles": [
             "Alkylthiohydroximate C-S lyase (EC 4.4.1.13)"
@@ -15565,7 +15390,12 @@
                 "reactions": [
                     "rxn12019",
                     "rxn14068",
-                    "rxn24582"
+                    "rxn24582",
+                    "rxn27041",
+                    "rxn27042",
+                    "rxn27043",
+                    "rxn27044",
+                    "rxn27045"
                 ],
                 "reagents": "c",
                 "exclude": false
@@ -15573,12 +15403,21 @@
         }
     },
     {
-        "kbase_id": "PS_complex_c1a4a3",
+        "kbase_id": "PS_complex_3be3cb",
         "enzyme": "Aromatic desulfoglucosinolate sulfotransferase",
         "roles": [
             "Aromatic desulfoglucosinolate sulfotransferase (EC 2.8.2.24)"
         ],
-        "compartments_reactions": {}
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn11704",
+                    "rxn02300"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        }
     },
     {
         "kbase_id": "PS_complex_660e96",
@@ -15604,6 +15443,195 @@
         }
     },
     {
+        "kbase_id": "PS_complex_7b0521",
+        "enzyme": "Hydroxyalkylglucosinolate benzoyltransferase",
+        "roles": [
+            "Hydroxyalkylglucosinolate benzoyltransferase"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn21838",
+                    "rxn21837",
+                    "rxn23787"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_f8469c",
+        "enzyme": "Hydroxyalkylglucosinolate sinapoyltransferase",
+        "roles": [
+            "Hydroxyalkylglucosinolate sinapoyltransferase"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn21839",
+                    "rxn21840",
+                    "rxn21835"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_819953",
+        "enzyme": "Long-chain aliphatic glucosinolate S-oxygenase",
+        "roles": [
+            "Long-chain aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn44557"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_512a1b",
+        "enzyme": "Methanesulfonate transport",
+        "roles": [
+            "Methanesulfonate transport"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn08960"
+                ],
+                "reagents": "ce",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_558343",
+        "enzyme": "Hydroxyalkyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase",
+        "roles": [
+            "Hydroxyalkyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn27065",
+                    "rxn44212"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        },
+        "reaction_stoichiometry": {
+            "rxn27065": {
+                "cpd00001@c": "-1",
+                "cpd00007@c": "-1",
+                "cpd00067@c": "1",
+                "cpd08023@c": "1"
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_cc8bea",
+        "enzyme": "Alkenyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase",
+        "roles": [
+            "Alkenyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase (EC 1.14.11.-)"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn23785",
+                    "rxn27066"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_4fb0b3",
+        "enzyme": "4-hydroxyindole glucosinolate O-methyltransferase",
+        "roles": [
+            "4-hydroxyindole glucosinolate O-methyltransferase"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn23776",
+                    "rxn42934"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_13d560",
+        "enzyme": "Indole glucosinolate C4-hydroxylase",
+        "roles": [
+            "Indole glucosinolate C4-hydroxylase"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn40669"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        },
+        "stoichiometry": {
+            "cpd21035@c": "0",
+            "cpd11630@c": "0",
+            "cpd00005@c": "-1",
+            "cpd00006@c": "1",
+            "cpd00067@c": "-1"
+        }
+    },
+    {
+        "kbase_id": "PS_complex_cc0675",
+        "enzyme": "Indole glucosinolate N-hydroxylase",
+        "roles": [
+            "Indole glucosinolate N-hydroxylase"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn45715"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        },
+        "stoichiometry": {
+            "cpd21035@c": "0",
+            "cpd11630@c": "0",
+            "cpd00005@c": "-1",
+            "cpd00006@c": "1",
+            "cpd00067@c": "-1"
+        }
+    },
+    {
+        "kbase_id": "PS_complex_758300",
+        "enzyme": "N-hydroxyindole glucosinolate O-methyltransferase",
+        "roles": [
+            "N-hydroxyindole glucosinolate O-methyltransferase"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn48396"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        }
+    },
+    {
         "kbase_id": "PS_complex_54d3b4",
         "enzyme": "Fatty acid in-chain hydroxylase",
         "roles": [
@@ -15613,6 +15641,68 @@
             "c": {
                 "reactions": [
                     "rxn16298"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_d62897",
+        "enzyme": "Malate dehydrogenase (NADP+)",
+        "roles": [
+            "Malate dehydrogenase (NADP+) (EC 1.1.1.82)"
+        ],
+        "compartments_reactions": {
+            "d": {
+                "reactions": [
+                    "rxn00249"
+                ],
+                "reagents": "d",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_74ff29",
+        "enzyme": "Methylenetetrahydrofolate dehydrogenase (NADP+)",
+        "roles": [
+            "Methylenetetrahydrofolate dehydrogenase (NADP+) (EC 1.5.1.5)"
+        ],
+        "compartments_reactions": {
+            "d": {
+                "reactions": [
+                    "rxn00907"
+                ],
+                "reagents": "d",
+                "exclude": false
+            },
+            "c": {
+                "reactions": [
+                    "rxn00907"
+                ],
+                "reagents": "c",
+                "exclude": false
+            },
+            "m": {
+                "reactions": [
+                    "rxn00907"
+                ],
+                "reagents": "m",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_5689d2",
+        "enzyme": "Non-phosphorylating glyceraldehyde-3-phosphate dehydrogenase (NADP)",
+        "roles": [
+            "Non-phosphorylating glyceraldehyde-3-phosphate dehydrogenase (NADP) (EC 1.2.1.9)"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn00779"
                 ],
                 "reagents": "c",
                 "exclude": false

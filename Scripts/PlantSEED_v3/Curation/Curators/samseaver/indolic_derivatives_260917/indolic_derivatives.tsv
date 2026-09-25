@@ -1,0 +1,12 @@
+Indole glucosinolate C4-hydroxylase	ADD	reactions	rxn40669	c
+Indole glucosinolate C4-hydroxylase	REMOVE	reactions	rxn23775
+Indole glucosinolate C4-hydroxylase	CPX_ADD	stoichiometry	cpd21035	0	c
+Indole glucosinolate C4-hydroxylase	CPX_ADD	stoichiometry	cpd11630	0	c
+Indole glucosinolate C4-hydroxylase	CPX_ADD	stoichiometry	cpd00005	-1	c
+Indole glucosinolate C4-hydroxylase	CPX_ADD	stoichiometry	cpd00006	1	c
+Indole glucosinolate C4-hydroxylase	CPX_ADD	stoichiometry	cpd00067	-1	c
+Indole glucosinolate N-hydroxylase	CPX_ADD	stoichiometry	cpd21035	0	c
+Indole glucosinolate N-hydroxylase	CPX_ADD	stoichiometry	cpd11630	0	c
+Indole glucosinolate N-hydroxylase	CPX_ADD	stoichiometry	cpd00005	-1	c
+Indole glucosinolate N-hydroxylase	CPX_ADD	stoichiometry	cpd00006	1	c
+Indole glucosinolate N-hydroxylase	CPX_ADD	stoichiometry	cpd00067	-1	c

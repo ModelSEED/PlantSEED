@@ -1,0 +1,14 @@
+Aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	REMOVE	features	Athaliana_TAIR10||AT1G12140
+Aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	ADD	reactions	rxn45613
+Aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	ADD	reactions	rxn46901
+Aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	ADD	reactions	rxn41495
+Aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	ADD	reactions	rxn42226
+Aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	ADD	reactions	rxn44557
+Aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	ADD	publications	10.1111/j.1365-313X.2007.03101.x
+Long-chain aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	NEW
+Long-chain aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	ADD	subsystems	Aliphatic glucosinolate biosynthesis	Specialized metabolism
+Long-chain aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	ADD	features	Athaliana_TAIR10||AT1G12140	c:Assumed
+Long-chain aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	ADD	reactions	rxn44557
+Long-chain aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	ADD	publications	10.1104/pp.108.125757
+Long-chain aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	REASSIGN	type	conditional
+Long-chain aliphatic glucosinolate S-oxygenase (EC 1.14.13.237)	REASSIGN	abstract_enzyme	Long-chain aliphatic glucosinolate S-oxygenase

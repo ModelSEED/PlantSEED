@@ -1,0 +1,8 @@
+Benzoylated glucosinolates modification, unresolved step	UPDATE	Hydroxyalkylglucosinolate benzoyltransferase (no EC)
+Hydroxyalkylglucosinolate benzoyltransferase (no EC)	ADD	features	Athaliana_TAIR10||AT3G12203	c:Assumed
+Hydroxyalkylglucosinolate benzoyltransferase (no EC)	ADD	publications	10.1111/j.1365-313X.2012.05096.x
+Hydroxyalkylglucosinolate benzoyltransferase (no EC)	REASSIGN	abstract_enzyme	Hydroxyalkylglucosinolate benzoyltransferase
+Sinapoylated glucosinolates modification, unresolved step	UPDATE	Hydroxyalkylglucosinolate sinapoyltransferase (no EC)
+Hydroxyalkylglucosinolate sinapoyltransferase (no EC)	ADD	features	Athaliana_TAIR10||AT3G12203	c:Assumed
+Hydroxyalkylglucosinolate sinapoyltransferase (no EC)	ADD	publications	10.1111/j.1365-313X.2012.05096.x
+Hydroxyalkylglucosinolate sinapoyltransferase (no EC)	REASSIGN	abstract_enzyme	Hydroxyalkylglucosinolate sinapoyltransferase
