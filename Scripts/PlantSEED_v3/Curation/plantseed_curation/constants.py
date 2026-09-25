@@ -40,6 +40,20 @@ DEFAULT_LOC_SOURCE = "Assumed"
 # existing curator TSVs keep working. Curators get a single end-of-parse
 # warning per old name when one is encountered.
 ACTION_OPTIONS = ["ADD", "REASSIGN", "RELOCATE", "REMOVE", "UPDATE", "NEW"]
+
+# Complex-scoped counterparts. Same verbs, CPX_ prefix, and column 1 holds the
+# ENZYME NAME rather than a role name — enzyme names are unique across all
+# complexes and are the key complexes are actually grouped by, whereas
+# kbase_id is a hash over enzyme+roles+rxn_cpts and rehashes whenever a
+# reaction is added. Validated against PlantSEED_Complexes_Schema.yaml.
+CPX_ACTION_OPTIONS = ["CPX_ADD", "CPX_REASSIGN", "CPX_REMOVE", "CPX_UPDATE"]
+CPX_ACTION_DESCRIPTIONS = {
+    "CPX_ADD":      "Set a stoichiometry override for one compound across every reaction this enzyme catalyses. Coefficient 0 removes the reagent; a compound not already in the reaction is added. Optional 6th column is the compartment letter (defaults to the reaction's first compartment). Optional 7th column scopes the override to ONE reaction — use only when the enzyme's reactions genuinely differ, e.g. a shared glutathione S-transferase whose substrate differs per branch.",
+    "CPX_REASSIGN": "Set a scalar complex field — currently `direction` ('>', '<', '=').",
+    "CPX_REMOVE":   "Drop a stoichiometry override, restoring the database coefficient. To remove a reagent from the reaction instead, use CPX_ADD with coefficient 0.",
+    "CPX_UPDATE":   "Rename an enzyme (the complex key). Triggers a complex kbase_id rehash.",
+}
+CPX_ACTION_MIN_COLS = {"CPX_UPDATE": 3, "CPX_REASSIGN": 4, "CPX_ADD": 5, "CPX_REMOVE": 4}
 ACTION_DESCRIPTIONS = {
     "ADD":      "Append entries to a list/dict field. For features/reactions, the extra column is optional — compartment defaults to 'c' (cytosol) with source 'Assumed'.",
     "REASSIGN": "Set a scalar field (e.g. include, type, abstract_enzyme, subcomplex_of). Supersedes the deprecated ASSIGN and CHANGE verbs.",

@@ -1,52 +1,10 @@
-# Photosynthetic electron transport chain — citation curation, 2026-09-07
-#
-# Applied with:
-#   cd Scripts/PlantSEED_v3/Curation
-#   python3 Update_Enzymes_in_PlantSEED.py \
-#       Curators/samseaver/photosynthesis_citations_260907/update_citations.tsv
-#
-# Every DOI below was verified against Crossref (authoritative title/author/year)
-# and PubMed (PMID + MeSH organism). See
-# Scripts/PlantSEED_v3/Curation/Reviews/2026-09-07_regeneration_notes.md
-# for the method and the per-subsystem reports.
-
-# ---- 1. Book chapter removed: PsbK already cites Murata 1988 (the psbK gene
-# ----    identification) and Sugimoto 2003, so the proceedings chapter adds
-# ----    nothing. Weakest source class per the review guide.
 Photosystem II protein PsbK	REMOVE	publications	https://doi.org/10.1007/978-94-011-3953-3_232
-
-# ---- 2. Mis-assigned citation moved PsbTn -> PsbI. Ikeuchi & Inoue 1988,
-# ----    Plant Cell Physiol 29:1233 characterises the 4.8 kDa polypeptide
-# ----    intrinsic to the PSII reaction centre; their companion FEBS Lett paper
-# ----    assigns that protein to psbI ("forms an operon with psbK"). PsbTn is a
-# ----    separate nuclear-encoded lumenal protein.
 Photosystem II protein PsbTn	REMOVE	publications	https://doi.org/10.1093/oxfordjournals.pcp.a077628
 Photosystem II protein PsbI	ADD	publications	https://doi.org/10.1093/oxfordjournals.pcp.a077628
-
-# ---- 3. Added: the paper that defines psbI in its modern sense — "we propose to
-# ----    revise the definition of psb I as the gene encoding the 4.8 kDa reaction
-# ----    centre component". Strongest primary citation available for the role.
 Photosystem II protein PsbI	ADD	publications	https://doi.org/10.1016/0014-5793(88)81039-1
-
-# ---- 4. Off-topic citation removed: a benzopyran-chemistry paper on Piper
-# ----    gaudichaudianum, unrelated to photosynthesis. PsaB retains 6 citations
-# ----    including Stroher 2008 (Arabidopsis).
 Photosystem I subunit Ib PsaB	REMOVE	publications	https://doi.org/10.21577/0103-5053.20170238
-
-# ---- 5. Dead DOI removed: 404s at both doi.org and Crossref, and the whole
-# ----    CSIRO SA04* series is unregistered, so it is not a typo. PsaN retains
-# ----    Haldrup 1999 (Arabidopsis PSI-N) and He 1992.
 Photosystem I PsaN	REMOVE	publications	https://doi.org/10.1071/SA0403172
-
-# ---- 6. Consistency: all PSI/PSII assembly and repair factors are include:false
-# ----    (their reactions are retained, but no gene is scored into the mature
-# ----    complex GPR). Ycf37 and Psb27 were the only two flagged true.
 photosystem I assembly related protein Ycf37	REASSIGN	include	false
 Photosystem II protein Psb27	REASSIGN	include	false
-
-# ---- 7. Empty strings removed from the publications arrays. These are not
-# ----    citations; they inflated the apparent citation count for both roles
-# ----    (each actually has none). Note the trailing TAB with an empty 4th
-# ----    column — that is how REMOVE targets the empty entry.
 Photosystem I assembly related protein Ycf3	REMOVE	publications	
 Photosystem I assembly related protein Ycf4	REMOVE	publications	
