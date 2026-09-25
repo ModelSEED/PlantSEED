@@ -191,7 +191,6 @@ rxn20632_y	PS_complex_385743	PS_role_0c7024	Photosystem II CP43 protein PsbC	Ath
 rxn20632_y	PS_complex_385743	PS_role_c0421a	Photosystem II CP47 protein PsbB	Athaliana_TAIR10||ATCG00680
 rxn20632_y	PS_complex_385743	PS_role_9bc471	Photosystem II protein D1 PsbA	Athaliana_TAIR10||ATCG00020
 rxn20632_y	PS_complex_385743	PS_role_3c6f1d	Photosystem II protein D2 PsbD	Athaliana_TAIR10||ATCG00270
-rxn20632_y	PS_complex_385743	PS_role_ad1b09	Photosystem II protein Psb27	Athaliana_TAIR10||AT1G03600
 rxn20632_y	PS_complex_385743	PS_role_5c046e	Photosystem II protein PsbH	Athaliana_TAIR10||ATCG00710
 rxn20632_y	PS_complex_385743	PS_role_f1057a	Photosystem II protein PsbI	Athaliana_TAIR10||ATCG00080
 rxn20632_y	PS_complex_385743	PS_role_69a769	Photosystem II protein PsbJ	Athaliana_TAIR10||ATCG00550
@@ -564,7 +563,6 @@ rxn26754_d	PS_complex_ba2de1	PS_role_4921cd	Photosystem I subunit X PsaK	Athalia
 rxn26754_d	PS_complex_ba2de1	PS_role_8dbedd	Photosystem I subunit XI PsaL	Athaliana_TAIR10||AT4G12800
 rxn26754_d	PS_complex_ba2de1	PS_role_e0bf23	alternative photosystem I reaction center subunit X (PsaK2)	
 rxn26754_d	PS_complex_ba2de1	PS_role_070e7e	photosystem I 4.8K protein (PsaX)	
-rxn26754_d	PS_complex_ba2de1	PS_role_362277	photosystem I assembly related protein Ycf37	
 rxn26754_d	PS_complex_ba2de1	PS_role_d9335e	photosystem I biogenesis protein BtpA	
 rxn26754_d	PS_complex_ba2de1	PS_role_b483ec	photosystem I subunit XII (PsaM)	
 rxn01612_c	PS_complex_bb746d	PS_role_01687d	trans-cinnamate 2-monooxygenase (EC 1.14.13.14)	
@@ -689,6 +687,7 @@ rxn01629_d|rxn01629_c	PS_complex_eacc0f	PS_role_be145f	Glutamate-1-semialdehyde 
 rxn01257_d	PS_complex_eb1632	PS_role_459f31	Para-aminobenzoate synthase, amidotransferase component (EC 2.6.1.85)	Athaliana_TAIR10||AT2G28880
 rxn01257_d	PS_complex_eb1632	PS_role_bc9739	Para-aminobenzoate synthase, aminase component (EC 2.6.1.85)	Athaliana_TAIR10||AT2G28880
 rxn38795_m	PS_complex_ebbd5d	PS_role_c8a048	HMDHP transport	
+gsltrans01_d|gsltrans02_d|gsltrans03_d|gsltrans04_d|gsltrans05_d|gsltrans06_d|gsltrans07_d|gsltrans08_d|gsltrans09_d	PS_complex_ebc26f	PS_role_d37d41	Glucosinolate transport	
 rxn00459_c|rxn00459_n|rxn00459_d	PS_complex_ecfa74	PS_role_c46d10	Enolase (EC 4.2.1.11)	Athaliana_TAIR10||AT1G74030|Athaliana_TAIR10||AT2G29560|Athaliana_TAIR10||AT2G36530
 rxn02474_d	PS_complex_ed268c	PS_role_49d7f6	5-amino-6-(5-phosphoribosylamino)uracil reductase (EC 1.1.1.193)	Athaliana_TAIR10||AT3G47390|Athaliana_TAIR10||AT4G20960
 rxn09005_c|rxn09005_m|rxn09005_d	PS_complex_ed3575	PS_role_f0c5ba	Nitrate transport	

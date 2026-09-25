@@ -620,6 +620,12 @@
                 "reagents": "d",
                 "exclude": false
             }
+        },
+        "stoichiometry": {
+            "cpd22369@d": "0",
+            "cpd00023@d": "-1",
+            "cpd21904@d": "0",
+            "cpd00024@d": "1"
         }
     },
     {
@@ -4073,10 +4079,10 @@
         }
     },
     {
-        "kbase_id": "PS_complex_0b7e48",
+        "kbase_id": "PS_complex_4e8fb5",
         "enzyme": "Cyclopropane desaturase",
         "roles": [
-            "Cyclopropane desaturase (no EC)"
+            "Cyclopropane desaturase"
         ],
         "compartments_reactions": {
             "c": {
@@ -4274,6 +4280,10 @@
                 "reagents": "dy",
                 "exclude": false
             }
+        },
+        "stoichiometry": {
+            "cpd00067@d": "-2",
+            "cpd00067@y": "4"
         }
     },
     {
@@ -5245,22 +5255,6 @@
         }
     },
     {
-        "kbase_id": "PS_complex_7fae8c",
-        "enzyme": "Fatty acid in-chain hydroxylase (no EC)",
-        "roles": [
-            "Fatty acid in-chain hydroxylase (no EC)"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn16298"
-                ],
-                "reagents": "c",
-                "exclude": false
-            }
-        }
-    },
-    {
         "kbase_id": "PS_complex_f7651b",
         "enzyme": "Fatty acid omega-hydroxylase",
         "roles": [
@@ -5325,10 +5319,10 @@
         }
     },
     {
-        "kbase_id": "PS_complex_1d9699",
+        "kbase_id": "PS_complex_fb5fc3",
         "enzyme": "Fatty acids epoxide hydrolase",
         "roles": [
-            "Fatty acids epoxide hydrolase (no EC)"
+            "Fatty acids epoxide hydrolase"
         ],
         "compartments_reactions": {
             "c": {
@@ -5604,10 +5598,10 @@
         }
     },
     {
-        "kbase_id": "PS_complex_7d50e7",
+        "kbase_id": "PS_complex_3cf137",
         "enzyme": "Free fatty acids epoxidase [oleate, linoleate, linolenate]",
         "roles": [
-            "Free fatty acids epoxidase [oleate, linoleate, linolenate] (no EC)"
+            "Free fatty acids epoxidase [oleate, linoleate, linolenate]"
         ],
         "compartments_reactions": {
             "c": {
@@ -7817,10 +7811,10 @@
         }
     },
     {
-        "kbase_id": "PS_complex_86771e",
+        "kbase_id": "PS_complex_91f081",
         "enzyme": "Lauric acid in-chain hydroxylase",
         "roles": [
-            "Lauric acid in-chain hydroxylase (no EC)"
+            "Lauric acid in-chain hydroxylase"
         ],
         "compartments_reactions": {
             "c": {
@@ -8592,6 +8586,11 @@
                 "reagents": "d",
                 "exclude": false
             }
+        },
+        "stoichiometry": {
+            "cpd00003@d": "-1",
+            "cpd00004@d": "1",
+            "cpd00067@d": "0"
         }
     },
     {
@@ -8734,10 +8733,10 @@
         }
     },
     {
-        "kbase_id": "PS_complex_328347",
+        "kbase_id": "PS_complex_02b01f",
         "enzyme": "Mid-chain alkane hydroxylase",
         "roles": [
-            "Mid-chain alkane hydroxylase, alcohol- and ketone- forming (no EC)"
+            "Mid-chain alkane hydroxylase, alcohol- and ketone- forming"
         ],
         "compartments_reactions": {
             "r": {
@@ -11161,6 +11160,10 @@
                 "reagents": "dy",
                 "exclude": false
             }
+        },
+        "stoichiometry": {
+            "cpd00067@d": "-4",
+            "cpd00067@y": "4"
         }
     },
     {
@@ -13789,10 +13792,10 @@
         }
     },
     {
-        "kbase_id": "PS_complex_e65408",
+        "kbase_id": "PS_complex_d32ca7",
         "enzyme": "UDP-4-dehydro-6-deoxy-glucose 3,5-epimerase",
         "roles": [
-            "UDP-4-dehydro-6-deoxy-glucose 3,5-epimerase (no EC)"
+            "UDP-4-dehydro-6-deoxy-glucose 3,5-epimerase"
         ],
         "compartments_reactions": {
             "c": {
@@ -14535,10 +14538,10 @@
         }
     },
     {
-        "kbase_id": "PS_complex_490ee0",
+        "kbase_id": "PS_complex_0b1bd6",
         "enzyme": "Xyloglucan galactosyltransferase",
         "roles": [
-            "Xyloglucan galactosyltransferase (no EC)"
+            "Xyloglucan galactosyltransferase"
         ],
         "compartments_reactions": {
             "g": {
@@ -15597,6 +15600,84 @@
                 ],
                 "reagents": "c",
                 "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_54d3b4",
+        "enzyme": "Fatty acid in-chain hydroxylase",
+        "roles": [
+            "Fatty acid in-chain hydroxylase"
+        ],
+        "compartments_reactions": {
+            "c": {
+                "reactions": [
+                    "rxn16298"
+                ],
+                "reagents": "c",
+                "exclude": false
+            }
+        }
+    },
+    {
+        "kbase_id": "PS_complex_ebc26f",
+        "enzyme": "Glucosinolate transport",
+        "roles": [
+            "Glucosinolate transport"
+        ],
+        "compartments_reactions": {
+            "d": {
+                "reactions": [
+                    "gsltrans01",
+                    "gsltrans02",
+                    "gsltrans03",
+                    "gsltrans04",
+                    "gsltrans05",
+                    "gsltrans06",
+                    "gsltrans07",
+                    "gsltrans08",
+                    "gsltrans09"
+                ],
+                "reagents": "d",
+                "exclude": false
+            }
+        },
+        "reaction_stoichiometry": {
+            "gsltrans01": {
+                "cpd00869@c": "-1",
+                "cpd00869@d": "1"
+            },
+            "gsltrans02": {
+                "cpd17400@c": "-1",
+                "cpd17400@d": "1"
+            },
+            "gsltrans03": {
+                "cpd17403@c": "-1",
+                "cpd17403@d": "1"
+            },
+            "gsltrans04": {
+                "cpd17407@c": "-1",
+                "cpd17407@d": "1"
+            },
+            "gsltrans05": {
+                "cpd17411@c": "-1",
+                "cpd17411@d": "1"
+            },
+            "gsltrans06": {
+                "cpd17415@c": "-1",
+                "cpd17415@d": "1"
+            },
+            "gsltrans07": {
+                "cpd17419@c": "-1",
+                "cpd17419@d": "1"
+            },
+            "gsltrans08": {
+                "cpd17423@c": "-1",
+                "cpd17423@d": "1"
+            },
+            "gsltrans09": {
+                "cpd00506@c": "-1",
+                "cpd00506@d": "1"
             }
         }
     }
