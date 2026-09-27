@@ -7,3 +7,11 @@
 *.pickle
 __pycache__/
 *.pyc
+
+# Cached ModelSEED biochemistry fetched at MSD_PINNED_COMMIT by
+# Generate_Core_ModelTemplate.py and Check_Template_Reaction_Balance.py.
+# Regenerated on demand; delete the directory to force a refetch.
+Biochem_Cache/
+
+# Per-project session logs from the `recall` Claude Code plugin
+.recall/

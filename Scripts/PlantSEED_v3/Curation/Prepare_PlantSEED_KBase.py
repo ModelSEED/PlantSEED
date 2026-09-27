@@ -23,6 +23,8 @@ from plantseed_curation import (
     assign_complex_kbase_id,
     assign_kbase_id,
     derive_new_complexes,
+    refresh_existing_complexes,
+    prune_orphan_complexes,
     enzyme_index_from_complexes,
     paths,
     validate_subcomplex_pointers,
@@ -61,6 +63,16 @@ def prepare_complexes(complexes_list, roles_list, issues):
     (existing id updated OR new entry appended)."""
     existing_ids = {c["kbase_id"] for c in complexes_list if "kbase_id" in c}
     changed = False
+    # Drop complexes left behind by a role rename first — they name roles that
+    # no longer exist and crash Generate_Core_ModelTemplate.py.
+    if prune_orphan_complexes(complexes_list, roles_list, issues=issues):
+        changed = True
+    # Then refresh the survivors: reactions added to an already-existing role
+    # reach no template otherwise, because derive_new_complexes only mints
+    # complexes for enzymes not yet present.
+    if refresh_existing_complexes(complexes_list, roles_list, issues=issues):
+        changed = True
+    # kbase_ids hash enzyme+roles+rxn_cpts, so verify AFTER the refresh.
     for entry in complexes_list:
         if assign_complex_kbase_id(entry, existing_ids, issues=issues):
             changed = True

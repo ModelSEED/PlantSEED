@@ -1,0 +1,10 @@
+Photosystem II protein PsbK	REMOVE	publications	https://doi.org/10.1007/978-94-011-3953-3_232
+Photosystem II protein PsbTn	REMOVE	publications	https://doi.org/10.1093/oxfordjournals.pcp.a077628
+Photosystem II protein PsbI	ADD	publications	https://doi.org/10.1093/oxfordjournals.pcp.a077628
+Photosystem II protein PsbI	ADD	publications	https://doi.org/10.1016/0014-5793(88)81039-1
+Photosystem I subunit Ib PsaB	REMOVE	publications	https://doi.org/10.21577/0103-5053.20170238
+Photosystem I PsaN	REMOVE	publications	https://doi.org/10.1071/SA0403172
+photosystem I assembly related protein Ycf37	REASSIGN	include	false
+Photosystem II protein Psb27	REASSIGN	include	false
+Photosystem I assembly related protein Ycf3	REMOVE	publications	
+Photosystem I assembly related protein Ycf4	REMOVE	publications	

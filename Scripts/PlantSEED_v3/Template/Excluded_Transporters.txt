@@ -1,0 +1,7 @@
+gsltrans02_d	cpd17400	c|d
+rxn08544_x	cpd00106	c|x
+rxn08645_m	cpd00223	c|m
+rxn10480_m	cpd00204	c|m
+rxn10480_v	cpd00204	c|v
+rxn10480_x	cpd00204	c|x
+rxn39249_m	cpd02701	c|m

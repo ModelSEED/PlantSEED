@@ -10,9 +10,11 @@ import copy
 import hashlib
 import json
 import os
+import re
 
 from . import paths
 from .constants import (
+    CPX_ACTION_MIN_COLS,
     ACTION_FIELDS,
     ACTION_MIN_COLS,
     ACTION_OPTIONS,
@@ -235,7 +237,10 @@ def parse_tsv_text(text, schema=None, issues=None):
     deprecated aliases of REASSIGN; a single end-of-parse warning per
     alias actually used is emitted so curators see a clear nudge."""
     actions = {"replace": {}, "new": [], "add": {}, "rem": {}, "key": {},
-               "reassign": {}}
+               "reassign": {},
+               # complex-scoped buckets; column 1 is the ENZYME name
+               "cpx_replace": {}, "cpx_stoich": {}, "cpx_stoich_rem": {},
+               "cpx_stoich_rxn": {}, "cpx_reassign": {}}
     deprecated_alias_counts = {name: 0 for name in DEPRECATED_REASSIGN_ALIASES}
 
     def _check_field(field, lineno):
@@ -255,6 +260,50 @@ def parse_tsv_text(text, schema=None, issues=None):
             continue
         enzyme = tmp_lst[0]
         action = tmp_lst[1].upper()
+        if action.startswith("CPX_"):
+            if action not in CPX_ACTION_MIN_COLS:
+                if issues is not None:
+                    issues.warn(f"line {lineno}: unknown complex action '{tmp_lst[1]}' — skipped")
+                continue
+            if len(tmp_lst) < CPX_ACTION_MIN_COLS[action]:
+                if issues is not None:
+                    issues.warn(f"line {lineno}: action {action} requires at least "
+                                f"{CPX_ACTION_MIN_COLS[action]} columns, got {len(tmp_lst)} — skipped")
+                continue
+            if action == "CPX_UPDATE":
+                actions["cpx_replace"][enzyme] = tmp_lst[2]
+            elif action == "CPX_REASSIGN":
+                field, value = tmp_lst[2], tmp_lst[3]
+                if field != "direction" and issues is not None:
+                    issues.warn(f"line {lineno}: CPX_REASSIGN only supports 'direction', got '{field}'")
+                actions["cpx_reassign"].setdefault(enzyme, {})[field] = value
+            elif action == "CPX_ADD":
+                field, cpd, coef = tmp_lst[2], tmp_lst[3], tmp_lst[4]
+                if field != "stoichiometry" and issues is not None:
+                    issues.warn(f"line {lineno}: CPX_ADD only supports 'stoichiometry', got '{field}'")
+                cpt = tmp_lst[5].strip() if len(tmp_lst) > 5 and tmp_lst[5].strip() else None
+                # Key carries the compartment so the SAME compound can appear in
+                # two compartments of one reaction — the defining shape of a
+                # proton pump (H+ -4 in d, +4 in y). A bare compound key means
+                # "the reaction's first compartment".
+                key = f"{cpd}@{cpt}" if cpt else cpd
+                scope = tmp_lst[6].strip() if len(tmp_lst) > 6 and tmp_lst[6].strip() else None
+                if scope:
+                    # Scoped to ONE reaction. Needed where an enzyme's reactions
+                    # genuinely differ — e.g. the glucosinolate glutathione
+                    # S-transferase catalyses eight branch-specific steps, so an
+                    # enzyme-wide add would inject one branch's substrate into
+                    # the other seven.
+                    actions["cpx_stoich_rxn"].setdefault(enzyme, {}) \
+                        .setdefault(scope, {})[key] = coef
+                else:
+                    actions["cpx_stoich"].setdefault(enzyme, {})[key] = coef
+            elif action == "CPX_REMOVE":
+                field, cpd = tmp_lst[2], tmp_lst[3]
+                if field != "stoichiometry" and issues is not None:
+                    issues.warn(f"line {lineno}: CPX_REMOVE only supports 'stoichiometry', got '{field}'")
+                actions["cpx_stoich_rem"].setdefault(enzyme, []).append(cpd)
+            continue
         if action not in ACTION_MIN_COLS:
             if issues is not None:
                 issues.warn(f"line {lineno}: unknown action '{tmp_lst[1]}' — skipped")
@@ -366,6 +415,7 @@ def apply_actions(roles_list, actions, curator, issues=None, schema=None):
             old_name = entry["role"]
             entry["role"] = replace_dict[old_name]
             rename_map[old_name] = entry["role"]
+            _rename_abstract_enzyme(entry, old_name, issues)
             updated_role = True
 
         if entry["role"] in add_dict:
@@ -610,6 +660,55 @@ def enzyme_index_from_complexes(complexes_list, issues=None):
     return index
 
 
+
+_EC_PAREN = r"\s*\(\s*(?:EC\s*[\d]+\.[\d\-]+\.[\d\-]+\.[\d\-]+|no\s*EC)\s*\)\s*$"
+
+
+def _strip_trailing_paren(name):
+    """Drop a trailing EC parenthetical -- '(EC 1.2.3.4)' or '(no EC)'.
+
+    Deliberately EC-only, not any trailing group. Stripping any group is not
+    idempotent and silently merges enzymes: 'Malate dehydrogenase (NADP+)
+    (EC 1.1.1.82)' would lose the EC on rename and then lose '(NADP+)' on the
+    next pass, collapsing its abstract_enzyme onto plain 'Malate dehydrogenase'
+    and fusing two distinct enzymes into one complex.
+
+    Leading groups are preserved either way: '(Methylsulfanyl)alkanaldoxime
+    N-monooxygenase (EC 1.14.14.43)' -> '(Methylsulfanyl)alkanaldoxime N-monooxygenase'.
+    """
+    return re.sub(_EC_PAREN, "", name).strip()
+
+
+def _rename_abstract_enzyme(entry, old_role, issues=None):
+    """Carry a role rename through to `abstract_enzyme` -- but ONLY when the role
+    is following the default one-role-one-enzyme convention.
+
+    `abstract_enzyme` is the key complexes are grouped by, so for a subunit it
+    deliberately differs from the role name: 'Photosystem II protein PsbH' has
+    abstract_enzyme 'Photosystem II', shared with 22 other subunits. Rewriting
+    that on rename would break the subunit out of its complex. 272 of 937 roles
+    are grouped this way.
+
+    So: rewrite only if the current value is what the convention would have
+    produced for the OLD name (identical to it, or it minus a trailing
+    parenthetical). Otherwise leave it and say so.
+    """
+    current = entry.get("abstract_enzyme") or ""
+    if not current:
+        return False
+    if current not in (old_role, _strip_trailing_paren(old_role)):
+        if issues is not None:
+            issues.warn(
+                f"UPDATE '{old_role}' -> '{entry['role']}': abstract_enzyme "
+                f"'{current}' left unchanged — it is a grouping key (likely a "
+                f"protein complex), not derived from the role name. Use "
+                f"REASSIGN abstract_enzyme if the grouping really should move."
+            )
+        return False
+    entry["abstract_enzyme"] = _strip_trailing_paren(entry["role"])
+    return True
+
+
 def _abstract_enzyme_key(role_entry):
     """Return the abstract enzyme name for grouping, applying the
     spontaneous-reaction disambiguation. Returns None if the role has no
@@ -714,6 +813,264 @@ def derive_new_complexes(roles_list, enzyme_index, existing_ids, issues=None):
         if issues is not None:
             issues.log(f"new complex minted for enzyme '{enz}' as {kid}")
     return new_complexes
+
+
+def apply_complex_actions(complexes_list, actions, issues=None, roles_list=None):
+    """Apply the CPX_* buckets from parse_tsv_text to PlantSEED_Complexes.json.
+
+    Complexes are addressed by ENZYME NAME, not kbase_id: names are unique
+    across all complexes and are the key complexes are grouped by, whereas
+    kbase_id is a hash over enzyme+roles+rxn_cpts that rehashes whenever a
+    reaction is added to the enzyme.
+
+    `direction` and `stoichiometry` are enzyme-wide — they apply to every
+    reaction the enzyme catalyses, in every compartment. That is deliberate:
+    a reaction modification IS an enzyme modification.
+
+    Stoichiometry entries are stored as {compound: {"coefficient": str,
+    "compartment": str|None}}. A coefficient of 0 removes the reagent from the
+    reaction; a compound not already in the reaction is added. The flat legacy
+    form {compound: coefficient} is still read by the template generator, so
+    pre-existing hand-written entries keep working.
+
+    Returns True if any complex was modified.
+    """
+    by_name = {e.get("enzyme"): e for e in complexes_list}
+    changed = False
+
+    for old, new_name in (actions.get("cpx_replace") or {}).items():
+        entry = by_name.get(old)
+        if entry is None:
+            if issues is not None:
+                issues.warn(f"CPX_UPDATE: no complex named '{old}' — skipped")
+            continue
+        if new_name in by_name:
+            if issues is not None:
+                issues.error(f"CPX_UPDATE: '{new_name}' already exists — skipped")
+            continue
+        entry["enzyme"] = new_name
+        by_name[new_name] = by_name.pop(old)
+        changed = True
+        if issues is not None:
+            issues.log(f"complex renamed: '{old}' -> '{new_name}' (kbase_id will rehash)")
+
+    for enzyme, fields in (actions.get("cpx_reassign") or {}).items():
+        entry = by_name.get(enzyme)
+        if entry is None:
+            if issues is not None:
+                issues.warn(f"CPX_REASSIGN: no complex named '{enzyme}' — skipped "
+                            f"(run Prepare_PlantSEED_KBase.py first if the enzyme is new)")
+            continue
+        for field, value in fields.items():
+            if field == "direction" and value not in (">", "<", "="):
+                if issues is not None:
+                    issues.error(f"CPX_REASSIGN on '{enzyme}': direction must be '>', '<' or '=', got {value!r}")
+                continue
+            if entry.get(field) != value:
+                entry[field] = value
+                changed = True
+                if issues is not None:
+                    issues.log(f"complex '{enzyme}': {field} = {value!r}")
+
+    for enzyme, cpds in (actions.get("cpx_stoich") or {}).items():
+        entry = by_name.get(enzyme)
+        if entry is None:
+            if issues is not None:
+                issues.warn(f"CPX_ADD: no complex named '{enzyme}' — skipped "
+                            f"(run Prepare_PlantSEED_KBase.py first if the enzyme is new)")
+            continue
+        stoich = entry.setdefault("stoichiometry", {})
+        for key, coef in cpds.items():
+            try:
+                float(coef)
+            except (TypeError, ValueError):
+                if issues is not None:
+                    issues.error(f"CPX_ADD on '{enzyme}': coefficient for {key} is not numeric "
+                                 f"({coef!r}) — skipped")
+                continue
+            if stoich.get(key) != str(coef):
+                stoich[key] = str(coef)
+                changed = True
+                if issues is not None:
+                    cpd, _, cpt = key.partition("@")
+                    where = cpt or "reaction's first compartment"
+                    issues.log(f"complex '{enzyme}': stoichiometry {cpd} = {coef} in {where}")
+
+    for enzyme, per_rxn in (actions.get("cpx_stoich_rxn") or {}).items():
+        entry = by_name.get(enzyme)
+        if entry is None:
+            if issues is not None:
+                issues.warn(f"CPX_ADD: no complex named '{enzyme}' — skipped")
+            continue
+        owned = {r for d in (entry.get("compartments_reactions") or {}).values()
+                 for r in d.get("reactions", [])}
+        # A reaction added to a role earlier in the SAME TSV is not yet in the
+        # complexes file — Prepare_PlantSEED_KBase.py puts it there. Consult the
+        # roles so assign-then-modify works in one file.
+        if roles_list:
+            for _r in roles_list:
+                if _abstract_enzyme_key(_r) == enzyme:
+                    owned |= set(_r.get("reactions") or [])
+        table = entry.setdefault("reaction_stoichiometry", {})
+        for rxn, cpds in per_rxn.items():
+            if rxn not in owned:
+                if issues is not None:
+                    issues.error(f"CPX_ADD on '{enzyme}': reaction {rxn} is not "
+                                 f"catalysed by this enzyme — skipped")
+                continue
+            for key, coef in cpds.items():
+                try:
+                    float(coef)
+                except (TypeError, ValueError):
+                    if issues is not None:
+                        issues.error(f"CPX_ADD on '{enzyme}'/{rxn}: coefficient for "
+                                     f"{key} is not numeric ({coef!r}) — skipped")
+                    continue
+                if table.setdefault(rxn, {}).get(key) != str(coef):
+                    table[rxn][key] = str(coef)
+                    changed = True
+                    if issues is not None:
+                        cpd, _, cpt = key.partition("@")
+                        where = cpt or "reaction's first compartment"
+                        issues.log(f"complex '{enzyme}' / {rxn} only: stoichiometry "
+                                   f"{cpd} = {coef} in {where}")
+
+    for enzyme, cpds in (actions.get("cpx_stoich_rem") or {}).items():
+        entry = by_name.get(enzyme)
+        if entry is None:
+            if issues is not None:
+                issues.warn(f"CPX_REMOVE: no complex named '{enzyme}' — skipped")
+            continue
+        stoich = entry.get("stoichiometry") or {}
+        for cpd in cpds:
+            # A bare compound drops every compartment-qualified entry for it;
+            # an explicit cpd@cpt drops just that one.
+            victims = [k for k in stoich
+                       if k == cpd or ("@" in cpd and k == cpd)
+                       or ("@" not in cpd and k.partition("@")[0] == cpd)]
+            if not victims and issues is not None:
+                issues.warn(f"CPX_REMOVE on '{enzyme}': no override for {cpd}")
+            for k in victims:
+                del stoich[k]
+                changed = True
+                if issues is not None:
+                    issues.log(f"complex '{enzyme}': stoichiometry override for {k} dropped")
+        if not stoich and "stoichiometry" in entry:
+            del entry["stoichiometry"]
+    return changed
+
+
+def prune_orphan_complexes(complexes_list, roles_list, issues=None):
+    """Drop complexes whose `enzyme` no longer matches any role's
+    abstract_enzyme.
+
+    Renaming a role changes its abstract_enzyme, so `derive_new_complexes`
+    mints a complex under the new name while the old entry lingers, still
+    naming roles that no longer exist. Generate_Core_ModelTemplate.py then
+    dies with `KeyError: <old role name>` when it looks up the role's type.
+
+    Complexes are derived from roles, so an entry with no backing role is
+    unreachable by construction and safe to drop. Returns the list of
+    removed entries.
+    """
+    live = set()
+    for role in roles_list:
+        enz = _abstract_enzyme_key(role)
+        if enz:
+            live.add(enz)
+    removed = [e for e in complexes_list if e.get("enzyme") not in live]
+    for e in removed:
+        complexes_list.remove(e)
+        if issues is not None:
+            issues.warn(
+                f"removed orphaned complex {e.get('kbase_id')} "
+                f"('{e.get('enzyme')}') — no role carries that abstract_enzyme "
+                f"any more (usually the result of a role rename)"
+            )
+    return removed
+
+
+def refresh_existing_complexes(complexes_list, roles_list, issues=None):
+    """Rebuild each EXISTING complex's `roles` and per-compartment `reactions`
+    from the roles that currently map to its enzyme.
+
+    `derive_new_complexes` only mints complexes for enzymes not yet present, so
+    reactions added to an ALREADY-EXISTING role never reached
+    PlantSEED_Complexes.json — and therefore never reached the template or any
+    model. This closes that gap.
+
+    Curation state is preserved, not regenerated: per-compartment `exclude`
+    flags and any complex-level extras (`direction`, `stoichiometry`, ...) are
+    carried over untouched. Only `roles` and the reaction lists are rederived.
+    Compartment keys go through `_lcz_to_cpt_id`, so two-letter transporter
+    codes collapse exactly as they do for new complexes.
+
+    Returns True if any complex was modified.
+    """
+    by_enzyme = {}
+    for role in roles_list:
+        enz = _abstract_enzyme_key(role)
+        if not enz:
+            continue
+        if not role.get("reactions") or not role.get("localization"):
+            continue
+        by_enzyme.setdefault(enz, []).append(role)
+
+    changed = False
+    for entry in complexes_list:
+        enz = entry.get("enzyme")
+        members = by_enzyme.get(enz)
+        if not members:
+            continue
+
+        old_cpts = entry.get("compartments_reactions") or {}
+        new_cpts = {}
+        for role in members:
+            for rxn in role["reactions"]:
+                for lcz in role["localization"]:
+                    cpt_id = _lcz_to_cpt_id(lcz)
+                    block = new_cpts.get(cpt_id)
+                    if block is None:
+                        prior = old_cpts.get(cpt_id, {})
+                        block = {
+                            "reactions": [],
+                            "reagents": lcz,
+                            # preserve curated exclusion; default False for a
+                            # compartment this complex did not previously have
+                            "exclude": prior.get("exclude", False),
+                        }
+                        new_cpts[cpt_id] = block
+                    elif len(block["reagents"]) == 1 and len(lcz) == 2:
+                        # a 2-letter code is more informative than a 1-letter
+                        # one that mapped to the same compartment
+                        block["reagents"] = lcz
+                    if rxn not in block["reactions"]:
+                        block["reactions"].append(rxn)
+        # Preserve the existing on-disk ordering for reactions that survive, and
+        # append newly-added ones after them. Sorting instead would rewrite ~88
+        # untouched complexes and bury the real change in diff noise.
+        for cpt_id, block in new_cpts.items():
+            desired = block["reactions"]
+            prior = (old_cpts.get(cpt_id) or {}).get("reactions", [])
+            kept = [r for r in prior if r in desired]
+            block["reactions"] = kept + [r for r in desired if r not in kept]
+
+        new_roles = sorted({r["role"] for r in members})
+        if new_roles == entry.get("roles") and new_cpts == old_cpts:
+            continue
+
+        if issues is not None:
+            before = sum(len(b.get("reactions", [])) for b in old_cpts.values())
+            after = sum(len(b["reactions"]) for b in new_cpts.values())
+            issues.log(
+                f"complex '{enz}' refreshed from roles: "
+                f"{len(entry.get('roles', []))}->{len(new_roles)} role(s), "
+                f"{before}->{after} reaction(s)"
+            )
+        entry["roles"] = new_roles
+        entry["compartments_reactions"] = new_cpts
+        changed = True
+    return changed
 
 
 def validate_subcomplex_pointers(roles_list, complex_ids, issues=None):
@@ -826,6 +1183,21 @@ def run_apply(tsv_text, curator, schema, dry_run=False, store=None, roles_path=N
     if not dry_run and touched and not issues.errors:
         atomic_write(target_roles_path, json.dumps(roles_list, indent=4))
         issues.log(f"Wrote {len(roles_list)} roles to {target_roles_path}")
+
+    # CPX_* rows target PlantSEED_Complexes.json, addressed by enzyme name.
+    # Applied after the roles write so a rename landing in the same TSV is
+    # already reflected in the roles file.
+    if any(actions.get(b) for b in ("cpx_replace", "cpx_reassign", "cpx_stoich",
+                                    "cpx_stoich_rxn", "cpx_stoich_rem")):
+        if not os.path.isfile(paths.COMPLEXES_FILE):
+            issues.error(f"PlantSEED_Complexes.json not found at {paths.COMPLEXES_FILE}")
+        else:
+            with open(paths.COMPLEXES_FILE) as f:
+                complexes_list = json.load(f)
+            if apply_complex_actions(complexes_list, actions, issues=issues,
+                                     roles_list=roles_list) and not dry_run:
+                atomic_write(paths.COMPLEXES_FILE, json.dumps(complexes_list, indent=4))
+                issues.log(f"Wrote {len(complexes_list)} complexes to {paths.COMPLEXES_FILE}")
         if store is not None:
             store.load_roles(force=True)
     elif dry_run:

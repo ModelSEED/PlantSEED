@@ -6546,9 +6546,9 @@
             "name": "Stearoyl-[acyl-carrier protein]",
             "abbreviation": "cll_430",
             "aliases": [],
-            "formula": "C29H60N3O8PR2S",
+            "formula": "C29H55N2O8PRS",
             "isCofactor": 0,
-            "defaultCharge": 0.0,
+            "defaultCharge": -2.0,
             "mass": 300.0,
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
@@ -7621,19 +7621,6 @@
             "compound_ref": "48/1/5/compounds/id/cpd21384"
         },
         {
-            "id": "cpd21904",
-            "name": "2-Oxo-carboxylates",
-            "abbreviation": "2-Oxo-carboxylates",
-            "aliases": [],
-            "formula": "C2O3R",
-            "isCofactor": 0,
-            "defaultCharge": -1.0,
-            "mass": 10000000.0,
-            "deltaG": 10000000.0,
-            "deltaGErr": 10000000.0,
-            "compound_ref": "48/1/5/compounds/id/cpd21904"
-        },
-        {
             "id": "cpd22000",
             "name": "3-benzoyloxypropyl-glucosinolate",
             "abbreviation": "3-benzoyloxypropyl-glucosinolate",
@@ -7684,19 +7671,6 @@
             "deltaG": 10000000.0,
             "deltaGErr": 10000000.0,
             "compound_ref": "48/1/5/compounds/id/cpd22077"
-        },
-        {
-            "id": "cpd22369",
-            "name": "Amino-Acids-20",
-            "abbreviation": "Amino-Acids-20",
-            "aliases": [],
-            "formula": "C2H4NO2R",
-            "isCofactor": 0,
-            "defaultCharge": 0.0,
-            "mass": 10000000.0,
-            "deltaG": 10000000.0,
-            "deltaGErr": 10000000.0,
-            "compound_ref": "48/1/5/compounds/id/cpd22369"
         },
         {
             "id": "cpd22445",
@@ -10301,21 +10275,21 @@
         },
         {
             "id": "cpd00042_c",
-            "charge": -1.0,
+            "charge": -2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00042",
             "templatecompartment_ref": "~/compartments/id/c"
         },
         {
             "id": "cpd00042_d",
-            "charge": -1.0,
+            "charge": -2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00042",
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
             "id": "cpd00042_m",
-            "charge": -1.0,
+            "charge": -2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00042",
             "templatecompartment_ref": "~/compartments/id/m"
@@ -11148,21 +11122,21 @@
         },
         {
             "id": "cpd00084_c",
-            "charge": 0.0,
+            "charge": -1.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00084",
             "templatecompartment_ref": "~/compartments/id/c"
         },
         {
             "id": "cpd00084_d",
-            "charge": 0.0,
+            "charge": -1.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00084",
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
             "id": "cpd00084_m",
-            "charge": 0.0,
+            "charge": -1.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00084",
             "templatecompartment_ref": "~/compartments/id/m"
@@ -12583,21 +12557,21 @@
         },
         {
             "id": "cpd00220_c",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00220",
             "templatecompartment_ref": "~/compartments/id/c"
         },
         {
             "id": "cpd00220_d",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00220",
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
             "id": "cpd00220_m",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00220",
             "templatecompartment_ref": "~/compartments/id/m"
@@ -13906,14 +13880,14 @@
         },
         {
             "id": "cpd00506_c",
-            "charge": -1.0,
+            "charge": -2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00506",
             "templatecompartment_ref": "~/compartments/id/c"
         },
         {
             "id": "cpd00506_d",
-            "charge": -1.0,
+            "charge": -2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00506",
             "templatecompartment_ref": "~/compartments/id/d"
@@ -14284,14 +14258,14 @@
         },
         {
             "id": "cpd00793_c",
-            "charge": 0.0,
+            "charge": -1.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00793",
             "templatecompartment_ref": "~/compartments/id/c"
         },
         {
             "id": "cpd00793_d",
-            "charge": 0.0,
+            "charge": -1.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00793",
             "templatecompartment_ref": "~/compartments/id/d"
@@ -14592,7 +14566,7 @@
         },
         {
             "id": "cpd00939_d",
-            "charge": 1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd00939",
             "templatecompartment_ref": "~/compartments/id/d"
@@ -14886,7 +14860,7 @@
         },
         {
             "id": "cpd01620_c",
-            "charge": -7.0,
+            "charge": -8.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd01620",
             "templatecompartment_ref": "~/compartments/id/c"
@@ -15033,7 +15007,7 @@
         },
         {
             "id": "cpd01775_d",
-            "charge": -5.0,
+            "charge": -6.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd01775",
             "templatecompartment_ref": "~/compartments/id/d"
@@ -15551,14 +15525,14 @@
         },
         {
             "id": "cpd02656_d",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd02656",
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
             "id": "cpd02666_c",
-            "charge": -3.0,
+            "charge": -4.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd02666",
             "templatecompartment_ref": "~/compartments/id/c"
@@ -15670,7 +15644,7 @@
         },
         {
             "id": "cpd02775_d",
-            "charge": -1.0,
+            "charge": -2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd02775",
             "templatecompartment_ref": "~/compartments/id/d"
@@ -15691,14 +15665,14 @@
         },
         {
             "id": "cpd02826_d",
-            "charge": -1.0,
+            "charge": -2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd02826",
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
             "id": "cpd02826_m",
-            "charge": -1.0,
+            "charge": -2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd02826",
             "templatecompartment_ref": "~/compartments/id/m"
@@ -15761,14 +15735,14 @@
         },
         {
             "id": "cpd02920_c",
-            "charge": -3.0,
+            "charge": -2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd02920",
             "templatecompartment_ref": "~/compartments/id/c"
         },
         {
             "id": "cpd02920_m",
-            "charge": -3.0,
+            "charge": -2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd02920",
             "templatecompartment_ref": "~/compartments/id/m"
@@ -15796,7 +15770,7 @@
         },
         {
             "id": "cpd02978_c",
-            "charge": -4.0,
+            "charge": -3.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd02978",
             "templatecompartment_ref": "~/compartments/id/c"
@@ -16062,21 +16036,21 @@
         },
         {
             "id": "cpd03969_c",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd03969",
             "templatecompartment_ref": "~/compartments/id/c"
         },
         {
             "id": "cpd03969_n",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd03969",
             "templatecompartment_ref": "~/compartments/id/n"
         },
         {
             "id": "cpd03969_r",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd03969",
             "templatecompartment_ref": "~/compartments/id/r"
@@ -16384,7 +16358,7 @@
         },
         {
             "id": "cpd08630_d",
-            "charge": -1.0,
+            "charge": -2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd08630",
             "templatecompartment_ref": "~/compartments/id/d"
@@ -16762,14 +16736,14 @@
         },
         {
             "id": "cpd11630_c",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd11630",
             "templatecompartment_ref": "~/compartments/id/c"
         },
         {
             "id": "cpd11630_d",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd11630",
             "templatecompartment_ref": "~/compartments/id/d"
@@ -16790,7 +16764,7 @@
         },
         {
             "id": "cpd12458_d",
-            "charge": 0.0,
+            "charge": -2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd12458",
             "templatecompartment_ref": "~/compartments/id/d"
@@ -16979,7 +16953,7 @@
         },
         {
             "id": "cpd17395_c",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd17395",
             "templatecompartment_ref": "~/compartments/id/c"
@@ -17587,13 +17561,6 @@
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
-            "id": "cpd21904_d",
-            "charge": -1.0,
-            "maxuptake": 0.0,
-            "templatecompound_ref": "~/compounds/id/cpd21904",
-            "templatecompartment_ref": "~/compartments/id/d"
-        },
-        {
             "id": "cpd22000_c",
             "charge": -1.0,
             "maxuptake": 0.0,
@@ -17622,13 +17589,6 @@
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
-            "id": "cpd22369_d",
-            "charge": 0.0,
-            "maxuptake": 0.0,
-            "templatecompound_ref": "~/compounds/id/cpd22369",
-            "templatecompartment_ref": "~/compartments/id/d"
-        },
-        {
             "id": "cpd22445_d",
             "charge": -2.0,
             "maxuptake": 0.0,
@@ -17651,7 +17611,7 @@
         },
         {
             "id": "cpd23383_c",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd23383",
             "templatecompartment_ref": "~/compartments/id/c"
@@ -17672,7 +17632,7 @@
         },
         {
             "id": "cpd23386_c",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd23386",
             "templatecompartment_ref": "~/compartments/id/c"
@@ -17693,7 +17653,7 @@
         },
         {
             "id": "cpd23389_c",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd23389",
             "templatecompartment_ref": "~/compartments/id/c"
@@ -17714,7 +17674,7 @@
         },
         {
             "id": "cpd23392_c",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd23392",
             "templatecompartment_ref": "~/compartments/id/c"
@@ -17735,7 +17695,7 @@
         },
         {
             "id": "cpd23395_c",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd23395",
             "templatecompartment_ref": "~/compartments/id/c"
@@ -17756,7 +17716,7 @@
         },
         {
             "id": "cpd23398_c",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd23398",
             "templatecompartment_ref": "~/compartments/id/c"
@@ -17777,7 +17737,7 @@
         },
         {
             "id": "cpd23401_c",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd23401",
             "templatecompartment_ref": "~/compartments/id/c"
@@ -17798,7 +17758,7 @@
         },
         {
             "id": "cpd23404_c",
-            "charge": -1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd23404",
             "templatecompartment_ref": "~/compartments/id/c"
@@ -18211,7 +18171,7 @@
         },
         {
             "id": "cpd27355_d",
-            "charge": 1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd27355",
             "templatecompartment_ref": "~/compartments/id/d"
@@ -18316,7 +18276,7 @@
         },
         {
             "id": "cpd27746_d",
-            "charge": 0.0,
+            "charge": 2.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd27746",
             "templatecompartment_ref": "~/compartments/id/d"
@@ -18344,14 +18304,14 @@
         },
         {
             "id": "cpd27847_d",
-            "charge": 1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd27847",
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
             "id": "cpd27884_d",
-            "charge": -1.0,
+            "charge": 1.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd27884",
             "templatecompartment_ref": "~/compartments/id/d"
@@ -18379,21 +18339,21 @@
         },
         {
             "id": "cpd28060_c",
-            "charge": 1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd28060",
             "templatecompartment_ref": "~/compartments/id/c"
         },
         {
             "id": "cpd28060_d",
-            "charge": 1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd28060",
             "templatecompartment_ref": "~/compartments/id/d"
         },
         {
             "id": "cpd28060_m",
-            "charge": 1.0,
+            "charge": 0.0,
             "maxuptake": 0.0,
             "templatecompound_ref": "~/compounds/id/cpd28060",
             "templatecompartment_ref": "~/compartments/id/m"
@@ -27608,8 +27568,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_32252b",
-                "~/complexes/id/PS_complex_5bd6c2"
+                "~/complexes/id/PS_complex_32252b"
             ]
         },
         {
@@ -34324,7 +34283,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -41690,30 +41649,6 @@
             ]
         },
         {
-            "id": "rxn08544_x",
-            "name": "Fumarate transport via diffusion (extracellular to periplasm)",
-            "templatecompartment_ref": "~/compartments/id/x",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "=",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00106_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00106_x",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_587419"
-            ]
-        },
-        {
             "id": "rxn08556_m",
             "name": "sn-glycerol 3-phosphate:ubiquinone-8 oxidoreductase",
             "templatecompartment_ref": "~/compartments/id/m",
@@ -41906,30 +41841,6 @@
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00223_d",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_c2bdc1"
-            ]
-        },
-        {
-            "id": "rxn08645_m",
-            "name": "D-glycerate transport via diffusion (extracellular to periplasm)",
-            "templatecompartment_ref": "~/compartments/id/m",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "=",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00223_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00223_m",
                     "coefficient": 1.0
                 }
             ],
@@ -45222,78 +45133,6 @@
             ]
         },
         {
-            "id": "rxn10480_m",
-            "name": "CO transporter via diffusion",
-            "templatecompartment_ref": "~/compartments/id/m",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "=",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00204_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00204_m",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_520cf3"
-            ]
-        },
-        {
-            "id": "rxn10480_v",
-            "name": "CO transporter via diffusion",
-            "templatecompartment_ref": "~/compartments/id/v",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "=",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00204_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00204_v",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_520cf3"
-            ]
-        },
-        {
-            "id": "rxn10480_x",
-            "name": "CO transporter via diffusion",
-            "templatecompartment_ref": "~/compartments/id/x",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "=",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00204_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00204_x",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_520cf3"
-            ]
-        },
-        {
             "id": "rxn10826_d",
             "name": "TRANS-RXNBWI-115401.ce.maizeexp.HCO3_HCO3",
             "templatecompartment_ref": "~/compartments/id/d",
@@ -45763,7 +45602,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -45911,7 +45750,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_1374b1"
+                "~/complexes/id/PS_complex_3ee0b3"
             ]
         },
         {
@@ -46686,12 +46525,12 @@
                     "coefficient": 1.0
                 },
                 {
-                    "coefficient": -1.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d",
+                    "coefficient": -1.0
                 },
                 {
-                    "coefficient": 1.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_d"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_d",
+                    "coefficient": 1.0
                 }
             ],
             "templatecomplex_refs": [
@@ -46722,12 +46561,12 @@
                     "coefficient": 1.0
                 },
                 {
-                    "coefficient": -1.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d",
+                    "coefficient": -1.0
                 },
                 {
-                    "coefficient": 1.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_d"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_d",
+                    "coefficient": 1.0
                 }
             ],
             "templatecomplex_refs": [
@@ -47064,7 +46903,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_1374b1"
+                "~/complexes/id/PS_complex_3ee0b3"
             ]
         },
         {
@@ -47283,12 +47122,12 @@
                     "coefficient": 1.0
                 },
                 {
-                    "coefficient": -1.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d",
+                    "coefficient": -1.0
                 },
                 {
-                    "coefficient": 1.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_d"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_d",
+                    "coefficient": 1.0
                 }
             ],
             "templatecomplex_refs": [
@@ -47328,7 +47167,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -47464,12 +47303,12 @@
                     "coefficient": 1.0
                 },
                 {
-                    "coefficient": -1.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d",
+                    "coefficient": -1.0
                 },
                 {
-                    "coefficient": 1.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_d"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_d",
+                    "coefficient": 1.0
                 }
             ],
             "templatecomplex_refs": [
@@ -47500,12 +47339,12 @@
                     "coefficient": 1.0
                 },
                 {
-                    "coefficient": -1.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d",
+                    "coefficient": -1.0
                 },
                 {
-                    "coefficient": 1.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_d"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_d",
+                    "coefficient": 1.0
                 }
             ],
             "templatecomplex_refs": [
@@ -47666,12 +47505,12 @@
                     "coefficient": 1.0
                 },
                 {
-                    "coefficient": -1.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00003_d",
+                    "coefficient": -1.0
                 },
                 {
-                    "coefficient": 1.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_d"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00004_d",
+                    "coefficient": 1.0
                 }
             ],
             "templatecomplex_refs": [
@@ -48035,7 +47874,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -51525,8 +51364,8 @@
                     "coefficient": 2.0
                 },
                 {
-                    "coefficient": 4.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_y"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_y",
+                    "coefficient": 4.0
                 }
             ],
             "templatecomplex_refs": [
@@ -51661,17 +51500,16 @@
                     "coefficient": 2.0
                 },
                 {
-                    "coefficient": -4.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_d",
+                    "coefficient": -4.0
                 },
                 {
-                    "coefficient": 4.0,
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_y"
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00067_y",
+                    "coefficient": 4.0
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_385743",
-                "~/complexes/id/PS_complex_743fd8"
+                "~/complexes/id/PS_complex_385743"
             ]
         },
         {
@@ -52059,7 +51897,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_82bdcd"
+                "~/complexes/id/PS_complex_2a49f5"
             ]
         },
         {
@@ -52099,7 +51937,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_82bdcd"
+                "~/complexes/id/PS_complex_2a49f5"
             ]
         },
         {
@@ -52139,7 +51977,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_82bdcd"
+                "~/complexes/id/PS_complex_2a49f5"
             ]
         },
         {
@@ -52179,7 +52017,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_82bdcd"
+                "~/complexes/id/PS_complex_2a49f5"
             ]
         },
         {
@@ -52219,7 +52057,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_82bdcd"
+                "~/complexes/id/PS_complex_2a49f5"
             ]
         },
         {
@@ -52259,7 +52097,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_82bdcd"
+                "~/complexes/id/PS_complex_2a49f5"
             ]
         },
         {
@@ -52579,7 +52417,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52611,7 +52449,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52643,7 +52481,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52675,7 +52513,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52707,7 +52545,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52739,7 +52577,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52771,7 +52609,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -52803,7 +52641,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_f80bf6"
+                "~/complexes/id/PS_complex_660e96"
             ]
         },
         {
@@ -53318,12 +53156,12 @@
                     "coefficient": -1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_d",
-                    "coefficient": -1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd17403_d",
                     "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_d",
+                    "coefficient": -1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00024_d",
@@ -54339,7 +54177,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_1374b1"
+                "~/complexes/id/PS_complex_3ee0b3"
             ]
         },
         {
@@ -55699,7 +55537,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -55735,7 +55573,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -55771,7 +55609,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -55807,7 +55645,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_5831c7"
+                "~/complexes/id/PS_complex_69ea3e"
             ]
         },
         {
@@ -55862,12 +55700,12 @@
                     "coefficient": -1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_d",
-                    "coefficient": -1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd17407_d",
                     "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_d",
+                    "coefficient": -1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00024_d",
@@ -55894,12 +55732,12 @@
                     "coefficient": -1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_d",
-                    "coefficient": -1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd17411_d",
                     "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_d",
+                    "coefficient": -1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00024_d",
@@ -55926,12 +55764,12 @@
                     "coefficient": -1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_d",
-                    "coefficient": -1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd17415_d",
                     "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_d",
+                    "coefficient": -1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00024_d",
@@ -55958,12 +55796,12 @@
                     "coefficient": -1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_d",
-                    "coefficient": -1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd17419_d",
                     "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_d",
+                    "coefficient": -1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00024_d",
@@ -55990,12 +55828,12 @@
                     "coefficient": -1.0
                 },
                 {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_d",
-                    "coefficient": -1.0
-                },
-                {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd17423_d",
                     "coefficient": 1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00023_d",
+                    "coefficient": -1.0
                 },
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00024_d",
@@ -58243,30 +58081,6 @@
             ]
         },
         {
-            "id": "rxn39249_m",
-            "name": "S-Adenosyl-4-methylthio-2-oxobutanoate Transport",
-            "templatecompartment_ref": "~/compartments/id/m",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "=",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd02701_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd02701_m",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_cf1435"
-            ]
-        },
-        {
             "id": "rxn39250_c",
             "name": "5-deoxyadenosine phosphorylase",
             "templatecompartment_ref": "~/compartments/id/c",
@@ -58495,7 +58309,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_ed48c3"
+                "~/complexes/id/PS_complex_12c851"
             ]
         },
         {
@@ -59064,8 +58878,8 @@
             ]
         },
         {
-            "id": "glucosinolates_1",
-            "name": "Glucosinolate Transport",
+            "id": "gsltrans01_d",
+            "name": "De novo: gsltrans01",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
@@ -59083,33 +58897,13 @@
                     "coefficient": 1.0
                 }
             ],
-            "templatecomplex_refs": []
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_ebc26f"
+            ]
         },
         {
-            "id": "glucosinolates_2",
-            "name": "Glucosinolate Transport",
-            "templatecompartment_ref": "~/compartments/id/d",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "=",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd17400_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd17400_d",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": []
-        },
-        {
-            "id": "glucosinolates_3",
-            "name": "Glucosinolate Transport",
+            "id": "gsltrans03_d",
+            "name": "De novo: gsltrans03",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
@@ -59127,11 +58921,13 @@
                     "coefficient": 1.0
                 }
             ],
-            "templatecomplex_refs": []
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_ebc26f"
+            ]
         },
         {
-            "id": "glucosinolates_4",
-            "name": "Glucosinolate Transport",
+            "id": "gsltrans04_d",
+            "name": "De novo: gsltrans04",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
@@ -59149,11 +58945,13 @@
                     "coefficient": 1.0
                 }
             ],
-            "templatecomplex_refs": []
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_ebc26f"
+            ]
         },
         {
-            "id": "glucosinolates_5",
-            "name": "Glucosinolate Transport",
+            "id": "gsltrans05_d",
+            "name": "De novo: gsltrans05",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
@@ -59171,11 +58969,13 @@
                     "coefficient": 1.0
                 }
             ],
-            "templatecomplex_refs": []
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_ebc26f"
+            ]
         },
         {
-            "id": "glucosinolates_6",
-            "name": "Glucosinolate Transport",
+            "id": "gsltrans06_d",
+            "name": "De novo: gsltrans06",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
@@ -59193,11 +58993,13 @@
                     "coefficient": 1.0
                 }
             ],
-            "templatecomplex_refs": []
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_ebc26f"
+            ]
         },
         {
-            "id": "glucosinolates_7",
-            "name": "Glucosinolate Transport",
+            "id": "gsltrans07_d",
+            "name": "De novo: gsltrans07",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
@@ -59215,11 +59017,13 @@
                     "coefficient": 1.0
                 }
             ],
-            "templatecomplex_refs": []
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_ebc26f"
+            ]
         },
         {
-            "id": "glucosinolates_8",
-            "name": "Glucosinolate Transport",
+            "id": "gsltrans08_d",
+            "name": "De novo: gsltrans08",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
@@ -59237,11 +59041,13 @@
                     "coefficient": 1.0
                 }
             ],
-            "templatecomplex_refs": []
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_ebc26f"
+            ]
         },
         {
-            "id": "glucosinolates_9",
-            "name": "Glucosinolate Transport",
+            "id": "gsltrans09_d",
+            "name": "De novo: gsltrans09",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
             "type": "universal",
@@ -59257,6 +59063,44 @@
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00506_d",
                     "coefficient": 1.0
+                }
+            ],
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_ebc26f"
+            ]
+        },
+        {
+            "id": "drain_cpd00204_d",
+            "name": "Byproduct drain: CO",
+            "templatecompartment_ref": "~/compartments/id/d",
+            "reaction_ref": "48/1/5/reactions/id/rxn14003",
+            "type": "universal",
+            "direction": ">",
+            "GapfillDirection": ">",
+            "maxforflux": 0.0,
+            "maxrevflux": 0.0,
+            "templateReactionReagents": [
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00204_d",
+                    "coefficient": -1.0
+                }
+            ],
+            "templatecomplex_refs": []
+        },
+        {
+            "id": "drain_cpd02701_m",
+            "name": "Byproduct drain: S-Adenosyl-4-methylthio-2-oxobutanoate",
+            "templatecompartment_ref": "~/compartments/id/m",
+            "reaction_ref": "48/1/5/reactions/id/rxn14003",
+            "type": "universal",
+            "direction": ">",
+            "GapfillDirection": ">",
+            "maxforflux": 0.0,
+            "maxrevflux": 0.0,
+            "templateReactionReagents": [
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd02701_m",
+                    "coefficient": -1.0
                 }
             ],
             "templatecomplex_refs": []
@@ -62125,6 +61969,13 @@
             ]
         },
         {
+            "id": "PS_role_d37d41",
+            "name": "Glucosinolate transport",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": []
+        },
+        {
             "id": "PS_role_51033c",
             "name": "Glucuronokinase (EC 2.7.1.43)",
             "source": "PlantSEED",
@@ -64536,15 +64387,6 @@
             ]
         },
         {
-            "id": "PS_role_ad1b09",
-            "name": "Photosystem II protein Psb27",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": [
-                "Athaliana_TAIR10||AT1G03600"
-            ]
-        },
-        {
             "id": "PS_role_5c046e",
             "name": "Photosystem II protein PsbH",
             "source": "PlantSEED",
@@ -66253,13 +66095,6 @@
             "features": []
         },
         {
-            "id": "PS_role_362277",
-            "name": "photosystem I assembly related protein Ycf37",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": []
-        },
-        {
             "id": "PS_role_d9335e",
             "name": "photosystem I biogenesis protein BtpA",
             "source": "PlantSEED",
@@ -66982,14 +66817,14 @@
             ]
         },
         {
-            "id": "PS_complex_1374b1",
+            "id": "PS_complex_12c851",
             "name": "",
             "reference": "",
             "source": "PlantSEED",
             "confidence": 1.0,
             "complexroles": [
                 {
-                    "templaterole_ref": "~/roles/id/PS_role_cb78cd",
+                    "templaterole_ref": "~/roles/id/PS_role_c902af",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -67702,6 +67537,20 @@
             ]
         },
         {
+            "id": "PS_complex_2a49f5",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_8975d1",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
             "id": "PS_complex_2a4fd4",
             "name": "",
             "reference": "",
@@ -68249,6 +68098,11 @@
             "confidence": 1.0,
             "complexroles": [
                 {
+                    "templaterole_ref": "~/roles/id/PS_role_60f31d",
+                    "optional_role": 0,
+                    "triggering": 1
+                },
+                {
                     "templaterole_ref": "~/roles/id/PS_role_10397f",
                     "optional_role": 0,
                     "triggering": 1
@@ -68418,6 +68272,16 @@
             "confidence": 1.0,
             "complexroles": [
                 {
+                    "templaterole_ref": "~/roles/id/PS_role_659711",
+                    "optional_role": 0,
+                    "triggering": 1
+                },
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_89ce59",
+                    "optional_role": 0,
+                    "triggering": 1
+                },
+                {
                     "templaterole_ref": "~/roles/id/PS_role_f54e19",
                     "optional_role": 0,
                     "triggering": 1
@@ -68439,11 +68303,6 @@
                 },
                 {
                     "templaterole_ref": "~/roles/id/PS_role_3c6f1d",
-                    "optional_role": 0,
-                    "triggering": 1
-                },
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_ad1b09",
                     "optional_role": 0,
                     "triggering": 1
                 },
@@ -68874,6 +68733,20 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_0b912c",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_3ee0b3",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_cb78cd",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -69735,20 +69608,6 @@
             ]
         },
         {
-            "id": "PS_complex_5831c7",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_726ec8",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
             "id": "PS_complex_583fda",
             "name": "",
             "reference": "",
@@ -70351,6 +70210,20 @@
             ]
         },
         {
+            "id": "PS_complex_660e96",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_2b7cf0",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
             "id": "PS_complex_66310b",
             "name": "",
             "reference": "",
@@ -70521,6 +70394,20 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_d0acaa",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_69ea3e",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_726ec8",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -71321,20 +71208,6 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_7a5f1b",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
-            "id": "PS_complex_82bdcd",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_8975d1",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -73118,11 +72991,6 @@
                     "triggering": 1
                 },
                 {
-                    "templaterole_ref": "~/roles/id/PS_role_362277",
-                    "optional_role": 0,
-                    "triggering": 1
-                },
-                {
                     "templaterole_ref": "~/roles/id/PS_role_d9335e",
                     "optional_role": 0,
                     "triggering": 1
@@ -73343,6 +73211,14 @@
                     "triggering": 1
                 }
             ]
+        },
+        {
+            "id": "PS_complex_c1a4a3",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": []
         },
         {
             "id": "PS_complex_c2bdc1",
@@ -74698,6 +74574,20 @@
             ]
         },
         {
+            "id": "PS_complex_ebc26f",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_d37d41",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
             "id": "PS_complex_ecfa74",
             "name": "",
             "reference": "",
@@ -74734,20 +74624,6 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_f0c5ba",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
-            "id": "PS_complex_ed48c3",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_c902af",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -75084,20 +74960,6 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_373c38",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
-            "id": "PS_complex_f80bf6",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_2b7cf0",
                     "optional_role": 0,
                     "triggering": 1
                 }

@@ -4,6 +4,7 @@ import httpx
 import time
 import pickle
 import copy
+import glob
 import os
 import re
 import json
@@ -341,9 +342,15 @@ for complex in complex_list:
 			# when generating the reagents below
 			reactions_cpts[tmpl_rxn]=cpt['reagents']
 
-			# For changing/removing/adding compounds
-			if('stoichiometry' in complex):
-				reactions_stoich[tmpl_rxn]=complex['stoichiometry']
+			# For changing/removing/adding compounds.
+			# Enzyme-wide overrides apply to every reaction the enzyme catalyses;
+			# reaction_stoichiometry scopes an override to one reaction and wins
+			# where both name the same compound.
+			if('stoichiometry' in complex or 'reaction_stoichiometry' in complex):
+				merged = dict(complex.get('stoichiometry',{}))
+				merged.update(complex.get('reaction_stoichiometry',{}).get(rxn,{}))
+				if(merged):
+					reactions_stoich[tmpl_rxn]=merged
 
 			for role in complex['roles']:
 				if(role.lower() == 'spontaneous reaction'):
@@ -447,12 +454,6 @@ for tmpl_rxn, cpx_list in template_reactions_complexes.items():
 
 rca_fh.close()
 
-# Default proton compounds for thylakoid proton motive force
-proton_d = {"coefficient": -1.0,
-        	"templatecompcompound_ref": "~/compcompounds/id/cpd00067_d"}
-proton_y = {"coefficient": -1.0,
-        	"templatecompcompound_ref": "~/compcompounds/id/cpd00067_y"}
-
 # Generate TemplateReactions
 template_reactions = list()
 
@@ -479,24 +480,65 @@ check_tpl_cpcpd_dict = dict()
 template_compcompounds = list()
 
 excluded_rxns_fh = open("Excluded_Reactions.txt","w")
-for template_reaction in sorted(reactions_roles):
+# De novo reactions are emitted last, so a curated reaction never precedes the
+# database reactions in creating shared compcompounds. Charge no longer depends
+# on this -- every compcompound takes the compound record's value -- but keeping
+# the order stable keeps the emitted compcompound list stable too.
+def _emit_order(tmpl_rxn):
+	return (tmpl_rxn.split('_')[0] not in reactions_dict, tmpl_rxn)
+
+for template_reaction in sorted(reactions_roles, key=_emit_order):
 
 	[base_reaction,reaction_cpt]=template_reaction.split('_')
 
-	if(reactions_dict[base_reaction]['is_obsolete'] == 1):
+	# De novo reactions: curation asserts the step exists, ModelSEED has no entry.
+	# Used for transport the network requires but the biochemistry does not carry
+	# -- eight of the nine glucosinolate transport compounds have no transport
+	# reaction anywhere in ModelSEED. The curator supplies the whole stoichiometry
+	# through CPX_ADD, so a complete override IS the reaction definition rather
+	# than a patch on top of one. Nothing else about such a reaction can be looked
+	# up, so name, direction and status are all defaulted here.
+	de_novo = base_reaction not in reactions_dict
+	if(de_novo and template_reaction not in reactions_stoich):
+		excluded_rxns_fh.write("Skipping unknown reaction: "+base_reaction+
+							   "\tnot in ModelSEED and no curator stoichiometry\n")
+		continue
+
+	if(de_novo is False and reactions_dict[base_reaction]['is_obsolete'] == 1):
 		print("Obsolete: ",base_reaction,": ",reactions_dict[base_reaction]['definition'])
 
-	# Skip unbalanced reactions
-	if(base_reaction not in excepted_reactions_list and \
+	# Skip unbalanced reactions.
+	#
+	# The ModelSEED 'status' string is written when a reaction is deposited and is
+	# never recomputed, so it can disagree with the reaction's own formulas in the
+	# same commit. It is therefore not authoritative for reactions PlantSEED itself
+	# modifies: a curator stoichiometry override is an assertion that the reaction
+	# balances *as built*, and the reaction is admitted on that basis whatever the
+	# deposited status says. Those assertions are audited after the fact by
+	# Check_Template_Reaction_Balance.py, which recomputes balance from the generated
+	# template using ModelSEEDDatabase's own BiochemPy.balanceReaction.
+	#
+	# Unbalanced_Reactions_to_Fix.txt is now only for reactions we admit *without*
+	# fixing them -- genuine upstream breakage waved through deliberately.
+	curator_modified = template_reaction in reactions_stoich
+	if(de_novo is False and curator_modified is False and \
+	   base_reaction not in excepted_reactions_list and \
 	   (base_reaction not in reactions_dict or \
 	 	('OK' not in reactions_dict[base_reaction]['status'] and \
 			reactions_dict[base_reaction]['status'].startswith('CI:') is False))):
 		excluded_rxns_fh.write("Skipping unbalanced reaction: "+base_reaction+"\t"+reactions_dict[base_reaction]['status']+"\n")
 		continue
 
+	if(de_novo is False and curator_modified is True and base_reaction in reactions_dict and \
+	   'OK' not in reactions_dict[base_reaction]['status'] and \
+	   reactions_dict[base_reaction]['status'].startswith('CI:') is False):
+		print("INFO: "+template_reaction+": admitted on curator stoichiometry override "
+			  "(deposited status "+reactions_dict[base_reaction]['status']+")")
+
 	template_reaction_hash = copy.deepcopy(default_template_reaction)
 	template_reaction_hash['id']=template_reaction
-	template_reaction_hash['name']=reactions_dict[base_reaction]['name']
+	template_reaction_hash['name']=('De novo: '+base_reaction) if de_novo \
+								   else reactions_dict[base_reaction]['name']
 	template_reaction_hash['templatecompartment_ref']="~/compartments/id/"+reaction_cpt
 
 	#determine reaction type (indicates conservation)
@@ -504,7 +546,7 @@ for template_reaction in sorted(reactions_roles):
 	
 	#determine reaction direction
 	direction = "="
-	if(reactions_dict[base_reaction]['reversibility'] != "?"):
+	if(de_novo is False and reactions_dict[base_reaction]['reversibility'] != "?"):
 		direction = reactions_dict[base_reaction]['reversibility']
 	
 	if(base_reaction in curated_reactions_dict):
@@ -516,14 +558,39 @@ for template_reaction in sorted(reactions_roles):
 		gapfilling_direction = direction
 	template_reaction_hash['GapfillDirection']=gapfilling_direction
 
-	# Add reagents
-	for rgt in (reactions_dict[base_reaction]['stoichiometry']):
+	# Curator stoichiometry overrides for this enzyme, if any. Two accepted forms:
+	#   flat   {cpd: "3"}                                  (legacy, hand-written)
+	#   nested {cpd: {"coefficient": "3", "compartment": "d"}}   (CPX_ADD)
+	# A coefficient of 0 removes the reagent; a compound not already in the
+	# database reaction is ADDED (see the second pass below).
+	# Keys are "cpd" (the reaction's first compartment) or "cpd@cpt" (that
+	# compartment specifically). The same compound may appear under several
+	# compartments — that is how a proton pump is expressed (H+ -4 in d, +4 in y),
+	# so a second compartment must never overwrite the first.
+	rxn_stoich_raw = reactions_stoich.get(template_reaction, {})
+	rxn_stoich = {}
+	for _k, _v in rxn_stoich_raw.items():
+		_cpd, _, _cpt = _k.partition('@')
+		# legacy nested form {"coefficient": x, "compartment": y} still read
+		if isinstance(_v, dict):
+			_cpt = _v.get('compartment') or _cpt
+			_v = _v.get('coefficient')
+		rxn_stoich[(_cpd, _cpt or None)] = float(_v)
+	consumed = set()
+
+	# Add reagents. A de novo reaction has no database entry to draw from: every
+	# reagent arrives through the override, handled by the second pass below.
+	for rgt in ([] if de_novo else reactions_dict[base_reaction]['stoichiometry']):
 		# (coefficient,compound,gen_cpt,index,name)=entry.split(":")
 
-		# Update the stoichiometry first of all
-		if(template_reaction in reactions_stoich):
-			if(rgt['compound'] in reactions_stoich[template_reaction]):
-				rgt['coefficient'] = float(reactions_stoich[template_reaction][rgt['compound']])
+		# Update the stoichiometry first of all. Prefer an override that names
+		# this reagent's own compartment; fall back to the unqualified key.
+		_this_cpt = reactions_cpts[template_reaction][rgt['compartment']]
+		for _key in ((rgt['compound'], _this_cpt), (rgt['compound'], None)):
+			if(_key in rxn_stoich):
+				rgt['coefficient'] = rxn_stoich[_key]
+				consumed.add(_key)
+				break
 
 		# if new stoichiometry is zero, then this means to remove the reagent
 		if(rgt['coefficient'] == 0):
@@ -551,8 +618,18 @@ for template_reaction in sorted(reactions_roles):
 		if(comp_compound not in check_tpl_cpcpd_dict):
 			check_tpl_cpcpd_dict[comp_compound]=1
 
+			# Charge comes from the compound record, never from rgt['charge'].
+			# reaction_*.json denormalises charge/formula/name into every reagent,
+			# but nothing in ModelSEED reads that copy back -- parseStoich rebuilds
+			# the reagent array from Compounds_Dict every time -- so it is never
+			# refreshed. 13,569 of 262,517 reagent entries have drifted, and in
+			# 13,540 of those the embedded formula still matches the compound, so
+			# it is the charge alone that is stale rather than a different species.
+			# Reading it gave a compound two different charges depending on which
+			# reaction happened to create its compcompound first.
 			comp_compound_hash = { 'id':comp_compound,
-								   'charge':float(rgt['charge']), 'maxuptake':0.0,
+								   'charge':float(compounds_dict[rgt['compound']]['defaultCharge']),
+								   'maxuptake':0.0,
 								   'templatecompound_ref':"~/compounds/id/"+rgt['compound'],
 								   'templatecompartment_ref':"~/compartments/id/"+rgt_cpt }
 
@@ -561,6 +638,57 @@ for template_reaction in sorted(reactions_roles):
 		rxn_rgt_hash = { 'templatecompcompound_ref' : "~/compcompounds/id/"+comp_compound,
 						 'coefficient' : float(rgt['coefficient']) }
 		template_reaction_hash['templateReactionReagents'].append(rxn_rgt_hash)
+
+	# Second pass: ADD reagents the curator specified that the database reaction
+	# does not contain. Only the first pass can rescale or drop an existing
+	# reagent; anything left unconsumed here is a genuine addition.
+	for _key in [k for k in rxn_stoich if k not in consumed]:
+		add_cpd, want_cpt = _key
+		coef = rxn_stoich[_key]
+		if(coef == 0):
+			# "remove" on a compound that was never in the reaction — nothing to do
+			continue
+		if(add_cpd not in compounds_dict):
+			print(f"WARNING: {template_reaction}: cannot add {add_cpd} — not in the biochemistry")
+			continue
+		reagent_cpts = reactions_cpts[template_reaction]
+		if(want_cpt is None):
+			# Default to the reaction's first compartment. For a transporter the
+			# two sides are materially different, so say so rather than guess quietly.
+			rgt_cpt = reagent_cpts[0]
+			if(len(reagent_cpts) > 1):
+				print(f"WARNING: {template_reaction} is a transporter ({reagent_cpts}); "
+					  f"added compound {add_cpd} defaulted to compartment '{rgt_cpt}' — "
+					  f"give CPX_ADD an explicit compartment column if that is wrong")
+		elif(de_novo):
+			# The override IS the reaction, so it also defines which compartments
+			# the reaction spans -- there is no database entry to check against.
+			rgt_cpt = want_cpt
+		elif(want_cpt in reagent_cpts):
+			rgt_cpt = want_cpt
+		else:
+			print(f"WARNING: {template_reaction}: requested compartment '{want_cpt}' for "
+				  f"{add_cpd} is not among the reaction's compartments ({reagent_cpts}) — skipped")
+			continue
+
+		if(rgt_cpt not in check_tpl_cpt_dict):
+			check_tpl_cpt_dict[rgt_cpt]=1
+			template_compartments.append(compartments[rgt_cpt])
+		if(add_cpd not in check_tpl_cpd_dict):
+			check_tpl_cpd_dict[add_cpd]=1
+			template_compounds.append(compounds_dict[add_cpd])
+		comp_compound = add_cpd+"_"+rgt_cpt
+		if(comp_compound not in check_tpl_cpcpd_dict):
+			check_tpl_cpcpd_dict[comp_compound]=1
+			template_compcompounds.append({ 'id':comp_compound,
+				'charge':float(compounds_dict[add_cpd].get('defaultCharge', 0) or 0), 'maxuptake':0.0,
+				'templatecompound_ref':"~/compounds/id/"+add_cpd,
+				'templatecompartment_ref':"~/compartments/id/"+rgt_cpt })
+		template_reaction_hash['templateReactionReagents'].append(
+			{ 'templatecompcompound_ref' : "~/compcompounds/id/"+comp_compound,
+			  'coefficient' : float(coef) })
+		print(f"INFO: {template_reaction}: added reagent {add_cpd} "
+			  f"({coef}) in compartment '{rgt_cpt}'")
 
 	# Add complexes
 	if(template_reaction in template_reactions_complexes):
@@ -585,128 +713,159 @@ for template_reaction in sorted(reactions_roles):
 	########################################################################
 
 	########################################################################
-	# This is for modifying the proton pumps in the thylakoid
-	# Rather than trying to find or create a new reaction in the biochemistry
-	# I'm modifying the reactions here in the template generation
-	# PS II
-	if(template_reaction_hash['id'] == 'rxn20632_y'):
-		proton_in = copy.deepcopy(proton_d)
-		proton_in['coefficient'] = -4.0
-		template_reaction_hash['templateReactionReagents'].append(proton_in)
-		proton_out = copy.deepcopy(proton_y)
-		proton_out['coefficient'] = 4.0
-		template_reaction_hash['templateReactionReagents'].append(proton_out)
+	# The thylakoid proton pumps (PSII rxn20632, cytochrome b6-f rxn20595) used
+	# to be modified here. They are now curator-authored, in
+	# Curators/samseaver/thylakoid_proton_pumps_260917/proton_pumps.tsv, and
+	# carried on the complexes as compound@compartment stoichiometry overrides.
+	# See the CPX_ actions in plantseed_curation.
 
-		# print(template_reaction_hash['id'],json.dumps(template_reaction_hash['templateReactionReagents'],indent=2))
-
-	# Cytochrome b6f pumps two protons and releases two more protons from plastoquinol
-	if(template_reaction_hash['id'] == 'rxn20595_y'):
-		for rgt in template_reaction_hash['templateReactionReagents']:
-			if(rgt['templatecompcompound_ref'].endswith('cpd00067_d')):
-				rgt['coefficient'] = -2.0
-		
-		proton_out = copy.deepcopy(proton_y)
-		proton_out['coefficient'] = 4.0
-		template_reaction_hash['templateReactionReagents'].append(proton_out)
-		# print(template_reaction_hash['id'],json.dumps(template_reaction_hash['templateReactionReagents'],indent=2))
-
-	# Update generic transaminases involved in glucosinolate biosynthesis
-	bcat3_rxns = ['rxn23780','rxn27069','rxn27070','rxn27071','rxn27072','rxn27073']
-	if(template_reaction_hash['id'].split('_')[0] in bcat3_rxns):
-		replace_generic={'cpd22369':'cpd00023','cpd21904':'cpd00024'}
-		for rgt in template_reaction_hash['templateReactionReagents']:
-			for cpd in replace_generic.keys():
-				if(cpd in rgt['templatecompcompound_ref']):
-					rgt['templatecompcompound_ref'] = rgt['templatecompcompound_ref'].replace(cpd,replace_generic[cpd])
-
-	# Update generic hemoproteins involved in glucosinolate biosynthesis to flavins
-	monooxygenase_rxns = ['rxn53279']
-	if(template_reaction_hash['id'].split('_')[0] in monooxygenase_rxns):
-		replace_generic={'cpd42231':'cpd21035','cpd42232':'cpd11630'}
-		for rgt in template_reaction_hash['templateReactionReagents']:
-			for cpd in replace_generic.keys():
-				if(cpd in rgt['templatecompcompound_ref']):
-					rgt['templatecompcompound_ref'] = rgt['templatecompcompound_ref'].replace(cpd,replace_generic[cpd])
-
-		# print(template_reaction_hash['id'],json.dumps(template_reaction_hash['templateReactionReagents'],indent=2))
-
-	# Update usage of NAD in Methylthioalkylmalate dehydrogenase in glucosinolate biosynthesis
-	imdh_rxns = ['rxn14172','rxn14182','rxn13977','rxn14122','rxn14244','rxn13983']
-	if(template_reaction_hash['id'].split('_')[0] in imdh_rxns):
-		(rxn,cpt)=template_reaction_hash['id'].split('_')
-		nad  = {'coefficient': -1.0,
-        		'templatecompcompound_ref': '~/compcompounds/id/cpd00003_'+cpt}
-		nadh = {'coefficient': 1.0,
-        		'templatecompcompound_ref': '~/compcompounds/id/cpd00004_'+cpt}
-		template_reaction_hash['templateReactionReagents'].append(nad)
-		template_reaction_hash['templateReactionReagents'].append(nadh)
-
-		# have to find and remove proton to balance reaction
-		proton_index=0
-		for rgt_index in range(len(template_reaction_hash['templateReactionReagents'])):
-			if('cpd00067_'+cpt in template_reaction_hash['templateReactionReagents'][rgt_index]['templatecompcompound_ref']):
-				proton_index=rgt_index
-				break
-		template_reaction_hash['templateReactionReagents'].pop(proton_index)
+	# The BCAT3 generic-compound swaps and the Methylthioalkylmalate
+	# dehydrogenase NAD fix used to be hardcoded here. They are now
+	# curator-authored, in
+	# Curators/samseaver/template_reaction_mods_260917/glucosinolate_generics.tsv.
+	#
+	# A third block replaced generic hemoproteins with flavins in rxn53279.
+	# That reaction is on no role and so never reaches the template — the block
+	# was dead code and has been dropped rather than migrated.
 
 	template_reactions.append(template_reaction_hash)
 
 ########################################################################
-# This is for transport in aliphatic glucosinolate biosynthesis
-glc_tns = {'cpd00869':'d', #BCAT4
-		   'cpd17400':'d',
-		   'cpd17403':'d',
-		   'cpd17407':'d',
-		   'cpd17411':'d',
-		   'cpd17415':'d',
-		   'cpd17419':'d',
-		   'cpd17423':'d',
-		   'cpd00506':'d'} # Glutamylcysteine
-glc_count=1
-for glc_met in glc_tns.keys():
-	
-	template_reaction_hash = copy.deepcopy(default_template_reaction)
-	template_reaction_hash['id']='glucosinolates_'+str(glc_count)
-	print("Glucosinolate transport reaction id: "+template_reaction_hash['id'])
-	template_reaction_hash['name']='Glucosinolate Transport'
-	template_reaction_hash['templatecompartment_ref']="~/compartments/id/"+glc_tns[glc_met]
+# Transport is admitted on the metabolites, not on the annotation.
+#
+# A transporter earns its place if the compound it moves is actually used on
+# both ends of the journey, or if it is a dead end that has to get out. The
+# gene is irrelevant: 91 of the 191 transporter roles carry no Arabidopsis
+# feature, and gating on that would delete uptake the network depends on.
+#
+# Two clauses, applied to the compound(s) that actually cross a membrane:
+#
+#   bridge     the compound is metabolised in >= 2 compartments and at least
+#              one of them is an endpoint of this transporter. Cytosol is the
+#              hub -- 280 of 288 transporters touch it -- so a compound living
+#              in plastid and mitochondrion needs both c-legs even though it
+#              never reacts in the cytosol itself.
+#   byproduct  the compound is produced at an endpoint and consumed nowhere in
+#              the network. It still has to leave, or the reaction making it
+#              stalls at steady state.
+#
+# EXEMPT_CPTS have no internal metabolism, so no metabolite can ever "be
+# metabolised" there and the rule could never admit them: the thylakoid lumen
+# (y) and mitochondrial intermembrane space (j) exist only for proton pumps,
+# and the extracellular compartment (e) is the medium boundary.
+#
+# The roles stay 'universal' and so do the reactions. A transporter really is
+# universal in the sense that matters -- every organism has one -- so the flag
+# is not the place to express "this particular model does not need it". That
+# judgement is made here, on the metabolites, and the extraneous ones simply are
+# not emitted. Gene presence is deliberately not consulted: 91 of the 191
+# transporter roles carry no Arabidopsis feature, and gating on that would
+# delete uptake the network depends on.
+EXEMPT_CPTS = {'y','j','e'}
 
-	# Cytosol
-	comp_compound = glc_met+"_c"
+# Dead-end byproducts given an explicit drain where they are produced, so they
+# do not depend on a transport chain to leave. Both are made by one reaction and
+# consumed by nothing anywhere.
+BYPRODUCT_DRAINS = {'cpd00204':'d',   # CO, from thiC (rxn20643)
+					'cpd02701':'m'}   # S-adenosyl-4-methylthio-2-oxobutanoate, from rxn02312
+
+def _cpt_of(ref):
+	return ref.split('/')[-1].rsplit('_',1)[1]
+def _cpd_of(ref):
+	return ref.split('/')[-1].rsplit('_',1)[0]
+
+# biomass is added by Add_ModelTemplate_Biomass.py, after this script runs, so
+# read its component list straight from the data file. Without it every
+# biomass-only metabolite looks unmetabolised and its transporters are dropped.
+biomass_cpds = set()
+with open("../../../Data/PlantSEED_v3/Biomass/PlantSEED_Biomass.txt") as bio_fh:
+	for line in bio_fh:
+		line = line.strip('\r\n')
+		if(line == "" or line[0] in (' ','#')):
+			continue
+		array = line.split("\t")
+		biomass_cpds.add((array[1], array[2]))
+
+def _is_transport(rxn):
+	return len({_cpt_of(r['templatecompcompound_ref']) for r in rxn['templateReactionReagents']}) > 1
+
+metabolised = dict()
+produced    = dict()
+consumed    = dict()
+for rxn in template_reactions:
+	if(_is_transport(rxn)):
+		continue
+	reversible = rxn.get('direction') == '='
+	for rgt in rxn['templateReactionReagents']:
+		cpd_id = _cpd_of(rgt['templatecompcompound_ref'])
+		cpt_id = _cpt_of(rgt['templatecompcompound_ref'])
+		metabolised.setdefault(cpd_id,set()).add(cpt_id)
+		if(rgt['coefficient'] > 0 or reversible):
+			produced.setdefault(cpd_id,set()).add(cpt_id)
+		if(rgt['coefficient'] < 0 or reversible):
+			consumed.setdefault(cpd_id,set()).add(cpt_id)
+for cpd_id,cpt_id in biomass_cpds:
+	metabolised.setdefault(cpd_id,set()).add(cpt_id)
+	consumed.setdefault(cpd_id,set()).add(cpt_id)
+
+def _crossing(rxn):
+	"""compounds that actually change compartment in this reaction"""
+	seen = dict()
+	for rgt in rxn['templateReactionReagents']:
+		seen.setdefault(_cpd_of(rgt['templatecompcompound_ref']),set()).add(
+			_cpt_of(rgt['templatecompcompound_ref']))
+	return {c:k for c,k in seen.items() if len(k) > 1}
+
+kept_reactions = list()
+dropped_transporters = list()
+for rxn in template_reactions:
+	if(_is_transport(rxn) is False):
+		kept_reactions.append(rxn)
+		continue
+	cpts = {_cpt_of(r['templatecompcompound_ref']) for r in rxn['templateReactionReagents']}
+	if(cpts & EXEMPT_CPTS):
+		rxn['type'] = 'universal'   # belt and braces: these must never be gene-gated
+		kept_reactions.append(rxn)
+		continue
+	crossing = _crossing(rxn)
+	admitted = None
+	for cpd_id,cpd_cpts in crossing.items():
+		where = metabolised.get(cpd_id,set())
+		if(cpd_cpts & where and len(where) > 1):
+			admitted = 'bridge'
+			break
+		if(cpd_cpts & produced.get(cpd_id,set()) and not consumed.get(cpd_id,set())):
+			admitted = 'byproduct'
+			break
+	if(admitted is None):
+		dropped_transporters.append((rxn['id'], sorted(crossing.keys()), sorted(cpts)))
+		continue
+	rxn['type'] = 'universal'
+	kept_reactions.append(rxn)
+
+print("Transporters: kept "+str(len(kept_reactions)-sum(1 for r in kept_reactions if _is_transport(r) is False))
+	  +", dropped "+str(len(dropped_transporters)))
+with open("Excluded_Transporters.txt","w") as exc_fh:
+	for rxn_id,cpds,cpts in sorted(dropped_transporters):
+		exc_fh.write(rxn_id+"\t"+",".join(cpds)+"\t"+"|".join(cpts)+"\n")
+template_reactions = kept_reactions
+
+# explicit drains for the dead-end byproducts
+for cpd_id,cpt_id in sorted(BYPRODUCT_DRAINS.items()):
+	comp_compound = cpd_id+"_"+cpt_id
 	if(comp_compound not in check_tpl_cpcpd_dict):
-		check_tpl_cpcpd_dict[comp_compound]=1
-
-		comp_compound_hash = { 'id':comp_compound,
-							'charge':compounds_dict[glc_met]["defaultCharge"], 'maxuptake':0.0,
-							'templatecompound_ref':"~/compounds/id/"+glc_met,
-							'templatecompartment_ref':"~/compartments/id/c" }
-
-		template_compcompounds.append(comp_compound_hash)
-
-	rxn_rgt_hash = { 'templatecompcompound_ref' : "~/compcompounds/id/"+comp_compound,
-					'coefficient' : -1.0 }
-	template_reaction_hash['templateReactionReagents'].append(rxn_rgt_hash)
-
-	# "Other" compartment
-	comp_compound = glc_met+"_"+glc_tns[glc_met]
-	if(comp_compound not in check_tpl_cpcpd_dict):
-		check_tpl_cpcpd_dict[comp_compound]=1
-
-		comp_compound_hash = { 'id':comp_compound,
-							'charge':compounds_dict[glc_met]["defaultCharge"], 'maxuptake':0.0,
-							'templatecompound_ref':"~/compounds/id/"+glc_met,
-							'templatecompartment_ref':"~/compartments/id/"+glc_tns[glc_met] }
-
-		template_compcompounds.append(comp_compound_hash)
-
-	rxn_rgt_hash = { 'templatecompcompound_ref' : "~/compcompounds/id/"+comp_compound,
-					'coefficient' : 1.0 }
-	template_reaction_hash['templateReactionReagents'].append(rxn_rgt_hash)
-
-	# print(template_reaction_hash['id'],json.dumps(template_reaction_hash['templateReactionReagents'],indent=2))
-
-	glc_count+=1
-	template_reactions.append(template_reaction_hash)
+		continue
+	drain_hash = copy.deepcopy(default_template_reaction)
+	drain_hash['id'] = "drain_"+cpd_id+"_"+cpt_id
+	drain_hash['name'] = "Byproduct drain: "+compounds_dict[cpd_id]['name']
+	drain_hash['templatecompartment_ref'] = "~/compartments/id/"+cpt_id
+	drain_hash['type'] = 'universal'
+	drain_hash['direction'] = '>'
+	drain_hash['GapfillDirection'] = '>'
+	drain_hash['templateReactionReagents'] = [
+		{'templatecompcompound_ref':"~/compcompounds/id/"+comp_compound,'coefficient':-1.0}]
+	print("Byproduct drain: "+drain_hash['id']+" ("+compounds_dict[cpd_id]['name']+")")
+	template_reactions.append(drain_hash)
 
 #Populate model_template dictionary
 model_template=dict()

@@ -22,3 +22,7 @@ stoichiometry:
   type: dict
   default: {}
   required: false
+reaction_stoichiometry:
+  type: dict
+  default: {}
+  required: false

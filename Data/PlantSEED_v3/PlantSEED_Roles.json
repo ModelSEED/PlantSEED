@@ -9432,7 +9432,7 @@
         "abstract_enzyme": "Cyanoalanine nitrilase"
     },
     {
-        "role": "Cyclopropane desaturase (no EC)",
+        "role": "Cyclopropane desaturase",
         "include": false,
         "subsystems": [
             "Cyclopropane_and_cyclopropene_fatty_acids_biosynthesis"
@@ -9454,7 +9454,7 @@
             }
         },
         "publications": [],
-        "kbase_id": "PS_role_4a1a8a",
+        "kbase_id": "PS_role_2f56cc",
         "curators": [
             "SvetaG",
             "samseaver"
@@ -12746,7 +12746,7 @@
         "abstract_enzyme": "Farnesyl-diphosphate synthase"
     },
     {
-        "role": "Fatty acid in-chain hydroxylase (no EC)",
+        "role": "Fatty acid in-chain hydroxylase",
         "include": false,
         "subsystems": [
             "Cutin_biosynthesis"
@@ -12770,14 +12770,14 @@
             }
         },
         "publications": [],
-        "kbase_id": "PS_role_6c5dab",
+        "kbase_id": "PS_role_88d686",
         "curators": [
             "SvetaG",
             "samseaver"
         ],
         "type": "universal",
         "is_transporter": false,
-        "abstract_enzyme": "Fatty acid in-chain hydroxylase (no EC)"
+        "abstract_enzyme": "Fatty acid in-chain hydroxylase"
     },
     {
         "role": "Fatty acid omega-hydroxylase (EC 1.14.13.-)",
@@ -12900,7 +12900,7 @@
         "abstract_enzyme": "Fatty acid transport"
     },
     {
-        "role": "Fatty acids epoxide hydrolase (no EC)",
+        "role": "Fatty acids epoxide hydrolase",
         "include": false,
         "subsystems": [
             "Poly-hydroxy_fatty_acids_metabolism"
@@ -12928,7 +12928,7 @@
             }
         },
         "publications": [],
-        "kbase_id": "PS_role_23c005",
+        "kbase_id": "PS_role_0ab7af",
         "curators": [
             "SvetaG",
             "samseaver"
@@ -13491,7 +13491,7 @@
         "abstract_enzyme": "Formate--tetrahydrofolate ligase"
     },
     {
-        "role": "Free fatty acids epoxidase [oleate, linoleate, linolenate] (no EC)",
+        "role": "Free fatty acids epoxidase [oleate, linoleate, linolenate]",
         "include": false,
         "subsystems": [
             "Poly-hydroxy_fatty_acids_metabolism"
@@ -13529,7 +13529,7 @@
             }
         },
         "publications": [],
-        "kbase_id": "PS_role_e4371f",
+        "kbase_id": "PS_role_f0b89d",
         "curators": [
             "SvetaG",
             "samseaver"
@@ -18569,7 +18569,7 @@
         "abstract_enzyme": "L-lactate dehydrogenase"
     },
     {
-        "role": "Lauric acid in-chain hydroxylase (no EC)",
+        "role": "Lauric acid in-chain hydroxylase",
         "include": false,
         "subsystems": [
             "Cutin_biosynthesis"
@@ -18591,7 +18591,7 @@
             }
         },
         "publications": [],
-        "kbase_id": "PS_role_94710f",
+        "kbase_id": "PS_role_09adbe",
         "curators": [
             "SvetaG",
             "samseaver"
@@ -20440,7 +20440,7 @@
         "abstract_enzyme": "Mg-protoporphyrin O-methyltransferase"
     },
     {
-        "role": "Mid-chain alkane hydroxylase, alcohol- and ketone- forming (no EC)",
+        "role": "Mid-chain alkane hydroxylase, alcohol- and ketone- forming",
         "include": false,
         "subsystems": [
             "Cuticular_wax"
@@ -20470,7 +20470,7 @@
             }
         },
         "publications": [],
-        "kbase_id": "PS_role_2b65ad",
+        "kbase_id": "PS_role_896c40",
         "curators": [
             "SvetaG",
             "samseaver"
@@ -27351,7 +27351,7 @@
     },
     {
         "role": "Photosystem II protein Psb27",
-        "include": true,
+        "include": false,
         "subsystems": [
             "Photosystem_II"
         ],
@@ -27422,7 +27422,9 @@
         },
         "publications": [
             "https://doi.org/10.1074/jbc.M604888200",
-            "https://doi.org/10.1016/0014-5793(89)81446-2"
+            "https://doi.org/10.1016/0014-5793(89)81446-2",
+            "https://doi.org/10.1093/oxfordjournals.pcp.a077628",
+            "https://doi.org/10.1016/0014-5793(88)81039-1"
         ],
         "kbase_id": "PS_role_f1057a",
         "cofactors": [
@@ -27510,8 +27512,7 @@
             "https://doi.org/10.1016/0014-5793(89)80570-8",
             "https://doi.org/10.1074/jbc.M307537200",
             "https://doi.org/10.1016/0014-5793(88)81280-8",
-            "https://doi.org/10.1093/pcp/pcq020",
-            "https://doi.org/10.1007/978-94-011-3953-3_232"
+            "https://doi.org/10.1093/pcp/pcq020"
         ],
         "kbase_id": "PS_role_95bde0",
         "cofactors": [
@@ -27688,7 +27689,6 @@
         "publications": [
             "https://doi.org/10.1074/jbc.270.20.12197",
             "https://doi.org/10.1104/pp.18.01251",
-            "https://doi.org/10.1093/oxfordjournals.pcp.a077628",
             "https://doi.org/10.1016/0005-2728(86)90102-7"
         ],
         "kbase_id": "PS_role_a1c0a6",
@@ -34452,7 +34452,7 @@
         "abstract_enzyme": "UDP-3-O-[3-hydroxymyristoyl] glucosamine N-acyltransferase"
     },
     {
-        "role": "UDP-4-dehydro-6-deoxy-glucose 3,5-epimerase (no EC)",
+        "role": "UDP-4-dehydro-6-deoxy-glucose 3,5-epimerase",
         "include": false,
         "subsystems": [
             "UDP-L-rhamnose_Biosynthesis"
@@ -34479,7 +34479,7 @@
             }
         },
         "publications": [],
-        "kbase_id": "PS_role_b7f044",
+        "kbase_id": "PS_role_113f8b",
         "curators": [
             "SvetaG",
             "samseaver"
@@ -36441,7 +36441,7 @@
         "abstract_enzyme": "Xylogalacturonan beta-1,3-xylosyltransferase"
     },
     {
-        "role": "Xyloglucan galactosyltransferase (no EC)",
+        "role": "Xyloglucan galactosyltransferase",
         "include": false,
         "subsystems": [
             "Xyloglucan_biosynthesis"
@@ -36468,7 +36468,7 @@
             }
         },
         "publications": [],
-        "kbase_id": "PS_role_359bfd",
+        "kbase_id": "PS_role_f8be9c",
         "curators": [
             "SvetaG",
             "samseaver"
@@ -36996,7 +36996,6 @@
             }
         },
         "publications": [
-            "https://doi.org/10.21577/0103-5053.20170238",
             "https://doi.org/10.1016/s0005-2728(01)00197-9",
             "https://doi.org/10.1016/S0021-9258(18)89607-7",
             "https://doi.org/10.1016/S0021-9258(19)83887-5",
@@ -37038,9 +37037,7 @@
                 ]
             }
         },
-        "publications": [
-            ""
-        ],
+        "publications": [],
         "kbase_id": "PS_role_e4c878",
         "curators": [
             "SvetaG",
@@ -37053,7 +37050,7 @@
     },
     {
         "role": "photosystem I assembly related protein Ycf37",
-        "include": true,
+        "include": false,
         "subsystems": [
             "Photosystem_I"
         ],
@@ -37105,9 +37102,7 @@
                 ]
             }
         },
-        "publications": [
-            ""
-        ],
+        "publications": [],
         "kbase_id": "PS_role_564d95",
         "curators": [
             "SvetaG",
@@ -37434,8 +37429,7 @@
         },
         "publications": [
             "https://doi.org/10.1046/j.1365-313X.1999.00419.x",
-            "https://doi.org/10.1016/0014-5793(92)81297-Y",
-            "https://doi.org/10.1071/SA0403172"
+            "https://doi.org/10.1016/0014-5793(92)81297-Y"
         ],
         "kbase_id": "PS_role_c02f1d",
         "curators": [
@@ -39732,5 +39726,67 @@
         "is_transporter": false,
         "type": "universal",
         "kbase_id": "PS_role_69514c"
+    },
+    {
+        "role": "Glucosinolate transport",
+        "include": true,
+        "subsystems": [
+            "Aliphatic glucosinolate biosynthesis"
+        ],
+        "classes": {
+            "Specialized metabolism": {
+                "Aliphatic glucosinolate biosynthesis": []
+            }
+        },
+        "features": [],
+        "reactions": [
+            "gsltrans01",
+            "gsltrans02",
+            "gsltrans03",
+            "gsltrans04",
+            "gsltrans05",
+            "gsltrans06",
+            "gsltrans07",
+            "gsltrans08",
+            "gsltrans09"
+        ],
+        "localization": {
+            "d": {
+                "gsltrans01": [
+                    "Assumed"
+                ],
+                "gsltrans02": [
+                    "Assumed"
+                ],
+                "gsltrans03": [
+                    "Assumed"
+                ],
+                "gsltrans04": [
+                    "Assumed"
+                ],
+                "gsltrans05": [
+                    "Assumed"
+                ],
+                "gsltrans06": [
+                    "Assumed"
+                ],
+                "gsltrans07": [
+                    "Assumed"
+                ],
+                "gsltrans08": [
+                    "Assumed"
+                ],
+                "gsltrans09": [
+                    "Assumed"
+                ]
+            }
+        },
+        "type": "universal",
+        "is_transporter": true,
+        "abstract_enzyme": "Glucosinolate transport",
+        "curators": [
+            "pelle283"
+        ],
+        "kbase_id": "PS_role_d37d41"
     }
 ]

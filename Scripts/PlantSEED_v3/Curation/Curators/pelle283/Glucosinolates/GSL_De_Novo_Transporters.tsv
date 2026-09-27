@@ -1,0 +1,14 @@
+Glucosinolate transport	NEW
+Glucosinolate transport	REASSIGN	is_transporter	true
+Glucosinolate transport	REASSIGN	type	universal
+Glucosinolate transport	REASSIGN	abstract_enzyme	Glucosinolate transport
+Glucosinolate transport	ADD	subsystems	Aliphatic glucosinolate biosynthesis	Specialized metabolism
+Glucosinolate transport	ADD	reactions	gsltrans01	d
+Glucosinolate transport	ADD	reactions	gsltrans02	d
+Glucosinolate transport	ADD	reactions	gsltrans03	d
+Glucosinolate transport	ADD	reactions	gsltrans04	d
+Glucosinolate transport	ADD	reactions	gsltrans05	d
+Glucosinolate transport	ADD	reactions	gsltrans06	d
+Glucosinolate transport	ADD	reactions	gsltrans07	d
+Glucosinolate transport	ADD	reactions	gsltrans08	d
+Glucosinolate transport	ADD	reactions	gsltrans09	d
