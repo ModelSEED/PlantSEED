@@ -48,6 +48,16 @@ COMPLEXES_FILE = _env(
     "PLANTSEED_ANNOT_COMPLEXES_FILE",
     os.path.join(_REPO_ROOT, "Data", "PlantSEED_v3", "PlantSEED_Complexes.json"),
 )
+#: Roles naming organellar-encoded subunits. Excluded from annotation
+#: outright -- not conditionally on the gene being nuclear. The subunits these
+#: roles name are ignored in the context of the protein complex when
+#: integrating omics data, so a curated role for one is never a valid
+#: annotation target regardless of which genome encodes the gene.
+ORGANELLAR_ROLES_FILE = _env(
+    "PLANTSEED_ANNOT_ORGANELLAR_ROLES_FILE",
+    os.path.join(_REPO_ROOT, "Data", "PlantSEED_v3", "Reference_Sets",
+                 "organellar-encoded_subunits_to_ignore.txt"),
+)
 COMPARTMENTS_FILE = _env(
     "PLANTSEED_ANNOT_COMPARTMENTS_FILE",
     os.path.join(

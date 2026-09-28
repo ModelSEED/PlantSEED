@@ -11,8 +11,30 @@ into a standalone library callable that consumes the on-dev
 """
 
 import json
+import os
 
 from .. import paths
+
+
+def load_organellar_roles(path=None):
+    """Role names for organellar-encoded subunits, to be excluded outright.
+
+    These subunits are ignored in the context of the protein complex when
+    integrating omics data, so the roles naming them are never valid
+    annotation targets -- the exclusion is unconditional, and deliberately
+    NOT predicated on whether the gene carrying the role is nuclear. A
+    proteome that omits its organellar genome will otherwise pick these roles
+    up on nuclear insertions (NUPT/NUMT): every one of Poplar's 77 such
+    annotations sat on a nuclear Potri gene.
+
+    Missing file returns an empty set, so a checkout without the reference
+    set still annotates rather than failing.
+    """
+    p = path or paths.ORGANELLAR_ROLES_FILE
+    if not os.path.isfile(p):
+        return set()
+    with open(p) as fh:
+        return {ln.strip() for ln in fh if ln.strip() and not ln.startswith("#")}
 
 
 # Compartment-code -> compartment-name mapping, mirroring the table in
@@ -53,7 +75,8 @@ def _parse_feature(feature_str):
     return None, feature_str
 
 
-def build_curated_features(roles_data=None, include_uncurated=False):
+def build_curated_features(roles_data=None, include_uncurated=False,
+                           exclude_roles=None, excluded_report=None):
     """Walk PlantSEED_Roles.json and return the curated-feature index.
 
     Shape:
@@ -77,12 +100,26 @@ def build_curated_features(roles_data=None, include_uncurated=False):
     if roles_data is None:
         with open(paths.ROLES_FILE) as fh:
             roles_data = json.load(fh)
+    if exclude_roles is None:
+        exclude_roles = load_organellar_roles()
 
     per_feature = {}   # (species, gene) -> {'roles': [], 'compartments': []}
     for entry in roles_data:
         if not include_uncurated and entry.get("include") is False:
             pass  # fetch_plantseed_impl.fetch_features has this filter
                   # commented out today; leave the same behavior here.
+        if entry["role"] in exclude_roles:
+            # Organellar-encoded subunit: never an annotation target. Recorded
+            # rather than dropped silently -- a missing gene is unrecoverable
+            # downstream, so the caller gets told what went and why.
+            if excluded_report is not None:
+                for feat_str in entry.get("features", []):
+                    excluded_report.append({
+                        "feature": feat_str,
+                        "role": entry["role"],
+                        "reason": "organellar-encoded subunit",
+                    })
+            continue
         for feat_str in entry.get("features", []):
             key = _parse_feature(feat_str)
             bucket = per_feature.setdefault(

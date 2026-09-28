@@ -1,0 +1,47 @@
+ATP synthase alpha chain (EC 3.6.3.14)
+Acetyl-coenzyme A carboxyl transferase beta chain (EC 6.4.1.2)
+Cytochrome b559 alpha chain PsbE
+Cytochrome b559 beta chain PsbF
+Cytochrome b6-f complex PetA, apocytochrome f (EC 7.1.1.6)
+Cytochrome b6-f complex PetB, cytochrome b6 (EC 7.1.1.6)
+Cytochrome b6-f complex PetD, subunit IV (EC 7.1.1.6)
+Cytochrome b6-f complex PetG, subunit V (EC 7.1.1.6)
+Cytochrome b6-f complex PetL (EC 7.1.1.6)
+Cytochrome b6-f complex PetN (EC 7.1.1.6)
+Cytochrome c oxidase polypeptide I (EC 1.9.3.1)
+Cytochrome c oxidase polypeptide II (EC 1.9.3.1)
+Cytochrome c oxidase polypeptide III (EC 1.9.3.1)
+NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 1, ND1
+NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 2, ND2
+NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 3, ND3
+NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 4, ND4
+NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 4L, ND4L
+NADH dehydrogenase [ubiquinone] (EC 1.6.5.3) mitochondrial-encoded chain 5, ND5
+NADH dehydrogenase [ubiquinone] iron-sulfur protein 2 (EC 1.6.5.3) (EC 1.6.99.3)
+NADH dehydrogenase [ubiquinone] iron-sulfur protein 3 (EC 1.6.5.3) (EC 1.6.99.3)
+NADH dehydrogenase [ubiquinone] iron-sulfur protein 8 (EC 1.6.5.3) (EC 1.6.99.3)
+Photosystem I assembly related protein Ycf3
+Photosystem I assembly related protein Ycf4
+Photosystem I subunit IX PsaJ
+Photosystem I subunit Ia PsaA
+Photosystem I subunit Ib PsaB
+Photosystem I subunit VII iron-sulfur center PsaC
+Photosystem I subunit VIII PsaI
+Photosystem II CP43 protein PsbC
+Photosystem II CP47 protein PsbB
+Photosystem II protein D1 PsbA
+Photosystem II protein D2 PsbD
+Photosystem II protein PsbH
+Photosystem II protein PsbI
+Photosystem II protein PsbJ
+Photosystem II protein PsbK
+Photosystem II protein PsbL
+Photosystem II protein PsbM
+Photosystem II protein PsbN
+Photosystem II protein PsbTc
+Photosystem II protein PsbZ
+Plastidial ATP synthase alpha chain (EC 3.6.3.14)
+Plastidial ATP synthase beta chain (EC 3.6.3.14)
+Plastidial ATP synthase epsilon chain
+Ribulose bisphosphate carboxylase large chain (EC 4.1.1.39)
+Ubiquinol--cytochrome c reductase, cytochrome B subunit (EC 1.10.2.2)
