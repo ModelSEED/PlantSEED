@@ -1,0 +1,5 @@
+# Assign CYP83 rxn21793 (repointed to (E)-cpd20962) and dipeptidase rxn42261 (gene-less), unblocking glucotropeolin flux.
+Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)	ADD	reactions	rxn21793	c
+Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis	CPX_ADD	stoichiometry	cpd14796	0	c	rxn21793
+Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis	CPX_ADD	stoichiometry	cpd20962	-1	c	rxn21793
+cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)	ADD	reactions	rxn42261	c

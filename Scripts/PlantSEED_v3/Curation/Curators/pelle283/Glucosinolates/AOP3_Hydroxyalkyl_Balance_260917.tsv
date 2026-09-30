@@ -1,0 +1,7 @@
+# Swap rxn23786 for balanced twin rxn44212; add H2O/O2/H+/methanesulfonate to rxn27065 so both AOP3 reactions balance.
+Hydroxyalkyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)	ADD	reactions	rxn44212	c
+Hydroxyalkyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase (no EC)	REMOVE	reactions	rxn23786
+Hydroxyalkyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase	CPX_ADD	stoichiometry	cpd00001	-1	c	rxn27065
+Hydroxyalkyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase	CPX_ADD	stoichiometry	cpd00007	-1	c	rxn27065
+Hydroxyalkyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase	CPX_ADD	stoichiometry	cpd00067	1	c	rxn27065
+Hydroxyalkyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase	CPX_ADD	stoichiometry	cpd08023	1	c	rxn27065

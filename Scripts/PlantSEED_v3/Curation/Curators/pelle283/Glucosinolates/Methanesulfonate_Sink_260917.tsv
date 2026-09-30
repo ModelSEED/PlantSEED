@@ -1,0 +1,7 @@
+# New gene-less methanesulfonate transporter (rxn08960), giving the AOP-family byproduct a sink for flux.
+Methanesulfonate transport	NEW
+Methanesulfonate transport	ADD	subsystems	Media_transport	Transport
+Methanesulfonate transport	ADD	reactions	rxn08960	ce
+Methanesulfonate transport	REASSIGN	type	universal
+Methanesulfonate transport	REASSIGN	is_transporter	true
+Methanesulfonate transport	REASSIGN	abstract_enzyme	Methanesulfonate transport

@@ -1,0 +1,4 @@
+# Assign missing dipeptidase reaction rxn41115 (gene-less); repoint GST rxn21810 from duplicate cpd23386 to cpd17395.
+cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)	ADD	reactions	rxn41115	c
+Glutathione S-transferase	CPX_ADD	stoichiometry	cpd23386	0	c	rxn21810
+Glutathione S-transferase	CPX_ADD	stoichiometry	cpd17395	-1	c	rxn21810
