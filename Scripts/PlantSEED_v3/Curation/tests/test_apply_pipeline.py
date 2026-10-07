@@ -84,6 +84,100 @@ def test_update_rename_recomputes_kbase_id(tmp_db, schema):
     assert _find(roles, "Alpha enzyme (EC 1.1.1.1)") is None
 
 
+def _reload_complexes():
+    with open(paths.COMPLEXES_FILE) as f:
+        return json.load(f)
+
+
+def test_update_rename_syncs_default_complex_enzyme_and_roles(tmp_db, schema):
+    """Regression test for a role UPDATE leaving PlantSEED_Complexes.json
+    with a dangling reference to the pre-rename role name. mini_complexes.json
+    has a default one-role-one-enzyme complex for 'Alpha enzyme' (enzyme ==
+    role minus the EC parenthetical) -- both its `enzyme` key and its `roles`
+    list must follow the rename."""
+    tsv = "Alpha enzyme (EC 1.1.1.1)\tUPDATE\tAlpha renamed (EC 1.1.1.1)\n"
+    result = A.run_apply(tsv, "tester", schema)
+    assert result["errors"] == []
+    complexes = _reload_complexes()
+    entry = next(c for c in complexes if c["kbase_id"] == "PS_complex_alpha1")
+    assert entry["enzyme"] == "Alpha renamed"
+    assert entry["roles"] == ["Alpha renamed (EC 1.1.1.1)"]
+    # No complex is left naming the pre-rename role anywhere.
+    assert not any("Alpha enzyme (EC 1.1.1.1)" in c.get("roles", []) for c in complexes)
+    assert not any(c.get("enzyme") == "Alpha enzyme" for c in complexes)
+
+
+def test_sync_renamed_roles_into_complexes_updates_roles_list_only(tmp_db, schema):
+    """Direct unit test of sync_renamed_roles_into_complexes: a complex whose
+    `roles` list contains the old role name, but whose `enzyme` key is an
+    unrelated grouping key (e.g. a subunit complex), gets its `roles` entry
+    swapped without the `enzyme` key being touched."""
+    complexes_list = [
+        {
+            "kbase_id": "PS_complex_grouped1",
+            "enzyme": "Grouped enzyme",
+            "roles": ["Alpha enzyme (EC 1.1.1.1)", "Other subunit role"],
+            "compartments_reactions": {},
+        },
+    ]
+    rename_map = {"Alpha enzyme (EC 1.1.1.1)": "Alpha renamed (EC 1.1.1.1)"}
+    changed = A.sync_renamed_roles_into_complexes(complexes_list, rename_map)
+    assert changed is True
+    assert complexes_list[0]["enzyme"] == "Grouped enzyme"  # untouched
+    assert complexes_list[0]["roles"] == [
+        "Alpha renamed (EC 1.1.1.1)", "Other subunit role",
+    ]
+
+
+def test_sync_renamed_roles_into_complexes_noop_when_no_match(tmp_db, schema):
+    complexes_list = [
+        {"kbase_id": "PS_complex_x", "enzyme": "Unrelated", "roles": ["Unrelated role"]},
+    ]
+    changed = A.sync_renamed_roles_into_complexes(
+        complexes_list, {"Alpha enzyme (EC 1.1.1.1)": "Alpha renamed (EC 1.1.1.1)"}
+    )
+    assert changed is False
+    assert complexes_list[0]["roles"] == ["Unrelated role"]
+
+
+def test_update_rename_in_grouped_complex_syncs_roles_not_enzyme(tmp_db, schema):
+    """End-to-end reproduction of the production bug: 'Alpha enzyme' is
+    (hypothetically) a subunit folded into a multi-role 'Photosystem X'
+    complex, grouped under an abstract_enzyme that does NOT match any single
+    role name. Renaming the role must update that complex's `roles` list so
+    Generate_Core_ModelTemplate.py's role-type lookup doesn't KeyError on the
+    stale name -- while leaving the `enzyme` grouping key untouched."""
+    complexes = _reload_complexes()
+    complexes.append({
+        "kbase_id": "PS_complex_grouped_x",
+        "enzyme": "Photosystem X",
+        "roles": ["Alpha enzyme (EC 1.1.1.1)", "Beta enzyme (EC 2.2.2.2)"],
+        "compartments_reactions": {
+            "c": {"reactions": ["rxn00001", "rxn00002"], "reagents": "c", "exclude": False},
+        },
+    })
+    with open(paths.COMPLEXES_FILE, "w") as f:
+        json.dump(complexes, f, indent=4)
+
+    tsv = "Alpha enzyme (EC 1.1.1.1)\tUPDATE\tAlpha renamed (EC 1.1.1.1)\n"
+    result = A.run_apply(tsv, "tester", schema)
+    assert result["errors"] == []
+
+    complexes = _reload_complexes()
+    grouped = next(c for c in complexes if c["kbase_id"] == "PS_complex_grouped_x")
+    assert grouped["enzyme"] == "Photosystem X"  # grouping key untouched
+    assert grouped["roles"] == ["Alpha renamed (EC 1.1.1.1)", "Beta enzyme (EC 2.2.2.2)"]
+    assert "Alpha enzyme (EC 1.1.1.1)" not in grouped["roles"]
+
+    # And every role every complex names actually exists in roles_list --
+    # the exact invariant Generate_Core_ModelTemplate.py's type lookup needs.
+    roles = _reload_roles()
+    role_names = {r["role"] for r in roles}
+    for c in complexes:
+        for r in c.get("roles", []):
+            assert r in role_names, f"dangling role reference '{r}' in complex '{c['enzyme']}'"
+
+
 def test_relocate_localization_key(tmp_db, schema):
     tsv = "Alpha enzyme (EC 1.1.1.1)\tRELOCATE\tlocalization\tc\tn\n"
     A.run_apply(tsv, "tester", schema)

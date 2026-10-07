@@ -658,7 +658,7 @@ rxn29122_m	PS_complex_dfc1d5	PS_role_743873	Biotin transport
 rxn01935_d	PS_complex_e03689	PS_role_3c30f2	Hydroxynitrile lyase (EC 4.1.2.11)	Sbicolor_v3.1.1||Sobic.004G33550|Uniprot||P52708
 rxn10826_m|rxn10826_d|rxn10826_x|rxn10826_v	PS_complex_e04cb9	PS_role_3effb5	Bicarbonate transport	
 rxn48051_d	PS_complex_e06211	PS_role_a0ec4a	Taxane 10-beta-hydroxylase (EC 1.14.14.105)	Uniprot||Q9AXM6
-rxn43940_c|rxn41037_c|rxn46896_c|rxn44540_c|rxn47990_c|rxn47415_c|rxn41115_c|rxn42261_c	PS_complex_e08560	PS_role_fd6fda	cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)	
+rxn43940_c|rxn41037_c|rxn46896_c|rxn44540_c|rxn47990_c|rxn47415_c|rxn41115_c|rxn42261_c	PS_complex_e08560	PS_role_3e083a	Cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)	
 rxn01399_c	PS_complex_e180fe	PS_role_07c538	UDP-glucose:pyridoxine 5'-O-beta-D-glucosyltransferase (EC 2.4.1.160)	
 rxn00168_c	PS_complex_e26ee4	PS_role_9b5459	Pyruvate decarboxylase (EC 4.1.1.1)	Athaliana_TAIR10||AT4G33070|Athaliana_TAIR10||AT5G01320|Athaliana_TAIR10||AT5G01330|Athaliana_TAIR10||AT5G54960
 rxn00646_d	PS_complex_e282e9	PS_role_e82ade	Glutamate-cysteine ligase (EC 6.3.2.2)	Athaliana_TAIR10||AT4G23100

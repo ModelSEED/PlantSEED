@@ -14464,7 +14464,7 @@
             "Photosystem I subunit XI PsaL",
             "alternative photosystem I reaction center subunit X (PsaK2)",
             "photosystem I 4.8K protein (PsaX)",
-            "photosystem I assembly related protein Ycf37",
+            "Photosystem I assembly related protein Ycf37",
             "photosystem I biogenesis protein BtpA",
             "photosystem I subunit XII (PsaM)"
         ],
@@ -15273,9 +15273,9 @@
     },
     {
         "kbase_id": "PS_complex_e08560",
-        "enzyme": "cysteinylglycine-S-conjugate dipeptidase",
+        "enzyme": "Cysteinylglycine-S-conjugate dipeptidase",
         "roles": [
-            "cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)"
+            "Cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)"
         ],
         "compartments_reactions": {
             "c": {

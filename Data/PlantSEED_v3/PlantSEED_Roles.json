@@ -37099,7 +37099,7 @@
         "abstract_enzyme": "Photosystem I"
     },
     {
-        "role": "photosystem I assembly related protein Ycf37",
+        "role": "Photosystem I assembly related protein Ycf37",
         "include": false,
         "subsystems": [
             "Photosystem_I"
@@ -37119,7 +37119,7 @@
             }
         },
         "publications": [],
-        "kbase_id": "PS_role_362277",
+        "kbase_id": "PS_role_846d73",
         "curators": [
             "SvetaG",
             "samseaver"
@@ -39721,7 +39721,7 @@
         "kbase_id": "PS_role_39a69e"
     },
     {
-        "role": "cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)",
+        "role": "Cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)",
         "type": "universal",
         "features": [],
         "reactions": [
@@ -39778,9 +39778,9 @@
             }
         },
         "include": true,
-        "abstract_enzyme": "cysteinylglycine-S-conjugate dipeptidase",
+        "abstract_enzyme": "Cysteinylglycine-S-conjugate dipeptidase",
         "is_transporter": false,
-        "kbase_id": "PS_role_fd6fda"
+        "kbase_id": "PS_role_3e083a"
     },
     {
         "role": "Proline dehydrogenase (EC 1.5.5.2)",

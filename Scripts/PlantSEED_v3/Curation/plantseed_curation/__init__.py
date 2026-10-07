@@ -37,6 +37,7 @@ from .actions import (
     preview_for_enzyme,
     run_apply,
     seed_new_entries,
+    sync_renamed_roles_into_complexes,
     validate_payload,
     validate_subcomplex_pointers,
 )
@@ -106,6 +107,7 @@ __all__ = [
     "build_tsv_rows", "complex_kbase_id", "derive_new_complexes",
     "enzyme_index_from_complexes", "enzyme_rxn_cpts", "parse_tsv_text",
     "preview_for_enzyme", "run_apply", "seed_new_entries",
+    "sync_renamed_roles_into_complexes",
     "validate_payload", "validate_subcomplex_pointers",
     # cli_io
     "Console", "ExitRequested",

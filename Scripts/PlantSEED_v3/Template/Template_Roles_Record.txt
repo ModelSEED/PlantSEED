@@ -198,6 +198,7 @@ PS_role_814ea2	Cysteine desulfurase (EC 2.8.1.7), IscS subfamily
 PS_role_73a1b3	Cysteine desulfurase (EC 2.8.1.7), SufS subfamily
 PS_role_b1bcc1	Cysteine synthase (EC 2.5.1.47)
 PS_role_e4fd5d	Cysteine transport
+PS_role_3e083a	Cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)
 PS_role_659711	Cytochrome b559 alpha chain PsbE
 PS_role_89ce59	Cytochrome b559 beta chain PsbF
 PS_role_ab8316	Cytochrome b6-f complex PetA, apocytochrome f (EC 7.1.1.6)
@@ -729,7 +730,6 @@ PS_role_e0bf23	alternative photosystem I reaction center subunit X (PsaK2)
 PS_role_fbbe49	beta-Fructose-6-phosphate transport
 PS_role_658156	beta-Glucose-6-phosphate transport
 PS_role_59dfb3	cis-Aconitate transport
-PS_role_fd6fda	cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)
 PS_role_b580ce	pABA transport
 PS_role_070e7e	photosystem I 4.8K protein (PsaX)
 PS_role_d9335e	photosystem I biogenesis protein BtpA

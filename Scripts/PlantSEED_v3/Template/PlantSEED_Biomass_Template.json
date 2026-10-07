@@ -61681,6 +61681,13 @@
             "features": []
         },
         {
+            "id": "PS_role_3e083a",
+            "name": "Cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": []
+        },
+        {
             "id": "PS_role_659711",
             "name": "Cytochrome b559 alpha chain PsbE",
             "source": "PlantSEED",
@@ -66702,13 +66709,6 @@
         {
             "id": "PS_role_59dfb3",
             "name": "cis-Aconitate transport",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": []
-        },
-        {
-            "id": "PS_role_fd6fda",
-            "name": "cysteinylglycine-S-conjugate dipeptidase (EC 3.4.13.23)",
             "source": "PlantSEED",
             "aliases": [],
             "features": []
@@ -74836,7 +74836,7 @@
             "confidence": 1.0,
             "complexroles": [
                 {
-                    "templaterole_ref": "~/roles/id/PS_role_fd6fda",
+                    "templaterole_ref": "~/roles/id/PS_role_3e083a",
                     "optional_role": 0,
                     "triggering": 1
                 }

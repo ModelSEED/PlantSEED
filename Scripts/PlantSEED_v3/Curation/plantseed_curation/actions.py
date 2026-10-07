@@ -960,6 +960,73 @@ def apply_complex_actions(complexes_list, actions, issues=None, roles_list=None)
     return changed
 
 
+def sync_renamed_roles_into_complexes(complexes_list, rename_map, issues=None):
+    """Carry a role UPDATE through to PlantSEED_Complexes.json's `roles` lists
+    and, where the complex follows the default one-role-one-enzyme convention,
+    its `enzyme` field too.
+
+    `apply_actions` only renames the role entry in `roles_list`. Without this
+    step, a complex's `roles` list (and, for a default complex, its `enzyme`
+    key) keeps naming the pre-rename role — a dangling reference that
+    `Generate_Core_ModelTemplate.py` doesn't notice until it looks up the
+    role's type and dies with `KeyError: <old role name>`.
+    `Prepare_PlantSEED_KBase.py` papers over this after the fact by orphaning
+    the whole complex and minting a fresh one, which silently drops any
+    `stoichiometry` / `reaction_stoichiometry` override the complex carried.
+    Fixing the reference in place, at apply time, avoids both failure modes.
+
+    The `roles` list is always kept in sync, regardless of convention — a
+    stale entry there is a dangling reference no matter how the complex is
+    grouped. `enzyme` is different: for a multi-role complex (a subunit
+    grouping, e.g. 'Photosystem I' with 22 member roles) `enzyme` is a shared
+    label unrelated to any single member's name, and must not move just
+    because one member was renamed. It only follows the rename when the
+    complex has exactly that one role and `enzyme` already equals the
+    OLD role name or its EC-stripped form — the same test
+    `_rename_abstract_enzyme` applies to the role's own `abstract_enzyme`
+    field, kept consistent here so the two never diverge.
+
+    `rename_map` is old_role -> new_role, as returned by `apply_actions`.
+    kbase_id is deliberately left untouched here; `assign_complex_kbase_id`
+    (run via `Prepare_PlantSEED_KBase.py`) is the single place that rehashes
+    it, same as for every other complex edit.
+
+    Returns True if any complex was modified.
+    """
+    if not rename_map:
+        return False
+    changed = False
+    for entry in complexes_list:
+        roles = entry.get("roles") or []
+        hits = [(o, n) for o, n in rename_map.items() if o in roles]
+
+        if hits:
+            new_roles = [rename_map.get(r, r) for r in roles]
+            entry["roles"] = new_roles
+            changed = True
+            if issues is not None:
+                issues.log(
+                    f"complex '{entry.get('enzyme')}': role reference "
+                    f"updated for rename(s) "
+                    + ", ".join(f"'{o}' -> '{n}'" for o, n in hits)
+                )
+
+        if len(roles) == 1:
+            old_role, new_role = hits[0] if hits else (None, None)
+            enzyme = entry.get("enzyme")
+            if old_role and enzyme in (old_role, _strip_trailing_paren(old_role)):
+                new_enzyme = _strip_trailing_paren(new_role)
+                if enzyme != new_enzyme:
+                    entry["enzyme"] = new_enzyme
+                    changed = True
+                    if issues is not None:
+                        issues.log(
+                            f"complex enzyme key renamed to match role: "
+                            f"'{enzyme}' -> '{new_enzyme}'"
+                        )
+    return changed
+
+
 def prune_orphan_complexes(complexes_list, roles_list, issues=None):
     """Drop complexes whose `enzyme` no longer matches any role's
     abstract_enzyme.
@@ -1185,17 +1252,28 @@ def run_apply(tsv_text, curator, schema, dry_run=False, store=None, roles_path=N
         issues.log(f"Wrote {len(roles_list)} roles to {target_roles_path}")
 
     # CPX_* rows target PlantSEED_Complexes.json, addressed by enzyme name.
-    # Applied after the roles write so a rename landing in the same TSV is
-    # already reflected in the roles file.
-    if any(actions.get(b) for b in ("cpx_replace", "cpx_reassign", "cpx_stoich",
-                                    "cpx_stoich_rxn", "cpx_stoich_rem")):
+    # A role UPDATE also needs a pass here even with no CPX_* row present:
+    # any complex naming the old role (in `roles`, or as its `enzyme` key)
+    # would otherwise keep a dangling reference — see
+    # sync_renamed_roles_into_complexes's docstring. Applied after the roles
+    # write so a rename landing in the same TSV is already reflected there.
+    needs_complex_pass = rename_map or any(
+        actions.get(b) for b in
+        ("cpx_replace", "cpx_reassign", "cpx_stoich", "cpx_stoich_rxn", "cpx_stoich_rem")
+    )
+    if needs_complex_pass:
         if not os.path.isfile(paths.COMPLEXES_FILE):
             issues.error(f"PlantSEED_Complexes.json not found at {paths.COMPLEXES_FILE}")
         else:
             with open(paths.COMPLEXES_FILE) as f:
                 complexes_list = json.load(f)
-            if apply_complex_actions(complexes_list, actions, issues=issues,
-                                     roles_list=roles_list) and not dry_run:
+            cpx_changed = apply_complex_actions(
+                complexes_list, actions, issues=issues, roles_list=roles_list,
+            )
+            cpx_changed = sync_renamed_roles_into_complexes(
+                complexes_list, rename_map, issues=issues,
+            ) or cpx_changed
+            if cpx_changed and not dry_run:
                 atomic_write(paths.COMPLEXES_FILE, json.dumps(complexes_list, indent=4))
                 issues.log(f"Wrote {len(complexes_list)} complexes to {paths.COMPLEXES_FILE}")
         if store is not None:
