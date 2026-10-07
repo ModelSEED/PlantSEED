@@ -9807,8 +9807,8 @@
         }
     },
     {
-        "kbase_id": "PS_complex_6b08ec",
-        "enzyme": "Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis",
+        "kbase_id": "PS_complex_c4a6ef",
+        "enzyme": "Aromatic aldoxime N-monooxygenase",
         "roles": [
             "Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)"
         ],

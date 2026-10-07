@@ -1,0 +1,3 @@
+# Fix "metabolizining" typo: rename role's abstract_enzyme (1:1 grouping) and the matching complex in place so the rxn21793 stoichiometry override survives.
+Aromatic aldoxime N-monooxygenase (EC 1.14.14.45)	REASSIGN	abstract_enzyme	Aromatic aldoxime N-monooxygenase
+Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis	CPX_UPDATE	Aromatic aldoxime N-monooxygenase

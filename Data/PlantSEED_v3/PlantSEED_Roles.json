@@ -24191,7 +24191,7 @@
         ],
         "type": "conditional",
         "is_transporter": false,
-        "abstract_enzyme": "Oxime metabolizining monooxygenase in Trp, Phe, Tyr-derived glucosinolates biosynthesis"
+        "abstract_enzyme": "Aromatic aldoxime N-monooxygenase"
     },
     {
         "role": "(Methylsulfanyl)alkanaldoxime N-monooxygenase (EC 1.14.14.43)",

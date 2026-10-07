@@ -47085,7 +47085,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_6b08ec"
+                "~/complexes/id/PS_complex_c4a6ef"
             ]
         },
         {
@@ -51887,7 +51887,7 @@
                 }
             ],
             "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_6b08ec"
+                "~/complexes/id/PS_complex_c4a6ef"
             ]
         },
         {
@@ -71032,20 +71032,6 @@
             ]
         },
         {
-            "id": "PS_complex_6b08ec",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_c61b82",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
             "id": "PS_complex_6b6e0c",
             "name": "",
             "reference": "",
@@ -73900,6 +73886,20 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_5f0ac3",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_c4a6ef",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_c61b82",
                     "optional_role": 0,
                     "triggering": 1
                 }
