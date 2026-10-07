@@ -1,19 +1,34 @@
-#Specialized
-All|SP	cpd17403	d	0.001	Homomethionine	specialized
-
-#Glucosinolates
-# Aliphatic
-All|GS	cpd05338	c	0.001	Sinigrin GSL	specialized # three carbon
-All|GS	cpd22000	c	0.001	Glucomalcommin	specialized
+##glucosinolates
+#Aliphatic
+# 3-carbon side chain: Glucoiberverin -> Glucoiberin -> Sinigrin / 3-hydroxypropyl-GSL
+All|GS	cpd05324	c	0.001	Glucoiberverin	specialized
+All|GS	cpd05323	c	0.001	Glucoiberin	specialized
+All|GS	cpd05338	c	0.001	Sinigrin	specialized
+All|GS	cpd22018	c	0.001	3-hydroxypropyl-glucosinolate	specialized
+# 4-carbon side chain: Glucoerucin -> Glucoraphanin -> Gluconapin / 4-hydroxybutyl-GSL
+All|GS	cpd05321	c	0.001	Glucoerucin	specialized
+All|GS	cpd05331	c	0.001	Glucoraphanin	specialized
+All|GS	cpd05327	c	0.001	Gluconapin	specialized
+All|GS	cpd26623	c	0.001	4-hydroxybutylglucosinolate	specialized
+# 5-carbon side chain: Glucoberteroin -> Glucoalyssin
+All|GS	cpd05313	c	0.001	Glucoberteroin	specialized
+All|GS	cpd05312	c	0.001	Glucoalyssin	specialized
+# 6-carbon side chain: Glucolesquerellin -> 6-methylsulfinylhexyl-GSL
+All|GS	cpd17439	c	0.001	Glucolesquerellin	specialized
+All|GS	cpd26625	c	0.001	6-methylsulfinylhexyl glucosinolate	specialized
+# 7-carbon side chain: 7-methylthioheptyl-GSL -> 7-methylsulfinylheptyl-GSL
+All|GS	cpd17441	c	0.001	7-Methylthioheptyl glucosinolate	specialized
+All|GS	cpd26626	c	0.001	7-methylsulfinylheptyl glucosinolate	specialized
+# 8-carbon side chain: 8-methylthiooctyl-GSL -> Glucohirsutin
+All|GS	cpd17443	c	0.001	8-Methylthiooctyl glucosinolate	specialized
+All|GS	cpd17458	c	0.001	Glucohirsutin	specialized
 
 #Phenolic
-All|GS	cpd28704	c	0.001	Glucotropaeolin	specialized
+All|GS	cpd01457	c	0.001	Glucotropeolin	specialized
 
-#Indolic
+#Indolic: Glucobrassicin -> 1-hydroxy-/4-hydroxyglucobrassicin -> Neoglucobrassicin/4-methoxyglucobrassicin
 All|GS	cpd03467	c	0.001	Glucobrassicin	specialized
-All|GS	cpd05333	c	0.001	4-Hydroxyglucobrassicin	specialized
+All|GS	cpd32717	c	0.001	1-hydroxyglucobrassicin	specialized
 All|GS	cpd05335	c	0.001	Neoglucobrassicin	specialized
-All|GS	cpd05334	c	0.001	4-Methoxy-glucobrassicin	specialized
-
-#????????????
-All|GS	cpd34716	c	0.001	Sinalbin	specialized
+All|GS	cpd05333	c	0.001	4-Hydroxyglucobrassicin	specialized
+All|GS	cpd05334	c	0.001	4-Methoxyglucobrassicin	specialized
