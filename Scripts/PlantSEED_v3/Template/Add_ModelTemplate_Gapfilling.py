@@ -34,7 +34,7 @@ for template_compcompound in plantseed_template_obj['compcompounds']:
 # List of reactions for which their direction should be fixed as
 # It differs from the biochemistry
 curated_reactions_dict=dict()
-with open("../../../Data/PlantSEED_v3/Curated_Reaction_Directions_MSDv1.1.1.txt") as rxn_fh:
+with open("../../../Data/PlantSEED_v3/Template_Inputs/Curated_Reaction_Directions_MSDv1.1.1.txt") as rxn_fh:
     for line in rxn_fh.readlines():
         line=line.rstrip('\r\n')
         array=line.split('\t')
@@ -46,7 +46,7 @@ with open("../../../Data/PlantSEED_v3/Curated_Reaction_Directions_MSDv1.1.1.txt"
 # This is not necessary as part of a re-compilation, but if we ever need to use
 # gapfilling to fix a new pathway, then we need this.
 limited_gf_reactions_list=list()
-with open("../../../Data/PlantSEED_v3/Restricted_PlantSEED_Gapfilling_MSDv1.1.1.txt") as gf_rxn_fh:
+with open("../../../Data/PlantSEED_v3/Template_Inputs/Restricted_PlantSEED_Gapfilling_MSDv1.1.1.txt") as gf_rxn_fh:
     for line in gf_rxn_fh.readlines():
         line=line.rstrip('\r\n')
         limited_gf_reactions_list.append(line)

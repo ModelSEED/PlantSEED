@@ -30,7 +30,7 @@ updated_rxns_dict = {"RD":[],"GF":[],"UR":[],"PS":[],"CX":[]}
 # List of reactions for which their direction should be fixed as
 # It differs from the biochemistry
 curated_reactions_dict=dict()
-direction_file = "../../../Data/PlantSEED_v3/Curated_Reaction_Directions_MSDv1.1.1.txt"
+direction_file = "../../../Data/PlantSEED_v3/Template_Inputs/Curated_Reaction_Directions_MSDv1.1.1.txt"
 with open(direction_file) as rxn_fh:
 	for line in rxn_fh.readlines():
 		line=line.rstrip('\r\n')
@@ -50,7 +50,7 @@ with open(direction_file,'w') as rxn_fh:
 # This is not necessary as part of a re-compilation, but if we ever need to use
 # gapfilling to fix a new pathway, then we need this.
 limited_gf_reactions_list=list()
-gapfill_file = "../../../Data/PlantSEED_v3/Restricted_PlantSEED_Gapfilling_MSDv1.1.1.txt"
+gapfill_file = "../../../Data/PlantSEED_v3/Template_Inputs/Restricted_PlantSEED_Gapfilling_MSDv1.1.1.txt"
 with open(gapfill_file) as gf_rxn_fh:
 	for line in gf_rxn_fh.readlines():
 		line=line.rstrip('\r\n')
@@ -68,7 +68,7 @@ with open(gapfill_file,'w') as gf_rxn_fh:
 # they shouldn't have been.
 # As of 12/01/20, there are two problematic compounds: THF and Stearoyl-ACP that need investigating
 excepted_reactions_list=list()
-unb_rxn_file = "../Template/Unbalanced_Reactions_to_Fix.txt"
+unb_rxn_file = "../../../Data/PlantSEED_v3/Template_Inputs/Unbalanced_Reactions_to_Fix.txt"
 with open(unb_rxn_file) as exc_rxn_fh:
 	for line in exc_rxn_fh.readlines():
 		line=line.rstrip('\r\n')

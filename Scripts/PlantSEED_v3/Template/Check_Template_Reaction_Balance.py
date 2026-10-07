@@ -53,7 +53,9 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 GENERATOR = os.path.join(HERE, "Generate_Core_ModelTemplate.py")
-EXEMPTIONS = os.path.join(HERE, "Unbalanced_Reactions_to_Fix.txt")
+EXEMPTIONS = os.path.normpath(
+    os.path.join(HERE, "..", "..", "..", "Data", "PlantSEED_v3", "Template_Inputs",
+                 "Unbalanced_Reactions_to_Fix.txt"))
 COMPLEXES = os.path.normpath(
     os.path.join(HERE, "..", "..", "..", "Data", "PlantSEED_v3", "PlantSEED_Complexes.json"))
 RAW = "https://raw.githubusercontent.com/ModelSEED/ModelSEEDDatabase/{sha}/Libs/Python/BiochemPy/{mod}.py"

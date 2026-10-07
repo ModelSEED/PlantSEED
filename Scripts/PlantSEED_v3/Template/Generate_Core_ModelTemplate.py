@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import argparse
 import datetime
 import httpx
 import time
@@ -8,6 +9,74 @@ import glob
 import os
 import re
 import json
+
+PS_url = 'https://raw.githubusercontent.com/ModelSEED/PlantSEED/'
+PS_tag = 'dev'
+
+# This script lives at Scripts/PlantSEED_v3/Template/; repo root is three
+# levels up. Every PlantSEED-repo input the template reads is listed here so
+# one local/remote decision governs all of them -- a curator working from
+# uncommitted curation should never get half the inputs from disk and half
+# from GitHub's dev branch.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_REPO_ROOT = os.path.normpath(os.path.join(_HERE, "..", "..", ".."))
+PLANTSEED_INPUT_FILES = {
+	"curated_directions":    "Data/PlantSEED_v3/Template_Inputs/Curated_Reaction_Directions_MSDv1.1.1.txt",
+	"restricted_gapfill":    "Data/PlantSEED_v3/Template_Inputs/Restricted_PlantSEED_Gapfilling_MSDv1.1.1.txt",
+	"unbalanced_exceptions": "Data/PlantSEED_v3/Template_Inputs/Unbalanced_Reactions_to_Fix.txt",
+	"compartments":          "Data/PlantSEED_v3/Compartments/PlantSEED_Compartments.json",
+	"roles":                 "Data/PlantSEED_v3/PlantSEED_Roles.json",
+	"complexes":             "Data/PlantSEED_v3/PlantSEED_Complexes.json",
+	"biomass":               "Data/PlantSEED_v3/Biomass/PlantSEED_Biomass.txt",
+}
+
+
+def _local_path(relpath):
+	return os.path.join(_REPO_ROOT, relpath)
+
+
+def _resolve_input_source(args):
+	"""One local/remote decision for every PlantSEED-repo input file. Returns
+	True to read from the local checkout, False to fetch from GitHub's
+	PS_tag branch -- the same choice for all seven files, never a mix."""
+	if args.remote:
+		return False
+	if args.local:
+		missing = [p for p in PLANTSEED_INPUT_FILES.values() if not os.path.isfile(_local_path(p))]
+		if missing:
+			raise SystemExit("--local given but these files are missing from the "
+			                  "local checkout:\n  " + "\n  ".join(missing))
+		return True
+
+	any_local = any(os.path.isfile(_local_path(p)) for p in PLANTSEED_INPUT_FILES.values())
+	if not any_local:
+		return False  # no local checkout to offer -- fetch from GitHub
+
+	if args.quiet:
+		return True  # non-interactive: local checkout wins by default
+
+	print(f"Found a local PlantSEED checkout at:\n  {_REPO_ROOT}")
+	choice = input(
+		f"Use the local checkout's Data/ and Template/ files (uncommitted "
+		f"curation included), or fetch all of them from GitHub's '{PS_tag}' "
+		f"branch instead? [local/remote] (local): "
+	).strip().lower()
+	return choice in ("", "l", "local")
+
+
+def _open_input(key, mode="r"):
+	"""Open one of PLANTSEED_INPUT_FILES, from disk or GitHub, per the single
+	local/remote decision made once at startup (see USE_LOCAL_INPUTS below)."""
+	relpath = PLANTSEED_INPUT_FILES[key]
+	if USE_LOCAL_INPUTS:
+		return open(_local_path(relpath), mode)
+	url = PS_url + PS_tag + "/" + relpath
+	with httpx.Client(follow_redirects=True) as client:
+		response = client.get(url)
+		response.raise_for_status()
+	import io
+	return io.StringIO(response.text)
+
 
 def fetch_biochemistry_data(url: str, pattern: str, branch: str):
     
@@ -63,6 +132,35 @@ def fetch_biochemistry_data(url: str, pattern: str, branch: str):
 biochem_ref = "48/1/5" #AppDev reference NB: doesn't work in production!
 
 ############################
+## Resolve local vs. remote PlantSEED inputs (one decision for all seven files)
+############################
+
+def _build_argparser():
+	ap = argparse.ArgumentParser(
+		description="Generate the PlantSEED neutral model template from "
+		            "PlantSEED_Roles.json / PlantSEED_Complexes.json and "
+		            "related curation files.",
+	)
+	ap.add_argument("--local", action="store_true",
+		help=f"Force reading the local checkout's PlantSEED-repo input files "
+		     f"(under {_REPO_ROOT}), including uncommitted curation. Skips "
+		     f"the local/remote prompt. Errors if any input file is missing.")
+	ap.add_argument("--remote", action="store_true",
+		help=f"Force fetching every PlantSEED-repo input file from GitHub's "
+		     f"'{PS_tag}' branch, even if a local checkout is present. Skips "
+		     f"the local/remote prompt.")
+	ap.add_argument("--quiet", action="store_true",
+		help="Don't prompt when a local checkout is present -- just use it.")
+	return ap
+
+_cli_args, _ = _build_argparser().parse_known_args()
+if _cli_args.local and _cli_args.remote:
+	raise SystemExit("--local and --remote are mutually exclusive")
+USE_LOCAL_INPUTS = _resolve_input_source(_cli_args)
+_input_source_desc = "local checkout" if USE_LOCAL_INPUTS else f"GitHub '{PS_tag}' branch"
+print(f"PlantSEED inputs: {_input_source_desc}")
+
+############################
 ## Load Additional Curation
 ############################
 
@@ -70,7 +168,7 @@ biochem_ref = "48/1/5" #AppDev reference NB: doesn't work in production!
 # List of reactions for which their direction should be fixed as
 # It differs from the biochemistry
 curated_reactions_dict=dict()
-with open("../../../Data/PlantSEED_v3/Curated_Reaction_Directions_MSDv1.1.1.txt") as rxn_fh:
+with _open_input("curated_directions") as rxn_fh:
 	for line in rxn_fh.readlines():
 		line=line.rstrip('\r\n')
 		array=line.split('\t')
@@ -82,7 +180,7 @@ with open("../../../Data/PlantSEED_v3/Curated_Reaction_Directions_MSDv1.1.1.txt"
 # This is not necessary as part of a re-compilation, but if we ever need to use
 # gapfilling to fix a new pathway, then we need this.
 limited_gf_reactions_list=list()
-with open("../../../Data/PlantSEED_v3/Restricted_PlantSEED_Gapfilling_MSDv1.1.1.txt") as gf_rxn_fh:
+with _open_input("restricted_gapfill") as gf_rxn_fh:
 	for line in gf_rxn_fh.readlines():
 		line=line.rstrip('\r\n')
 		limited_gf_reactions_list.append(line)
@@ -96,7 +194,7 @@ with open("../../../Data/PlantSEED_v3/Restricted_PlantSEED_Gapfilling_MSDv1.1.1.
 # they shouldn't have been.
 # As of 12/01/20, there are two problematic compounds: THF and Stearoyl-ACP that need investigating
 excepted_reactions_list=list()
-with open("Unbalanced_Reactions_to_Fix.txt") as exc_rxn_fh:
+with _open_input("unbalanced_exceptions") as exc_rxn_fh:
 	for line in exc_rxn_fh.readlines():
 		line=line.rstrip('\r\n')
 		excepted_reactions_list.append(line)
@@ -177,7 +275,7 @@ print("Biochemistry loaded "+time_string)
 
 #Collect compartments: NB The location will change
 compartments = dict()
-with open("../../../Data/PlantSEED_v3/Compartments/PlantSEED_Compartments.json") as cpt_fh:
+with _open_input("compartments") as cpt_fh:
 	compartments = json.load(cpt_fh)
 
 ############################
@@ -186,7 +284,7 @@ with open("../../../Data/PlantSEED_v3/Compartments/PlantSEED_Compartments.json")
 
 #Load Core Subsystems
 #Load PlantSEED Subsystems, Roles, Reactions
-with open("../../../Data/PlantSEED_v3/PlantSEED_Roles.json") as subsystem_file:
+with _open_input("roles") as subsystem_file:
 	roles_list = json.load(subsystem_file)
 
 #Collect Compartmentalized Reactions
@@ -247,7 +345,7 @@ for entry in roles_list:
 
 #Load Core Subsystems
 #Load PlantSEED Subsystems, Roles, Reactions
-with open("../../../Data/PlantSEED_v3/PlantSEED_Complexes.json") as biochem_file:
+with _open_input("complexes") as biochem_file:
 	complex_list = json.load(biochem_file)
 
 ############################################################
@@ -778,7 +876,7 @@ def _cpd_of(ref):
 # read its component list straight from the data file. Without it every
 # biomass-only metabolite looks unmetabolised and its transporters are dropped.
 biomass_cpds = set()
-with open("../../../Data/PlantSEED_v3/Biomass/PlantSEED_Biomass.txt") as bio_fh:
+with _open_input("biomass") as bio_fh:
 	for line in bio_fh:
 		line = line.strip('\r\n')
 		if(line == "" or line[0] in (' ','#')):
