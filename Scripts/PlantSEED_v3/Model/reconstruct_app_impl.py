@@ -1,6 +1,90 @@
+import argparse
 import copy
 import json
 import os,re
+import httpx
+
+PS_url = 'https://raw.githubusercontent.com/ModelSEED/PlantSEED/'
+PS_tag = 'dev'
+
+# This script lives at Scripts/PlantSEED_v3/Model/; repo root is three levels
+# up. Both PlantSEED-repo inputs main() reads are listed here so one
+# local/remote decision governs both -- see annotate-arabidopsis-genome.py
+# and Generate_Core_ModelTemplate.py for the same pattern.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_REPO_ROOT = os.path.normpath(os.path.join(_HERE, "..", "..", ".."))
+PLANTSEED_INPUT_FILES = {
+	"template":     "Scripts/PlantSEED_v3/Template/PlantSEED_Biomass_Template.json",
+	"compartments": "Data/PlantSEED_v3/Compartments/PlantSEED_Compartments.json",
+}
+
+
+def _local_path(relpath):
+	return os.path.join(_REPO_ROOT, relpath)
+
+
+def _resolve_input_source(args):
+	"""One local/remote decision for both PlantSEED-repo input files."""
+	if args.remote:
+		return False
+	if args.local:
+		missing = [p for p in PLANTSEED_INPUT_FILES.values() if not os.path.isfile(_local_path(p))]
+		if missing:
+			raise SystemExit("--local given but these files are missing from the "
+			                  "local checkout:\n  " + "\n  ".join(missing))
+		return True
+
+	any_local = any(os.path.isfile(_local_path(p)) for p in PLANTSEED_INPUT_FILES.values())
+	if not any_local:
+		return False  # no local checkout to offer -- fetch from GitHub
+
+	if args.quiet:
+		return True  # non-interactive: local checkout wins by default
+
+	print(f"Found a local PlantSEED checkout at:\n  {_REPO_ROOT}")
+	choice = input(
+		f"Use the local checkout's template + compartments files (uncommitted "
+		f"curation included), or fetch both from GitHub's '{PS_tag}' branch "
+		f"instead? [local/remote] (local): "
+	).strip().lower()
+	return choice in ("", "l", "local")
+
+
+def _load_input(key, use_local):
+	"""Load one of PLANTSEED_INPUT_FILES as parsed JSON, from disk or GitHub,
+	per the single local/remote decision made once at startup."""
+	relpath = PLANTSEED_INPUT_FILES[key]
+	if use_local:
+		with open(_local_path(relpath)) as fh:
+			return json.load(fh)
+	url = PS_url + PS_tag + "/" + relpath
+	with httpx.Client(follow_redirects=True) as client:
+		response = client.get(url)
+		response.raise_for_status()
+	return response.json()
+
+
+def _build_argparser():
+	ap = argparse.ArgumentParser(
+		description="Build a test Arabidopsis FBAModel from "
+		            "annotated-arabidopsis-genome.json using "
+		            "ReconstructAppImpl directly (no CLI wrapper).",
+	)
+	ap.add_argument("--genome", default="annotated-arabidopsis-genome.json",
+		help="Path to the annotated genome JSON. Default: %(default)s")
+	ap.add_argument("--out", default="test_arabidopsis_model.json",
+		help="Output FBAModel JSON path. Default: %(default)s")
+	ap.add_argument("--local", action="store_true",
+		help=f"Force reading the local checkout's template + compartments "
+		     f"files (under {_REPO_ROOT}), including uncommitted curation. "
+		     f"Skips the local/remote prompt.")
+	ap.add_argument("--remote", action="store_true",
+		help=f"Force fetching both files from GitHub's '{PS_tag}' branch, "
+		     f"even if a local checkout is present. Skips the prompt.")
+	ap.add_argument("--quiet", action="store_true",
+		help="Don't prompt when a local checkout is present -- just use it.")
+	return ap
+
 
 class ReconstructAppImpl:
 	@staticmethod
@@ -432,22 +516,18 @@ class ReconstructAppImpl:
 
 def main():
 
-	genome_path = 'Ptrichocarpa_533_v4.1.protein-annotated.json'
-	genome_path = 'Sbicolor_454_v3.1.1.protein-annotated.json'
-	genome_path = 'Sbicolor_730_v5.1.protein-annotated.json'
-	genome_path = 'annotated-arabidopsis-genome.json'
+	args = _build_argparser().parse_args()
+	if args.local and args.remote:
+		raise SystemExit("--local and --remote are mutually exclusive")
+	use_local = _resolve_input_source(args)
+	_source_desc = "local checkout" if use_local else f"GitHub '{PS_tag}' branch"
+	print(f"PlantSEED inputs (template + compartments): {_source_desc}")
 
-	with open(genome_path) as fh:
+	with open(args.genome) as fh:
 		genome_obj = json.load(fh)
 
-	template_file_path = os.path.join('..','Template','PlantSEED_Biomass_Template.json')
-	with open(template_file_path) as fh:
-		template_obj = json.load(fh)
-
-	# Compile compartment information
-	compartments_file_path = os.path.join('..','..','..','Data','PlantSEED_v3','Compartments','PlantSEED_Compartments.json')
-	with open(compartments_file_path) as fh:
-		compartments = json.load(fh)
+	template_obj = _load_input("template", use_local)
+	compartments = _load_input("compartments", use_local)
 
 	reconstruct_app = ReconstructAppImpl()
 	reconstruct_app._set_objects({'genome':genome_obj,'template':template_obj})
@@ -479,10 +559,10 @@ def main():
 
 		# if(' ' in mdlcpd['formula']):
 		# 	print(mdlcpd['id'],mdlcpd['formula'])
-			
-	output_path=os.path.join(obj_name+'.json')
-	with open(output_path,'w') as mofh:
+
+	with open(args.out,'w') as mofh:
 		mofh.write(json.dumps(metabolism_obj, indent=4, sort_keys=True))
+	print(f"Wrote {args.out}")
 
 if(__name__ == "__main__"):
 	main()
