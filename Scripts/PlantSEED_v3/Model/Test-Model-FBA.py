@@ -2,7 +2,7 @@
 from cobrakbase.core.kbase_object_factory import KBaseObjectFactory
 
 KBOF = KBaseObjectFactory()
-model = KBOF.build_object_from_file('test_model.json', "KBaseFBA.FBAModel")
+model = KBOF.build_object_from_file('test_arabidopsis_model.json', "KBaseFBA.FBAModel")
 media = KBOF.build_object_from_file('PlantAutotrophicMedia.json', "KBaseBiochem.Media")
 model.medium = media
 
