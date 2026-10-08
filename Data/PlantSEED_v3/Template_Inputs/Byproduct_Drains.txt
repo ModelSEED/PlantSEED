@@ -1,0 +1,3 @@
+cpd00204	d	CO, from thiC (rxn20643)
+cpd02701	m	S-Adenosyl-4-methylthio-2-oxobutanoate, from rxn02312
+cpd08023	c	Methanesulfonate, from AOP-family side-chain reactions (rxn23785/rxn27065/rxn27066/rxn44212)

@@ -24,6 +24,7 @@ PLANTSEED_INPUT_FILES = {
 	"curated_directions":    "Data/PlantSEED_v3/Template_Inputs/Curated_Reaction_Directions_MSDv1.1.1.txt",
 	"restricted_gapfill":    "Data/PlantSEED_v3/Template_Inputs/Restricted_PlantSEED_Gapfilling_MSDv1.1.1.txt",
 	"unbalanced_exceptions": "Data/PlantSEED_v3/Template_Inputs/Unbalanced_Reactions_to_Fix.txt",
+	"byproduct_drains":      "Data/PlantSEED_v3/Template_Inputs/Byproduct_Drains.txt",
 	"compartments":          "Data/PlantSEED_v3/Compartments/PlantSEED_Compartments.json",
 	"roles":                 "Data/PlantSEED_v3/PlantSEED_Roles.json",
 	"complexes":             "Data/PlantSEED_v3/PlantSEED_Complexes.json",
@@ -862,10 +863,36 @@ for template_reaction in sorted(reactions_roles, key=_emit_order):
 EXEMPT_CPTS = {'y','j','e'}
 
 # Dead-end byproducts given an explicit drain where they are produced, so they
-# do not depend on a transport chain to leave. Both are made by one reaction and
-# consumed by nothing anywhere.
-BYPRODUCT_DRAINS = {'cpd00204':'d',   # CO, from thiC (rxn20643)
-					'cpd02701':'m'}   # S-adenosyl-4-methylthio-2-oxobutanoate, from rxn02312
+# do not depend on a transport chain to leave. Curated in
+# Data/PlantSEED_v3/Template_Inputs/Byproduct_Drains.txt (compound, source
+# compartment, free-text provenance comment) rather than hardcoded here, so a
+# new byproduct can be added without touching this script.
+#
+# Each drain crosses source-compartment -> extracellular ('e'), the same shape
+# as a transporter, rather than a same-compartment sink -- it genuinely leaves
+# the cell; cobrakbase's own exchange-reaction machinery then provides the
+# final EX_<cpd>_e0 step out of the model, same as it does for every other
+# extracellular compound.
+#
+# Admission is per-genome, not per-template: each drain is built with
+# type='conditional' and linked to a synthetic 'Spontaneous Reaction'-named
+# role + complex (added directly to this template's own roles/complexes
+# arrays -- NOT to PlantSEED_Roles.json / PlantSEED_Complexes.json, since a
+# drain is a model-building bookkeeping device, not curated biology).
+# reconstruct_app_impl.py already defers any conditional reaction linked to a
+# role named "Spontaneous Reaction" and admits it only if one of its reagents
+# is already present in that genome's reconstructed model -- the exact
+# mechanism rxn22371 (the glucosinolate spontaneous isomerisation) uses today.
+# A genome that never produces e.g. methanesulfonate in the first place will
+# not get its drain either.
+BYPRODUCT_DRAINS = {}
+with _open_input("byproduct_drains") as bd_fh:
+	for line in bd_fh:
+		line = line.rstrip('\r\n')
+		if line == "" or line[0] == '#':
+			continue
+		array = line.split('\t')
+		BYPRODUCT_DRAINS[array[0]] = array[1]
 
 def _cpt_of(ref):
 	return ref.split('/')[-1].rsplit('_',1)[1]
@@ -948,21 +975,56 @@ with open("Excluded_Transporters.txt","w") as exc_fh:
 		exc_fh.write(rxn_id+"\t"+",".join(cpds)+"\t"+"|".join(cpts)+"\n")
 template_reactions = kept_reactions
 
-# explicit drains for the dead-end byproducts
+# explicit drains for the dead-end byproducts, source compartment -> extracellular
 for cpd_id,cpt_id in sorted(BYPRODUCT_DRAINS.items()):
-	comp_compound = cpd_id+"_"+cpt_id
-	if(comp_compound not in check_tpl_cpcpd_dict):
+	source_compound = cpd_id+"_"+cpt_id
+	if(source_compound not in check_tpl_cpcpd_dict):
 		continue
+
+	# The extracellular side is a new compcompound unless something else
+	# already put this compound there (e.g. it's also an uptake nutrient).
+	extra_compound = cpd_id+"_e"
+	if('e' not in check_tpl_cpt_dict):
+		check_tpl_cpt_dict['e']=1
+		template_compartments.append(compartments['e'])
+	if(cpd_id not in check_tpl_cpd_dict):
+		check_tpl_cpd_dict[cpd_id]=1
+		template_compounds.append(compounds_dict[cpd_id])
+	if(extra_compound not in check_tpl_cpcpd_dict):
+		check_tpl_cpcpd_dict[extra_compound]=1
+		template_compcompounds.append({ 'id':extra_compound,
+			'charge':float(compounds_dict[cpd_id]['defaultCharge']), 'maxuptake':0.0,
+			'templatecompound_ref':"~/compounds/id/"+cpd_id,
+			'templatecompartment_ref':"~/compartments/id/e" })
+
+	drain_id = "drain_"+cpd_id+"_"+cpt_id
+	drain_role_id = "PS_role_drain_"+cpd_id
+	drain_cpx_id = "PS_complex_drain_"+cpd_id
+
+	# Synthetic "Spontaneous Reaction"-named role + complex, added only to
+	# THIS template's own roles/complexes -- not to PlantSEED_Roles.json or
+	# PlantSEED_Complexes.json. type='conditional' + zero features + the name
+	# match is exactly what reconstruct_app_impl.py's conditional-spontaneous
+	# path looks for (see rxn22371 for the precedent).
+	template_roles.append({ 'id':drain_role_id, 'name':'Spontaneous Reaction',
+		'source':'PlantSEED', 'aliases':[], 'features':[] })
+	template_complexes.append({ 'id':drain_cpx_id, 'name':'', 'reference':'',
+		'source':'PlantSEED', 'confidence':1.0,
+		'complexroles':[{ 'templaterole_ref':"~/roles/id/"+drain_role_id,
+						   'optional_role':0, 'triggering':1 }] })
+
 	drain_hash = copy.deepcopy(default_template_reaction)
-	drain_hash['id'] = "drain_"+cpd_id+"_"+cpt_id
+	drain_hash['id'] = drain_id
 	drain_hash['name'] = "Byproduct drain: "+compounds_dict[cpd_id]['name']
 	drain_hash['templatecompartment_ref'] = "~/compartments/id/"+cpt_id
-	drain_hash['type'] = 'universal'
+	drain_hash['type'] = 'conditional'
 	drain_hash['direction'] = '>'
 	drain_hash['GapfillDirection'] = '>'
 	drain_hash['templateReactionReagents'] = [
-		{'templatecompcompound_ref':"~/compcompounds/id/"+comp_compound,'coefficient':-1.0}]
-	print("Byproduct drain: "+drain_hash['id']+" ("+compounds_dict[cpd_id]['name']+")")
+		{'templatecompcompound_ref':"~/compcompounds/id/"+source_compound,'coefficient':-1.0},
+		{'templatecompcompound_ref':"~/compcompounds/id/"+extra_compound,'coefficient':1.0}]
+	drain_hash['templatecomplex_refs'] = ["~/complexes/id/"+drain_cpx_id]
+	print("Byproduct drain (conditional): "+drain_hash['id']+" ("+compounds_dict[cpd_id]['name']+")")
 	template_reactions.append(drain_hash)
 
 #Populate model_template dictionary
