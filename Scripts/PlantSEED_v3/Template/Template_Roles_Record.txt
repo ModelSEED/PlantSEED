@@ -395,7 +395,6 @@ PS_role_0b4082	Malate dehydrogenase (NADP+) (EC 1.1.1.82)
 PS_role_19e126	Malate synthase (EC 2.3.3.9)
 PS_role_70154b	Malate transport
 PS_role_f793ab	Malonyl CoA-acyl carrier protein transacylase (EC 2.3.1.39)
-PS_role_32a5b1	Methanesulfonate transport
 PS_role_c2a032	Methenyltetrahydrofolate cyclohydrolase (EC 3.5.4.9)
 PS_role_ca3db9	Methionine S-methyltransferase (EC 2.1.1.12)
 PS_role_27326d	Methionine gamma-lyase (EC 4.4.1.11)

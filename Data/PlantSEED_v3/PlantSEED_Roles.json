@@ -39862,36 +39862,6 @@
         "kbase_id": "PS_role_6d93dc"
     },
     {
-        "role": "Methanesulfonate transport",
-        "include": true,
-        "subsystems": [
-            "Media_transport"
-        ],
-        "classes": {
-            "Transport": {
-                "Media_transport": []
-            }
-        },
-        "features": [],
-        "reactions": [
-            "rxn08960"
-        ],
-        "localization": {
-            "ce": {
-                "rxn08960": [
-                    "Assumed"
-                ]
-            }
-        },
-        "type": "universal",
-        "is_transporter": true,
-        "abstract_enzyme": "Methanesulfonate transport",
-        "curators": [
-            "samseaver"
-        ],
-        "kbase_id": "PS_role_32a5b1"
-    },
-    {
         "role": "N-hydroxyindole glucosinolate O-methyltransferase",
         "include": true,
         "subsystems": [

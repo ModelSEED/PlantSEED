@@ -274,7 +274,6 @@ rxn23776_c|rxn42934_c	PS_complex_4fb0b3	PS_role_ebb49d	4-hydroxyindole glucosino
 rxn45029_d	PS_complex_50237c	PS_role_4ea08d	Taxoid 14-beta-hydroxylase (EC 1.14.13.146)	Uniprot||Q84KI1
 rxn01652_c|rxn01652_m|rxn01652_d	PS_complex_509311	PS_role_66be13	5,10-methenyltetrahydrofolate to 5-formyltetrahydrofolate hydrolase	Athaliana_TAIR10||AT1G22020|Athaliana_TAIR10||AT1G36370|Athaliana_TAIR10||AT4G13890|Athaliana_TAIR10||AT4G13930|Athaliana_TAIR10||AT4G32520|Athaliana_TAIR10||AT4G37930|Athaliana_TAIR10||AT5G26780
 rxn08436_d	PS_complex_50bbc3	PS_role_be865b	Palmitoyl-[acyl carrier protein] thioesterase of FASI (EC 3.1.2.-)	
-rxn08960_c	PS_complex_512a1b	PS_role_32a5b1	Methanesulfonate transport	
 rxn29733_m|rxn29733_v|rxn29733_d|rxn29733_x	PS_complex_5164d2	PS_role_d35d10	Pyrophosphate transport	
 rxn01434_d	PS_complex_519d24	PS_role_b3efb1	Argininosuccinate synthase (EC 6.3.4.5)	Athaliana_TAIR10||AT4G24830
 rxn09792_m	PS_complex_51a150	PS_role_899b27	4-hydroxybenzoate transport	

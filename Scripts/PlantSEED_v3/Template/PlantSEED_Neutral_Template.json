@@ -15546,6 +15546,13 @@
             "templatecompartment_ref": "~/compartments/id/c"
         },
         {
+            "id": "cpd02701_e",
+            "charge": 0.0,
+            "maxuptake": 0.0,
+            "templatecompound_ref": "~/compounds/id/cpd02701",
+            "templatecompartment_ref": "~/compartments/id/e"
+        },
+        {
             "id": "cpd02701_m",
             "charge": 0.0,
             "maxuptake": 0.0,
@@ -42823,30 +42830,6 @@
             ]
         },
         {
-            "id": "rxn08960_c",
-            "name": "methanesulfonate transport via diffusion (extracellular to periplasm)",
-            "templatecompartment_ref": "~/compartments/id/c",
-            "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
-            "direction": "=",
-            "GapfillDirection": "=",
-            "maxforflux": 0.0,
-            "maxrevflux": 0.0,
-            "templateReactionReagents": [
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd08023_c",
-                    "coefficient": -1.0
-                },
-                {
-                    "templatecompcompound_ref": "~/compcompounds/id/cpd08023_e",
-                    "coefficient": 1.0
-                }
-            ],
-            "templatecomplex_refs": [
-                "~/complexes/id/PS_complex_512a1b"
-            ]
-        },
-        {
             "id": "rxn08999_c",
             "name": "nitrite transport via diffusion (extracellular to periplasm)",
             "templatecompartment_ref": "~/compartments/id/c",
@@ -59685,7 +59668,7 @@
             "name": "Byproduct drain: CO",
             "templatecompartment_ref": "~/compartments/id/d",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
+            "type": "conditional",
             "direction": ">",
             "GapfillDirection": ">",
             "maxforflux": 0.0,
@@ -59694,16 +59677,22 @@
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd00204_d",
                     "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd00204_e",
+                    "coefficient": 1.0
                 }
             ],
-            "templatecomplex_refs": []
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_drain_cpd00204"
+            ]
         },
         {
             "id": "drain_cpd02701_m",
             "name": "Byproduct drain: S-Adenosyl-4-methylthio-2-oxobutanoate",
             "templatecompartment_ref": "~/compartments/id/m",
             "reaction_ref": "48/1/5/reactions/id/rxn14003",
-            "type": "universal",
+            "type": "conditional",
             "direction": ">",
             "GapfillDirection": ">",
             "maxforflux": 0.0,
@@ -59712,9 +59701,39 @@
                 {
                     "templatecompcompound_ref": "~/compcompounds/id/cpd02701_m",
                     "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd02701_e",
+                    "coefficient": 1.0
                 }
             ],
-            "templatecomplex_refs": []
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_drain_cpd02701"
+            ]
+        },
+        {
+            "id": "drain_cpd08023_c",
+            "name": "Byproduct drain: methanesulfonate",
+            "templatecompartment_ref": "~/compartments/id/c",
+            "reaction_ref": "48/1/5/reactions/id/rxn14003",
+            "type": "conditional",
+            "direction": ">",
+            "GapfillDirection": ">",
+            "maxforflux": 0.0,
+            "maxrevflux": 0.0,
+            "templateReactionReagents": [
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd08023_c",
+                    "coefficient": -1.0
+                },
+                {
+                    "templatecompcompound_ref": "~/compcompounds/id/cpd08023_e",
+                    "coefficient": 1.0
+                }
+            ],
+            "templatecomplex_refs": [
+                "~/complexes/id/PS_complex_drain_cpd08023"
+            ]
         }
     ],
     "roles": [
@@ -63518,13 +63537,6 @@
             ]
         },
         {
-            "id": "PS_role_32a5b1",
-            "name": "Methanesulfonate transport",
-            "source": "PlantSEED",
-            "aliases": [],
-            "features": []
-        },
-        {
             "id": "PS_role_c2a032",
             "name": "Methenyltetrahydrofolate cyclohydrolase (EC 3.5.4.9)",
             "source": "PlantSEED",
@@ -66747,6 +66759,27 @@
                 "Athaliana_TAIR10||AT3G27240",
                 "Athaliana_TAIR10||AT5G40810"
             ]
+        },
+        {
+            "id": "PS_role_drain_cpd00204",
+            "name": "Spontaneous Reaction",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": []
+        },
+        {
+            "id": "PS_role_drain_cpd02701",
+            "name": "Spontaneous Reaction",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": []
+        },
+        {
+            "id": "PS_role_drain_cpd08023",
+            "name": "Spontaneous Reaction",
+            "source": "PlantSEED",
+            "aliases": [],
+            "features": []
         }
     ],
     "complexes": [
@@ -69871,20 +69904,6 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_be865b",
-                    "optional_role": 0,
-                    "triggering": 1
-                }
-            ]
-        },
-        {
-            "id": "PS_complex_512a1b",
-            "name": "",
-            "reference": "",
-            "source": "PlantSEED",
-            "confidence": 1.0,
-            "complexroles": [
-                {
-                    "templaterole_ref": "~/roles/id/PS_role_32a5b1",
                     "optional_role": 0,
                     "triggering": 1
                 }
@@ -75865,6 +75884,48 @@
             "complexroles": [
                 {
                     "templaterole_ref": "~/roles/id/PS_role_b51e37",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_drain_cpd00204",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_drain_cpd00204",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_drain_cpd02701",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_drain_cpd02701",
+                    "optional_role": 0,
+                    "triggering": 1
+                }
+            ]
+        },
+        {
+            "id": "PS_complex_drain_cpd08023",
+            "name": "",
+            "reference": "",
+            "source": "PlantSEED",
+            "confidence": 1.0,
+            "complexroles": [
+                {
+                    "templaterole_ref": "~/roles/id/PS_role_drain_cpd08023",
                     "optional_role": 0,
                     "triggering": 1
                 }

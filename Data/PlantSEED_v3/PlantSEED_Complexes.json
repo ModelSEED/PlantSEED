@@ -15495,22 +15495,6 @@
         }
     },
     {
-        "kbase_id": "PS_complex_512a1b",
-        "enzyme": "Methanesulfonate transport",
-        "roles": [
-            "Methanesulfonate transport"
-        ],
-        "compartments_reactions": {
-            "c": {
-                "reactions": [
-                    "rxn08960"
-                ],
-                "reagents": "ce",
-                "exclude": false
-            }
-        }
-    },
-    {
         "kbase_id": "PS_complex_558343",
         "enzyme": "Hydroxyalkyl-forming glucosinolate 2-oxoglutarate-dependent dioxygenase",
         "roles": [

@@ -1,0 +1,2 @@
+# Replaced by the conditional byproduct drain (drain_cpd08023_c, synthesized in Generate_Core_ModelTemplate.py from Data/PlantSEED_v3/Template_Inputs/Byproduct_Drains.txt) -- that drain is gated on methanesulfonate actually being produced in the genome; this universal c<->e transporter was not. Deleted outright rather than disabled (REASSIGN include=false) since the role should not exist in the database at all going forward.
+Methanesulfonate transport	DELETE
