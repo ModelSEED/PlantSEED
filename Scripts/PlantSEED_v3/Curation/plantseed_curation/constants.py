@@ -39,27 +39,29 @@ DEFAULT_LOC_SOURCE = "Assumed"
 # now deprecated aliases that route into the same `reassign` bucket so
 # existing curator TSVs keep working. Curators get a single end-of-parse
 # warning per old name when one is encountered.
-ACTION_OPTIONS = ["ADD", "REASSIGN", "RELOCATE", "REMOVE", "UPDATE", "NEW"]
+ACTION_OPTIONS = ["ADD", "REASSIGN", "RELOCATE", "REMOVE", "UPDATE", "NEW", "DELETE"]
 
 # Complex-scoped counterparts. Same verbs, CPX_ prefix, and column 1 holds the
 # ENZYME NAME rather than a role name — enzyme names are unique across all
 # complexes and are the key complexes are actually grouped by, whereas
 # kbase_id is a hash over enzyme+roles+rxn_cpts and rehashes whenever a
 # reaction is added. Validated against PlantSEED_Complexes_Schema.yaml.
-CPX_ACTION_OPTIONS = ["CPX_ADD", "CPX_REASSIGN", "CPX_REMOVE", "CPX_UPDATE"]
+CPX_ACTION_OPTIONS = ["CPX_ADD", "CPX_REASSIGN", "CPX_REMOVE", "CPX_UPDATE", "CPX_DELETE"]
 CPX_ACTION_DESCRIPTIONS = {
     "CPX_ADD":      "Set a stoichiometry override for one compound across every reaction this enzyme catalyses. Coefficient 0 removes the reagent; a compound not already in the reaction is added. Optional 6th column is the compartment letter (defaults to the reaction's first compartment). Optional 7th column scopes the override to ONE reaction — use only when the enzyme's reactions genuinely differ, e.g. a shared glutathione S-transferase whose substrate differs per branch.",
     "CPX_REASSIGN": "Set a scalar complex field — currently `direction` ('>', '<', '=').",
     "CPX_REMOVE":   "Drop a stoichiometry override, restoring the database coefficient. To remove a reagent from the reaction instead, use CPX_ADD with coefficient 0.",
     "CPX_UPDATE":   "Rename an enzyme (the complex key). Triggers a complex kbase_id rehash.",
+    "CPX_DELETE":   "Permanently remove the whole complex entry. Rare — most of the time a role-level DELETE (which cascades) or REASSIGN include=false (which keeps the entry, just excludes it from the template) is what's wanted. Use only for a complex with no backing role left, or one that was minted in error.",
 }
-CPX_ACTION_MIN_COLS = {"CPX_UPDATE": 3, "CPX_REASSIGN": 4, "CPX_ADD": 5, "CPX_REMOVE": 4}
+CPX_ACTION_MIN_COLS = {"CPX_UPDATE": 3, "CPX_REASSIGN": 4, "CPX_ADD": 5, "CPX_REMOVE": 4, "CPX_DELETE": 2}
 ACTION_DESCRIPTIONS = {
     "ADD":      "Append entries to a list/dict field. For features/reactions, the extra column is optional — compartment defaults to 'c' (cytosol) with source 'Assumed'.",
     "REASSIGN": "Set a scalar field (e.g. include, type, abstract_enzyme, subcomplex_of). Supersedes the deprecated ASSIGN and CHANGE verbs.",
     "RELOCATE": "Rekey an entry inside a dict field (localization, compartmentalization).",
     "REMOVE":   "Drop entries from a list/dict field.",
     "UPDATE":   "Rename an enzyme. Triggers a kbase_id rehash.",
+    "DELETE":   "Permanently remove the whole role entry (and, by default, any complex keyed on it alone — see run_apply). Irreversible in the database file; the curator TSV that issued it remains the provenance record. Prefer REASSIGN include=false unless the role should not exist in the database at all.",
     "NEW":      "Create a brand-new enzyme entry with schema defaults.",
 }
 
@@ -115,7 +117,7 @@ SCALAR_TYPES = {
 # DEPRECATED_REASSIGN_ALIASES.
 ACTION_MIN_COLS = {
     "UPDATE": 3, "NEW": 2, "ADD": 4, "REMOVE": 4,
-    "RELOCATE": 5, "REASSIGN": 4, "ASSIGN": 4, "CHANGE": 4,
+    "RELOCATE": 5, "REASSIGN": 4, "ASSIGN": 4, "CHANGE": 4, "DELETE": 2,
 }
 
 TYPE_MAP = {"str": str, "bool": bool, "list": list, "dict": dict, "int": int, "float": float}

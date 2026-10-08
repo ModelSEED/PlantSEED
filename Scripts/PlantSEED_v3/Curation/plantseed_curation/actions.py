@@ -90,6 +90,18 @@ def validate_payload(action, enzyme, payload, store):
             )
         return errors, warnings
 
+    if action == "DELETE":
+        if enzyme not in store.role_index:
+            warnings.append(
+                f"DELETE: '{enzyme}' is not in the current database — the row will be skipped on apply"
+            )
+        else:
+            warnings.append(
+                f"DELETE: '{enzyme}' will be permanently removed from PlantSEED_Roles.json. "
+                f"Consider REASSIGN include=false instead unless the role should not exist at all."
+            )
+        return errors, warnings
+
     field = (payload.get("field") or "").strip()
     if not field:
         return [{"field": "field", "message": "Field is required"}], warnings
@@ -200,6 +212,8 @@ def build_tsv_rows(action, enzyme, payload, store):
         rows.append(f"{enzyme}\tNEW")
     elif action == "UPDATE":
         rows.append(f"{enzyme}\tUPDATE\t{(payload['new_name'] or '').strip()}")
+    elif action == "DELETE":
+        rows.append(f"{enzyme}\tDELETE")
     elif action == "ADD":
         field = payload["field"]
         for entry in payload["entries"]:
@@ -237,10 +251,10 @@ def parse_tsv_text(text, schema=None, issues=None):
     deprecated aliases of REASSIGN; a single end-of-parse warning per
     alias actually used is emitted so curators see a clear nudge."""
     actions = {"replace": {}, "new": [], "add": {}, "rem": {}, "key": {},
-               "reassign": {},
+               "reassign": {}, "delete": [],
                # complex-scoped buckets; column 1 is the ENZYME name
                "cpx_replace": {}, "cpx_stoich": {}, "cpx_stoich_rem": {},
-               "cpx_stoich_rxn": {}, "cpx_reassign": {}}
+               "cpx_stoich_rxn": {}, "cpx_reassign": {}, "cpx_delete": []}
     deprecated_alias_counts = {name: 0 for name in DEPRECATED_REASSIGN_ALIASES}
 
     def _check_field(field, lineno):
@@ -303,6 +317,10 @@ def parse_tsv_text(text, schema=None, issues=None):
                 if field != "stoichiometry" and issues is not None:
                     issues.warn(f"line {lineno}: CPX_REMOVE only supports 'stoichiometry', got '{field}'")
                 actions["cpx_stoich_rem"].setdefault(enzyme, []).append(cpd)
+            elif action == "CPX_DELETE":
+                actions["cpx_delete"].append(enzyme)
+                if issues is not None:
+                    issues.log(f"complex queued for deletion: {enzyme}")
             continue
         if action not in ACTION_MIN_COLS:
             if issues is not None:
@@ -319,6 +337,10 @@ def parse_tsv_text(text, schema=None, issues=None):
             actions["new"].append(enzyme)
             if issues is not None:
                 issues.log(f"NEW enzyme queued: {enzyme}")
+        elif action == "DELETE":
+            actions["delete"].append(enzyme)
+            if issues is not None:
+                issues.log(f"role queued for deletion: {enzyme}")
         elif action == "ADD":
             field, entry = tmp_lst[2], tmp_lst[3]
             _check_field(field, lineno)
@@ -391,13 +413,32 @@ def _empty_for_field(field, schema):
 
 def apply_actions(roles_list, actions, curator, issues=None, schema=None):
     """Apply parsed actions to roles_list in place.
-    Returns (touched_role_names, rename_map old->new)."""
+    Returns (touched_role_names, rename_map old->new, deleted_role_names)."""
     replace_dict  = actions["replace"]
     add_dict      = actions["add"]
     rem_dict      = actions["rem"]
     key_dict      = actions["key"]
     reassign_dict = actions["reassign"]
+    delete_list   = actions.get("delete") or []
     touched, rename_map = set(), {}
+
+    # Deletion happens first and is final: a deleted role is removed from
+    # roles_list outright, so none of the other buckets below should also try
+    # to touch it this same pass (DELETE + any other action on the same role
+    # in one TSV is almost certainly a mistake, not a sequence to honour).
+    deleted = set()
+    known_roles = {entry["role"] for entry in roles_list}
+    for role_name in delete_list:
+        if role_name not in known_roles:
+            if issues is not None:
+                issues.warn(f"DELETE: no role named '{role_name}' — skipped")
+            continue
+        deleted.add(role_name)
+    if deleted:
+        roles_list[:] = [r for r in roles_list if r["role"] not in deleted]
+        if issues is not None:
+            for role_name in sorted(deleted):
+                issues.log(f"role deleted: '{role_name}'")
 
     def coerce_value(field, val):
         if SCALAR_TYPES.get(field) == "bool":
@@ -409,6 +450,8 @@ def apply_actions(roles_list, actions, curator, issues=None, schema=None):
         return val
 
     for entry in roles_list:
+        if entry["role"] in deleted:
+            continue
         updated_role = False
 
         if entry["role"] in replace_dict:
@@ -531,7 +574,7 @@ def apply_actions(roles_list, actions, curator, issues=None, schema=None):
                 entry["curators"].append(curator)
             touched.add(entry["role"])
 
-    return touched, rename_map
+    return touched, rename_map, deleted
 
 
 def assign_kbase_id(entry, existing_ids, renamed_from=None, issues=None):
@@ -957,6 +1000,19 @@ def apply_complex_actions(complexes_list, actions, issues=None, roles_list=None)
                     issues.log(f"complex '{enzyme}': stoichiometry override for {k} dropped")
         if not stoich and "stoichiometry" in entry:
             del entry["stoichiometry"]
+
+    for enzyme in (actions.get("cpx_delete") or []):
+        entry = by_name.get(enzyme)
+        if entry is None:
+            if issues is not None:
+                issues.warn(f"CPX_DELETE: no complex named '{enzyme}' — skipped")
+            continue
+        complexes_list.remove(entry)
+        del by_name[enzyme]
+        changed = True
+        if issues is not None:
+            issues.log(f"complex deleted: '{enzyme}'")
+
     return changed
 
 
@@ -1024,6 +1080,36 @@ def sync_renamed_roles_into_complexes(complexes_list, rename_map, issues=None):
                             f"complex enzyme key renamed to match role: "
                             f"'{enzyme}' -> '{new_enzyme}'"
                         )
+    return changed
+
+
+def strip_deleted_roles_from_complexes(complexes_list, deleted_roles, issues=None):
+    """Remove any deleted role name from every complex's `roles` list.
+
+    A single-role complex whose only role was deleted is left with an empty
+    `roles` list here, on purpose -- `prune_orphan_complexes` (which should
+    run immediately after this, same as it does after a rename) drops it via
+    the normal enzyme/abstract_enzyme liveness check. A multi-role complex
+    (a subunit grouping) just loses that one member and otherwise survives,
+    same as removing one subunit from a protein complex should.
+
+    Returns True if any complex was modified.
+    """
+    if not deleted_roles:
+        return False
+    changed = False
+    for entry in complexes_list:
+        roles = entry.get("roles") or []
+        survivors = [r for r in roles if r not in deleted_roles]
+        if len(survivors) != len(roles):
+            removed = sorted(set(roles) - set(survivors))
+            entry["roles"] = survivors
+            changed = True
+            if issues is not None:
+                issues.log(
+                    f"complex '{entry.get('enzyme')}': removed deleted role "
+                    f"reference(s) {removed}"
+                )
     return changed
 
 
@@ -1174,6 +1260,7 @@ def _known_roles_for_actions(actions):
         roles.update(actions[bucket].keys())
     roles.update(actions["new"])
     roles.update(actions["replace"].keys())
+    roles.update(actions.get("delete") or [])
     return roles
 
 
@@ -1205,6 +1292,9 @@ def run_apply(tsv_text, curator, schema, dry_run=False, store=None, roles_path=N
                 issues.warn(
                     f"role '{role_name}' not found in database — its {action_name} action(s) will be ignored"
                 )
+    for role_name in actions.get("delete") or []:
+        if role_name not in known_roles:
+            issues.warn(f"role '{role_name}' not found in database — its DELETE action will be ignored")
 
     affected = set(_known_roles_for_actions(actions))
     before_snapshot = {r["role"]: copy.deepcopy(r)
@@ -1213,7 +1303,7 @@ def run_apply(tsv_text, curator, schema, dry_run=False, store=None, roles_path=N
     if not seed_new_entries(roles_list, actions["new"], schema, actions=actions, issues=issues):
         return _issue_dict(issues, summary={}, role_diffs=[])
 
-    touched, rename_map = apply_actions(
+    touched, rename_map, deleted = apply_actions(
         roles_list, actions, curator, issues=issues, schema=schema
     )
     touched.update(actions["new"])
@@ -1244,22 +1334,36 @@ def run_apply(tsv_text, curator, schema, dry_run=False, store=None, roles_path=N
             "after":        copy.deepcopy(entry),
             "is_new":       entry["role"] in actions["new"],
         })
+    # Deleted roles are gone from roles_list by this point, so the loop above
+    # never sees them -- record the diff here instead, with after=None.
+    for role_name in sorted(deleted):
+        role_diffs.append({
+            "role":         role_name,
+            "renamed_from": None,
+            "before":       before_snapshot.get(role_name),
+            "after":        None,
+            "is_new":       False,
+            "is_deleted":   True,
+        })
 
     summary = {"touched": sorted(touched), "renamed": rename_map,
-               "new": actions["new"], "dry_run": dry_run}
-    if not dry_run and touched and not issues.errors:
+               "new": actions["new"], "deleted": sorted(deleted), "dry_run": dry_run}
+    if not dry_run and (touched or deleted) and not issues.errors:
         atomic_write(target_roles_path, json.dumps(roles_list, indent=4))
         issues.log(f"Wrote {len(roles_list)} roles to {target_roles_path}")
 
     # CPX_* rows target PlantSEED_Complexes.json, addressed by enzyme name.
-    # A role UPDATE also needs a pass here even with no CPX_* row present:
-    # any complex naming the old role (in `roles`, or as its `enzyme` key)
-    # would otherwise keep a dangling reference — see
-    # sync_renamed_roles_into_complexes's docstring. Applied after the roles
-    # write so a rename landing in the same TSV is already reflected there.
-    needs_complex_pass = rename_map or any(
+    # A role UPDATE or DELETE also needs a pass here even with no CPX_* row
+    # present: any complex naming the old/deleted role (in `roles`, or as its
+    # `enzyme` key) would otherwise keep a dangling reference — see
+    # sync_renamed_roles_into_complexes's docstring, and
+    # strip_deleted_roles_from_complexes below for the DELETE case. Applied
+    # after the roles write so a change landing in the same TSV is already
+    # reflected there.
+    needs_complex_pass = rename_map or deleted or any(
         actions.get(b) for b in
-        ("cpx_replace", "cpx_reassign", "cpx_stoich", "cpx_stoich_rxn", "cpx_stoich_rem")
+        ("cpx_replace", "cpx_reassign", "cpx_stoich", "cpx_stoich_rxn",
+         "cpx_stoich_rem", "cpx_delete")
     )
     if needs_complex_pass:
         if not os.path.isfile(paths.COMPLEXES_FILE):
@@ -1273,6 +1377,22 @@ def run_apply(tsv_text, curator, schema, dry_run=False, store=None, roles_path=N
             cpx_changed = sync_renamed_roles_into_complexes(
                 complexes_list, rename_map, issues=issues,
             ) or cpx_changed
+            if strip_deleted_roles_from_complexes(complexes_list, deleted, issues=issues):
+                cpx_changed = True
+                # A complex left with zero roles by the strip above has
+                # nothing backing it and is unreachable by construction —
+                # drop it. Scoped to exactly those complexes (not a blanket
+                # prune_orphan_complexes pass, which uses the rename-orphan
+                # enzyme/abstract_enzyme liveness check and would catch
+                # unrelated complexes it was never told about).
+                emptied = [c for c in complexes_list if not c.get("roles")]
+                for c in emptied:
+                    complexes_list.remove(c)
+                    if issues is not None:
+                        issues.log(
+                            f"complex deleted (no roles remaining after "
+                            f"DELETE): '{c.get('enzyme')}' ({c.get('kbase_id')})"
+                        )
             if cpx_changed and not dry_run:
                 atomic_write(paths.COMPLEXES_FILE, json.dumps(complexes_list, indent=4))
                 issues.log(f"Wrote {len(complexes_list)} complexes to {paths.COMPLEXES_FILE}")
@@ -1301,11 +1421,12 @@ def preview_for_enzyme(enzyme, rows, schema, store):
     if not seed_new_entries(roles_copy, actions["new"], schema, actions=actions, issues=issues):
         return {"before": before, "after": None,
                 "errors": issues.errors, "warnings": issues.warnings}
-    touched, rename_map = apply_actions(
+    touched, rename_map, deleted = apply_actions(
         roles_copy, actions, curator="(preview)", issues=issues, schema=schema
     )
     final_name = rename_map.get(enzyme, enzyme)
-    after = next((r for r in roles_copy if r["role"] == final_name), None)
+    after = None if final_name in deleted else \
+        next((r for r in roles_copy if r["role"] == final_name), None)
     return {
         "before":     before,
         "after":      after,

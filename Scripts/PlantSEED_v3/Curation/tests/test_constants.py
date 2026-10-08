@@ -7,8 +7,8 @@ from plantseed_curation import constants as C
 def test_action_options_match_descriptions_and_fields():
     for action in C.ACTION_OPTIONS:
         assert action in C.ACTION_DESCRIPTIONS
-        # NEW and UPDATE don't need a field; everything else does.
-        if action not in ("NEW", "UPDATE"):
+        # NEW, UPDATE and DELETE operate on the whole entry, not one field.
+        if action not in ("NEW", "UPDATE", "DELETE"):
             assert action in C.ACTION_FIELDS
             assert C.ACTION_FIELDS[action], f"{action} has no fields"
 
@@ -39,3 +39,12 @@ def test_coerce_bool_str_round_trip():
     assert C.coerce_bool_str("YES") == "True"
     assert C.coerce_bool_str("0") == "False"
     assert C.coerce_bool_str("nope") is None
+
+
+def test_delete_actions_registered():
+    assert "DELETE" in C.ACTION_OPTIONS
+    assert "CPX_DELETE" in C.CPX_ACTION_OPTIONS
+    assert C.ACTION_MIN_COLS["DELETE"] == 2
+    assert C.CPX_ACTION_MIN_COLS["CPX_DELETE"] == 2
+    assert "DELETE" in C.ACTION_DESCRIPTIONS
+    assert "CPX_DELETE" in C.CPX_ACTION_DESCRIPTIONS

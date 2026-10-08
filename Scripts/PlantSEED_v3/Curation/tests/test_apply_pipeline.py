@@ -178,6 +178,91 @@ def test_update_rename_in_grouped_complex_syncs_roles_not_enzyme(tmp_db, schema)
             assert r in role_names, f"dangling role reference '{r}' in complex '{c['enzyme']}'"
 
 
+def test_delete_removes_role_and_its_single_role_complex(tmp_db, schema):
+    tsv = "Alpha enzyme (EC 1.1.1.1)\tDELETE\n"
+    result = A.run_apply(tsv, "tester", schema)
+    assert result["errors"] == []
+    assert result["summary"]["deleted"] == ["Alpha enzyme (EC 1.1.1.1)"]
+
+    roles = _reload_roles()
+    assert _find(roles, "Alpha enzyme (EC 1.1.1.1)") is None
+
+    complexes = _reload_complexes()
+    # mini_complexes.json's only complex is keyed on this role alone --
+    # stripping it empties the complex, which is then dropped outright.
+    assert not any(c["kbase_id"] == "PS_complex_alpha1" for c in complexes)
+
+
+def test_delete_role_diff_reports_before_and_none_after(tmp_db, schema):
+    tsv = "Alpha enzyme (EC 1.1.1.1)\tDELETE\n"
+    result = A.run_apply(tsv, "tester", schema)
+    assert len(result["role_diffs"]) == 1
+    diff = result["role_diffs"][0]
+    assert diff["role"] == "Alpha enzyme (EC 1.1.1.1)"
+    assert diff["after"] is None
+    assert diff["before"]["role"] == "Alpha enzyme (EC 1.1.1.1)"
+    assert diff.get("is_deleted") is True
+
+
+def test_delete_from_multi_role_complex_strips_only_that_role(tmp_db, schema):
+    """Deleting one member of a subunit-style multi-role complex should only
+    remove that role from the complex's `roles` list -- the complex itself
+    (and its other member) survives, same as sync_renamed_roles_into_complexes
+    does for a rename."""
+    complexes = _reload_complexes()
+    complexes.append({
+        "kbase_id": "PS_complex_grouped_y",
+        "enzyme": "Photosystem Y",
+        "roles": ["Alpha enzyme (EC 1.1.1.1)", "Beta enzyme (EC 2.2.2.2)"],
+        "compartments_reactions": {
+            "c": {"reactions": ["rxn00001", "rxn00002"], "reagents": "c", "exclude": False},
+        },
+    })
+    with open(paths.COMPLEXES_FILE, "w") as f:
+        json.dump(complexes, f, indent=4)
+
+    tsv = "Alpha enzyme (EC 1.1.1.1)\tDELETE\n"
+    result = A.run_apply(tsv, "tester", schema)
+    assert result["errors"] == []
+
+    complexes = _reload_complexes()
+    grouped = next(c for c in complexes if c["kbase_id"] == "PS_complex_grouped_y")
+    assert grouped["roles"] == ["Beta enzyme (EC 2.2.2.2)"]
+
+
+def test_delete_unknown_role_warns_and_does_not_error(tmp_db, schema):
+    tsv = "Nonexistent enzyme\tDELETE\n"
+    result = A.run_apply(tsv, "tester", schema)
+    assert result["errors"] == []
+    assert any("DELETE" in w and "not found" in w for w in result["warnings"])
+    assert result["summary"]["deleted"] == []
+
+
+def test_delete_dry_run_does_not_write(tmp_db, schema):
+    tsv = "Alpha enzyme (EC 1.1.1.1)\tDELETE\n"
+    A.run_apply(tsv, "tester", schema, dry_run=True)
+    roles = _reload_roles()
+    assert _find(roles, "Alpha enzyme (EC 1.1.1.1)") is not None  # unchanged on disk
+
+
+def test_cpx_delete_removes_complex_without_touching_role(tmp_db, schema):
+    tsv = "Alpha enzyme\tCPX_DELETE\n"
+    result = A.run_apply(tsv, "tester", schema)
+    assert result["errors"] == []
+
+    complexes = _reload_complexes()
+    assert not any(c["kbase_id"] == "PS_complex_alpha1" for c in complexes)
+
+    roles = _reload_roles()
+    assert _find(roles, "Alpha enzyme (EC 1.1.1.1)") is not None  # role untouched
+
+
+def test_cpx_delete_unknown_enzyme_warns(tmp_db, schema):
+    tsv = "Nonexistent enzyme\tCPX_DELETE\n"
+    result = A.run_apply(tsv, "tester", schema)
+    assert any("CPX_DELETE" in w and "no complex named" in w for w in result["warnings"])
+
+
 def test_relocate_localization_key(tmp_db, schema):
     tsv = "Alpha enzyme (EC 1.1.1.1)\tRELOCATE\tlocalization\tc\tn\n"
     A.run_apply(tsv, "tester", schema)
