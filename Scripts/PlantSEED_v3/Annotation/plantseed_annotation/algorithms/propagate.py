@@ -103,7 +103,7 @@ def build_curated_features(roles_data=None, include_uncurated=False,
     if exclude_roles is None:
         exclude_roles = load_organellar_roles()
 
-    per_feature = {}   # (species, gene) -> {'roles': [], 'compartments': []}
+    per_feature = {}   # (species, gene) -> {'roles': [], 'compartments': [], 'role_classes': set()}
     for entry in roles_data:
         if not include_uncurated and entry.get("include") is False:
             pass  # fetch_plantseed_impl.fetch_features has this filter
@@ -120,14 +120,21 @@ def build_curated_features(roles_data=None, include_uncurated=False,
                         "reason": "organellar-encoded subunit",
                     })
             continue
+        # PlantSEED_Roles.json's "classes" dict names the role-class
+        # category/categories this role is curated under (e.g. "Amino
+        # acids", "Specialized metabolism"). Tracked per feature (not just
+        # per role) because one curated gene can appear under several roles
+        # with different classes -- see the role_class tie-break below.
+        role_classes_here = set(entry.get("classes", {}).keys())
         for feat_str in entry.get("features", []):
             key = _parse_feature(feat_str)
             bucket = per_feature.setdefault(
-                key, {"roles": [], "compartments": []}
+                key, {"roles": [], "compartments": [], "role_classes": set()}
             )
             role_name = entry["role"]
             if role_name not in bucket["roles"]:
                 bucket["roles"].append(role_name)
+            bucket["role_classes"] |= role_classes_here
             # The compartment for this feature is the localization key
             # under which this feature appears in the role's localization dict.
             for cpt, cpt_features in entry.get("localization", {}).items():
@@ -144,6 +151,18 @@ def build_curated_features(roles_data=None, include_uncurated=False,
         data["compartments"] = sorted(data["compartments"])
         data["function"] = _compose_function_string(
             data["roles"], data["compartments"]
+        )
+        # role_class: "specialized" if ANY curated role on this gene carries
+        # PlantSEED_Roles.json's "Specialized metabolism" class, else
+        # "generalized" -- matches the tie-break used in
+        # SWEEP_relmax_2026-09-28.md §6/§7 ("4 dual-membership genes
+        # tie-broken to specialized"). Feeds the two-layer conservation-
+        # gradient report in psi_refined.py; it is not consulted by any
+        # annotation-acceptance decision.
+        role_classes = data.pop("role_classes")
+        data["role_class"] = (
+            "specialized" if "Specialized metabolism" in role_classes
+            else "generalized"
         )
     return per_feature
 

@@ -324,9 +324,13 @@ def test_annotate_species_aggregates_multi_transcript_max_psi():
 
 
 # --- compute_og_baselines + classify_og_pairs (Processing_v2 primitives) ------
-def test_compute_og_baselines_mean_over_of_orthologs():
-    """Baseline for an OG = arithmetic mean over OF-called ortholog PSI values
-    between the query and ref species in that OG."""
+def test_compute_og_baselines_percentile_over_of_orthologs():
+    """Baseline for an OG = the BASELINE_PERCENTILE quantile over OF-called
+    ortholog PSI values between the query and ref species in that OG.
+
+    Was the arithmetic mean until the 10th percentile measured strictly
+    better on the experimentally-evidenced in-paralog benchmark: same
+    precision, 1.7x the recall."""
     orth = {
         "Q1.1": {"og": "OG0000001", "orthologs": ["AT1"]},
         "Q2.1": {"og": "OG0000001", "orthologs": ["AT2"]},
@@ -340,7 +344,33 @@ def test_compute_og_baselines_mean_over_of_orthologs():
     sp_to_og = {}
     b = pr.compute_og_baselines(orth, psi_by_og, sp_to_og,
                                  "Sbicolor_v3.1.1", "Athaliana_TAIR10")
-    assert b["OG0000001"] == (0.80 + 0.60) / 2   # 0.70
+    assert b["OG0000001"] == 0.60          # low end, not the 0.70 mean
+    # At the top of the distribution the answer must still be 0.80: if the
+    # 0.90 non-ortholog ever leaked in, this is where it would show.
+    top = pr.compute_og_baselines(orth, psi_by_og, sp_to_og,
+                                   "Sbicolor_v3.1.1", "Athaliana_TAIR10",
+                                   percentile=1.0)
+    assert top["OG0000001"] == 0.80
+
+
+def test_compute_og_baselines_percentile_is_overridable():
+    """The quantile is a parameter, defaulting to BASELINE_PERCENTILE."""
+    orth = {f"Q{i}.1": {"og": "OG1", "orthologs": [f"AT{i}"]} for i in range(1, 11)}
+    psi_by_og = {"OG1": {("AT%d" % i, "Q%d.1" % i): i / 10.0 for i in range(1, 11)}}
+    got = {q: pr.compute_og_baselines(orth, psi_by_og, {}, "Q", "R",
+                                       percentile=q)["OG1"]
+           for q in (0.0, 0.10, 0.50, 1.0)}
+    assert got == {0.0: 0.1, 0.10: 0.2, 0.50: 0.6, 1.0: 1.0}
+    assert pr.BASELINE_PERCENTILE == 0.10
+
+
+def test_compute_og_baselines_single_ortholog_pair():
+    """An OG with one ortholog pair yields that pair's PSI rather than
+    raising — most orthogroups carry only a handful of pairs."""
+    orth = {"Q1.1": {"og": "OG1", "orthologs": ["AT1"]}}
+    b = pr.compute_og_baselines(orth, {"OG1": {("AT1", "Q1.1"): 0.42}}, {},
+                                 "Q", "R")
+    assert b["OG1"] == 0.42
 
 
 def test_compute_og_baselines_missing_when_no_of_orthologs():
@@ -384,3 +414,199 @@ def test_classify_og_pairs_tag_matrix():
     assert ("Q1", "AT2", "PAH") in tags2
     # AT3 at exactly 0.5 → PRH, rejected (strict > comparison, matches Processing_v2)
     assert not any(a == "Q1" and b == "AT3" for (a, b, _p, _t) in accepted2)
+
+
+# --- Two-layer conservation-gradient report (diagnostic) ---------------------
+# See REPORT_orthofunctional_conservation_gradient.md and the module
+# docstring: presence rate (Layer 1) must be measured over the FULL,
+# unfiltered orthogroup set, never the PSI-computable subset, or the
+# survivorship-bias artifact the split exists to avoid reappears.
+
+GRADIENT_CURATED = {
+    # Present in query, high relmax → confident, generalized.
+    "AT_GEN_HIGH": {"function": "Gen1", "role_class": "generalized"},
+    # Present in query, low relmax → no_confident_match, generalized.
+    "AT_GEN_LOW":  {"function": "Gen2", "role_class": "generalized"},
+    # NOT present in query at all (no gene in its OG for the query species).
+    "AT_GEN_ABS":  {"function": "Gen3", "role_class": "generalized"},
+    # Present, but its OG never got a PSI matrix (Layer 1 yes, Layer 2 no_psi).
+    "AT_GEN_NOPSI": {"function": "Gen4", "role_class": "generalized"},
+    # Specialized-metabolism gene, present, mid relmax → ambiguous.
+    "AT_SPEC_MID": {"function": "Spec1", "role_class": "specialized"},
+}
+
+# Full, UNFILTERED orthogroup set (mirrors load_orthogroups' shape).
+GRADIENT_OGS = {
+    "OG_GEN_HIGH": {"Sbicolor_v3.1.1": ["Q1.1"], "Athaliana_TAIR10": ["AT_GEN_HIGH.1"]},
+    # Two Sorghum paralogs in this OG (Q2.1, Q2_OTHER.1) -- OTHER scores much
+    # higher against the same curated ref gene, so it sets the OG's ceiling.
+    # This is exactly the "a promiscuous family's best hit isn't the one
+    # being scored" case relmax is meant to catch.
+    "OG_GEN_LOW":  {"Sbicolor_v3.1.1": ["Q2.1", "Q2_OTHER.1"], "Athaliana_TAIR10": ["AT_GEN_LOW.1"]},
+    "OG_GEN_ABS":  {"Sbicolor_v3.1.1": [],       "Athaliana_TAIR10": ["AT_GEN_ABS.1"]},
+    "OG_GEN_NOPSI": {"Sbicolor_v3.1.1": ["Q4.1"], "Athaliana_TAIR10": ["AT_GEN_NOPSI.1"]},
+    "OG_SPEC_MID": {"Sbicolor_v3.1.1": ["Q5.1"], "Athaliana_TAIR10": ["AT_SPEC_MID.1"]},
+}
+
+GRADIENT_SP_TO_OG = {
+    ("Sbicolor_v3.1.1", "Q1.1"): "OG_GEN_HIGH",
+    ("Athaliana_TAIR10", "AT_GEN_HIGH.1"): "OG_GEN_HIGH",
+    ("Sbicolor_v3.1.1", "Q2.1"): "OG_GEN_LOW",
+    ("Sbicolor_v3.1.1", "Q2_OTHER.1"): "OG_GEN_LOW",
+    ("Athaliana_TAIR10", "AT_GEN_LOW.1"): "OG_GEN_LOW",
+    ("Athaliana_TAIR10", "AT_GEN_ABS.1"): "OG_GEN_ABS",
+    ("Sbicolor_v3.1.1", "Q4.1"): "OG_GEN_NOPSI",
+    ("Athaliana_TAIR10", "AT_GEN_NOPSI.1"): "OG_GEN_NOPSI",
+    ("Sbicolor_v3.1.1", "Q5.1"): "OG_SPEC_MID",
+    ("Athaliana_TAIR10", "AT_SPEC_MID.1"): "OG_SPEC_MID",
+}
+
+# PSI only covers a SUBSET of the OGs above (OG_GEN_NOPSI deliberately
+# missing) -- mirrors cli.py restricting the PSI cache to curated OGs, and
+# exercises the 'no_psi' band.
+#
+# OG_GEN_LOW deliberately has a HIGHER-scoring pair (Q2_OTHER.1, 0.80) that
+# is NOT an OF-called ortholog (see GRADIENT_ORTHOLOGUES below) -- this is
+# the case compute_relmax_confidence's docstring warns about: the
+# denominator must come from OF-called pairs only, or a stray high-PSI
+# paralog would inflate the ceiling and make the real (OF-called, low-PSI)
+# ortholog look artificially worse than it is. With the OF-restriction,
+# relmax = 0.20/0.20 = 1.0 -> confident, not 0.20/0.80 = 0.25.
+GRADIENT_PSI_BY_OG = {
+    "OG_GEN_HIGH": {("AT_GEN_HIGH.1", "Q1.1"): 0.95},
+    "OG_GEN_LOW":  {("AT_GEN_LOW.1", "Q2.1"): 0.20,
+                    ("AT_GEN_LOW.1", "Q2_OTHER.1"): 0.80},
+    "OG_SPEC_MID": {("AT_SPEC_MID.1", "Q5.1"): 0.75},
+}
+
+# OrthoFinder's own ortholog calls: Q2.1 IS called an ortholog of
+# AT_GEN_LOW.1; Q2_OTHER.1 is NOT (it's a same-OG paralog OF didn't call).
+GRADIENT_ORTHOLOGUES = {
+    "Q1.1": {"og": "OG_GEN_HIGH", "orthologs": ["AT_GEN_HIGH.1"]},
+    "Q2.1": {"og": "OG_GEN_LOW",  "orthologs": ["AT_GEN_LOW.1"]},
+    "Q5.1": {"og": "OG_SPEC_MID", "orthologs": ["AT_SPEC_MID.1"]},
+}
+
+
+def test_compute_presence_rates_uses_full_unfiltered_ogs():
+    gene_ogs, _ = pr._curated_ref_gene_index(
+        GRADIENT_CURATED, GRADIENT_SP_TO_OG, "Athaliana_TAIR10",
+    )
+    presence = pr.compute_presence_rates(
+        GRADIENT_CURATED, gene_ogs, GRADIENT_OGS, "Sbicolor_v3.1.1",
+    )
+    assert presence["AT_GEN_HIGH"] is True
+    assert presence["AT_GEN_LOW"] is True
+    assert presence["AT_GEN_ABS"] is False   # no query gene in OG_GEN_ABS
+    assert presence["AT_GEN_NOPSI"] is True  # present even though no PSI exists
+    assert presence["AT_SPEC_MID"] is True
+
+
+def test_compute_relmax_confidence_bands_and_no_psi():
+    gene_ogs, gene_transcripts = pr._curated_ref_gene_index(
+        GRADIENT_CURATED, GRADIENT_SP_TO_OG, "Athaliana_TAIR10",
+    )
+    confidence = pr.compute_relmax_confidence(
+        GRADIENT_CURATED, gene_ogs, gene_transcripts,
+        GRADIENT_OGS, GRADIENT_PSI_BY_OG,
+        "Sbicolor_v3.1.1", "Athaliana_TAIR10",
+        GRADIENT_ORTHOLOGUES,
+    )
+    assert confidence["AT_GEN_HIGH"]["band"] == "confident"
+    assert confidence["AT_GEN_HIGH"]["relmax"] == pytest.approx(1.0)
+    # Denominator is the OF-called ortholog ceiling (0.20, from Q2.1), NOT
+    # the higher-scoring non-OF-called paralog (0.80, from Q2_OTHER.1) --
+    # so relmax = 0.20/0.20 = 1.0, confident, despite the absolute PSI being
+    # low. This is the whole point of restricting the denominator.
+    assert confidence["AT_GEN_LOW"]["band"] == "confident"
+    assert confidence["AT_GEN_LOW"]["relmax"] == pytest.approx(1.0)
+    assert confidence["AT_GEN_LOW"]["psi"] == pytest.approx(0.20)
+    assert confidence["AT_GEN_NOPSI"]["band"] == "no_psi"
+    assert confidence["AT_GEN_NOPSI"]["relmax"] is None
+    assert confidence["AT_SPEC_MID"]["band"] == "confident"
+
+
+def test_compute_relmax_confidence_no_of_ortholog_in_og_is_no_psi():
+    """An OG with PSI data but no OF-called ortholog pair for this species
+    pair has no valid denominator -- reported as 'no_psi', not a divide
+    against some other pair's score."""
+    ogs = {"OG_X": {"Sbicolor_v3.1.1": ["Qx.1"], "Athaliana_TAIR10": ["ATX.1"]}}
+    sp_to_og = {("Sbicolor_v3.1.1", "Qx.1"): "OG_X",
+                ("Athaliana_TAIR10", "ATX.1"): "OG_X"}
+    curated = {"ATX": {"function": "X", "role_class": "generalized"}}
+    psi_by_og = {"OG_X": {("ATX.1", "Qx.1"): 0.55}}
+    orth = {}   # no OF ortholog call at all for this species pair
+    gene_ogs, gene_transcripts = pr._curated_ref_gene_index(curated, sp_to_og, "Athaliana_TAIR10")
+    confidence = pr.compute_relmax_confidence(
+        curated, gene_ogs, gene_transcripts, ogs, psi_by_og,
+        "Sbicolor_v3.1.1", "Athaliana_TAIR10", orth,
+    )
+    assert confidence["ATX"]["band"] == "no_psi"
+    assert confidence["ATX"]["relmax"] is None
+
+
+def test_relmax_band_thresholds():
+    assert pr._relmax_band(0.90) == "confident"
+    assert pr._relmax_band(0.89999) == "ambiguous"
+    assert pr._relmax_band(0.70) == "ambiguous"
+    assert pr._relmax_band(0.69999) == "no_confident_match"
+
+
+def test_conservation_gradient_report_end_to_end_shape():
+    """Full report: presence + confidence, summarized per role_class, with
+    percentages -- and confirms the report is purely additive (same inputs
+    that would feed annotate_species, no shared mutable state)."""
+    report = pr.conservation_gradient_report(
+        GRADIENT_CURATED, GRADIENT_OGS, GRADIENT_SP_TO_OG,
+        GRADIENT_PSI_BY_OG, "Sbicolor_v3.1.1", "Athaliana_TAIR10",
+        GRADIENT_ORTHOLOGUES,
+    )
+    assert report["query_species"] == "Sbicolor_v3.1.1"
+    assert report["ref_species"] == "Athaliana_TAIR10"
+
+    gen = report["summary"]["generalized"]
+    assert gen["n_curated"] == 4          # HIGH, LOW, ABS, NOPSI
+    assert gen["n_present"] == 3          # ABS excluded
+    assert gen["presence_pct"] == pytest.approx(75.0)
+    assert gen["no_psi"] == 1             # NOPSI
+    assert gen["n_confidence_scored"] == 2  # HIGH + LOW (NOPSI excluded)
+    assert gen["confident"] == 2          # HIGH and LOW (OF-restricted denom) both confident
+    assert gen["no_confident_match"] == 0
+    assert gen["confident_pct"] == pytest.approx(100.0)
+
+    spec = report["summary"]["specialized"]
+    assert spec["n_curated"] == 1
+    assert spec["n_present"] == 1
+    assert spec["presence_pct"] == pytest.approx(100.0)
+    assert spec["confident"] == 1
+
+    # Explicit spot-check that per-gene detail is exposed too, not just the
+    # summary -- callers may want to drill into individual genes.
+    assert report["presence"]["AT_GEN_ABS"] is False
+    assert report["confidence"]["AT_GEN_HIGH"]["band"] == "confident"
+
+
+def test_conservation_gradient_report_is_read_only_re_annotate_species():
+    """Running the gradient report alongside annotate_species on the same
+    inputs must not change annotate_species's own output -- the two are
+    independent views over the same data, not a shared pipeline stage."""
+    orth = {"Q1.1": {"og": "OG_GEN_HIGH", "orthologs": ["AT_GEN_HIGH.1"]}}
+    curated_min = {"AT_GEN_HIGH": {"function": "Gen1", "role_class": "generalized"}}
+    before = pr.annotate_species(
+        "Sbicolor_v3.1.1", "Athaliana_TAIR10", orth,
+        GRADIENT_OGS, GRADIENT_PSI_BY_OG, GRADIENT_SP_TO_OG,
+        curated_min, threshold=0.60,
+    )
+    pr.conservation_gradient_report(
+        GRADIENT_CURATED, GRADIENT_OGS, GRADIENT_SP_TO_OG,
+        GRADIENT_PSI_BY_OG, "Sbicolor_v3.1.1", "Athaliana_TAIR10",
+        GRADIENT_ORTHOLOGUES,
+    )
+    after = pr.annotate_species(
+        "Sbicolor_v3.1.1", "Athaliana_TAIR10", orth,
+        GRADIENT_OGS, GRADIENT_PSI_BY_OG, GRADIENT_SP_TO_OG,
+        curated_min, threshold=0.60,
+    )
+    assert before[0] == after[0]   # annotations
+    assert before[1] == after[1]   # stats
+    assert before[2] == after[2]   # pair_stats

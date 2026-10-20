@@ -145,6 +145,12 @@ def _build_argparser():
         help="Disable Processing_v2's paralog admission (revert to the pre-Aug-2026 naive path that only considers OF-called orthologs). Use for A/B comparison; default is to admit paralogs above the per-OG baseline.")
     ap.add_argument("--fallback-baseline", type=float, default=0.5,
         help="Fallback PSI used to classify paralogs in OGs that have no OF-called orthologs between the query and ref species. Matches Processing_v2's PAH/PRH rule. Default: 0.5.")
+    ap.add_argument("--conservation-gradient-report",
+        help="Optional path to also write the two-layer conservation-gradient "
+             "report (presence rate + relmax confidence banding, split by "
+             "generalized/specialized role_class; see "
+             "REPORT_orthofunctional_conservation_gradient.md). Diagnostic "
+             "only -- does not affect which genes get annotated. Omit to skip.")
     ap.add_argument("--quiet", action="store_true",
         help="Suppress progress logs.")
     return ap
@@ -284,6 +290,36 @@ def main(argv=None):
 
     n_annotated = sum(1 for a in annotations.values() if a["status"] == "ANNOTATED")
     log(f"[annot] annotated {n_annotated} query gene(s) out of {len(annotations)} that had a curated candidate")
+
+    # --- 6b. Optional two-layer conservation-gradient report -------------------
+    # Diagnostic only (see REPORT_orthofunctional_conservation_gradient.md and
+    # the psi_refined module docstring): does not feed back into `annotations`
+    # or `stats` above in any way. Uses the FULL, unfiltered `ogs` for Layer 1
+    # (presence) specifically to avoid the survivorship-bias artifact that
+    # motivated splitting the two layers in the first place -- restricting to
+    # `curated_ogs` here would silently reintroduce it.
+    if args.conservation_gradient_report:
+        gradient = psi_refined.conservation_gradient_report(
+            curated_for_ref, ogs, sp_gene_to_og, psi_by_og,
+            args.query_species, args.ref_species, q_to_r,
+        )
+        gradient["metadata"] = {
+            "query_species": args.query_species,
+            "ref_species":   args.ref_species,
+            "note": ("Diagnostic report; does not affect annotation "
+                     "acceptance. relmax bands are explicitly arbitrary "
+                     "communication bins, not fitted thresholds -- see "
+                     "REPORT_orthofunctional_conservation_gradient.md."),
+        }
+        out_path = runtime.enforce_writable(args.conservation_gradient_report)
+        with open(out_path, "w") as fh:
+            json.dump(gradient, fh, indent=2, sort_keys=True)
+        for role_class, bucket in sorted(gradient["summary"].items()):
+            log(f"[gradient] {role_class}: presence={bucket['presence_pct']}%  "
+                f"confident={bucket['confident_pct']}%  "
+                f"no_confident_match={bucket['no_confident_match_pct']}%  "
+                f"(n_curated={bucket['n_curated']}, n_present={bucket['n_present']})")
+        log(f"[gradient] wrote {out_path}")
 
     # --- 7. Write annotated genome JSON --------------------------------------
     metadata = {
