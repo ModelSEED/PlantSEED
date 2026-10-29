@@ -34,8 +34,8 @@ import sys
 
 from plantseed_core import runtime
 
-from . import paths
-from .algorithms import orthofinder_io, propagate, psi, psi_refined
+from . import dispatch, paths
+from .algorithms import orthofinder_io, place_query, propagate, psi, psi_refined
 from .genome_io import write_annotated_genome
 
 
@@ -117,10 +117,24 @@ def _build_argparser():
         prog="plantseed-annotate",
         description="Annotate a plant genome from an OrthoFinder results directory + PlantSEED_Roles.json.",
     )
-    ap.add_argument("--orthofinder-results", required=True,
-        help="Path to an OrthoFinder Results_* directory (containing Orthogroups/, Orthologues/, MultipleSequenceAlignments/).")
+    ap.add_argument("--orthofinder-results",
+        help="Path to an OrthoFinder Results_* directory (containing Orthogroups/, "
+             "Orthologues/, MultipleSequenceAlignments/). Dev-mode path: the query "
+             "species must already be IN this multi-species OrthoFinder run. "
+             "Mutually exclusive with --bundle-dir/--query-fasta, which place a "
+             "genome that was never part of any OrthoFinder run against a "
+             "pre-built refdata bundle instead -- see dispatch.py.")
+    ap.add_argument("--bundle-dir",
+        help="Path to a plantseed-refbuild bundle (manifest.json + "
+             "orthofinder_families/ + curation/). Requires --query-fasta. "
+             "Mutually exclusive with --orthofinder-results.")
+    ap.add_argument("--query-fasta",
+        help="Query proteome FASTA, headers '<query-species>||<gene>'. Only used "
+             "with --bundle-dir.")
     ap.add_argument("--query-species", required=True,
-        help="Species name as it appears in Orthogroups.tsv's header (e.g. 'Sbicolor_v3.1.1').")
+        help="Species name. With --orthofinder-results: as it appears in "
+             "Orthogroups.tsv's header (e.g. 'Sbicolor_v3.1.1'). With "
+             "--bundle-dir: the species prefix used in --query-fasta's headers.")
     ap.add_argument("--ref-species", default="Athaliana_TAIR10",
         help="Curated reference species. Default: Athaliana_TAIR10.")
     ap.add_argument("--phylum", choices=("Eudicot", "Monocot", "Basal"),
@@ -136,7 +150,15 @@ def _build_argparser():
              "$PLANTSEED_SCRATCH_DIR (or the system temp dir). Any existing "
              "<orthofinder-results>/Pairwise_Sequence_Identity/ is still read, never written.")
     ap.add_argument("--workers", type=int,
-        help="Number of processes for PSI computation. Default: cpu_count - 1.")
+        help="Number of processes for PSI computation (--orthofinder-results mode) "
+             "or threads for diamond/mafft (--bundle-dir mode). Default: cpu_count - 1.")
+    ap.add_argument("--evalue", type=float, default=place_query.DEFAULT_EVALUE,
+        help="--bundle-dir mode only: diamond blastp e-value cutoff for the "
+             "placement search. Default: %s." % place_query.DEFAULT_EVALUE)
+    ap.add_argument("--max-target-seqs", type=int,
+        default=place_query.DEFAULT_MAX_TARGET_SEQS,
+        help="--bundle-dir mode only: diamond blastp --max-target-seqs. "
+             "Default: %d." % place_query.DEFAULT_MAX_TARGET_SEQS)
     ap.add_argument("--out", default="annotated_genome.json",
         help="Output annotated genome JSON path.")
     ap.add_argument("--include-unannotated", action="store_true",
@@ -156,6 +178,79 @@ def _build_argparser():
     return ap
 
 
+def _main_bundle_mode(args, log):
+    """--bundle-dir + --query-fasta: dispatch.annotate against a refdata
+    bundle, for a query genome that was never part of any OrthoFinder run.
+
+    --conservation-gradient-report is NOT available in this mode: Layer 1
+    (presence rate) needs the FULL, unfiltered orthogroup set to avoid the
+    survivorship-bias artifact it exists to catch (see
+    psi_refined.compute_presence_rates's docstring), and a bundle only ships
+    the pruned curated-OG subset by design -- there is no "did this species
+    have ANY gene in this OG at all" answer available here, only "did
+    placement find one in a curated OG." Reported as an error rather than a
+    silently wrong number.
+    """
+    if args.conservation_gradient_report:
+        sys.exit("ERROR: --conservation-gradient-report is not available in "
+                 "--bundle-dir mode -- it needs the full, unfiltered "
+                 "orthogroup set (Layer 1 presence rate), which a pruned "
+                 "refdata bundle does not carry. Use --orthofinder-results "
+                 "mode for the gradient report.")
+
+    bundle_dir = os.path.abspath(args.bundle_dir)
+    query_fasta = os.path.abspath(args.query_fasta)
+    if not os.path.isfile(query_fasta):
+        sys.exit(f"ERROR: query FASTA not found: {query_fasta}")
+
+    phyla_path = args.species_phyla_file or paths.SPECIES_PHYLA_FILE
+    phyla = _load_species_phyla(phyla_path) if os.path.isfile(phyla_path) else {}
+    phylum = _resolve_phylum(args.query_species, args.phylum, phyla)
+    if phylum is None and args.threshold is None:
+        sys.exit(
+            f"ERROR: could not resolve a phylum for {args.query_species!r} "
+            f"(not in {phyla_path!r} and no --phylum given), and no "
+            f"--threshold was given either -- need one or the other.")
+
+    log(f"[cfg] mode=bundle  query_species={args.query_species}  "
+        f"ref_species={args.ref_species}")
+    log(f"[cfg] bundle_dir={bundle_dir}")
+    log(f"[cfg] query_fasta={query_fasta}")
+    log(f"[cfg] phylum={phylum!r}  threshold={args.threshold}")
+
+    try:
+        genome_obj = dispatch.annotate(
+            query_fasta, bundle_dir, args.query_species, args.ref_species,
+            phylum, threshold=args.threshold,
+            admit_paralogs=not args.no_admit_paralogs,
+            fallback_baseline=args.fallback_baseline,
+            evalue=args.evalue, max_target_seqs=args.max_target_seqs,
+            n_workers=args.workers, include_unannotated=args.include_unannotated,
+            log=log,
+        )
+    except (FileNotFoundError, ValueError) as exc:
+        sys.exit(f"ERROR: {exc}")
+
+    diag = genome_obj.pop("diagnostics")
+    metadata = {
+        "annotator": "plantseed_annotation",
+        "annotator_run_utc": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "mode": "bundle",
+        "query_species": args.query_species,
+        "ref_species": args.ref_species,
+        "bundle_dir": bundle_dir,
+        "query_fasta": query_fasta,
+        **diag,
+    }
+    genome_obj["metadata"] = metadata
+
+    out_path = runtime.enforce_writable(args.out)
+    with open(out_path, "w") as fh:
+        json.dump(genome_obj, fh, indent=2, sort_keys=True)
+    log(f"[out] wrote {out_path}  ({len(genome_obj['features'])} features)")
+    return 0
+
+
 def main(argv=None):
     args = _build_argparser().parse_args(argv)
 
@@ -170,6 +265,23 @@ def main(argv=None):
         runtime.enforce_writable(args.out)
     except PermissionError as exc:
         sys.exit(f"ERROR: {exc}")
+
+    # --- Mode selection: a bundle + query FASTA (dispatch.annotate -- a
+    # genome that was never part of any OrthoFinder run), or a full
+    # multi-species OrthoFinder run (dev-mode path below, unchanged). Exactly
+    # one of the two input styles may be given.
+    bundle_mode = bool(args.bundle_dir or args.query_fasta)
+    if bundle_mode and args.orthofinder_results:
+        sys.exit("ERROR: --bundle-dir/--query-fasta and --orthofinder-results "
+                 "are mutually exclusive -- pick one input mode.")
+    if bundle_mode and not (args.bundle_dir and args.query_fasta):
+        sys.exit("ERROR: --bundle-dir and --query-fasta must be given together.")
+    if not bundle_mode and not args.orthofinder_results:
+        sys.exit("ERROR: pass either --orthofinder-results, or "
+                 "--bundle-dir together with --query-fasta.")
+
+    if bundle_mode:
+        return _main_bundle_mode(args, log)
 
     # --- 1. Resolve inputs ----------------------------------------------------
     results_dir = os.path.abspath(args.orthofinder_results)
