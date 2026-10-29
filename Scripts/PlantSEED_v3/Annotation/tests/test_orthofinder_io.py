@@ -141,6 +141,20 @@ def test_read_msa_strips_any_species_prefix(tmp_path):
     ("AT1G01050",          "AT1G01050"),           # already gene-level
     ("Sobic.001G234700",   "Sobic.001G234700"),    # last segment isn't digits
     ("simple",             "simple"),              # no dots at all
+    # Phytozome protein-FASTA '.<splice-number>.p' suffix -- the bug from
+    # ORTHOFINDER_RUN_DISCREPANCIES_260929.md §9. Real headers pulled from
+    # the PlantSEED_OF_Rebuild_2609 FASTA set.
+    ("Sobic.001G007000.1.p", "Sobic.001G007000"),
+    ("Sobic.K021732.1.p",    "Sobic.K021732"),     # Sorghum v5.1 scaffold-style id
+    ("Potri.T125008.1.p",    "Potri.T125008"),
+    ("Potri.T125008.2.p",    "Potri.T125008"),     # second splice isoform, same gene
+    ("Bradi0180s00100.1.p",  "Bradi0180s00100"),
+    ("BraR500.01G000100.1.p", "BraR500.01G000100"),
+    ("Glyma.16G009500.2.p",  "Glyma.16G009500"),
+    ("Thlar.0516s0004.1.p",  "Thlar.0516s0004"),
+    # '.p' with no digit segment underneath -- strip the marker, nothing left
+    # to strip, must not crash or over-strip.
+    ("genename.p",          "genename"),
 ])
 def test_transcript_to_gene(tid, gene):
     assert oio.transcript_to_gene(tid) == gene

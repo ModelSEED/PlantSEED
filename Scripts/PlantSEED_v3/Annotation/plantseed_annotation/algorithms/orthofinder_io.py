@@ -35,16 +35,34 @@ def _strip_species_prefix_any(gene_id):
 
 def transcript_to_gene(tid):
     """Collapse a transcript-level id back to its gene-level id by stripping
-    a trailing '.<digits>' suffix.
+    a trailing '.<digits>' suffix, and -- before that -- a trailing '.p'
+    protein marker if present.
 
-        'AT1G01050.1'       -> 'AT1G01050'
-        'Sobic.001G234700.1' -> 'Sobic.001G234700'
-        'Potri.001G067600.1' -> 'Potri.001G067600'
-        'AT1G01050'         -> 'AT1G01050'         (no change)
-        'Sobic.001G234700'  -> 'Sobic.001G234700'  (no change; last segment isn't digits)
+        'AT1G01050.1'         -> 'AT1G01050'
+        'Sobic.001G234700.1'  -> 'Sobic.001G234700'
+        'Potri.001G067600.1'  -> 'Potri.001G067600'
+        'Sobic.001G007000.1.p' -> 'Sobic.001G007000'  (Phytozome protein FASTA)
+        'Potri.T125008.2.p'   -> 'Potri.T125008'
+        'AT1G01050'           -> 'AT1G01050'         (no change)
+        'Sobic.001G234700'    -> 'Sobic.001G234700'  (no change; last segment isn't digits)
+
+    Phytozome protein FASTA headers (as opposed to hand-collapsed gene-level
+    FASTA) carry a two-segment '.<splice-number>.p' suffix rather than a
+    single '.<digits>' segment -- e.g. 'Sobic.001G007000.1.p', not
+    'Sobic.001G007000.1'. The original single-strip logic left these
+    completely unchanged (the trailing '.p' isn't all-digits, so the
+    isdigit() check failed and bailed out before ever looking at the '.1'
+    underneath), so every splice isoform counted as a separate 'gene' --
+    discovered 2026-09-29 investigating a ~50% annotation-count inflation
+    between the paper's gene-level OrthoFinder run and a since-rebuilt one
+    built from protein-level Phytozome FASTA (see
+    ORTHOFINDER_RUN_DISCREPANCIES_260929.md). Stripping the '.p' marker first
+    lets the existing digit-suffix strip see the real splice-number segment.
 
     Used to match transcript-level OF ids against gene-level curated ids in
     PlantSEED_Roles.json."""
+    if tid.endswith(".p"):
+        tid = tid[:-2]
     if "." not in tid:
         return tid
     left, right = tid.rsplit(".", 1)
