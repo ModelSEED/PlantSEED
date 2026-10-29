@@ -1,0 +1,31 @@
+# Environment pin for running Test-Glucosinolate-Model-FBA.sh /
+# Test-Model-Biomass-with-FBA.py (and the other Model/*.py scripts that read
+# PlantSEED FBAModel JSON via KBaseObjectFactory: Test-Model-FBA.py,
+# reconstruct_app_impl.py, annotate-arabidopsis-genome.py).
+#
+# Verified working against the model JSON shape this pipeline produces
+# (PlantSEED_Biomass_Template.json -> reconstruct_app_impl.py -> FBAModel) on
+# the `bf-runtime` micromamba environment, 2026-10-07. cobrakbase and
+# ModelSEEDpy are NOT on PyPI at these versions -- pip installs straight
+# from GitHub at the exact commit, which is the actual version contract:
+# a PyPI `cobrakbase==0.4.0` or `modelseedpy==0.4.2` install is NOT
+# guaranteed to be the same code as these commits and has not been tested
+# against this model JSON shape. If a model fails to load or FBA produces
+# unexpected results on first try, check this file's commit hashes against
+# `pip freeze` in whatever environment you're using before assuming the
+# model/schema is broken.
+#
+# Reproduce this environment:
+#   micromamba create -n bf-runtime python=3.11
+#   micromamba activate bf-runtime
+#   pip install -r requirements.txt
+
+cobrakbase @ git+https://github.com/Fxe/cobrakbase.git@42075fbfdadaf9d32a5f1493d7b68e705f99c0f8
+ModelSEEDpy @ git+https://github.com/ModelSEED/ModelSEEDPy.git@d109a897ac4b22c8ae2a78c963ad6ce01af9ce6a
+cobra==0.31.1
+optlang==1.9.1
+swiglpk==5.0.13
+numpy==1.26.4
+scipy==1.17.1
+pandas==2.3.3
+python-libsbml==5.21.1
