@@ -81,6 +81,7 @@ plantseed-refbuild = "plantseed_annotation.refbuild.cli:main"
 # repo — or a third party — can add one without editing this package.
 [project.entry-points."plantseed.capabilities"]
 reconstruct = "plantseed_model.capabilities"
+annotate = "plantseed_annotation.capabilities"
 
 [tool.setuptools.dynamic]
 version = { attr = "plantseed_core.__about__.__version__" }

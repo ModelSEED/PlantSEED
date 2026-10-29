@@ -39,6 +39,16 @@ or MetaCyc goes through ModelSEED's alias tables, not through PlantSEED.
 
 <!-- generated from the capability declarations: do not edit -->
 
+### `annotate`
+
+Annotate a plant proteome against curated PlantSEED reference genes, by DIAMOND-placing each query protein into a curated orthogroup and resolving the top ortholog with per-orthogroup PSI scoring. Produces an annotated genome JSON ready for the reconstruct capability.
+
+**Reach for it when:** Before reconstructing a metabolic model for a genome that has no existing PlantSEED annotation -- this is the first step for any species not already carrying a 'role # compartment' functional annotation. Not a substitute for a full multi-species OrthoFinder run when one already exists and includes the query species; that dev-mode path (plantseed-annotate --orthofinder-results) gives a true OrthoFinder ortholog call where this gives a DIAMOND best-hit placement -- see place_query.py's module docstring for the distinction and why this capability uses the latter.
+
+**What it preserves that hand-rolling loses:** The query genome never needs to have been part of any OrthoFinder run -- placement happens at call time against the bundle's existing curated orthogroups via DIAMOND + mafft --add, which is seconds to low minutes rather than re-running OrthoFinder's full multi-species pipeline. Downstream, the same psi_refined.annotate_species logic (per-orthogroup baseline, hard floor, per-phylum threshold) that the dev-mode CLI path and every measured benchmark in this repository already runs -- placement method differs, acceptance logic does not.
+
+**Parameters:** `genome`, `query_species`, `ref_species` (optional), `phylum` (optional), `threshold` (optional)
+
 ### `reconstruct`
 
 Reconstruct a plant primary-metabolism model from a PlantSEED-annotated genome and a curated template. Deterministic, needs no network and no reference data — the template and compartments ship with the package.

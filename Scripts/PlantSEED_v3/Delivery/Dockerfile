@@ -29,6 +29,20 @@ FROM python:3.12-slim-bookworm
 # bash". CTS rejects an image without it, so fail the build, not the review.
 RUN test -x /bin/bash
 
+# --- external tools the annotate lane shells out to --------------------------
+# place_query.py's DIAMOND-placement + mafft --add realignment (see that
+# module's docstring for why this, rather than a full OrthoFinder -b insert
+# run, is what the annotate capability does). Both come from Debian's own
+# archive -- no vendored binaries, no second supply chain to review.
+#
+# reconstruct never touches either: pure stdlib, same as the core-is-
+# standalone CI job proves. Only annotate's DIAMOND/mafft dependency is new
+# here relative to the image that shipped reconstruct alone.
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends diamond-aligner mafft \
+ && rm -rf /var/lib/apt/lists/* \
+ && diamond version && mafft --version
+
 # --- the data the package does not carry ------------------------------------
 # plantseed_curation and plantseed_annotation resolve their data files relative
 # to the source tree, so a wheel install alone has no roles, complexes,
@@ -42,6 +56,17 @@ ARG DATA_DIR=/opt/plantseed/data
 COPY Data/PlantSEED_v3 ${DATA_DIR}/PlantSEED_v3
 COPY Scripts/PlantSEED_v3/Template ${DATA_DIR}/Template
 COPY Scripts/PlantSEED_v3/Curation/PlantSEED_Schema.yaml ${DATA_DIR}/
+
+# The refdata bundle (plantseed-refbuild's output: orthofinder_families/,
+# curation/, manifest.json) is NOT baked into the image -- it is
+# multi-gigabyte reference data that changes on its own release cadence (see
+# refbuild/__init__.py's v0/v1 vintages), not application code. Mount it at
+# /kb/data/plantseed_annotation/<version>/ (matching the poplar/KBase refdata
+# layout the project plan settled on) and point PLANTSEED_ANNOT_BUNDLE_DIR at
+# it; the default below is a dev-friendly location under DATA_DIR so a quick
+# local run can `-v <bundle>:/opt/plantseed/data/bundle:ro` instead of
+# reproducing the real refdata mount path.
+ENV PLANTSEED_ANNOT_BUNDLE_DIR=${DATA_DIR}/bundle
 
 ENV PLANTSEED_ROLES_FILE=${DATA_DIR}/PlantSEED_v3/PlantSEED_Roles.json \
     PLANTSEED_COMPLEXES_FILE=${DATA_DIR}/PlantSEED_v3/PlantSEED_Complexes.json \

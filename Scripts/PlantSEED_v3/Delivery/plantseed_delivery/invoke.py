@@ -36,7 +36,7 @@ import tempfile
 
 from plantseed_core import registry, runtime
 
-__all__ = ["reconstruct", "INVOKERS", "call"]
+__all__ = ["annotate", "reconstruct", "INVOKERS", "call"]
 
 
 def _fresh_output_dir() -> str:
@@ -74,6 +74,71 @@ def _digest(path: str) -> str:
         for chunk in iter(lambda: fh.read(1 << 20), b""):
             h.update(chunk)
     return h.hexdigest()
+
+
+def annotate(genome: str, query_species: str, ref_species: str = "Athaliana_TAIR10",
+            phylum: str | None = None, threshold: float | None = None) -> dict:
+    """Annotate a query proteome. Mirrors the `annotate` capability's parameters.
+
+    Unlike `reconstruct`, this calls `dispatch.annotate` directly rather than
+    going through a CLI `main()` + subprocess-style argv -- `dispatch.annotate`
+    already IS the single assembled chain (place_query -> psi_refined ->
+    genome_io) that cli.py's --bundle-dir mode also calls, so there is no
+    separate "CLI's own default resolution" to defer to the way `reconstruct`
+    defers to reconstruct_cli for template/compartments defaults. The bundle
+    location itself is resolved here, from `reference.bundle_dir()`, exactly
+    once -- a caller does not and should not supply it per call (see
+    capabilities.py's module docstring).
+
+    Placement (DIAMOND + mafft) is minutes in the worst case observed so far
+    (the two largest curated orthogroups in the Sep09 bundle), not the
+    sub-second reconstruct call -- an MCP client calling this synchronously
+    needs a generous timeout. See plantseed_delivery/README.md's "Not done
+    yet" note: a background-job bridge is the intended follow-up once this
+    path is validated end-to-end, not a reason to withhold the capability now.
+    """
+    from plantseed_annotation import dispatch, reference
+
+    if not genome or not os.path.isfile(genome):
+        return {"error": f"genome not found: {genome!r}"}
+
+    bundle_dir = reference.bundle_dir()
+    ok, issues = reference.verify(bundle_dir, check_hashes=False)
+    if not ok:
+        return {
+            "error": f"refdata bundle at {bundle_dir} failed a fast verify",
+            "issues": issues[:10],
+            "hint": "has plantseed-refbuild been run, and does "
+                    "PLANTSEED_ANNOT_BUNDLE_DIR (or PLANTSEED_ANNOT_BUNDLE_ROOT "
+                    "+ PLANTSEED_ANNOT_BUNDLE_VERSION) point at it?",
+        }
+
+    out_dir = _fresh_output_dir()
+    out_path = _artifact_path("annotate", "genome", out_dir)
+
+    try:
+        genome_obj = dispatch.annotate(
+            genome, bundle_dir, query_species, ref_species, phylum,
+            threshold=threshold, log=lambda m: None,
+        )
+    except (FileNotFoundError, ValueError) as exc:
+        return {"error": str(exc)}
+
+    diag = genome_obj.pop("diagnostics", {})
+    with open(out_path, "w") as fh:
+        json.dump(genome_obj, fh, indent=2, sort_keys=True)
+
+    return {
+        "genome_id": genome_obj.get("id"),
+        "genome_path": out_path,
+        "sha256": _digest(out_path),
+        "n_annotated_features": diag.get("n_annotated_features", len(genome_obj.get("features", []))),
+        "n_query_genes_searched": diag.get("n_query_genes_searched"),
+        "n_query_genes_placed": diag.get("n_query_genes_placed"),
+        "status_counts": diag.get("status_counts"),
+        "note": "The annotated genome is on disk, not inlined. Pass "
+                "genome_path as the reconstruct capability's genome parameter.",
+    }
 
 
 def reconstruct(genome: str, template: str | None = None,
@@ -130,7 +195,7 @@ def reconstruct(genome: str, template: str | None = None,
 
 #: capability name -> the callable that runs it. A capability without an entry
 #: is declared but not yet reachable over MCP, which `call` says out loud.
-INVOKERS = {"reconstruct": reconstruct}
+INVOKERS = {"reconstruct": reconstruct, "annotate": annotate}
 
 
 def call(capability: str, **kwargs) -> dict:

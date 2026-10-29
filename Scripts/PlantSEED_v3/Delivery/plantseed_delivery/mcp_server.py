@@ -65,6 +65,26 @@ def build_server() -> "_Server":
     server = _Server(manifest.SERVER_ID)
 
     # --- capabilities --------------------------------------------------------
+    annotate_cap = registry.get("annotate")
+
+    @server.tool(name="annotate", description=annotate_cap.summary)
+    def annotate(genome: str, query_species: str,
+                ref_species: str = "Athaliana_TAIR10",
+                phylum: str | None = None, threshold: float | None = None) -> dict:
+        """Annotate a plant proteome against curated PlantSEED reference genes.
+
+        Returns counts, a path and a sha256 — not the genome, which is too
+        large for a tool result. Read `genome_path` (or pass it straight to
+        `reconstruct`) if you need the object.
+
+        Placement (DIAMOND + mafft) takes seconds to low minutes depending on
+        how many query genes land in the largest curated orthogroups — this
+        is a slower call than `reconstruct`, so set a generous client timeout.
+        """
+        return invoke.call("annotate", genome=genome, query_species=query_species,
+                           ref_species=ref_species, phylum=phylum,
+                           threshold=threshold)
+
     reconstruct_cap = registry.get("reconstruct")
 
     @server.tool(name="reconstruct", description=reconstruct_cap.summary)
