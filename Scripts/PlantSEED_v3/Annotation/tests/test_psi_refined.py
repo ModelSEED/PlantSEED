@@ -289,6 +289,23 @@ def test_annotate_species_fallback_baseline_pah():
     assert annotations["Q1"]["status"] == "ANNOTATED"
 
 
+def test_annotate_species_threshold_none_applies_no_phylum_gate():
+    """threshold=None skips the phylum gate; the fallback baseline still applies."""
+    ogs = {"OG1": {"Q": ["Q1.1", "Q2.1"], "Athaliana_TAIR10": ["AT1"]}}
+    psi_by_og = {"OG1": {("AT1", "Q1.1"): 0.55, ("AT1", "Q2.1"): 0.45}}
+    sp_to_og = {("Q", "Q1.1"): "OG1", ("Q", "Q2.1"): "OG1"}
+    curated = {"AT1": {"function": "Alpha # cytosol"}}
+
+    gated, _, _ = pr.annotate_species(
+        "Q", "Athaliana_TAIR10", {}, ogs, psi_by_og, sp_to_og, curated, threshold=0.60)
+    ungated, _, _ = pr.annotate_species(
+        "Q", "Athaliana_TAIR10", {}, ogs, psi_by_og, sp_to_og, curated, threshold=None)
+
+    assert gated["Q1"]["status"] == "NO_ORTHOLOG"
+    assert ungated["Q1"]["status"] == "ANNOTATED"
+    assert "Q2" not in ungated   # 0.45 is below the 0.5 fallback baseline
+
+
 def test_annotate_species_aggregates_multi_transcript_max_psi():
     """Two transcripts of the same query gene, each with an ortholog to the
     same ref gene. PSI(query_gene, ref_gene) = MAX over the transcript pairs."""

@@ -62,9 +62,16 @@ def load_bundle_curation(bundle_dir):
 
 
 def resolve_threshold(phylum, phylum_thresholds, explicit_threshold=None):
-    """Explicit argument wins; otherwise the bundle's own phylum table."""
+    """Explicit argument wins; otherwise the bundle's own phylum table.
+
+    With neither a threshold nor a phylum, returns None: no phylum gate is
+    applied. Interim while per-orthogroup thresholds replace the per-phylum
+    constants -- see kbase_refactor/NOTE_deferred_annotation_thresholds.md.
+    """
     if explicit_threshold is not None:
         return float(explicit_threshold)
+    if phylum is None:
+        return None
     if phylum in phylum_thresholds:
         return phylum_thresholds[phylum]
     raise ValueError(

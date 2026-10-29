@@ -207,10 +207,8 @@ def _main_bundle_mode(args, log):
     phyla = _load_species_phyla(phyla_path) if os.path.isfile(phyla_path) else {}
     phylum = _resolve_phylum(args.query_species, args.phylum, phyla)
     if phylum is None and args.threshold is None:
-        sys.exit(
-            f"ERROR: could not resolve a phylum for {args.query_species!r} "
-            f"(not in {phyla_path!r} and no --phylum given), and no "
-            f"--threshold was given either -- need one or the other.")
+        log(f"[cfg] no phylum resolved for {args.query_species!r} and no "
+            f"--threshold: applying no phylum gate")
 
     log(f"[cfg] mode=bundle  query_species={args.query_species}  "
         f"ref_species={args.ref_species}")

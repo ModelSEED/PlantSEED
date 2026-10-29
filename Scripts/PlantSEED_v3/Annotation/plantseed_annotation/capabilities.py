@@ -36,10 +36,10 @@ ANNOTATE_PARAMS = (
     Param("ref_species", type="str", default="Athaliana_TAIR10",
           help="Curated reference species to annotate against."),
     Param("phylum", type="str",
-          help="Query species phylum. Sets the default PSI threshold from "
-               "the bundle's own phylum_thresholds.json (not a fixed set -- "
-               "a bundle's thresholds table is the source of truth for "
-               "valid phyla). Required unless threshold is given explicitly."),
+          help="Optional query species phylum. Sets a PSI threshold from the "
+               "bundle's own phylum_thresholds.json. Omit both phylum and "
+               "threshold to apply no phylum gate (interim, while "
+               "per-orthogroup thresholds replace the per-phylum ones)."),
     Param("threshold", type="float",
           help="PSI threshold above which to propagate the top-ortholog "
                "function. Overrides phylum."),

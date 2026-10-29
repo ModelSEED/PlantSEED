@@ -129,6 +129,9 @@ class TestResolveThreshold:
         with pytest.raises(ValueError):
             dispatch.resolve_threshold("Unknown", {"Eudicot": 0.60})
 
+    def test_no_phylum_no_threshold_means_no_gate(self):
+        assert dispatch.resolve_threshold(None, {"Eudicot": 0.60}) is None
+
 
 class TestAnnotateEndToEnd:
     def test_annotates_a_near_identical_query_against_curated_ortholog(
@@ -165,6 +168,15 @@ class TestAnnotateEndToEnd:
                 query_fasta, str(not_a_bundle), "Sbicolor_v4.0",
                 "Athaliana_TAIR10", "Eudicot", log=lambda m: None,
             )
+
+    def test_annotates_without_phylum(self, tiny_bundle, query_fasta):
+        genome = dispatch.annotate(
+            query_fasta, tiny_bundle, "Sbicolor_v4.0", "Athaliana_TAIR10",
+            None, n_workers=1, log=lambda m: None,
+        )
+        assert {f["id"] for f in genome["features"]} == {"TestGene1"}
+        assert genome["diagnostics"]["psi_threshold"] is None
+        assert genome["diagnostics"]["phylum"] is None
 
     def test_high_threshold_leaves_gene_unannotated(self, tiny_bundle, query_fasta):
         """Same inputs, but a threshold above what a PAH-admitted paralog

@@ -369,7 +369,8 @@ def annotate_species(query_species, ref_species, orthologues_dict,
       psi_by_og: {og_id: {(t1, t2): psi}}.
       sp_gene_to_og: {(species, transcript): og_id}.
       curated_features_for_ref: {ref_gene: feature_data}.
-      threshold: phylum PSI threshold.
+      threshold: phylum PSI threshold, or None to apply no phylum gate (the
+                 hard floor and the per-OG baseline / fallback still apply).
       admit_paralogs: whether to admit PAM / PAH paralogs. Default True.
       fallback_baseline: threshold for PAH when no OG baseline exists (default 0.5).
       hard_floor: absolute PSI below which a pair is refused whatever OF called
@@ -485,7 +486,7 @@ def annotate_species(query_species, ref_species, orthologues_dict,
         # candidates only if they clear the phylum threshold.
         filtered_psi = {}
         for r_gene, (p, has_o) in ref_gene_best.items():
-            if has_o:
+            if has_o or threshold is None:
                 filtered_psi[r_gene] = p
             elif p >= threshold:
                 filtered_psi[r_gene] = p
