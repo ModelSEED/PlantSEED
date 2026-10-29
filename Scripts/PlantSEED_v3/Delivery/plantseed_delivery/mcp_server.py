@@ -18,6 +18,7 @@ that means nothing to the model.
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 
 try:                                       # mcp >= 2 renamed FastMCP
@@ -53,8 +54,40 @@ def serve(server, transport: str, host: str, port: int) -> None:
         raise RuntimeError(
             f"this mcp SDK exposes no ASGI app for {transport!r}; the "
             "credential check cannot be installed, so refusing to serve")
-    app = auth.BearerAuth(build(), auth.token())
+    app = auth.BearerAuth(build(**_transport_security_kwargs(build)), auth.token())
     uvicorn.run(app, host=host, port=port, log_level="info")
+
+
+#: Comma-separated extra Host header values the server accepts, e.g. the
+#: compose service name ("plantseed-mcp:*"). Loopback is always accepted.
+ALLOWED_HOSTS_ENV = "PLANTSEED_MCP_ALLOWED_HOSTS"
+_LOOPBACK_HOSTS = ["127.0.0.1:*", "localhost:*", "[::1]:*"]
+
+
+def allowed_hosts() -> list[str]:
+    extra = [h.strip() for h in os.environ.get(ALLOWED_HOSTS_ENV, "").split(",")]
+    return _LOOPBACK_HOSTS + [h for h in extra if h]
+
+
+def _transport_security_kwargs(build) -> dict:
+    """Host-header allow-list for the SDK's DNS-rebinding guard.
+
+    Built without this, the SDK assumes a loopback bind and answers every
+    request whose Host is not localhost with 421 -- so a peer container
+    calling `http://plantseed-mcp:8931/mcp` is refused. The bearer token is
+    the access control; this only says which names the server answers to.
+    """
+    import inspect
+
+    if "transport_security" not in inspect.signature(build).parameters:
+        return {}
+    from mcp.server.transport_security import TransportSecuritySettings
+
+    return {"transport_security": TransportSecuritySettings(
+        enable_dns_rebinding_protection=True,
+        allowed_hosts=allowed_hosts(),
+        allowed_origins=[],
+    )}
 
 
 def build_server() -> "_Server":

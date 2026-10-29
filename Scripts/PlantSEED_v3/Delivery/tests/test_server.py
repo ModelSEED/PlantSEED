@@ -176,3 +176,36 @@ class TestFailingSoft:
         monkeypatch.setitem(invoke.INVOKERS, "reconstruct", boom)
         out = _call(server, "reconstruct", {"genome": GENOME})
         assert "ValueError" in out["error"] and "something specific" in out["error"]
+
+
+class TestHostAllowList:
+    """A peer container reaches the server by its service name, which the
+    SDK's default DNS-rebinding guard answers with 421."""
+
+    def test_loopback_always_allowed(self, monkeypatch):
+        monkeypatch.delenv(mcp_server.ALLOWED_HOSTS_ENV, raising=False)
+        assert mcp_server.allowed_hosts() == ["127.0.0.1:*", "localhost:*", "[::1]:*"]
+
+    def test_extra_hosts_from_env(self, monkeypatch):
+        monkeypatch.setenv(mcp_server.ALLOWED_HOSTS_ENV, "plantseed-mcp:*, poplar:8931,")
+        hosts = mcp_server.allowed_hosts()
+        assert "plantseed-mcp:*" in hosts and "poplar:8931" in hosts
+        assert "" not in hosts
+
+    def test_service_name_is_accepted_and_others_refused(self, server, monkeypatch):
+        from starlette.testclient import TestClient
+
+        monkeypatch.setenv(mcp_server.ALLOWED_HOSTS_ENV, "plantseed-mcp:*")
+        app = server.streamable_http_app(**mcp_server._transport_security_kwargs(
+            server.streamable_http_app))
+        body = {"jsonrpc": "2.0", "id": 1, "method": "initialize",
+                "params": {"protocolVersion": "2025-06-18", "capabilities": {},
+                           "clientInfo": {"name": "t", "version": "0"}}}
+        accept = {"Accept": "application/json, text/event-stream"}
+        with TestClient(app) as client:
+            ok = client.post("/mcp", json=body,
+                             headers={**accept, "Host": "plantseed-mcp:8931"})
+            bad = client.post("/mcp", json=body,
+                              headers={**accept, "Host": "evil.example:8931"})
+        assert ok.status_code == 200
+        assert bad.status_code == 421
