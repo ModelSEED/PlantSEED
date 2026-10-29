@@ -128,6 +128,15 @@ connection for ten minutes, but nothing above says the capability needs to
 wait for it — a synchronous call with a long timeout is a legitimate way to
 drive `annotate` today, including at full-genome, wheat-scale queries.
 
+### Smoke-testing a deployment
+
+`test_data/poplar_test_500.faa` is 250 Poplar proteins the Sep09 bundle
+annotates plus 250 random ones with no Poplar member in any curated
+orthogroup; `expected_plantseed_genes.txt` lists the first 250. Against a
+correctly mounted Sep09 bundle, `annotate` should report 272 placed and
+annotate all 250 expected genes (251 total; see `make_poplar_test_set.py`).
+Regenerate both files with that script when the bundle changes.
+
 ## Not done yet
 
 - **No TLS.** A bearer token over plain HTTP crosses the network in the clear.
